@@ -1,1008 +1,416 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/categories/erlang/index.xml">
 
-  	<meta property="og:title" content=" Erlang &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/categories/erlang/" />
+<link rel="canonical" href="https://jeidee.github.io/categories/erlang/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Erlang - Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
     
     
-    <meta property="og:type" content="website" />
     
 
-  <title>
-     Erlang &middot;  Erlang &amp; Go
-  </title>
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
 
-    <meta name="description" content="" />
+          
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-        <link href="https://jeidee.github.io/categories/erlang/index.xml" rel="alternate" type="application/rss+xml" title="Erlang &middot; Erlang &amp; Go" />
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/categories/erlang/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
-</head>
-<body class="nav-closed">
-
-  
-
-
- <div class="site-wrapper">
-
-
-
-
-	<header class="main-header tag-head no-cover">
-
-    <nav class="main-nav overlay clearfix">
-      
-      
-        
-          <a class="menu-button icon-feed" href="https://jeidee.github.io/categories/erlang/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
         </div>
-</div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
+      </nav>
+    </header>
 
-<main id="content" class="content" role="main">
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+    <header class="page-header">
+      <h1>Erlang</h1>
+    </header>
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/categories/erlang/page/2/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 3 of 5</span>
-	
-	    <a class="older-posts" href="/categories/erlang/page/4/">Older Posts &rarr;</a>
-	
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-14T00:00:00JST">Feb 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-24-match-spec/">mnesia 기초 2/4 &amp;#8211; Match Spec</a></h2>
+  </header>
+
+  
+  <div class="summary">Match Spec mnesia:select 또는 mnesia:dirty_select에 Match Spec을 정의해서 데이터를 검색할 수 있다.
+MatchSpec의 기본형은 다음과 같다.
+[{ {매치패턴}, [조건식], [결과값]}]  매치패턴은 튜플의 형태로 테이블의 레코드의 구조와 동일해야한다.
+[{ {'$1', '$2', &amp;#8230;}, [], &amp;#8230;  $1, $2는 바인드 변수이며 Match Spec안에서만 사용된다.
+조건식은 다음과 같이 논리연산자, 비교컬럼지정자, 검색값 형식으로 입력한다.
+['&gt;', '$1', &quot;abcd&quot;]  예를 들면 다음과 같다.
+-type my_color() :: red | yellow | blue; -record(shape, {name = &quot;&quot; :: string(), color = red :: fruit_color(), count = 0 :: integer()}).</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-24-match-spec/" title="mnesia 기초 2/4 &amp;#8211; Match Spec">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-14T00:00:00JST">Feb 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-34-getting-started-with-mnesia-1/">mnesia 기초 3/4 &amp;#8211; Getting Started with Mnesia 1/2</a></h2>
+  </header>
+
+  
+  <div class="summary">Erlang 공식 문서 중에 Getting Started with Mnesia문서를 기준으로 몇몇내용을 추가해 다음과 같이 작성해 보았다.
+mnesia 시작 mnesia를 시작하기 위해서 다음의 과정이 필요하다.
+ erlang node에 mnesia의 데이터가 저장될 경로를 지정하여 erlang shell을 시작한다. 새로운 빈 스키마를 생성한다. 스키마는 데이터베이스의 정보를 포함한다. mnesia DBMS를 시작한다. 테이블을 생성한다. 데이터베이스 정보를 조회한다.  위의 과정을 수행하기 위해 다음과 같이 따라해 보자.
+ $ erl -mnesia dir '&quot;tmp/funky&quot;'  tmp/funky 디렉토리에 mnesia 데이터가 저장되도록 -mnesia dir 옵션을 사용해 erlang shell을 시작한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-34-getting-started-with-mnesia-1/" title="mnesia 기초 3/4 &amp;#8211; Getting Started with Mnesia 1/2">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-14T00:00:00JST">Feb 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-44-getting-started-with-mnesia-22/">mnesia 기초 4/4 &amp;#8211; Getting Started with Mnesia 2/2</a></h2>
+  </header>
+
+  
+  <div class="summary">데이터 추가 테이블에 데이터를 추가하기 위해서는 트랜잭션을 사용해야 한다. 트랜잭션은 매개변수가 없는 익명의 fun에 여러 DB 오퍼레이션을 묶어 생성할 수 있다.
+테이블에 데이터를 입력할 때는 mnesia:write/1 함수를 사용할 수 있으면 매개변수는 레코드를 사용한다.
+insert_emp(Emp, DeptId, ProjNames) -&gt; Ename = Emp#employee.name, Fun = fun() -&gt; mnesia:write(Emp), AtDep = #at\_dep{emp = Ename, dept\_id = DeptId}, mnesia:write(AtDep), mk_projs(Ename, ProjNames) end, mnesia:transaction(Fun). mk_projs(Ename, [ProjName|Tail]) -&gt; mnesia:write(#in\_proj{emp = Ename, proj\_name = ProjName}), mk_projs(Ename, Tail); mk\_projs(\_, []) -&gt; ok.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-44-getting-started-with-mnesia-22/" title="mnesia 기초 4/4 &amp;#8211; Getting Started with Mnesia 2/2">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-06T00:00:00JST">Feb 6, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/06/erlang-debug/">erlang debug</a></h2>
+  </header>
+
+  
+  <div class="summary">erlang에서 디버깅하는 방법은 다음과 같다.
+ 주의할 것은 erlang 설치 전에 wxWiget 라이브러리를 먼저 설치한 후 erlang을 설치해야 한다는 것이다. 관련 설치방법은 erlang/otp 설치 문서를 참고!  erl 노드를 실행시킨 후 debugger monitor를 실행시킨다.
+ &gt; debugger:start().  Monitor윈도가 실행되면 Module &gt; Interpret 메뉴를 선택한다.
+파일 선택기에서 디버깅하고자 하는 .erl 파일을 선택한다.
+반드시 erl 노드가 import한 모듈의 소스여야 한다.
+예를 들어 ejabberd의 디버그 쉘을 실행시킨 후 디버깅할 수 있는 모듈은 ejabberd 모듈에 한정된다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/06/erlang-debug/" title="erlang debug">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-04T00:00:00JST">Feb 4, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/04/erlang-list-sort/">erlang list sort</a></h2>
+  </header>
+
+  
+  <div class="summary">다음과 같은 리스트가 있다고 가정하자.
+&gt; List = [{a, 10}, {b, 5}, {c, 3}, {d, 6}].  두번째 요소인 정수값을 기준으로 오름차순으로 정렬하고자 한다면 다음과 같이 한다.
+&gt; lists:sort(fun(A, B) -&gt; {Name1, Order1} = A, {Name2, Order2} = B, Order1 &lt; Order2 end, List).  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/04/erlang-list-sort/" title="erlang list sort">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-01T00:00:00JST">Feb 1, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/01/erlang-intellijec9790ec849c-eab09cebb09ced9598eab8b0/">erlang intellij에서 개발하기</a></h2>
+  </header>
+
+  
+  <div class="summary">현재까지 찾아본 바로는 쓸만한 erlang ide는 eclipse + erlide와 intellij + erlang plugin 정도가 될 것 같다.
+webstorm의 경우 erlang plugin을 설치하고 소스코드를 편집할 수 있지만, 프로젝트를 생성하거나 컴파일하고 실행하는 등의 작업은 할 수 없기 때문에 제외한다.
+eclipse에 비해 intellij가 상대적으로 많은 기능을 제외하고 편집기 자체도 뛰어나며 community edition을 사용할 경우 무료로 사용할 수 있기 때문에 intellij를 사용하기로 한다.
+intellij에 elang plugin 설치 우선 intellij community edition을 설치한다.(JetBrains 홈페이지에서 다운로드할 수 있다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/01/erlang-intellijec9790ec849c-eab09cebb09ced9598eab8b0/" title="erlang intellij에서 개발하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-28T00:00:00JST">Jan 28, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/28/erlang-base64-encoding/">erlang base64 encoding</a></h2>
+  </header>
+
+  
+  <div class="summary">base64 인코딩을 위해서는 base64 모듈의 encode/1 함수를 다음과 같이 사용한다.
+10&gt; Enc = base64:encode(&lt;&gt;). &lt;&gt; 12&gt; io:format(&quot;~s~n&quot;, [base64:decode(Enc)]). encode ok  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/28/erlang-base64-encoding/" title="erlang base64 encoding">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-28T00:00:00JST">Jan 28, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/28/erlang-ideeba5bc-ec9c84ed959c-webstorm-ec8690ebb3b4eab8b0/">erlang ide를 위한 webstorm 손보기</a></h2>
+  </header>
+
+  
+  <div class="summary">erlang plugin 설치 먼저 jetbrain plugin 페이지에서 erlang plugin을 다운로드 받는다.
+적당한 폴더에 압축을 풀어놓고 Erlang폴더 전체를 webstorm이 설치된 경로의 plugin폴더 하위에 복사한다.
+마지막으로 webstorm을 재시작하면 적용된다.
+consolas 폰트 설치 이 페이지에 자세히 설명되어 있으므로 따라 설치하자.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/28/erlang-ideeba5bc-ec9c84ed959c-webstorm-ec8690ebb3b4eab8b0/" title="erlang ide를 위한 webstorm 손보기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlang-1ebb0b1eba78c-tcp-eb8f99ec8b9c-eca091ec868d-ecb298eba6ac/">erlang 1백만 tcp 동시 접속 처리</a></h2>
+  </header>
+
+  
+  <div class="summary">http://www.erlang-factory.com/upload/presentations/558/efsf2012-whatsapp-scaling.pdf</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlang-1ebb0b1eba78c-tcp-eb8f99ec8b9c-eca091ec868d-ecb298eba6ac/" title="erlang 1백만 tcp 동시 접속 처리">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlang-game-server-programming/">erlang game server programming</a></h2>
+  </header>
+
+  
+  <div class="summary">http://www.diva-portal.org/smash/get/diva2:641311/FULLTEXT01.pdf
+http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlang-game-server-programming/" title="erlang game server programming">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li><a href="/categories/erlang/page/2/">Previous</a></li>
+    
+
+    
+    <li><a href="/categories/erlang/page/4/">Next</a></li>
+    
+
+  </ul>
 </nav>
 
-	</div>
 
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/14/mnesia-eab8b0ecb488-24-match-spec/">mnesia 기초 2/4 &amp;#8211; Match Spec</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
 
-<h1 id="match-spec">Match Spec</h1>
-
-<p>mnesia:select 또는 mnesia:dirty_select에 Match Spec을 정의해서 데이터를 검색할 수 있다.</p>
-
-<p>MatchSpec의 기본형은 다음과 같다.</p>
-
-<pre><code class="language-erlang">      
-[{ {매치패턴}, [조건식], [결과값]}]
-  
-</code></pre>
-
-<p>매치패턴은 튜플의 형태로 테이블의 레코드의 구조와 동일해야한다.</p>
-
-<pre><code class="language-erlang">      
-[{ {'$1', '$2', &amp;#8230;}, [], &amp;#8230;
-  
-</code></pre>
-
-<p>$1, $2는 바인드 변수이며 Match Spec안에서만 사용된다.</p>
-
-<p>조건식은 다음과 같이 논리연산자, 비교컬럼지정자, 검색값 형식으로 입력한다.</p>
-
-<pre><code class="language-erlang">      
-['&gt;', '$1', &quot;abcd&quot;]
-  
-</code></pre>
-
-<p>예를 들면 다음과 같다.</p>
-
-<pre><code class="language-erlang">      
--type my_color() :: red | yellow | blue;
-      
--record(shape, {name = &quot;&quot; :: string(), color = red :: fruit_color(), count = 0 :: integer()}).
-
-init() -&gt;
-          
-mnesia:create_table(shape,
-              
-[{disc_copies, [node()]},
-              
-{attributes, record_info(fields, shape)}]),
-          
-F = fun() -&gt;
-              
-mnesia:write(#shape{name = &quot;rect1&quot;, color = red, count = 1}),
-              
-mnesia:write(#shape{name = &quot;rect2&quot;, color = yellow, count = 10}),
-              
-mnesia:write(#shape{name = &quot;circle&quot;, color = blue, count = 5})
-              
-end,
-          
-{atomic, ok} = mnesia:transaction(F).
-
-select_rect() -&gt;
-          
-mnesia:dirty\_select(shape, [{ {shape, &quot;rect&quot; ++ '\_', '\_', '\_'}, [], ['$_'] }]).
-
-select_red() -&gt;
-          
-mnesia:dirty_select(shape, [{ {shape, '$1', red, '$2'}, [], [{'$1', '$2'}] }]).
-
-select_count({greater, Count}) -&gt;
-          
-mnesia:dirty_select(shape, [{ {shape, '$1', '$2', '$3'}, ['&gt;', '$3', Count], [{'$1', '$2', '$3'}] }]).
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/mnesia/">#mnesia</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-14T00:00:00Z">
-            14 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/14/mnesia-eab8b0ecb488-34-getting-started-with-mnesia-1/">mnesia 기초 3/4 &amp;#8211; Getting Started with Mnesia 1/2</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>Erlang 공식 문서 중에 <a href="http://www.erlang.org/doc/apps/mnesia/Mnesia_chap2.html">Getting Started with Mnesia</a>문서를 기준으로 몇몇내용을 추가해 다음과 같이 작성해 보았다.</p>
-
-<h2 id="mnesia-시작">mnesia 시작</h2>
-
-<p>mnesia를 시작하기 위해서 다음의 과정이 필요하다.</p>
-
-<ul>
-<li>erlang node에 mnesia의 데이터가 저장될 경로를 지정하여 erlang shell을 시작한다.</li>
-<li>새로운 빈 스키마를 생성한다. 스키마는 데이터베이스의 정보를 포함한다.</li>
-<li>mnesia DBMS를 시작한다.</li>
-<li>테이블을 생성한다.</li>
-<li>데이터베이스 정보를 조회한다.</li>
-</ul>
-
-<p>위의 과정을 수행하기 위해 다음과 같이 따라해 보자.</p>
-
-<pre><code>      
-$ erl -mnesia dir '&quot;tmp/funky&quot;'
-  
-</code></pre>
-
-<p>tmp/funky 디렉토리에 mnesia 데이터가 저장되도록 -mnesia dir 옵션을 사용해 erlang shell을 시작한다.</p>
-
-<p>그 이후 위에서 언급한 순서대로 다음과 같이 입력한다</p>
-
-<pre><code class="language-erlang">      
-Eshell V6.3 (abort with ^G)
-      
-1&gt; mnesia:create_schema([node()]).
-      
-ok
-      
-2&gt; mnesia:start().
-      
-ok
-      
-3&gt; mnesia:create_table(funky, []).
-      
-{atomic,ok}
-      
-4&gt; mnesia:info().
-      
-&amp;#8212;&gt; Processes holding locks &lt;&amp;#8212;
-      
-&amp;#8212;&gt; Processes waiting for locks &lt;&amp;#8212;
-      
-&amp;#8212;&gt; Participant transactions &lt;&amp;#8212;
-      
-&amp;#8212;&gt; Coordinator transactions &lt;&amp;#8212;
-      
-&amp;#8212;&gt; Uncertain transactions &lt;&amp;#8212;
-      
-&amp;#8212;&gt; Active tables &lt;&amp;#8212;
-      
-funky : with 0 records occupying 305 words of mem
-      
-schema : with 2 records occupying 529 words of mem
-      
-===&gt; System info in version &quot;4.12.4&quot;, debug level = none &lt;===
-      
-opt_disc. Directory &quot;/Users/shinchangheon/tmp/funky&quot; is used.
-      
-use fallback at restart = false
-      
-running db nodes = [nonode@nohost]
-      
-stopped db nodes = []
-      
-master node tables = []
-      
-remote = []
-      
-ram_copies = [funky]
-      
-disc_copies = [schema]
-      
-disc\_only\_copies = []
-      
-[{nonode@nohost,disc_copies}] = [schema]
-      
-[{nonode@nohost,ram_copies}] = [funky]
-      
-3 transactions committed, 0 aborted, 0 restarted, 2 logged to disc
-      
-0 held locks, 0 in queue; 0 local transactions, 0 remote
-      
-0 transactions waits for other nodes: []
-      
-ok
-  
-</code></pre>
-
-<p>빈 옵션&rsquo;[]&#8217;으로 테이블을 생성하면 메모리에 테이블이 생성되며, 노드가 종료되면 해당 테이블은 사라진다.</p>
-
-<pre><code class="language-erlang">      
-Eshell V6.3 (abort with ^G)
-      
-1&gt; mnesia:info().
-      
-===&gt; System info in version {mnesia\_not\_loaded,nonode@nohost,
-                                      
-{1423,913120,829264}}, debug level = none &lt;===
-      
-opt_disc. Directory &quot;/Users/shinchangheon/tmp/funky&quot; is used.
-      
-use fallback at restart = false
-      
-running db nodes = []
-      
-stopped db nodes = [nonode@nohost]
-      
-ok
-  
-</code></pre>
-
-<h2 id="테이블을-생성하기">테이블을 생성하기</h2>
-
-<p>다음과 같은 ERD를 구성한다고 가정해 보자.</p>
-
-<p><img src="http://www.erlang.org/doc/apps/mnesia/company.gif" alt="ER-D" /></p>
-
-<p>Company 데이터베이스에 Dept, Employee, Project 테이블이 있고, Dept와 Employee간에 Manager와 At_dep 관계가 있으며, Employee와 Project간에 In_proj 관계가 있는 구성이다.</p>
-
-<p>우선 각 테이블의 스키마를 구성하기 위해 record를 정의한다. 보통 record정의는 .hrl 파일에 모아두며 .erl 모듈에서 include하여 사용한다.</p>
-
-<p>다음은 company.hrl 파일의 내용이다.</p>
-
-<pre><code class="language-erlang">      
--record(employee, {emp_no,
-                         
-name,
-                         
-salary,
-                         
-sex,
-                         
-phone,
-                         
-room_no}).
-
--record(dept, {id,
-                     
-name}).
-
--record(project, {name,
-                        
-number}).
-
--record(manager, {emp,
-                        
-dept}).
-
--record(at_dep, {emp,
-                       
-dept_id}).
-
--record(in_proj, {emp,
-                        
-proj_name}).
-  
-</code></pre>
-
-<p>보통 record의 이름과 table 이름은 동일하게 만든다.</p>
-
-<p>company.erl 파일은 다음과 같다.</p>
-
-<pre><code class="language-erlang">      
--module(company).
-
-%% API
-      
--export([init/0, start/0]).
-
--include_lib(&quot;stdlib/include/qlc.hrl&quot;).
-      
--include(&quot;company.hrl&quot;).
-
-start() -&gt;
-        
-mnesia:create_schema([node()]),
-        
-mnesia:start().
-
-init() -&gt;
-        
-mnesia:create_table(employee,
-          
-[{attributes, record_info(fields, employee)}]),
-        
-mnesia:create_table(dept,
-          
-[{attributes, record_info(fields, dept)}]),
-        
-mnesia:create_table(project,
-          
-[{attributes, record_info(fields, project)}]),
-        
-mnesia:create_table(manager, [{type, bag},
-          
-{attributes, record_info(fields, manager)}]),
-        
-mnesia:create\_table(at\_dep,
-          
-[{attributes, record\_info(fields, at\_dep)}]),
-        
-mnesia:create\_table(in\_proj, [{type, bag},
-          
-{attributes, record\_info(fields, in\_proj)}]).
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/mnesia/">#mnesia</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-14T00:00:00Z">
-            14 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/14/mnesia-eab8b0ecb488-44-getting-started-with-mnesia-22/">mnesia 기초 4/4 &amp;#8211; Getting Started with Mnesia 2/2</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="데이터-추가">데이터 추가</h2>
-
-<p>테이블에 데이터를 추가하기 위해서는 트랜잭션을 사용해야 한다. 트랜잭션은 매개변수가 없는 익명의 fun에 여러 DB 오퍼레이션을 묶어 생성할 수 있다.</p>
-
-<p>테이블에 데이터를 입력할 때는 mnesia:write/1 함수를 사용할 수 있으면 매개변수는 레코드를 사용한다.</p>
-
-<pre><code class="language-erlang">      
-insert_emp(Emp, DeptId, ProjNames) -&gt;
-          
-Ename = Emp#employee.name,
-          
-Fun = fun() -&gt;
-                        
-mnesia:write(Emp),
-                        
-AtDep = #at\_dep{emp = Ename, dept\_id = DeptId},
-                        
-mnesia:write(AtDep),
-                        
-mk_projs(Ename, ProjNames)
-                
-end,
-          
-mnesia:transaction(Fun).
-
-mk_projs(Ename, [ProjName|Tail]) -&gt;
-          
-mnesia:write(#in\_proj{emp = Ename, proj\_name = ProjName}),
-          
-mk_projs(Ename, Tail);
-      
-mk\_projs(\_, []) -&gt; ok.
-  
-</code></pre>
-
-<p>insert_emp/3함수의 첫번째 매개변수는 employ레코드 타입이어야 하며, ProjNames는 리스트여야 한다.</p>
-
-<p>DeptId는 어떤 타입이든 상관 없지만 아마도 문자열이면 될 것이다.</p>
-
-<p>재밌는 것은 mk_projs/2함수인데, ProjNames리스트를 [H|T]로 나누어서 마지막 요소가 더이상 없을때(빈 리스트인 [])까지 재귀호출을 하는 루틴을 갖는다.</p>
-
-<p>결국 트랜잭션은 하나의 employee write와 하나의 at_dep write와 여러 개의 in_proj write로 구성된다.</p>
-
-<h2 id="데이터-검색">데이터 검색</h2>
-
-<p>mnesia에서 데이터를 검색하는 방법은 match spec을 사용하는 방법과 qlc를 사용하는 방법이 있다.</p>
-
-<p>다음과 같이 employee 테이블에 데이터를 입력해 보자.</p>
-
-<pre><code class="language-erlang">        
-F = fun() -&gt;
-          
-mnesia:write({employee, 104465, &quot;Johnson Torbjorn&quot;, 1, male, 99184, {242,038}}),
-          
-mnesia:write({employee, 107912, &quot;Carlsson Tuula&quot;, 2, female,94556, {242,056}}),
-          
-mnesia:write({employee, 114872, &quot;Dacker Bjarne&quot;, 3, male, 99415, {221,035}}),
-          
-mnesia:write({employee, 104531, &quot;Nilsson Hans&quot;, 3, male, 99495, {222,026}}),
-          
-mnesia:write({employee, 104659, &quot;Tornkvist Torbjorn&quot;, 2, male, 99514, {222,022}}),
-          
-mnesia:write({employee, 104732, &quot;Wikstrom Claes&quot;, 2, male, 99586, {221,015}}),
-          
-mnesia:write({employee, 117716, &quot;Fedoriw Anna&quot;, 1, female,99143, {221,031}}),
-          
-mnesia:write({employee, 115018, &quot;Mattsson Hakan&quot;, 3, male, 99251, {203,348}})
-        
-end,
-        
-mnesia:transaction(F).
-  
-</code></pre>
-
-<h2 id="key-사용">key 사용</h2>
-
-<p>employee 테이블에서 emp_no가 104465인 레코드를 검색해 보자.</p>
-
-<p>다음과 같이 mnesia:read/2 또는 mnesia:dirty_read/2를 사용해 검색할 수 있다.</p>
-
-<pre><code class="language-erlang">      
-7&gt; mnesia:dirty_read(employee, 104465).
-      
-[{employee,104465,&quot;Johnson Torbjorn&quot;,1,male,99184,{242,38}}]
-  
-</code></pre>
-
-<h2 id="match-spec">match spec</h2>
-
-<p>키 이외의 값으로 조회하고자 한다면 어떻게 해야 할까?</p>
-
-<p>mnesia:select/2 또는 mnesia:dirty_select/2 함수를 사용하면 된다.</p>
-
-<pre><code class="language-erlang">      
-15&gt; rr(company).
-      
-16&gt; mnesia:dirty\_select(employee, [{#employee{sex = female, name = '$1', \_ = '_'},[], ['$1']}]).
-      
-[&quot;Carlsson Tuula&quot;,&quot;Fedoriw Anna&quot;]
-  
-</code></pre>
-
-<p>employee 레코드 사용을 위해 15번 라인에서 rr() 명령을 사용했다. erlang shell에서 레코드 정의 파일(company.hrl)을 로드할 때 rr() 명령을 사용할 수 있다.</p>
-
-<p>mnesia:dirty_xxx 함수는 트랜잭션이 필요없는 함수로 트랜잭션이 완료되지 않은 값(트랜잭션 실패로 취소될 수 있는 값)을 읽을때 사용한다.</p>
-
-<p>16번 라인이 의미하는 바를 sql query로 바꾸면 다음과 같다.(Match Spec에 관련한 내용은 이전 글을 참고)</p>
-
-<pre><code class="language-erlang">      
-select name from employee where sex = 'female';
-  
-</code></pre>
-
-<p>모든 컬럼을 쿼리하려면 다음과 같이 하면 된다.</p>
-
-<pre><code class="language-erlang">      
-17&gt; mnesia:dirty\_select(employee, [{#employee{sex = female, \_ = '\_'},[], ['$\_']}]).
-      
-[#employee{emp_no = 107912,name = &quot;Carlsson Tuula&quot;,
-                 
-salary = 2,sex = female,phone = 94556,
-                 
-room_no = {242,56}},
-       
-#employee{emp_no = 117716,name = &quot;Fedoriw Anna&quot;,salary = 1,
-                 
-sex = female,phone = 99143,
-                 
-room_no = {221,31}}]
-  
-</code></pre>
-
-<h2 id="qlc-사용">qlc 사용</h2>
-
-<p>QLC 쿼리는 match spec과 함께 mnesia 함수를 사용하는 것보다 더 고비용이지만 깔끔한 구문을 사용할 수 있게 해 준다.</p>
-
-<pre><code class="language-erlang">  
-females() -&gt;
+  </div>
+  <div class="col-md-4">
     
-F = fun() -&gt;
-      
-Q = qlc:q([E#employee.name || E &lt;- mnesia:table(employee),
-        
-E#employee.sex == female]),
-      
-qlc:e(Q)
-    
-end,
-    
-mnesia:transaction(F).
-  
-</code></pre>
-
-<p>qlc구문은 리스트해석과 가드를 조합한 모양이다.</p>
-
-<pre><code class="language-erlang">  
-qlc:q([E#employee.name || E &lt;- mnesia:table(employee),
-        
-E#employee.sex == female]),
-  
-</code></pre>
-
-<p>이 부분의 코드를 처리 순서대로 분석해 보면 다음과 같다.</p>
-
-<ol>
-<li>mnesia:table(employee) : employee의 모든 데이터를 리스트로 반환</li>
-<li>, E#employee.sex == female : sex가 female인 데이터만 필터링</li>
-<li>E#employee.name : 필터링된 데이터에서 name field만 리스트로 출력</li>
-</ol>
-
-<p>위와 같은 처리 순서로 보았을 때, sex에 인덱스가 설정되어 있다고해도 mnesia 함수와는 달리 full scan은 피할 수 없어 보인다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/mnesia/">#mnesia</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-14T00:00:00Z">
-            14 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/06/erlang-debug/">erlang debug</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>erlang에서 디버깅하는 방법은 다음과 같다.</p>
-
-<ul>
-<li>주의할 것은 erlang 설치 전에 wxWiget 라이브러리를 먼저 설치한 후 erlang을 설치해야 한다는 것이다.</li>
-<li>관련 설치방법은 erlang/otp 설치 문서를 참고!</li>
-</ul>
-
-<p>erl 노드를 실행시킨 후 debugger monitor를 실행시킨다.</p>
-
-<pre><code>      
-&gt; debugger:start().
-  
-</code></pre>
-
-<p>Monitor윈도가 실행되면 Module &gt; Interpret 메뉴를 선택한다.</p>
-
-<p>파일 선택기에서 디버깅하고자 하는 .erl 파일을 선택한다.</p>
-
-<p>반드시 erl 노드가 import한 모듈의 소스여야 한다.</p>
-
-<p>예를 들어 ejabberd의 디버그 쉘을 실행시킨 후 디버깅할 수 있는 모듈은 ejabberd 모듈에 한정된다.</p>
-
-<p>로드된 소스파일명을 더블클릭해서 소스파일을 열 수 있다.</p>
-
-<p>erl 소스뷰어가 출력되면 원하는 부분을 찾아 마우스로 더블클릭하거나 Break메뉴의 Line Break를 선택해 특정 라인에 브레이크 포인트를 설정할 수 있다.</p>
-
-<p>브레이크 포인트를 설치한 후 프로그램을 실행시키면 Monitor윈도우에 해당 브레이크 포인트가 걸린 프로세스가 출력되며,</p>
-
-<p>해당 프로세스를 더블클릭하면 디버깅을 시작할 수 있다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/debug/">#debug</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-06T00:00:00Z">
-            6 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/04/erlang-list-sort/">erlang list sort</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>다음과 같은 리스트가 있다고 가정하자.</p>
-
-<pre><code class="language-erlang">      
-&gt; List = [{a, 10}, {b, 5}, {c, 3}, {d, 6}].
-  
-</code></pre>
-
-<p>두번째 요소인 정수값을 기준으로 오름차순으로 정렬하고자 한다면 다음과 같이 한다.</p>
-
-<pre><code class="language-erlang">      
-&gt; lists:sort(fun(A, B) -&gt;
-          
-{Name1, Order1} = A,
-          
-{Name2, Order2} = B,
-          
-Order1 &lt; Order2
-          
-end, List).
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/sort/">#sort</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-04T00:00:00Z">
-            4 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/01/erlang-intellijec9790ec849c-eab09cebb09ced9598eab8b0/">erlang intellij에서 개발하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>현재까지 찾아본 바로는 쓸만한 erlang ide는 eclipse + erlide와 intellij + erlang plugin 정도가 될 것 같다.</p>
-
-<p>webstorm의 경우 erlang plugin을 설치하고 소스코드를 편집할 수 있지만, 프로젝트를 생성하거나 컴파일하고 실행하는 등의 작업은 할 수 없기 때문에 제외한다.</p>
-
-<p>eclipse에 비해 intellij가 상대적으로 많은 기능을 제외하고 편집기 자체도 뛰어나며 community edition을 사용할 경우 무료로 사용할 수 있기 때문에 intellij를 사용하기로 한다.</p>
-
-<h2 id="intellij에-elang-plugin-설치">intellij에 elang plugin 설치</h2>
-
-<p>우선 intellij community edition을 설치한다.(JetBrains 홈페이지에서 다운로드할 수 있다.)</p>
-
-<p>intellij를 실행한 후 Files-&gt;Settings(맥의 경우 Preference) 메뉴를 열어 Plugins 탭을 찾아 선택한다.</p>
-
-<p>intellij를 처음 실행할 경우 Welcome 팝업에서 하단의 Configure-&gt;Plugins를 선택해도 된다.</p>
-
-<p>Plugins 팝업 윈도우의 하다에서 Browse repositories&#8230; 버튼을 클릭한 후,</p>
-
-<p>검색 텍스트박스에 Erlang을 입력해서 해당 플러그인 설치한다.</p>
-
-<p>플러그인을 설치한 후 intellij를 재시작한다.</p>
-
-<h2 id="erlang-project-만들기">erlang project 만들기</h2>
-
-<p>welcome 팝업에서 create new project를 선택한 후 erlang 프로젝트를 선택하고 next 버튼을 클릭한다.</p>
-
-<p>Project SDK 선택 화면이 출력되는데,</p>
-
-<p>erlang 설치 경로를 선택(보통은 자동으로 경로 선택됨)한다.</p>
-
-<p>일반적으로 /usr/local/lib/erlang이나 /usr/lib/erlang이 될 것 이다.</p>
-
-<p>(osx의 경우 /opt/local/lib/erlang)</p>
-
-<p>프로젝트를 생성한 후 New -&gt; Erlang File을 선택해 Erlang 모듈을 생성한다.</p>
-
-<p>주의할 것은 .erl 파일은 src 경로 하위에 위치해야 한다는 것이다.</p>
-
-<p>그렇지 않을 경우 컴파일에서 제외된다.</p>
-
-<p>src 경로에 새로운 .erl파일을 추가한 후 컴파일을 하면 out폴더가 생기며 out/production/프로젝트명 하위에 컴파일 결과물이 생성된다.</p>
-
-<h2 id="그-외">그 외</h2>
-
-<p>rebar 또는 debugger와 통합하는 방법은 <a href="http://ignatov.github.io/intellij-erlang/">intellij erlang plugin 사이트</a>를 참고하자.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/intellij/">#intellij</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-01T00:00:00Z">
-            1 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/28/erlang-base64-encoding/">erlang base64 encoding</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>base64 인코딩을 위해서는 base64 모듈의 encode/1 함수를 다음과 같이 사용한다.</p>
-
-<pre><code class="language-erlang">      
-10&gt; Enc = base64:encode(&lt;&gt;).
-      
-&lt;&gt;
-      
-12&gt; io:format(&quot;~s~n&quot;, [base64:decode(Enc)]).
-      
-encode
-      
-ok
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/base64/">#base64</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-28T00:00:00Z">
-            28 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/28/erlang-ideeba5bc-ec9c84ed959c-webstorm-ec8690ebb3b4eab8b0/">erlang ide를 위한 webstorm 손보기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="erlang-plugin-설치">erlang plugin 설치</h2>
-
-<p>먼저 <a href="https://plugins.jetbrains.com/plugin/7083?pr=">jetbrain plugin 페이지</a>에서 erlang plugin을 다운로드 받는다.</p>
-
-<p>적당한 폴더에 압축을 풀어놓고 Erlang폴더 전체를 webstorm이 설치된 경로의 plugin폴더 하위에 복사한다.</p>
-
-<p>마지막으로 webstorm을 재시작하면 적용된다.</p>
-
-<h2 id="consolas-폰트-설치">consolas 폰트 설치</h2>
-
-<p><a href="http://crazia.tistory.com/entry/Ubuntu-%EC%9A%B0%EB%B6%84%ED%88%AC-%EB%A6%AC%EB%88%85%EC%8A%A4-1110-%EC%97%90-%EC%BD%98%EC%86%94%EB%9D%BC%EC%8A%A4-Consolas-%ED%8F%B0%ED%8A%B8-%EC%89%BD%EA%B2%8C-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0">이 페이지</a>에 자세히 설명되어 있으므로 따라 설치하자.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/webstorm/">#webstorm</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-28T00:00:00Z">
-            28 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/21/erlang-1ebb0b1eba78c-tcp-eb8f99ec8b9c-eca091ec868d-ecb298eba6ac/">erlang 1백만 tcp 동시 접속 처리</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p><a href="http://www.erlang-factory.com/upload/presentations/558/efsf2012-whatsapp-scaling.pdf">http://www.erlang-factory.com/upload/presentations/558/efsf2012-whatsapp-scaling.pdf</a></p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        
-        <time class="post-date" datetime="2015-01-21T00:00:00Z">
-            21 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/21/erlang-game-server-programming/">erlang game server programming</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p><a href="http://www.diva-portal.org/smash/get/diva2:641311/FULLTEXT01.pdf">http://www.diva-portal.org/smash/get/diva2:641311/FULLTEXT01.pdf</a></p>
-
-<p><a href="http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf">http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf</a></p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        
-        <time class="post-date" datetime="2015-01-21T00:00:00Z">
-            21 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-
-	<nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/categories/erlang/page/2/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 3 of 5</span>
-	
-	    <a class="older-posts" href="/categories/erlang/page/4/">Older Posts &rarr;</a>
-	
-</nav>
-
-</main>
-
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
     </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
 
-</body>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
 

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/index.xml">
+
+<link rel="canonical" href="https://jeidee.github.io/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
+    
+    
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
+
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-04-15T00:00:00JST">Apr 15, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/04/15/c-eba6aceb8885ec8aa4-eb8db0ebaaac-ed9484eba19cec84b8ec8aa4-eba78ceb93a4eab8b0/">c&#43;&#43; 리눅스 데몬 프로세스 만들기</a></h2>
+  </header>
+
+  
+  <div class="summary">c/c++ 로 구현한 어플리케이션을 데몬 프로세스로 만들기 위해 다음과 같은 과정을 거쳐 추가 코드를 작성한다.
+1) fork()를 사용해 자식프로세스를 생성 후 부모 프로세스를 종료
+2) 터미널 종료시 SIGHUP 시그널 무시
+3) (선택) 루트 디렉토리로 경로 변경
+4) setsid()로 새로운 세션 생성
+5) while(true) 루프 생성
+#include &lt;sys/types.h&gt; #include &lt;sys/stat.h&gt; #include &lt;stdio.h&gt; #include &lt;fcntl.h&gt; #include &lt;signal.h&gt; #include &lt;stdlib.h&gt; int main() { pid_t pid; // fork 에러 if (( pid = fork()) &lt; 0) exit(0); // 정상 : 부모프로세스를 종료한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/04/15/c-eba6aceb8885ec8aa4-eb8db0ebaaac-ed9484eba19cec84b8ec8aa4-eba78ceb93a4eab8b0/" title="c&#43;&#43; 리눅스 데몬 프로세스 만들기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-04-14T00:00:00JST">Apr 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/04/14/c-regexeba5bc-ec82acec9aa9ed95b4ec849c-ebacb8ec9e90ec97b4ec9db4-eb82a0eca79cec9db8eca780-ed9995ec9db8/">c&#43;&#43; regex를 사용해서 문자열이 날짜인지 확인</a></h2>
+  </header>
+
+  
+  <div class="summary">정규표현식을 사용해서 주어진 문자열이 날짜인지 확인하는 코드는 다음과 같다.
+#include &lt;string&gt; #include &lt;iostream&gt; #include &lt;regex&gt; using namespace std; bool string\_util::is\_date(string source) { // yyyy-mm-dd 형식의 날짜만 지원 regex ex(&quot;d{4}-d{2}-d{2}&quot;); smatch matches; while (regex_search(source, matches, ex)) { for (auto m : matches) { cout &lt;&lt; &quot;match string is &quot; &lt;&lt; m &lt;&lt; endl; } return true; } return false; }  굳이 while (regex_search(&#8230;)) 루프를 사용하지 않고 if (regex_search())를 사용해도 되겠지만, 용법을 살펴보는 의미로 추가했다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/04/14/c-regexeba5bc-ec82acec9aa9ed95b4ec849c-ebacb8ec9e90ec97b4ec9db4-eb82a0eca79cec9db8eca780-ed9995ec9db8/" title="c&#43;&#43; regex를 사용해서 문자열이 날짜인지 확인">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-04-14T00:00:00JST">Apr 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/04/14/c-tail-f-eab5aced9884/">c&#43;&#43; tail -f 구현</a></h2>
+  </header>
+
+  
+  <div class="summary">ifstream을 사용해서 tail -f를 구현해 보자.
+소스코드를 먼저 본다.
+#include &lt;iostream&gt; #include &lt;fstream&gt; #include &lt;string&gt; #include &lt;unistd.h&gt; // for sleep() using namespace std; // return code #define EXIT_OK 0 #define EXIT\_INVALID\_ARGUMENTS 1 #define EXIT\_FILE\_NOT_FOUND 2 int main(int argc, char** argv) { if (argc &lt; 2) { cout &lt;&lt; &quot;Usage: log\_collector file\_path&quot; &lt;&lt; endl; return EXIT\_INVALID\_ARGUMENTS; } string logFilePath = &quot;/home/gss.dev/server/bin/var/log/ejabberd/ejabberd.log&quot;; ifstream fsLog; // open log file and go to end of file fsLog.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/04/14/c-tail-f-eab5aced9884/" title="c&#43;&#43; tail -f 구현">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-04-14T00:00:00JST">Apr 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/04/14/c-ubuntuec9790ec849c-mysql-eab09cebb09c-ec97b0eab2b0/">c&#43;&#43; ubuntu에서 mysql 개발 &amp;#8211; 연결</a></h2>
+  </header>
+
+  
+  <div class="summary"> ubuntu에서 mysql 개발을 위해서, 먼저 mysql library를 다음과 같이 설치한다.
+ sudo apt-get install libmysqlcppconn-dev  그런 후 다음과 같이 단순 연결 코드를 작성한다. (test.cpp)
+#include &lt;iostream&gt; #include &quot;mysql_driver.h&quot; int main() { sql::mysql::MySQL_Driver *driver; sql::Connection *con; driver = sql::mysql::get\_mysql\_driver_instance(); con = driver-&gt;connect(&quot;tcp://127.0.0.1:3306&quot;, &quot;ejabberd&quot;, &quot;ejabberd&quot;); delete con; return 0; }  g++을 사용해서 다음과 같이 컴파일 한다.
+ g++ -Wall -I/usr/include/cppconn -o test test.cpp -L/usr/lib -lmysqlcppconn  참고  MySQL Connector/C++ Developer Guide C++ / mysql Connector &#8211; undefined reference to get_driver_instance &#8211; already tried the easy stuff  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/04/14/c-ubuntuec9790ec849c-mysql-eab09cebb09c-ec97b0eab2b0/" title="c&#43;&#43; ubuntu에서 mysql 개발 &amp;#8211; 연결">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-04-14T00:00:00JST">Apr 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/04/14/c-vector-operator-overloading/">c&#43;&#43; vector == operator overloading</a></h2>
+  </header>
+
+  
+  <div class="summary">bool operator==(vector&lt;int&gt;&amp; lhs, vector&lt;int&gt;&amp; rhs) { if (lhs.size() != rhs.size()) return false; for (vector&lt;int&gt;::iterator lit = lhs.begin(), rit = rhs.begin(); lit != lhs.end() &amp;&amp; rit != rhs.end(); ++lit, ++rit) { if (\*lit != \*rit) return false; } return true; }  주의할 것은 클래스 내부가 아닌 외부에서 연산자를 오버로딩할 때 bool operator==() const { &#8230; } 와 같이 하는 경우 다음과 같은 컴파일 에러를 만날 수 있다.
+ non-member function cannot have cv-qualifier&#8230;</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/04/14/c-vector-operator-overloading/" title="c&#43;&#43; vector == operator overloading">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-04-14T00:00:00JST">Apr 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/04/14/c11-foreach/">c&#43;&#43;11 foreach</a></h2>
+  </header>
+
+  
+  <div class="summary"> c++11에서는 foreach를 다음과 같이 사용할 수 있다.
+vector&lt;string&gt; tokens = &amp;#8230;; for(auto token : tokens) { &amp;#8230; }  참고  Range-based for loops  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/04/14/c11-foreach/" title="c&#43;&#43;11 foreach">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-30T00:00:00JST">Mar 30, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/30/ngrinderec9980-smack-apieba5bc-ec82acec9aa9ed95b4-ejabberd-ed858cec8aa4ed8ab8ed9598eab8b0/">nGrinder와 smack api를 사용해 ejabberd 테스트하기</a></h2>
+  </header>
+
+  
+  <div class="summary">테스트 환경 smack api는 3.2.2, nGrinder는 3.3 버전이다.
+192.168.56.101서버에 ejabberd가 실행중이고, ngrinder-controller, -agent, -monitor가 실행중이라고 가정한다.
+테스트 스크립트 작성 1) Script &gt; Create a script 버튼을 클릭해 다음과 같이 스크립트를 만들어 준다.
+ Script Name : testXmpp
+Type : Groovy
+URL to be tested :
+Create Lib and Resource folders : Check
+ 2) smack-3.2.2.jar 파일을 lib 폴더에 업로드한다.
+3) 만들어진 스크립트를 다음과 같이 수정한다.
+testXmpp.groovy
+package org.ngrinder; import static net.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/30/ngrinderec9980-smack-apieba5bc-ec82acec9aa9ed95b4-ejabberd-ed858cec8aa4ed8ab8ed9598eab8b0/" title="nGrinder와 smack api를 사용해 ejabberd 테스트하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-19T00:00:00JST">Mar 19, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/19/ngrinder-ec84a4ecb998/">nGrinder 설치</a></h2>
+  </header>
+
+  
+  <div class="summary">nGrinder를 설치하는 방법을 살펴보자.
+사전 준비 nGrinder를 설치하려면 Oracle JDK 1.6 이상 또는 OpenJDK 1.7 버전 이상이 필요하다.
+ nGrinder의 사용 포트  Agent : Any =&gt; Controller : 16001 Agent : Any =&gt; Controller : 12000 ~ 12000+(동시 테스트 수 만큼) Controller : Any =&gt; Monitor : 13243 Controller =&gt; Public User: 톰캣 설정에 따르지만 기본값은 8080   Conroller, Agent, Monitor등의 개념을 알고자 한다면 nGrinder 문서 중에서 Architecure 문서를 참고해야 한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/19/ngrinder-ec84a4ecb998/" title="nGrinder 설치">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-18T00:00:00JST">Mar 18, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/18/erlangeab3bc-cc-ed86b5ed95a9ed9598eab8b0-erlang-nif/">erlang과 c/c&#43;&#43; 통합하기 &amp;#8211; erlang nif</a></h2>
+  </header>
+
+  
+  <div class="summary"> erlang과 다른 언어를 통합하려면 포트를 사용하면 된다.
+포트의 경우erlang 프로세스에서 다른 언어로 작성된 프로세스를 자식 프로세스로 생성하고, 두 프로세스간 입출력 스트림을 파이프로 연결해 통신하는 방법이라고 할 수 있다.
+c언어의 경우 포트 이외에 R14부터 채용된 erlang nif을 사용해서 통합할 수 있는데, 포트보다 사용방법이 간단하다. (c++의 경우 wrapper인 nifpp를 사용해서 구현할 수 있다.)
+자세한 내용은 하단의 링크를 참고하도록 한다.
+참고  Erlang NIFs How to integrate C with Erlang program example or Erlang NIFs A c NIF wrapper for erlang to support aes/ecb/pkcs5padding add star Erlang과 C의 연결 C++11 Wrapper for Erlang NIF API/nifpp  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/18/erlangeab3bc-cc-ed86b5ed95a9ed9598eab8b0-erlang-nif/" title="erlang과 c/c&#43;&#43; 통합하기 &amp;#8211; erlang nif">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-17T00:00:00JST">Mar 17, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/17/c-eclipseec9790ec849c-c-110x-eca780ec9b90-ec84a4eca095/">c&#43;&#43; eclipse에서 c&#43;&#43; 11/0x 지원 설정</a></h2>
+  </header>
+
+  
+  <div class="summary"> 먼저 C++ 프로젝트를 생성한다.
+생성된 프로젝트에서 Properties 메뉴를 선택한다.
+C/C++ Build &gt; Settings &gt; Tool Settings &gt; GCC C++ Compiler &gt; Miscellaneous -&gt; Other Flags에 &#8220;-std=c++0x&#8221;값을 입력한다.
+C/C++ General &gt; Paths and Symbols &gt; Symbols &gt; GNU C++에서 &#8220;Add&#8221;버튼을 클릭하고 Name필드에 &#8220;GXX_EXPERIMENTAL_CXX0X&#8220;값을 입력한다. Value필드는 빈 채로 둔다.
+Apply버튼을 클릭하고 OK 버튼을 클릭한다.
+다시 빌드한다.
+참고  eclipse cdt c++11/0x support  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/17/c-eclipseec9790ec849c-c-110x-eca780ec9b90-ec84a4eca095/" title="c&#43;&#43; eclipse에서 c&#43;&#43; 11/0x 지원 설정">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li><a href="/page/11/">Previous</a></li>
+    
+
+    
+    <li><a href="/page/13/">Next</a></li>
+    
+
+  </ul>
+</nav>
+
+
+
+  </div>
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

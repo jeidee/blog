@@ -1,2145 +1,432 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/categories/ejabberd/index.xml">
 
-  	<meta property="og:title" content=" Ejabberd &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/categories/ejabberd/" />
+<link rel="canonical" href="https://jeidee.github.io/categories/ejabberd/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Ejabberd - Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
     
     
-    <meta property="og:type" content="website" />
     
 
-  <title>
-     Ejabberd &middot;  Erlang &amp; Go
-  </title>
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
 
-    <meta name="description" content="" />
+          
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-        <link href="https://jeidee.github.io/categories/ejabberd/index.xml" rel="alternate" type="application/rss+xml" title="Ejabberd &middot; Erlang &amp; Go" />
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/categories/ejabberd/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
-</head>
-<body class="nav-closed">
-
-  
-
-
- <div class="site-wrapper">
-
-
-
-
-	<header class="main-header tag-head no-cover">
-
-    <nav class="main-nav overlay clearfix">
-      
-      
-        
-          <a class="menu-button icon-feed" href="https://jeidee.github.io/categories/ejabberd/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
         </div>
-</div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
+      </nav>
+    </header>
 
-<main id="content" class="content" role="main">
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+    <header class="page-header">
+      <h1>Ejabberd</h1>
+    </header>
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/categories/ejabberd/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 2 of 4</span>
-	
-	    <a class="older-posts" href="/categories/ejabberd/page/3/">Older Posts &rarr;</a>
-	
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-03T00:00:00JST">Jun 3, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/06/03/ejabberdec9790-redis-eb9dbcec9db4ebb88ceb9faceba6aceredis-ecb694eab080/">ejabberd에 redis 라이브러리(eredis) 추가</a></h2>
+  </header>
+
+  
+  <div class="summary">ejabberd가 15.03버전이 릴리즈되면서 redis 지원이 추가되었다.
+클라이언트 세션 관리를 redis로 할 수 있는데 직접 연관된 모듈은 ejabberd_sm 모듈이다.
+redis를 사용하려면 다음과 같이 configure에서 &#8211;enable-redis 옵션을 추가해 주면 된다.
+ ./configure &amp;#8230; &amp;#8211;enable-redis  위와 같이 해 준후에 rebar를 사용해 의존 라이브러리를 다운로드 받아 컴파일해야 한다.
+ rebar get-deps rebar compile  그런 후 make &amp;&amp; make install을 수행하면 된다.
+ejabberd.yml에서 sm_db_type을 redis로 설정하기 위해서는 다음 라인을 추가해 주면 된다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/06/03/ejabberdec9790-redis-eb9dbcec9db4ebb88ceb9faceba6aceredis-ecb694eab080/" title="ejabberd에 redis 라이브러리(eredis) 추가">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-02T00:00:00JST">Jun 2, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/06/02/gloox-xmppping/">gloox xmppPing</a></h2>
+  </header>
+
+  
+  <div class="summary">gloox의 경우 tcp 연결이 비정상적으로 종료되었을 때 disconnect를 감지할 수 없는 경우가 있다.
+이럴 경우를 대비해 xmpp 서버에 주기적으로 ping을 보내고 pong을 수신해서 연결 상태를 관리하는 것이 좋다.
+class MsgClient : public MessageSessionHandler , &amp;#8230; , EventHandler { private: int m_heartBeat; }; void MsgClient::heartBeat() { m\_client-&gt;xmppPing(m\_client-&gt;jid(), this); if (++m_heartBeat &gt; 3) { LOGD(&quot;허트비트 무응답 초과로 연결 종료!&quot;); m_client-&gt;disconnect(); } } void MsgClient::handleEvent(const Event&amp; event) { switch (event.eventType()) { case Event::PingPing: LOGD(&quot;PingPing&quot;); break; case Event::PingPong: LOGD(&quot;PingPong&quot;); &amp;#8211;m_heartBeat; break; case Event::PingError: LOGE(&quot;PingError&quot;); break; default: break; } return; } // ConnectionListener void MsgClient::onConnect() { LOGD(&quot;connected!</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/06/02/gloox-xmppping/" title="gloox xmppPing">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-04-21T00:00:00JST">Apr 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/04/21/gloox-for-android/">gloox for android</a></h2>
+  </header>
+
+  
+  <div class="summary">gloox를 android에서 사용하기 위한 과정을 살펴보자.
+사전 준비 작업 다음과 같은 환경이 구축되어 있다고 가정한다.
+ 개발 환경 : Mac OS X Yosemite 10.10.3 Android Studio : 1.1.0  Android SDK 경로는 ~/Android/sdk로 변경  NDK  ~/Android/ndk에 복사하고 path 지정   Android Studio에 ndk 설정 Preference &gt; External Tools에서 + 버튼을 클릭해 javah, ndk-build, ndk-build clean 도구를 추가한다.
+1) javah
+2) ndk-build
+3) ndk-build clean
+Android Project 생성후 NDK 테스트 1) GlooxForAndroid 이름을 갖는 Android Project를 생성한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/04/21/gloox-for-android/" title="gloox for android">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-30T00:00:00JST">Mar 30, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/30/ngrinderec9980-smack-apieba5bc-ec82acec9aa9ed95b4-ejabberd-ed858cec8aa4ed8ab8ed9598eab8b0/">nGrinder와 smack api를 사용해 ejabberd 테스트하기</a></h2>
+  </header>
+
+  
+  <div class="summary">테스트 환경 smack api는 3.2.2, nGrinder는 3.3 버전이다.
+192.168.56.101서버에 ejabberd가 실행중이고, ngrinder-controller, -agent, -monitor가 실행중이라고 가정한다.
+테스트 스크립트 작성 1) Script &gt; Create a script 버튼을 클릭해 다음과 같이 스크립트를 만들어 준다.
+ Script Name : testXmpp
+Type : Groovy
+URL to be tested :
+Create Lib and Resource folders : Check
+ 2) smack-3.2.2.jar 파일을 lib 폴더에 업로드한다.
+3) 만들어진 스크립트를 다음과 같이 수정한다.
+testXmpp.groovy
+package org.ngrinder; import static net.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/30/ngrinderec9980-smack-apieba5bc-ec82acec9aa9ed95b4-ejabberd-ed858cec8aa4ed8ab8ed9598eab8b0/" title="nGrinder와 smack api를 사용해 ejabberd 테스트하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-05T00:00:00JST">Mar 5, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/05/ejabberd-ed8ca8ed82b7-ed9b84ed82b9-ebb08f-ed9584ed84b0eba781/">ejabberd 패킷 후킹 및 필터링</a></h2>
+  </header>
+
+  
+  <div class="summary">ejabberd에서 패킷을 후킹한 후 필터링하고 싶다면 다음과 같이 커스텀 모듈을 생성해 처리하면 된다.
+다음 코드는 chat 메세지 패킷을 가로체 디버그 로그에 출력해 주는 소스이다.
+-module(mod\_packet\_hook). -behaviour(gen_mod). -export([start/2, stop/1]). -export([on\_filter\_packet/1]). -include(&quot;ejabberd.hrl&quot;). -include(&quot;jlib.hrl&quot;). -include(&quot;logger.hrl&quot;). start(\_Host, \_Opts) -&gt; ejabberd\_hooks:add(filter\_packet, global, ?MODULE, on\_filter\_packet, 0), ok. stop(_Host) -&gt; ejabberd\_hooks:delete(filter\_packet, global, ?MODULE, on\_filter\_packet, 0), ok. on\_filter\_packet({From, To, XML} = Packet) -&gt; %% does something with a packet %% should return modified Packet or atom \`drop\` to drop the packet Type = proplists:get_value(&lt;&lt;&quot;type&quot;&gt;&gt;, XML#xmlel.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/05/ejabberd-ed8ca8ed82b7-ed9b84ed82b9-ebb08f-ed9584ed84b0eba781/" title="ejabberd 패킷 후킹 및 필터링">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-04T00:00:00JST">Mar 4, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/04/ejabberd-external-component-ec97b0eb8f99/">ejabberd external component 연동</a></h2>
+  </header>
+
+  
+  <div class="summary">xmpp component 개요 xmpp에는 external component 관련 공식 프로토콜인 Jabber Component Protocol이 있다.
+Jabber Component Protocol은 외부 컴포넌트를 XMPP서버와 연동하기 위한 규약을 제안하는데 크게 accept와 connect에 대한 XML 스키마와 handshake flow를 명세하고 있다.
+xmpp의 external component는 프로토콜만 준수한다면 어떤 언어를 사용해서도 구현할 수 있다. 3rd-party 컴포넌트를 ejabberd와 연동하는 방법은 Install Components and Transports to othe networks 문서를 참고하도록 한다.
+echo-bot component 만들어서 연동해 보기 node-xmpp-component 모듈을 사용해서 간단한 에코봇을 컴포넌트로 만들어 ejabberd와 연동해 보도록 하자.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/04/ejabberd-external-component-ec97b0eb8f99/" title="ejabberd external component 연동">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-31T00:00:00JST">Jan 31, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/31/ejabberd-riak-ed999cec84b1ed9994-ec84a4ecb998/">ejabberd riak 활성화 설치</a></h2>
+  </header>
+
+  
+  <div class="summary">riak를 활성화하려면 다음과 같이 설치한다.
+ $ ./configure &amp;#8211;enable-riak $ make &amp;&amp; make install  ejabberd 15.03 이후 릴리즈에서는 erlc 버전이 r17 이상 버전에서 정상 컴파일되는 것을 확인했다.
+ejabberd 14.07 이전 릴리즈에서는 meck.erl 관련 compile에러가 날 경우 erlc 버전이 r16b3인지 확인해야 한다.
+riak 모듈을 제외한 모든 플러그인 모듈을 설치하기 위해서는 다음과 같이 설치하면 된다.
+ $ ./configure &amp;#8211;enable-all &amp;#8211;disable-riak  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/31/ejabberd-riak-ed999cec84b1ed9994-ec84a4ecb998/" title="ejabberd riak 활성화 설치">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-31T00:00:00JST">Jan 31, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/31/ejabberd-ec84a4ecb998eca084-ed9584ec8898-eb9dbcec9db4ebb88ceb9faceba6ac/">ejabberd 설치전 필수 라이브러리</a></h2>
+  </header>
+
+  
+  <div class="summary">PAM 라이브러리 설치
+ $ sudo apt-get install libpam0g-dev  expat 라이브러리 설치
+ $ sudo apt-get install libexpat1-dev  rebar 설치
+ $ sudo apt-get install rebar  ssl 라이브러리 설치
+ $ sudo apt-get install libssl-dev  yaml 라이브러리 설치
+ $ sudo apt-get install libyaml-dev  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/31/ejabberd-ec84a4ecb998eca084-ed9584ec8898-eb9dbcec9db4ebb88ceb9faceba6ac/" title="ejabberd 설치전 필수 라이브러리">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/ejabberd-bosheba5bc-httpseba19c-ec84a4eca095ed9598eab8b0/">ejabberd bosh를 https로 설정하기</a></h2>
+  </header>
+
+  
+  <div class="summary">ejabberd에서 bosh를 설정하기 위해서는 다음과 같이 ejabberd.yml에서 ejabberd_http 모듈을 설정해야 한다.
+ &amp;#8211; port: 5280 module: ejabberd_http request_handlers: &quot;/hello&quot;: mod\_http\_hello &quot;/api&quot;: mod\_http\_api web_admin: true http_poll: true http_bind: true \## register: true captcha: true  위와 같이 설정할 경우 admin, api, bosh가 모두 http://localhost:5280 하에서 동작하게 되는데 https로 설정하기 위해서는 다음과 같이 5223 tls 설정과 유사하게 설정하면 된다.
+ &amp;#8211; port: 5281 module: ejabberd_http certfile: &quot;/path/to/server.pem&quot; tls: true http_bind: true  주의할 것은 tls 설정항목이 starttls가 아니라 tls라는 것이다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/ejabberd-bosheba5bc-httpseba19c-ec84a4eca095ed9598eab8b0/" title="ejabberd bosh를 https로 설정하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-clustering/">ejabberd clustering</a></h2>
+  </header>
+
+  
+  <div class="summary">process-one 사이트에 명시된 p1-spec 문서는 찾을 수가 없었다.
+대신 install guide에 포함된 clustering guide를 살펴보고 cluster-node를 구축하는 방법을 살펴보도록 한다.
+cluster 구성을 위한 환경 다음과 같이 Virtualbox를 사용해 Windows 7 호스트에 ubuntu 14.10 게스트 OS를 설치해서 클러스터링을 구성한다.
+ 호스트 OS  Windows 7  게스트 OS #1  Ubuntu 14.10 desktop ip: 192.168.56.101 hostname: hello.world ejabberd 역할: slave node  게스트 OS #2  Ubuntu 14.10 desktop ip: 192.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/ejabberd-clustering/" title="ejabberd clustering">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li><a href="/categories/ejabberd/">Previous</a></li>
+    
+
+    
+    <li><a href="/categories/ejabberd/page/3/">Next</a></li>
+    
+
+  </ul>
 </nav>
 
-	</div>
 
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/06/03/ejabberdec9790-redis-eb9dbcec9db4ebb88ceb9faceba6aceredis-ecb694eab080/">ejabberd에 redis 라이브러리(eredis) 추가</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
 
-<p>ejabberd가 15.03버전이 릴리즈되면서 redis 지원이 추가되었다.</p>
-
-<p>클라이언트 세션 관리를 redis로 할 수 있는데 직접 연관된 모듈은 ejabberd_sm 모듈이다.</p>
-
-<p>redis를 사용하려면 다음과 같이 configure에서 &#8211;enable-redis 옵션을 추가해 주면 된다.</p>
-
-<pre><code>  
-./configure &amp;#8230; &amp;#8211;enable-redis
-  
-</code></pre>
-
-<p>위와 같이 해 준후에 rebar를 사용해 의존 라이브러리를 다운로드 받아 컴파일해야 한다.</p>
-
-<pre><code>  
-rebar get-deps
-  
-rebar compile
-  
-</code></pre>
-
-<p>그런 후 make &amp;&amp; make install을 수행하면 된다.</p>
-
-<p>ejabberd.yml에서 sm_db_type을 redis로 설정하기 위해서는 다음 라인을 추가해 주면 된다.</p>
-
-<pre><code>  
-sm\_db\_type: redis
-  
-</code></pre>
-
-<p>ejabberd를 실행한 후 클라이언트 접속 후 redis-cli를 사용해 다음과 같이 확인해 볼 수 있다.</p>
-
-<pre><code>  
-$ ejabberdctl start
-  
-$ redis-cli
-  
-&gt; keys *
-  
-1) &quot;ejabberd:sm:bypass&quot;
-  
-2) &quot;ejabberd:sm:test1@bypass&quot;
-  
-&gt; hgetall ejabberd:sm:bypass
-  
-&amp;#8230;
-  
-&gt; hgetall ejabberd:sm:test1@bypass
-  
-&amp;#8230;
-  
-</code></pre>
-
-<ul>
-<li>ejabberd는 redis에 hash 자료구조를 사용해서 데이터를 사용한다.</li>
-
-<li><p>jid가 test1@bypass인 유저가 접속한 경우</p>
-
-<h2 id="참고">참고</h2></li>
-
-<li><p><a href="http://docs.ejabberd.im/admin/guide/configuration/">ejabberd Configuration</a></p></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/eredis/">#eredis</a>,
-            
-                <a href="https://jeidee.github.iotags/redis/">#redis</a>,
-            
-        
-        <time class="post-date" datetime="2015-06-03T00:00:00Z">
-            3 Jun 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/06/02/gloox-xmppping/">gloox xmppPing</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>gloox의 경우 tcp 연결이 비정상적으로 종료되었을 때 disconnect를 감지할 수 없는 경우가 있다.</p>
-
-<p>이럴 경우를 대비해 xmpp 서버에 주기적으로 ping을 보내고 pong을 수신해서 연결 상태를 관리하는 것이 좋다.</p>
-
-<pre><code class="language-cpp">      
-class MsgClient : public MessageSessionHandler
-      
-, &amp;#8230;
-      
-, EventHandler
-      
-{
-      
-private:
-          
-int m_heartBeat;
-      
-};
-
-void MsgClient::heartBeat() {
-          
-m\_client-&gt;xmppPing(m\_client-&gt;jid(), this);
-          
-if (++m_heartBeat &gt; 3) {
-              
-LOGD(&quot;허트비트 무응답 초과로 연결 종료!&quot;);
-              
-m_client-&gt;disconnect();
-          
-}
-      
-}
-
-void MsgClient::handleEvent(const Event&amp; event)
-      
-{
-          
-switch (event.eventType())
-          
-{
-              
-case Event::PingPing:
-                  
-LOGD(&quot;PingPing&quot;);
-                  
-break;
-              
-case Event::PingPong:
-                  
-LOGD(&quot;PingPong&quot;);
-                  
-&amp;#8211;m_heartBeat;
-                  
-break;
-              
-case Event::PingError:
-                  
-LOGE(&quot;PingError&quot;);
-                  
-break;
-              
-default:
-                  
-break;
-          
-}
-          
-return;
-      
-}
-
-// ConnectionListener
-      
-void MsgClient::onConnect() {
-          
-LOGD(&quot;connected!!!&quot;);
-
-m_heartBeat = 0;
-  
-</code></pre>
-
-<p>pingpong 이벤트를 수신하기 위해서 EventHandler 인터페이스를 구현해야하고 onConnect()가 콜백될 때 m_heartBeat 값을 초기화해야 한다.</p>
-
-<h2 id="출처">출처</h2>
-
-<ul>
-<li><a href="http://stackoverflow.com/questions/3543294/c-gloox-how-to-check-when-connection-is-down">C++ / Gloox: how to check when connection is down?</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/gloox/">#gloox</a>,
-            
-        
-        <time class="post-date" datetime="2015-06-02T00:00:00Z">
-            2 Jun 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/04/21/gloox-for-android/">gloox for android</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>gloox를 android에서 사용하기 위한 과정을 살펴보자.</p>
-
-<h2 id="사전-준비-작업">사전 준비 작업</h2>
-
-<p>다음과 같은 환경이 구축되어 있다고 가정한다.</p>
-
-<ul>
-<li>개발 환경 : Mac OS X Yosemite 10.10.3</li>
-<li>Android Studio : 1.1.0
-
-<ul>
-<li>Android SDK 경로는 ~/Android/sdk로 변경</li>
-</ul></li>
-<li>NDK
-
-<ul>
-<li>~/Android/ndk에 복사하고 path 지정</li>
-</ul></li>
-</ul>
-
-<h2 id="android-studio에-ndk-설정">Android Studio에 ndk 설정</h2>
-
-<p>Preference &gt; External Tools에서 + 버튼을 클릭해 javah, ndk-build, ndk-build clean 도구를 추가한다.</p>
-
-<p>1) javah</p>
-
-<p><img src="http://localhost:8888/wordpress/wp-content/uploads/2015/04/ec8aa4ed81aceba6b0ec83b7-2015-04-21-ec98a4eca084-11-14-17.png" alt="javah_설정" /></p>
-
-<p>2) ndk-build</p>
-
-<p><img src="http://localhost:8888/wordpress/wp-content/uploads/2015/04/ec8aa4ed81aceba6b0ec83b7-2015-04-21-ec98a4eca084-11-15-40.png" alt="ndk-build" /></p>
-
-<p>3) ndk-build clean</p>
-
-<p><img src="http://localhost:8888/wordpress/wp-content/uploads/2015/04/ec8aa4ed81aceba6b0ec83b7-2015-04-21-ec98a4eca084-11-16-40.png" alt="ndk-build clean" /></p>
-
-<h2 id="android-project-생성후-ndk-테스트">Android Project 생성후 NDK 테스트</h2>
-
-<p>1) GlooxForAndroid 이름을 갖는 Android Project를 생성한다.</p>
-
-<p>2) app/src/main/res/layout/activity_main.xml을 다음과 같이 수정한다.</p>
-
-<pre><code>  
-&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-      
-xmlns:tools=&quot;http://schemas.android.com/tools&quot; android:layout\_width=&quot;match\_parent&quot;
-      
-android:layout\_height=&quot;match\_parent&quot; android:paddingLeft=&quot;@dimen/activity\_horizontal\_margin&quot;
-      
-android:paddingRight=&quot;@dimen/activity\_horizontal\_margin&quot;
-      
-android:paddingTop=&quot;@dimen/activity\_vertical\_margin&quot;
-      
-android:paddingBottom=&quot;@dimen/activity\_vertical\_margin&quot; tools:context=&quot;.MainActivity&quot;&gt;
-
-&lt;Button
-          
-android:id=&quot;@+id/callBtn&quot;
-          
-android:layout\_width=&quot;wrap\_content&quot;
-          
-android:layout\_height=&quot;wrap\_content&quot;
-          
-android:text=&quot;Call JNI&quot; /&gt;
-
-&lt;TextView
-          
-android:id=&quot;@+id/textVal&quot;
-          
-android:layout\_width=&quot;wrap\_content&quot;
-          
-android:layout\_height=&quot;wrap\_content&quot;
-          
-android:textSize=&quot;15pt&quot; /&gt;
-  
-&lt;/LinearLayout&gt;
-  
-</code></pre>
-
-<p>Button 하나와 TextView 하나를 추가했다.</p>
-
-<p>3) MainActivity.java를 다음과 같이 수정한다.</p>
-
-<pre><code class="language-java">  
-public class MainActivity extends ActionBarActivity {
-
-private Button btn_;
-      
-private TextView textView_;
-
-@Override
-      
-protected void onCreate(Bundle savedInstanceState) {
-          
-super.onCreate(savedInstanceState);
-          
-setContentView(R.layout.activity_main);
-
-btn_ = (Button) findViewById(R.id.callBtn);
-          
-textView_ = (TextView) findViewById(R.id.textVal);
-
-btn_.setOnClickListener(new View.OnClickListener() {
-              
-@Override
-              
-public void onClick(View v) {
-                  
-NativeCall nativeCall = new NativeCall();
-                  
-int ret = nativeCall.add(10, 20);
-                  
-String retStr = nativeCall.stringFromJNI();
-                  
-textView_.setText(retStr);
-              
-}
-          
-});
-      
-}
-  
-</code></pre>
-
-<p>btn_을 클릭했을 때 NativeCall클래스의 함수를 호출한 결과를 textView_에 출력한다.</p>
-
-<p>NativeCall클래스는 jni를 사용해 c/c++ 코드를 호출하게 된다.</p>
-
-<p>4) NativeCall.java 클래스를 생성한다.</p>
-
-<pre><code class="language-java">  
-public class NativeCall {
-      
-static {
-          
-System.loadLibrary(&quot;my_lib&quot;);
-      
-}
-
-public native int add(int i, int j);
-
-public native String stringFromJNI();
-  
-}
-  
-</code></pre>
-
-<p>Project 탐색기의 NativeCalll.java 클래스에서 마우스 우측 버튼으로 팝업메뉴를 출력한 후 NDK&gt;javah를 선택하면,</p>
-
-<p>jni 디렉토리에 com_example_jeidee_glooxforandroid_NativerCall.h파일이 생성된다.</p>
-
-<p>5) my_lib.cpp 파일을 생성한다.</p>
-
-<pre><code class="language-cpp">  
-#include &quot;com\_example\_jeidee\_ndktest\_NativeCall.h&quot;
-
-JNIEXPORT jint JNICALL Java\_com\_jeidee\_glooxforandroid\_NativeCall_add
+  </div>
+  <div class="col-md-4">
     
-(JNIEnv *, jobject, jint i, jint j) {
-      
-return i + j;
-    
-}
-
-JNIEXPORT jstring JNICALL Java\_com\_jeidee\_glooxforandroid\_NativeCall_stringFromJNI
-    
-(JNIEnv *env, jobject) {
-      
-return env-&gt;NewStringUTF(&quot;Hello JNI!!!!!&quot;);
-    
-}
-
-</code></pre>
-
-<p>6) ndk-build</p>
-
-<p>app/src/build.gradle 파일을 열고 다음과 같이 ndk와 sourceSets.main 항목을 입력한다.</p>
-
-<pre><code class="language-json">  
-android {
-      
-compileSdkVersion 22
-      
-buildToolsVersion &quot;21.1.2&quot;
-
-defaultConfig {
-          
-applicationId &quot;com.jeidee.glooxforandroid&quot;
-          
-minSdkVersion 15
-          
-targetSdkVersion 22
-          
-versionCode 1
-          
-versionName &quot;1.0&quot;
-
-ndk {
-              
-moduleName &quot;my_lib&quot;
-          
-}
-
-sourceSets.main {
-              
-jniLibs.srcDir 'src/main/libs'
-              
-jni.srcDirs = [] //important!!!! disable automatic ndk-build call
-          
-}
-      
-}
-
-</code></pre>
-
-<p>Project 탐색기의 NativeCall.java 클래스에서 마우스 우측 버튼으로 팝업메뉴를 출력한 후 NDK ndk-build를 선택하면,</p>
-
-<p>빌드가 완료되고 src/main/libs/armeabi 디렉토리에 libmy_lib.so 공유 라이브러리 파일이 생성된다.</p>
-
-<p>7) 빌드 후 테스트</p>
-
-<p>안드로이드 디바이스를 연결후 Run &#8216;app&#8217;을 실행한다.</p>
-
-<h2 id="openssl-for-android-빌드">openssl for android 빌드</h2>
-
-<p>gloox는 openssl 라이브러리를 사용하기 때문에 openssl 소스를 빌드해 라이브러리를 얻어야 한다.</p>
-
-<p>android를 위해 누군가 <a href="https://github.com/eighthave/openssl-android">github에 ndk-build를 위한 구성과 소스</a>를 올려 놓았으므로 다운로드 받아 사용하도록 한다.</p>
-
-<p>git clone한 후 해당 디렉토리에서 ndk-build를 수행하면 된다.</p>
-
-<p>성공적으로 빌드가 완료되면 libs/armeabi 디렉토리에 libssl.so와 libcrypto.so 파일이 생성된다.</p>
-
-<p>해당 파일을 Android Project의 src/main/jni 하위에 libs 디렉토리를 생성하고 이 곳에 복사해 넣는다.</p>
-
-<p>src/main/jni 하위에 openssl 디렉토리를 생성하고,</p>
-
-<p>openssl의 include와 crypto 디렉토리를 복사해 넣는다.</p>
-
-<h2 id="gloox-for-xcode-에서-소스-파일-복사해-오기">gloox for xcode 에서 소스 파일 복사해 오기</h2>
-
-<p>이 글을 작성하는 현시점에서 gloox는 1.0.13버전이 최신버전이다.</p>
-
-<p>해당 버전의 소스를 받아 ./configure &#8211;host=arm-linux를 수행한 후 소스파일을 복사해 사용해도 되지만,</p>
-
-<p>[gloox for xcode]() 오픈소스를 받아 해당 프로젝트에 포함된 gloox 파일을 사용하도록 한다.</p>
-
-<p>git clone한 후 Utils/gloox 디렉토리를 app/src/main/jni 디렉토리에 복사해 넣는다.</p>
-
-<h2 id="android-mk-수정">Android.mk 수정</h2>
-
-<p>1) openssl for android 빌드 결과물인 libcrypto와 libssl 라이브러리를 다음과 같이 Android.mk파일의 맨 위해 추가한다.</p>
-
-<pre><code>  
-LOCAL_PATH := $(call my-dir)
-
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := libcrypto
-
-LOCAL\_SRC\_FILES := libs/libcrypto.so
-
-include $(PREBUILT\_SHARED\_LIBRARY)
-
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := libssl
-
-LOCAL\_SRC\_FILES := libs/libssl.so
-
-include $(PREBUILT\_SHARED\_LIBRARY)
-  
-</code></pre>
-
-<p>2) gloox의 소스파일을 다음과 같이 추가한다.</p>
-
-<pre><code>  
-LOCAL\_SRC\_FILES :=
-                      
-my_lib.cpp
-                      
-gloox/adhoc.cpp
-                      
-gloox/amp.cpp
-                      
-gloox/annotations.cpp
-                      
-gloox/attention.cpp
-                      
-gloox/base64.cpp
-                      
-gloox/bookmarkstorage.cpp
-                      
-gloox/capabilities.cpp
-                      
-gloox/chatstate.cpp
-                      
-gloox/chatstatefilter.cpp
-                      
-gloox/client.cpp
-                      
-gloox/clientbase.cpp
-                      
-gloox/component.cpp
-                      
-gloox/compressiondefault.cpp
-                      
-gloox/compressionzlib.cpp
-                      
-gloox/connectionbosh.cpp
-                      
-gloox/connectionhttpproxy.cpp
-                      
-gloox/connectionsocks5proxy.cpp
-                      
-gloox/connectiontcpbase.cpp
-                      
-gloox/connectiontcpclient.cpp
-                      
-gloox/connectiontcpserver.cpp
-                      
-gloox/connectiontls.cpp
-                      
-gloox/connectiontlsserver.cpp
-                      
-gloox/dataform.cpp
-                      
-gloox/dataformfield.cpp
-                      
-gloox/dataformfieldcontainer.cpp
-                      
-gloox/dataformitem.cpp
-                      
-gloox/dataformreported.cpp
-                      
-gloox/delayeddelivery.cpp
-                      
-gloox/disco.cpp
-                      
-gloox/dns.cpp
-                      
-gloox/error.cpp
-                      
-gloox/eventdispatcher.cpp
-                      
-gloox/featureneg.cpp
-                      
-gloox/flexoff.cpp
-                      
-gloox/gloox.cpp
-                      
-gloox/gpgencrypted.cpp
-                      
-gloox/gpgsigned.cpp
-                      
-gloox/inbandbytestream.cpp
-                      
-gloox/instantmucroom.cpp
-                      
-gloox/iq.cpp
-                      
-gloox/jid.cpp
-                      
-gloox/lastactivity.cpp
-                      
-gloox/logsink.cpp
-                      
-gloox/md5.cpp
-                      
-gloox/message.cpp
-                      
-gloox/messageevent.cpp
-                      
-gloox/messageeventfilter.cpp
-                      
-gloox/messagefilter.cpp
-                      
-gloox/messagesession.cpp
-                      
-gloox/mucmessagesession.cpp
-                      
-gloox/mucroom.cpp
-                      
-gloox/mutex.cpp
-                      
-gloox/nickname.cpp
-                      
-gloox/nonsaslauth.cpp
-                      
-gloox/oob.cpp
-                      
-gloox/parser.cpp
-                      
-gloox/prep.cpp
-                      
-gloox/presence.cpp
-                      
-gloox/privacyitem.cpp
-                      
-gloox/privacymanager.cpp
-                      
-gloox/privatexml.cpp
-                      
-gloox/pubsubevent.cpp
-                      
-gloox/pubsubitem.cpp
-                      
-gloox/pubsubmanager.cpp
-                      
-gloox/receipt.cpp
-                      
-gloox/registration.cpp
-                      
-gloox/rosteritem.cpp
-                      
-gloox/rostermanager.cpp
-                      
-gloox/search.cpp
-                      
-gloox/sha.cpp
-                      
-gloox/shim.cpp
-                      
-gloox/simanager.cpp
-                      
-gloox/siprofileft.cpp
-                      
-gloox/socks5bytestream.cpp
-                      
-gloox/socks5bytestreammanager.cpp
-                      
-gloox/socks5bytestreamserver.cpp
-                      
-gloox/softwareversion.cpp
-                      
-gloox/stanza.cpp
-                      
-gloox/stanzaextensionfactory.cpp
-                      
-gloox/subscription.cpp
-                      
-gloox/tag.cpp
-                      
-gloox/tlsdefault.cpp
-                      
-gloox/tlsgnutlsbase.cpp
-                      
-gloox/tlsgnutlsclient.cpp
-                      
-gloox/tlsgnutlsclientanon.cpp
-                      
-gloox/tlsgnutlsserveranon.cpp
-                      
-gloox/tlsopensslbase.cpp
-                      
-gloox/tlsopensslclient.cpp
-                      
-gloox/tlsopensslserver.cpp
-                      
-gloox/tlsschannel.cpp
-                      
-gloox/uniquemucroom.cpp
-                      
-gloox/util.cpp
-                      
-gloox/vcard.cpp
-                      
-gloox/vcardmanager.cpp
-                      
-gloox/vcardupdate.cpp
-                      
-gloox/xhtmlim.cpp
-  
-</code></pre>
-
-<p>3) openssl의 header files 경로를 다음과 같이 추가한다.</p>
-
-<pre><code>  
-LOCAL\_C\_INCLUDES := $(LOCAL_PATH)/openssl/include/
-  
-LOCAL\_C\_INCLUDES += $(LOCAL_PATH)/openssl/
-  
-</code></pre>
-
-<p>4) openssl shared library와 zlib를 링크하기 위해 다음과 같이 추가하고 마무리한다.</p>
-
-<pre><code>  
-LOCAL\_SHARED\_LIBRARIES := libssl libcrypto
-
-LOCAL_LDLIBS := -llog
-  
-LOCAL_LDLIBS += -lz
-
-include $(BUILD\_SHARED\_LIBRARY)
-  
-</code></pre>
-
-<p>LOCAL_LDLIBS += -lz 설정을 통해 zlib이 링크된다.</p>
-
-<h2 id="application-mk-생성">Application.mk 생성</h2>
-
-<p>c++ stl library 사용을 위해 jni 디렉토리 밑에 Application.mk파일을 생성하고 다음과 같이 입력한다.</p>
-
-<pre><code>  
-APP\_STL := c++\_static
-  
-</code></pre>
-
-<h2 id="ndk-build">ndk-build</h2>
-
-<p>1) error: &#8216;atoi&#8217; was not declared in this scope</p>
-
-<p>.cpp 상단에 #include 를 추가해 준다.</p>
-
-<p>2) RSA_generate_key() deprecate error</p>
-
-<p>NativeCall.java 파일을 ndk-build하면 tlsopensslserver.cpp 컴파일 도중 에러가 발생하는데, RSA_generate_key()가 deprecate 되었기 때문에 다음 소스 코드를 추가해야 한다.</p>
-
-<p>(참고 : <a href="http://aucd29.tistory.com/m/post/1101">with openssl porting guide</a>)</p>
-
-<pre><code class="language-c">  
-RSA *RSA\_generate\_key(int bits, unsigned long e_value,
-           
-void (\*callback)(int,int,void \*), void *cb_arg)
-      
-{
-      
-BN_GENCB cb;
-      
-int i;
-      
-RSA *rsa = RSA_new();
-      
-BIGNUM *e = BN_new();
-
-if(!rsa || !e) goto err;
-
-/* The problem is when building with 8, 16, or 32 BN_ULONG,
-       
-\* unsigned long can be larger \*/
-      
-for (i=0; i&lt;(int)sizeof(unsigned long)*8; i++)
-          
-{
-          
-if (e_value &amp; (1UL&lt;&lt;i))
-              
-if (BN\_set\_bit(e,i) == 0)
-                  
-goto err;
-          
-}
-
-BN\_GENCB\_set\_old(&amp;cb, callback, cb\_arg);
-
-if(RSA\_generate\_key_ex(rsa, bits, e, &amp;cb)) {
-          
-BN_free(e);
-          
-return rsa;
-      
-}
-  
-err:
-      
-if(e) BN_free(e);
-      
-if(rsa) RSA_free(rsa);
-      
-return 0;
-      
-}
-  
-</code></pre>
-
-<h2 id="전체-프로젝트-다운로드">전체 프로젝트 다운로드</h2>
-
-<p>github에 올려 놓았다.</p>
-
-<p><a href="https://github.com/jeidee/GlooxForAndroid">https://github.com/jeidee/GlooxForAndroid</a></p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="https://github.com/eighthave/openssl-android">openssl-android</a></li>
-<li><a href="http://herry.sinaapp.com/?p=31">gloox for android</a></li>
-<li><a href="http://blog.y3xz.com/blog/2012/10/07/setting-up-an-arm-eabi-toolchain-on-mac-os-x">Setting Up an ARM EABI Toolchain on Mac OS X</a></li>
-<li><a href="http://asos.tistory.com/13">Android에서 OpenSSL의 암호 알고리즘 사용하기 &#8211; 1편</a></li>
-<li><a href="http://choizak.tistory.com/63">Android Project 에서 OpenSSL 사용하기</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/gloox/">#gloox</a>,
-            
-                <a href="https://jeidee.github.iotags/ndk/">#ndk</a>,
-            
-                <a href="https://jeidee.github.iotags/openssl/">#openssl</a>,
-            
-        
-        <time class="post-date" datetime="2015-04-21T00:00:00Z">
-            21 Apr 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/30/ngrinderec9980-smack-apieba5bc-ec82acec9aa9ed95b4-ejabberd-ed858cec8aa4ed8ab8ed9598eab8b0/">nGrinder와 smack api를 사용해 ejabberd 테스트하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="테스트-환경">테스트 환경</h2>
-
-<p>smack api는 3.2.2, nGrinder는 3.3 버전이다.</p>
-
-<p>192.168.56.101서버에 ejabberd가 실행중이고, ngrinder-controller, -agent, -monitor가 실행중이라고 가정한다.</p>
-
-<h2 id="테스트-스크립트-작성">테스트 스크립트 작성</h2>
-
-<p>1) Script &gt; Create a script 버튼을 클릭해 다음과 같이 스크립트를 만들어 준다.</p>
-
-<blockquote>
-<p>Script Name : testXmpp</p>
-
-<p>Type : Groovy</p>
-
-<p>URL to be tested :</p>
-
-<p>Create Lib and Resource folders : Check</p>
-</blockquote>
-
-<p>2) smack-3.2.2.jar 파일을 lib 폴더에 업로드한다.</p>
-
-<p>3) 만들어진 스크립트를 다음과 같이 수정한다.</p>
-
-<p>testXmpp.groovy</p>
-
-<pre><code class="language-groovy">  
-package org.ngrinder;
-
-import static net.grinder.script.Grinder.grinder
-  
-import static org.junit.Assert.*
-  
-import static org.hamcrest.Matchers.*
-  
-import net.grinder.plugin.http.HTTPRequest
-  
-import net.grinder.plugin.http.HTTPPluginControl;
-  
-import net.grinder.script.GTest
-  
-import net.grinder.script.Grinder
-  
-import net.grinder.scriptengine.groovy.junit.GrinderRunner
-  
-import net.grinder.scriptengine.groovy.junit.annotation.BeforeProcess
-  
-import net.grinder.scriptengine.groovy.junit.annotation.BeforeThread
-  
-import static net.grinder.util.GrinderUtils.* // You can use this if you're using nGrinder after 3.2.3
-  
-import org.junit.Before
-  
-import org.junit.BeforeClass
-  
-import org.junit.Test
-  
-import org.junit.runner.RunWith
-
-import HTTPClient.HTTPResponse
-  
-import HTTPClient.NVPair
-
-import org.jivesoftware.smack.*
-
-/**
-   
-* A simple example using the HTTP plugin that shows the retrieval of a
-   
-* single page via HTTP.
-   
-*
-   
-* This script is automatically generated by ngrinder.
-   
-*
-   
-* @author admin
-   
-*/
-  
-@RunWith(GrinderRunner)
-  
-class TestRunner {
-      
-public static GTest test
-
-@BeforeProcess
-      
-public static void beforeProcess() {
-          
-test = new GTest(1, &quot;Test1&quot;)
-          
-test.record(this, &quot;connTest&quot;);
-
-grinder.logger.info(&quot;before process.&quot;);
-      
-}
-
-public connTest() {
-          
-def processNumber = grinder.processNumber
-          
-def threadNumber = grinder.threadNumber
-          
-def no = (processNumber * 100 + threadNumber) + 1
-
-def user = &quot;test&quot; + no.toString()
-          
-def (host, port) = getParam('192.168.56.101,5222').tokenize(',') // '192.168.56.101,5222'.tokenize(',')
-
-ConnectionConfiguration config = new ConnectionConfiguration(host, port.toInteger(), &quot;bypass&quot;)
-          
-XMPPConnection conn = new XMPPConnection(config)
-
-conn.connect()
-          
-conn.login(user, &quot;1234&quot;)
-
-if (!conn.isConnected()) {
-              
-grinder.logger.warn(&quot;Not Connected&quot;);
-          
-}
-          
-//else {
-          
-// grinder.logger.info(&quot;Connected {}&quot;, user);
-          
-//}
-
-assertThat(conn.isConnected(), is(true));
-
-conn.disconnect()
-      
-}
-
-@BeforeThread
-      
-public void beforeThread() {
-          
-grinder.statistics.delayReports=true;
-          
-grinder.logger.info(&quot;before thread.&quot;);
-      
-}
-
-@Test
-      
-public void test(){
-          
-connTest()
-      
-}
-  
-}
-  
-</code></pre>
-
-<p>중요한 부분은 다음과 같다.</p>
-
-<pre><code>  
-import org.jivesoftware.smack.*
-
-public static void beforeProcess() {
-          
-&amp;#8230;
-          
-test.record(this, &quot;connTest&quot;);
-          
-&amp;#8230;
-
-public connTest() {
-          
-&amp;#8230;
-      
-}
-  
-</code></pre>
-
-<p>4) Performance Test &gt; Create Test 버튼을 클릭해 테스트를 생성한다.</p>
-
-<ul>
-<li><p>Basic Configuration</p>
-
-<blockquote>
-<p>Agent : 1</p>
-
-<p>Vuser per agent : 10 (Processes 2 : Threads 5)</p>
-
-<p>Script : testXmpp.groovy</p>
-
-<p>Script Resrouces : lib/smack-3.2.2.jar</p>
-
-<p>Target Host : 192.168.56.101</p>
-
-<p>Run Count : 100</p>
-
-<p>Process/Thread : Process</p>
-</blockquote></li>
-</ul>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://junoyoon.tistory.com/entry/%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%97%90-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-%EC%A0%84%EB%8B%AC%ED%95%98%EA%B8%B0">스크립트에 파라미터 전달하기</a></li>
-<li><a href="http://www.slideshare.net/junhoyoon3994/advanced-ngrinder-2nd-edition-31708091">Advanced nGrinder 2nd edition</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/ngrinder/">#nGrinder</a>,
-            
-                <a href="https://jeidee.github.iotags/smack/">#smack</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-30T00:00:00Z">
-            30 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/05/ejabberd-ed8ca8ed82b7-ed9b84ed82b9-ebb08f-ed9584ed84b0eba781/">ejabberd 패킷 후킹 및 필터링</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>ejabberd에서 패킷을 후킹한 후 필터링하고 싶다면 다음과 같이 커스텀 모듈을 생성해 처리하면 된다.</p>
-
-<p>다음 코드는 chat 메세지 패킷을 가로체 디버그 로그에 출력해 주는 소스이다.</p>
-
-<pre><code class="language-erlang">  
--module(mod\_packet\_hook).
-
--behaviour(gen_mod).
-
--export([start/2,
-      
-stop/1]).
-  
--export([on\_filter\_packet/1]).
-
--include(&quot;ejabberd.hrl&quot;).
-  
--include(&quot;jlib.hrl&quot;).
-  
--include(&quot;logger.hrl&quot;).
-
-start(\_Host, \_Opts) -&gt;
-      
-ejabberd\_hooks:add(filter\_packet, global, ?MODULE, on\_filter\_packet, 0),
-      
-ok.
-
-stop(_Host) -&gt;
-      
-ejabberd\_hooks:delete(filter\_packet, global, ?MODULE, on\_filter\_packet, 0),
-      
-ok.
-
-on\_filter\_packet({From, To, XML} = Packet) -&gt;
-      
-%% does something with a packet
-      
-%% should return modified Packet or atom \`drop\` to drop the packet
-      
-Type = proplists:get_value(&lt;&lt;&quot;type&quot;&gt;&gt;, XML#xmlel.attrs),
-      
-if
-          
-XML#xmlel.name =:= &lt;&lt;&quot;message&quot;&gt;&gt;,
-           
-Type =:= &lt;&lt;&quot;chat&quot;&gt;&gt;; Type =:= &lt;&lt;&quot;groupchat&quot;&gt;&gt; -&gt;
-              
-lists:foreach(fun(Item) -&gt;
-                  
-if
-                      
-Item#xmlel.name =:= &lt;&lt;&quot;body&quot;&gt;&gt; -&gt;
-                          
-lists:foreach(fun(Data) -&gt;
-                              
-{xmlcdata, Msg} = Data,
-                              
-?DEBUG(&quot;Msg is ~p~n&quot;, [Msg])
-                          
-end, Item#xmlel.children);
-                      
-true -&gt;
-                          
-ok
-                  
-end
-              
-end, XML#xmlel.children);
-          
-true -&gt;
-              
-ok
-      
-end,
-      
-?DEBUG(&quot;Packet:~p~n~nFrom:~p~nTo:~p~nXML:~p~n&quot;, [Packet, From, To, XML]),
-      
-Packet. %드롭하고 싶다면 drop atom을 반환한다.
-  
-</code></pre>
-
-<p>중요한 부분은 다음이다.</p>
-
-<pre><code class="language-erlang">      
-ejabberd\_hooks:add(filter\_packet, global, ?MODULE, on\_filter\_packet, 0),
-  
-</code></pre>
-
-<p>filter_packet이벤트를 모든 호스트(global)에 걸쳐 등록하고 핸들러를 on_filter_packet로 등록한다.</p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://stackoverflow.com/questions/1939879/how-to-filter-messages-in-ejabberd">How to filter messages in Ejabberd</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/hook/">#hook</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-05T00:00:00Z">
-            5 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/04/ejabberd-external-component-ec97b0eb8f99/">ejabberd external component 연동</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="xmpp-component-개요">xmpp component 개요</h2>
-
-<p>xmpp에는 external component 관련 공식 프로토콜인 <a href="http://xmpp.org/extensions/xep-0114.html">Jabber Component Protocol</a>이 있다.</p>
-
-<p>Jabber Component Protocol은 외부 컴포넌트를 XMPP서버와 연동하기 위한 규약을 제안하는데 크게 accept와 connect에 대한 XML 스키마와 handshake flow를 명세하고 있다.</p>
-
-<p>xmpp의 external component는 프로토콜만 준수한다면 어떤 언어를 사용해서도 구현할 수 있다. 3rd-party 컴포넌트를 ejabberd와 연동하는 방법은 <a href="https://www.ejabberd.im/tutorials-transports">Install Components and Transports to othe networks</a> 문서를 참고하도록 한다.</p>
-
-<h2 id="echo-bot-component-만들어서-연동해-보기">echo-bot component 만들어서 연동해 보기</h2>
-
-<p>node-xmpp-component 모듈을 사용해서 간단한 에코봇을 컴포넌트로 만들어 ejabberd와 연동해 보도록 하자.</p>
-
-<p>우선 다음과 같이 node-xmpp-component와 node-xmpp-core를 설치한다.</p>
-
-<pre><code>  
-$ npm install node-xmpp-component
-  
-$ npm install node-xmpp-core
-  
-</code></pre>
-
-<p>다음과 같이 에코 봇을 작성한다.</p>
-
-<pre><code class="language-javascript">  
-var Component = require('node-xmpp-component')
-      
-, argv = process.argv
-      
-, ltx = require('node-xmpp-core').ltx
-
-if (argv.length &lt; 6) {
-      
-console.error('Usage: node echo_bot.js &lt;my-jid&gt; &lt;my-password&gt; ' +
-      
-'&lt;server&gt; &lt;port&gt;')
-      
-process.exit(1)
-  
-}
-
-var component = new Component({
-      
-jid: argv[2],
-      
-password: argv[3],
-      
-host: argv[4],
-      
-port: Number(argv[5]),
-      
-reconnect: true
-  
-})
-
-component.on('online', function() {
-      
-console.log('Component is online')
-
-component.on('stanza', function(stanza) {
-          
-console.log('Received stanza: ', stanza)
-          
-if (stanza.is('message') &amp;&amp; stanza.attrs.type === 'chat') {
-              
-var i = parseInt(stanza.getChildText('body'))
-              
-var reply = new ltx.Element('message', { to: stanza.attrs.from, from: stanza.attrs.to, type: 'chat' })
-              
-reply.c('body').t(stanza)
-              
-component.send(reply)
-          
-}
-      
-})
-  
-})
-
-component.on('offline', function () {
-      
-console.log('Component is offline')
-  
-})
-
-component.on('connect', function () {
-      
-console.log('Component is connected')
-  
-})
-
-component.on('reconnect', function () {
-      
-console.log('Component reconnects …')
-  
-})
-
-component.on('disconnect', function (e) {
-      
-console.log('Component is disconnected', e)
-  
-})
-
-component.on('error', function(e) {
-      
-console.error(e)
-      
-process.exit(1)
-  
-})
-
-process.on('exit', function () {
-      
-component.end()
-  
-})
-  
-</code></pre>
-
-<p>ejabberd.yml을 다음과 같이 수정한다.</p>
-
-<pre><code>  
-##
-    
-\## ejabberd_service: Interact with external components (transports, &amp;#8230;)
-    
-##
-    
-&amp;#8211;
-       
-port: 8888
-       
-module: ejabberd_service
-       
-access: all
-       
-shaper_rule: fast
-       
-ip: &quot;127.0.0.1&quot;
-       
-hosts:
-         
-&quot;foo.hello.world&quot;:
-           
-password: &quot;foo&quot;
-
-</code></pre>
-
-<p>ejabberd를 시작한 후 다음과 같이 컴포넌트를 시작한다.</p>
-
-<pre><code>  
-$ ejabberdctl start
-  
-$ node echo_bot.js foo.hello.world foo localhost 8888
-  
-</code></pre>
-
-<p>정상적으로 연결이 될 경우 다음과 같은 메세지가 출력된다.</p>
-
-<pre><code>  
-Component is connected
-  
-Component is online
-  
-</code></pre>
-
-<p>이 상태에서 XMPP 클라이언트로 접속한 후 foo.hello.world에게 메세지를 전송해 보자.</p>
-
-<p>문제가 없을 경우 보낸 메세지가 다시 내게로 돌아오게 된다.</p>
-
-<h2 id="활용">활용</h2>
-
-<p>xmpp component의 활용은 다양하게 활용될 수 있다. 다른 메신저 서비스에 메세지 라우팅을 하거나, 날씨/사전/FAQ등의 봇 서비스에 활용될 수도 있다.</p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="https://www.ejabberd.im/tutorials-transports">Install Components and Transports to Other Networks</a></li>
-<li><a href="https://www.ejabberd.im/node/5134">Configuring Ejabberd to use an external component (with XEP-0114)</a></li>
-<li><a href="http://xmpp.org/extensions/xep-0114.html">Jabber Component Protocol</a></li>
-<li><a href="https://github.com/node-xmpp/node-xmpp-component">node-xmpp-component</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/bot/">#bot</a>,
-            
-                <a href="https://jeidee.github.iotags/component/">#component</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-04T00:00:00Z">
-            4 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/31/ejabberd-riak-ed999cec84b1ed9994-ec84a4ecb998/">ejabberd riak 활성화 설치</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>riak를 활성화하려면 다음과 같이 설치한다.</p>
-
-<pre><code>      
-$ ./configure &amp;#8211;enable-riak
-      
-$ make &amp;&amp; make install
-  
-</code></pre>
-
-<p>ejabberd 15.03 이후 릴리즈에서는 erlc 버전이 r17 이상 버전에서 정상 컴파일되는 것을 확인했다.</p>
-
-<p>ejabberd 14.07 이전 릴리즈에서는 meck.erl 관련 compile에러가 날 경우 erlc 버전이 r16b3인지 확인해야 한다.</p>
-
-<p>riak 모듈을 제외한 모든 플러그인 모듈을 설치하기 위해서는 다음과 같이 설치하면 된다.</p>
-
-<pre><code>      
-$ ./configure &amp;#8211;enable-all &amp;#8211;disable-riak
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/riak/">#riak</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-31T00:00:00Z">
-            31 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/31/ejabberd-ec84a4ecb998eca084-ed9584ec8898-eb9dbcec9db4ebb88ceb9faceba6ac/">ejabberd 설치전 필수 라이브러리</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>PAM 라이브러리 설치</p>
-
-<pre><code>      
-$ sudo apt-get install libpam0g-dev
-  
-</code></pre>
-
-<p>expat 라이브러리 설치</p>
-
-<pre><code>      
-$ sudo apt-get install libexpat1-dev
-  
-</code></pre>
-
-<p>rebar 설치</p>
-
-<pre><code>      
-$ sudo apt-get install rebar
-  
-</code></pre>
-
-<p>ssl 라이브러리 설치</p>
-
-<pre><code>      
-$ sudo apt-get install libssl-dev
-  
-</code></pre>
-
-<p>yaml 라이브러리 설치</p>
-
-<pre><code>      
-$ sudo apt-get install libyaml-dev
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        
-        <time class="post-date" datetime="2015-01-31T00:00:00Z">
-            31 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/ejabberd-bosheba5bc-httpseba19c-ec84a4eca095ed9598eab8b0/">ejabberd bosh를 https로 설정하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>ejabberd에서 bosh를 설정하기 위해서는 다음과 같이 ejabberd.yml에서 ejabberd_http 모듈을 설정해야 한다.</p>
-
-<pre><code>  
-&amp;#8211;
-    
-port: 5280
-    
-module: ejabberd_http
-    
-request_handlers:
-      
-&quot;/hello&quot;: mod\_http\_hello
-      
-&quot;/api&quot;: mod\_http\_api
-    
-web_admin: true
-    
-http_poll: true
-    
-http_bind: true
-    
-\## register: true
-    
-captcha: true
-  
-</code></pre>
-
-<p>위와 같이 설정할 경우 admin, api, bosh가 모두 <a href="http://localhost:5280">http://localhost:5280</a> 하에서 동작하게 되는데 https로 설정하기 위해서는 다음과 같이 5223 tls 설정과 유사하게 설정하면 된다.</p>
-
-<pre><code>  
-&amp;#8211;
-    
-port: 5281
-    
-module: ejabberd_http
-    
-certfile: &quot;/path/to/server.pem&quot;
-    
-tls: true
-    
-http_bind: true
-  
-</code></pre>
-
-<p>주의할 것은 tls 설정항목이 starttls가 아니라 tls라는 것이다. 5223 tls 설정에서는 starttls: true라고 설정해야 하지만 https를 위해서는 tls: true로 설정해야 한다.</p>
-
-<p>위와 같이 설정한 후 bosh를 지원하는 xmpp client에서 다음과 같이 boshurl을 설정한 후 로그인할 수 있다.</p>
-
-<pre><code>      
-https://localhost:5281/http-bind
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/bosh/">#bosh</a>,
-            
-                <a href="https://jeidee.github.iotags/https/">#https</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/21/ejabberd-clustering/">ejabberd clustering</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>process-one 사이트에 명시된 p1-spec 문서는 찾을 수가 없었다.</p>
-
-<p>대신 install guide에 포함된 clustering guide를 살펴보고 cluster-node를 구축하는 방법을 살펴보도록 한다.</p>
-
-<h3 id="cluster-구성을-위한-환경">cluster 구성을 위한 환경</h3>
-
-<p>다음과 같이 Virtualbox를 사용해 Windows 7 호스트에 ubuntu 14.10 게스트 OS를 설치해서 클러스터링을 구성한다.</p>
-
-<ul>
-<li>호스트 OS
-
-<ul>
-<li>Windows 7</li>
-</ul></li>
-<li>게스트 OS #1
-
-<ul>
-<li>Ubuntu 14.10 desktop</li>
-<li>ip: 192.168.56.101</li>
-<li>hostname: hello.world</li>
-<li>ejabberd 역할: slave node</li>
-</ul></li>
-<li>게스트 OS #2
-
-<ul>
-<li>Ubuntu 14.10 desktop</li>
-<li>ip: 192.168.56.102</li>
-<li>hostname: foo.bar</li>
-<li>ejabberd 역할: master node</li>
-</ul></li>
-</ul>
-
-<p>우선 게스트 OS는 하나만 설치하는 데, 추후 복제를 통해 게스트 OS를 하나 더 생성해야 한다.</p>
-
-<p>이렇게 구성한 후 게스트 OS간 통신을 위해 네트워크 설정을 변경해야 하는데, 다음 링크를 참조한다.</p>
-
-<p><a href="http://erlnote.tumblr.com/post/107265239154/virtualbox">http://erlnote.tumblr.com/post/107265239154/virtualbox</a></p>
-
-<h3 id="hostname-변경">hostname 변경</h3>
-
-<p>long name host를 테스트하기 위해 다음과 같이 hostname을 임의로 변경해 준다.</p>
-
-<h4 id="etc-hosts-수정">/etc/hosts 수정</h4>
-
-<pre><code>      
-127.0.0.1 localhost
-      
-127.0.1.1 vagrant-VirtualBox
-      
-192.168.56.101 hello.world
-  
-</code></pre>
-
-<h4 id="hostname-설정">hostname 설정</h4>
-
-<pre><code>      
-$ hostname hello.world
-  
-</code></pre>
-
-<p>위와 같이 현재 서버의 호스트명을 변경 후 재 로그인한다.</p>
-
-<p>또는 /etc/hostname을 변경해도 되며, 테스트를 위해 nameserver는 127.0.0.1이 되어야 한다.</p>
-
-<p>** /etc/hostname **</p>
-
-<pre><code>        
-1 hello.world
-  
-</code></pre>
-
-<p>** /etc/resolv.conf **</p>
-
-<pre><code>        
-\# Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)
-        
-\# DO NOT EDIT THIS FILE BY HAND &amp;#8212; YOUR CHANGES WILL BE OVERWRITTEN
-        
-nameserver 127.0.1.1
-  
-</code></pre>
-
-<h3 id="ejabberd-설치">ejabberd 설치</h3>
-
-<p>ejabberd를 설치한 후 다음과 같이 설정파일을 변경하도록 한다.</p>
-
-<h4 id="ejabberdctl-cfg-수정">ejabberdctl.cfg 수정</h4>
-
-<p>기본 ejabberd erlang 노드는 ejabberd@localhost이기 때문에 ejabberdctl.cnf를 다음과 같이 수정해서 노드명을 수정해 준다.</p>
-
-<pre><code>      
-\# Default: ejabberd@localhost
-      
-#
-      
-ERLANG_NODE=ejabberd@hello.world
-  
-</code></pre>
-
-<h4 id="ejabberd-yml-수정">ejabberd.yml 수정</h4>
-
-<p><strong>hosts 수정</strong></p>
-
-<pre><code>       
-hosts:
-         
-&amp;#8211; &quot;hello.world&quot;
-         
-&amp;#8211; &quot;localhost&quot;
-  
-</code></pre>
-
-<p><strong>host_config 수정</strong></p>
-
-<p>만약 다른 가상호스트와 다른 인증을 원한다면 다음과 같이 설정을 수정한다.</p>
-
-<pre><code>      
-host_config:
-        
-&quot;hello.world&quot;:
-           
-auth_method:
-             
-&amp;#8211; internal
-  
-</code></pre>
-
-<p><strong>acl 수정</strong></p>
-
-<p>localhost 가상호스트의 admin 계정만 관리권한을 부여하기 위해 다음과 같이 수정한다.</p>
-
-<pre><code>      
-acl:
-        
-##
-        
-\## The 'admin' ACL grants administrative privileges to XMPP accounts.
-        
-\## You can put here as many accounts as you want.
-        
-##
-        
-admin:
-          
-user:
-            
-&amp;#8211; &quot;admin&quot;: &quot;localhost&quot;
-  
-</code></pre>
-
-<h3 id="ejabberd-테스트">ejabberd 테스트</h3>
-
-<p>localhost에 admin 계정을 추가한다.</p>
-
-<pre><code>      
-$ ejabberdctl start
-      
-$ ejabberdctl register admin localhost 1234
-  
-</code></pre>
-
-<p>만약 다음과 같은 에러가 발생할 경우 hostname이 제대로 설정되지 않아서이므로 이 부분을 확인한 후 다시 테스트하도록 한다.</p>
-
-<pre><code>      
-&quot;Can't set long node name!nPlease check your configurationn&quot;
-  
-</code></pre>
-
-<h3 id="게스트-os-복제">게스트 OS 복제</h3>
-
-<p>위와 같이 101서버를 하나 정상적으로 설정했다면 virtualbox에서 복제 기능을 사용해 게스트OS를 복제하도록 하자.</p>
-
-<p>복제된 새로운 게스트 OS의 IP는 192.168.56.102이며 hostname은 foo.bar로 수정한다.</p>
-
-<h3 id="easy-cluster-설정">easy_cluster 설정</h3>
-
-<p><a href="http://chad.ill.ac/post/35967173942/easy-ejabberd-clustering-guide-mnesia-mysql">easy_cluster의 basic 설정</a> 문서를 참고해서 다음과 같이 설정한다.</p>
-
-<h4 id="foo-bar">foo.bar</h4>
-
-<p><strong>ejabberdctrl.cfg</strong></p>
-
-<pre><code>       
-#
-       
-INET\_DIST\_INTERFACE=192.168.56.102
-  
-</code></pre>
-
-<p><strong>/ets/hosts</strong></p>
-
-<pre><code>      
-192.168.56.101 hello.world
-      
-192.168.56.102 foo.bar
-  
-</code></pre>
-
-<h4 id="hello-world">hello.world</h4>
-
-<p><strong>ejabberdctrl.cfg</strong></p>
-
-<pre><code>       
-#
-       
-INET\_DIST\_INTERFACE=192.168.56.101
-  
-</code></pre>
-
-<p><strong>/ets/hosts</strong></p>
-
-<pre><code>      
-192.168.56.101 hello.world
-      
-192.168.56.102 foo.bar
-  
-</code></pre>
-
-<p><strong>easy_cluster.erl</strong></p>
-
-<pre><code>      
-$ git clone https://github.com/chadillac/ejabberd-easy_cluster.git
-      
-$ cd ejabberd-easy_cluster
-      
-$ cp easy_cluster.erl ~/ejabberd/src/
-      
-$ cd ~/ejabberd
-      
-$ make &amp; make install
-  
-</code></pre>
-
-<p>~/ejabberd 경로는 ejabberd의 소스 경로이다.</p>
-
-<p>위와 같이 easy_cluster.erl을 배포한 후에 ejabberdctl start를 한 후 다음과 같이 debug 쉘을 실행한다.</p>
-
-<pre><code>      
-$ ejabberdctl debug
-      
-(ejabberd@hello.world)3&gt; easy\_cluster:test\_node('ejabberd@foo.bar').
-      
-server is reachable.
-      
-ok
-  
-</code></pre>
-
-<p>테스트가 성공하지 않는 경우 foo.bar 서버와 hello.world 서버의 다음 항목을 살펴본다.</p>
-
-<ul>
-<li>erl cookie</li>
-<li>4369 tcp port가 오픈 되어 있는지 확인한다.</li>
-</ul>
-
-<p>그래도 안 될 경우 다음 문서를 참고한다.</p>
-
-<p><a href="http://www.erlang.org/doc/man/epmd.html">http://www.erlang.org/doc/man/epmd.html</a></p>
-
-<p>마지막으로 다음과 같이 foo.bar 노드에 join하도록 한다.</p>
-
-<pre><code>      
-(ejabberd@hello.world)4&gt; easy_cluster:join('ejabberd@foo.bar').
-      
-ok
-  
-</code></pre>
-
-<p>ok가 떨어지면 hello.world 노드가 foo.bar 노드에 연결된 것이다.</p>
-
-<h3 id="easy-cluster-join-의-동작-원리">easy_cluster:join()의 동작 원리</h3>
-
-<p>foo.bar는 master node이고 hello.world는 slave node이다.</p>
-
-<p>master node의 역할은 ejabberd의 mnesia db를 보유한 node이며, slave node는 master node의 mnesia db를 공유하게 된다.</p>
-
-<p>즉, hello.world(salve) node에서 join(&#8216;ejabberd@foo.bar&#8217;)를 하는 순간, 두 노드는 클러스터로 묶이고 DB는 foo.bar(master) node의 것을 사용하게 된다.</p>
-
-<p>join/1 함수를 보면 다음과 같다.</p>
-
-<pre><code class="language-erlang">      
-join(NodeName) -&gt;
-              
-mnesia:stop(),
-              
-mnesia:delete_schema([node()]),
-              
-mnesia:start(),
-              
-mnesia:change\_config(extra\_db_nodes, [NodeName]),
-              
-mnesia:change\_table\_copy\_type(schema, node(), disc\_copies),
-              
-application:stop(ejabberd),
-              
-application:start(ejabberd).
-  
-</code></pre>
-
-<p>현재 노드(hello.world slave node)의 mnesia 스키마를 비우고 change_config/2 함수를 사용해 master node의 mnesia에 클러스터로 연결한다.</p>
-
-<p>mnesia:change_config(extra_db_nodes,&#8230;) 함수를 사용해 클러스터에 조인하려면 현재 노드의 스키마를 비운상태(delete_schema/1)에서 조인해야 한다.</p>
-
-<p>(스키마를 삭제하고 새로 mnesia:start/0를 할 경우 저장 타입은 ram type이 된다.)</p>
-
-<p>master node의 mnesia db에 연결한 후 현재 노드의 스키마 저장 타입을 disc_copies로 변경해 노드가 종료되어도 스키마가 삭제되지 않도록 한다.</p>
-
-<p>그리고 ejabberd 어플리케이션을 재시작하면 ejabberd 클러스터 가입이 완료된다.</p>
-
-<h3 id="slave-노드를-master-노드로-변경">slave 노드를 master 노드로 변경</h3>
-
-<p>만약 hello.world(slave) 노드를 master 노드로 하고 싶은 경우 먼저 master 노드의 mnesia 데이터베이스를 동기화 한 후 join을 완료해야 한다.</p>
-
-<pre><code class="language-erlang">      
-join\_as\_master(NodeName) -&gt;
-              
-application:stop(ejabberd),
-              
-mnesia:stop(),
-              
-mnesia:delete_schema([node()]),
-              
-mnesia:start(),
-              
-mnesia:change\_config(extra\_db_nodes, [NodeName]),
-              
-mnesia:change\_table\_copy\_type(schema, node(), disc\_copies),
-              
-easy\_cluster:sync\_node(NodeName),
-              
-application:start(ejabberd).
-
-sync_node(NodeName) -&gt;
-              
-[{Tb, mnesia:add\_table\_copy(Tb, node(), Type)}
-              
-|| {Tb, [{NodeName, Type}]} &lt;- [{T, mnesia:table\_info(T, where\_to_commit)}
-              
-|| T &lt;- mnesia:system_info(tables)]].
-  
-</code></pre>
-
-<h3 id="개선점">개선점</h3>
-
-<p>다음과 같은 항목을 개선해야 한다.</p>
-
-<ul>
-<li>sync 자동화</li>
-<li>새로운 노드 추가 자동화</li>
-<li>fail-over 자동화</li>
-</ul>
-
-<h3 id="references">References</h3>
-
-<ul>
-<li><a href="http://www.process-one.net/docs/ejabberd/guide_en.html#htoc89">http://www.process-one.net/docs/ejabberd/guide_en.html#htoc89</a></li>
-<li><a href="http://chad.ill.ac/post/35967173942/easy-ejabberd-clustering-guide-mnesia-mysql">http://chad.ill.ac/post/35967173942/easy-ejabberd-clustering-guide-mnesia-mysql</a></li>
-<li><a href="https://github.com/chadillac/ejabberd-easy_cluster/">https://github.com/chadillac/ejabberd-easy_cluster/</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/clustering/">#clustering</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-21T00:00:00Z">
-            21 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-
-	<nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/categories/ejabberd/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 2 of 4</span>
-	
-	    <a class="older-posts" href="/categories/ejabberd/page/3/">Older Posts &rarr;</a>
-	
-</nav>
-
-</main>
-
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
     </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
 
-</body>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
 

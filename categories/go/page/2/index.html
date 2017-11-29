@@ -1,316 +1,242 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/categories/go/index.xml">
 
-  	<meta property="og:title" content=" Go &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/categories/go/" />
+<link rel="canonical" href="https://jeidee.github.io/categories/go/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Go - Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
     
     
-    <meta property="og:type" content="website" />
     
 
-  <title>
-     Go &middot;  Erlang &amp; Go
-  </title>
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
 
-    <meta name="description" content="" />
+          
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-        <link href="https://jeidee.github.io/categories/go/index.xml" rel="alternate" type="application/rss+xml" title="Go &middot; Erlang &amp; Go" />
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/categories/go/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
-</head>
-<body class="nav-closed">
-
-  
-
-
- <div class="site-wrapper">
-
-
-
-
-	<header class="main-header tag-head no-cover">
-
-    <nav class="main-nav overlay clearfix">
-      
-      
-        
-          <a class="menu-button icon-feed" href="https://jeidee.github.io/categories/go/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
         </div>
-</div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
+      </nav>
+    </header>
 
-<main id="content" class="content" role="main">
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+    <header class="page-header">
+      <h1>Go</h1>
+    </header>
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/categories/go/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 2 of 2</span>
-	
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-08-19T00:00:00JST">Aug 19, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/08/19/go-tcp-json-decoder-ec82acec9aa9ed9598eab8b0/">go tcp &#43; json decoder 사용하기</a></h2>
+  </header>
+
+  
+  <div class="summary">다음 코드는 클라이언트에서 보낸 json 패킷을 디코딩하는 간단한 tcp 서버 예제코드이다.
+ package main import ( &quot;encoding/json&quot; &quot;log&quot; &quot;net&quot; ) func main() { ln, err := net.Listen(&quot;tcp&quot;, &quot;:9080&quot;) if err != nil { log.Fatal(err) return } defer ln.Close() for { c, err := ln.Accept() if err != nil { log.Fatalln(&quot;Can't accept new client!&quot;, err) return } defer c.Close() go requestHandler(c) } } type Packet struct { Id int16 \`json:&quot;id&quot;\` Data interface{} \`json:&quot;data&quot;\` } func requestHandler(c net.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/08/19/go-tcp-json-decoder-ec82acec9aa9ed9598eab8b0/" title="go tcp &#43; json decoder 사용하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-08-19T00:00:00JST">Aug 19, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/08/19/go-gtk-ec84a4ecb998/">go-gtk 설치</a></h2>
+  </header>
+
+  
+  <div class="summary">golang을 사용해서 gui 프로그래밍을 하려면 go-gtk를 설치하면 된다.
+go-gtk는 libgtk+ 2.0을 필요로 하는데,
+ubuntu에서 libgtk+ 2.0은 다음과 같이 설치할 수 있다.
+ $ sudo apt-get install libgtk2.0-dev $ go get github.com/mattn/go-gtk/gtk  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/08/19/go-gtk-ec84a4ecb998/" title="go-gtk 설치">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li><a href="/categories/go/">Previous</a></li>
+    
+
+    
+    <li class="disabled"><a href="#">Next</a></li>
+    
+
+  </ul>
 </nav>
 
-	</div>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/08/19/go-tcp-json-decoder-ec82acec9aa9ed9598eab8b0/">go tcp &#43; json decoder 사용하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>다음 코드는 클라이언트에서 보낸 json 패킷을 디코딩하는 간단한 tcp 서버 예제코드이다.</p>
-
-<pre><code>  
-package main
-
-import (
-      
-&quot;encoding/json&quot;
-      
-&quot;log&quot;
-      
-&quot;net&quot;
-  
-)
-
-func main() {
-      
-ln, err := net.Listen(&quot;tcp&quot;, &quot;:9080&quot;)
-      
-if err != nil {
-          
-log.Fatal(err)
-          
-return
-      
-}
-      
-defer ln.Close()
-
-for {
-          
-c, err := ln.Accept()
-          
-if err != nil {
-              
-log.Fatalln(&quot;Can't accept new client!&quot;, err)
-              
-return
-          
-}
-          
-defer c.Close()
-
-go requestHandler(c)
-      
-}
-  
-}
-
-type Packet struct {
-      
-Id int16 \`json:&quot;id&quot;\`
-      
-Data interface{} \`json:&quot;data&quot;\`
-  
-}
-
-func requestHandler(c net.Conn) {
-      
-d := json.NewDecoder(c)
-
-var packet Packet
-
-for {
-          
-err := d.Decode(&amp;packet)
-          
-if err != nil {
-              
-log.Println(&quot;Invalid json format!\n&quot;, err)
-              
-c.Close()
-              
-return
-          
-}
-
-log.Println(packet, err)
-      
-}
-  
-}
-  
-</code></pre>
-
-<p>json 포맷이 아닌 데이터를 수신하면 해당 클라이언트의 연결을 닫는다.</p>
-
-<p>클라이언트에서는 다음과 같이 완성된 json 문자열을 한 번에 보내거나,</p>
-
-<p>각각 여러 조각으로 분리해서 보낼 수 있다.</p>
-
-<pre><code>  
-{&quot;id&quot;:1, &quot;data&quot;:{}}
-  
-{&quot;id&quot;:1,
-   
-&quot;data&quot;:{}}
-  
-</code></pre>
-
-<p>서버는 d.Decode(&#8230;) 함수에서 클라이언트에서 보낸 데이터를 수신한 후,</p>
-
-<p>수신된 데이터를 조합해 완성된 json 데이터를 생성(디코딩)한다.</p>
-
-<p>d.Decode(&amp;packet) 함수에 주어진 packet 데이터 타입으로 json 데이터를 캐스팅할 수 없다면 packet에는 nil을 대입한다.</p>
-
-<p>다음과 같이 map[string]interface{} 타입의 변수를 d.Decode(&#8230;) 함수의 매개변수로 넘겨줄 경우,</p>
-
-<p>어떤 포맷의 json 데이터도 디코딩해서 가져올 수 있다.</p>
-
-<pre><code>  
-var v map[string]interface{}
-
-err := d.Decode(&amp;v)
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/json/">#json</a>,
-            
-                <a href="https://jeidee.github.iotags/tcp/">#tcp</a>,
-            
-        
-        <time class="post-date" datetime="2015-08-19T00:00:00Z">
-            19 Aug 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/08/19/go-gtk-ec84a4ecb998/">go-gtk 설치</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>golang을 사용해서 gui 프로그래밍을 하려면 go-gtk를 설치하면 된다.</p>
-
-<p>go-gtk는 libgtk+ 2.0을 필요로 하는데,</p>
-
-<p>ubuntu에서 libgtk+ 2.0은 다음과 같이 설치할 수 있다.</p>
-
-<pre><code>  
-$ sudo apt-get install libgtk2.0-dev
-  
-$ go get github.com/mattn/go-gtk/gtk
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/golang/">#golang</a>,
-            
-                <a href="https://jeidee.github.iotags/gtk/">#gtk</a>,
-            
-        
-        <time class="post-date" datetime="2015-08-19T00:00:00Z">
-            19 Aug 2015
-        </time>
-    </footer>
-</article>
-
-	
-
-	<nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/categories/go/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 2 of 2</span>
-	
-</nav>
-
-</main>
 
 
+  </div>
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
 
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
     </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
 
-</body>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
 

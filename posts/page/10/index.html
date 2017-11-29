@@ -1,947 +1,424 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/posts/index.xml">
 
-  	<meta property="og:title" content=" Posts &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/posts/" />
+<link rel="canonical" href="https://jeidee.github.io/posts/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Posts - Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
     
     
-    <meta property="og:type" content="website" />
     
 
-  <title>
-     Posts &middot;  Erlang &amp; Go
-  </title>
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
 
-    <meta name="description" content="" />
+          
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-        <link href="https://jeidee.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Posts &middot; Erlang &amp; Go" />
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/posts/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
-</head>
-<body class="nav-closed">
-
-  
-
-
- <div class="site-wrapper">
-
-
-
-
-	<header class="main-header tag-head no-cover">
-
-    <nav class="main-nav overlay clearfix">
-      
-      
-        
-          <a class="menu-button icon-feed" href="https://jeidee.github.io/posts/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
         </div>
-</div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
+      </nav>
+    </header>
 
-<main id="content" class="content" role="main">
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+    <header class="page-header">
+      <h1>Posts</h1>
+    </header>
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/posts/page/9/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 10 of 20</span>
-	
-	    <a class="older-posts" href="/posts/page/11/">Older Posts &rarr;</a>
-	
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-18T00:00:00JST">May 18, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/18/ios-dispatch_async-ebb984eb8f99eab8b0-ecb298eba6aced9598eab8b0/">ios dispatch_async 비동기 처리하기</a></h2>
+  </header>
+
+  
+  <div class="summary">장시간을 요하는 작업을 UI 쓰레드에서 요청할 경우 UI 쓰레드가 블럭되기 때문에 사용자는 불편을 느끼게 된다.
+이러한 경우, 별도의 쓰레드에서 작업을 수행 후 처리가 완료되면 UI 쓰레드로 결과를 돌려주는 방식(비동기)을 사용해야 한다.
+android에서는 AsyncTask를 사용하면되고 ios의 경우에는 GCD(Grand Central Dispatch)를 사용하면 된다.
+GCD 중에서 dispatch_async를 사용해 무거운 작업을 백그라운드 쓰레드에서 실행 후 실행완료된 결과를 UI쓰레드에서 처리하는 예제를 살펴보자.
+mLoginView.hidden = YES; mActivityIndicator.hidden = NO; [mActivityIndicator startAnimating]; dispatch\_async(dispatch\_get\_global\_queue(DISPATCH\_QUEUE\_PRIORITY_DEFAULT, 0), ^{ bool success = TALK_CLIENT-&gt;connect(jid, pwd, host, port); dispatch\_async(dispatch\_get\_main\_queue(), ^ { if (success) { [self performSegueWithIdentifier:@&quot;moveFromLoginToTabBar&quot; sender:nil]; } else { [mLbError setText:@&quot;로그인 실패&quot;]; mLoginView.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/18/ios-dispatch_async-ebb984eb8f99eab8b0-ecb298eba6aced9598eab8b0/" title="ios dispatch_async 비동기 처리하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-18T00:00:00JST">May 18, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/18/osx-ec9ca0ec9aa9ed959c-ebaa85eba0b9ec96b4/">osx 유용한 명령어</a></h2>
+  </header>
+
+  
+  <div class="summary">Dock Dealy 없애기
+ defaults write com.apple.Dock autohide-delay -float 0 &amp;&amp; killall Dock  미션 컨트롤 화면 전환 속도를 보다 빠르게
+ defaults write com.apple.dock expose-animation-duration -float 0.12 &amp;&amp; killall Dock  숨겨진 APP 아이콘 DOCK에서 쉽게 구별 하기
+ defaults write com.apple.Dock showhidden -bool YES &amp;&amp; killall Dock  OSX 메일에서 EMAIL 주소 대신 이름으로 가리는 문제 해결 하기
+ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false  미리보기에서 문자열 선택 가능 하기</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/18/osx-ec9ca0ec9aa9ed959c-ebaa85eba0b9ec96b4/" title="osx 유용한 명령어">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-14T00:00:00JST">May 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/14/ios-storyboardec9790ec849c-ecbba8ed8ab8eba1a4ec9d98-ec9c84ecb998eab080-ec9d98eb8f84ed959ceb8c80eba19c-ecb69ceba0a5eb9098eca780-ec958aec9d84/">ios storyboard에서 컨트롤의 위치가 의도한대로 출력되지 않을 때</a></h2>
+  </header>
+
+  
+  <div class="summary"> Auto Layout을 사용해 컨트롤에 Constraints를 추가해도 의도한대로 출력되지 않는 경우가 있다.
+이럴 경우 다음과 같이 스토리보드 레이아웃이 제대로 설정되어 있는지 확인한다.
+위 이미지의 설정은 iPhone의 각 스크린 인치별 portrait와 landscape를 지원한다.
+참고  Auto Layout #2. Auto Layout with Storyboard  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/14/ios-storyboardec9790ec849c-ecbba8ed8ab8eba1a4ec9d98-ec9c84ecb998eab080-ec9d98eb8f84ed959ceb8c80eba19c-ecb69ceba0a5eb9098eca780-ec958aec9d84/" title="ios storyboard에서 컨트롤의 위치가 의도한대로 출력되지 않을 때">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-13T00:00:00JST">May 13, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/13/backoff-ec958ceab3a0eba6aceca698/">Backoff 알고리즘</a></h2>
+  </header>
+
+  
+  <div class="summary">연결 재접속이나 데이터 재전송을 위한 Backoff 알고리즘을 java로 구현해 본다.
+&lt;br /&gt;public class BackoffManager { private int mMaxRetryCount = 10; // 최대 재시도 횟수 private int mInitWaitBackoffSeconds = 2; // 현재 재시도 간격(단위: 초) private boolean mNoGiveupAndRepeat = false; // 최대 재시도 횟수를 초과할 경우 재시도 포기여부 private int mRetryCount; private int mWaitBackoffSeconds; private int mRepeatCycle; // 최대 재시도횟수를 초과한 횟수 public void init(int maxRetryCount, int initWaitBackoffSeconds, boolean noGiveupAndRepeat) { mMaxRetryCount = maxRetryCount; mInitWaitBackoffSeconds = initWaitBackoffSeconds; mNoGiveupAndRepeat = noGiveupAndRepeat; mRetryCount = 0; mWaitBackoffSeconds = mInitWaitBackoffSeconds; } // 연결이 완료되면 백오프 리셋 public void reset() { mRetryCount = 0; mWaitBackoffSeconds = mInitWaitBackoffSeconds; } public boolean retry() throws InterruptedException { if (mNoGiveupAndRepeat == false &amp;&amp; mRepeatCycle &gt; 0) { return false; } mRetryCount++; mWaitBackoffSeconds *= 2; if (mRetryCount &gt; mMaxRetryCount) { mRetryCount = 0; mWaitBackoffSeconds = mInitWaitBackoffSeconds; mRepeatCycle++; } // 대기 Thread.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/13/backoff-ec958ceab3a0eba6aceca698/" title="Backoff 알고리즘">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-13T00:00:00JST">May 13, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/13/c-gettickcount-on-linux/">c&#43;&#43; GetTickCount() on linux</a></h2>
+  </header>
+
+  
+  <div class="summary">gettimeofday()는 향후 제거될 함수이며 권장되지 않기 때문에 clock_gettime()을 사용한 방법을 사용하도록 한다.
+특히 경과시간을 구하고자할 때 현재 시간을 반환하는 gettimeofday()함수는 시각 조정에 의한 오차가 발생할 수 있고 쓰레드에 안전하지 않으므로,
+clock_gettime()에 CLOCK_MONOTONIC(uptime) 옵션을 사용해서 사용하는 것이 좋다.
+clock_gettime()은 쓰레드에 안전하다.
+#include &lt;unistd.h&gt; #include &lt;time.h&gt; uint32_t getTick() { struct timespec ts; unsigned theTick = 0U; clock\_gettime( CLOCK\_MONOTONIC, &amp;ts ); theTick = ts.tv_nsec / 1000000; theTick += ts.tv_sec * 1000; return theTick; }  osx에서는 clock_gettime()을 사용할 수 없으므로 다음과 같이 코드한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/13/c-gettickcount-on-linux/" title="c&#43;&#43; GetTickCount() on linux">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-13T00:00:00JST">May 13, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/13/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9d98-segueeba5bc-ecbd94eb939ceba19c-ec9e91eb8f99ec8b9ced82a4eab8b0/">ios 스토리보드의 segue를 코드로 작동시키기</a></h2>
+  </header>
+
+  
+  <div class="summary">스토리보드(Main.storyboard)를 다음과 같이 작성했다고 가정해 보자.
+ =&gt;(Entry) Login View Controller =&gt;(Segue id: moveToTabBar) Tab Bar Controller  Entry 뷰는 Login View이다.
+Login View에서 Tab Bar Controller로 이동하는 seque를 생성한 후 Attributes Inspector에서 Identifier값을 &#8220;moveToTabBar&#8221;로 수정한다.
+그리고 이동하고자 하는 지점의 코드에서 다음과 같이 작성하면 된다.
+[self performSegueWithIdentifier:@&quot;moveToTabController&quot; sender:nil];  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/13/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9d98-segueeba5bc-ecbd94eb939ceba19c-ec9e91eb8f99ec8b9ced82a4eab8b0/" title="ios 스토리보드의 segue를 코드로 작동시키기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-12T00:00:00JST">May 12, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/12/android-orientationec9db4-ebb380eab2bdeb90a0-eb958c-ed83adebb094ec9d98-ec9584ec9db4ecbd98ec9db4-ec9786ec96b4eca788-eb958c/">android orientation이 변경될 때 탭바의 아이콘이 없어질 때</a></h2>
+  </header>
+
+  
+  <div class="summary"> 최신 android 버전(API 22)에서는 문제가 없어 보이지만 특정 버전(API 16, Android 4.1.2)에서 아이콘이 사라지는 문제가 발생한다.
+해결책은 AndriodManifest.xml에서 해당 Activity의 configChanges 어트리뷰트에서 orientation을 제거하면 되는데,
+근본적인 해결책이라고 볼 순 없는 것 같다.
+ &lt;activity android:name=&quot;.ui.MainActivity&quot; &lt;!&amp;#8211;android:configChanges=&quot;orientation|screenSize&quot;&amp;#8211;&gt; android:label=&quot;@string/app_name&quot; &gt; &lt;/activity&gt;  참고  Custom tab view vanishes after orientation change  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/12/android-orientationec9db4-ebb380eab2bdeb90a0-eb958c-ed83adebb094ec9d98-ec9584ec9db4ecbd98ec9db4-ec9786ec96b4eca788-eb958c/" title="android orientation이 변경될 때 탭바의 아이콘이 없어질 때">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-05T00:00:00JST">May 5, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/05/java-genericec9790ec849c-t-class-ec82acec9aa9ed9598eab8b0/">java generic에서 T.class 사용하기</a></h2>
+  </header>
+
+  
+  <div class="summary">Class 클래스는 T 클래스의 메타정보를 갖는 클래스이다.
+T가 Temp라는 사용자 정의 클래스라고 할 때,
+Temp.class와 Class.forName(&#8220;com.example.Temp&#8221;)은 Class 오브젝트를 반환한다.
+이 Class 오브젝트를 사용해 Temp 클래스의 인스턴스를 생성할 수 있고, 메소드와 필드를 Reflection할 수 있다.
+Class를 사용해 T의 새로운 인스턴스를 생성하고자 할 때는 다음과 같이 newInstance()를 사용할 수 있다.
+Temp temp = (Temp) Temp.class.newInstance(); Temp temp2 = (Temp) Class.forName(&quot;com.example.Temp&quot;).newInstance();  문제는 다음과 같은 Generic 클래스를 정의할 때 타입 T의 Class 오브젝트를 T.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/05/java-genericec9790ec849c-t-class-ec82acec9aa9ed9598eab8b0/" title="java generic에서 T.class 사용하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-04T00:00:00JST">May 4, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/04/android-cannot-load-library-error/">android cannot load library error</a></h2>
+  </header>
+
+  
+  <div class="summary">ndk build후 의존성 있는 .so 라이브러리를 일부 폰에서 로드하지 못할 경우 다음과 같이 수정해 본다.
+static { System.loadLibrary(&quot;gloox_lib&quot;); System.loadLibrary(&quot;msg_lib&quot;); }  일부 폰(sdk 22)에서는 msg_lib만 로드하면 되지만, 일부 폰(sdk 16)에서는 msg_lib가 의존하는 gloox_lib를 로드하지 못하는 경우가 발생한다.
+이럴 경우 위와 같이 의존성 있는 라이브러리를 함께 로드해주면 된다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/04/android-cannot-load-library-error/" title="android cannot load library error">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-04T00:00:00JST">May 4, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/04/android-orientationec9db4-ebb380eab2bdeb90a0-eb958c-eab090eca780ed9598eb8a94-ebb0a9ebb295/">android orientation이 변경될 때 감지하는 방법</a></h2>
+  </header>
+
+  
+  <div class="summary">별도의 작업 없이는 orientation이 변경될 때 감지할 수 없다.
+orientation 변경을 감지할 수 있는 방법은 다음과 같이 두 가지가 있다.
+1) Activity에서 단순히 landscape와 portrait감지만 필요한 경우
+감지할 Activity에서 onConfigurationChanged() 함수를 override한다.
+@Override public void onConfigurationChanged(Configuration newConfig) { super.onConfigurationChanged(newConfig); // Checks the orientation of the screen if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) { Toast.makeText(this, &quot;landscape&quot;, Toast.LENGTH_SHORT).show(); } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){ Toast.makeText(this, &quot;portrait&quot;, Toast.LENGTH_SHORT).show(); } }  위와 같이 추가한 후 빌드해서 실행해보면 제대로 동작하지 않는다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/04/android-orientationec9db4-ebb380eab2bdeb90a0-eb958c-eab090eca780ed9598eb8a94-ebb0a9ebb295/" title="android orientation이 변경될 때 감지하는 방법">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li><a href="/posts/page/9/">Previous</a></li>
+    
+
+    
+    <li><a href="/posts/page/11/">Next</a></li>
+    
+
+  </ul>
 </nav>
 
-	</div>
 
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/18/ios-dispatch_async-ebb984eb8f99eab8b0-ecb298eba6aced9598eab8b0/">ios dispatch_async 비동기 처리하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
 
-<p>장시간을 요하는 작업을 UI 쓰레드에서 요청할 경우 UI 쓰레드가 블럭되기 때문에 사용자는 불편을 느끼게 된다.</p>
+  </div>
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
 
-<p>이러한 경우, 별도의 쓰레드에서 작업을 수행 후 처리가 완료되면 UI 쓰레드로 결과를 돌려주는 방식(비동기)을 사용해야 한다.</p>
-
-<p>android에서는 AsyncTask를 사용하면되고 ios의 경우에는 GCD(Grand Central Dispatch)를 사용하면 된다.</p>
-
-<p>GCD 중에서 dispatch_async를 사용해 무거운 작업을 백그라운드 쓰레드에서 실행 후 실행완료된 결과를 UI쓰레드에서 처리하는 예제를 살펴보자.</p>
-
-<pre><code class="language-objc">      
-mLoginView.hidden = YES;
-      
-mActivityIndicator.hidden = NO;
-      
-[mActivityIndicator startAnimating];
-
-dispatch\_async(dispatch\_get\_global\_queue(DISPATCH\_QUEUE\_PRIORITY_DEFAULT, 0), ^{
-
-bool success = TALK_CLIENT-&gt;connect(jid, pwd, host, port);
-
-dispatch\_async(dispatch\_get\_main\_queue(), ^ {
-              
-if (success) {
-                  
-[self performSegueWithIdentifier:@&quot;moveFromLoginToTabBar&quot; sender:nil];
-              
-} else {
-                  
-[mLbError setText:@&quot;로그인 실패&quot;];
-                  
-mLoginView.hidden = NO;
-                  
-mActivityIndicator.hidden = YES;
-              
-}
-          
-});
-      
-});
-  
-</code></pre>
-
-<p>dispatch_get_global_queue()는 커널에서 관리하는 Concurrent Dispatch Queue이며, 백그라운드에서 작업을 수행하고 큐에 저장된 작업을 병행 처리한다.</p>
-
-<p>dispatch_get_main_queue()는 UI 쓰레드를 관리하는 메인 큐로 Serial Dispatch Queue로서 큐에 저장된 작업을 순차적으로 처리하게 된다.</p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://padgom.tistory.com/entry/iOS-%EA%B8%B0%EB%B3%B8-GCDGrand-Central-Dispatch-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">GCD(Grand Central Dispatch) 사용하기</a></li>
-<li><a href="http://seorenn.blogspot.kr/2012/04/ios.html">iOS 특정 코드를 비동기로 실행시키기</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/asynctask/">#asynctask</a>,
-            
-                <a href="https://jeidee.github.iotags/dispatch_async/">#dispatch_async</a>,
-            
-                <a href="https://jeidee.github.iotags/gcd/">#GCD</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-18T00:00:00Z">
-            18 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/18/osx-ec9ca0ec9aa9ed959c-ebaa85eba0b9ec96b4/">osx 유용한 명령어</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>Dock Dealy 없애기</p>
-
-<pre><code>  
-defaults write com.apple.Dock autohide-delay -float 0 &amp;&amp; killall Dock
-  
-</code></pre>
-
-<p>미션 컨트롤 화면 전환 속도를 보다 빠르게</p>
-
-<pre><code>  
-defaults write com.apple.dock expose-animation-duration -float 0.12 &amp;&amp; killall Dock
-  
-</code></pre>
-
-<p>숨겨진 APP 아이콘 DOCK에서 쉽게 구별 하기</p>
-
-<pre><code>  
-defaults write com.apple.Dock showhidden -bool YES &amp;&amp; killall Dock
-  
-</code></pre>
-
-<p>OSX 메일에서 EMAIL 주소 대신 이름으로 가리는 문제 해결 하기</p>
-
-<pre><code>  
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
-  
-</code></pre>
-
-<p>미리보기에서 문자열 선택 가능 하기</p>
-
-<pre><code>  
-defaults write com.apple.finder QLEnableTextSelection -bool TRUE;killall Finder
-  
-</code></pre>
-
-<p>항상 숨김 파일 표시하기</p>
-
-<pre><code>  
-defaults write com.apple.finder AppleShowAllFiles -bool YES &amp;&amp; killall Finder
-  
-</code></pre>
-
-<p>바탕화면 아이콘 모두 숨기기</p>
-
-<pre><code>  
-defaults write com.apple.finder CreateDesktop -bool false &amp;&amp; killall Finder
-  
-</code></pre>
-
-<p>로그인 화면에서 시스템 정보 보기</p>
-
-<pre><code>  
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-  
-</code></pre>
-
-<p>기본 캡쳐 이미지 저장 장소 바꾸기</p>
-
-<pre><code>  
-defaults write com.apple.screencapture location ~/Pictures/Screenshots
-  
-</code></pre>
-
-<p>기본 캡쳐 이미지 종류 바꾸기</p>
-
-<pre><code>  
-defaults write com.apple.screencapture type jpg &amp;&amp; killall SystemUIServer
-  
-</code></pre>
-
-<p>항상 유저 라이브러리 폴더 보이기</p>
-
-<p>&#8220;`</p>
-
-<p>chflags nohidden ~/Library/</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/osx/">#osx</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-18T00:00:00Z">
-            18 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/14/ios-storyboardec9790ec849c-ecbba8ed8ab8eba1a4ec9d98-ec9c84ecb998eab080-ec9d98eb8f84ed959ceb8c80eba19c-ecb69ceba0a5eb9098eca780-ec958aec9d84/">ios storyboard에서 컨트롤의 위치가 의도한대로 출력되지 않을 때</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>Auto Layout을 사용해 컨트롤에 Constraints를 추가해도 의도한대로 출력되지 않는 경우가 있다.</p>
-
-<p>이럴 경우 다음과 같이 스토리보드 레이아웃이 제대로 설정되어 있는지 확인한다.</p>
-
-<p><img src="http://localhost:8888/wordpress/wp-content/uploads/2015/05/ec8aa4ed81aceba6b0ec83b7-2015-05-14-ec98a4eca084-10-39-53.png" alt="stortyboard_layout" /></p>
-
-<p>위 이미지의 설정은 iPhone의 각 스크린 인치별 portrait와 landscape를 지원한다.</p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://meetkei.com/?p=3460">Auto Layout #2. Auto Layout with Storyboard</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/auto-layout/">#auto layout</a>,
-            
-                <a href="https://jeidee.github.iotags/storyboard/">#storyboard</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-14T00:00:00Z">
-            14 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/13/backoff-ec958ceab3a0eba6aceca698/">Backoff 알고리즘</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>연결 재접속이나 데이터 재전송을 위한 Backoff 알고리즘을 java로 구현해 본다.</p>
-
-<pre><code class="language-java">  
-&lt;br /&gt;public class BackoffManager {
-      
-private int mMaxRetryCount = 10; // 최대 재시도 횟수
-      
-private int mInitWaitBackoffSeconds = 2; // 현재 재시도 간격(단위: 초)
-      
-private boolean mNoGiveupAndRepeat = false; // 최대 재시도 횟수를 초과할 경우 재시도 포기여부
-
-private int mRetryCount;
-      
-private int mWaitBackoffSeconds;
-      
-private int mRepeatCycle; // 최대 재시도횟수를 초과한 횟수
-
-public void init(int maxRetryCount, int initWaitBackoffSeconds, boolean noGiveupAndRepeat) {
-          
-mMaxRetryCount = maxRetryCount;
-          
-mInitWaitBackoffSeconds = initWaitBackoffSeconds;
-          
-mNoGiveupAndRepeat = noGiveupAndRepeat;
-
-mRetryCount = 0;
-          
-mWaitBackoffSeconds = mInitWaitBackoffSeconds;
-      
-}
-
-// 연결이 완료되면 백오프 리셋
-      
-public void reset() {
-          
-mRetryCount = 0;
-          
-mWaitBackoffSeconds = mInitWaitBackoffSeconds;
-      
-}
-
-public boolean retry() throws InterruptedException {
-          
-if (mNoGiveupAndRepeat == false &amp;&amp; mRepeatCycle &gt; 0) {
-              
-return false;
-          
-}
-
-mRetryCount++;
-          
-mWaitBackoffSeconds *= 2;
-
-if (mRetryCount &gt; mMaxRetryCount) {
-              
-mRetryCount = 0;
-              
-mWaitBackoffSeconds = mInitWaitBackoffSeconds;
-              
-mRepeatCycle++;
-          
-}
-
-// 대기
-          
-Thread.sleep(mWaitBackoffSeconds * 1000);
-
-return true;
-      
-}
-  
-}
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/backoff/">#backoff</a>,
-            
-                <a href="https://jeidee.github.iotags/retry/">#retry</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-13T00:00:00Z">
-            13 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/13/c-gettickcount-on-linux/">c&#43;&#43; GetTickCount() on linux</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>gettimeofday()는 향후 제거될 함수이며 권장되지 않기 때문에 clock_gettime()을 사용한 방법을 사용하도록 한다.</p>
-
-<p>특히 경과시간을 구하고자할 때 현재 시간을 반환하는 gettimeofday()함수는 시각 조정에 의한 오차가 발생할 수 있고 쓰레드에 안전하지 않으므로,</p>
-
-<p>clock_gettime()에 CLOCK_MONOTONIC(uptime) 옵션을 사용해서 사용하는 것이 좋다.</p>
-
-<p>clock_gettime()은 쓰레드에 안전하다.</p>
-
-<pre><code class="language-cpp">  
-#include &lt;unistd.h&gt;
-  
-#include &lt;time.h&gt;
-
-uint32_t getTick() {
-      
-struct timespec ts;
-      
-unsigned theTick = 0U;
-      
-clock\_gettime( CLOCK\_MONOTONIC, &amp;ts );
-      
-theTick = ts.tv_nsec / 1000000;
-      
-theTick += ts.tv_sec * 1000;
-      
-return theTick;
-  
-}
-  
-</code></pre>
-
-<p>osx에서는 clock_gettime()을 사용할 수 없으므로 다음과 같이 코드한다.</p>
-
-<pre><code class="language-cpp">  
-#include &quot;Util.h&quot;
-
-#include &lt;unistd.h&gt;
-  
-#include &lt;time.h&gt;
-
-#ifdef \_\_MACH\_\_
-  
-#include &lt;mach/clock.h&gt;
-  
-#include &lt;mach/mach.h&gt;
-  
-#endif
-
-namespace jd {
-      
-uint32_t Util::getTick() {
-          
-struct timespec ts;
-          
-unsigned theTick = 0U;
-
-#ifdef \_\_MACH\_\_ // OS X does not have clock\_gettime, use clock\_get_time
-          
-clock\_serv\_t cclock;
-          
-mach\_timespec\_t mts;
-          
-host\_get\_clock\_service(mach\_host\_self(), CALENDAR\_CLOCK, &amp;cclock);
-          
-clock\_get\_time(cclock, &amp;mts);
-          
-mach\_port\_deallocate(mach\_task\_self(), cclock);
-          
-ts.tv\_sec = mts.tv\_sec;
-          
-ts.tv\_nsec = mts.tv\_nsec;
-  
-#else
-          
-clock\_gettime( CLOCK\_MONOTONIC, &amp;ts );
-  
-#endif
-
-theTick = ts.tv_nsec / 1000000;
-          
-theTick += ts.tv_sec * 1000;
-          
-return theTick;
-      
-}
-  
-}
-  
-</code></pre>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="https://gist.github.com/jbenet/1087739">current_utc_time</a></li>
-<li><a href="http://sunyzero.tistory.com/161">gettimeofday를 대체하는 clock_gettime 함수</a></li>
-<li><a href="http://stackoverflow.com/questions/2958291/equivalent-to-gettickcount-on-linux">Equivalent to GetTickCount() on Linux</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/tick/">#tick</a>,
-            
-                <a href="https://jeidee.github.iotags/time/">#time</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-13T00:00:00Z">
-            13 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/13/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9d98-segueeba5bc-ecbd94eb939ceba19c-ec9e91eb8f99ec8b9ced82a4eab8b0/">ios 스토리보드의 segue를 코드로 작동시키기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>스토리보드(Main.storyboard)를 다음과 같이 작성했다고 가정해 보자.</p>
-
-<ul>
-<li>=&gt;(Entry) Login View Controller =&gt;(Segue id: moveToTabBar) Tab Bar Controller</li>
-</ul>
-
-<p>Entry 뷰는 Login View이다.</p>
-
-<p>Login View에서 Tab Bar Controller로 이동하는 seque를 생성한 후 Attributes Inspector에서 Identifier값을 &#8220;moveToTabBar&#8221;로 수정한다.</p>
-
-<p>그리고 이동하고자 하는 지점의 코드에서 다음과 같이 작성하면 된다.</p>
-
-<pre><code class="language-objc">  
-[self performSegueWithIdentifier:@&quot;moveToTabController&quot; sender:nil];
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/segue/">#segue</a>,
-            
-                <a href="https://jeidee.github.iotags/storyboard/">#storyboard</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-13T00:00:00Z">
-            13 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/12/android-orientationec9db4-ebb380eab2bdeb90a0-eb958c-ed83adebb094ec9d98-ec9584ec9db4ecbd98ec9db4-ec9786ec96b4eca788-eb958c/">android orientation이 변경될 때 탭바의 아이콘이 없어질 때</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>최신 android 버전(API 22)에서는 문제가 없어 보이지만 특정 버전(API 16, Android 4.1.2)에서 아이콘이 사라지는 문제가 발생한다.</p>
-
-<p>해결책은 AndriodManifest.xml에서 해당 Activity의 configChanges 어트리뷰트에서 orientation을 제거하면 되는데,</p>
-
-<p>근본적인 해결책이라고 볼 순 없는 것 같다.</p>
-
-<pre><code>          
-&lt;activity
-              
-android:name=&quot;.ui.MainActivity&quot;
-              
-&lt;!&amp;#8211;android:configChanges=&quot;orientation|screenSize&quot;&amp;#8211;&gt;
-              
-android:label=&quot;@string/app_name&quot; &gt;
-          
-&lt;/activity&gt;
-  
-</code></pre>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="https://github.com/JakeWharton/ActionBarSherlock/issues/365">Custom tab view vanishes after orientation change</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/actionbar/">#ActionBar</a>,
-            
-                <a href="https://jeidee.github.iotags/tab/">#tab</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-12T00:00:00Z">
-            12 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/05/java-genericec9790ec849c-t-class-ec82acec9aa9ed9598eab8b0/">java generic에서 T.class 사용하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>Class 클래스는 T 클래스의 메타정보를 갖는 클래스이다.</p>
-
-<p>T가 Temp라는 사용자 정의 클래스라고 할 때,</p>
-
-<p>Temp.class와 Class.forName(&#8220;com.example.Temp&#8221;)은 Class 오브젝트를 반환한다.</p>
-
-<p>이 Class 오브젝트를 사용해 Temp 클래스의 인스턴스를 생성할 수 있고, 메소드와 필드를 Reflection할 수 있다.</p>
-
-<p>Class를 사용해 T의 새로운 인스턴스를 생성하고자 할 때는 다음과 같이 newInstance()를 사용할 수 있다.</p>
-
-<pre><code class="language-java">  
-Temp temp = (Temp) Temp.class.newInstance();
-  
-Temp temp2 = (Temp) Class.forName(&quot;com.example.Temp&quot;).newInstance();
-  
-</code></pre>
-
-<p>문제는 다음과 같은 Generic 클래스를 정의할 때 타입 T의 Class 오브젝트를 T.class와 같이 사용할 수 없기 때문에 발생한다.</p>
-
-<pre><code class="language-java">  
-public class MyGeneric&lt;T&gt; {
-      
-public void someMethod() {
-          
-Temp temp = (Temp) T.class.newInstance(); // 에러
-      
-}
-  
-}
-  
-</code></pre>
-
-<p>이럴 때는 다음과 같이 Constructor에 T의 타입클래스를 매개변수로 전달해서 사용할 수 있다.</p>
-
-<pre><code class="language-java">  
-public class MyGeneric&lt;T&gt; {
-      
-final Class&lt;T&gt; mTTypeClass;
-
-public MyGeneric(Class&lt;T&gt; tTypeClass) {
-          
-mTTypeClass = tTypeClass;
-      
-}
-  
-</code></pre>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://stackoverflow.com/questions/3437897/how-to-get-class-instance-of-generics-type-t">how to get class instance of generics type T</a></li>
-<li><a href="http://noritersand.tistory.com/59">java.lang.Class</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/generic/">#generic</a>,
-            
-                <a href="https://jeidee.github.iotags/reflection/">#reflection</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-05T00:00:00Z">
-            5 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/04/android-cannot-load-library-error/">android cannot load library error</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>ndk build후 의존성 있는 .so 라이브러리를 일부 폰에서 로드하지 못할 경우 다음과 같이 수정해 본다.</p>
-
-<pre><code class="language-java">      
-static {
-          
-System.loadLibrary(&quot;gloox_lib&quot;);
-          
-System.loadLibrary(&quot;msg_lib&quot;);
-      
-}
-  
-</code></pre>
-
-<p>일부 폰(sdk 22)에서는 msg_lib만 로드하면 되지만, 일부 폰(sdk 16)에서는 msg_lib가 의존하는 gloox_lib를 로드하지 못하는 경우가 발생한다.</p>
-
-<p>이럴 경우 위와 같이 의존성 있는 라이브러리를 함께 로드해주면 된다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/error/">#error</a>,
-            
-                <a href="https://jeidee.github.iotags/ndk/">#ndk</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-04T00:00:00Z">
-            4 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/04/android-orientationec9db4-ebb380eab2bdeb90a0-eb958c-eab090eca780ed9598eb8a94-ebb0a9ebb295/">android orientation이 변경될 때 감지하는 방법</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>별도의 작업 없이는 orientation이 변경될 때 감지할 수 없다.</p>
-
-<p>orientation 변경을 감지할 수 있는 방법은 다음과 같이 두 가지가 있다.</p>
-
-<p>1) Activity에서 단순히 landscape와 portrait감지만 필요한 경우</p>
-
-<p>감지할 Activity에서 onConfigurationChanged() 함수를 override한다.</p>
-
-<pre><code class="language-java">      
-@Override
-      
-public void onConfigurationChanged(Configuration newConfig) {
-          
-super.onConfigurationChanged(newConfig);
-
-// Checks the orientation of the screen
-          
-if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-              
-Toast.makeText(this, &quot;landscape&quot;, Toast.LENGTH_SHORT).show();
-          
-} else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
-              
-Toast.makeText(this, &quot;portrait&quot;, Toast.LENGTH_SHORT).show();
-          
-}
-      
-}
-
-</code></pre>
-
-<p>위와 같이 추가한 후 빌드해서 실행해보면 제대로 동작하지 않는다.</p>
-
-<p>다음과 같이 AndroidManifest.xml에서 해당 Activity의 cofigChanges attribute에 명시해줘야 한다.</p>
-
-<pre><code>          
-&lt;activity
-              
-android:name=&quot;.MainActivity&quot;
-              
-android:configChanges=&quot;orientation|screenSize&quot;
-  
-</code></pre>
-
-<p>2) 상세한 방향 전환을 감지할 필요가 있는 경우</p>
-
-<p>orientation의 값을 정밀하게 제어할 필요가 있는 경우 OrientationListener를 사용한다.</p>
-
-<pre><code class="language-java">  
-OrientationEventListener orientationListener = new OrientationEventListener(context, SensorManager.SENSOR\_DELAY\_UI) {
-          
-public void onOrientationChanged(int orientation) {
-          
-}
-      
-};
-
-if (orientationListener.canDetectOrientation()) {
-      
-orientationListener.enable();
-  
-}
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/orientation/">#orientation</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-04T00:00:00Z">
-            4 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-
-	<nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/posts/page/9/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 10 of 20</span>
-	
-	    <a class="older-posts" href="/posts/page/11/">Older Posts &rarr;</a>
-	
-</nav>
-
-</main>
-
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
     </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
 
-</body>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
 

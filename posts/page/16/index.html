@@ -1,1265 +1,425 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/posts/index.xml">
 
-  	<meta property="og:title" content=" Posts &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/posts/" />
+<link rel="canonical" href="https://jeidee.github.io/posts/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Posts - Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
     
     
-    <meta property="og:type" content="website" />
     
 
-  <title>
-     Posts &middot;  Erlang &amp; Go
-  </title>
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
 
-    <meta name="description" content="" />
+          
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-        <link href="https://jeidee.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Posts &middot; Erlang &amp; Go" />
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/posts/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
-</head>
-<body class="nav-closed">
-
-  
-
-
- <div class="site-wrapper">
-
-
-
-
-	<header class="main-header tag-head no-cover">
-
-    <nav class="main-nav overlay clearfix">
-      
-      
-        
-          <a class="menu-button icon-feed" href="https://jeidee.github.io/posts/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
         </div>
-</div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
+      </nav>
+    </header>
 
-<main id="content" class="content" role="main">
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+    <header class="page-header">
+      <h1>Posts</h1>
+    </header>
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/posts/page/15/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 16 of 20</span>
-	
-	    <a class="older-posts" href="/posts/page/17/">Older Posts &rarr;</a>
-	
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-28T00:00:00JST">Jan 28, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0/">node.js &#43; express &#43; swig &#43; bootstrap 사용하기</a></h2>
+  </header>
+
+  
+  <div class="summary">booststrap 설치 bower를 사용해서 설치하기로 한다.
+그 외의 설치방법은 한글 booststrap 사이트를 참고하자.
+먼저 node.js와 express로 app 프로젝트가 생성되었다고 가정한다.
+생성된 app 프로젝트의 root에서 다음과 같이 실행한다.
+ $ cd public $ bower install bootstrap  위와 같이 bootstrap을 설치하면 public/bower_components 하위에 bootstrap과 jquery가 설치된다.
+express + swig에 bootstrap 적용 views/layout.html파일을 다음과 같이 만든다.
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;UP Messenger&lt;/title&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;!&amp;#8211; 부트스트랩 &amp;#8211;&gt; &lt;link href=&quot;/bower_components/bootstrap/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt; &lt;!</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0/" title="node.js &#43; express &#43; swig &#43; bootstrap 사용하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/ejabberd-bosheba5bc-httpseba19c-ec84a4eca095ed9598eab8b0/">ejabberd bosh를 https로 설정하기</a></h2>
+  </header>
+
+  
+  <div class="summary">ejabberd에서 bosh를 설정하기 위해서는 다음과 같이 ejabberd.yml에서 ejabberd_http 모듈을 설정해야 한다.
+ &amp;#8211; port: 5280 module: ejabberd_http request_handlers: &quot;/hello&quot;: mod\_http\_hello &quot;/api&quot;: mod\_http\_api web_admin: true http_poll: true http_bind: true \## register: true captcha: true  위와 같이 설정할 경우 admin, api, bosh가 모두 http://localhost:5280 하에서 동작하게 되는데 https로 설정하기 위해서는 다음과 같이 5223 tls 설정과 유사하게 설정하면 된다.
+ &amp;#8211; port: 5281 module: ejabberd_http certfile: &quot;/path/to/server.pem&quot; tls: true http_bind: true  주의할 것은 tls 설정항목이 starttls가 아니라 tls라는 것이다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/ejabberd-bosheba5bc-httpseba19c-ec84a4eca095ed9598eab8b0/" title="ejabberd bosh를 https로 설정하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/git-proxy-ec82acec9aa9ed9598eab8b0/">git proxy 사용하기</a></h2>
+  </header>
+
+  
+  <div class="summary">git proxy 설정 corkscrew 사용할 경우 먼저 git proxy를 사용하기 위해 corkscrew를 설치한다.
+ $ sudo apt-get install corkscrew  그리고 proxy shell 스크립트를 다음과 같이 생성한다.
+ $ vi ~/git-proxy.sh  git-proxy.sh 파일을 다음과 같이 작성하고
+ #!/bin/bash /usr/bin/corkscrew proxyIP proxyPort $1 $2  git-proxy.sh파일에 실행권한을 준다.
+ $ chmod u+x ~/git-proxy.sh  마지막으로 다음과 같이 gitconfig를 수정한다.
+ $ vi ~/.gitconfig [core] gitproxy=&quot;~/git-proxy.sh&quot;  ~부분은 절대경로로 수정한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/git-proxy-ec82acec9aa9ed9598eab8b0/" title="git proxy 사용하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/jade-include/">jade include</a></h2>
+  </header>
+
+  
+  <div class="summary">jade에서 jade, html, css, js 등의 외부 파일을 jade파일 안에 포함시키고 싶을 경우 다음과 같이 include를 사용하면 된다.
+ include test.html  문제는 test.html을 변수명으로 입력 받을 수 있는 방법을 찾을 수가 없어서 다음과 같이 처리할 수 밖에 없었다.(추후에 방법을 찾을 경우 내용 갱신 필요)
+ extends layout block content case menu when 'menu1' include menu1.html when 'menu2' include menu2.html default include default.html  jade는 탭을 사용하지 않으므로 들여쓰기는 공백 2문자로 처리하는 것이 좋다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/jade-include/" title="jade include">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/mysql-root-eab384eca095-ecb488eab8b0ed9994/">mysql root 계정 초기화</a></h2>
+  </header>
+
+  
+  <div class="summary">mysql root 계정의 패스워드를 분실했을 경우 다음 절차를 따라 root 계정의 패스워드를 변경할 수 있다.
+ $ service mysql stop $ mysqld\_safe &amp;#8211;skip\_grant &amp; $ mysql mysql&gt; use mysql; mysql&gt; update user set password=password('root') where user='root'; mysql&gt; flush privileges;  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/mysql-root-eab384eca095-ecb488eab8b0ed9994/" title="mysql root 계정 초기화">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/node-js-expresseba19c-rest-api-eab5aced9884ed9598eab8b0/">node.js express로 rest api 구현하기</a></h2>
+  </header>
+
+  
+  <div class="summary">express의 url 라우팅 처리 방식 살펴보기 express로 프로젝트를 생성 후 app.js를 열어 보자.
+소스에서 다음과 같은 내용을 찾는다.
+var routes = require('./routes/index'); var users = require('./routes/users'); &amp;#8230; app.use('/', routes); app.use('/users', users);  먼저 24라인은 html view engine과 관계가 있으므로 스킵하고 25라인을 살펴보자.
+25번 라인이 의미하는 바는 다음과 같다.
+ http://localhost:3000/users 이하 url이 입력되면 users object에서 처리한다.  users object는 9번 라인에서 ./routes/users(.js) 모듈에서 가져왔는데, 해당 모듈의 소스는 다음과 같다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/node-js-expresseba19c-rest-api-eab5aced9884ed9598eab8b0/" title="node.js express로 rest api 구현하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0/">node.js express에서 swig view engine 사용하기</a></h2>
+  </header>
+
+  
+  <div class="summary">express view engine으로 swig를 사용해 보자.
+express로 웹앱의 기본 골격 프로젝트를 생성했다고 가정한다.
+package.json에 다음과 같이 dependencies 모듈을 추가해 준다.
+ &quot;swig&quot;: &quot;1.4.2&quot;  app.js에 다음 코드를 추가한다.
+var swig = require('swig');  app.js에서 view engine 관련된 코드를 다음과 같이 수정한다.
+// view engine setup //app.set('views', path.join(__dirname, 'views')); //app.set('view engine', 'jade'); app.set('view engine', 'html'); app.set('views', __dirname + '/views'); app.engine('.html', swig.renderFile);  cache를 false로 하지 않으면 template html을 수정해도 cache된 template html을 사용하므로 다음과 같이 cache를 false로 설정한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0/" title="node.js express에서 swig view engine 사용하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/node-js-osxec9790ec849c-stanza-io-installed95a0-eb958c-hashlib-eab480eba0a8-ec9790eb9fac/">node.js osx에서 stanza.io install할 때 hashlib 관련 에러</a></h2>
+  </header>
+
+  
+  <div class="summary">다음과 같이 openssl을 upgrade하고 링크를 다시 생성한다.
+ brew install &amp;#8211;upgrade openssl brew unlink openssl &amp;&amp; brew link openssl &amp;#8211;force  에러가 발생하는 이유는 macport와 brew의 install 경로가 다음과 같이 다르기 때문이다.
+ macport : /opt/local brew : /usr/local  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/node-js-osxec9790ec849c-stanza-io-installed95a0-eb958c-hashlib-eab480eba0a8-ec9790eb9fac/" title="node.js osx에서 stanza.io install할 때 hashlib 관련 에러">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/node-jseba19c-https-ec9bb9ec849cebb284-eba78ceb93a4eab8b0/">node.js로 https 웹서버 만들기</a></h2>
+  </header>
+
+  
+  <div class="summary">다음 문서를 참고했습니다.
+http://blog.saltfactory.net/221
+준비 openssl이 설치되어 있고 ubuntu에서 작업한다고 가정합니다.
+설치되어 있지 않을 경우 다음과 같이 설치합니다.
+ sudo apt-get install openssl  개인키를 생성합니다.
+ openssl genrsa 1024 &gt; key.pem  만들어진 개인키를 사용해 cert 인증서 파일을 생성합니다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/node-jseba19c-https-ec9bb9ec849cebb284-eba78ceb93a4eab8b0/" title="node.js로 https 웹서버 만들기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/node-jsec9980-express/">node.js와 express</a></h2>
+  </header>
+
+  
+  <div class="summary">ubuntu에서 node.js의 express를 사용해 rest api와 webapp을 구현해 본다.
+개발환경  os: ubuntu 14.10 node: v0.10.33 express: 4.0.0  express 설치  $ sudo npm install -g express $ sudo apt-get install node-express-generator  express app 생성  $ express hello $ cd hello $ npm install  npm install을 실행하면 의존성 패키지가 설치된다.
+이렇게 하면 기본 express webapp이 생성된 상태인데, 다음과 같이 확인해 볼 수 있다.
+ $ npm start  디버그 메세지를 확인하고 싶다면 npm start 전에 다음과 같이 입력한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/node-jsec9980-express/" title="node.js와 express">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li><a href="/posts/page/15/">Previous</a></li>
+    
+
+    
+    <li><a href="/posts/page/17/">Next</a></li>
+    
+
+  </ul>
 </nav>
 
-	</div>
 
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0/">node.js &#43; express &#43; swig &#43; bootstrap 사용하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
 
-<h2 id="booststrap-설치">booststrap 설치</h2>
-
-<p>bower를 사용해서 설치하기로 한다.</p>
-
-<p>그 외의 설치방법은 <a href="http://bootstrapk.com/BS3/getting-started">한글 booststrap</a> 사이트를 참고하자.</p>
-
-<p>먼저 node.js와 express로 app 프로젝트가 생성되었다고 가정한다.</p>
-
-<p>생성된 app 프로젝트의 root에서 다음과 같이 실행한다.</p>
-
-<pre><code>      
-$ cd public
-      
-$ bower install bootstrap
-  
-</code></pre>
-
-<p>위와 같이 bootstrap을 설치하면 public/bower_components 하위에 bootstrap과 jquery가 설치된다.</p>
-
-<h2 id="express-swig에-bootstrap-적용">express + swig에 bootstrap 적용</h2>
-
-<p>views/layout.html파일을 다음과 같이 만든다.</p>
-
-<pre><code class="language-html">      
-&lt;!DOCTYPE html&gt;
-      
-&lt;html&gt;
-      
-&lt;head&gt;
-          
-&lt;title&gt;UP Messenger&lt;/title&gt;
-          
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-          
-&lt;!&amp;#8211; 부트스트랩 &amp;#8211;&gt;
-          
-&lt;link href=&quot;/bower_components/bootstrap/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
-          
-&lt;!&amp;#8211; jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요한) &amp;#8211;&gt;
-          
-&lt;script src=&quot;/bower_components/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;
-          
-&lt;!&amp;#8211; 모든 합쳐진 플러그인을 포함하거나 (아래) 필요한 각각의 파일들을 포함하세요 &amp;#8211;&gt;
-          
-&lt;script src=&quot;/bower_components/bootstrap/dist/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;!&amp;#8211; Respond.js 으로 IE8 에서 반응형 기능을 활성화하세요 (https://github.com/scottjehl/Respond) &amp;#8211;&gt;
-          
-&lt;script src=&quot;/bower_components/bootstrap/dist/js/respond.js&quot;&gt;&lt;/script&gt;
-          
-&lt;style&gt;
-              
-/\* Move down content because we have a fixed navbar that is 50px tall \*/
-              
-body {
-                  
-padding-top: 50px;
-                  
-padding-bottom: 20px;
-              
-}
-          
-&lt;/style&gt;
-      
-&lt;/head&gt;
-      
-&lt;body&gt;
-      
-&lt;div class=&quot;container&quot;&gt;
-
-{&amp;#37; block content &amp;#37;}
-          
-{&amp;#37; endblock &amp;#37;}
-
-&lt;hr&gt;
-
-&lt;footer&gt;
-              
-&lt;p&gt;&amp;copy; Company, 2015&lt;/p&gt;
-          
-&lt;/footer&gt;
-      
-&lt;/div&gt; &lt;!&amp;#8211; /container &amp;#8211;&gt;
-
-&lt;/body&gt;
-      
-&lt;/html&gt;
-  
-</code></pre>
-
-<p>views/index.html을 다음과 같이 만든다.</p>
-
-<pre><code class="language-html">{&amp;#37; extends 'layout.html' &amp;#37;}
-
-{&amp;#37; block content &amp;#37;}
-      
-&lt;h4&gt;{ { title }}!&lt;/h4&gt;
-
-{&amp;#37; endblock &amp;#37;}
-</code></pre>
-
-<p>routes/index.js를 다음과 같이 수정한다.</p>
-
-<pre><code class="language-javascript">      
-/\* GET home page. \*/
-      
-router.get('/', function(req, res, next) {
-        
-res.render('index', { title: 'Express' });
-      
-});
-  
-</code></pre>
-
-<p>app.js이하 swig 관련 설정은 <a href="https://erlnote.wordpress.com/2015/01/22/node-js-express%EC%97%90%EC%84%9C-swig-view-engine-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/">EXPRESS에서 swig view engine 사용하기</a>를 보고 수정하도록 한다.</p>
-
-<h2 id="reference">Reference</h2>
-
-<ul>
-<li><a href="http://www.w3schools.com/bootstrap/">w2schoool bootstrap</a></li>
-<li><a href="https://erlnote.wordpress.com/2015/01/22/node-js-express%EC%97%90%EC%84%9C-swig-view-engine-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/">EXPRESS에서 swig view engine 사용하기</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/bootstrap/">#bootstrap</a>,
-            
-                <a href="https://jeidee.github.iotags/express/">#express</a>,
-            
-                <a href="https://jeidee.github.iotags/swig/">#swig</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-28T00:00:00Z">
-            28 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/ejabberd-bosheba5bc-httpseba19c-ec84a4eca095ed9598eab8b0/">ejabberd bosh를 https로 설정하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>ejabberd에서 bosh를 설정하기 위해서는 다음과 같이 ejabberd.yml에서 ejabberd_http 모듈을 설정해야 한다.</p>
-
-<pre><code>  
-&amp;#8211;
+  </div>
+  <div class="col-md-4">
     
-port: 5280
-    
-module: ejabberd_http
-    
-request_handlers:
-      
-&quot;/hello&quot;: mod\_http\_hello
-      
-&quot;/api&quot;: mod\_http\_api
-    
-web_admin: true
-    
-http_poll: true
-    
-http_bind: true
-    
-\## register: true
-    
-captcha: true
-  
-</code></pre>
-
-<p>위와 같이 설정할 경우 admin, api, bosh가 모두 <a href="http://localhost:5280">http://localhost:5280</a> 하에서 동작하게 되는데 https로 설정하기 위해서는 다음과 같이 5223 tls 설정과 유사하게 설정하면 된다.</p>
-
-<pre><code>  
-&amp;#8211;
-    
-port: 5281
-    
-module: ejabberd_http
-    
-certfile: &quot;/path/to/server.pem&quot;
-    
-tls: true
-    
-http_bind: true
-  
-</code></pre>
-
-<p>주의할 것은 tls 설정항목이 starttls가 아니라 tls라는 것이다. 5223 tls 설정에서는 starttls: true라고 설정해야 하지만 https를 위해서는 tls: true로 설정해야 한다.</p>
-
-<p>위와 같이 설정한 후 bosh를 지원하는 xmpp client에서 다음과 같이 boshurl을 설정한 후 로그인할 수 있다.</p>
-
-<pre><code>      
-https://localhost:5281/http-bind
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/bosh/">#bosh</a>,
-            
-                <a href="https://jeidee.github.iotags/https/">#https</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/git-proxy-ec82acec9aa9ed9598eab8b0/">git proxy 사용하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="git-proxy-설정">git proxy 설정</h2>
-
-<h3 id="corkscrew-사용할-경우">corkscrew 사용할 경우</h3>
-
-<p>먼저 git proxy를 사용하기 위해 corkscrew를 설치한다.</p>
-
-<pre><code>      
-$ sudo apt-get install corkscrew
-  
-</code></pre>
-
-<p>그리고 proxy shell 스크립트를 다음과 같이 생성한다.</p>
-
-<pre><code>      
-$ vi ~/git-proxy.sh
-  
-</code></pre>
-
-<p>git-proxy.sh 파일을 다음과 같이 작성하고</p>
-
-<pre><code>      
-#!/bin/bash
-      
-/usr/bin/corkscrew proxyIP proxyPort $1 $2
-  
-</code></pre>
-
-<p>git-proxy.sh파일에 실행권한을 준다.</p>
-
-<pre><code>      
-$ chmod u+x ~/git-proxy.sh
-  
-</code></pre>
-
-<p>마지막으로 다음과 같이 gitconfig를 수정한다.</p>
-
-<pre><code>      
-$ vi ~/.gitconfig
-
-[core]
-        
-gitproxy=&quot;~/git-proxy.sh&quot;
-  
-</code></pre>
-
-<p>~부분은 절대경로로 수정한다.</p>
-
-<p>git http proxy 설정</p>
-
-<p>다음과 같이 설정을 진행하면 된다.</p>
-
-<pre><code>      
-git config &amp;#8211;global http.proxy 192.168.0.1:8080
-  
-</code></pre>
-
-<h3 id="socat-사용할-경우-centos에서">socat 사용할 경우(centos에서)</h3>
-
-<p>1) epel repo를 설치한다.</p>
-
-<pre><code>   
-rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-   
-yum update
-  
-</code></pre>
-
-<p>2) socat을 설치한다.</p>
-
-<pre><code>   
-yum install socat
-  
-</code></pre>
-
-<p>3) gitproxy 쉘 스크립트를 다음과 같이 작성한다.</p>
-
-<pre><code>  
-#!/bin/sh
-  
-\# Use socat to proxy git through an HTTP CONNECT firewall.
-  
-\# Useful if you are trying to clone git:// from inside a company.
-  
-\# Requires that the proxy allows CONNECT to port 9418.
-  
-#
-  
-\# Save this file as gitproxy somewhere in your path (e.g., ~/bin) and then run
-  
-\# chmod +x gitproxy
-  
-\# git config &amp;#8211;global core.gitproxy gitproxy
-  
-#
-  
-\# More details at http://tinyurl.com/8xvpny
-  
-\# Configuration. Common proxy ports are 3128, 8123, 8000.
-
-_proxy=192.168.x.x
-  
-_proxyport=xxxx
-
-#DEBUG=&quot;-d -d -d -d&quot;
-  
-exec /usr/bin/socat $DEBUG &amp;#8211; PROXY:$\_proxy:$1:$2,proxyport=$\_proxyport
-  
-</code></pre>
-
-<p>4) ~/.gitconfig를 다음과 같이 수정한다.</p>
-
-<pre><code>  
-[http]
-          
-proxy = 192.168.x.x:xxxx
-  
-[https]
-          
-proxy = 192.168.x.x:xxxx
-  
-[ssh]
-          
-proxy = 192.168.x.x:xxxx
-  
-[core]
-          
-gitproxy = /root/gitproxy
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/git/">#git</a>,
-            
-                <a href="https://jeidee.github.iotags/proxy/">#proxy</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/jade-include/">jade include</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>jade에서 jade, html, css, js 등의 외부 파일을 jade파일 안에 포함시키고 싶을 경우 다음과 같이 include를 사용하면 된다.</p>
-
-<pre><code>      
-include test.html
-  
-</code></pre>
-
-<p>문제는 test.html을 변수명으로 입력 받을 수 있는 방법을 찾을 수가 없어서 다음과 같이 처리할 수 밖에 없었다.(추후에 방법을 찾을 경우 내용 갱신 필요)</p>
-
-<pre><code>      
-extends layout
-      
-block content
-          
-case menu
-              
-when 'menu1'
-                  
-include menu1.html
-              
-when 'menu2'
-                  
-include menu2.html
-              
-default
-                  
-include default.html
-  
-</code></pre>
-
-<p>jade는 탭을 사용하지 않으므로 들여쓰기는 공백 2문자로 처리하는 것이 좋다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/jade/">#jade</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/mysql-root-eab384eca095-ecb488eab8b0ed9994/">mysql root 계정 초기화</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>mysql root 계정의 패스워드를 분실했을 경우 다음 절차를 따라 root 계정의 패스워드를 변경할 수 있다.</p>
-
-<pre><code>      
-$ service mysql stop
-      
-$ mysqld\_safe &amp;#8211;skip\_grant &amp;
-      
-$ mysql
-      
-mysql&gt; use mysql;
-      
-mysql&gt; update user set password=password('root') where user='root';
-      
-mysql&gt; flush privileges;
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/mysql/">#mysql</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/node-js-expresseba19c-rest-api-eab5aced9884ed9598eab8b0/">node.js express로 rest api 구현하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="express의-url-라우팅-처리-방식-살펴보기">express의 url 라우팅 처리 방식 살펴보기</h2>
-
-<p>express로 프로젝트를 생성 후 app.js를 열어 보자.</p>
-
-<p>소스에서 다음과 같은 내용을 찾는다.</p>
-
-<pre><code class="language-javascript">       
-var routes = require('./routes/index');
-       
-var users = require('./routes/users');
-      
-&amp;#8230;
-       
-app.use('/', routes);
-       
-app.use('/users', users);
-  
-</code></pre>
-
-<p>먼저 24라인은 html view engine과 관계가 있으므로 스킵하고 25라인을 살펴보자.</p>
-
-<p>25번 라인이 의미하는 바는 다음과 같다.</p>
-
-<ul>
-<li><a href="http://localhost:3000/users">http://localhost:3000/users</a> 이하 url이 입력되면 users object에서 처리한다.</li>
-</ul>
-
-<p>users object는 9번 라인에서 ./routes/users(.js) 모듈에서 가져왔는데, 해당 모듈의 소스는 다음과 같다.</p>
-
-<pre><code class="language-javascript">        
-var express = require('express');
-        
-var router = express.Router();
-
-/\* GET users listing. \*/
-        
-router.get('/', function(req, res) {
-          
-res.send('respond with a resource');
-        
-});
-
-module.exports = router;
-  
-</code></pre>
-
-<p>app.js의 users object는 users.js에서 export한 router object인데 해당 object는 express.Router이다.</p>
-
-<p>클라이언트의 웹브라우저에서 http의 get method로 <a href="http://localhost:3000/users/">http://localhost:3000/users/</a> url을 요청할 경우 router.get(&#8216;/&#8217;, &#8230;) 콜백함수가 호출되는데, 이 함수 안에서는 http response로 res.send(&#8216;&#8230;.&#8217;)를 사용하고 있다.</p>
-
-<p>send함수는 매개변수 문자열을 클라이언트 웹브라우저에 돌려주고, 웹브라우저는 해당 문자열을 화면에 출력한다.</p>
-
-<p>REST와 RESTful, 그리고 REST(ful) API에 대한 명확한 의미는 wiki나 다음 링크를 참고하자.</p>
-
-<p><a href="http://blog.remotty.com/blog/2014/01/28/lets-study-rest/">http://blog.remotty.com/blog/2014/01/28/lets-study-rest/</a></p>
-
-<p>위 링크에서 중요하다고 생각되는 부분을 추리면 다음과 같다.</p>
-
-<ul>
-<li>URI는 다음과 같이 사용
-
-<ul>
-<li>대소문자를 구별하는 것을 알고 가급적이면 소문자만을 사용한다.</li>
-<li>공백대신 하이픈(-)이나 밑줄(_)을 사용해 구분한다.</li>
-<li>확장자 대신 http header의 Accpet를 사용한다.</li>
-<li>URI에 CRUD를 명시하지 말고 http method를 사용한다.</li>
-</ul></li>
-<li>http method는 다음과 같다.
-
-<ul>
-<li>POST: 등록</li>
-<li>GET: 조회</li>
-<li>PUT: 수정, or <a href="http://weblog.rubyonrails.org/2012/2/26/edge-rails-patch-is-the-new-primary-http-method-for-updates/">PATCH</a></li>
-<li>DELETE: 삭제</li>
-</ul></li>
-</ul>
-
-<p>일단은 이정도만 숙지하고 rest api(본래는 RESTful API이지만 작성의 편의상 이와 같이 사용하도록 함)를 구현해 보자.</p>
-
-<h2 id="rest-api-구현">rest api 구현</h2>
-
-<p>app.js에 다음과 같이 추가한다.</p>
-
-<pre><code class="language-javascript">       
-var routes = require('./routes/index');
-       
-var users = require('./routes/users');
-       
-var apis = require('./routes/apis');
-       
-&amp;#8230;
-       
-app.use('/', routes);
-       
-app.use('/users', users);
-       
-app.use('/api', apis);
-  
-</code></pre>
-
-<p>추가한 라인은 10번과 27번 라인이다.</p>
-
-<p>그런 후 users.js를 복사해 apis.js를 하나 생성한다.</p>
-
-<pre><code>      
-$ cp routes/users.js apis.js
-  
-</code></pre>
-
-<p>apis.js를 열어 다음과 같이 수정한다.</p>
-
-<pre><code class="language-javascript">       
-var express = require('express');
-       
-var debug = require('debug')('my-application');
-       
-var url = require('url');
-       
-var router = express.Router();
-
-/\* GET users listing. \*/
-       
-router.get('/', function(req, res) {
-         
-var query = url.parse(req.url, true).query;
-         
-debug('get query = ', query)
-         
-res.send(query);
-       
-});
-
-router.get('/session', function(req, res) {
-         
-var query = url.parse(req.url, true).query;
-         
-debug('get query = ', query)
-         
-res.send(query);
-       
-});
-
-router.get('/session/list', function(req, res) {
-         
-var query = url.parse(req.url, true).query;
-         
-debug('get query = ', query)
-         
-res.send(query);
-       
-});
-
-module.exports = router;
-  
-</code></pre>
-
-<p>꽤 많은 라인을 추가했는데, 우선 테스트해 보기 전에 url 패키지를 설치해야 한다.</p>
-
-<p>다음과 같이 package.json을 열어 의존성 패키지 목록에 url 패키지를 추가하자.(16번 라인)</p>
-
-<pre><code>       
-{
-         
-&quot;name&quot;: &quot;application-name&quot;,
-         
-&quot;version&quot;: &quot;0.0.1&quot;,
-         
-&quot;private&quot;: true,
-         
-&quot;scripts&quot;: {
-           
-&quot;start&quot;: &quot;./bin/www&quot;
-         
-},
-         
-&quot;dependencies&quot;: {
-           
-&quot;express&quot;: &quot;~4.0.0&quot;,
-           
-&quot;static-favicon&quot;: &quot;~1.0.0&quot;,
-           
-&quot;morgan&quot;: &quot;~1.0.0&quot;,
-           
-&quot;cookie-parser&quot;: &quot;~1.0.1&quot;,
-           
-&quot;body-parser&quot;: &quot;~1.0.0&quot;,
-           
-&quot;debug&quot;: &quot;~0.7.4&quot;,
-           
-&quot;jade&quot;: &quot;~1.3.0&quot;,
-           
-&quot;url&quot;: &quot;*&quot;
-         
-}
-  
-</code></pre>
-
-<p>그런 후 프로젝트의 루트 디렉토리에서 다음과 같이 입력해 새로운 패키지를 설치한다.</p>
-
-<pre><code>      
-$ sudo npm install
-  
-</code></pre>
-
-<p>그런 후 app을 실행한다.</p>
-
-<pre><code>      
-$ npm start
-  
-</code></pre>
-
-<p>웹브라우저에서 다음 url을 각각 입력해 결과를 확인한다.</p>
-
-<p><a href="http://localhost:3000/api">http://localhost:3000/api</a></p>
-
-<p><a href="http://localhost:3000/api/session">http://localhost:3000/api/session</a></p>
-
-<p><a href="http://localhost:3000/api/session?hello=you&amp;world=me">http://localhost:3000/api/session?hello=you&amp;world=me</a></p>
-
-<p><a href="http://localhost:3000/api/session/list">http://localhost:3000/api/session/list</a></p>
-
-<p><a href="http://localhost:3000/api/session/list?hello=you&amp;world=me">http://localhost:3000/api/session/list?hello=you&amp;world=me</a></p>
-
-<p>마직막 링크의 결과가 다음과 같이 출력되면 잘 진행하고 있는 것이다.</p>
-
-<pre><code>      
-{
-          
-hello: &quot;you&quot;,
-          
-world: &quot;me&quot;
-      
-}
-  
-</code></pre>
-
-<p>이제 각자의 상황에 맞게 post, put, delete를 구현하면 된다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/express/">#express</a>,
-            
-                <a href="https://jeidee.github.iotags/rest-api/">#rest api</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0/">node.js express에서 swig view engine 사용하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>express view engine으로 swig를 사용해 보자.</p>
-
-<p>express로 웹앱의 기본 골격 프로젝트를 생성했다고 가정한다.</p>
-
-<p>package.json에 다음과 같이 dependencies 모듈을 추가해 준다.</p>
-
-<pre><code>      
-&quot;swig&quot;: &quot;1.4.2&quot;
-  
-</code></pre>
-
-<p>app.js에 다음 코드를 추가한다.</p>
-
-<pre><code class="language-javascript">      
-var swig = require('swig');
-  
-</code></pre>
-
-<p>app.js에서 view engine 관련된 코드를 다음과 같이 수정한다.</p>
-
-<pre><code class="language-javascript">      
-// view engine setup
-      
-//app.set('views', path.join(__dirname, 'views'));
-      
-//app.set('view engine', 'jade');
-      
-app.set('view engine', 'html');
-      
-app.set('views', __dirname + '/views');
-      
-app.engine('.html', swig.renderFile);
-  
-</code></pre>
-
-<p>cache를 false로 하지 않으면 template html을 수정해도 cache된 template html을 사용하므로 다음과 같이 cache를 false로 설정한다.</p>
-
-<pre><code class="language-javascript">      
-// Swig will cache templates for you, but you can disable
-      
-// that and use Express's caching instead, if you like:
-      
-app.set('view cache', false);
-      
-// To disable Swig's cache, do the following:
-      
-swig.setDefaults({ cache: false });
-  
-</code></pre>
-
-<p>/test url이 get으로 요청되었을 때 test.html 템플릿에 변수를 넘겨 html을 렌더링하는 코드는 다음과 같다.</p>
-
-<pre><code class="language-javascript">      
-app.get('/test', function (req, res) {
-          
-res.render('test', {
-              
-name: 'John Doe',
-              
-fruits: ['Apple', 'Orange', 'Banana']
-          
-});
-      
-});
-  
-</code></pre>
-
-<p>test.html 템플릿은 다음과 같이 작성해 보자.</p>
-
-<pre><code class="language-html">      
-{&amp;#37; extends 'layout.html' &amp;#37;}
-
-{&amp;#37; block content &amp;#37;}
-      
-&lt;h4&gt;Hello { { name }}!&lt;/h4&gt;
-      
-&lt;p&gt;Your fruits are below:&lt;/p&gt;
-      
-&lt;ul&gt;
-          
-{&amp;#37; for fruit in fruits &amp;#37;}
-          
-&lt;li class=&quot;first&quot; endif=&quot;&quot; if=&quot;&quot; loop.first=&quot;&quot;&gt;
-          
-{ { fruit }}
-          
-&lt;/li&gt;
-          
-{&amp;#37; endfor &amp;#37;}
-      
-&lt;/ul&gt;
-      
-{&amp;#37; endblock &amp;#37;}
-  
-</code></pre>
-
-<p>제대로 출력하기 위해서는 layout.html이 필요한데 다음과 같다.</p>
-
-<pre><code class="language-html">      
-&lt;h3&gt;My Site&lt;/h3&gt;
-      
-{&amp;#37; block content &amp;#37;}
-      
-Welcome
-      
-{&amp;#37; endblock &amp;#37;}
-  
-</code></pre>
-
-<p>즉, swig는 layout을 지원한다.</p>
-
-<h2 id="references">references</h2>
-
-<ul>
-<li><a href="http://paularmstrong.github.io/swig/">http://paularmstrong.github.io/swig/</a></li>
-<li><a href="http://paularmstrong.github.io/swig/docs/#express">http://paularmstrong.github.io/swig/docs/#express</a></li>
-<li><a href="http://xgunheex.blogspot.kr/2014/01/var-publicdir.html">http://xgunheex.blogspot.kr/2014/01/var-publicdir.html</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/express/">#express</a>,
-            
-                <a href="https://jeidee.github.iotags/swig/">#swig</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/node-js-osxec9790ec849c-stanza-io-installed95a0-eb958c-hashlib-eab480eba0a8-ec9790eb9fac/">node.js osx에서 stanza.io install할 때 hashlib 관련 에러</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>다음과 같이 openssl을 upgrade하고 링크를 다시 생성한다.</p>
-
-<pre><code>      
-brew install &amp;#8211;upgrade openssl
-      
-brew unlink openssl &amp;&amp; brew link openssl &amp;#8211;force
-  
-</code></pre>
-
-<p>에러가 발생하는 이유는 macport와 brew의 install 경로가 다음과 같이 다르기 때문이다.</p>
-
-<ul>
-<li>macport : /opt/local</li>
-<li>brew : /usr/local</li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/stanza.io/">#stanza.io</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/node-jseba19c-https-ec9bb9ec849cebb284-eba78ceb93a4eab8b0/">node.js로 https 웹서버 만들기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>다음 문서를 참고했습니다.</p>
-
-<p><a href="http://blog.saltfactory.net/221">http://blog.saltfactory.net/221</a></p>
-
-<h1 id="준비">준비</h1>
-
-<p>openssl이 설치되어 있고 ubuntu에서 작업한다고 가정합니다.</p>
-
-<p>설치되어 있지 않을 경우 다음과 같이 설치합니다.</p>
-
-<pre><code>      
-sudo apt-get install openssl
-  
-</code></pre>
-
-<p>개인키를 생성합니다.</p>
-
-<pre><code>      
-openssl genrsa 1024 &gt; key.pem
-  
-</code></pre>
-
-<p>만들어진 개인키를 사용해 cert 인증서 파일을 생성합니다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/https/">#https</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/node-jsec9980-express/">node.js와 express</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>ubuntu에서 node.js의 express를 사용해 rest api와 webapp을 구현해 본다.</p>
-
-<h2 id="개발환경">개발환경</h2>
-
-<ul>
-<li>os: ubuntu 14.10</li>
-<li>node: v0.10.33</li>
-<li>express: 4.0.0</li>
-</ul>
-
-<h2 id="express-설치">express 설치</h2>
-
-<pre><code>      
-$ sudo npm install -g express
-      
-$ sudo apt-get install node-express-generator
-  
-</code></pre>
-
-<h2 id="express-app-생성">express app 생성</h2>
-
-<pre><code>      
-$ express hello
-      
-$ cd hello
-      
-$ npm install
-  
-</code></pre>
-
-<p>npm install을 실행하면 의존성 패키지가 설치된다.</p>
-
-<p>이렇게 하면 기본 express webapp이 생성된 상태인데, 다음과 같이 확인해 볼 수 있다.</p>
-
-<pre><code>      
-$ npm start
-  
-</code></pre>
-
-<p>디버그 메세지를 확인하고 싶다면 npm start 전에 다음과 같이 입력한다.</p>
-
-<pre><code>      
-$ export DEBUG=my-application
-      
-$ npm start
-
-&gt; application-name@0.0.1 start /home/gss.dev/server/www/msgapi
-      
-&gt; nodejs ./bin/www
-
-my-application Express server listening on port 3000 +0ms
-  
-</code></pre>
-
-<p>브라우저에서 <a href="http://localhost:3000을">http://localhost:3000을</a> 입력해서 다음과 같은 내용이 출력되면 성공이다.</p>
-
-<pre><code>      
-Express
-
-Welcome to Express
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/express/">#express</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-
-	<nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/posts/page/15/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 16 of 20</span>
-	
-	    <a class="older-posts" href="/posts/page/17/">Older Posts &rarr;</a>
-	
-</nav>
-
-</main>
-
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
     </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
 
-</body>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
 

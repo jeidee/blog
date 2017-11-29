@@ -1,1707 +1,414 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/posts/index.xml">
 
-  	<meta property="og:title" content=" Posts &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/posts/" />
+<link rel="canonical" href="https://jeidee.github.io/posts/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Posts - Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
     
     
-    <meta property="og:type" content="website" />
     
 
-  <title>
-     Posts &middot;  Erlang &amp; Go
-  </title>
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
 
-    <meta name="description" content="" />
+          
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-        <link href="https://jeidee.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Posts &middot; Erlang &amp; Go" />
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/posts/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
-</head>
-<body class="nav-closed">
-
-  
-
-
- <div class="site-wrapper">
-
-
-
-
-	<header class="main-header tag-head no-cover">
-
-    <nav class="main-nav overlay clearfix">
-      
-      
-        
-          <a class="menu-button icon-feed" href="https://jeidee.github.io/posts/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
         </div>
-</div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
+      </nav>
+    </header>
 
-<main id="content" class="content" role="main">
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+    <header class="page-header">
+      <h1>Posts</h1>
+    </header>
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/posts/page/16/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 17 of 20</span>
-	
-	    <a class="older-posts" href="/posts/page/18/">Older Posts &rarr;</a>
-	
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/nodejs-https-ec84a4eca095/">nodejs https 설정</a></h2>
+  </header>
+
+  
+  <div class="summary">nodejs에 express사용해서 개발하고 있다면 다음과 같이 처리하면 된다.
+var debug = require('debug')('test_app'); var app = require('../app'); var http = require('http'); var https = require('https'); var fs = require('fs'); //var port = 90; var port2 = 443; //http.createServer(app).listen(port, function() { // debug('http server listening on port' + port); //}); var options = { key: fs.readFileSync('key.pem'), cert: fs.readFileSync('cert.pem') }; https.createServer(options, app).listen(port2, function() { debug('https server listening on port' + port2); });  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/nodejs-https-ec84a4eca095/" title="nodejs https 설정">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/npm-proxy-ec84a4eca095/">npm proxy 설정</a></h2>
+  </header>
+
+  
+  <div class="summary">npm proxy 설정이 필요할 경우 다음과 같이 처리한다.
+ npm config set proxy proxy주소 npm config set https-proxy proxy주소  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/npm-proxy-ec84a4eca095/" title="npm proxy 설정">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/ubuntuec9790ec849c-proxyeba5bc-ec82acec9aa9ed959c-apt-get-ec82acec9aa9/">ubuntu에서 proxy를 사용한 apt-get 사용</a></h2>
+  </header>
+
+  
+  <div class="summary">다음과 같이 proxy 서버를 설정해 준 다음 사용 가능하다.
+ $ sudo vi /etc/apt/apt.conf Acquire::http::Proxy &quot;http://192.168.0.1:8080/&quot;;  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/ubuntuec9790ec849c-proxyeba5bc-ec82acec9aa9ed959c-apt-get-ec82acec9aa9/" title="ubuntu에서 proxy를 사용한 apt-get 사용">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-22T00:00:00JST">Jan 22, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/22/webstormec9790ec849c-node-js-ed9484eba19ceca09ded8ab8-ec839dec84b1-ec8b9c-npm-eaccess-ec9790eb9fac-ebb09cec839d/">webstorm에서 node.js 프로젝트 생성 시 .npm eaccess 에러 발생</a></h2>
+  </header>
+
+  
+  <div class="summary">다음과 같이 .npm 디렉토리의 소유권을 변경한다.
+ $ sudo chown -R Omar ~/.npm  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/22/webstormec9790ec849c-node-js-ed9484eba19ceca09ded8ab8-ec839dec84b1-ec8b9c-npm-eaccess-ec9790eb9fac-ebb09cec839d/" title="webstorm에서 node.js 프로젝트 생성 시 .npm eaccess 에러 발생">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-clustering/">ejabberd clustering</a></h2>
+  </header>
+
+  
+  <div class="summary">process-one 사이트에 명시된 p1-spec 문서는 찾을 수가 없었다.
+대신 install guide에 포함된 clustering guide를 살펴보고 cluster-node를 구축하는 방법을 살펴보도록 한다.
+cluster 구성을 위한 환경 다음과 같이 Virtualbox를 사용해 Windows 7 호스트에 ubuntu 14.10 게스트 OS를 설치해서 클러스터링을 구성한다.
+ 호스트 OS  Windows 7  게스트 OS #1  Ubuntu 14.10 desktop ip: 192.168.56.101 hostname: hello.world ejabberd 역할: slave node  게스트 OS #2  Ubuntu 14.10 desktop ip: 192.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/ejabberd-clustering/" title="ejabberd clustering">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-http-request-handlers/">ejabberd http request handlers</a></h2>
+  </header>
+
+  
+  <div class="summary">ejabberd 모듈 개발 문서 중에 http request handlers 개발 관련해서 간단히 정리해 봅니다.
+튜토리얼 &#8220;/hello&#8221;로 시작하는 URL에 대한 모든 요청을 처리하기 위해 &#8220;mod_http_hello&#8221;를 작성한다고 가정해 봅시다, 다음과 같이:
+ http://localhost:5280/hello/world http://localhost:5280/hello/hedgehog  process/2 함수의 절을 갖는 request 핸들러를 포함하는 &#8220;mod_http_hello.erl&#8221;파일을 작성하는 것으로 시작합니다.
+&#8220;/hello/world&#8221; 요청을 처리하는 예는 다음과 같습니다:
+process(\_LocalPath = [&quot;world&quot;], \_Request) -&gt; {xmlelement, &quot;html&quot;, [{&quot;xmlns&quot;, &quot;http://www.w3.org/1999/xhtml&quot;}], [{xmlelement, &quot;head&quot;, [], [{xmlelement, &quot;title&quot;, [], []}]}, {xmlelement, &quot;body&quot;, [], [{xmlelement, &quot;p&quot;, [], [{xmlcdata, &quot;Hello, world!</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/ejabberd-http-request-handlers/" title="ejabberd http request handlers">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-jabber-search-ec8898eca095ed9598eab8b0/">ejabberd jabber search 수정하기</a></h2>
+  </header>
+
+  
+  <div class="summary">jabber search를 다음과 같이 수정해야 한다고 가정해 본다.
+ like query 가능해야 함 페이징 가능해야 함  우선 페이징이 가능하도록 검색폼과 결과폼을 다음과 같이 수정해야 한다.
+ 검색폼 : page no, page size 필드 추가 결과폼 : 현재 page no, 현재 page size(result count), 결과가 더 있는지 여부(more result) 필드 추가  검색폼 수정 검색폼을 수정하기 위해 ejabberd의 모듈 중에 mod_vcard.erl을 다음과 같이 수정하면 된다.
+-define(FORM(JID), ?TLFIELD(&lt;&lt;&quot;text-single&quot;&gt;&gt;, &lt;&lt;&quot;Organization Unit&quot;&gt;&gt;, &lt;&lt;&quot;orgunit&quot;&gt;&gt;), ?</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/ejabberd-jabber-search-ec8898eca095ed9598eab8b0/" title="ejabberd jabber search 수정하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-eab080eca0b8ec98a4eab8b0/">ejabberd mod_admin_extra 사용해서 vcard 가져오기</a></h2>
+  </header>
+
+  
+  <div class="summary">ejabberd에서는 커스텀 플러그인 모듈을 다음 URL에서 별도로 배포하고 있다.
+https://www.ejabberd.im/ejabberd-modules
+하지만 일부 모듈의 경우 최신 버전에서 사용할 수 없고, 수정된 모듈에서도 이전 버전과 인터페이스 호환이 되지 않아 문제를 일으키는 경우가 있으므로 주의해야 한다.
+mod_admin_extra 모듈을 사용해 ejabberdctl의 get_vcard 코맨드 실행 ejabberd-modules 중에서 mod_ctlextra와 mod_admin_extra 모듈은 ejabberdctl용(관리자 콘솔 코맨드) 확장 코맨드 모듈이다. 둘 중에서 mod_admin_extra가 최신 버전이지만 최신 버전의 ejabberd(현재 기준 14.07)에서 사용되는 gen_mod:get_module_opt/5와 호환되지 않아(mod_admin_extra는 gen_mod:get_module_opt/4를 사용) 일부 코드를 수정해야 한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-eab080eca0b8ec98a4eab8b0/" title="ejabberd mod_admin_extra 사용해서 vcard 가져오기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-ec84a4eca095ed9598eab8b0/">ejabberd mod_admin_extra 사용해서 vcard 설정하기</a></h2>
+  </header>
+
+  
+  <div class="summary">이전 글에서 설명한 vcard 가져오기 관련된 내용 중에 수정할 부분이 있다.
+ejabberd_modules의 경우 최신 버전(현재 14.07)에서는 호환이 안되며 대신 ejabberd_contrib를 사용해야 한다.
+https://www.ejabberd.im/ejabberd-contrib
+ git clone git://github.com/processone/ejabberd-contrib.git  ejabberd-contrib에 포함된 mod_admin_extra는 ejaberd_modules에서 생기는 호환 문제가 해결되어 있으므로 수정할 필요없이 그대로 사용하면 된다.
+설치(mod_admin_extra.erl을 ejabberd/src파일에 복사한 후 make &amp;&amp; make install, ejabberd.yml에 mod_admin_extra 모듈 등록)하고 ejabberd를 재시작한 후 터미널에서 다음과 같이 테스트해 보자.
+ $ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; hello $ ejabberdctl set_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; &quot;world&quot; $ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; world  닉네임이 잘 변경된다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-ec84a4eca095ed9598eab8b0/" title="ejabberd mod_admin_extra 사용해서 vcard 설정하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-mysql-odbc-ec84a4eca095/">ejabberd mysql odbc 설정</a></h2>
+  </header>
+
+  
+  <div class="summary">mysql 설정은 다음과 같이 한다.
+ $ vi /etc/ejabberd/ejabberd.yml auth_method: odbc \## auth_method: internal에서 변경한다. \## MySQL server: ## odbc_type: mysql odbc_server: &quot;localhost&quot; odbc_database: &quot;ejabberd&quot; odbc_username: &quot;ejabberd&quot; odbc_password: &quot;ejabberd&quot;  위와 같이 한 후 모듈별로 db_type을 설정해야 하는데, roster와 vcard를 mysql에 저장하도록 하려면 다음과 같이 ejabberd.yml파일을 수정한다.
+ mod_roster: db_type: odbc mod\_shared\_roster: {} mod_stats: {} mod_time: {} mod_vcard: db_type: odbc  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/ejabberd-mysql-odbc-ec84a4eca095/" title="ejabberd mysql odbc 설정">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li><a href="/posts/page/16/">Previous</a></li>
+    
+
+    
+    <li><a href="/posts/page/18/">Next</a></li>
+    
+
+  </ul>
 </nav>
 
-	</div>
 
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/nodejs-https-ec84a4eca095/">nodejs https 설정</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>nodejs에 express사용해서 개발하고 있다면 다음과 같이 처리하면 된다.</p>
 
-<pre><code class="language-javascript">      
-var debug = require('debug')('test_app');
-      
-var app = require('../app');
-      
-var http = require('http');
-      
-var https = require('https');
-      
-var fs = require('fs');
-
-//var port = 90;
-      
-var port2 = 443;
-
-//http.createServer(app).listen(port, function() {
-      
-// debug('http server listening on port' + port);
-      
-//});
-
-var options = {
-        
-key: fs.readFileSync('key.pem'),
-        
-cert: fs.readFileSync('cert.pem')
-      
-};
-
-https.createServer(options, app).listen(port2, function() {
-        
-debug('https server listening on port' + port2);
-      
-});
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/https/">#https</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/npm-proxy-ec84a4eca095/">npm proxy 설정</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>npm proxy 설정이 필요할 경우 다음과 같이 처리한다.</p>
-
-<pre><code>      
-npm config set proxy proxy주소
-      
-npm config set https-proxy proxy주소
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/proxy/">#proxy</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/ubuntuec9790ec849c-proxyeba5bc-ec82acec9aa9ed959c-apt-get-ec82acec9aa9/">ubuntu에서 proxy를 사용한 apt-get 사용</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>다음과 같이 proxy 서버를 설정해 준 다음 사용 가능하다.</p>
-
-<pre><code>      
-$ sudo vi /etc/apt/apt.conf
-
-Acquire::http::Proxy &quot;http://192.168.0.1:8080/&quot;;
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/proxy/">#proxy</a>,
-            
-                <a href="https://jeidee.github.iotags/ubuntu/">#ubuntu</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/22/webstormec9790ec849c-node-js-ed9484eba19ceca09ded8ab8-ec839dec84b1-ec8b9c-npm-eaccess-ec9790eb9fac-ebb09cec839d/">webstorm에서 node.js 프로젝트 생성 시 .npm eaccess 에러 발생</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>다음과 같이 .npm 디렉토리의 소유권을 변경한다.</p>
-
-<pre><code>      
-$ sudo chown -R Omar ~/.npm
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/webstorm/">#webstorm</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-22T00:00:00Z">
-            22 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/21/ejabberd-clustering/">ejabberd clustering</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>process-one 사이트에 명시된 p1-spec 문서는 찾을 수가 없었다.</p>
-
-<p>대신 install guide에 포함된 clustering guide를 살펴보고 cluster-node를 구축하는 방법을 살펴보도록 한다.</p>
-
-<h3 id="cluster-구성을-위한-환경">cluster 구성을 위한 환경</h3>
-
-<p>다음과 같이 Virtualbox를 사용해 Windows 7 호스트에 ubuntu 14.10 게스트 OS를 설치해서 클러스터링을 구성한다.</p>
-
-<ul>
-<li>호스트 OS
-
-<ul>
-<li>Windows 7</li>
-</ul></li>
-<li>게스트 OS #1
-
-<ul>
-<li>Ubuntu 14.10 desktop</li>
-<li>ip: 192.168.56.101</li>
-<li>hostname: hello.world</li>
-<li>ejabberd 역할: slave node</li>
-</ul></li>
-<li>게스트 OS #2
-
-<ul>
-<li>Ubuntu 14.10 desktop</li>
-<li>ip: 192.168.56.102</li>
-<li>hostname: foo.bar</li>
-<li>ejabberd 역할: master node</li>
-</ul></li>
-</ul>
-
-<p>우선 게스트 OS는 하나만 설치하는 데, 추후 복제를 통해 게스트 OS를 하나 더 생성해야 한다.</p>
-
-<p>이렇게 구성한 후 게스트 OS간 통신을 위해 네트워크 설정을 변경해야 하는데, 다음 링크를 참조한다.</p>
-
-<p><a href="http://erlnote.tumblr.com/post/107265239154/virtualbox">http://erlnote.tumblr.com/post/107265239154/virtualbox</a></p>
-
-<h3 id="hostname-변경">hostname 변경</h3>
-
-<p>long name host를 테스트하기 위해 다음과 같이 hostname을 임의로 변경해 준다.</p>
-
-<h4 id="etc-hosts-수정">/etc/hosts 수정</h4>
-
-<pre><code>      
-127.0.0.1 localhost
-      
-127.0.1.1 vagrant-VirtualBox
-      
-192.168.56.101 hello.world
-  
-</code></pre>
-
-<h4 id="hostname-설정">hostname 설정</h4>
-
-<pre><code>      
-$ hostname hello.world
-  
-</code></pre>
-
-<p>위와 같이 현재 서버의 호스트명을 변경 후 재 로그인한다.</p>
-
-<p>또는 /etc/hostname을 변경해도 되며, 테스트를 위해 nameserver는 127.0.0.1이 되어야 한다.</p>
-
-<p>** /etc/hostname **</p>
-
-<pre><code>        
-1 hello.world
-  
-</code></pre>
-
-<p>** /etc/resolv.conf **</p>
-
-<pre><code>        
-\# Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)
-        
-\# DO NOT EDIT THIS FILE BY HAND &amp;#8212; YOUR CHANGES WILL BE OVERWRITTEN
-        
-nameserver 127.0.1.1
-  
-</code></pre>
-
-<h3 id="ejabberd-설치">ejabberd 설치</h3>
-
-<p>ejabberd를 설치한 후 다음과 같이 설정파일을 변경하도록 한다.</p>
-
-<h4 id="ejabberdctl-cfg-수정">ejabberdctl.cfg 수정</h4>
-
-<p>기본 ejabberd erlang 노드는 ejabberd@localhost이기 때문에 ejabberdctl.cnf를 다음과 같이 수정해서 노드명을 수정해 준다.</p>
-
-<pre><code>      
-\# Default: ejabberd@localhost
-      
-#
-      
-ERLANG_NODE=ejabberd@hello.world
-  
-</code></pre>
-
-<h4 id="ejabberd-yml-수정">ejabberd.yml 수정</h4>
-
-<p><strong>hosts 수정</strong></p>
-
-<pre><code>       
-hosts:
-         
-&amp;#8211; &quot;hello.world&quot;
-         
-&amp;#8211; &quot;localhost&quot;
-  
-</code></pre>
-
-<p><strong>host_config 수정</strong></p>
-
-<p>만약 다른 가상호스트와 다른 인증을 원한다면 다음과 같이 설정을 수정한다.</p>
-
-<pre><code>      
-host_config:
-        
-&quot;hello.world&quot;:
-           
-auth_method:
-             
-&amp;#8211; internal
-  
-</code></pre>
-
-<p><strong>acl 수정</strong></p>
-
-<p>localhost 가상호스트의 admin 계정만 관리권한을 부여하기 위해 다음과 같이 수정한다.</p>
-
-<pre><code>      
-acl:
-        
-##
-        
-\## The 'admin' ACL grants administrative privileges to XMPP accounts.
-        
-\## You can put here as many accounts as you want.
-        
-##
-        
-admin:
-          
-user:
-            
-&amp;#8211; &quot;admin&quot;: &quot;localhost&quot;
-  
-</code></pre>
-
-<h3 id="ejabberd-테스트">ejabberd 테스트</h3>
-
-<p>localhost에 admin 계정을 추가한다.</p>
-
-<pre><code>      
-$ ejabberdctl start
-      
-$ ejabberdctl register admin localhost 1234
-  
-</code></pre>
-
-<p>만약 다음과 같은 에러가 발생할 경우 hostname이 제대로 설정되지 않아서이므로 이 부분을 확인한 후 다시 테스트하도록 한다.</p>
-
-<pre><code>      
-&quot;Can't set long node name!nPlease check your configurationn&quot;
-  
-</code></pre>
-
-<h3 id="게스트-os-복제">게스트 OS 복제</h3>
-
-<p>위와 같이 101서버를 하나 정상적으로 설정했다면 virtualbox에서 복제 기능을 사용해 게스트OS를 복제하도록 하자.</p>
-
-<p>복제된 새로운 게스트 OS의 IP는 192.168.56.102이며 hostname은 foo.bar로 수정한다.</p>
-
-<h3 id="easy-cluster-설정">easy_cluster 설정</h3>
-
-<p><a href="http://chad.ill.ac/post/35967173942/easy-ejabberd-clustering-guide-mnesia-mysql">easy_cluster의 basic 설정</a> 문서를 참고해서 다음과 같이 설정한다.</p>
-
-<h4 id="foo-bar">foo.bar</h4>
-
-<p><strong>ejabberdctrl.cfg</strong></p>
-
-<pre><code>       
-#
-       
-INET\_DIST\_INTERFACE=192.168.56.102
-  
-</code></pre>
-
-<p><strong>/ets/hosts</strong></p>
-
-<pre><code>      
-192.168.56.101 hello.world
-      
-192.168.56.102 foo.bar
-  
-</code></pre>
-
-<h4 id="hello-world">hello.world</h4>
-
-<p><strong>ejabberdctrl.cfg</strong></p>
-
-<pre><code>       
-#
-       
-INET\_DIST\_INTERFACE=192.168.56.101
-  
-</code></pre>
-
-<p><strong>/ets/hosts</strong></p>
-
-<pre><code>      
-192.168.56.101 hello.world
-      
-192.168.56.102 foo.bar
-  
-</code></pre>
-
-<p><strong>easy_cluster.erl</strong></p>
-
-<pre><code>      
-$ git clone https://github.com/chadillac/ejabberd-easy_cluster.git
-      
-$ cd ejabberd-easy_cluster
-      
-$ cp easy_cluster.erl ~/ejabberd/src/
-      
-$ cd ~/ejabberd
-      
-$ make &amp; make install
-  
-</code></pre>
-
-<p>~/ejabberd 경로는 ejabberd의 소스 경로이다.</p>
-
-<p>위와 같이 easy_cluster.erl을 배포한 후에 ejabberdctl start를 한 후 다음과 같이 debug 쉘을 실행한다.</p>
-
-<pre><code>      
-$ ejabberdctl debug
-      
-(ejabberd@hello.world)3&gt; easy\_cluster:test\_node('ejabberd@foo.bar').
-      
-server is reachable.
-      
-ok
-  
-</code></pre>
-
-<p>테스트가 성공하지 않는 경우 foo.bar 서버와 hello.world 서버의 다음 항목을 살펴본다.</p>
-
-<ul>
-<li>erl cookie</li>
-<li>4369 tcp port가 오픈 되어 있는지 확인한다.</li>
-</ul>
-
-<p>그래도 안 될 경우 다음 문서를 참고한다.</p>
-
-<p><a href="http://www.erlang.org/doc/man/epmd.html">http://www.erlang.org/doc/man/epmd.html</a></p>
-
-<p>마지막으로 다음과 같이 foo.bar 노드에 join하도록 한다.</p>
-
-<pre><code>      
-(ejabberd@hello.world)4&gt; easy_cluster:join('ejabberd@foo.bar').
-      
-ok
-  
-</code></pre>
-
-<p>ok가 떨어지면 hello.world 노드가 foo.bar 노드에 연결된 것이다.</p>
-
-<h3 id="easy-cluster-join-의-동작-원리">easy_cluster:join()의 동작 원리</h3>
-
-<p>foo.bar는 master node이고 hello.world는 slave node이다.</p>
-
-<p>master node의 역할은 ejabberd의 mnesia db를 보유한 node이며, slave node는 master node의 mnesia db를 공유하게 된다.</p>
-
-<p>즉, hello.world(salve) node에서 join(&#8216;ejabberd@foo.bar&#8217;)를 하는 순간, 두 노드는 클러스터로 묶이고 DB는 foo.bar(master) node의 것을 사용하게 된다.</p>
-
-<p>join/1 함수를 보면 다음과 같다.</p>
-
-<pre><code class="language-erlang">      
-join(NodeName) -&gt;
-              
-mnesia:stop(),
-              
-mnesia:delete_schema([node()]),
-              
-mnesia:start(),
-              
-mnesia:change\_config(extra\_db_nodes, [NodeName]),
-              
-mnesia:change\_table\_copy\_type(schema, node(), disc\_copies),
-              
-application:stop(ejabberd),
-              
-application:start(ejabberd).
-  
-</code></pre>
-
-<p>현재 노드(hello.world slave node)의 mnesia 스키마를 비우고 change_config/2 함수를 사용해 master node의 mnesia에 클러스터로 연결한다.</p>
-
-<p>mnesia:change_config(extra_db_nodes,&#8230;) 함수를 사용해 클러스터에 조인하려면 현재 노드의 스키마를 비운상태(delete_schema/1)에서 조인해야 한다.</p>
-
-<p>(스키마를 삭제하고 새로 mnesia:start/0를 할 경우 저장 타입은 ram type이 된다.)</p>
-
-<p>master node의 mnesia db에 연결한 후 현재 노드의 스키마 저장 타입을 disc_copies로 변경해 노드가 종료되어도 스키마가 삭제되지 않도록 한다.</p>
-
-<p>그리고 ejabberd 어플리케이션을 재시작하면 ejabberd 클러스터 가입이 완료된다.</p>
-
-<h3 id="slave-노드를-master-노드로-변경">slave 노드를 master 노드로 변경</h3>
-
-<p>만약 hello.world(slave) 노드를 master 노드로 하고 싶은 경우 먼저 master 노드의 mnesia 데이터베이스를 동기화 한 후 join을 완료해야 한다.</p>
-
-<pre><code class="language-erlang">      
-join\_as\_master(NodeName) -&gt;
-              
-application:stop(ejabberd),
-              
-mnesia:stop(),
-              
-mnesia:delete_schema([node()]),
-              
-mnesia:start(),
-              
-mnesia:change\_config(extra\_db_nodes, [NodeName]),
-              
-mnesia:change\_table\_copy\_type(schema, node(), disc\_copies),
-              
-easy\_cluster:sync\_node(NodeName),
-              
-application:start(ejabberd).
-
-sync_node(NodeName) -&gt;
-              
-[{Tb, mnesia:add\_table\_copy(Tb, node(), Type)}
-              
-|| {Tb, [{NodeName, Type}]} &lt;- [{T, mnesia:table\_info(T, where\_to_commit)}
-              
-|| T &lt;- mnesia:system_info(tables)]].
-  
-</code></pre>
-
-<h3 id="개선점">개선점</h3>
-
-<p>다음과 같은 항목을 개선해야 한다.</p>
-
-<ul>
-<li>sync 자동화</li>
-<li>새로운 노드 추가 자동화</li>
-<li>fail-over 자동화</li>
-</ul>
-
-<h3 id="references">References</h3>
-
-<ul>
-<li><a href="http://www.process-one.net/docs/ejabberd/guide_en.html#htoc89">http://www.process-one.net/docs/ejabberd/guide_en.html#htoc89</a></li>
-<li><a href="http://chad.ill.ac/post/35967173942/easy-ejabberd-clustering-guide-mnesia-mysql">http://chad.ill.ac/post/35967173942/easy-ejabberd-clustering-guide-mnesia-mysql</a></li>
-<li><a href="https://github.com/chadillac/ejabberd-easy_cluster/">https://github.com/chadillac/ejabberd-easy_cluster/</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/clustering/">#clustering</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-21T00:00:00Z">
-            21 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/21/ejabberd-http-request-handlers/">ejabberd http request handlers</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p><a href="https://erlnote.wordpress.com/2015/01/21/ejabberd-%EB%AA%A8%EB%93%88-%EA%B0%9C%EB%B0%9C/">ejabberd 모듈 개발 문서</a> 중에 http request handlers 개발 관련해서 간단히 정리해 봅니다.</p>
-
-<h2 id="튜토리얼">튜토리얼</h2>
-
-<p>&#8220;/hello&#8221;로 시작하는 URL에 대한 모든 요청을 처리하기 위해 &#8220;mod_http_hello&#8221;를 작성한다고 가정해 봅시다, 다음과 같이:</p>
-
-<ul>
-<li><a href="http://localhost:5280/hello/world">http://localhost:5280/hello/world</a></li>
-<li><a href="http://localhost:5280/hello/hedgehog">http://localhost:5280/hello/hedgehog</a></li>
-</ul>
-
-<p>process/2 함수의 절을 갖는 request 핸들러를 포함하는 &#8220;mod_http_hello.erl&#8221;파일을 작성하는 것으로 시작합니다.</p>
-
-<p>&#8220;/hello/world&#8221; 요청을 처리하는 예는 다음과 같습니다:</p>
-
-<pre><code class="language-erlang">      
-process(\_LocalPath = [&quot;world&quot;], \_Request) -&gt;
-          
-{xmlelement, &quot;html&quot;, [{&quot;xmlns&quot;, &quot;http://www.w3.org/1999/xhtml&quot;}],
-           
-[{xmlelement, &quot;head&quot;, [],
-             
-[{xmlelement, &quot;title&quot;, [], []}]},
-            
-{xmlelement, &quot;body&quot;, [],
-             
-[{xmlelement, &quot;p&quot;, [], [{xmlcdata, &quot;Hello, world!&quot;}]}]}]};
-  
-</code></pre>
-
-<blockquote>
-<p>모든 핸들러와 공통이기때문에, &#8220;hello&#8221; 파트는 여기에서 다루지 않습니다.</p>
-</blockquote>
-
-<p>&#8220;mod_http_hello.erl&#8221; 파일의 전체 소스는 다음과 같습니다:</p>
-
-<pre><code class="language-erlang">  
-%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
-  
-%%% File : mod\_http\_hello.erl
-  
-%%% Author : Your Name
-  
-%%% Purpose : Sample module that extends embedded ejabberd HTTP server
-  
-%%% Created :
-  
-%%% Id :
-  
-%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
-
--module(mod\_http\_hello).
-  
--author('your@email.org').
-  
--vsn('').
-  
--define(ejabberd_debug, true).
-
--behaviour(gen_mod).
-
--export([
-      
-start/2,
-      
-stop/1,
-      
-process/2
-      
-]).
-
--include(&quot;ejabberd.hrl&quot;).
-  
--include(&quot;jlib.hrl&quot;).
-  
--include(&quot;ejabberd_http.hrl&quot;).
-
-%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
-  
-%%% REQUEST HANDLERS
-  
-%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
-
-process([&quot;world&quot;], _Request) -&gt;
-      
-{xmlelement, &quot;html&quot;, [{&quot;xmlns&quot;, &quot;http://www.w3.org/1999/xhtml&quot;}],
-       
-[{xmlelement, &quot;head&quot;, [],
-         
-[{xmlelement, &quot;title&quot;, [], []}]},
-        
-{xmlelement, &quot;body&quot;, [],
-         
-[{xmlelement, &quot;p&quot;, [], [{xmlcdata, &quot;Hello, world!&quot;}]}]}]};
-
-process([&quot;produce\_error&quot;], \_Request) -&gt;
-      
-{400, [], {xmlelement, &quot;h1&quot;, [],
-                 
-[{xmlcdata, &quot;400 Bad Request&quot;}]}};
-
-process(LocalPath, _Request) -&gt;
-      
-{xmlelement, &quot;html&quot;, [{&quot;xmlns&quot;, &quot;http://www.w3.org/1999/xhtml&quot;}],
-       
-[{xmlelement, &quot;head&quot;, [],
-         
-[{xmlelement, &quot;title&quot;, [], []}]},
-        
-{xmlelement, &quot;body&quot;, [],
-         
-[{xmlelement, &quot;p&quot;, [], [{xmlcdata, io_lib:format(&quot;Called with path: ~p&quot;, [LocalPath])}]}]}]}.
-
-%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
-  
-%%% BEHAVIOUR CALLBACKS
-  
-%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
-
-start(\_Host, \_Opts) -&gt;
-      
-ok.
-
-stop(_Host) -&gt;
-      
-ok.
-  
-</code></pre>
-
-<p>ejabberd가 시작할 때 mod_http_hello를 로드하기 위해 ejabberd.yml을 다음과 같이 수정합니다.</p>
-
-<blockquote>
-<p>원문은 이전 버전의 ejabberd.cfg와 관련한 내용을 다루지만 번역자가 임의로 ejabberd.yml 관련 내용으로 변경했음을 알립니다.</p>
-</blockquote>
-
-<pre><code>      
-modules:
-        
-mod\_http\_hello: {}
-  
-</code></pre>
-
-<p>&rdquo;/hello/&rdquo; 요청을 디스패치하기 위해 ejabberd.yml파일의 ejabberd_http 모듈의 request_handlers에 다음과 같이 mod_http_hello를 등록합니다.</p>
-
-<pre><code>      
-port: 5280
-      
-module: ejabberd_http
-        
-request_handlers:
-          
-&quot;/hello&quot;: mod\_http\_hello
-      
-web_admin: true
-      
-http_poll: true
-  
-</code></pre>
-
-<h2 id="api">API</h2>
-
-<p>gen_mod가 요구하는 콜백과는 별개로, 커스텀 모듈은 (하나 이상의 절을 갖는) process/2 함수를 구현해야 합니다:</p>
-
-<ul>
-<li>your_http_module:process(LocalPath, Request)</li>
-</ul>
-
-<p>process/2 함수는 HTTP 요청을 처리하며 클라이언트에 보낼 데이터를 반환합니다. 선택적으로 상태 코드와 추가 헤더를 포함하기도 합니다.</p>
-
-<p>process/2 함수는 두개의 매개변수를 갖습니다: LocalPath와 Request</p>
-
-<p>LocalPath는 &ldquo;local to the module&rdquo;이라 불리는 요청 URL의 일부분을 포함하는 리스트입니다.</p>
-
-<p>예를 들어 mod_foo가 다음과 같이 설정되었다고 가정하면:</p>
-
-<pre><code>      
-port: 5280
-      
-module: ejabberd_http
-        
-request_handlers:
-          
-&quot;/a/b&quot;: mod_foo
-      
-web_admin: true
-      
-http_poll: true
-  
-</code></pre>
-
-<p>유저의 요청 URL이 다음과 같을 때:</p>
-
-<p><a href="http://server:5280/a/b/c/d">http://server:5280/a/b/c/d</a></p>
-
-<p>&ldquo;local to the moudle&rdquo;은 다음과 같습니다:</p>
-
-<pre><code>      
-[&quot;c&quot;, &quot;d&quot;]
-  
-</code></pre>
-
-<p>일반적으로 서버 관리자는 그들이 선택한 path 접두사만 사용 가능하도록 모듈을 만들 수 있기 때문에, 여러분은 full path(Request#request.path) 대신에 local path 기반의 핸들러를 선택하고 싶을 것입니다.</p>
-
-<p>Request 매개변수는 ejabberd_http.hrl에 정의된 HTTP request에 대한 정보를 포함하는 레코드입니다. 다음 필드로 구성됩니다:</p>
-
-<pre><code>  
-{
+  </div>
+  <div class="col-md-4">
     
-&quot;request&quot;,
-    
-method, %% HTTP method (&quot;GET&quot; or &quot;POST&quot;)
-    
-path, %% Full path to requested resource
-               
-%% e.g. for &quot;http://server:5280/a/b/c/d&quot;: [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]
-    
-q, %% Query part of the URL
-               
-%% e.g. for &quot;http://server:5280/a/b/c/d?foo=bar&quot;: [{&quot;foo&quot;, &quot;bar&quot;}]
-    
-us, %% Authenticated user and server. Used in ejabberd\_web\_admin for now.
-               
-%% e.g. for &quot;foo@jabber.server.org&quot;: {&quot;foo&quot;, &quot;jabber.server.org&quot;}
-    
-auth, %% Information provided for HTTP-auth (if any)
-               
-%% e.g. for a user &quot;john&quot; who entered the password &quot;secret&quot;: {&quot;john&quot;, &quot;secret&quot;}
-    
-lang = &quot;&quot;, %% Language code
-    
-data = &quot;&quot;, %% POST data
-  
-}
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/custom-module/">#custom module</a>,
-            
-                <a href="https://jeidee.github.iotags/http/">#http</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-21T00:00:00Z">
-            21 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/21/ejabberd-jabber-search-ec8898eca095ed9598eab8b0/">ejabberd jabber search 수정하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>jabber search를 다음과 같이 수정해야 한다고 가정해 본다.</p>
-
-<ul>
-<li>like query 가능해야 함</li>
-<li>페이징 가능해야 함</li>
-</ul>
-
-<p>우선 페이징이 가능하도록 검색폼과 결과폼을 다음과 같이 수정해야 한다.</p>
-
-<ul>
-<li>검색폼 : page no, page size 필드 추가</li>
-<li>결과폼 : 현재 page no, 현재 page size(result count), 결과가 더 있는지 여부(more result) 필드 추가</li>
-</ul>
-
-<h2 id="검색폼-수정">검색폼 수정</h2>
-
-<p>검색폼을 수정하기 위해 ejabberd의 모듈 중에 mod_vcard.erl을 다음과 같이 수정하면 된다.</p>
-
-<pre><code class="language-erlang">  
--define(FORM(JID),
-               
-?TLFIELD(&lt;&lt;&quot;text-single&quot;&gt;&gt;, &lt;&lt;&quot;Organization Unit&quot;&gt;&gt;,
-                    
-&lt;&lt;&quot;orgunit&quot;&gt;&gt;),
-               
-?TLFIELD(&lt;&lt;&quot;text-single&quot;&gt;&gt;, &lt;&lt;&quot;Page Number&quot;&gt;&gt;,
-                    
-&lt;&lt;&quot;pageno&quot;&gt;&gt;),
-               
-?TLFIELD(&lt;&lt;&quot;text-single&quot;&gt;&gt;, &lt;&lt;&quot;Page Size&quot;&gt;&gt;,
-                    
-&lt;&lt;&quot;pagesize&quot;&gt;&gt;)]}]).
-  
-</code></pre>
-
-<p>?FORM 매크로의 마지막 부분에 pageno와 pagesize 필드를 추가한다.</p>
-
-<p>FORM은 클라이언트에서 submit해야 하는 데이터폼을 정의한다.</p>
-
-<h2 id="결과폼-수정">결과폼 수정</h2>
-
-<p>결과폼을 수정하기 위해서 다음과 같이 수정한다.</p>
-
-<pre><code class="language-erlang">  
-search_result(Lang, JID, ServerHost, Data) -&gt;
-      
-?DEBUG(&quot;============ search_result, Data = ~p~n&quot;, [Data]),
-      
-SearchResult = search(ServerHost, Data),
-      
-[TPageNo] = proplists:get_value(&lt;&gt;, Data),
-      
-[TPageSize] = proplists:get_value(&lt;&gt;, Data),
-      
-PageNo = binary\_to\_integer(TPageNo),
-      
-PageSize = binary\_to\_integer(TPageSize),
-      
-ResultSize = length(SearchResult),
-      
-More = (PageNo * PageSize
-      
-%%?DEBUG(&quot;========== search(~p, ~p)~n&quot;, [LServer, Data]),
-      
-[TNickname] = proplists:get_value(&lt;&gt;, Data),
-      
-Nickname =
-          
-case str:suffix(&lt;&gt;, TNickname) of
-              
-true -&gt;
-                  
-str:substr(TNickname, 1, byte_size(TNickname) &amp;#8211; 1);
-              
-_ -&gt; TNickname
-          
-end,
-      
-[TPageNo] = proplists:get_value(&lt;&gt;, Data),
-      
-[TPageSize] = proplists:get_value(&lt;&gt;, Data),
-      
-PageNo = binary\_to\_integer(TPageNo),
-      
-PageSize = binary\_to\_integer(TPageSize),
-      
-Result = search(LServer, MatchSpec, AllowReturnAll, PageNo, PageSize, DBType),
-      
-Result.
-  
-</code></pre>
-
-<p>search/4함수를 PageNo, PageSize 매개변수를 추가해서 search/6함수가 호출되도록 수정하였다.</p>
-
-<p>위 코드의 변경사항은 페이징을 위해 출력할 페이지번호와 페이지당 출력할 건수 정보를 검색폼에서 가져와 search/6함수에 넘겨주는 내용이다.</p>
-
-<p>기존의 search/4함수에 PageNo와 PageSize를 추가해서 다음과 같이 search/6함수로 변경한다.</p>
-
-<pre><code class="language-erlang">  
-search(LServer, MatchSpec, AllowReturnAll, PageNo, PageSize, odbc) -&gt;
-      
-if (MatchSpec == &lt;&gt;) and not AllowReturnAll -&gt; [];
-         
-true -&gt;
-         
-Limit = case gen\_mod:get\_module_opt(LServer, ?MODULE, matches,
-                                                 
-fun(infinity) -&gt; infinity;
-                                                    
-(I) when is_integer(I),
-                                                             
-I&gt;0 -&gt;
-                                                         
-I
-                                                 
-end, ?JUD_MATCHES) of
-                         
-infinity -&gt;
-                             
-&lt;&gt;;
-                         
-Val -&gt;
-                             
-[&lt;&gt;,
-                              
-jlib:integer\_to\_binary(Val)]
-                     
-end,
-       
-?DEBUG(&quot;=========== Limit is ~p&quot;, [Limit]),
-         
-case catch ejabberd\_odbc:sql\_query(LServer,
-                            
-[&lt;&gt;,
-                             
-MatchSpec, [&lt;&gt;,list\_to\_binary(io_lib:format(&quot;~p,~p&quot;, [PageNo * PageSize, PageSize]))], &lt;&gt;])
-             
-of
-           
-{selected,
-            
-[&lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;,
-             
-&lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;,
-             
-&lt;&gt;, &lt;&gt;, &lt;&gt;,
-             
-&lt;&gt;],
-            
-Rs}
-           
-when is_list(Rs) -&gt;
-           
-Rs;
-           
-Error -&gt; ?ERROR_MSG(&quot;~p&quot;, [Error]), []
-         
-end
-      
-end;
-  
-</code></pre>
-
-<p>search(~, odbc) 함수 외에도 search(~, mnesia)와 search(~, riak)함수의 매개변수를 동일하게 수정해야 한다.</p>
-
-<p>위 코드에서 페이징과 관련한 부분은 Limit 부분이다.</p>
-
-<p>페이징을 위해 다음과 같은 코드를 사용한다.</p>
-
-<pre><code class="language-erlang">  
-[&lt;&gt;,list\_to\_binary(io_lib:format(&quot;~p,~p&quot;, [PageNo * PageSize, PageSize]))], &lt;&gt;])
-  
-</code></pre>
-
-<p>주의할 것은, 위의 페이징을 위한 코드는 mysql에서만 동작한다는 것이다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/jabber-search/">#jabber search</a>,
-            
-                <a href="https://jeidee.github.iotags/mysql/">#mysql</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-21T00:00:00Z">
-            21 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-eab080eca0b8ec98a4eab8b0/">ejabberd mod_admin_extra 사용해서 vcard 가져오기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>ejabberd에서는 커스텀 플러그인 모듈을 다음 URL에서 별도로 배포하고 있다.</p>
-
-<p><a href="https://www.ejabberd.im/ejabberd-modules">https://www.ejabberd.im/ejabberd-modules</a></p>
-
-<p>하지만 일부 모듈의 경우 최신 버전에서 사용할 수 없고, 수정된 모듈에서도 이전 버전과 인터페이스 호환이 되지 않아 문제를 일으키는 경우가 있으므로 주의해야 한다.</p>
-
-<h2 id="mod-admin-extra-모듈을-사용해-ejabberdctl의-get-vcard-코맨드-실행">mod_admin_extra 모듈을 사용해 ejabberdctl의 get_vcard 코맨드 실행</h2>
-
-<p>ejabberd-modules 중에서 mod_ctlextra와 mod_admin_extra 모듈은 ejabberdctl용(관리자 콘솔 코맨드) 확장 코맨드 모듈이다. 둘 중에서 mod_admin_extra가 최신 버전이지만 최신 버전의 ejabberd(현재 기준 14.07)에서 사용되는 gen_mod:get_module_opt/5와 호환되지 않아(mod_admin_extra는 gen_mod:get_module_opt/4를 사용) 일부 코드를 수정해야 한다.</p>
-
-<pre><code class="language-erlang">       
-963 get\_module\_resource(Server) -&gt;
-       
-964 case gen\_mod:get\_module\_opt(Server, ?MODULE, module\_resource, none) of
-       
-965 none -&gt; atom\_to\_list(?MODULE);
-       
-966 R when is_list(R) -&gt; R
-       
-967 end.
-  
-</code></pre>
-
-<p>964 라인을 다음과 같이 수정한다.</p>
-
-<pre><code class="language-erlang">       
-964 case gen\_mod:get\_module\_opt(global, Server, ?MODULE, module\_resource, none) of
-  
-</code></pre>
-
-<p>그런 후 디버그 쉘(ejabberdctl debug)을 실행하고 다음과 같이 입력한다.</p>
-
-<pre><code class="language-erlang">      
-&gt; mod\_admin\_extra:get\_module\_resource(&lt;&lt;&quot;localhost&quot;&gt;&gt;).
-      
-&quot;mod\_admin\_extra&quot;
-  
-</code></pre>
-
-<p>위와 같이 출력되면 이상이 없는 것이다.</p>
-
-<p>이 외에도 get_vcard와 get_vcard_content 함수를 다음과 같이 수정한다.</p>
-
-<pre><code class="language-erlang">      
-get_vcard(User, Host, Name) -&gt;
-          
-if
-              
-is\_list(User) -&gt; U = list\_to_binary(User);
-              
-true -&gt; U = User
-          
-end,
-          
-if
-              
-is\_list(Host) -&gt; H = list\_to_binary(Host);
-              
-true -&gt; H = Host
-          
-end,
-          
-if
-              
-is\_list(Name) -&gt; N = list\_to_binary(Name);
-              
-true -&gt; N = Name
-          
-end,
-          
-[Res | \_] = get\_vcard_content(U, H, [N]),
-          
-Res.
-
-get_vcard(User, Host, Name, Subname) -&gt;
-          
-if
-              
-is\_list(User) -&gt; U = list\_to_binary(User);
-              
-true -&gt; U = User
-          
-end,
-          
-if
-              
-is\_list(Host) -&gt; H = list\_to_binary(Host);
-              
-true -&gt; H = Host
-          
-end,
-          
-if
-              
-is\_list(Name) -&gt; N = list\_to_binary(Name);
-              
-true -&gt; N = Name
-          
-end,
-          
-if
-              
-is\_list(Subname) -&gt; SN = list\_to_binary(Subname);
-              
-true -&gt; SN = Subname
-          
-end,
-          
-[Res | \_] = get\_vcard_content(U, H, [N, SN]),
-          
-Res.
-
-get\_vcard\_content(User, Server, Data) -&gt;
-          
-[{\_, Module, Function, \_Opts}] = ets:lookup(sm\_iqtable, {?NS\_VCARD, Server}),
-          
-JID = jlib:make\_jid(User, Server, list\_to\_binary(get\_module_resource(Server))),
-          
-IQ = #iq{type = get, xmlns = ?NS_VCARD},
-          
-IQr = Module:Function(JID, JID, IQ),
-          
-case IQr#iq.sub_el of
-          
-[A1] -&gt;
-              
-case get_vcard(Data, A1) of
-              
-[] -&gt; throw(error\_no\_value\_found\_in_vcard);
-              
-ElemList -&gt; [xml:get\_tag\_cdata(Elem) || Elem &lt;- ElemList]
-              
-end;
-          
-[] -&gt;
-              
-throw(error\_no\_vcard_found)
-          
-end.
-  
-</code></pre>
-
-<p>그런 후 소스를 재컴파일 &amp; 재배포(make &amp;&amp; make install)한 후 ejabberd를 실행한다.</p>
-
-<p>쉘(erl 쉘이 아니다.)에서 다음과 같이 실행해 보자.</p>
-
-<pre><code>      
-$ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot;
-  
-</code></pre>
-
-<p>만약 romeo@localhost의 vcard가 있고 NICKNAME이 설정되어 있다면 정상적으로 출력될 것이다.</p>
-
-<p>이제 제대로 작동하는 것을 확인했다면 소스를 살펴보도록 한다.</p>
-
-<h2 id="mod-admin-extra의-get-vcard-3-관련-소스-살펴보기">mod_admin_extra의 get_vcard/3 관련 소스 살펴보기</h2>
-
-<p>mod_admin_extra모듈은 vcard 관련 작업을 할 때 mod_vcard모듈의 process_sm_iq/3 함수를 호출하는데, 이 때 세 번째 파라미터로 사용하는 Iq의 경우 레코드타입이므로 쉘에서 테스트해보고자 한다면 #iq레코드가 정의되어 있어야 한다.</p>
-
-<p>xml.hrl과 jlib.hrl을 rr() 코맨드로 load해서 레코드를 등록해도 되지만, 어떤 이유에서인지 jlib.hrl은 xmlel 레코드가 정의되어 있지 않다는 에러를 내뿜으며 제대로 불러지지 않는다.</p>
-
-<p>따라서 다음과 같이 직접 erl 쉘에서 레코드를 등록해 사용하도록 하자.</p>
-
-<pre><code class="language-erlang">      
-rd(xmlel, {name= &lt;&lt;&quot;&quot;&gt;&gt;, attrs= [], children= []}).
-      
-rd(iq, {id= &lt;&lt;&quot;&quot;&gt;&gt;, type=get, xmlns= &lt;&lt;&quot;&quot;&gt;&gt;, lang= &lt;&lt;&quot;&quot;&gt;&gt;, sub_el= #xmlel{}}).
-  
-</code></pre>
-
-<p>주의할 것은 바이너리 값(&lt;&gt;)을 매치연산자(=)와 같이 사용할 때는 꼭 = &lt; 그 전에, erl 쉘에서 테스트를 용이하게 하기 위해 mod_admin_extra의 모든 함수를 export하자.(기존 -export 부분을 주석처리하고 -compile(export_all). 사용)</p>
-
-<p>mod_admin_extra모듈에는 get_vcard가 다음과 같이 정의되어 있다.</p>
-
-<pre><code class="language-erlang">      
-get_vcard(User, Host, Name) -&gt;
-          
-[Res | \_] = get\_vcard_content(User, Host, [Name]),
-          
-Res. 
-
-get_vcard(User, Host, Name, Subname) -&gt;
-          
-[Res | \_] = get\_vcard_content(User, Host, [Name, Subname]),
-          
-Res.
-  
-</code></pre>
-
-<p>get_vcard_content/3 함수를 사용하는데 해당 함수는 다음과 같다.</p>
-
-<pre><code class="language-erlang">      
-get\_vcard\_content(User, Server, Data) -&gt;
-          
-[{\_, Module, Function, \_Opts}] = ets:lookup(sm\_iqtable, {?NS\_VCARD, Server}),
-          
-JID = jlib:make\_jid(User, Server, list\_to\_binary(get\_module_resource(Server))),
-          
-IQ = #iq{type = get, xmlns = ?NS_VCARD},
-          
-IQr = Module:Function(JID, JID, IQ),
-          
-case IQr#iq.sub_el of
-          
-[A1] -&gt;
-              
-case get_vcard(Data, A1) of
-              
-[] -&gt; throw(error\_no\_value\_found\_in_vcard);
-              
-ElemList -&gt; [xml:get\_tag\_cdata(Elem) || Elem &lt;- ElemList]
-              
-end;
-          
-[] -&gt;
-              
-throw(error\_no\_vcard_found)
-          
-end.
-  
-</code></pre>
-
-<p>위의 코드를 보면서, 쉘에서 테스트해 보도록 하자.</p>
-
-<p>(xmlel과 iq레코드는 이미 정의했고 ejabberdctl debug로 디버그 쉘을 시작했다고 가정한다.)</p>
-
-<p>먼저 첫 번째 라인을 사용해 ets에서 sm_iqtable에 저장되어 있는(observer:stat()를 사용해 observer 윈도우를 출력한 후 Table Viewer에서 ets의 sm_iqtable을 조회해 볼 수 있다.) ?NS_VCARD(매크로이며 &lt;&gt;값을 갖는다) 네임스페이스의 Server(&lt;&gt;&#8230;)에 해당하는 mod_vcard 모듈과 process_sm_iq함수명을 가져온다.</p>
-
-<pre><code class="language-erlang">      
-&gt; [{\_, Module, Function, \_Opts}] = ets:lookup(sm_iqtable, {&lt;&lt;&quot;vcard-temp&quot;&gt;&gt;, &lt;&lt;&quot;localhost&quot;&gt;&gt;}).
-      
-[{ {&lt;&lt;&quot;vcard-temp&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;},
-        
-mod\_vcard,process\_sm_iq,
-        
-{one_queue,&lt;0.442.0&gt;}}]
-  
-</code></pre>
-
-<p>Module은 &#8220;mod_vcard이고 Function은 process_sm_iq이다.</p>
-
-<p>다음엔 JID를 생성한다.</p>
-
-<pre><code class="language-erlang">      
-(ejabberd@localhost)14&gt; JID = jlib:make\_jid(&lt;&lt;&quot;romeo&quot;&gt;&gt;, &lt;&lt;&quot;localhost&quot;&gt;&gt;, list\_to\_binary(mod\_admin\_extra:get\_module_resource(&lt;&lt;&quot;localhost&quot;&gt;&gt;))).
-      
-{jid,&lt;&lt;&quot;romeo&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;,&lt;&lt;&quot;mod\_admin\_extra&quot;&gt;&gt;,
-           
-&lt;&lt;&quot;romeo&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;,&lt;&lt;&quot;mod\_admin\_extra&quot;&gt;&gt;}
-  
-</code></pre>
-
-<p>그리고 IQ레코드를 생성하고,</p>
-
-<pre><code class="language-erlang">      
-(ejabberd@localhost)18&gt; IQ = #iq{type = get, xmlns = &lt;&lt;&quot;vcard-temp&quot;&gt;&gt;}.
-      
-#iq{id = &lt;&lt;&gt;&gt;,type = get,xmlns = &lt;&lt;&quot;vcard-temp&quot;&gt;&gt;,
-          
-lang = &lt;&lt;&gt;&gt;,
-          
-sub_el = #xmlel{name = &lt;&lt;&gt;&gt;,attrs = [],children = []}}
-  
-</code></pre>
-
-<p>mod_vcard:process_sm_iq/3함수를 호출한다.</p>
-
-<pre><code class="language-erlang">      
-(ejabberd@localhost)19&gt; IQr = Module:Function(JID, JID, IQ).
-      
-#iq{id = &lt;&lt;&gt;&gt;,type = result,xmlns = &lt;&lt;&quot;vcard-temp&quot;&gt;&gt;,
-          
-lang = &lt;&lt;&gt;&gt;,
-          
-sub_el = [#xmlel{name = &lt;&lt;&quot;vCard&quot;&gt;&gt;,
-                           
-attrs = [{&lt;&lt;&quot;xmlns&quot;&gt;&gt;,&lt;&lt;&quot;vcard-temp&quot;&gt;&gt;}],
-                           
-children = [#xmlel{name = &lt;&lt;&quot;NICKNAME&quot;&gt;&gt;,attrs = [],
-                                              
-children = [{xmlcdata,&lt;&lt;&quot;kkk&quot;&gt;&gt;}]}]}]}
-  
-</code></pre>
-
-<p>A1에 vCard의 xml 엘리먼트를 가져와 담고,</p>
-
-<pre><code class="language-erlang">      
-(ejabberd@localhost)22&gt; [A1] = IQr#iq.sub_el.
-      
-[#xmlel{name = &lt;&lt;&quot;vCard&quot;&gt;&gt;,
-              
-attrs = [{&lt;&lt;&quot;xmlns&quot;&gt;&gt;,&lt;&lt;&quot;vcard-temp&quot;&gt;&gt;}],
-              
-children = [#xmlel{name = &lt;&lt;&quot;NICKNAME&quot;&gt;&gt;,attrs = [],
-                                 
-children = [{xmlcdata,&lt;&lt;&quot;kkk&quot;&gt;&gt;}]}]}]
-  
-</code></pre>
-
-<p>get_vcard/2 함수를 호출해 NICKNAME과 매치하는 children 요소를 가져오고,</p>
-
-<pre><code class="language-erlang">      
-(ejabberd@localhost)49&gt; ElemList = mod\_admin\_extra:get_vcard([&lt;&lt;&quot;NICKNAME&quot;&gt;&gt;], A1).
-      
-[#xmlel{name = &lt;&lt;&quot;NICKNAME&quot;&gt;&gt;,attrs = [],
-              
-children = [{xmlcdata,&lt;&lt;&quot;kkk&quot;&gt;&gt;}]}]
-  
-</code></pre>
-
-<p>XML cdata를 구하면 NICKNAME의 값을 가져올 수 있다.</p>
-
-<p>(리스트 해석 사용함)</p>
-
-<pre><code class="language-erlang">      
-(ejabberd@localhost)51&gt; [xml:get\_tag\_cdata(Elem) || Elem &lt;- ElemList].
-      
-[&lt;&lt;&quot;kkk&quot;&gt;&gt;]
-  
-</code></pre>
-
-<p>다음에는 vcard를 설정하는 코드를 살펴보자.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/vcard/">#vcard</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-21T00:00:00Z">
-            21 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-ec84a4eca095ed9598eab8b0/">ejabberd mod_admin_extra 사용해서 vcard 설정하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>이전 글에서 설명한 vcard 가져오기 관련된 내용 중에 수정할 부분이 있다.</p>
-
-<p>ejabberd_modules의 경우 최신 버전(현재 14.07)에서는 호환이 안되며 대신 ejabberd_contrib를 사용해야 한다.</p>
-
-<p><a href="https://www.ejabberd.im/ejabberd-contrib">https://www.ejabberd.im/ejabberd-contrib</a></p>
-
-<pre><code>      
-git clone git://github.com/processone/ejabberd-contrib.git
-  
-</code></pre>
-
-<p>ejabberd-contrib에 포함된 mod_admin_extra는 ejaberd_modules에서 생기는 호환 문제가 해결되어 있으므로 수정할 필요없이 그대로 사용하면 된다.</p>
-
-<p>설치(mod_admin_extra.erl을 ejabberd/src파일에 복사한 후 make &amp;&amp; make install, ejabberd.yml에 mod_admin_extra 모듈 등록)하고 ejabberd를 재시작한 후 터미널에서 다음과 같이 테스트해 보자.</p>
-
-<pre><code>      
-$ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot;
-      
-hello
-      
-$ ejabberdctl set_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; &quot;world&quot;
-      
-$ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot;
-      
-world
-  
-</code></pre>
-
-<p>닉네임이 잘 변경된다.</p>
-
-<p>erl 디버그 쉘에서는 해당 모듈의 함수를 직접 호출해 테스트해보도록 하자.</p>
-
-<pre><code>      
-$ ejabberdctl debug
-      
-(ejabberd@localhost)7&gt; mod\_admin\_extra:get_vcard(&lt;&lt;&quot;romeo&quot;&gt;&gt;, &lt;&lt;&quot;localhost&quot;&gt;&gt;, &lt;&lt;&quot;NICKNAME&quot;&gt;&gt;).
-      
-&lt;&lt;&quot;world&quot;&gt;&gt;
-  
-</code></pre>
-
-<p>get_vcard/3의 파라미터에 문자열 대신 바이너리를 입력한 이유는 다음과 같다.</p>
-
-<pre><code class="language-erlang">  
-#ejabberd\_commands{name = get\_vcard, tags = [vcard],
-         
-desc = &quot;Get content from a vCard field&quot;,
-         
-longdesc = Vcard1FieldsString ++ &quot;n&quot; ++ Vcard2FieldsString ++ &quot;nn&quot; ++ VcardXEP,
-         
-module = ?MODULE, function = get_vcard,
-         
-args = [{user, binary}, {host, binary}, {name, binary}],
-         
-result = {content, string}},
-  
-</code></pre>
-
-<p>args를 보면 파라미터의 데이터타입이 모두 binary로 되어 있다.</p>
-
-<p>이제 mod_admin_extra모듈의 get_vcard/3과 set_vcard/4 함수를 사용하면 vcard를 가져오거나 설정할 수 있게 된다.</p>
-
-<p>코드 리뷰는 이전 글의 vcard 가져오기 내용을 참조하도록 하고 이 글은 여기에서 마무리 한다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/vcard/">#vcard</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-21T00:00:00Z">
-            21 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/01/21/ejabberd-mysql-odbc-ec84a4eca095/">ejabberd mysql odbc 설정</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>mysql 설정은 다음과 같이 한다.</p>
-
-<pre><code>      
-$ vi /etc/ejabberd/ejabberd.yml
-
-auth_method: odbc
-      
-\## auth_method: internal에서 변경한다.
-
-\## MySQL server:
-      
-##
-      
-odbc_type: mysql
-      
-odbc_server: &quot;localhost&quot;
-      
-odbc_database: &quot;ejabberd&quot;
-      
-odbc_username: &quot;ejabberd&quot;
-      
-odbc_password: &quot;ejabberd&quot;
-  
-</code></pre>
-
-<p>위와 같이 한 후 모듈별로 db_type을 설정해야 하는데, roster와 vcard를 mysql에 저장하도록 하려면 다음과 같이 ejabberd.yml파일을 수정한다.</p>
-
-<pre><code>        
-mod_roster:
-          
-db_type: odbc
-        
-mod\_shared\_roster: {}
-        
-mod_stats: {}
-        
-mod_time: {}
-        
-mod_vcard:
-          
-db_type: odbc
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/mysql/">#mysql</a>,
-            
-        
-        <time class="post-date" datetime="2015-01-21T00:00:00Z">
-            21 Jan 2015
-        </time>
-    </footer>
-</article>
-
-	
-
-	<nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/posts/page/16/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 17 of 20</span>
-	
-	    <a class="older-posts" href="/posts/page/18/">Older Posts &rarr;</a>
-	
-</nav>
-
-</main>
-
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
     </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
 
-</body>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
 

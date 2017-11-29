@@ -1,1772 +1,435 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/posts/index.xml">
 
-  	<meta property="og:title" content=" Posts &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/posts/" />
+<link rel="canonical" href="https://jeidee.github.io/posts/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Posts - Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
     
     
-    <meta property="og:type" content="website" />
     
 
-  <title>
-     Posts &middot;  Erlang &amp; Go
-  </title>
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
 
-    <meta name="description" content="" />
+          
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-        <link href="https://jeidee.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Posts &middot; Erlang &amp; Go" />
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/posts/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
-</head>
-<body class="nav-closed">
-
-  
-
-
- <div class="site-wrapper">
-
-
-
-
-	<header class="main-header tag-head no-cover">
-
-    <nav class="main-nav overlay clearfix">
-      
-      
-        
-          <a class="menu-button icon-feed" href="https://jeidee.github.io/posts/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
         </div>
-</div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
+      </nav>
+    </header>
 
-<main id="content" class="content" role="main">
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+    <header class="page-header">
+      <h1>Posts</h1>
+    </header>
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/posts/page/12/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 13 of 20</span>
-	
-	    <a class="older-posts" href="/posts/page/14/">Older Posts &rarr;</a>
-	
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-16T00:00:00JST">Mar 16, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/16/virtual-box-vdi-ec9aa9eb9f89-eb8a98eba6aceab8b0/">virtual box vdi 용량 늘리기</a></h2>
+  </header>
+
+  
+  <div class="summary">windows 7에 virtual box를 설치하고 xubuntu를 guest os로 설치했다고 가정한다.
+저장소는 vmdk일 경우 먼저 vdi로 변경 후 사이즈를 조절하도록 한다.
+vdi 용량 늘리기 1) vmdk를 vdi로 변경
+cmd를 열고 vmdk 파일이 있는 곳으로 이동한다.
+VBoxManage.exe의 clonehd 기능으로 vmdk파일을 vdi로 변경한다.
+ &gt; &quot;C:Program FilesOracleVirtualBoxVBoxManage.exe&quot; clonehd server1-disk1.vmdk server1-disk1.vdi &amp;#8211;format vdi  2) vdi 사이즈 수정
+vdi의 사이즈를 변경하기 위해서 VBoxManage.exe의 modifyhd 기능으로 사이즈를 변경한다. &#8211;resize 매개변수의 값은 단위가 MB이며 30GB를 원할 경우 30 * 1024 = 31744를 입력하도록 한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/16/virtual-box-vdi-ec9aa9eb9f89-eb8a98eba6aceab8b0/" title="virtual box vdi 용량 늘리기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-15T00:00:00JST">Mar 15, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/15/ionicec9790ec849c-csseba5bc-ec82acec9aa9ed959c-flip-card-eab5aced9884ed9598eab8b0/">ionic에서 css를 사용한 flip card 구현하기</a></h2>
+  </header>
+
+  
+  <div class="summary">다음과 같이 간략하게 과정을 정리해 본다.
+1) html
+toggle &lt;section class=&quot;container&quot;&gt; &lt;div id=&quot;card&quot;&gt; &lt;figure class=&quot;front&quot;&gt;1&lt;/figure&gt; &lt;figure class=&quot;back&quot;&gt;2&lt;/figure&gt; &lt;/div&gt; &lt;/section&gt;  2) css
+.container { width: 200px; height: 260px; position: relative; perspective: 800px; } #card { width: 100%; height: 100%; position: absolute; transform-style: preserve-3d; transition: transform 1s; } #card figure { display: block; position: absolute; width: 100%; height: 100%; backface-visibility: hidden; } #card .front { background: red; } #card .back { background: blue; transform: rotateY( 180deg ); } #card.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/15/ionicec9790ec849c-csseba5bc-ec82acec9aa9ed959c-flip-card-eab5aced9884ed9598eab8b0/" title="ionic에서 css를 사용한 flip card 구현하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-13T00:00:00JST">Mar 13, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/13/erlang-kerl-ec82acec9aa9ed95b4-ec84a4ecb998-ebb08f-ebb284eca084-eab480eba6ac/">erlang kerl 사용해 설치 및 버전 관리</a></h2>
+  </header>
+
+  
+  <div class="summary">kerl을 사용해 여러 버전의 erlang을 설치한 후 원하는 버전을 활성화할 수 있다.
+자세한 내용은 다음 링크를 참고한다.
+ kerl  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/13/erlang-kerl-ec82acec9aa9ed95b4-ec84a4ecb998-ebb08f-ebb284eca084-eab480eba6ac/" title="erlang kerl 사용해 설치 및 버전 관리">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-12T00:00:00JST">Mar 12, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/12/ubunt-open-file-max-ec8898eca095ed9598eab8b0/">ubunt open file max 수정하기</a></h2>
+  </header>
+
+  
+  <div class="summary"> test 계정이 있다고 가정하고 다음과 같이 작업합니다.
+1) sysctl.conf 수정
+ $ sudo vi /etc/sysctl.conf fs.file-max = 1513687 &amp;#8230; $ sudo sysctl -p fs.file-max = 1513687  2) limits.conf 수정
+ $ sudo vi /etc/security/limits.conf test soft nofile 100000 test hard nofile 100000  3) reboot
+ $ sudo reboot &amp;#8230; $ ulimit -n 100000  참고  file의 open handle 개수 늘리기  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/12/ubunt-open-file-max-ec8898eca095ed9598eab8b0/" title="ubunt open file max 수정하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-11T00:00:00JST">Mar 11, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/11/ssh-scpeb93b1ec9d84-ec9594ed98b8-ec9e85eba0a5-ec9786ec9db4-ec82acec9aa9ed9598eab8b0/">ssh, scp등을 암호 입력 없이 사용하기</a></h2>
+  </header>
+
+  
+  <div class="summary">다음의 순서로 진행한다.
+1) 키 생성
+ $ ssh-keygen -t rsa  키 생성할 때는 passphrase를 빈 값으로(아무 값도 입력하지 않고 엔터) 입력해야 함을 주의하자.
+2) 공개키 리포트 서버에 등록
+ $ ssh-copy-id -i ~/.ssh/id_rsa.pub [remote-host]  여기까지 하면 완료되었다.
+다음과 같이 암호 입력없이 정상 접속 되는지 확인해 본다.
+ $ ssh [remote-host]  만약 다음과 같은 에러가 출력된다면,
+ Agent admitted failure to sign using the key.  다음과 같이 ssh 사용을 활성화한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/11/ssh-scpeb93b1ec9d84-ec9594ed98b8-ec9e85eba0a5-ec9786ec9db4-ec82acec9aa9ed9598eab8b0/" title="ssh, scp등을 암호 입력 없이 사용하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-11T00:00:00JST">Mar 11, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/11/eca0a0ed82a8ec8aa4-ec82acec9aa9ebb295/">젠킨스 사용법</a></h2>
+  </header>
+
+  
+  <div class="summary">우분투에 설치 공식홈 설치 안내를 따라 다음과 같이 설치한다.
+1) 젠킨스 설치를 위한 데비안 패키지 리포지토리사용을 위해 다음과 같이 시스템에 키를 추가해 준다.
+ wget -q -O &amp;#8211; http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add &amp;#8211;  2) /etc/apt/sources.list 파일에 다음 내용을 추가해 준다.
+ deb http://pkg.jenkins-ci.org/debian binary/  2) 젠킨스를 설치한다.
+ sudo apt-get update sudo apt-get install jenkins  실행 설치된 젠킨스를 다음과 같이 시작한다.
+ sudo service jenkins start  젠킨스의 초기 사용 포트는 8080이며 다음과 같이 변경할 수 있다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/11/eca0a0ed82a8ec8aa4-ec82acec9aa9ebb295/" title="젠킨스 사용법">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-05T00:00:00JST">Mar 5, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/05/ejabberd-ed8ca8ed82b7-ed9b84ed82b9-ebb08f-ed9584ed84b0eba781/">ejabberd 패킷 후킹 및 필터링</a></h2>
+  </header>
+
+  
+  <div class="summary">ejabberd에서 패킷을 후킹한 후 필터링하고 싶다면 다음과 같이 커스텀 모듈을 생성해 처리하면 된다.
+다음 코드는 chat 메세지 패킷을 가로체 디버그 로그에 출력해 주는 소스이다.
+-module(mod\_packet\_hook). -behaviour(gen_mod). -export([start/2, stop/1]). -export([on\_filter\_packet/1]). -include(&quot;ejabberd.hrl&quot;). -include(&quot;jlib.hrl&quot;). -include(&quot;logger.hrl&quot;). start(\_Host, \_Opts) -&gt; ejabberd\_hooks:add(filter\_packet, global, ?MODULE, on\_filter\_packet, 0), ok. stop(_Host) -&gt; ejabberd\_hooks:delete(filter\_packet, global, ?MODULE, on\_filter\_packet, 0), ok. on\_filter\_packet({From, To, XML} = Packet) -&gt; %% does something with a packet %% should return modified Packet or atom \`drop\` to drop the packet Type = proplists:get_value(&lt;&lt;&quot;type&quot;&gt;&gt;, XML#xmlel.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/05/ejabberd-ed8ca8ed82b7-ed9b84ed82b9-ebb08f-ed9584ed84b0eba781/" title="ejabberd 패킷 후킹 및 필터링">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-05T00:00:00JST">Mar 5, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/05/node-js-eab8b0ec8381ecb2ad-eb82a0ec94a8-api-ec82acec9aa9/">node.js 기상청 날씨 api 사용</a></h2>
+  </header>
+
+  
+  <div class="summary">기상청에서는 동 단위의 날씨 예보를 API로 제공하고 있다.
+기상청 API를 사용해서 동네 날씨 예보를 구하는 방법은 좌표를 사용하는 방법과 법정동코드를 사용하는 방법 두 가지가 있다.
+날씨 조회 이 중에서 좌표를 사용하는 방법을 알아보자.
+(좌표는 위경도가 아닌 구역 그리드 좌표인 것 같다.)
+먼저 도/시, 시/군/구, 읍/면/동 정보로 좌표를 구하는 방법은 다음과 같다.
+1) 도/시 정보 구하기
+다음 URL을 사용해서 json 포맷의 도/시 정보를 구한다.
+http://www.kma.go.kr/DFSROOT/POINT/DATA/top.json.txt
+아래와 같은 json 포맷의 데이터를 구할 수 있다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/05/node-js-eab8b0ec8381ecb2ad-eb82a0ec94a8-api-ec82acec9aa9/" title="node.js 기상청 날씨 api 사용">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-04T00:00:00JST">Mar 4, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/04/ejabberd-external-component-ec97b0eb8f99/">ejabberd external component 연동</a></h2>
+  </header>
+
+  
+  <div class="summary">xmpp component 개요 xmpp에는 external component 관련 공식 프로토콜인 Jabber Component Protocol이 있다.
+Jabber Component Protocol은 외부 컴포넌트를 XMPP서버와 연동하기 위한 규약을 제안하는데 크게 accept와 connect에 대한 XML 스키마와 handshake flow를 명세하고 있다.
+xmpp의 external component는 프로토콜만 준수한다면 어떤 언어를 사용해서도 구현할 수 있다. 3rd-party 컴포넌트를 ejabberd와 연동하는 방법은 Install Components and Transports to othe networks 문서를 참고하도록 한다.
+echo-bot component 만들어서 연동해 보기 node-xmpp-component 모듈을 사용해서 간단한 에코봇을 컴포넌트로 만들어 ejabberd와 연동해 보도록 하자.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/04/ejabberd-external-component-ec97b0eb8f99/" title="ejabberd external component 연동">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-04T00:00:00JST">Mar 4, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/04/erlangeab3bc-java-ec97b0eb8f99/">erlang과 java 연동</a></h2>
+  </header>
+
+  
+  <div class="summary">eclipse의 maven 프로젝트 기준으로 설명한다.
+jinterface dependency 추가 먼저 pom.xml에 다음과 같이 dependency를 추가해 준다.
+ &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;org.erlang.otp&lt;/groupId&gt; &lt;artifactId&gt;jinterface&lt;/artifactId&gt; &lt;version&gt;1.5.3.1&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt;  maven install을 수행해 jinterface-1.5.3.1.jar 를 다운로드 받는다.
+erl shell 시작 erl shell은 노드명과 매직쿠키를 지정해서 다음과 같이 실행해 준다.
+ erl -sname enode -setcookie erlang  또는
+ erl -name enode -setcookie erlang  java를 사용해 접속 테스트 eclipse에서 ErlConnection 클래스를 추가하고 다음과 같이 작성한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/04/erlangeab3bc-java-ec97b0eb8f99/" title="erlang과 java 연동">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li><a href="/posts/page/12/">Previous</a></li>
+    
+
+    
+    <li><a href="/posts/page/14/">Next</a></li>
+    
+
+  </ul>
 </nav>
 
-	</div>
 
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/16/virtual-box-vdi-ec9aa9eb9f89-eb8a98eba6aceab8b0/">virtual box vdi 용량 늘리기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
 
-<p>windows 7에 virtual box를 설치하고 xubuntu를 guest os로 설치했다고 가정한다.</p>
-
-<p>저장소는 vmdk일 경우 먼저 vdi로 변경 후 사이즈를 조절하도록 한다.</p>
-
-<h2 id="vdi-용량-늘리기">vdi 용량 늘리기</h2>
-
-<p>1) vmdk를 vdi로 변경</p>
-
-<p>cmd를 열고 vmdk 파일이 있는 곳으로 이동한다.</p>
-
-<p>VBoxManage.exe의 clonehd 기능으로 vmdk파일을 vdi로 변경한다.</p>
-
-<pre><code>  
-&gt; &quot;C:Program FilesOracleVirtualBoxVBoxManage.exe&quot; clonehd server1-disk1.vmdk server1-disk1.vdi &amp;#8211;format vdi
-  
-</code></pre>
-
-<p>2) vdi 사이즈 수정</p>
-
-<p>vdi의 사이즈를 변경하기 위해서 VBoxManage.exe의 modifyhd 기능으로 사이즈를 변경한다. &#8211;resize 매개변수의 값은 단위가 MB이며 30GB를 원할 경우 30 * 1024 = 31744를 입력하도록 한다.</p>
-
-<pre><code>  
-&gt; &quot;C:Program FilesOracleVirtualBoxVBoxManage.exe&quot; modifyhd server1-disk1.vdi &amp;#8211;resize 31744
-  
-</code></pre>
-
-<p>3) VirtualBox GUI 관리자에서 설정&gt;저장소를 선택 후 기존 vmdk 연결을 제거하고 새로운 vdi 파일을 추가해 준다.</p>
-
-<h2 id="우분투-파티션-변경">우분투 파티션 변경</h2>
-
-<p>gparted를 사용해서 파티션을 변경한다.</p>
-
-<p>1) gparted 설치</p>
-
-<pre><code>  
-sudo apt-get install gparted
-  
-</code></pre>
-
-<p>2) gparted 실행</p>
-
-<pre><code>  
-sudo gparted
-  
-</code></pre>
-
-<p>3) 파티션 합치기</p>
-
-<p>디스크 사이즈를 조정했다면 할당되지 않은 새로운 공간이 보일 것이다.</p>
-
-<p>주의할 것은 원래 파티션과 새로운 할당되지 않은 빈 공간 사이에 다른 파티션이 있으면 안된다.</p>
-
-<p>만약, 있다면 해당 파티션을 제거해야 한다.</p>
-
-<p>원래의 파티션(합칠 대상)에서 크기조정/이동 메뉴를 선택한 후 원하는 크기만큼 변경하고 v 체크 버튼을 클릭해 변경된 내용을 적용하면 끝이다.</p>
-
-<p>&nbsp;</p>
-
-<h2 id="centos에서-확장">centos에서 확장</h2>
-
-<ul>
-<li>[링크 참조](<a href="https://gist.github.com/christopher-hopper/9755310">https://gist.github.com/christopher-hopper/9755310</a>)</li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/virtual-box/">#virtual box</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-16T00:00:00Z">
-            16 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/15/ionicec9790ec849c-csseba5bc-ec82acec9aa9ed959c-flip-card-eab5aced9884ed9598eab8b0/">ionic에서 css를 사용한 flip card 구현하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>다음과 같이 간략하게 과정을 정리해 본다.</p>
-
-<p>1) html</p>
-
-<pre><code class="language-html">  
-toggle
-  
-&lt;section class=&quot;container&quot;&gt;
-      
-&lt;div id=&quot;card&quot;&gt;
-          
-&lt;figure class=&quot;front&quot;&gt;1&lt;/figure&gt;
-          
-&lt;figure class=&quot;back&quot;&gt;2&lt;/figure&gt;
-      
-&lt;/div&gt;
-  
-&lt;/section&gt;
-  
-</code></pre>
-
-<p>2) css</p>
-
-<pre><code class="language-css">  
-.container {
-      
-width: 200px;
-      
-height: 260px;
-      
-position: relative;
-      
-perspective: 800px;
-  
-}
-
-#card {
-      
-width: 100%;
-      
-height: 100%;
-      
-position: absolute;
-      
-transform-style: preserve-3d;
-      
-transition: transform 1s;
-  
-}
-
-#card figure {
-      
-display: block;
-      
-position: absolute;
-      
-width: 100%;
-      
-height: 100%;
-      
-backface-visibility: hidden;
-  
-}
-
-#card .front {
-      
-background: red;
-  
-}
-  
-#card .back {
-      
-background: blue;
-      
-transform: rotateY( 180deg );
-  
-}
-
-#card.flipped {
-      
-transform: rotateY( 180deg );
-  
-}
-  
-</code></pre>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://desandro.github.io/3dtransforms/docs/card-flip.html">Intro to CSS 3D transform &#8211; Card Flip</a></li>
-<li><a href="http://davidwalsh.name/css-flip">Create css flipping animation</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/css/">#css</a>,
-            
-                <a href="https://jeidee.github.iotags/flip-card/">#flip card</a>,
-            
-                <a href="https://jeidee.github.iotags/ionic/">#ionic</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-15T00:00:00Z">
-            15 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/13/erlang-kerl-ec82acec9aa9ed95b4-ec84a4ecb998-ebb08f-ebb284eca084-eab480eba6ac/">erlang kerl 사용해 설치 및 버전 관리</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>kerl을 사용해 여러 버전의 erlang을 설치한 후 원하는 버전을 활성화할 수 있다.</p>
-
-<p>자세한 내용은 다음 링크를 참고한다.</p>
-
-<ul>
-<li><a href="https://github.com/yrashk/kerl">kerl</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/kerl/">#kerl</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-13T00:00:00Z">
-            13 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/12/ubunt-open-file-max-ec8898eca095ed9598eab8b0/">ubunt open file max 수정하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>test 계정이 있다고 가정하고 다음과 같이 작업합니다.</p>
-
-<p>1) sysctl.conf 수정</p>
-
-<pre><code>  
-$ sudo vi /etc/sysctl.conf
-  
-fs.file-max = 1513687
-
-&amp;#8230;
-
-$ sudo sysctl -p
-  
-fs.file-max = 1513687
-  
-</code></pre>
-
-<p>2) limits.conf 수정</p>
-
-<pre><code>  
-$ sudo vi /etc/security/limits.conf
-  
-test soft nofile 100000
-  
-test hard nofile 100000
-  
-</code></pre>
-
-<p>3) reboot</p>
-
-<pre><code>  
-$ sudo reboot
-  
-&amp;#8230;
-  
-$ ulimit -n
-  
-100000
-  
-</code></pre>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://egloos.zum.com/mcchae/v/11136124">file의 open handle 개수 늘리기</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/open-file-max/">#open file max</a>,
-            
-                <a href="https://jeidee.github.iotags/ubuntu/">#ubuntu</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-12T00:00:00Z">
-            12 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/11/ssh-scpeb93b1ec9d84-ec9594ed98b8-ec9e85eba0a5-ec9786ec9db4-ec82acec9aa9ed9598eab8b0/">ssh, scp등을 암호 입력 없이 사용하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>다음의 순서로 진행한다.</p>
-
-<p>1) 키 생성</p>
-
-<pre><code>  
-$ ssh-keygen -t rsa
-  
-</code></pre>
-
-<p>키 생성할 때는 passphrase를 빈 값으로(아무 값도 입력하지 않고 엔터) 입력해야 함을 주의하자.</p>
-
-<p>2) 공개키 리포트 서버에 등록</p>
-
-<pre><code>  
-$ ssh-copy-id -i ~/.ssh/id_rsa.pub [remote-host]
-  
-</code></pre>
-
-<p>여기까지 하면 완료되었다.</p>
-
-<p>다음과 같이 암호 입력없이 정상 접속 되는지 확인해 본다.</p>
-
-<pre><code>  
-$ ssh [remote-host]
-  
-</code></pre>
-
-<p>만약 다음과 같은 에러가 출력된다면,</p>
-
-<pre><code>  
-Agent admitted failure to sign using the key.
-  
-</code></pre>
-
-<p>다음과 같이 ssh 사용을 활성화한다.</p>
-
-<pre><code>  
-$ ssh-add
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/scp/">#scp</a>,
-            
-                <a href="https://jeidee.github.iotags/ssh/">#ssh</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-11T00:00:00Z">
-            11 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/11/eca0a0ed82a8ec8aa4-ec82acec9aa9ebb295/">젠킨스 사용법</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="우분투에-설치">우분투에 설치</h2>
-
-<p><a href="http://pkg.jenkins-ci.org/debian/">공식홈 설치 안내</a>를 따라 다음과 같이 설치한다.</p>
-
-<p>1) 젠킨스 설치를 위한 데비안 패키지 리포지토리사용을 위해 다음과 같이 시스템에 키를 추가해 준다.</p>
-
-<pre><code>  
-wget -q -O &amp;#8211; http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add &amp;#8211;
-  
-</code></pre>
-
-<p>2) /etc/apt/sources.list 파일에 다음 내용을 추가해 준다.</p>
-
-<pre><code>  
-deb http://pkg.jenkins-ci.org/debian binary/
-  
-</code></pre>
-
-<p>2) 젠킨스를 설치한다.</p>
-
-<pre><code>  
-sudo apt-get update
-  
-sudo apt-get install jenkins
-  
-</code></pre>
-
-<h2 id="실행">실행</h2>
-
-<p>설치된 젠킨스를 다음과 같이 시작한다.</p>
-
-<pre><code>  
-sudo service jenkins start
-  
-</code></pre>
-
-<p>젠킨스의 초기 사용 포트는 8080이며 다음과 같이 변경할 수 있다.</p>
-
-<pre><code>  
-sudo vi /etc/default/jenkins
-
-&amp;#8230;
-
-HTTP_PORT=18080
-  
-</code></pre>
-
-<h2 id="기본-설정">기본 설정</h2>
-
-<p>젠킨스를 시작했으면 다음 URL을 입력해 젠킨스 관리페이지에 접속한다.</p>
-
-<p><a href="http://localhost:18080">http://localhost:18080</a></p>
-
-<p>1) 플러그인 업데이트</p>
-
-<p>관리페이지에 접속한 후 Jenkins 관리&gt; 플러그인 관리 메뉴에서 업데이트 가능한 플러그인을 업데이트한다.</p>
-
-<p>모든 업데이트가 끝났다면 재시작한다.</p>
-
-<p>2) 플러그인 추가</p>
-
-<p>만약 git을 사용한다면 Git Plugin을 추가로 설치해 준다.</p>
-
-<p>SSH를 사용해 배포하고자 할 경우 Publish over ssh 플러그인을 추가로 설치해 준다.</p>
-
-<p>3) jenkins 소유자 변경</p>
-
-<p>/etc/default/jenkins 파일을 열어 다음행을 수정한다.</p>
-
-<pre><code>  
-$JENKINS_USER=&quot;new&quot;
-  
-$JENKINS_GROUP=&quot;new&quot;
-  
-</code></pre>
-
-<p>다음으로 젠킨스의 home, webroot, logs 폴더의 소유자를 변경해 준다.</p>
-
-<pre><code>  
-sudo chown -R new:new /var/lib/jenkins
-  
-sudo chown -R new:new /var/cache/jenkins
-  
-sudo chown -R new:new /var/log/jenkins
-  
-</code></pre>
-
-<p>마지막으로 젠킨스를 재시작한다.</p>
-
-<pre><code>  
-sudo service jenkins restart
-  
-</code></pre>
-
-<h2 id="스케쥴">스케쥴</h2>
-
-<p>젠킨스의 작업 구성에서 빌드유발&gt;Build Periodically를 선택한 후 다음과 같이 입력한다.</p>
-
-<pre><code>  
-0 6 \* \* *
-  
-</code></pre>
-
-<p>매일 오전 6시에 실행</p>
-
-<h2 id="jenkins-유저-설정">jenkins 유저 설정</h2>
-
-<p>jenkins의 홈은 /var/lib/jenkins이다.</p>
-
-<p>.gitconfig 또는 .bashrc등의 프로필 설정이 필요할 경우, 해당 디렉토리에 파일을 생성하면 된다.</p>
-
-<p>jenkins 계정을 변경하기 위해서는 다음 문서를 참고하도록 한다.</p>
-
-<p><a href="http://stackoverflow.com/questions/6692330/how-to-run-jenkins-as-a-different-user">http://stackoverflow.com/questions/6692330/how-to-run-jenkins-as-a-different-user</a></p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://nabiro.tistory.com/277">hudson 또는 jenkins에서 예약작업 걸기</a></li>
-<li><a href="http://blog.manula.org/2013/03/running-jenkins-under-different-user-in.html">How to run Jenkins under a different user in Linux</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/ci/">#ci</a>,
-            
-                <a href="https://jeidee.github.iotags/jenkins/">#jenkins</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-11T00:00:00Z">
-            11 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/05/ejabberd-ed8ca8ed82b7-ed9b84ed82b9-ebb08f-ed9584ed84b0eba781/">ejabberd 패킷 후킹 및 필터링</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>ejabberd에서 패킷을 후킹한 후 필터링하고 싶다면 다음과 같이 커스텀 모듈을 생성해 처리하면 된다.</p>
-
-<p>다음 코드는 chat 메세지 패킷을 가로체 디버그 로그에 출력해 주는 소스이다.</p>
-
-<pre><code class="language-erlang">  
--module(mod\_packet\_hook).
-
--behaviour(gen_mod).
-
--export([start/2,
-      
-stop/1]).
-  
--export([on\_filter\_packet/1]).
-
--include(&quot;ejabberd.hrl&quot;).
-  
--include(&quot;jlib.hrl&quot;).
-  
--include(&quot;logger.hrl&quot;).
-
-start(\_Host, \_Opts) -&gt;
-      
-ejabberd\_hooks:add(filter\_packet, global, ?MODULE, on\_filter\_packet, 0),
-      
-ok.
-
-stop(_Host) -&gt;
-      
-ejabberd\_hooks:delete(filter\_packet, global, ?MODULE, on\_filter\_packet, 0),
-      
-ok.
-
-on\_filter\_packet({From, To, XML} = Packet) -&gt;
-      
-%% does something with a packet
-      
-%% should return modified Packet or atom \`drop\` to drop the packet
-      
-Type = proplists:get_value(&lt;&lt;&quot;type&quot;&gt;&gt;, XML#xmlel.attrs),
-      
-if
-          
-XML#xmlel.name =:= &lt;&lt;&quot;message&quot;&gt;&gt;,
-           
-Type =:= &lt;&lt;&quot;chat&quot;&gt;&gt;; Type =:= &lt;&lt;&quot;groupchat&quot;&gt;&gt; -&gt;
-              
-lists:foreach(fun(Item) -&gt;
-                  
-if
-                      
-Item#xmlel.name =:= &lt;&lt;&quot;body&quot;&gt;&gt; -&gt;
-                          
-lists:foreach(fun(Data) -&gt;
-                              
-{xmlcdata, Msg} = Data,
-                              
-?DEBUG(&quot;Msg is ~p~n&quot;, [Msg])
-                          
-end, Item#xmlel.children);
-                      
-true -&gt;
-                          
-ok
-                  
-end
-              
-end, XML#xmlel.children);
-          
-true -&gt;
-              
-ok
-      
-end,
-      
-?DEBUG(&quot;Packet:~p~n~nFrom:~p~nTo:~p~nXML:~p~n&quot;, [Packet, From, To, XML]),
-      
-Packet. %드롭하고 싶다면 drop atom을 반환한다.
-  
-</code></pre>
-
-<p>중요한 부분은 다음이다.</p>
-
-<pre><code class="language-erlang">      
-ejabberd\_hooks:add(filter\_packet, global, ?MODULE, on\_filter\_packet, 0),
-  
-</code></pre>
-
-<p>filter_packet이벤트를 모든 호스트(global)에 걸쳐 등록하고 핸들러를 on_filter_packet로 등록한다.</p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://stackoverflow.com/questions/1939879/how-to-filter-messages-in-ejabberd">How to filter messages in Ejabberd</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/hook/">#hook</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-05T00:00:00Z">
-            5 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/05/node-js-eab8b0ec8381ecb2ad-eb82a0ec94a8-api-ec82acec9aa9/">node.js 기상청 날씨 api 사용</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>기상청에서는 동 단위의 날씨 예보를 API로 제공하고 있다.</p>
-
-<p>기상청 API를 사용해서 동네 날씨 예보를 구하는 방법은 좌표를 사용하는 방법과 법정동코드를 사용하는 방법 두 가지가 있다.</p>
-
-<h2 id="날씨-조회">날씨 조회</h2>
-
-<p>이 중에서 좌표를 사용하는 방법을 알아보자.</p>
-
-<p>(좌표는 위경도가 아닌 구역 그리드 좌표인 것 같다.)</p>
-
-<p>먼저 도/시, 시/군/구, 읍/면/동 정보로 좌표를 구하는 방법은 다음과 같다.</p>
-
-<p>1) 도/시 정보 구하기</p>
-
-<p>다음 URL을 사용해서 json 포맷의 도/시 정보를 구한다.</p>
-
-<p><a href="http://www.kma.go.kr/DFSROOT/POINT/DATA/top.json.txt">http://www.kma.go.kr/DFSROOT/POINT/DATA/top.json.txt</a></p>
-
-<p>아래와 같은 json 포맷의 데이터를 구할 수 있다.</p>
-
-<pre><code>  
-[
-  
-{
-  
-code: &quot;11&quot;,
-  
-value: &quot;서울특별시&quot;
-  
-},
-  
-{
-  
-code: &quot;26&quot;,
-  
-value: &quot;부산광역시&quot;
-  
-},
-  
-</code></pre>
-
-<p>2) 서울특별시의 시/군/구 정보를 구하기</p>
-
-<p>다음 URL을 사용해서 json 포맷의 시/군/구 정보를 구한다.</p>
-
-<p>&#8216;<a href="http://www.kma.go.kr/DFSROOT/POINT/DATA/mdl.&amp;#8217">http://www.kma.go.kr/DFSROOT/POINT/DATA/mdl.&amp;#8217</a>; + topObj.code + &#8216;.json.txt&#8217;</p>
-
-<p>topObj.code는 서울특별시의 code인 11을 입력해 주면 된다.</p>
-
-<pre><code>  
-[
-  
-{
-  
-code: &quot;11110&quot;,
-  
-value: &quot;종로구&quot;
-  
-},
-  
-{
-  
-code: &quot;11140&quot;,
-  
-value: &quot;중구&quot;
-  
-},
-  
-</code></pre>
-
-<p>3) 종로구의 읍/면/동 정보를 구하기</p>
-
-<p>다음 URL을 사용해서 json 포맷의 읍/면/동 정보를 구한다.</p>
-
-<p>&#8216;<a href="http://www.kma.go.kr/DFSROOT/POINT/DATA/leaf.&amp;#8217">http://www.kma.go.kr/DFSROOT/POINT/DATA/leaf.&amp;#8217</a>; + midObj.code + &#8216;.json.txt&#8217;</p>
-
-<p>midObj.code에는 11110 을 입력해 주면 된다.</p>
-
-<pre><code>  
-[
-  
-{
-  
-code: &quot;1111051000&quot;,
-  
-value: &quot;청운동&quot;,
-  
-x: &quot;60&quot;,
-  
-y: &quot;127&quot;
-  
-},
-  
-</code></pre>
-
-<p>4) 청운동의 날씨를 구하기</p>
-
-<p>이제 다음 URL을 사용해서 xml 포맷의 날씨 정보를 구한다.</p>
-
-<p>&#8216;<a href="http://www.kma.go.kr/wid/queryDFS.jsp?gridx=&amp;#8217">http://www.kma.go.kr/wid/queryDFS.jsp?gridx=&amp;#8217</a>; + leafObj.x + &#8216;&amp;gridy=&#8217; + leafObj.y</p>
-
-<p>leafObj.x와 leafObj.y에는 각각 이전 단계에서 구한 x, y값인 60, 127을 입력해 주면 된다.</p>
-
-<pre><code>  
-&lt;wid&gt;
-  
-&lt;header&gt;
-  
-&lt;tm&gt;201503051400&lt;/tm&gt;
-  
-&lt;ts&gt;4&lt;/ts&gt;
-  
-&lt;x&gt;60&lt;/x&gt;
-  
-&lt;y&gt;127&lt;/y&gt;
-  
-&lt;/header&gt;
-  
-&lt;body&gt;
-  
-&lt;data seq=&quot;0&quot;&gt;
-  
-&lt;hour&gt;18&lt;/hour&gt;
-  
-&lt;day&gt;0&lt;/day&gt;
-  
-&lt;temp&gt;4.0&lt;/temp&gt;
-  
-&lt;tmx&gt;-999.0&lt;/tmx&gt;
-  
-&lt;tmn&gt;-999.0&lt;/tmn&gt;
-  
-&lt;sky&gt;2&lt;/sky&gt;
-  
-&lt;pty&gt;0&lt;/pty&gt;
-  
-&lt;wfKor&gt;구름 조금&lt;/wfKor&gt;
-  
-&lt;wfEn&gt;Partly Cloudy&lt;/wfEn&gt;
-  
-&lt;pop&gt;10&lt;/pop&gt;
-  
-&lt;r12&gt;0.0&lt;/r12&gt;
-  
-&lt;s12&gt;0.0&lt;/s12&gt;
-  
-&lt;ws&gt;3.0&lt;/ws&gt;
-  
-&lt;wd&gt;7&lt;/wd&gt;
-  
-&lt;wdKor&gt;북서&lt;/wdKor&gt;
-  
-&lt;wdEn&gt;NW&lt;/wdEn&gt;
-  
-&lt;reh&gt;25&lt;/reh&gt;
-  
-&lt;r06&gt;0.0&lt;/r06&gt;
-  
-&lt;s06&gt;0.0&lt;/s06&gt;
-  
-&lt;/data&gt;
-  
-</code></pre>
-
-<p>wid&gt;body에는 data의 배열이 포함되는데 seq는 예보 시간대를 의미한다.(현재 시간 이후, 0시 기준 3시간 간격, 발표 시각에 따라 총 15 ~ 18판의 data)</p>
-
-<h2 id="기상청-날씨-데이터-정의">기상청 날씨 데이터 정의</h2>
-
-<p>각 항목에 대해 살펴보면 다음과 같다.</p>
-
-<p>1) header</p>
-
-<p>| 항목 | 설명                                              | 비고                                                                                              |
-| &ndash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; |
-| tm | 발표시각:yyyymmddhhMM                               | <a href="http://www.kma.go.kr/images/weather/lifenindustry/dongnaeforecast_rss.pdf">기상청 동네예보 RSS 정의</a> 참고 |
-| ts | 시간 step: 동네예보 중 오늘오후(1)/내일오전(2)/내일오후(3)/모레오전(4) |                                                                                                 |
-| x  | x좌표                                             |                                                                                                 |
-| y  | y좌표                                             |                                                                                                 |</p>
-
-<p>2) body</p>
-
-<table>
-<thead>
-<tr>
-<th>항목</th>
-<th>설명</th>
-<th>비고</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>hour</td>
-<td>동네예보 3시간단위</td>
-<td>18시 point값 적용요소 : 기온, 풍향, 풍속, 습도 15시~18시 구간 적용요소 : 하늘상태, 강수상태, 강수확률</td>
-</tr>
-
-<tr>
-<td>day</td>
-<td>오늘(0), 내일(1), 모레(2)</td>
-<td></td>
-</tr>
-
-<tr>
-<td>temp</td>
-<td>현재시간온도</td>
-<td></td>
-</tr>
-
-<tr>
-<td>tmx</td>
-<td>최고온도(값이 없을 경우 -999.0)</td>
-<td></td>
-</tr>
-
-<tr>
-<td>tmn</td>
-<td>최저온도(값이 없을 경우 -999.0)</td>
-<td></td>
-</tr>
-
-<tr>
-<td>sky</td>
-<td>하늘상태코드</td>
-<td>1:맑음, 2:구름조금, 3:구름많음, 4:흐림</td>
-</tr>
-
-<tr>
-<td>pty</td>
-<td>강수상태코드</td>
-<td>0:없음, 1:비, 2:비/눈, 3:눈/비, 4:눈</td>
-</tr>
-
-<tr>
-<td>wkKor</td>
-<td>날씨한국어</td>
-<td>맑음, 구름 조금, 구름 많음, 흐림, 비, 눈/비, 눈</td>
-</tr>
-
-<tr>
-<td>wfEn</td>
-<td>날씨영어</td>
-<td>Clear, Partly Cloudy, Mostly Cloudy, Cloudy, Rain, Snow/Rain, Snow</td>
-</tr>
-
-<tr>
-<td>pop</td>
-<td>강수확률%</td>
-<td></td>
-</tr>
-
-<tr>
-<td>r12</td>
-<td>12시간 예상강수량</td>
-<td><a href="http://www.kma.go.kr/images/weather/lifenindustry/dongnaeforecast_rss.pdf">기상청 동네예보 RSS 정의</a> 참고</td>
-</tr>
-
-<tr>
-<td>s12</td>
-<td>12시간 예상적설량</td>
-<td><a href="http://www.kma.go.kr/images/weather/lifenindustry/dongnaeforecast_rss.pdf">기상청 동네예보 RSS 정의</a> 참고</td>
-</tr>
-
-<tr>
-<td>ws</td>
-<td>풍속(m/s)</td>
-<td>반올림처리</td>
-</tr>
-
-<tr>
-<td>wd</td>
-<td>풍향</td>
-<td>풍향(8방): 국문8방위/영문8방위, 0~7(북, 북동, 동, 남동, 남, 남서, 서, 북서)</td>
-</tr>
-
-<tr>
-<td>wdKor</td>
-<td>풍향한국어</td>
-<td></td>
-</tr>
-
-<tr>
-<td>wdEn</td>
-<td>풍향영어</td>
-<td></td>
-</tr>
-
-<tr>
-<td>reh</td>
-<td>습도%</td>
-<td></td>
-</tr>
-
-<tr>
-<td>r06</td>
-<td>6시간 예상강수량</td>
-<td><a href="http://www.kma.go.kr/images/weather/lifenindustry/dongnaeforecast_rss.pdf">기상청 동네예보 RSS 정의</a> 참고</td>
-</tr>
-
-<tr>
-<td>s06</td>
-<td>6시간 예상적설량</td>
-<td><a href="http://www.kma.go.kr/images/weather/lifenindustry/dongnaeforecast_rss.pdf">기상청 동네예보 RSS 정의</a> 참고</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="node-js로-작성하기">node.js로 작성하기</h2>
-
-<p>전체 코드는 다음과 같다.</p>
-
-<p>weather.js</p>
-
-<pre><code class="language-javascript">  
-var http = require('http');
-  
-var async = require('async');
-  
-var querystring = require('querystring');
-  
-var xml2js = require('xml2js');
-
-var http_get = function(url, data, callback) {
-
-var query = querystring.stringify(data);
-      
-if (query !== '')
-          
-url = url + '&amp;' + query;
-
-//console.log(url);
-
-http.get(url, function(res) {
-              
-var body = '';
-              
-res.setEncoding('utf8');
-
-res.on('readable', function() {
-                  
-var chunk = this.read() || '';
-
-body += chunk;
-              
-});
-
-res.on('end', function() {
-                  
-callback(body);
-              
-});
-
-res.on('error', function(e) {
-                  
-console.log('error', e.message);
-              
-});
-          
-});
-  
-};
-
-// 기상청 API를 사용
-  
-// http://cloudless.tistory.com/128
-  
-// 한국 도시와 법정동을 사용해 X, Y 좌표 구한다.
-  
-// top : 도, mid : 시/군/구, leaf : 읍/면/동
-  
-var getKoreanWeather = function(top, mid, leaf, callback) {
-
-async.waterfall([
-          
-// 도/시 검색
-          
-function(callback) {
-              
-http_get('http://www.kma.go.kr/DFSROOT/POINT/DATA/top.json.txt', {}, function(resData) {
-                  
-var topObj = JSON.parse(resData);
-                  
-for (var i = 0; i &lt; topObj.length; ++i) {
-                      
-if (topObj[i].value.indexOf(top) &gt;= 0) {
-                          
-callback(null, topObj[i]);
-                          
-return;
-                      
-}
-                  
-}
-                  
-callback('Can not find top', top);
-              
-});
-          
-},
-          
-// 시/구/군 검색
-          
-function(topObj, callback) {
-              
-http_get('http://www.kma.go.kr/DFSROOT/POINT/DATA/mdl.' + topObj.code + '.json.txt', {}, function(resData) {
-                  
-var midObj = JSON.parse(resData);
-                  
-if (mid === '') {
-                      
-callback(null, topObj, midObj[0]);
-                      
-return;
-                  
-} else {
-                      
-for (var i = 0; i &lt; midObj.length; ++i) {
-                          
-if (midObj[i].value.indexOf(mid) &gt;= 0) {
-                              
-callback(null, topObj, midObj[i]);
-                              
-return;
-                          
-}
-                      
-}
-                  
-}
-                  
-callback('Can not find mid', topObj, mid);
-              
-});
-          
-},
-          
-// 읍/면/동 검색
-          
-function(topObj, midObj, callback) {
-              
-http_get('http://www.kma.go.kr/DFSROOT/POINT/DATA/leaf.' + midObj.code + '.json.txt', {}, function(resData) {
-                  
-var leafObj = JSON.parse(resData);
-                  
-if (leaf === '') {
-                      
-callback(null, topObj, midObj, leafObj[0]);
-                      
-return;
-                  
-} else {
-                      
-for (var i = 0; i &lt; leafObj.length; ++i) {
-                          
-if (leafObj[i].value.indexOf(leaf) &gt;= 0) {
-                              
-callback(null, topObj, midObj, leafObj[i]);
-                              
-return;
-                          
-}
-                      
-}
-                  
-}
-                  
-callback('Can not find leaf', topObj, midObj, leaf);
-              
-});
-          
-},
-          
-// 날씨 검색
-          
-function(topObj, midObj, leafObj, callback) {
-              
-http_get('http://www.kma.go.kr/wid/queryDFS.jsp?gridx=' + leafObj.x + '&amp;gridy=' + leafObj.y, {}, function(resData) {
-                  
-xml2js.parseString(resData, function(err, obj) {
-                      
-if (err) {
-                          
-callback(err, topObj, midObj, leafObj, null);
-                      
-} else {
-                          
-callback(null, topObj, midObj, leafObj, obj.wid.body[0].data[0]);
-                      
-}
-                  
-});
-              
-});
-          
-}
-      
-], function(error, topObj, midObj, leafObj, weather) {
-          
-callback(error, topObj, midObj, leafObj, weather);
-      
-});
-  
-};
-
-exports.getKoreanWeather = getKoreanWeather;
-  
-</code></pre>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp">기상청 RSS 인터넷 서비스</a></li>
-<li><a href="http://www.kma.go.kr/images/weather/lifenindustry/dongnaeforecast_rss.pdf">기상청 동네예보 RSS 정의</a></li>
-<li><a href="http://cloudless.tistory.com/128">기상청 날씨 API 사용하기</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/open-api/">#open api</a>,
-            
-                <a href="https://jeidee.github.iotags/%EB%82%A0%EC%94%A8api/">#날씨API</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-05T00:00:00Z">
-            5 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/04/ejabberd-external-component-ec97b0eb8f99/">ejabberd external component 연동</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="xmpp-component-개요">xmpp component 개요</h2>
-
-<p>xmpp에는 external component 관련 공식 프로토콜인 <a href="http://xmpp.org/extensions/xep-0114.html">Jabber Component Protocol</a>이 있다.</p>
-
-<p>Jabber Component Protocol은 외부 컴포넌트를 XMPP서버와 연동하기 위한 규약을 제안하는데 크게 accept와 connect에 대한 XML 스키마와 handshake flow를 명세하고 있다.</p>
-
-<p>xmpp의 external component는 프로토콜만 준수한다면 어떤 언어를 사용해서도 구현할 수 있다. 3rd-party 컴포넌트를 ejabberd와 연동하는 방법은 <a href="https://www.ejabberd.im/tutorials-transports">Install Components and Transports to othe networks</a> 문서를 참고하도록 한다.</p>
-
-<h2 id="echo-bot-component-만들어서-연동해-보기">echo-bot component 만들어서 연동해 보기</h2>
-
-<p>node-xmpp-component 모듈을 사용해서 간단한 에코봇을 컴포넌트로 만들어 ejabberd와 연동해 보도록 하자.</p>
-
-<p>우선 다음과 같이 node-xmpp-component와 node-xmpp-core를 설치한다.</p>
-
-<pre><code>  
-$ npm install node-xmpp-component
-  
-$ npm install node-xmpp-core
-  
-</code></pre>
-
-<p>다음과 같이 에코 봇을 작성한다.</p>
-
-<pre><code class="language-javascript">  
-var Component = require('node-xmpp-component')
-      
-, argv = process.argv
-      
-, ltx = require('node-xmpp-core').ltx
-
-if (argv.length &lt; 6) {
-      
-console.error('Usage: node echo_bot.js &lt;my-jid&gt; &lt;my-password&gt; ' +
-      
-'&lt;server&gt; &lt;port&gt;')
-      
-process.exit(1)
-  
-}
-
-var component = new Component({
-      
-jid: argv[2],
-      
-password: argv[3],
-      
-host: argv[4],
-      
-port: Number(argv[5]),
-      
-reconnect: true
-  
-})
-
-component.on('online', function() {
-      
-console.log('Component is online')
-
-component.on('stanza', function(stanza) {
-          
-console.log('Received stanza: ', stanza)
-          
-if (stanza.is('message') &amp;&amp; stanza.attrs.type === 'chat') {
-              
-var i = parseInt(stanza.getChildText('body'))
-              
-var reply = new ltx.Element('message', { to: stanza.attrs.from, from: stanza.attrs.to, type: 'chat' })
-              
-reply.c('body').t(stanza)
-              
-component.send(reply)
-          
-}
-      
-})
-  
-})
-
-component.on('offline', function () {
-      
-console.log('Component is offline')
-  
-})
-
-component.on('connect', function () {
-      
-console.log('Component is connected')
-  
-})
-
-component.on('reconnect', function () {
-      
-console.log('Component reconnects …')
-  
-})
-
-component.on('disconnect', function (e) {
-      
-console.log('Component is disconnected', e)
-  
-})
-
-component.on('error', function(e) {
-      
-console.error(e)
-      
-process.exit(1)
-  
-})
-
-process.on('exit', function () {
-      
-component.end()
-  
-})
-  
-</code></pre>
-
-<p>ejabberd.yml을 다음과 같이 수정한다.</p>
-
-<pre><code>  
-##
+  </div>
+  <div class="col-md-4">
     
-\## ejabberd_service: Interact with external components (transports, &amp;#8230;)
-    
-##
-    
-&amp;#8211;
-       
-port: 8888
-       
-module: ejabberd_service
-       
-access: all
-       
-shaper_rule: fast
-       
-ip: &quot;127.0.0.1&quot;
-       
-hosts:
-         
-&quot;foo.hello.world&quot;:
-           
-password: &quot;foo&quot;
+<aside class="l-sidebar">
 
-</code></pre>
-
-<p>ejabberd를 시작한 후 다음과 같이 컴포넌트를 시작한다.</p>
-
-<pre><code>  
-$ ejabberdctl start
-  
-$ node echo_bot.js foo.hello.world foo localhost 8888
-  
-</code></pre>
-
-<p>정상적으로 연결이 될 경우 다음과 같은 메세지가 출력된다.</p>
-
-<pre><code>  
-Component is connected
-  
-Component is online
-  
-</code></pre>
-
-<p>이 상태에서 XMPP 클라이언트로 접속한 후 foo.hello.world에게 메세지를 전송해 보자.</p>
-
-<p>문제가 없을 경우 보낸 메세지가 다시 내게로 돌아오게 된다.</p>
-
-<h2 id="활용">활용</h2>
-
-<p>xmpp component의 활용은 다양하게 활용될 수 있다. 다른 메신저 서비스에 메세지 라우팅을 하거나, 날씨/사전/FAQ등의 봇 서비스에 활용될 수도 있다.</p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="https://www.ejabberd.im/tutorials-transports">Install Components and Transports to Other Networks</a></li>
-<li><a href="https://www.ejabberd.im/node/5134">Configuring Ejabberd to use an external component (with XEP-0114)</a></li>
-<li><a href="http://xmpp.org/extensions/xep-0114.html">Jabber Component Protocol</a></li>
-<li><a href="https://github.com/node-xmpp/node-xmpp-component">node-xmpp-component</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/bot/">#bot</a>,
-            
-                <a href="https://jeidee.github.iotags/component/">#component</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-04T00:00:00Z">
-            4 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/04/erlangeab3bc-java-ec97b0eb8f99/">erlang과 java 연동</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>eclipse의 maven 프로젝트 기준으로 설명한다.</p>
-
-<h2 id="jinterface-dependency-추가">jinterface dependency 추가</h2>
-
-<p>먼저 pom.xml에 다음과 같이 dependency를 추가해 준다.</p>
-
-<pre><code>    
-&lt;dependencies&gt;
-      
-&lt;dependency&gt;
-          
-&lt;groupId&gt;org.erlang.otp&lt;/groupId&gt;
-          
-&lt;artifactId&gt;jinterface&lt;/artifactId&gt;
-          
-&lt;version&gt;1.5.3.1&lt;/version&gt;
-      
-&lt;/dependency&gt;
-    
-&lt;/dependencies&gt;
-  
-</code></pre>
-
-<p>maven install을 수행해 jinterface-1.5.3.1.jar 를 다운로드 받는다.</p>
-
-<h2 id="erl-shell-시작">erl shell 시작</h2>
-
-<p>erl shell은 노드명과 매직쿠키를 지정해서 다음과 같이 실행해 준다.</p>
-
-<pre><code>  
-erl -sname enode -setcookie erlang
-  
-</code></pre>
-
-<p>또는</p>
-
-<pre><code>  
-erl -name enode -setcookie erlang
-  
-</code></pre>
-
-<h2 id="java를-사용해-접속-테스트">java를 사용해 접속 테스트</h2>
-
-<p>eclipse에서 ErlConnection 클래스를 추가하고 다음과 같이 작성한다.</p>
-
-<pre><code class="language-java">  
-import com.ericsson.otp.erlang.OtpConnection;
-  
-import com.ericsson.otp.erlang.OtpErlangObject;
-  
-import com.ericsson.otp.erlang.OtpPeer;
-  
-import com.ericsson.otp.erlang.OtpSelf;
-
-public class ErlConnection {
-
-private static OtpConnection conn;
-       
-public OtpErlangObject received;
-       
-private final String peer;
-       
-private final String cookie;
-
-public static void main(String []args){
-           
-new ErlConnection(&quot;enode&quot;,&quot;erlang&quot;);
-       
-}
-
-public ErlConnection(String \_peer, String \_cookie) {
-            
-peer = _peer;
-            
-cookie = _cookie;
-            
-connect();
-
-/\*Do Calls to Rpc methods and then close the connection\*/
-            
-disconnect();
-
-}
-
-private void connect() {
-         
-System.out.print(&quot;Please wait, connecting to &quot;+peer+&quot;&amp;#8230;.n&quot;);
-
-String javaClient =&quot;java&quot;;
-         
-try {
-           
-OtpSelf self = new OtpSelf(javaClient, cookie.trim());
-           
-OtpPeer other = new OtpPeer(peer.trim());
-           
-conn = self.connect(other);
-           
-System.out.println(&quot;Connection Established with &quot;+peer+&quot;n&quot;);
-         
-}
-         
-catch (Exception exp) {
-           
-System.out.println(&quot;connection error is :&quot; + exp.toString());
-           
-exp.printStackTrace();
-         
-}
-
-}
-
-public void disconnect() {
-         
-System.out.println(&quot;Disconnecting&amp;#8230;.&quot;);
-         
-if(conn != null){
-           
-conn.close();
-         
-}
-         
-System.out.println(&quot;Successfuly Disconnected&quot;);
-       
-}
-
-}
-  
-</code></pre>
-
-<p>접속하려는 erl 노드가 동일한 네트워크에 없고 -name 으로 노드명이 지정되었을 경우 다음과 같이 코드를 수정한다. (리모트 노드의 도메인이 foo.bar라고 가정한 경우)</p>
-
-<pre><code class="language-java">       
-public static void main(String []args){
-           
-new ErlConnection(&quot;enode@foo.bar&quot;,&quot;erlang&quot;);
-       
-}
-  
-</code></pre>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://erlangcentral.org/wiki/index.php?title=How_to_communicate_java_and_erlang">How to communicate java and erlang</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/jinterface/">#jinterface</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-04T00:00:00Z">
-            4 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-
-	<nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/posts/page/12/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 13 of 20</span>
-	
-	    <a class="older-posts" href="/posts/page/14/">Older Posts &rarr;</a>
-	
-</nav>
-
-</main>
-
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
     </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
 
-</body>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
 

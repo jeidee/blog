@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/index.xml">
+
+<link rel="canonical" href="https://jeidee.github.io/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
+    
+    
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
+
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlang-1ebb0b1eba78c-tcp-eb8f99ec8b9c-eca091ec868d-ecb298eba6ac/">erlang 1백만 tcp 동시 접속 처리</a></h2>
+  </header>
+
+  
+  <div class="summary">http://www.erlang-factory.com/upload/presentations/558/efsf2012-whatsapp-scaling.pdf</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlang-1ebb0b1eba78c-tcp-eb8f99ec8b9c-eca091ec868d-ecb298eba6ac/" title="erlang 1백만 tcp 동시 접속 처리">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlang-game-server-programming/">erlang game server programming</a></h2>
+  </header>
+
+  
+  <div class="summary">http://www.diva-portal.org/smash/get/diva2:641311/FULLTEXT01.pdf
+http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlang-game-server-programming/" title="erlang game server programming">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlang-key-value-ed8a9ced948c-eba6acec8aa4ed8ab8ec9790ec849c-keyeba19c-value-ecb0beeab8b0/">erlang key-value 튜플 리스트에서 key로 value 찾기</a></h2>
+  </header>
+
+  
+  <div class="summary">proplists 모듈의 get_value/2를 사용하면 된다.
+proplists:get_value(Key, List).  예를 들어 다음과 같이 과일의 수량정보를 갖는 리스트가 있다고 하자.
+List = [{apple, 10}, {orange, 20}].  위 리스트에서 apple을 key로 사용해서 apple의 개수를 얻으려면 다음과 같이 하면 된다.
+proplists:get_value(apple, List).  튜플 자체를 구하고자 한다면 다음과 같이 한다.
+proplists:lookup(apple, List).  get_value/2와 lookup/2은 매치하는 튜플 중에서 첫 번째 엔트리만 반환하기 때문에 모두 찾고자 한다면 get_all_values/2나 lookup_all/2을 사용해야 한다. 단 결과는 리스트로 반환된다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlang-key-value-ed8a9ced948c-eba6acec8aa4ed8ab8ec9790ec849c-keyeba19c-value-ecb0beeab8b0/" title="erlang key-value 튜플 리스트에서 key로 value 찾기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlang-otp-eb9494ec9e90ec9db8-ecbba8ec8589/">erlang otp 디자인 컨셉</a></h2>
+  </header>
+
+  
+  <div class="summary">supervision tree erlang otp 디자인 컨셉의 기본은 supervision tree이다.
+supervision tree는 supervisor(감독 프로세스)와 worker(실제 업무 수행 프로세스) 기반으로 모델링한 프로세스 구조이다.
+ worker는 계산 등의 실제 업무를 수행하는 프로세스이다. supervisor는 worker의 행동을 모니터하는 프로세스이며 worker에 이상을 감지하면 worker를 재시작할 수 있다. supervision tree는 worker와 supervisor의 계층적인 구조를 갖고, 내고장성(fault-tolerant) 소프트웨어 디자인을 가능케 한다.    위 그림은 Supervision Tree이며 박스는 supervisor를, 원은 worker를 나타낸다.
+behaviours supervision tree에서 대부분의 프로세스는 동일한 패턴에 동일한 구조를 갖는다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlang-otp-eb9494ec9e90ec9db8-ecbba8ec8589/" title="erlang otp 디자인 컨셉">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlang-timestamp-ec96bbeab8b0/">erlang timestamp 얻기</a></h2>
+  </header>
+
+  
+  <div class="summary">os모듈의 timestamp/0 함수를 사용한다.
+{MegaSecs, Secs, MicroSecs} = os:timestamp().  MegaSecs는 seconds의 (1000 * 1000)배이다.
+위의 결과값을 milliseconds로 변환하기 위해서는 microseconds를 구해서 1000으로 나눠줘야 한다.
+((MegaSecs\*1000000 + Secs) \* 1000000 + MicroSecs)/1000.  소숫점 이하를 버리고자 한다면 div 연산을 사용해서 몫만 구하면 된다.
+((MegaSecs\*1000000 + Secs) \* 1000000 + MicroSecs) div 1000.  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlang-timestamp-ec96bbeab8b0/" title="erlang timestamp 얻기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlang-ebacb8ec9e90ec97b4-ed8faceba7b7-ed9b84-binaryeba19c-ebb380ed9998/">erlang 문자열 포맷 후 binary로 변환</a></h2>
+  </header>
+
+  
+  <div class="summary">c의 sprintf() 같은 문자열 포맷 함수인 io_lib:format()을 사용하면 &#8220;Count : 10&#8221; 과 같은 문자열을 binary로 만들 수 있다.
+Count = 20. Result = io_lib:format(&quot;Count : ~p&quot;, [Count]). Bin = binary:list\_to\_bin(Result).  또는 간략하게 다음과 같이 줄일 수도 있다.
+Bin = binary:list\_to\_bin(io_lib:format(&quot;Count : ~p&quot;, [Count]).  erlang에서 문자열이 곧 리스트이기 때문에 binary 모듈의 list_to_bin()함수의 매개변수로 리스트 대신 문자열을 입력해도 된다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlang-ebacb8ec9e90ec97b4-ed8faceba7b7-ed9b84-binaryeba19c-ebb380ed9998/" title="erlang 문자열 포맷 후 binary로 변환">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlang-ebacb8ec9e90ec97b4-ed8faceba7b7ed8c85/">erlang 문자열 포맷팅</a></h2>
+  </header>
+
+  
+  <div class="summary">문자열 포맷하기 위해서는 io_lib:format/2 함수를 사용하면 된다.
+하지만 다음과 같이 바로 사용할 수 없는 형태이다.
+17&gt; Str = io_lib:format(&quot;name=~p&amp;age=~p&quot;, [&quot;romeo&quot;, 10]). [110,97,109,101,61,&quot;\&quot;romeo\&quot;&quot;,38,97,103,101,61,&quot;10&quot;] 18&gt; Str. [110,97,109,101,61,&quot;\&quot;romeo\&quot;&quot;,38,97,103,101,61,&quot;10&quot;] 19&gt;  이럴 경우 lists모듈의 flatten/1 함수를 사용한다.
+19&gt; Result = lists:flatten(Str). &quot;name=\&quot;romeo\&quot;&amp;age=10&quot;  한 줄로 줄여서 다음과 같이 사용해도 된다.
+20&gt; lists:flatten(io_lib:format(&quot;name=~p&amp;age=~p&quot;, [&quot;romeo&quot;, 10])). &quot;name=\&quot;romeo\&quot;&amp;age=10&quot;  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlang-ebacb8ec9e90ec97b4-ed8faceba7b7ed8c85/" title="erlang 문자열 포맷팅">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlang-ec84a4ecb998/">erlang 설치</a></h2>
+  </header>
+
+  
+  <div class="summary">erlang/otp 설치 준비 우선 git repository에서 clone합니다.
+ git clone git://github.com/erlang/otp.git  ubuntu : aptitude는 다음과 같이 설치합니다.
+ sudo apt-get install aptitude  erlang/otp의 기본 설치를 원할 경우
+ubuntu
+ aptitude install autoconf libncurses-dev build-essential  centos 6.*
+ yum install ncurses-devel  wxWidgets과 함께 설치를 원할 경우
+ aptitude install libwxgtk2.8-dev libgl1-mesa-dev libglu1-mesa-dev libpng3  jinterface와 함께 설치를 원할 경우
+ aptitude install sun-java6-jre sun-java6-jdk sun-java6-bin  다른 c++ 프로젝트와 함께 설치를 원할 경우</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlang-ec84a4ecb998/" title="erlang 설치">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlang-ec9d98-caseec9980-if/">erlang 의 case와 if</a></h2>
+  </header>
+
+  
+  <div class="summary">erlang에서는 조건 분기문에 해당하는 case와 if가 다른 언어와는 형태가 조금 다르다.
+처음 보면 어떻게 사용해야 할지 감이 오지 않는데, 알고 보면 다른 언어와 크게 다르지도 않다는 것을 알 수 있다.
+erlang의 if와 case는 가드(guard)를 이용한 구문으로 되어 있는데, if와 case를 살펴보기 전에 먼저 가드를 간략히 살펴보자.
+guard 가드는 true와 false 애텀으로 평가받는 식이며 다음과 같은 형식으로 사용할 수 있다.
+max(X, Y) when X &gt; Y -&gt; X; max(X, Y) -&gt; Y.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlang-ec9d98-caseec9980-if/" title="erlang 의 case와 if">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlangotp-application/">erlang/otp application</a></h2>
+  </header>
+
+  
+  <div class="summary">application concept 어떤 특정 기능을 수행하는 코드를 작성할 때, 우리는 다른 시스템에서 재사용될 수 있으며, 유닛으로써 시작과 중지할 수 있는 컴포넌트인 application에 코드를 작성할 수 있길 원한다.
+이것을 위해 Erlang/OTP에서는 application callback module을 제공한다. application이 어떻게 시작되고 중지될 수 있는지에 대해서는 application callback moudule과 함께 설명하도록 하겠다.
+application 명세는 application resource file에 포함하는데, 해당 명세에는 application을 구성하는 모듈과 callback module의 이름이 명시되어 있다.
+코드 패키징을 위한 Erlang/OTP 도구인 systool을 사용한다면(자세한 내용은 Release참조) , 각각의 application 코드들은 미리 정의된 디렉토리 구조(뒤에 설명함)를 따르는 구분된 디렉토리에 위치해야 한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlangotp-application/" title="erlang/otp application">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li><a href="/page/18/">Previous</a></li>
+    
+
+    
+    <li><a href="/page/20/">Next</a></li>
+    
+
+  </ul>
+</nav>
+
+
+
+  </div>
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

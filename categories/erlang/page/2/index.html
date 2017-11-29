@@ -1,1121 +1,436 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/categories/erlang/index.xml">
 
-  	<meta property="og:title" content=" Erlang &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/categories/erlang/" />
+<link rel="canonical" href="https://jeidee.github.io/categories/erlang/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Erlang - Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
     
     
-    <meta property="og:type" content="website" />
     
 
-  <title>
-     Erlang &middot;  Erlang &amp; Go
-  </title>
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
 
-    <meta name="description" content="" />
+          
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-        <link href="https://jeidee.github.io/categories/erlang/index.xml" rel="alternate" type="application/rss+xml" title="Erlang &middot; Erlang &amp; Go" />
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/categories/erlang/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
-</head>
-<body class="nav-closed">
-
-  
-
-
- <div class="site-wrapper">
-
-
-
-
-	<header class="main-header tag-head no-cover">
-
-    <nav class="main-nav overlay clearfix">
-      
-      
-        
-          <a class="menu-button icon-feed" href="https://jeidee.github.io/categories/erlang/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
         </div>
-</div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
+      </nav>
+    </header>
 
-<main id="content" class="content" role="main">
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+    <header class="page-header">
+      <h1>Erlang</h1>
+    </header>
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/categories/erlang/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 2 of 5</span>
-	
-	    <a class="older-posts" href="/categories/erlang/page/3/">Older Posts &rarr;</a>
-	
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-11-11T00:00:00JST">Nov 11, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/11/11/erlang-gen_servereba5bc-eab5aced9884ed959c-ed9484eba19cec84b8ec8aa4-eca285eba38ced9598eab8b0/">erlang gen_server를 구현한 프로세스 종료하기</a></h2>
+  </header>
+
+  
+  <div class="summary">gen_server를 구현한 프로세스를 종료하려면 callback함수에서 {stop, Reason, NewState}을 반환하면 된다.
+일반적으로는 다음과 같은 패턴으로 구현한다.
+handle_cast({stop, Reason}, State) -&gt; {stop, Reason, State}; &amp;#8230; do_stop(Pid) -&gt; gen_server:cast(Pid, {stop, {shutdown, &lt;&lt;&quot;Reason string&amp;#8230;&quot;&gt;&gt;}}).  handle_cast/2에서 {stop, Reason, NewState}가 아니라 {stop, Reason}만 반환할 경우,
+bad_return_value에 따른 프로세스 크래시가 발생하므로 주의한다.
+supervisor에 의해 관리되는 프로세스라면 크래시된 프로세스는 정책에 따라 재시작 될 것이다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/11/11/erlang-gen_servereba5bc-eab5aced9884ed959c-ed9484eba19cec84b8ec8aa4-eca285eba38ced9598eab8b0/" title="erlang gen_server를 구현한 프로세스 종료하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-11-06T00:00:00JST">Nov 6, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/11/06/erlang-rebarec9d98-project-templateec9d84-ed999cec9aa9ed959c-application-ebbc88eb8c80-eba78ceb93a4eab8b0/">erlang rebar의 project template을 활용한 application 뼈대 만들기</a></h2>
+  </header>
+
+  
+  <div class="summary">rebar project template rebar의 project template 기능을 활용해 erlang application 프로젝트를 손쉽게 생성하는 방법을 살펴보자.
+Richard Jones의 포스트를 보고 rebar 실습을 따라해 보니, 현재의 erlang(17.5)과 rebar(2.6.1) 버전으로는 원활하게 진행되지 않았다.
+구글링 중에 rebar의 프로젝트 템플릿을 활용하는 방법을 찾게 되었는데 몇 부분만 수정하여 문제없이 사용할 수 있었다.
+해당 Repository를 Fork해서 오류부분을 수정해 보았다.
+https://github.com/jeidee/rebar-project-template
+사용법은 다음과 같다.
+rebar 설치 우분투라면 다음과 같이 설치한다.
+ $ sudo apt-get install rebar  rebar repository에서 소스를 내려 받아 빌드해서 사용해도 된다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/11/06/erlang-rebarec9d98-project-templateec9d84-ed999cec9aa9ed959c-application-ebbc88eb8c80-eba78ceb93a4eab8b0/" title="erlang rebar의 project template을 활용한 application 뼈대 만들기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-08-25T00:00:00JST">Aug 25, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/08/25/erlang-ec8998ec9790ec849c-observereba5bc-ec82acec9aa9ed95b4-ec9b90eab2a9-eb85b8eb939c-eca091ec868d/">erlang 쉘에서 observer를 사용해 원격 노드 접속</a></h2>
+  </header>
+
+  
+  <div class="summary">먼저 A와 B, 두 노드가 있고, A에서 B노드에 연결한다고 가정한다.
+두 노드를 연결하기 위해서는 다음 조건을 우선 만족시켜야 한다.
+1) short name을 사용하는 경우
+ A와 B노드는 동일한 네트워크에 있고, 방화벽을 통하지 않는다.
+ 방화벽을 통해 접속할 경우 B노드의 다음 TCP포트(아래 예에서는 47242)가 Inbound 오픈되어 있어야 한다.
+   B&gt; net_adm:names(); {ok, [{&quot;ejabberd&quot;, 47242}, &amp;#8230;]}   A와 B노드의 erlang secretkey(cookie)는 동일해야 한다.   $ erl -sname A@node1 -setcookie secret $ erl -sname B@node2 -setcookie secret A&gt; erlang:get_cookie().</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/08/25/erlang-ec8998ec9790ec849c-observereba5bc-ec82acec9aa9ed95b4-ec9b90eab2a9-eb85b8eb939c-eca091ec868d/" title="erlang 쉘에서 observer를 사용해 원격 노드 접속">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-07-24T00:00:00JST">Jul 24, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/07/24/erlang-mumble-server-maunder/">erlang mumble server &amp;#8211; maunder</a></h2>
+  </header>
+
+  
+  <div class="summary">erlang으로 구현된 mumble서버 중에 maunder라고 있다.
+2년전 커밋이 마지막이다.
+erlang 17버전에서 빌드하고 실행하면 application:start()할 때 오류가 발생한다.
+원인은 erlang 17버전에서 public_key application이 asn1을 의존하기 때문인데,
+maunder.erl 소스를 다음과 같이 수정하고 다시 빌드하면 문제가 해결된다.
+ %% @spec start() -&gt; ok %% @doc Start the maunder server. start() -&gt; ensure_started(sasl), ensure_started(crypto), ensure_started(asn1), ensure\_started(public\_key), ensure_started(ssl), application:start(maunder).  기동시 eaddrinuse 관련 에러가 발생하는 경우,
+maunder_app.erl의 DEF_PORT값(기본값은 8080)을 변경한 후 다시 빌드하면 된다.
+매번 포트를 변경할 때마다 재빌드하는게 번거로울 경우 빌드후 생성되는 ebin/maunder.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/07/24/erlang-mumble-server-maunder/" title="erlang mumble server &amp;#8211; maunder">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-18T00:00:00JST">Mar 18, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/18/erlangeab3bc-cc-ed86b5ed95a9ed9598eab8b0-erlang-nif/">erlang과 c/c&#43;&#43; 통합하기 &amp;#8211; erlang nif</a></h2>
+  </header>
+
+  
+  <div class="summary"> erlang과 다른 언어를 통합하려면 포트를 사용하면 된다.
+포트의 경우erlang 프로세스에서 다른 언어로 작성된 프로세스를 자식 프로세스로 생성하고, 두 프로세스간 입출력 스트림을 파이프로 연결해 통신하는 방법이라고 할 수 있다.
+c언어의 경우 포트 이외에 R14부터 채용된 erlang nif을 사용해서 통합할 수 있는데, 포트보다 사용방법이 간단하다. (c++의 경우 wrapper인 nifpp를 사용해서 구현할 수 있다.)
+자세한 내용은 하단의 링크를 참고하도록 한다.
+참고  Erlang NIFs How to integrate C with Erlang program example or Erlang NIFs A c NIF wrapper for erlang to support aes/ecb/pkcs5padding add star Erlang과 C의 연결 C++11 Wrapper for Erlang NIF API/nifpp  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/18/erlangeab3bc-cc-ed86b5ed95a9ed9598eab8b0-erlang-nif/" title="erlang과 c/c&#43;&#43; 통합하기 &amp;#8211; erlang nif">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-13T00:00:00JST">Mar 13, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/13/erlang-kerl-ec82acec9aa9ed95b4-ec84a4ecb998-ebb08f-ebb284eca084-eab480eba6ac/">erlang kerl 사용해 설치 및 버전 관리</a></h2>
+  </header>
+
+  
+  <div class="summary">kerl을 사용해 여러 버전의 erlang을 설치한 후 원하는 버전을 활성화할 수 있다.
+자세한 내용은 다음 링크를 참고한다.
+ kerl  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/13/erlang-kerl-ec82acec9aa9ed95b4-ec84a4ecb998-ebb08f-ebb284eca084-eab480eba6ac/" title="erlang kerl 사용해 설치 및 버전 관리">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-04T00:00:00JST">Mar 4, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/04/erlangeab3bc-java-ec97b0eb8f99/">erlang과 java 연동</a></h2>
+  </header>
+
+  
+  <div class="summary">eclipse의 maven 프로젝트 기준으로 설명한다.
+jinterface dependency 추가 먼저 pom.xml에 다음과 같이 dependency를 추가해 준다.
+ &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;org.erlang.otp&lt;/groupId&gt; &lt;artifactId&gt;jinterface&lt;/artifactId&gt; &lt;version&gt;1.5.3.1&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt;  maven install을 수행해 jinterface-1.5.3.1.jar 를 다운로드 받는다.
+erl shell 시작 erl shell은 노드명과 매직쿠키를 지정해서 다음과 같이 실행해 준다.
+ erl -sname enode -setcookie erlang  또는
+ erl -name enode -setcookie erlang  java를 사용해 접속 테스트 eclipse에서 ErlConnection 클래스를 추가하고 다음과 같이 작성한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/04/erlangeab3bc-java-ec97b0eb8f99/" title="erlang과 java 연동">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-03T00:00:00JST">Mar 3, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/">erlang eunit 테스트 파일 분리와 테스트 셋</a></h2>
+  </header>
+
+  
+  <div class="summary">테스트 모듈 분리 eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.
+테스트 대상 모듈을 fib.erl 이라고 가정한다.
+-module(fib). -export([fib/1]). fib(0) -&gt; 1; fib(1) -&gt; 1; fib(N) when N &gt; 1 -&gt; fib(N-1) + fib(N-2).  테스트 모듈은 fib_tests.erl 로 작성한다.
+-module(fib_tests). -include_lib(&quot;eunit/include/eunit.hrl&quot;). fib0_test() -&gt; ?assert(fib:fib(0) =:= 1). fib1_test() -&gt; ?assert(fib:fib(1) =:= 1). fib2_test() -&gt; ?assert(fib:fib(2) =:= 2). fib3_test() -&gt; ?</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/" title="erlang eunit 테스트 파일 분리와 테스트 셋">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-24T00:00:00JST">Feb 24, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/24/erlang-eunit/">erlang eunit 기초</a></h2>
+  </header>
+
+  
+  <div class="summary">eunit 기초 eunit은 최신 버전(erlang/otp 17, eshell 6.3)에 eunit-2.2.9 버전이 포함되어 있다.
+eunit을 사용하려면 다음과 같은 순서로 진행한다.
+ 테스트 코드 작성 eunit 모듈을 사용해 테스트 수행  테스트 코드 작성하는 방법 먼저 살펴 보도록 한다.
+테스트 코드 작성 먼저 eunit 헤더 파일을 include한다.
+-module(test). -include_lib(&quot;eunit/include/eunit.hrl&quot;).  그런 후 다음과 같이 테스트 코드를 작성한다.
+reverse\_nil\_test() -&gt; [] = lists:reverse([]). reverse\_one\_test() -&gt; [1] = lists:reverse([1]). reverse\_two\_test() -&gt; [2,1] = lists:reverse([1,2]). length_test() -&gt; ?</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/24/erlang-eunit/" title="erlang eunit 기초">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-14T00:00:00JST">Feb 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-14/">mnesia 기초 1/4</a></h2>
+  </header>
+
+  
+  <div class="summary">레코드 레코드는 튜플의 특별한 형태로 메타데이터를 정의할 수 있는 튜플이라고 할 수 있다.
+레코드 정의는 다음과 같이 할 수 있다.
+ -record(레코드명, {컬럼명 = 기본값 :: 데이터타입, &amp;#8230;.}).  레코드명과 컬럼명은 atom 타입이며 기본값은 값을 지정하지 않았을 때 입력되는 기본값이다.
+:: 뒤의 데이터타입은 컬럼의 데이터타입을 기술할 수 있고 다음과 같은 형태로 정의할 수 있다.
+기본 데이터타입  binary() : 바이너리 데이터타입 string() : 문자열 데이터타입 integer() : 정수형 데이터타입 &#8230;  이 외에도 다음과 같이 직접 데이터타입을 정의해서 사용할 수 있다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-14/" title="mnesia 기초 1/4">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li><a href="/categories/erlang/">Previous</a></li>
+    
+
+    
+    <li><a href="/categories/erlang/page/3/">Next</a></li>
+    
+
+  </ul>
 </nav>
 
-	</div>
 
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/11/11/erlang-gen_servereba5bc-eab5aced9884ed959c-ed9484eba19cec84b8ec8aa4-eca285eba38ced9598eab8b0/">erlang gen_server를 구현한 프로세스 종료하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>gen_server를 구현한 프로세스를 종료하려면 callback함수에서 {stop, Reason, NewState}을 반환하면 된다.</p>
 
-<p>일반적으로는 다음과 같은 패턴으로 구현한다.</p>
-
-<pre><code class="language-erlang">  
-handle_cast({stop, Reason}, State) -&gt;
+  </div>
+  <div class="col-md-4">
     
-{stop, Reason, State};
-  
-&amp;#8230;
-
-do_stop(Pid) -&gt;
-    
-gen_server:cast(Pid, {stop, {shutdown, &lt;&lt;&quot;Reason string&amp;#8230;&quot;&gt;&gt;}}).
-  
-</code></pre>
-
-<p>handle_cast/2에서 {stop, Reason, NewState}가 아니라 {stop, Reason}만 반환할 경우,</p>
-
-<p>bad_return_value에 따른 프로세스 크래시가 발생하므로 주의한다.</p>
-
-<p>supervisor에 의해 관리되는 프로세스라면 크래시된 프로세스는 정책에 따라 재시작 될 것이다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/gen_server/">#gen_server</a>,
-            
-                <a href="https://jeidee.github.iotags/stop/">#stop</a>,
-            
-        
-        <time class="post-date" datetime="2015-11-11T00:00:00Z">
-            11 Nov 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/11/06/erlang-rebarec9d98-project-templateec9d84-ed999cec9aa9ed959c-application-ebbc88eb8c80-eba78ceb93a4eab8b0/">erlang rebar의 project template을 활용한 application 뼈대 만들기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="rebar-project-template">rebar project template</h2>
-
-<p>rebar의 project template 기능을 활용해 erlang application 프로젝트를 손쉽게 생성하는 방법을 살펴보자.</p>
-
-<p><a href="http://www.metabrew.com/article/erlang-rebar-tutorial-generating-releases-upgrades">Richard Jones의 포스트</a>를 보고 rebar 실습을 따라해 보니, 현재의 erlang(17.5)과 rebar(2.6.1) 버전으로는 원활하게 진행되지 않았다.</p>
-
-<p>구글링 중에 <a href="https://github.com/robspassky/rebar-project-template">rebar의 프로젝트 템플릿을 활용하는 방법</a>을 찾게 되었는데 몇 부분만 수정하여 문제없이 사용할 수 있었다.</p>
-
-<p>해당 Repository를 Fork해서 오류부분을 수정해 보았다.</p>
-
-<p><a href="https://github.com/jeidee/rebar-project-template">https://github.com/jeidee/rebar-project-template</a></p>
-
-<p>사용법은 다음과 같다.</p>
-
-<h3 id="rebar-설치">rebar 설치</h3>
-
-<p>우분투라면 다음과 같이 설치한다.</p>
-
-<pre><code>  
-$ sudo apt-get install rebar
-  
-</code></pre>
-
-<p><a href="https://github.com/rebar/rebar">rebar repository</a>에서 소스를 내려 받아 빌드해서 사용해도 된다.</p>
-
-<p>또는 다음 링크를 통해 직접 다운로드해서 사용할 수 있다.</p>
-
-<p><a href="https://github.com/rebar/rebar/wiki/rebar">https://github.com/rebar/rebar/wiki/rebar</a></p>
-
-<h3 id="rebar-project-template-설치">rebar project template 설치</h3>
-
-<pre><code>  
-$ git clone https://github.com/jeidee/rebar-project-template.git ~/.rebar/templates
-  
-</code></pre>
-
-<h3 id="프로젝트-생성">프로젝트 생성</h3>
-
-<p>myapp이라는 프로젝트를 생성한다고 해 보자.</p>
-
-<pre><code>  
-$ rebar create template=project projectid=myapp
-  
-$ cd myapp
-  
-</code></pre>
-
-<h3 id="빌드-및-실행">빌드 및 실행</h3>
-
-<pre><code>  
-$ make &amp;&amp; make console
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/rebar/">#rebar</a>,
-            
-        
-        <time class="post-date" datetime="2015-11-06T00:00:00Z">
-            6 Nov 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/08/25/erlang-ec8998ec9790ec849c-observereba5bc-ec82acec9aa9ed95b4-ec9b90eab2a9-eb85b8eb939c-eca091ec868d/">erlang 쉘에서 observer를 사용해 원격 노드 접속</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>먼저 A와 B, 두 노드가 있고, A에서 B노드에 연결한다고 가정한다.</p>
-
-<p>두 노드를 연결하기 위해서는 다음 조건을 우선 만족시켜야 한다.</p>
-
-<p>1) short name을 사용하는 경우</p>
-
-<ul>
-<li><p>A와 B노드는 동일한 네트워크에 있고, 방화벽을 통하지 않는다.</p></li>
-
-<li><p>방화벽을 통해 접속할 경우 B노드의 다음 TCP포트(아래 예에서는 47242)가 Inbound 오픈되어 있어야 한다.</p></li>
-</ul>
-
-<pre><code>  
-B&gt; net_adm:names();
-  
-{ok, [{&quot;ejabberd&quot;, 47242}, &amp;#8230;]}
-  
-</code></pre>
-
-<ul>
-<li>A와 B노드의 erlang secretkey(cookie)는 동일해야 한다.</li>
-</ul>
-
-<pre><code>  
-$ erl -sname A@node1 -setcookie secret
-  
-$ erl -sname B@node2 -setcookie secret
-
-A&gt; erlang:get_cookie().
-  
-secret
-  
-</code></pre>
-
-<p>2) long name을 사용하는 경우</p>
-
-<ul>
-<li>A와 B노드에는 FQDN이 설정되어 있고 A노드에서 DNS를 통해 B노드의 다음 포트로 접속이 가능해야 한다.</li>
-</ul>
-
-<pre><code>  
-B@hello.world.com&gt; net_adm:names();
-  
-{ok, [{&quot;ejabberd&quot;, 47242}, &amp;#8230;]}
-  
-</code></pre>
-
-<ul>
-<li>A와 B노드의 erlang secretkey(cookie)는 동일해야 한다.</li>
-</ul>
-
-<p>위의 조건을 만족할 경우 다음과 같이 A노드에서 B노드에 연결가능한지 확인한다.</p>
-
-<pre><code>  
-A&gt; net_adm:ping('B@node2').
-  
-pong
-  
-A@hello.world&gt; net_adm:ping('B@foo.bar').
-  
-pong
-  
-</code></pre>
-
-<p>정상적으로 pong이 수신될 경우 다음과 같이 observer를 시작한후 Nodes 메뉴에서 connect node를 하면 된다.</p>
-
-<pre><code>  
-A&gt; observer:start().
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/observer/">#observer</a>,
-            
-        
-        <time class="post-date" datetime="2015-08-25T00:00:00Z">
-            25 Aug 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/07/24/erlang-mumble-server-maunder/">erlang mumble server &amp;#8211; maunder</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>erlang으로 구현된 mumble서버 중에 <a href="https://github.com/tcoram/maunder">maunder</a>라고 있다.</p>
-
-<p>2년전 커밋이 마지막이다.</p>
-
-<p>erlang 17버전에서 빌드하고 실행하면 application:start()할 때 오류가 발생한다.</p>
-
-<p>원인은 erlang 17버전에서 public_key application이 asn1을 의존하기 때문인데,</p>
-
-<p>maunder.erl 소스를 다음과 같이 수정하고 다시 빌드하면 문제가 해결된다.</p>
-
-<pre><code>  
-%% @spec start() -&gt; ok
-  
-%% @doc Start the maunder server.
-  
-start() -&gt;
-      
-ensure_started(sasl),
-      
-ensure_started(crypto),
-      
-ensure_started(asn1),
-      
-ensure\_started(public\_key),
-      
-ensure_started(ssl),
-      
-application:start(maunder).
-  
-</code></pre>
-
-<p>기동시 eaddrinuse 관련 에러가 발생하는 경우,</p>
-
-<p>maunder_app.erl의 DEF_PORT값(기본값은 8080)을 변경한 후 다시 빌드하면 된다.</p>
-
-<p>매번 포트를 변경할 때마다 재빌드하는게 번거로울 경우 빌드후 생성되는 ebin/maunder.app에 listen_port 설정을 다음과 같이 추가하면 된다.</p>
-
-<pre><code>                
-{env,[{version,{1,&lt;&lt;&quot;maunder&quot;&gt;&gt;,&lt;&lt;&quot;linux&quot;&gt;&gt;,&lt;&lt;&quot;erlangish&quot;&gt;&gt;}},
-                      
-{listen_port,19980},
-  
-</code></pre>
-
-<p>하지만 소스상의 문제인지 erlang이 버전업하면서 생긴 문제인지 maunder_app.erl의 get_app_env/2 함수가 제대로 동작하지 않는다.</p>
-
-<p>정확하게 말해 application:get_application()의 값이 undefined로 반환되기 때문인데,</p>
-
-<p>이 부분은 추후 파악되면 업데이트하기로 하겠다.</p>
-
-<p>임시 방편으로 소스를 다음과 같이 수정하면 된다.</p>
-
-<pre><code>  
-get\_app\_env(Opt, Default) -&gt;
-  
-%% case application:get\_env(application:get\_application(), Opt) of
-      
-case application:get_env(maunder, Opt) of
-  
-</code></pre>
-
-<p>매번 빌드할 때 마다 maunder.app.src의 내용으로 ebin/maunder.app 파일 내용이 교체되므로 주의가 필요하다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/maunder/">#maunder</a>,
-            
-                <a href="https://jeidee.github.iotags/mumble/">#mumble</a>,
-            
-        
-        <time class="post-date" datetime="2015-07-24T00:00:00Z">
-            24 Jul 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/18/erlangeab3bc-cc-ed86b5ed95a9ed9598eab8b0-erlang-nif/">erlang과 c/c&#43;&#43; 통합하기 &amp;#8211; erlang nif</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>erlang과 다른 언어를 통합하려면 포트를 사용하면 된다.</p>
-
-<p>포트의 경우erlang 프로세스에서 다른 언어로 작성된 프로세스를 자식 프로세스로 생성하고, 두 프로세스간 입출력 스트림을 파이프로 연결해 통신하는 방법이라고 할 수 있다.</p>
-
-<p>c언어의 경우 포트 이외에 R14부터 채용된 erlang nif을 사용해서 통합할 수 있는데, 포트보다 사용방법이 간단하다. (c++의 경우 wrapper인 <a href="https://github.com/goertzenator/nifpp">nifpp</a>를 사용해서 구현할 수 있다.)</p>
-
-<p>자세한 내용은 하단의 링크를 참고하도록 한다.</p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://www.erlang.org/doc/tutorial/nif.html">Erlang NIFs</a></li>
-<li><a href="http://erlycoder.com/59/erlang-how-to-integrate-c-with-erlang-program-example-or-erlang-nifs-native-implemented-functions-us">How to integrate C with Erlang program example or Erlang NIFs</a></li>
-<li><a href="http://x3ge.com/?p=998">A c NIF wrapper for erlang to support aes/ecb/pkcs5padding add star</a></li>
-<li><a href="http://blog.daum.net/funfunction/19">Erlang과 C의 연결</a></li>
-<li><a href="https://github.com/goertzenator/nifpp">C++11 Wrapper for Erlang NIF API/nifpp</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/nif/">#nif</a>,
-            
-                <a href="https://jeidee.github.iotags/nifpp/">#nifpp</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-18T00:00:00Z">
-            18 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/13/erlang-kerl-ec82acec9aa9ed95b4-ec84a4ecb998-ebb08f-ebb284eca084-eab480eba6ac/">erlang kerl 사용해 설치 및 버전 관리</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>kerl을 사용해 여러 버전의 erlang을 설치한 후 원하는 버전을 활성화할 수 있다.</p>
-
-<p>자세한 내용은 다음 링크를 참고한다.</p>
-
-<ul>
-<li><a href="https://github.com/yrashk/kerl">kerl</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/kerl/">#kerl</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-13T00:00:00Z">
-            13 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/04/erlangeab3bc-java-ec97b0eb8f99/">erlang과 java 연동</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>eclipse의 maven 프로젝트 기준으로 설명한다.</p>
-
-<h2 id="jinterface-dependency-추가">jinterface dependency 추가</h2>
-
-<p>먼저 pom.xml에 다음과 같이 dependency를 추가해 준다.</p>
-
-<pre><code>    
-&lt;dependencies&gt;
-      
-&lt;dependency&gt;
-          
-&lt;groupId&gt;org.erlang.otp&lt;/groupId&gt;
-          
-&lt;artifactId&gt;jinterface&lt;/artifactId&gt;
-          
-&lt;version&gt;1.5.3.1&lt;/version&gt;
-      
-&lt;/dependency&gt;
-    
-&lt;/dependencies&gt;
-  
-</code></pre>
-
-<p>maven install을 수행해 jinterface-1.5.3.1.jar 를 다운로드 받는다.</p>
-
-<h2 id="erl-shell-시작">erl shell 시작</h2>
-
-<p>erl shell은 노드명과 매직쿠키를 지정해서 다음과 같이 실행해 준다.</p>
-
-<pre><code>  
-erl -sname enode -setcookie erlang
-  
-</code></pre>
-
-<p>또는</p>
-
-<pre><code>  
-erl -name enode -setcookie erlang
-  
-</code></pre>
-
-<h2 id="java를-사용해-접속-테스트">java를 사용해 접속 테스트</h2>
-
-<p>eclipse에서 ErlConnection 클래스를 추가하고 다음과 같이 작성한다.</p>
-
-<pre><code class="language-java">  
-import com.ericsson.otp.erlang.OtpConnection;
-  
-import com.ericsson.otp.erlang.OtpErlangObject;
-  
-import com.ericsson.otp.erlang.OtpPeer;
-  
-import com.ericsson.otp.erlang.OtpSelf;
-
-public class ErlConnection {
-
-private static OtpConnection conn;
-       
-public OtpErlangObject received;
-       
-private final String peer;
-       
-private final String cookie;
-
-public static void main(String []args){
-           
-new ErlConnection(&quot;enode&quot;,&quot;erlang&quot;);
-       
-}
-
-public ErlConnection(String \_peer, String \_cookie) {
-            
-peer = _peer;
-            
-cookie = _cookie;
-            
-connect();
-
-/\*Do Calls to Rpc methods and then close the connection\*/
-            
-disconnect();
-
-}
-
-private void connect() {
-         
-System.out.print(&quot;Please wait, connecting to &quot;+peer+&quot;&amp;#8230;.n&quot;);
-
-String javaClient =&quot;java&quot;;
-         
-try {
-           
-OtpSelf self = new OtpSelf(javaClient, cookie.trim());
-           
-OtpPeer other = new OtpPeer(peer.trim());
-           
-conn = self.connect(other);
-           
-System.out.println(&quot;Connection Established with &quot;+peer+&quot;n&quot;);
-         
-}
-         
-catch (Exception exp) {
-           
-System.out.println(&quot;connection error is :&quot; + exp.toString());
-           
-exp.printStackTrace();
-         
-}
-
-}
-
-public void disconnect() {
-         
-System.out.println(&quot;Disconnecting&amp;#8230;.&quot;);
-         
-if(conn != null){
-           
-conn.close();
-         
-}
-         
-System.out.println(&quot;Successfuly Disconnected&quot;);
-       
-}
-
-}
-  
-</code></pre>
-
-<p>접속하려는 erl 노드가 동일한 네트워크에 없고 -name 으로 노드명이 지정되었을 경우 다음과 같이 코드를 수정한다. (리모트 노드의 도메인이 foo.bar라고 가정한 경우)</p>
-
-<pre><code class="language-java">       
-public static void main(String []args){
-           
-new ErlConnection(&quot;enode@foo.bar&quot;,&quot;erlang&quot;);
-       
-}
-  
-</code></pre>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://erlangcentral.org/wiki/index.php?title=How_to_communicate_java_and_erlang">How to communicate java and erlang</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/jinterface/">#jinterface</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-04T00:00:00Z">
-            4 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/">erlang eunit 테스트 파일 분리와 테스트 셋</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="테스트-모듈-분리">테스트 모듈 분리</h2>
-
-<p>eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.</p>
-
-<p>테스트 대상 모듈을 fib.erl 이라고 가정한다.</p>
-
-<pre><code class="language-erlang">  
--module(fib).
-
--export([fib/1]).
-
-fib(0) -&gt; 1;
-  
-fib(1) -&gt; 1;
-  
-fib(N) when N &gt; 1 -&gt; fib(N-1) + fib(N-2).
-  
-</code></pre>
-
-<p>테스트 모듈은 fib_tests.erl 로 작성한다.</p>
-
-<pre><code class="language-erlang">  
--module(fib_tests).
-  
--include_lib(&quot;eunit/include/eunit.hrl&quot;).
-
-fib0_test() -&gt;
-      
-?assert(fib:fib(0) =:= 1).
-
-fib1_test() -&gt;
-      
-?assert(fib:fib(1) =:= 1).
-
-fib2_test() -&gt;
-      
-?assert(fib:fib(2) =:= 2).
-
-fib3_test() -&gt;
-      
-?assert(fib:fib(3) =:= 3).
-  
-</code></pre>
-
-<p>주목할 것은 테스트 모듈의 파일명이다.</p>
-
-<p>테스트 대상 모듈명에 _tests를 붙이는 것으로 끝이다.(_test가 아니라 _tests이다)</p>
-
-<p>컴파일한 후 다음과 같이 테스트를 실행할 수 있다.</p>
-
-<pre><code class="language-erlang">  
-&gt; eunit:test(fib).
-  
-</code></pre>
-
-<h2 id="배치-테스트">배치 테스트</h2>
-
-<p>fib_tests.erl의 테스트 코드를 보면 4개의 테스트를 각각의 테스트함수로 생성했다.</p>
-
-<p>대부분의 경우 여러 개의 테스트케이스를 하나의 셋으로 묶어 테스트함수를 구성하는데,</p>
-
-<p>다음과 같이 작성하면 된다.</p>
-
-<pre><code class="language-erlang">  
-fib\_test\_() -&gt;
-      
-[?_assert(fib:fib(0) =:= 1),
-       
-?_assert(fib:fib(1) =:= 1),
-       
-?_assert(fib:fib(2) =:= 2),
-       
-?_assert(fib:fib(3) =:= 3),
-       
-?\_assertException(error, function\_clause, fib:fib(-1))
-       
-].
-  
-</code></pre>
-
-<p>테스트 함수명을 _test&#095; 로 끝나도록 작성하고, 테스트에 쓰일 매크로는 ?assert 대신 ?_assert를 사용하면 된다.</p>
-
-<p>또한 테스트케이스(매크로)는 리스트로 작성해야 한다.</p>
-
-<p>또 하나 주목할 것은 ?_assertException 매크로이다.</p>
-
-<p>fib:fib(-1)의 경우 입력값 -1에 매치하는 함수가 정의되어 있지 않으므로 다음과 같은 예외가 발생하게 된다.</p>
-
-<pre><code>  
-** exception error: no function clause matching fib:fib(-1) (/home/gss.dev/workspace/helloerl/src/fib.erl, line 5)
-  
-</code></pre>
-
-<p>이와 같은 예외가 발생했는지 확인해 주는 매크로가 바로 ?_assertException 매크로 이다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/eunit/">#eunit</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-03T00:00:00Z">
-            3 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/24/erlang-eunit/">erlang eunit 기초</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="eunit-기초">eunit 기초</h2>
-
-<p>eunit은 최신 버전(erlang/otp 17, eshell 6.3)에 eunit-2.2.9 버전이 포함되어 있다.</p>
-
-<p>eunit을 사용하려면 다음과 같은 순서로 진행한다.</p>
-
-<ol>
-<li>테스트 코드 작성</li>
-<li>eunit 모듈을 사용해 테스트 수행</li>
-</ol>
-
-<p>테스트 코드 작성하는 방법 먼저 살펴 보도록 한다.</p>
-
-<h2 id="테스트-코드-작성">테스트 코드 작성</h2>
-
-<p>먼저 eunit 헤더 파일을 include한다.</p>
-
-<pre><code class="language-erlang">  
--module(test).
-  
--include_lib(&quot;eunit/include/eunit.hrl&quot;).
-  
-</code></pre>
-
-<p>그런 후 다음과 같이 테스트 코드를 작성한다.</p>
-
-<pre><code class="language-erlang">  
-reverse\_nil\_test() -&gt; [] = lists:reverse([]).
-  
-reverse\_one\_test() -&gt; [1] = lists:reverse([1]).
-  
-reverse\_two\_test() -&gt; [2,1] = lists:reverse([1,2]).
-  
-length_test() -&gt; ?assert(length([1,2,3]) =:= 3).
-  
-</code></pre>
-
-<p>테스트 함수는 반드시 _test()로 끝나야 하며 매개변수는 없어야 한다. 이와 같이 작성하고 난 후 eunit모듈의 test/1 함수를 사용해 테스트를 수행할 수 있다.</p>
-
-<h2 id="eunit-모듈을-사용해-테스트-수행">eunit 모듈을 사용해 테스트 수행</h2>
-
-<p>erlang shell을 실행한 후 test 모듈을 컴파일 한다.</p>
-
-<pre><code class="language-erlang">  
-Eshell V6.3 (abort with ^G)
-  
-1&gt; c(test).
-  
-{ok,test}
-  
-2&gt; eunit:test(test).
-    
-All 4 tests passed.
-  
-ok
-  
-</code></pre>
-
-<h2 id="assert-macros">Assert macros</h2>
-
-<p>eunit에는 다양한 매크로를 지원하는데 그 중 ASSERT 매크로만 살펴보도록 한다.</p>
-
-<h3 id="assert-boolexpr">assert(BoolExpr)</h3>
-
-<p>BoolExpr 식이 true가 아닐 경우 예외를 발생시킨다.</p>
-
-<pre><code class="language-erlang">  
-?assert(f(X, Y) =:= [])
-  
-</code></pre>
-
-<p>assert 매크로는 unit test이외에 어떤 프로그램에서도 사용될 수 있다.</p>
-
-<pre><code class="language-erlang">  
-some\_recursive\_function(X, Y, Z) -&gt;
-      
-?assert(X + Y &gt; Z),
-      
-&amp;#8230;
-  
-</code></pre>
-
-<h3 id="assertnot-boolexpr">assertNot(BoolExpr)</h3>
-
-<p>assert(not (BoolExpr))과 동일하다.</p>
-
-<h3 id="assertmatch-guardedpattern-expr">assertMatch(GuardedPattern, Expr)</h3>
-
-<p>Expr의 평가 결과가 GuaredPattern과 매치하지 않을 경우 예외를 발생시킨다.</p>
-
-<pre><code class="language-erlang">  
-?assertMatch({found, {fred, _}}, lookup(bloggs, Table))
-  
-?assertMatch([X|\_] when &gt; 0, binary\_to_list(B))
-  
-</code></pre>
-
-<h3 id="assertequal-expect-expr">assertEqual(Expect, Expr)</h3>
-
-<p>Expr 평가 결과가 Expect와 동일하지 않을 경우 예외를 발생시킨다.</p>
-
-<pre><code class="language-erlang">  
-?assertEqual(&quot;b&quot; ++ &quot;a&quot;, lists:reverse(&quot;ab&quot;))
-  
-?assertEqual(foo(X), bar(Y))
-  
-</code></pre>
-
-<h3 id="그-외">그 외</h3>
-
-<p>assertException/3, assertError/2, assertExit/2, assertThrow/2 매크로가 있다.</p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://www.erlang.org/doc/apps/eunit/chapter.html">Erlang E<strong>strong text</strong>Unit</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/eunit/">#eunit</a>,
-            
-                <a href="https://jeidee.github.iotags/unit-test/">#unit test</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-24T00:00:00Z">
-            24 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/14/mnesia-eab8b0ecb488-14/">mnesia 기초 1/4</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="레코드">레코드</h2>
-
-<p>레코드는 튜플의 특별한 형태로 메타데이터를 정의할 수 있는 튜플이라고 할 수 있다.</p>
-
-<p>레코드 정의는 다음과 같이 할 수 있다.</p>
-
-<pre><code>      
--record(레코드명, {컬럼명 = 기본값 :: 데이터타입, &amp;#8230;.}).
-  
-</code></pre>
-
-<p>레코드명과 컬럼명은 atom 타입이며 기본값은 값을 지정하지 않았을 때 입력되는 기본값이다.</p>
-
-<p>:: 뒤의 데이터타입은 컬럼의 데이터타입을 기술할 수 있고 다음과 같은 형태로 정의할 수 있다.</p>
-
-<h3 id="기본-데이터타입">기본 데이터타입</h3>
-
-<ul>
-<li>binary() : 바이너리 데이터타입</li>
-<li>string() : 문자열 데이터타입</li>
-<li>integer() : 정수형 데이터타입</li>
-<li>&#8230;</li>
-</ul>
-
-<p>이 외에도 다음과 같이 직접 데이터타입을 정의해서 사용할 수 있다.</p>
-
-<pre><code class="language-erlang">      
--type fruit_type() :: apple | orange | banana.
-  
-</code></pre>
-
-<p>또는 다음과 같이 특정 레코드를 데이터타입으로 정의할 수 있다.</p>
-
-<pre><code class="language-erlang">      
--type my_record() :: #record{}.
-  
-</code></pre>
-
-<h2 id="테이블의-키">테이블의 키?</h2>
-
-<p>테이블의 키는 record정의시 첫번째로 정의한 필드가 된다. employee 테이블은 emp_no, dept 테이블은 id, 등이다.</p>
-
-<p>키는 해당 테이블에서 유일하며 동일한 키로 데이터가 입력되면 기존 데이터를 갱신하게 된다.</p>
-
-<h2 id="테이블의-모든-키를-검색하는-방법">테이블의 모든 키를 검색하는 방법</h2>
-
-<pre><code class="language-erlang">      
-mnesia:dirty\_all\_keys(테이블명).
-  
-</code></pre>
-
-<p>예를 들어, ejabberd에서 vcard_search 테이블의 모든 키를 조회한다고 하면, 다음과 같이 수행할 수 있다.</p>
-
-<pre><code class="language-erlang">      
-mnesia:dirty\_all\_keys(vcard_search).
-
-[{&lt;&lt;&quot;test1&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;},
-       
-{&lt;&lt;&quot;test2&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;}]
-  
-</code></pre>
-
-<p>키가 term의 list로 반환되었다.</p>
-
-<h2 id="테이블에서-특정-키의-데이터를-조회하는-방법">테이블에서 특정 키의 데이터를 조회하는 방법</h2>
-
-<pre><code class="language-erlang">      
-mnesia:dirty_read(테이블명, 키).
-  
-</code></pre>
-
-<p>예를 들어, ejabberd에서 vcard_search 테이블의 특정키 데이터를 조회하는 방법은 다음과 같다.</p>
-
-<pre><code class="language-erlang">      
-mnesia:dirty\_read(vcard\_search, {&lt;&lt;&quot;test1&quot;&gt;&gt;, &lt;&lt;&quot;localhost&quot;&gt;&gt;}).
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/mnesia/">#mnesia</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-14T00:00:00Z">
-            14 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-
-	<nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/categories/erlang/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 2 of 5</span>
-	
-	    <a class="older-posts" href="/categories/erlang/page/3/">Older Posts &rarr;</a>
-	
-</nav>
-
-</main>
-
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
     </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
 
-</body>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
 

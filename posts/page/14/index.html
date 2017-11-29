@@ -1,1529 +1,425 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/posts/index.xml">
 
-  	<meta property="og:title" content=" Posts &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/posts/" />
+<link rel="canonical" href="https://jeidee.github.io/posts/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Posts - Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
     
     
-    <meta property="og:type" content="website" />
     
 
-  <title>
-     Posts &middot;  Erlang &amp; Go
-  </title>
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
 
-    <meta name="description" content="" />
+          
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-        <link href="https://jeidee.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Posts &middot; Erlang &amp; Go" />
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/posts/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
-</head>
-<body class="nav-closed">
-
-  
-
-
- <div class="site-wrapper">
-
-
-
-
-	<header class="main-header tag-head no-cover">
-
-    <nav class="main-nav overlay clearfix">
-      
-      
-        
-          <a class="menu-button icon-feed" href="https://jeidee.github.io/posts/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
         </div>
-</div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
+      </nav>
+    </header>
 
-<main id="content" class="content" role="main">
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+    <header class="page-header">
+      <h1>Posts</h1>
+    </header>
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/posts/page/13/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 14 of 20</span>
-	
-	    <a class="older-posts" href="/posts/page/15/">Older Posts &rarr;</a>
-	
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-03T00:00:00JST">Mar 3, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/">erlang eunit 테스트 파일 분리와 테스트 셋</a></h2>
+  </header>
+
+  
+  <div class="summary">테스트 모듈 분리 eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.
+테스트 대상 모듈을 fib.erl 이라고 가정한다.
+-module(fib). -export([fib/1]). fib(0) -&gt; 1; fib(1) -&gt; 1; fib(N) when N &gt; 1 -&gt; fib(N-1) + fib(N-2).  테스트 모듈은 fib_tests.erl 로 작성한다.
+-module(fib_tests). -include_lib(&quot;eunit/include/eunit.hrl&quot;). fib0_test() -&gt; ?assert(fib:fib(0) =:= 1). fib1_test() -&gt; ?assert(fib:fib(1) =:= 1). fib2_test() -&gt; ?assert(fib:fib(2) =:= 2). fib3_test() -&gt; ?</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/" title="erlang eunit 테스트 파일 분리와 테스트 셋">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-26T00:00:00JST">Feb 26, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/26/node-js-jquery-fileupload/">node.js &#43; jquery fileupload</a></h2>
+  </header>
+
+  
+  <div class="summary">jQuery를 사용해 파일 업로드 처리를 쉽게 할 수 있는 방법을 찾아 보자.
+client 우선 다음 링크에서 jQuery Form Plugin(jquery.form.js)을 다운로드 받는다.
+http://jquery.malsup.com/form/
+js 디렉토리에 위치한다고 가정하고 다음과 같이 스크립트를 포함시켜 준다.
+jquery는 bower를 사용해 install 했다.
+&lt;script src=&quot;/bower_components/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;/js/jquery.form.js&quot;&gt;&lt;/script&gt; &lt;form id=&quot;form\_upload&quot; name=&quot;form\_upload&quot; action=&quot;/upload&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt; &lt;input type=&quot;file&quot; id=&quot;file&quot; name=&quot;file&quot;&gt; &lt;button type=&quot;submit&quot;&gt;업로드&lt;/button&gt; &lt;progress class=&quot;sr-only&quot;&gt;&lt;/progress&gt; &lt;/form&gt;  form을 위와 같이 추가하고 progress도 추가해 준다.
+$(document).ready(function() { $('#form_upload').ajaxForm({ beforeSubmit:function(data, frm, opt) { $('progress').</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/26/node-js-jquery-fileupload/" title="node.js &#43; jquery fileupload">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-26T00:00:00JST">Feb 26, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/26/node-js-http-getec9790ec849c-multi-chunk-ecb298eba6ac/">node.js http get에서 multi-chunk 처리</a></h2>
+  </header>
+
+  
+  <div class="summary">node.js의 http 또는 https 모듈을 사용해 url request를 할 경우 받는 데이터의 크기가 크게 되면 한 번에 데이터가 오지 않고 여러번 나뉘어 오게 된다.
+다음과 같은 코드가 있을 경우,
+http.get({host: host, port: port, path: path}, function(res) { res.on('data', function(res_data) { callback(res_data); }); });  res_data 데이터 사이즈가 클 경우 &#8216;data&#8217; 이벤트는 여러 차례 도착하게 된다.
+따라서 위와 같이 처리하면 안되고 &#8216;readable&#8217; 이벤트를 사용해서 여러 chunk 데이터를 모아서 처리해야 한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/26/node-js-http-getec9790ec849c-multi-chunk-ecb298eba6ac/" title="node.js http get에서 multi-chunk 처리">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-24T00:00:00JST">Feb 24, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/24/erlang-eunit/">erlang eunit 기초</a></h2>
+  </header>
+
+  
+  <div class="summary">eunit 기초 eunit은 최신 버전(erlang/otp 17, eshell 6.3)에 eunit-2.2.9 버전이 포함되어 있다.
+eunit을 사용하려면 다음과 같은 순서로 진행한다.
+ 테스트 코드 작성 eunit 모듈을 사용해 테스트 수행  테스트 코드 작성하는 방법 먼저 살펴 보도록 한다.
+테스트 코드 작성 먼저 eunit 헤더 파일을 include한다.
+-module(test). -include_lib(&quot;eunit/include/eunit.hrl&quot;).  그런 후 다음과 같이 테스트 코드를 작성한다.
+reverse\_nil\_test() -&gt; [] = lists:reverse([]). reverse\_one\_test() -&gt; [1] = lists:reverse([1]). reverse\_two\_test() -&gt; [2,1] = lists:reverse([1,2]). length_test() -&gt; ?</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/24/erlang-eunit/" title="erlang eunit 기초">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-14T00:00:00JST">Feb 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-14/">mnesia 기초 1/4</a></h2>
+  </header>
+
+  
+  <div class="summary">레코드 레코드는 튜플의 특별한 형태로 메타데이터를 정의할 수 있는 튜플이라고 할 수 있다.
+레코드 정의는 다음과 같이 할 수 있다.
+ -record(레코드명, {컬럼명 = 기본값 :: 데이터타입, &amp;#8230;.}).  레코드명과 컬럼명은 atom 타입이며 기본값은 값을 지정하지 않았을 때 입력되는 기본값이다.
+:: 뒤의 데이터타입은 컬럼의 데이터타입을 기술할 수 있고 다음과 같은 형태로 정의할 수 있다.
+기본 데이터타입  binary() : 바이너리 데이터타입 string() : 문자열 데이터타입 integer() : 정수형 데이터타입 &#8230;  이 외에도 다음과 같이 직접 데이터타입을 정의해서 사용할 수 있다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-14/" title="mnesia 기초 1/4">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-14T00:00:00JST">Feb 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-24-match-spec/">mnesia 기초 2/4 &amp;#8211; Match Spec</a></h2>
+  </header>
+
+  
+  <div class="summary">Match Spec mnesia:select 또는 mnesia:dirty_select에 Match Spec을 정의해서 데이터를 검색할 수 있다.
+MatchSpec의 기본형은 다음과 같다.
+[{ {매치패턴}, [조건식], [결과값]}]  매치패턴은 튜플의 형태로 테이블의 레코드의 구조와 동일해야한다.
+[{ {'$1', '$2', &amp;#8230;}, [], &amp;#8230;  $1, $2는 바인드 변수이며 Match Spec안에서만 사용된다.
+조건식은 다음과 같이 논리연산자, 비교컬럼지정자, 검색값 형식으로 입력한다.
+['&gt;', '$1', &quot;abcd&quot;]  예를 들면 다음과 같다.
+-type my_color() :: red | yellow | blue; -record(shape, {name = &quot;&quot; :: string(), color = red :: fruit_color(), count = 0 :: integer()}).</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-24-match-spec/" title="mnesia 기초 2/4 &amp;#8211; Match Spec">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-14T00:00:00JST">Feb 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-34-getting-started-with-mnesia-1/">mnesia 기초 3/4 &amp;#8211; Getting Started with Mnesia 1/2</a></h2>
+  </header>
+
+  
+  <div class="summary">Erlang 공식 문서 중에 Getting Started with Mnesia문서를 기준으로 몇몇내용을 추가해 다음과 같이 작성해 보았다.
+mnesia 시작 mnesia를 시작하기 위해서 다음의 과정이 필요하다.
+ erlang node에 mnesia의 데이터가 저장될 경로를 지정하여 erlang shell을 시작한다. 새로운 빈 스키마를 생성한다. 스키마는 데이터베이스의 정보를 포함한다. mnesia DBMS를 시작한다. 테이블을 생성한다. 데이터베이스 정보를 조회한다.  위의 과정을 수행하기 위해 다음과 같이 따라해 보자.
+ $ erl -mnesia dir '&quot;tmp/funky&quot;'  tmp/funky 디렉토리에 mnesia 데이터가 저장되도록 -mnesia dir 옵션을 사용해 erlang shell을 시작한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-34-getting-started-with-mnesia-1/" title="mnesia 기초 3/4 &amp;#8211; Getting Started with Mnesia 1/2">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-14T00:00:00JST">Feb 14, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-44-getting-started-with-mnesia-22/">mnesia 기초 4/4 &amp;#8211; Getting Started with Mnesia 2/2</a></h2>
+  </header>
+
+  
+  <div class="summary">데이터 추가 테이블에 데이터를 추가하기 위해서는 트랜잭션을 사용해야 한다. 트랜잭션은 매개변수가 없는 익명의 fun에 여러 DB 오퍼레이션을 묶어 생성할 수 있다.
+테이블에 데이터를 입력할 때는 mnesia:write/1 함수를 사용할 수 있으면 매개변수는 레코드를 사용한다.
+insert_emp(Emp, DeptId, ProjNames) -&gt; Ename = Emp#employee.name, Fun = fun() -&gt; mnesia:write(Emp), AtDep = #at\_dep{emp = Ename, dept\_id = DeptId}, mnesia:write(AtDep), mk_projs(Ename, ProjNames) end, mnesia:transaction(Fun). mk_projs(Ename, [ProjName|Tail]) -&gt; mnesia:write(#in\_proj{emp = Ename, proj\_name = ProjName}), mk_projs(Ename, Tail); mk\_projs(\_, []) -&gt; ok.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/14/mnesia-eab8b0ecb488-44-getting-started-with-mnesia-22/" title="mnesia 기초 4/4 &amp;#8211; Getting Started with Mnesia 2/2">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-10T00:00:00JST">Feb 10, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/10/javascript-json-ebacb8ec9e90ec97b4ec9d84-ec9888ec8198eab28c-ed8faceba7b7ed8c85ed9598eab8b0/">javascript JSON 문자열을 예쁘게 포맷팅하기</a></h2>
+  </header>
+
+  
+  <div class="summary">다음과 같이 사용할 수 있다.
+var obj = JSON.parse(jsonTxt); var html = '&lt;pre&gt;' + JSON.stringify(obj, null, 4) + '&lt;/pre&gt;';  참고 URL은 다음과 같다.
+ http://stackoverflow.com/questions/8007763/json-formatter-lib  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/10/javascript-json-ebacb8ec9e90ec97b4ec9d84-ec9888ec8198eab28c-ed8faceba7b7ed8c85ed9598eab8b0/" title="javascript JSON 문자열을 예쁘게 포맷팅하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-09T00:00:00JST">Feb 9, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/02/09/ha-proxyeba5bc-ec82acec9aa9ed95b4ec849c-l7-switch-eab5acec84b1/">HA proxy를 사용해서 L7 switch 구성</a></h2>
+  </header>
+
+  
+  <div class="summary">다음과 같이 HA Proxy를 구성하고 싶다고 가정하자.  A 서버 : 웹서버  http://192.168.56.101:3000/ : 홈 http://192.168.56.101:3000/admin : 관리 &#8230;  B 서버 : RESTful API 서버  http://192.168.56.102:5281/api  C 서버 : HA Proxy 서버  https://192.168.56.103/ =&gt; http://192.168.56.101:3000/ https://192.168.56.103/admin =&gt; http://192.168.56.101:3000/admin https://192.168.56.103/api =&gt; http://192.168.56.102:5281/api   네트워크 토폴로지는 다음과 같다.
+ +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ https +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ | Client | &amp;#8212;&amp;#8212;&gt;| HA Proxy | | | | 192.168.56.103 | +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ | http V +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ +&amp;#8212;&amp;#8212;-| fire wall | | +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ | | http | V | +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ | | 192.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/02/09/ha-proxyeba5bc-ec82acec9aa9ed95b4ec849c-l7-switch-eab5acec84b1/" title="HA proxy를 사용해서 L7 switch 구성">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li><a href="/posts/page/13/">Previous</a></li>
+    
+
+    
+    <li><a href="/posts/page/15/">Next</a></li>
+    
+
+  </ul>
 </nav>
 
-	</div>
 
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/">erlang eunit 테스트 파일 분리와 테스트 셋</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
 
-<h2 id="테스트-모듈-분리">테스트 모듈 분리</h2>
-
-<p>eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.</p>
-
-<p>테스트 대상 모듈을 fib.erl 이라고 가정한다.</p>
-
-<pre><code class="language-erlang">  
--module(fib).
-
--export([fib/1]).
-
-fib(0) -&gt; 1;
-  
-fib(1) -&gt; 1;
-  
-fib(N) when N &gt; 1 -&gt; fib(N-1) + fib(N-2).
-  
-</code></pre>
-
-<p>테스트 모듈은 fib_tests.erl 로 작성한다.</p>
-
-<pre><code class="language-erlang">  
--module(fib_tests).
-  
--include_lib(&quot;eunit/include/eunit.hrl&quot;).
-
-fib0_test() -&gt;
-      
-?assert(fib:fib(0) =:= 1).
-
-fib1_test() -&gt;
-      
-?assert(fib:fib(1) =:= 1).
-
-fib2_test() -&gt;
-      
-?assert(fib:fib(2) =:= 2).
-
-fib3_test() -&gt;
-      
-?assert(fib:fib(3) =:= 3).
-  
-</code></pre>
-
-<p>주목할 것은 테스트 모듈의 파일명이다.</p>
-
-<p>테스트 대상 모듈명에 _tests를 붙이는 것으로 끝이다.(_test가 아니라 _tests이다)</p>
-
-<p>컴파일한 후 다음과 같이 테스트를 실행할 수 있다.</p>
-
-<pre><code class="language-erlang">  
-&gt; eunit:test(fib).
-  
-</code></pre>
-
-<h2 id="배치-테스트">배치 테스트</h2>
-
-<p>fib_tests.erl의 테스트 코드를 보면 4개의 테스트를 각각의 테스트함수로 생성했다.</p>
-
-<p>대부분의 경우 여러 개의 테스트케이스를 하나의 셋으로 묶어 테스트함수를 구성하는데,</p>
-
-<p>다음과 같이 작성하면 된다.</p>
-
-<pre><code class="language-erlang">  
-fib\_test\_() -&gt;
-      
-[?_assert(fib:fib(0) =:= 1),
-       
-?_assert(fib:fib(1) =:= 1),
-       
-?_assert(fib:fib(2) =:= 2),
-       
-?_assert(fib:fib(3) =:= 3),
-       
-?\_assertException(error, function\_clause, fib:fib(-1))
-       
-].
-  
-</code></pre>
-
-<p>테스트 함수명을 _test&#095; 로 끝나도록 작성하고, 테스트에 쓰일 매크로는 ?assert 대신 ?_assert를 사용하면 된다.</p>
-
-<p>또한 테스트케이스(매크로)는 리스트로 작성해야 한다.</p>
-
-<p>또 하나 주목할 것은 ?_assertException 매크로이다.</p>
-
-<p>fib:fib(-1)의 경우 입력값 -1에 매치하는 함수가 정의되어 있지 않으므로 다음과 같은 예외가 발생하게 된다.</p>
-
-<pre><code>  
-** exception error: no function clause matching fib:fib(-1) (/home/gss.dev/workspace/helloerl/src/fib.erl, line 5)
-  
-</code></pre>
-
-<p>이와 같은 예외가 발생했는지 확인해 주는 매크로가 바로 ?_assertException 매크로 이다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/eunit/">#eunit</a>,
-            
-        
-        <time class="post-date" datetime="2015-03-03T00:00:00Z">
-            3 Mar 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/26/node-js-jquery-fileupload/">node.js &#43; jquery fileupload</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>jQuery를 사용해 파일 업로드 처리를 쉽게 할 수 있는 방법을 찾아 보자.</p>
-
-<h2 id="client">client</h2>
-
-<p>우선 다음 링크에서 jQuery Form Plugin(jquery.form.js)을 다운로드 받는다.</p>
-
-<p><a href="http://jquery.malsup.com/form/">http://jquery.malsup.com/form/</a></p>
-
-<p>js 디렉토리에 위치한다고 가정하고 다음과 같이 스크립트를 포함시켜 준다.</p>
-
-<p>jquery는 bower를 사용해 install 했다.</p>
-
-<pre><code class="language-html">  
-&lt;script src=&quot;/bower_components/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;
-  
-&lt;script src=&quot;/js/jquery.form.js&quot;&gt;&lt;/script&gt;
-
-&lt;form id=&quot;form\_upload&quot; name=&quot;form\_upload&quot; action=&quot;/upload&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;
-      
-&lt;input type=&quot;file&quot; id=&quot;file&quot; name=&quot;file&quot;&gt;
-      
-&lt;button type=&quot;submit&quot;&gt;업로드&lt;/button&gt;
-      
-&lt;progress class=&quot;sr-only&quot;&gt;&lt;/progress&gt;
-  
-&lt;/form&gt;
-  
-</code></pre>
-
-<p>form을 위와 같이 추가하고 progress도 추가해 준다.</p>
-
-<pre><code class="language-javascript">  
-$(document).ready(function() {
-         
-$('#form_upload').ajaxForm({
-              
-beforeSubmit:function(data, frm, opt) {
-                
-$('progress').removeClass('sr-only');
-              
-},
-              
-success:function(res, stat){
-                  
-$('progress').addClass('sr-only');
-              
-},
-              
-error:function(){
-                  
-$('progress').addClass('sr-only');
-                  
-alert('파일업로드 에러!');
-              
-}
-          
-});
-  
-});
-  
-</code></pre>
-
-<p>jquery의 .ready() 함수에 위와 같이 .ajaxFomr() 함수를 추가해 주면 되는데 callback 함수가 각각 의미하는 바는 다음과 같다.</p>
-
-<ul>
-<li>beforeSubmit: submit 되기 전에 호출되며, 위 코드에서는 단순히 progress바를 보여주는 역할만 한다.</li>
-<li>success: 업로드가 완료되면 호출되며, progress바를 다시 숨긴다.</li>
-<li>error: 파일 업로드가 실패할 경우 호출되면, 에러 메세지박스를 출력한다.</li>
-</ul>
-
-<h2 id="server">server</h2>
-
-<p>node.js를 사용해 파일업로드의 서버측 코드를 작성한다.</p>
-
-<p>app.js에 다음과 같이 코드를 추가한다.</p>
-
-<pre><code class="language-javascript">  
-var busboy = require('connect-busboy'); //middleware for form/file upload
-  
-var path = require('path'); //used for file path
-  
-var fs = require('fs-extra'); //File System &amp;#8211; for file manipulation
-
-app.use(busboy());
-  
-app.use(bodyParser.json());
-  
-app.use(bodyParser.urlencoded({extended: false}));
-
-app.post('/upload', function(req, res, next) {
+  </div>
+  <div class="col-md-4">
     
-var fstream;
-    
-req.pipe(req.busboy);
-    
-req.busboy.on('file', function (fieldname, file, filename) {
-      
-console.log(&quot;Uploading: &quot; + filename);
-      
-var uploadedFile = 'public/upload/' + filename;
-
-fstream = fs.createWriteStream(uploadedFile);
-      
-file.pipe(fstream);
-      
-fstream.on('close', function () {
-        
-console.log(&quot;Upload Finished of &quot; + filename);
-        
-res.redirect('back'); //where to go next
-      
-});
-    
-});
-  
-});
-  
-</code></pre>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://roqkffhwk.tistory.com/67">jQuery ajax fileupload</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/file-upload/">#file upload</a>,
-            
-                <a href="https://jeidee.github.iotags/jquery/">#jquery</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-26T00:00:00Z">
-            26 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/26/node-js-http-getec9790ec849c-multi-chunk-ecb298eba6ac/">node.js http get에서 multi-chunk 처리</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>node.js의 http 또는 https 모듈을 사용해 url request를 할 경우 받는 데이터의 크기가 크게 되면 한 번에 데이터가 오지 않고 여러번 나뉘어 오게 된다.</p>
-
-<p>다음과 같은 코드가 있을 경우,</p>
-
-<pre><code class="language-javascript">    
-http.get({host: host, port: port, path: path},
-        
-function(res) {
-          
-res.on('data', function(res_data) {
-            
-callback(res_data);
-          
-});
-        
-});
-  
-</code></pre>
-
-<p>res_data 데이터 사이즈가 클 경우 &#8216;data&#8217; 이벤트는 여러 차례 도착하게 된다.</p>
-
-<p>따라서 위와 같이 처리하면 안되고 &#8216;readable&#8217; 이벤트를 사용해서 여러 chunk 데이터를 모아서 처리해야 한다.</p>
-
-<pre><code class="language-javascript">  
-http.get({host: host, port: port, path: path},
-        
-function(res) {
-          
-var body = '';
-          
-res.setEncoding('utf8');
-
-res.on('readable', function() {
-            
-var chunk = this.read() || '';
-
-body += chunk;
-          
-});
-
-res.on('end', function() {
-            
-callback(body);
-          
-});
-
-res.on('error', function(e) {
-            
-console.log('error', e.message);
-          
-});
-        
-});
-  
-</code></pre>
-
-<p>&#8216;readable&#8217; 이벤트에서 chunk를 모아, &#8216;end&#8217; 이벤트에서 모아진 데이터를 처리하면 된다.</p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://stackoverflow.com/questions/22015673/node-js-http-request-returns-2-chunks-data-bodies">http://stackoverflow.com/questions/22015673/node-js-http-request-returns-2-chunks-data-bodies</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/http-request/">#http request</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-26T00:00:00Z">
-            26 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/24/erlang-eunit/">erlang eunit 기초</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="eunit-기초">eunit 기초</h2>
-
-<p>eunit은 최신 버전(erlang/otp 17, eshell 6.3)에 eunit-2.2.9 버전이 포함되어 있다.</p>
-
-<p>eunit을 사용하려면 다음과 같은 순서로 진행한다.</p>
-
-<ol>
-<li>테스트 코드 작성</li>
-<li>eunit 모듈을 사용해 테스트 수행</li>
-</ol>
-
-<p>테스트 코드 작성하는 방법 먼저 살펴 보도록 한다.</p>
-
-<h2 id="테스트-코드-작성">테스트 코드 작성</h2>
-
-<p>먼저 eunit 헤더 파일을 include한다.</p>
-
-<pre><code class="language-erlang">  
--module(test).
-  
--include_lib(&quot;eunit/include/eunit.hrl&quot;).
-  
-</code></pre>
-
-<p>그런 후 다음과 같이 테스트 코드를 작성한다.</p>
-
-<pre><code class="language-erlang">  
-reverse\_nil\_test() -&gt; [] = lists:reverse([]).
-  
-reverse\_one\_test() -&gt; [1] = lists:reverse([1]).
-  
-reverse\_two\_test() -&gt; [2,1] = lists:reverse([1,2]).
-  
-length_test() -&gt; ?assert(length([1,2,3]) =:= 3).
-  
-</code></pre>
-
-<p>테스트 함수는 반드시 _test()로 끝나야 하며 매개변수는 없어야 한다. 이와 같이 작성하고 난 후 eunit모듈의 test/1 함수를 사용해 테스트를 수행할 수 있다.</p>
-
-<h2 id="eunit-모듈을-사용해-테스트-수행">eunit 모듈을 사용해 테스트 수행</h2>
-
-<p>erlang shell을 실행한 후 test 모듈을 컴파일 한다.</p>
-
-<pre><code class="language-erlang">  
-Eshell V6.3 (abort with ^G)
-  
-1&gt; c(test).
-  
-{ok,test}
-  
-2&gt; eunit:test(test).
-    
-All 4 tests passed.
-  
-ok
-  
-</code></pre>
-
-<h2 id="assert-macros">Assert macros</h2>
-
-<p>eunit에는 다양한 매크로를 지원하는데 그 중 ASSERT 매크로만 살펴보도록 한다.</p>
-
-<h3 id="assert-boolexpr">assert(BoolExpr)</h3>
-
-<p>BoolExpr 식이 true가 아닐 경우 예외를 발생시킨다.</p>
-
-<pre><code class="language-erlang">  
-?assert(f(X, Y) =:= [])
-  
-</code></pre>
-
-<p>assert 매크로는 unit test이외에 어떤 프로그램에서도 사용될 수 있다.</p>
-
-<pre><code class="language-erlang">  
-some\_recursive\_function(X, Y, Z) -&gt;
-      
-?assert(X + Y &gt; Z),
-      
-&amp;#8230;
-  
-</code></pre>
-
-<h3 id="assertnot-boolexpr">assertNot(BoolExpr)</h3>
-
-<p>assert(not (BoolExpr))과 동일하다.</p>
-
-<h3 id="assertmatch-guardedpattern-expr">assertMatch(GuardedPattern, Expr)</h3>
-
-<p>Expr의 평가 결과가 GuaredPattern과 매치하지 않을 경우 예외를 발생시킨다.</p>
-
-<pre><code class="language-erlang">  
-?assertMatch({found, {fred, _}}, lookup(bloggs, Table))
-  
-?assertMatch([X|\_] when &gt; 0, binary\_to_list(B))
-  
-</code></pre>
-
-<h3 id="assertequal-expect-expr">assertEqual(Expect, Expr)</h3>
-
-<p>Expr 평가 결과가 Expect와 동일하지 않을 경우 예외를 발생시킨다.</p>
-
-<pre><code class="language-erlang">  
-?assertEqual(&quot;b&quot; ++ &quot;a&quot;, lists:reverse(&quot;ab&quot;))
-  
-?assertEqual(foo(X), bar(Y))
-  
-</code></pre>
-
-<h3 id="그-외">그 외</h3>
-
-<p>assertException/3, assertError/2, assertExit/2, assertThrow/2 매크로가 있다.</p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://www.erlang.org/doc/apps/eunit/chapter.html">Erlang E<strong>strong text</strong>Unit</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/eunit/">#eunit</a>,
-            
-                <a href="https://jeidee.github.iotags/unit-test/">#unit test</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-24T00:00:00Z">
-            24 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/14/mnesia-eab8b0ecb488-14/">mnesia 기초 1/4</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="레코드">레코드</h2>
-
-<p>레코드는 튜플의 특별한 형태로 메타데이터를 정의할 수 있는 튜플이라고 할 수 있다.</p>
-
-<p>레코드 정의는 다음과 같이 할 수 있다.</p>
-
-<pre><code>      
--record(레코드명, {컬럼명 = 기본값 :: 데이터타입, &amp;#8230;.}).
-  
-</code></pre>
-
-<p>레코드명과 컬럼명은 atom 타입이며 기본값은 값을 지정하지 않았을 때 입력되는 기본값이다.</p>
-
-<p>:: 뒤의 데이터타입은 컬럼의 데이터타입을 기술할 수 있고 다음과 같은 형태로 정의할 수 있다.</p>
-
-<h3 id="기본-데이터타입">기본 데이터타입</h3>
-
-<ul>
-<li>binary() : 바이너리 데이터타입</li>
-<li>string() : 문자열 데이터타입</li>
-<li>integer() : 정수형 데이터타입</li>
-<li>&#8230;</li>
-</ul>
-
-<p>이 외에도 다음과 같이 직접 데이터타입을 정의해서 사용할 수 있다.</p>
-
-<pre><code class="language-erlang">      
--type fruit_type() :: apple | orange | banana.
-  
-</code></pre>
-
-<p>또는 다음과 같이 특정 레코드를 데이터타입으로 정의할 수 있다.</p>
-
-<pre><code class="language-erlang">      
--type my_record() :: #record{}.
-  
-</code></pre>
-
-<h2 id="테이블의-키">테이블의 키?</h2>
-
-<p>테이블의 키는 record정의시 첫번째로 정의한 필드가 된다. employee 테이블은 emp_no, dept 테이블은 id, 등이다.</p>
-
-<p>키는 해당 테이블에서 유일하며 동일한 키로 데이터가 입력되면 기존 데이터를 갱신하게 된다.</p>
-
-<h2 id="테이블의-모든-키를-검색하는-방법">테이블의 모든 키를 검색하는 방법</h2>
-
-<pre><code class="language-erlang">      
-mnesia:dirty\_all\_keys(테이블명).
-  
-</code></pre>
-
-<p>예를 들어, ejabberd에서 vcard_search 테이블의 모든 키를 조회한다고 하면, 다음과 같이 수행할 수 있다.</p>
-
-<pre><code class="language-erlang">      
-mnesia:dirty\_all\_keys(vcard_search).
-
-[{&lt;&lt;&quot;test1&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;},
-       
-{&lt;&lt;&quot;test2&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;}]
-  
-</code></pre>
-
-<p>키가 term의 list로 반환되었다.</p>
-
-<h2 id="테이블에서-특정-키의-데이터를-조회하는-방법">테이블에서 특정 키의 데이터를 조회하는 방법</h2>
-
-<pre><code class="language-erlang">      
-mnesia:dirty_read(테이블명, 키).
-  
-</code></pre>
-
-<p>예를 들어, ejabberd에서 vcard_search 테이블의 특정키 데이터를 조회하는 방법은 다음과 같다.</p>
-
-<pre><code class="language-erlang">      
-mnesia:dirty\_read(vcard\_search, {&lt;&lt;&quot;test1&quot;&gt;&gt;, &lt;&lt;&quot;localhost&quot;&gt;&gt;}).
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/mnesia/">#mnesia</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-14T00:00:00Z">
-            14 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/14/mnesia-eab8b0ecb488-24-match-spec/">mnesia 기초 2/4 &amp;#8211; Match Spec</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h1 id="match-spec">Match Spec</h1>
-
-<p>mnesia:select 또는 mnesia:dirty_select에 Match Spec을 정의해서 데이터를 검색할 수 있다.</p>
-
-<p>MatchSpec의 기본형은 다음과 같다.</p>
-
-<pre><code class="language-erlang">      
-[{ {매치패턴}, [조건식], [결과값]}]
-  
-</code></pre>
-
-<p>매치패턴은 튜플의 형태로 테이블의 레코드의 구조와 동일해야한다.</p>
-
-<pre><code class="language-erlang">      
-[{ {'$1', '$2', &amp;#8230;}, [], &amp;#8230;
-  
-</code></pre>
-
-<p>$1, $2는 바인드 변수이며 Match Spec안에서만 사용된다.</p>
-
-<p>조건식은 다음과 같이 논리연산자, 비교컬럼지정자, 검색값 형식으로 입력한다.</p>
-
-<pre><code class="language-erlang">      
-['&gt;', '$1', &quot;abcd&quot;]
-  
-</code></pre>
-
-<p>예를 들면 다음과 같다.</p>
-
-<pre><code class="language-erlang">      
--type my_color() :: red | yellow | blue;
-      
--record(shape, {name = &quot;&quot; :: string(), color = red :: fruit_color(), count = 0 :: integer()}).
-
-init() -&gt;
-          
-mnesia:create_table(shape,
-              
-[{disc_copies, [node()]},
-              
-{attributes, record_info(fields, shape)}]),
-          
-F = fun() -&gt;
-              
-mnesia:write(#shape{name = &quot;rect1&quot;, color = red, count = 1}),
-              
-mnesia:write(#shape{name = &quot;rect2&quot;, color = yellow, count = 10}),
-              
-mnesia:write(#shape{name = &quot;circle&quot;, color = blue, count = 5})
-              
-end,
-          
-{atomic, ok} = mnesia:transaction(F).
-
-select_rect() -&gt;
-          
-mnesia:dirty\_select(shape, [{ {shape, &quot;rect&quot; ++ '\_', '\_', '\_'}, [], ['$_'] }]).
-
-select_red() -&gt;
-          
-mnesia:dirty_select(shape, [{ {shape, '$1', red, '$2'}, [], [{'$1', '$2'}] }]).
-
-select_count({greater, Count}) -&gt;
-          
-mnesia:dirty_select(shape, [{ {shape, '$1', '$2', '$3'}, ['&gt;', '$3', Count], [{'$1', '$2', '$3'}] }]).
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/mnesia/">#mnesia</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-14T00:00:00Z">
-            14 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/14/mnesia-eab8b0ecb488-34-getting-started-with-mnesia-1/">mnesia 기초 3/4 &amp;#8211; Getting Started with Mnesia 1/2</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>Erlang 공식 문서 중에 <a href="http://www.erlang.org/doc/apps/mnesia/Mnesia_chap2.html">Getting Started with Mnesia</a>문서를 기준으로 몇몇내용을 추가해 다음과 같이 작성해 보았다.</p>
-
-<h2 id="mnesia-시작">mnesia 시작</h2>
-
-<p>mnesia를 시작하기 위해서 다음의 과정이 필요하다.</p>
-
-<ul>
-<li>erlang node에 mnesia의 데이터가 저장될 경로를 지정하여 erlang shell을 시작한다.</li>
-<li>새로운 빈 스키마를 생성한다. 스키마는 데이터베이스의 정보를 포함한다.</li>
-<li>mnesia DBMS를 시작한다.</li>
-<li>테이블을 생성한다.</li>
-<li>데이터베이스 정보를 조회한다.</li>
-</ul>
-
-<p>위의 과정을 수행하기 위해 다음과 같이 따라해 보자.</p>
-
-<pre><code>      
-$ erl -mnesia dir '&quot;tmp/funky&quot;'
-  
-</code></pre>
-
-<p>tmp/funky 디렉토리에 mnesia 데이터가 저장되도록 -mnesia dir 옵션을 사용해 erlang shell을 시작한다.</p>
-
-<p>그 이후 위에서 언급한 순서대로 다음과 같이 입력한다</p>
-
-<pre><code class="language-erlang">      
-Eshell V6.3 (abort with ^G)
-      
-1&gt; mnesia:create_schema([node()]).
-      
-ok
-      
-2&gt; mnesia:start().
-      
-ok
-      
-3&gt; mnesia:create_table(funky, []).
-      
-{atomic,ok}
-      
-4&gt; mnesia:info().
-      
-&amp;#8212;&gt; Processes holding locks &lt;&amp;#8212;
-      
-&amp;#8212;&gt; Processes waiting for locks &lt;&amp;#8212;
-      
-&amp;#8212;&gt; Participant transactions &lt;&amp;#8212;
-      
-&amp;#8212;&gt; Coordinator transactions &lt;&amp;#8212;
-      
-&amp;#8212;&gt; Uncertain transactions &lt;&amp;#8212;
-      
-&amp;#8212;&gt; Active tables &lt;&amp;#8212;
-      
-funky : with 0 records occupying 305 words of mem
-      
-schema : with 2 records occupying 529 words of mem
-      
-===&gt; System info in version &quot;4.12.4&quot;, debug level = none &lt;===
-      
-opt_disc. Directory &quot;/Users/shinchangheon/tmp/funky&quot; is used.
-      
-use fallback at restart = false
-      
-running db nodes = [nonode@nohost]
-      
-stopped db nodes = []
-      
-master node tables = []
-      
-remote = []
-      
-ram_copies = [funky]
-      
-disc_copies = [schema]
-      
-disc\_only\_copies = []
-      
-[{nonode@nohost,disc_copies}] = [schema]
-      
-[{nonode@nohost,ram_copies}] = [funky]
-      
-3 transactions committed, 0 aborted, 0 restarted, 2 logged to disc
-      
-0 held locks, 0 in queue; 0 local transactions, 0 remote
-      
-0 transactions waits for other nodes: []
-      
-ok
-  
-</code></pre>
-
-<p>빈 옵션&rsquo;[]&#8217;으로 테이블을 생성하면 메모리에 테이블이 생성되며, 노드가 종료되면 해당 테이블은 사라진다.</p>
-
-<pre><code class="language-erlang">      
-Eshell V6.3 (abort with ^G)
-      
-1&gt; mnesia:info().
-      
-===&gt; System info in version {mnesia\_not\_loaded,nonode@nohost,
-                                      
-{1423,913120,829264}}, debug level = none &lt;===
-      
-opt_disc. Directory &quot;/Users/shinchangheon/tmp/funky&quot; is used.
-      
-use fallback at restart = false
-      
-running db nodes = []
-      
-stopped db nodes = [nonode@nohost]
-      
-ok
-  
-</code></pre>
-
-<h2 id="테이블을-생성하기">테이블을 생성하기</h2>
-
-<p>다음과 같은 ERD를 구성한다고 가정해 보자.</p>
-
-<p><img src="http://www.erlang.org/doc/apps/mnesia/company.gif" alt="ER-D" /></p>
-
-<p>Company 데이터베이스에 Dept, Employee, Project 테이블이 있고, Dept와 Employee간에 Manager와 At_dep 관계가 있으며, Employee와 Project간에 In_proj 관계가 있는 구성이다.</p>
-
-<p>우선 각 테이블의 스키마를 구성하기 위해 record를 정의한다. 보통 record정의는 .hrl 파일에 모아두며 .erl 모듈에서 include하여 사용한다.</p>
-
-<p>다음은 company.hrl 파일의 내용이다.</p>
-
-<pre><code class="language-erlang">      
--record(employee, {emp_no,
-                         
-name,
-                         
-salary,
-                         
-sex,
-                         
-phone,
-                         
-room_no}).
-
--record(dept, {id,
-                     
-name}).
-
--record(project, {name,
-                        
-number}).
-
--record(manager, {emp,
-                        
-dept}).
-
--record(at_dep, {emp,
-                       
-dept_id}).
-
--record(in_proj, {emp,
-                        
-proj_name}).
-  
-</code></pre>
-
-<p>보통 record의 이름과 table 이름은 동일하게 만든다.</p>
-
-<p>company.erl 파일은 다음과 같다.</p>
-
-<pre><code class="language-erlang">      
--module(company).
-
-%% API
-      
--export([init/0, start/0]).
-
--include_lib(&quot;stdlib/include/qlc.hrl&quot;).
-      
--include(&quot;company.hrl&quot;).
-
-start() -&gt;
-        
-mnesia:create_schema([node()]),
-        
-mnesia:start().
-
-init() -&gt;
-        
-mnesia:create_table(employee,
-          
-[{attributes, record_info(fields, employee)}]),
-        
-mnesia:create_table(dept,
-          
-[{attributes, record_info(fields, dept)}]),
-        
-mnesia:create_table(project,
-          
-[{attributes, record_info(fields, project)}]),
-        
-mnesia:create_table(manager, [{type, bag},
-          
-{attributes, record_info(fields, manager)}]),
-        
-mnesia:create\_table(at\_dep,
-          
-[{attributes, record\_info(fields, at\_dep)}]),
-        
-mnesia:create\_table(in\_proj, [{type, bag},
-          
-{attributes, record\_info(fields, in\_proj)}]).
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/mnesia/">#mnesia</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-14T00:00:00Z">
-            14 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/14/mnesia-eab8b0ecb488-44-getting-started-with-mnesia-22/">mnesia 기초 4/4 &amp;#8211; Getting Started with Mnesia 2/2</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="데이터-추가">데이터 추가</h2>
-
-<p>테이블에 데이터를 추가하기 위해서는 트랜잭션을 사용해야 한다. 트랜잭션은 매개변수가 없는 익명의 fun에 여러 DB 오퍼레이션을 묶어 생성할 수 있다.</p>
-
-<p>테이블에 데이터를 입력할 때는 mnesia:write/1 함수를 사용할 수 있으면 매개변수는 레코드를 사용한다.</p>
-
-<pre><code class="language-erlang">      
-insert_emp(Emp, DeptId, ProjNames) -&gt;
-          
-Ename = Emp#employee.name,
-          
-Fun = fun() -&gt;
-                        
-mnesia:write(Emp),
-                        
-AtDep = #at\_dep{emp = Ename, dept\_id = DeptId},
-                        
-mnesia:write(AtDep),
-                        
-mk_projs(Ename, ProjNames)
-                
-end,
-          
-mnesia:transaction(Fun).
-
-mk_projs(Ename, [ProjName|Tail]) -&gt;
-          
-mnesia:write(#in\_proj{emp = Ename, proj\_name = ProjName}),
-          
-mk_projs(Ename, Tail);
-      
-mk\_projs(\_, []) -&gt; ok.
-  
-</code></pre>
-
-<p>insert_emp/3함수의 첫번째 매개변수는 employ레코드 타입이어야 하며, ProjNames는 리스트여야 한다.</p>
-
-<p>DeptId는 어떤 타입이든 상관 없지만 아마도 문자열이면 될 것이다.</p>
-
-<p>재밌는 것은 mk_projs/2함수인데, ProjNames리스트를 [H|T]로 나누어서 마지막 요소가 더이상 없을때(빈 리스트인 [])까지 재귀호출을 하는 루틴을 갖는다.</p>
-
-<p>결국 트랜잭션은 하나의 employee write와 하나의 at_dep write와 여러 개의 in_proj write로 구성된다.</p>
-
-<h2 id="데이터-검색">데이터 검색</h2>
-
-<p>mnesia에서 데이터를 검색하는 방법은 match spec을 사용하는 방법과 qlc를 사용하는 방법이 있다.</p>
-
-<p>다음과 같이 employee 테이블에 데이터를 입력해 보자.</p>
-
-<pre><code class="language-erlang">        
-F = fun() -&gt;
-          
-mnesia:write({employee, 104465, &quot;Johnson Torbjorn&quot;, 1, male, 99184, {242,038}}),
-          
-mnesia:write({employee, 107912, &quot;Carlsson Tuula&quot;, 2, female,94556, {242,056}}),
-          
-mnesia:write({employee, 114872, &quot;Dacker Bjarne&quot;, 3, male, 99415, {221,035}}),
-          
-mnesia:write({employee, 104531, &quot;Nilsson Hans&quot;, 3, male, 99495, {222,026}}),
-          
-mnesia:write({employee, 104659, &quot;Tornkvist Torbjorn&quot;, 2, male, 99514, {222,022}}),
-          
-mnesia:write({employee, 104732, &quot;Wikstrom Claes&quot;, 2, male, 99586, {221,015}}),
-          
-mnesia:write({employee, 117716, &quot;Fedoriw Anna&quot;, 1, female,99143, {221,031}}),
-          
-mnesia:write({employee, 115018, &quot;Mattsson Hakan&quot;, 3, male, 99251, {203,348}})
-        
-end,
-        
-mnesia:transaction(F).
-  
-</code></pre>
-
-<h2 id="key-사용">key 사용</h2>
-
-<p>employee 테이블에서 emp_no가 104465인 레코드를 검색해 보자.</p>
-
-<p>다음과 같이 mnesia:read/2 또는 mnesia:dirty_read/2를 사용해 검색할 수 있다.</p>
-
-<pre><code class="language-erlang">      
-7&gt; mnesia:dirty_read(employee, 104465).
-      
-[{employee,104465,&quot;Johnson Torbjorn&quot;,1,male,99184,{242,38}}]
-  
-</code></pre>
-
-<h2 id="match-spec">match spec</h2>
-
-<p>키 이외의 값으로 조회하고자 한다면 어떻게 해야 할까?</p>
-
-<p>mnesia:select/2 또는 mnesia:dirty_select/2 함수를 사용하면 된다.</p>
-
-<pre><code class="language-erlang">      
-15&gt; rr(company).
-      
-16&gt; mnesia:dirty\_select(employee, [{#employee{sex = female, name = '$1', \_ = '_'},[], ['$1']}]).
-      
-[&quot;Carlsson Tuula&quot;,&quot;Fedoriw Anna&quot;]
-  
-</code></pre>
-
-<p>employee 레코드 사용을 위해 15번 라인에서 rr() 명령을 사용했다. erlang shell에서 레코드 정의 파일(company.hrl)을 로드할 때 rr() 명령을 사용할 수 있다.</p>
-
-<p>mnesia:dirty_xxx 함수는 트랜잭션이 필요없는 함수로 트랜잭션이 완료되지 않은 값(트랜잭션 실패로 취소될 수 있는 값)을 읽을때 사용한다.</p>
-
-<p>16번 라인이 의미하는 바를 sql query로 바꾸면 다음과 같다.(Match Spec에 관련한 내용은 이전 글을 참고)</p>
-
-<pre><code class="language-erlang">      
-select name from employee where sex = 'female';
-  
-</code></pre>
-
-<p>모든 컬럼을 쿼리하려면 다음과 같이 하면 된다.</p>
-
-<pre><code class="language-erlang">      
-17&gt; mnesia:dirty\_select(employee, [{#employee{sex = female, \_ = '\_'},[], ['$\_']}]).
-      
-[#employee{emp_no = 107912,name = &quot;Carlsson Tuula&quot;,
-                 
-salary = 2,sex = female,phone = 94556,
-                 
-room_no = {242,56}},
-       
-#employee{emp_no = 117716,name = &quot;Fedoriw Anna&quot;,salary = 1,
-                 
-sex = female,phone = 99143,
-                 
-room_no = {221,31}}]
-  
-</code></pre>
-
-<h2 id="qlc-사용">qlc 사용</h2>
-
-<p>QLC 쿼리는 match spec과 함께 mnesia 함수를 사용하는 것보다 더 고비용이지만 깔끔한 구문을 사용할 수 있게 해 준다.</p>
-
-<pre><code class="language-erlang">  
-females() -&gt;
-    
-F = fun() -&gt;
-      
-Q = qlc:q([E#employee.name || E &lt;- mnesia:table(employee),
-        
-E#employee.sex == female]),
-      
-qlc:e(Q)
-    
-end,
-    
-mnesia:transaction(F).
-  
-</code></pre>
-
-<p>qlc구문은 리스트해석과 가드를 조합한 모양이다.</p>
-
-<pre><code class="language-erlang">  
-qlc:q([E#employee.name || E &lt;- mnesia:table(employee),
-        
-E#employee.sex == female]),
-  
-</code></pre>
-
-<p>이 부분의 코드를 처리 순서대로 분석해 보면 다음과 같다.</p>
-
-<ol>
-<li>mnesia:table(employee) : employee의 모든 데이터를 리스트로 반환</li>
-<li>, E#employee.sex == female : sex가 female인 데이터만 필터링</li>
-<li>E#employee.name : 필터링된 데이터에서 name field만 리스트로 출력</li>
-</ol>
-
-<p>위와 같은 처리 순서로 보았을 때, sex에 인덱스가 설정되어 있다고해도 mnesia 함수와는 달리 full scan은 피할 수 없어 보인다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/mnesia/">#mnesia</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-14T00:00:00Z">
-            14 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/10/javascript-json-ebacb8ec9e90ec97b4ec9d84-ec9888ec8198eab28c-ed8faceba7b7ed8c85ed9598eab8b0/">javascript JSON 문자열을 예쁘게 포맷팅하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>다음과 같이 사용할 수 있다.</p>
-
-<pre><code class="language-javascript">      
-var obj = JSON.parse(jsonTxt);
-      
-var html = '&lt;pre&gt;' + JSON.stringify(obj, null, 4) + '&lt;/pre&gt;';
-  
-</code></pre>
-
-<p>참고 URL은 다음과 같다.</p>
-
-<ul>
-<li><a href="http://stackoverflow.com/questions/8007763/json-formatter-lib">http://stackoverflow.com/questions/8007763/json-formatter-lib</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/javascript/">#javascript</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-10T00:00:00Z">
-            10 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/02/09/ha-proxyeba5bc-ec82acec9aa9ed95b4ec849c-l7-switch-eab5acec84b1/">HA proxy를 사용해서 L7 switch 구성</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="다음과-같이-ha-proxy를-구성하고-싶다고-가정하자">다음과 같이 HA Proxy를 구성하고 싶다고 가정하자.</h2>
-
-<ul>
-<li>A 서버 : 웹서버
-
-<ul>
-<li><a href="http://192.168.56.101:3000/">http://192.168.56.101:3000/</a> : 홈</li>
-<li><a href="http://192.168.56.101:3000/admin">http://192.168.56.101:3000/admin</a> : 관리 &#8230;</li>
-</ul></li>
-<li>B 서버 : RESTful API 서버
-
-<ul>
-<li><a href="http://192.168.56.102:5281/api">http://192.168.56.102:5281/api</a></li>
-</ul></li>
-<li>C 서버 : HA Proxy 서버
-
-<ul>
-<li><a href="https://192.168.56.103/">https://192.168.56.103/</a> =&gt; <a href="http://192.168.56.101:3000/">http://192.168.56.101:3000/</a></li>
-<li><a href="https://192.168.56.103/admin">https://192.168.56.103/admin</a> =&gt; <a href="http://192.168.56.101:3000/admin">http://192.168.56.101:3000/admin</a></li>
-<li><a href="https://192.168.56.103/api">https://192.168.56.103/api</a> =&gt; <a href="http://192.168.56.102:5281/api">http://192.168.56.102:5281/api</a></li>
-</ul></li>
-</ul>
-
-<p>네트워크 토폴로지는 다음과 같다.</p>
-
-<pre><code>      
-+&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ https +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+
-      
-| Client | &amp;#8212;&amp;#8212;&gt;| HA Proxy |
-      
-| | | 192.168.56.103 |
-      
-+&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+
-                                      
-| http
-                                      
-V
-                            
-+&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+
-                    
-+&amp;#8212;&amp;#8212;-| fire wall |
-                    
-| +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+
-                    
-| | http
-                    
-| V
-                    
-| +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+
-                    
-| | 192.168.56.101:3000 |
-                    
-| | /, /admin, /doc, &amp;#8230; |
-                    
-| +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+
-                    
-|
-                    
-V
-      
-+&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+
-      
-| 192.168.56.102:5281/api |
-      
-+&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+
-  
-</code></pre>
-
-<h2 id="ha-proxy-설정-시나리오는-다음과-같다">HA Proxy 설정 시나리오는 다음과 같다.</h2>
-
-<ul>
-<li>192.168.56.103 서버에 HA Proxy를 설치한다.</li>
-<li>frontend 구성에 https를 위한 ssl 설정을 하고(SSL Key 필요),</li>
-<li>/api url을 제외한 기본 백엔드는 192.168.56.101:3000 서버를 지정하고</li>
-<li>/api url의 경우 192.168.56.102:5281 서버를 지정하도록 한다.</li>
-</ul>
-
-<p>1) HA Proxy 설치</p>
-
-<pre><code>      
-$ sudo apt-get install haproxy
-  
-</code></pre>
-
-<p>2) 설정</p>
-
-<pre><code>      
-$ sudo vi /etc/haproxy/haproxy.cfg
-  
-</code></pre>
-
-<p>haproxy.cfg의 뒷부분에 다음을 추가하도록 한다.</p>
-
-<pre><code>      
-frontend www-https
-        
-bind *:443 ssl crt /home/gss.dev/server/bin/etc/ejabberd/server.pem
-        
-mode http
-        
-option httpclose
-        
-option forwardfor
-        
-reqadd X-Forwarded-Proto: https
-        
-acl url\_api path\_beg /api
-        
-use\_backend www-api if url\_api
-        
-default_backend www-backend
-
-backend www-backend
-        
-mode http
-        
-server www-1 192.168.56.101:3000 check
-
-backend www-api
-        
-mode http
-        
-server apidoc 192.168.56.102:5281 check
-  
-</code></pre>
-
-<p>주의할 것은 ssl 설정을 HA Proxy서버에서 한다는 것이다. 백엔드 서버는 http로 구성해야 하며 https로 구성할 경우 Bad Gateway가 떨어진다.</p>
-
-<h2 id="references">References</h2>
-
-<ul>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-haproxy-as-a-layer-7-load-balancer-for-wordpress-and-nginx-on-ubuntu-14-04">How To Use HAProxy As A Layer 7 Load Balancer For WordPress and Nginx On Ubuntu 14.04</a></li>
-<li><a href="http://seanmcgary.com/posts/using-sslhttps-with-haproxy">Using SSL/HTTPS with HAProxy</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/haproxy/">#haproxy</a>,
-            
-        
-        <time class="post-date" datetime="2015-02-09T00:00:00Z">
-            9 Feb 2015
-        </time>
-    </footer>
-</article>
-
-	
-
-	<nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/posts/page/13/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 14 of 20</span>
-	
-	    <a class="older-posts" href="/posts/page/15/">Older Posts &rarr;</a>
-	
-</nav>
-
-</main>
-
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
     </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
 
-</body>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
 

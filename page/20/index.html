@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/index.xml">
+
+<link rel="canonical" href="https://jeidee.github.io/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
+    
+    
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
+
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlangec9790ec849c-httphttps-posted9598eab8b0/">erlang에서 http(https)  post하기</a></h2>
+  </header>
+
+  
+  <div class="summary">http(https) post하는 대표적인 방법은 urlencoded방식과 json방식이 있다.
+가장 보편적으로 사용되는 urlencoded 방식의 코드는 다음과 같다.
+post_test1() -&gt; Method = post, URL = &quot;https://www.google.co.kr/search&quot;, Header = [], Type = &quot;application/x-www-form-urlencoded&quot;, Body = &quot;q=erlang+http+post+example&quot;, HTTPOptions = [{ssl, [{verify, 0}]}], Options = [], R = httpc:request(Method, {URL, Header, Type, Body}, HTTPOptions, Options), io:format(&quot;~p&quot;, [R]), ok.  json 방식은 다음과 같이 Type을 &ldquo;application/json&rdquo;으로 설정하고 , Body를 json 데이터로 입력해서 post하면 된다.
+post_test2() -&gt; Method = post, URL = &quot;https://www.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlangec9790ec849c-httphttps-posted9598eab8b0/" title="erlang에서 http(https)  post하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlangec9790ec849c-https-client-eab5aced9884/">erlang에서 https client 구현</a></h2>
+  </header>
+
+  
+  <div class="summary"> 쉘에서 테스트하기 stackoverflow의 자료를 참고해서 테스트해 보았다.
+해당 링크에선 언급하고 있지 않지만 ssl을 시작할 때 오류가 발생할 경우 다음과 같은 순서로 application을 시작해야 한다.
+ 주의: asn1에서 1은 숫자 &#8216;1&#8217;이지 영문자 &#8216;l&#8217;이 아니다.
+ application:start(asn1). application:start(public_key). application:start(crypto). application:start(ssl). application:start(inets).  그런 후 httpc 모듈을 사용해서 url을 request한다.
+httpc:request(head, {&quot;https://github.com/ostinelli/misultin&quot;, []}, [{ssl, [{verify, 0}]}], []).  결과는 다음과 같다.
+{ok,{ {&quot;HTTP/1.1&quot;,200,&quot;OK&quot;}, [{&quot;cache-control&quot;,&quot;no-cache&quot;}, {&quot;date&quot;,&quot;Wed, 17 Dec 2014 02:39:06 GMT&quot;}, {&quot;server&quot;,&quot;GitHub.com&quot;}, {&quot;vary&quot;,&quot;X-PJAX&quot;}, {&quot;content-type&quot;,&quot;text/html; charset=utf-8&quot;}, {&quot;status&quot;,&quot;200 OK&quot;}, &amp;#8230; (중간 생략) []}}  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlangec9790ec849c-https-client-eab5aced9884/" title="erlang에서 https client 구현">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/erlangec9790ec849c-md5-hash-key-ec839dec84b1ed9598eab8b0/">erlang에서 md5 hash key 생성하기</a></h2>
+  </header>
+
+  
+  <div class="summary">erlang 모듈의 md5/1 함수를 사용하면 md5 hash 를 생성할 수 있다.
+33&gt; erlang:md5(&quot;abcdefg&quot;). &lt;&lt;122,198,108,15,20,141,233,81,155,139,210,100,49,44,77, 100&gt;&gt;  md5는 128bit 숫자이고 위의 결과가 의미하는 바는 1byte * 16개의 binary 데이터를 의미하기 때문에 8 * 16 = 128(bit)가 된다.
+1byte 정수를 16진수(hex code) 문자열로 변환해서 출력하고 싶을 경우 바이너리를 해석(binary comprehensions, &lt;=)해서 다음과 같이 출력할 수 있다.
+lists:flatten([io_lib:format(&quot;~2.16.0b&quot;, [B]) || &lt;&lt;B&gt;&gt; &lt;= erlang:md5(&quot;abcd&quot;)]).  리스트 해석(list comprehensions)과 달리 바이너리 해석은 &lt;- 대신 &lt;= 연산자를 사용한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/erlangec9790ec849c-md5-hash-key-ec839dec84b1ed9598eab8b0/" title="erlang에서 md5 hash key 생성하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/virtualbox-eab28cec8aa4ed8ab8eab084-ed86b5ec8ba0-ed9998eab2bd-eab5acec84b1/">virtualbox 게스트간 통신 환경 구성</a></h2>
+  </header>
+
+  
+  <div class="summary">virtualbox에 다음과 같은 환경을 구축하려고 한다.
+ 호스트  Windows 7  게스트  ubuntu 14.10 desktop #1 ubuntu 14.10 desktop #2   호스트와 게스트간 통신도 가능해야 하고 게스트간 통신도 가능해야 한다.
+ virtualbox에서 파일&gt;환경설정&gt;네트워크를 선택한다. 호스트 전용 네트워크가 비어 있을 경우 새로 추가한다. 추가한 호스트 네트워크를 더블 클릭한다. IPv4 주소를 192.168.56.1로 설정한다. IPv4 서브넷 마스크를 255.255.255.0으로 설정한다. DHCP 서버 사용에 체크를 해제한다. ubuntu 게스트 OS를 설치하고 게스트 OS의 네트워크 설정을 선택한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/virtualbox-eab28cec8aa4ed8ab8eab084-ed86b5ec8ba0-ed9998eab2bd-eab5acec84b1/" title="virtualbox 게스트간 통신 환경 구성">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li><a href="/page/19/">Previous</a></li>
+    
+
+    
+    <li class="disabled"><a href="#">Next</a></li>
+    
+
+  </ul>
+</nav>
+
+
+
+  </div>
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

@@ -1,1488 +1,412 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/posts/index.xml">
 
-  	<meta property="og:title" content=" Posts &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/posts/" />
+<link rel="canonical" href="https://jeidee.github.io/posts/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Posts - Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
     
     
-    <meta property="og:type" content="website" />
     
 
-  <title>
-     Posts &middot;  Erlang &amp; Go
-  </title>
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
 
-    <meta name="description" content="" />
+          
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-        <link href="https://jeidee.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Posts &middot; Erlang &amp; Go" />
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/posts/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
-</head>
-<body class="nav-closed">
-
-  
-
-
- <div class="site-wrapper">
-
-
-
-
-	<header class="main-header tag-head no-cover">
-
-    <nav class="main-nav overlay clearfix">
-      
-      
-        
-          <a class="menu-button icon-feed" href="https://jeidee.github.io/posts/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
         </div>
-</div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
+      </nav>
+    </header>
 
-<main id="content" class="content" role="main">
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+    <header class="page-header">
+      <h1>Posts</h1>
+    </header>
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/posts/page/8/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 9 of 20</span>
-	
-	    <a class="older-posts" href="/posts/page/10/">Older Posts &rarr;</a>
-	
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-02T00:00:00JST">Jun 2, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/06/02/gloox-xmppping/">gloox xmppPing</a></h2>
+  </header>
+
+  
+  <div class="summary">gloox의 경우 tcp 연결이 비정상적으로 종료되었을 때 disconnect를 감지할 수 없는 경우가 있다.
+이럴 경우를 대비해 xmpp 서버에 주기적으로 ping을 보내고 pong을 수신해서 연결 상태를 관리하는 것이 좋다.
+class MsgClient : public MessageSessionHandler , &amp;#8230; , EventHandler { private: int m_heartBeat; }; void MsgClient::heartBeat() { m\_client-&gt;xmppPing(m\_client-&gt;jid(), this); if (++m_heartBeat &gt; 3) { LOGD(&quot;허트비트 무응답 초과로 연결 종료!&quot;); m_client-&gt;disconnect(); } } void MsgClient::handleEvent(const Event&amp; event) { switch (event.eventType()) { case Event::PingPing: LOGD(&quot;PingPing&quot;); break; case Event::PingPong: LOGD(&quot;PingPong&quot;); &amp;#8211;m_heartBeat; break; case Event::PingError: LOGE(&quot;PingError&quot;); break; default: break; } return; } // ConnectionListener void MsgClient::onConnect() { LOGD(&quot;connected!</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/06/02/gloox-xmppping/" title="gloox xmppPing">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-02T00:00:00JST">Jun 2, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/06/02/ios-uiimage-ec8db8eb84a4ec9dbc-ec9db4ebafb8eca780-eba78ceb93a4eab8b0/">ios UIImage 썸네일 이미지 만들기</a></h2>
+  </header>
+
+  
+  <div class="summary"> -(UIImage\*)makeThumbnail:(UIImage\*)image withSize:(CGSize)destSize{ UIGraphicsBeginImageContext(destSize); [image drawInRect:CGRectMake(0, 0, destSize.width, destSize.height)]; UIImage* thumbnail = UIGraphicsGetImageFromCurrentImageContext(); UIGraphicsEndImageContext(); return thumbnail; }  출처  HOW TO CREATE THUMBNAIL OF UIIMAGE – XCODE IOS  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/06/02/ios-uiimage-ec8db8eb84a4ec9dbc-ec9db4ebafb8eca780-eba78ceb93a4eab8b0/" title="ios UIImage 썸네일 이미지 만들기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-02T00:00:00JST">Jun 2, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/06/02/ios-md5-ed95b4ec8b9c-ed82a4-ec839dec84b1/">ios md5 해시 키 생성</a></h2>
+  </header>
+
+  
+  <div class="summary"> #import &lt;CommonCrypto/CommonDigest.h&gt; -(NSString\*)md5:(NSString \*)str { const char *cStr = [str UTF8String]; unsigned char result[CC\_MD5\_DIGEST_LENGTH]; CC_MD5( cStr, strlen(cStr), result ); return [NSString stringWithFormat:@&quot;%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X&quot;, result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7], result[8], result[9], result[10], result[11], result[12], result[13], result[14], result[15] ]; }  출처  MD5 algorithm in Objective C  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/06/02/ios-md5-ed95b4ec8b9c-ed82a4-ec839dec84b1/" title="ios md5 해시 키 생성">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-02T00:00:00JST">Jun 2, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/06/02/ios-sqlite3/">ios sqlite3</a></h2>
+  </header>
+
+  
+  <div class="summary">아래 참고 링크에서 DBManager를 가져와 다음과 같이 사용하면 된다.
+insert or update -(void) addOrSetRoomToDB:(NSChatRoom*)room { if (room == nil) { NSLog(@&quot;addOrSetRoomToDB()&amp;#8230; room is nil!&quot;); return; } DBManager* dbManager = [[TalkInterface getInstance] dbManager]; if (dbManager == nil) { NSLog(@&quot;addOrSetRoomToDB()&amp;#8230; dbManager is nil!&quot;); return; } NSString* query = [NSString stringWithFormat:@&quot;insert or replace into chatRoom(roomId, lastMessage, lastDateTime, unreadCount) values('%@', '%@', '%@', %d);&quot;, room.roomId, room.lastMessage, room.lastDateTime, room.unreadCount]; [dbManager executeQuery:query]; if (dbManager.affectedRows != 0) { NSLog(@&quot;채팅룸 DB 추가 성공!</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/06/02/ios-sqlite3/" title="ios sqlite3">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-02T00:00:00JST">Jun 2, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/06/02/ios-url-ecba90ec8b9c-ec84a4eca095/">ios url 캐시 설정</a></h2>
+  </header>
+
+  
+  <div class="summary"> // url 캐시 설정 // 메모리 : 10MB, 디스크 : 50MB NSURLCache \*urlCache = [[NSURLCache alloc] initWithMemoryCapacity:10 \* 1024 \* 1024 diskCapacity:50 \* 1024 * 1024 diskPath:nil]; [NSURLCache setSharedURLCache:urlCache];  출처  iphone에서 메모리 문제로 URL로 데이터를 가끔씩 못 가져올 때 AFNetworking, NSURLCache로 이미지 캐시하기  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/06/02/ios-url-ecba90ec8b9c-ec84a4eca095/" title="ios url 캐시 설정">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-02T00:00:00JST">Jun 2, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/06/02/ios-ec9db4ebafb8eca780-ecba90ec8b9c-eab5aced9884ed9598eab8b0/">ios 이미지 캐시 구현하기</a></h2>
+  </header>
+
+  
+  <div class="summary">URL에서 이미지를 가져와 출력하는 것은 매우 성능이 좋지 않다. 상황에 따라서는 수 초간(또는 그 이상) 이미지를 불러오지 못하는 경우도 생길 수 있고, 비동기로 많은 이미지를 가져올 경우 상황은 더욱 좋지 않게 된다.
+이런 경우 대부분 이미지를 캐시해 놓고 이후 요청에서는 캐시에서 이미지를 불러오도록 하는데, 메모리와 디스크를 병행해서 캐시해야 프로세스를 재시작해도 캐시를 지속적으로 사용할 수 있는 이득을 볼 수 있다.
+간단한 플로우는 다음과 같다.
+1) 메모리 캐시에서 이미지를 검색한다.
+2) 없을 경우, 디스크 캐시에서 이미지를 검색한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/06/02/ios-ec9db4ebafb8eca780-ecba90ec8b9c-eab5aced9884ed9598eab8b0/" title="ios 이미지 캐시 구현하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-19T00:00:00JST">May 19, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/19/ios-uiimagevieweba5bc-ec9b90ed9895ec9cbceba19c-ecb69ceba0a5ed9598eab8b0/">ios UIImageView를 원형으로 출력하기</a></h2>
+  </header>
+
+  
+  <div class="summary"> cell.imgAvatar.layer.cornerRadius = cell.imgAvatar.frame.size.height / 2; cell.imgAvatar.layer.masksToBounds = YES; cell.imgAvatar.layer.borderWidth = 0;  테이블셀의 UIImaveView인 imgAvatar를 원형으로 출력하는 코드이다.
+출처  UIImage in a circle  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/19/ios-uiimagevieweba5bc-ec9b90ed9895ec9cbceba19c-ecb69ceba0a5ed9598eab8b0/" title="ios UIImageView를 원형으로 출력하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-19T00:00:00JST">May 19, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/19/ios-ebb984eb8f99eab8b0eba19c-ec9db4ebafb8eca780-eb8ba4ec9ab4eba19ceb939c/">ios 비동기로 이미지 다운로드</a></h2>
+  </header>
+
+  
+  <div class="summary"> 이미지캐시 클래스를 만들고 있는 과정인데 우선 비동기로 이미지를 다운로드 하는 코드를 작성해 보았다.
+아직 캐시 기능은 구현하지 않았다.
+ImageCache.h
+#import &lt;UIKit/UIKit.h&gt; @interface ImageCache : NSObject +(ImageCache*)getInstance; -(void) loadFromUrl: (NSURL\*) url callback:(void (^)(UIImage \*image))callback; @end  ImageCache.m
+#import &lt;UIKit/UIKit.h&gt; @interface ImageCache : NSObject +(ImageCache*)getInstance; -(void) loadFromUrl: (NSURL\*) url callback:(void (^)(UIImage \*image))callback; @end  사용
+[[ImageCache getInstance] loadFromUrl:roster.photo callback:^(UIImage *image) { cell.imgAvatar.image = image; }];  참고  Loading an image into UIImage asynchronously iphone에서 메모리 문제로 URL로 데이터를 가끔씩 못 가져올 때 Disk Caching with AFNetworking UIImageView에 원격이미지 비동기 로드 및 캐쉬 기능 넣기  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/19/ios-ebb984eb8f99eab8b0eba19c-ec9db4ebafb8eca780-eb8ba4ec9ab4eba19ceb939c/" title="ios 비동기로 이미지 다운로드">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-19T00:00:00JST">May 19, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580/">ios 스토리보드와 커스텀 테이블 셀</a></h2>
+  </header>
+
+  
+  <div class="summary"> 스토리보드에 작성한 커스텀 테이블셀을 코드에서 사용하기 위해서는 다음과 같이 작업한다.
+1) Attributes Inspector에서 Identifier를 설정한다.
+2) Custom TableViewController.mm에서 다음과 같이 작성한다.
+tableView의 dequeueReusableCellWithIdentifier 함수를 사용하면 된다.
+&amp;#8211; (UITableViewCell\*)tableView:(UITableView \*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath { static NSString *cellId = @&quot;friendCell&quot;; FriendCell\* cell = (FriendCell\*)[tableView dequeueReusableCellWithIdentifier:cellId];  출처  스토리보드에서 테이블뷰 셀 가져오기  </div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580/" title="ios 스토리보드와 커스텀 테이블 셀">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-05-18T00:00:00JST">May 18, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0/">ios c&#43;&#43; 객체에서 objective-c 객체의 함수 콜백하기</a></h2>
+  </header>
+
+  
+  <div class="summary">다음과 같은 요구사항이 있다고 가정해 보자.
+ c++로 작성된 MsgClient는 통신 처리를 하는 별도의 워커쓰레드가 있다.
+서버에 접속한 후 데이터를 수신하면 objective-c의 여러 ViewHandler에 데이터 수신 이벤트를 발생시켜야 한다.
+이벤트 수신을 원하는 ViewHandler가 이벤트 수신을 받은 후 UI 쓰레드에서 여러 UI 컨트롤을 처리해야 한다.
+ 간단히 말하면 서로 다른 쓰레드에서 동작하는 c++ 오브젝트와 objective-c 오브젝트가 있고, c++ 오브젝트에서 objective-c 오브젝트의 특정 함수를 호출(콜백)할 수 있어야 한다.
+위와 같은 요구사항을 처리하기 위해서 다양한 방법이 있겠지만 다음과 같은 구조를 사용해 해결해 보도록 하자.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0/" title="ios c&#43;&#43; 객체에서 objective-c 객체의 함수 콜백하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li><a href="/posts/page/8/">Previous</a></li>
+    
+
+    
+    <li><a href="/posts/page/10/">Next</a></li>
+    
+
+  </ul>
 </nav>
 
-	</div>
 
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/06/02/gloox-xmppping/">gloox xmppPing</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
 
-<p>gloox의 경우 tcp 연결이 비정상적으로 종료되었을 때 disconnect를 감지할 수 없는 경우가 있다.</p>
+  </div>
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
 
-<p>이럴 경우를 대비해 xmpp 서버에 주기적으로 ping을 보내고 pong을 수신해서 연결 상태를 관리하는 것이 좋다.</p>
-
-<pre><code class="language-cpp">      
-class MsgClient : public MessageSessionHandler
-      
-, &amp;#8230;
-      
-, EventHandler
-      
-{
-      
-private:
-          
-int m_heartBeat;
-      
-};
-
-void MsgClient::heartBeat() {
-          
-m\_client-&gt;xmppPing(m\_client-&gt;jid(), this);
-          
-if (++m_heartBeat &gt; 3) {
-              
-LOGD(&quot;허트비트 무응답 초과로 연결 종료!&quot;);
-              
-m_client-&gt;disconnect();
-          
-}
-      
-}
-
-void MsgClient::handleEvent(const Event&amp; event)
-      
-{
-          
-switch (event.eventType())
-          
-{
-              
-case Event::PingPing:
-                  
-LOGD(&quot;PingPing&quot;);
-                  
-break;
-              
-case Event::PingPong:
-                  
-LOGD(&quot;PingPong&quot;);
-                  
-&amp;#8211;m_heartBeat;
-                  
-break;
-              
-case Event::PingError:
-                  
-LOGE(&quot;PingError&quot;);
-                  
-break;
-              
-default:
-                  
-break;
-          
-}
-          
-return;
-      
-}
-
-// ConnectionListener
-      
-void MsgClient::onConnect() {
-          
-LOGD(&quot;connected!!!&quot;);
-
-m_heartBeat = 0;
-  
-</code></pre>
-
-<p>pingpong 이벤트를 수신하기 위해서 EventHandler 인터페이스를 구현해야하고 onConnect()가 콜백될 때 m_heartBeat 값을 초기화해야 한다.</p>
-
-<h2 id="출처">출처</h2>
-
-<ul>
-<li><a href="http://stackoverflow.com/questions/3543294/c-gloox-how-to-check-when-connection-is-down">C++ / Gloox: how to check when connection is down?</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/gloox/">#gloox</a>,
-            
-        
-        <time class="post-date" datetime="2015-06-02T00:00:00Z">
-            2 Jun 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/06/02/ios-uiimage-ec8db8eb84a4ec9dbc-ec9db4ebafb8eca780-eba78ceb93a4eab8b0/">ios UIImage 썸네일 이미지 만들기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<pre><code class="language-objc">  
--(UIImage\*)makeThumbnail:(UIImage\*)image withSize:(CGSize)destSize{
-      
-UIGraphicsBeginImageContext(destSize);
-      
-[image drawInRect:CGRectMake(0, 0, destSize.width, destSize.height)];
-
-UIImage* thumbnail = UIGraphicsGetImageFromCurrentImageContext();
-
-UIGraphicsEndImageContext();
-
-return thumbnail;
-  
-}
-  
-</code></pre>
-
-<h2 id="출처">출처</h2>
-
-<ul>
-<li><a href="http://beageek.biz/how-to-create-thumbnail-uiimage-xcode-ios/">HOW TO CREATE THUMBNAIL OF UIIMAGE – XCODE IOS</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/thumbnail/">#thumbnail</a>,
-            
-                <a href="https://jeidee.github.iotags/uiimage/">#UIImage</a>,
-            
-        
-        <time class="post-date" datetime="2015-06-02T00:00:00Z">
-            2 Jun 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/06/02/ios-md5-ed95b4ec8b9c-ed82a4-ec839dec84b1/">ios md5 해시 키 생성</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<pre><code class="language-objc">  
-#import &lt;CommonCrypto/CommonDigest.h&gt;
-
--(NSString\*)md5:(NSString \*)str {
-      
-const char *cStr = [str UTF8String];
-      
-unsigned char result[CC\_MD5\_DIGEST_LENGTH];
-      
-CC_MD5( cStr, strlen(cStr), result );
-      
-return [NSString stringWithFormat:@&quot;%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X&quot;,
-              
-result[0], result[1],
-              
-result[2], result[3],
-              
-result[4], result[5],
-              
-result[6], result[7],
-              
-result[8], result[9],
-              
-result[10], result[11],
-              
-result[12], result[13],
-              
-result[14], result[15]
-              
-];
-  
-}
-  
-</code></pre>
-
-<h2 id="출처">출처</h2>
-
-<ul>
-<li><a href="http://stackoverflow.com/questions/1524604/md5-algorithm-in-objective-c">MD5 algorithm in Objective C</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/hash/">#hash</a>,
-            
-                <a href="https://jeidee.github.iotags/md5/">#md5</a>,
-            
-        
-        <time class="post-date" datetime="2015-06-02T00:00:00Z">
-            2 Jun 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/06/02/ios-sqlite3/">ios sqlite3</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>아래 참고 링크에서 DBManager를 가져와 다음과 같이 사용하면 된다.</p>
-
-<h3 id="insert-or-update">insert or update</h3>
-
-<pre><code class="language-objc">  
--(void) addOrSetRoomToDB:(NSChatRoom*)room {
-      
-if (room == nil) {
-          
-NSLog(@&quot;addOrSetRoomToDB()&amp;#8230; room is nil!&quot;);
-          
-return;
-      
-}
-
-DBManager* dbManager = [[TalkInterface getInstance] dbManager];
-      
-if (dbManager == nil) {
-          
-NSLog(@&quot;addOrSetRoomToDB()&amp;#8230; dbManager is nil!&quot;);
-          
-return;
-      
-}
-
-NSString* query = [NSString stringWithFormat:@&quot;insert or replace into chatRoom(roomId, lastMessage, lastDateTime, unreadCount) values('%@', '%@', '%@', %d);&quot;,
-                         
-room.roomId, room.lastMessage, room.lastDateTime, room.unreadCount];
-
-[dbManager executeQuery:query];
-
-if (dbManager.affectedRows != 0) {
-          
-NSLog(@&quot;채팅룸 DB 추가 성공!&quot;);
-      
-} else {
-          
-NSLog(@&quot;채팅룸 DB 추가 실패!&quot;);
-      
-}
-  
-}
-  
-</code></pre>
-
-<h3 id="delete">delete</h3>
-
-<pre><code class="language-objc">  
--(void) removeRoomFromDB:(NSString*)roomId {
-      
-DBManager* dbManager = [[TalkInterface getInstance] dbManager];
-      
-if (dbManager == nil) {
-          
-NSLog(@&quot;removeRoomFromDB()&amp;#8230; dbManager is nil!&quot;);
-          
-return;
-      
-}
-
-NSString* query = [NSString stringWithFormat:@&quot;delete from chatRoomUserList where roomId = '%@';d&quot;,
-                         
-roomId];
-      
-[dbManager executeQuery:query];
-
-query = [NSString stringWithFormat:@&quot;delete from chatRoomMessageList where roomId = '%@'&quot;,
-                         
-roomId];
-      
-[dbManager executeQuery:query];
-
-query = [NSString stringWithFormat:@&quot;delete from chatRoom where roomId ='%@'&quot;,
-               
-roomId];
-      
-[dbManager executeQuery:query];
-
-if (dbManager.affectedRows != 0) {
-          
-NSLog(@&quot;채팅룸 DB 삭제 성공!&quot;);
-      
-} else {
-          
-NSLog(@&quot;채팅룸 DB 삭제 실패!&quot;);
-      
-}
-  
-}
-  
-</code></pre>
-
-<h3 id="select">select</h3>
-
-<pre><code class="language-objc">  
--(void) loadFromDB:(DBManager*)dbManager {
-      
-if (dbManager == nil) {
-          
-NSLog(@&quot;loadFromDB()&amp;#8230; dbManager is nil!&quot;);
-          
-return;
-      
-}
-
-NSString\* query = @&quot;select \* from chatRoom order by lastDateTime&quot;;
-
-NSArray* results = [dbManager loadDataFromDB:query];
-
-NSInteger idxOfRoomId = [dbManager.arrColumnNames indexOfObject:@&quot;roomId&quot;];
-      
-NSInteger idxOfUnreadCount = [dbManager.arrColumnNames indexOfObject:@&quot;unreadCount&quot;];
-
-[self.chatRooms removeAllObjects];
-
-// 채팅룸 리스트 로드
-      
-for (id record in results) {
-          
-NSChatRoom* newRoom = [[NSChatRoom alloc] init];
-          
-newRoom.roomId = [record objectAtIndex:idxOfRoomId];
-          
-NSNumber* unreadCountData = [record objectAtIndex:idxOfUnreadCount];
-          
-newRoom.unreadCount = [unreadCountData integerValue];
-
-[self.chatRooms addObject:newRoom];
-      
-}
-
-// 채팅룸 유저리스트 &amp; 메세지리스트 로드
-      
-for (NSChatRoom* chatRoom in self.chatRooms) {
-          
-[chatRoom loadUserListFromDB:dbManager];
-          
-[chatRoom loadMessageListFromDB:dbManager];
-      
-}
-  
-}
-  
-</code></pre>
-
-<ul>
-<li><p>정수형 데이터 가져오기</p>
-
-<p>먼저 NSNumber*로 가져온 후([record objectAtIndex:columnIndex]) NSInteger등으로 변환한다.</p></li>
-
-<li><p>날짜형 데이터 가져오기</p>
-
-<p>sqlite의 컬럼이 DATE 타입일 경우에는 포맷이 &#8216;yyyy-MM-dd HH:mm:ss&#8217; 형식의 문자열값(NSString_)으로 가져오게 되므로 다음과 같이 NSDate_로 변환할 수 있다.</p></li>
-</ul>
-
-<pre><code class="language-objc">          
-NSString* messageDateStr = [record objectAtIndex:idxOfMessageDate];
-          
-NSDateFormatter* dateFormat = [[NSDateFormatter alloc] init];
-          
-[dateFormat setDateFormat:@&quot;yyyy-MM-dd HH:mm&quot;];
-          
-message.date = [dateFormat dateFromString:messageDateStr];
-  
-</code></pre>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://www.appcoda.com/sqlite-database-ios-app-tutorial/">How to Use SQLite to Manage Data in iOS Apps</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/sqlite/">#sqlite</a>,
-            
-        
-        <time class="post-date" datetime="2015-06-02T00:00:00Z">
-            2 Jun 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/06/02/ios-url-ecba90ec8b9c-ec84a4eca095/">ios url 캐시 설정</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<pre><code class="language-objc">  
-// url 캐시 설정
-  
-// 메모리 : 10MB, 디스크 : 50MB
-  
-NSURLCache \*urlCache = [[NSURLCache alloc] initWithMemoryCapacity:10 \* 1024 \* 1024 diskCapacity:50 \* 1024 * 1024 diskPath:nil];
-  
-[NSURLCache setSharedURLCache:urlCache];
-
-</code></pre>
-
-<h2 id="출처">출처</h2>
-
-<ul>
-<li><a href="http://egloos.zum.com/tiger5net/v/5710279">iphone에서 메모리 문제로 URL로 데이터를 가끔씩 못 가져올 때</a></li>
-<li><a href="http://daddy.areum.kr/?p=217">AFNetworking, NSURLCache로 이미지 캐시하기</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/url-cache/">#URL Cache</a>,
-            
-        
-        <time class="post-date" datetime="2015-06-02T00:00:00Z">
-            2 Jun 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/06/02/ios-ec9db4ebafb8eca780-ecba90ec8b9c-eab5aced9884ed9598eab8b0/">ios 이미지 캐시 구현하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p>URL에서 이미지를 가져와 출력하는 것은 매우 성능이 좋지 않다. 상황에 따라서는 수 초간(또는 그 이상) 이미지를 불러오지 못하는 경우도 생길 수 있고, 비동기로 많은 이미지를 가져올 경우 상황은 더욱 좋지 않게 된다.</p>
-
-<p>이런 경우 대부분 이미지를 캐시해 놓고 이후 요청에서는 캐시에서 이미지를 불러오도록 하는데, 메모리와 디스크를 병행해서 캐시해야 프로세스를 재시작해도 캐시를 지속적으로 사용할 수 있는 이득을 볼 수 있다.</p>
-
-<p>간단한 플로우는 다음과 같다.</p>
-
-<p>1) 메모리 캐시에서 이미지를 검색한다.</p>
-
-<p>2) 없을 경우, 디스크 캐시에서 이미지를 검색한다.</p>
-
-<p>3) 없을 경우, URL에서 이미지를 비동기 로드한다.</p>
-
-<p>4) 메모리 캐시와 디스크 캐시에 해당 이미지를 저장한다.</p>
-
-<p>5) 다음 번 요청시에는 메모리 캐시에서 이미지를 불러온다.</p>
-
-<p>6) 프로세스 재지작 이후 요청시에는 디스크 캐시에서 불러온 후 메모리 캐시에 추가한다.</p>
-
-<p>캐시키는 URL 문자열을 md5 해시 문자열로 변환해 사용한다.</p>
-
-<p>소스코드는 다음과 같고 캐시의 최대 사이즈 제한 기능이 빠져있으므로 실제로 사용할 경우 해당 기능을 추가 구현해야 한다.</p>
-
-<p>ImageCache.h</p>
-
-<pre><code class="language-objc">  
-#import &lt;UIKit/UIKit.h&gt;
-
-@interface ImageCache : NSObject
-  
-{
-      
-NSMutableDictionary* mMemCache;
-  
-}
-
-+(ImageCache*)getInstance;
-
--(void) loadFromUrl: (NSURL\*) url callback:(void (^)(UIImage \*image))callback;
-
--(NSString\*)md5:(NSString \*)str;
-
--(UIImage\*)saveToDisk:(UIImage\*)image withKey:(NSString*)key;
-  
--(UIImage\*)loadFromDisk:(NSString\*)key;
-
--(UIImage\*)saveToMemory:(UIImage\*)image withKey:(NSString*)key;
-  
--(UIImage\*)loadFromMemory:(NSString\*)key;
-
--(UIImage\*)makeThumbnail:(UIImage\*)image;
-
-@end
-  
-</code></pre>
-
-<p>ImageCache.m</p>
-
-<pre><code class="language-objc">  
-#import &quot;ImageCache.h&quot;
-  
-#import &lt;CommonCrypto/CommonDigest.h&gt;
-
-@implementation ImageCache
-
-// 싱글턴
-  
-+(ImageCache*)getInstance {
-      
-static dispatch\_once\_t pred;
-      
-static ImageCache* instance = nil;
-
-dispatch_once(&amp;pred, ^{
-          
-instance = [[ImageCache alloc] init];
-      
-});
-
-return instance;
-  
-}
-
--(id)init {
-      
-self = [super init];
-
-if (self) {
-          
-// url 캐시 설정
-          
-// 메모리 : 10MB, 디스크 : 50MB
-          
-NSURLCache \*urlCache = [[NSURLCache alloc] initWithMemoryCapacity:10 \* 1024 \* 1024 diskCapacity:50 \* 1024 * 1024 diskPath:nil];
-          
-[NSURLCache setSharedURLCache:urlCache];
-
-// 메모리 캐시 설정
-          
-// @todo : 최대 사이즈와 적정 사이즈 조절 기능 필요
-          
-mMemCache = [[NSMutableDictionary alloc] initWithCapacity:100];
-      
-}
-
-return self;
-  
-}
-
-&amp;#8211; (void) loadFromUrl: (NSURL\*) url callback:(void (^)(UIImage \*image))callback {
-      
-dispatch\_queue\_t queue = dispatch\_get\_global\_queue(DISPATCH\_QUEUE\_PRIORITY\_HIGH, 0ul);
-      
-dispatch_async(queue, ^{
-
-UIImage* image = nil;
-
-if (url != nil) {
-              
-NSString* key = [self md5:[url absoluteString]];
-
-// 메모리 캐시에서 먼저 검색
-              
-UIImage* cachedImage = [self loadFromMemory:key];
-
-// 메모리 캐시에 없을 경우 디스크 캐시에서 검색
-              
-if (cachedImage == nil) {
-                  
-cachedImage = [self loadFromDisk:key];
-                  
-// 메모리 캐시에 추가
-                  
-[self saveToMemory:cachedImage withKey:key];
-              
-}
-
-// 캐시된 이미지가 없을 경우 url에서 직접 가져옴
-              
-if (cachedImage != nil) {
-                  
-image = cachedImage;
-              
-} else {
-                  
-NSData * imageData = [NSData dataWithContentsOfURL:url];
-                  
-image = [UIImage imageWithData:imageData];
-                  
-// 썸네일 이미지로 변환
-                  
-image = [self makeThumbnail:image];
-
-// 메모리와 디스크 캐시에 추가
-                  
-[self saveToMemory:image withKey:key];
-                  
-[self saveToDisk:image withKey:key];
-              
-}
-          
-}
-
-if (image == nil) {
-              
-image = [UIImage imageNamed:@&quot;unnamed&quot;];
-          
-}
-
-dispatch\_async(dispatch\_get\_main\_queue(), ^{
-              
-callback(image);
-          
-});
-      
-});
-  
-}
-
-// url을 사용해서 md5 해시 문자열 생성
-  
--(NSString\*)md5:(NSString \*)str {
-      
-const char *cStr = [str UTF8String];
-      
-unsigned char result[CC\_MD5\_DIGEST_LENGTH];
-      
-CC_MD5( cStr, strlen(cStr), result );
-      
-return [NSString stringWithFormat:@&quot;%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X&quot;,
-              
-result[0], result[1],
-              
-result[2], result[3],
-              
-result[4], result[5],
-              
-result[6], result[7],
-              
-result[8], result[9],
-              
-result[10], result[11],
-              
-result[12], result[13],
-              
-result[14], result[15]
-              
-];
-  
-}
-
--(UIImage\*)saveToDisk:(UIImage\*)image withKey:(NSString*)key {
-      
-NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-      
-NSString *documentsDirectory = [paths objectAtIndex:0];
-
-NSString *path = [NSString stringWithFormat:@&quot;%@/%@&quot;, documentsDirectory, key];
-
-UIImage* thumbnail = [self makeThumbnail:image];
-
-[UIImagePNGRepresentation(thumbnail) writeToFile:path atomically:YES];
-
-return thumbnail;
-  
-}
-
--(UIImage\*)loadFromDisk:(NSString\*)key {
-      
-NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-      
-NSString *documentsDirectory = [paths objectAtIndex:0];
-
-NSString *path = [NSString stringWithFormat:@&quot;%@/%@&quot;, documentsDirectory, key];
-
-UIImage* image = [[UIImage alloc] initWithContentsOfFile:path];
-      
-return image;
-  
-}
-
--(UIImage\*)loadFromMemory:(NSString \*)key {
-      
-if (mMemCache == nil) return nil;
-
-UIImage* cachedImage = [mMemCache objectForKey:key];
-      
-return cachedImage;
-  
-}
-
--(UIImage\*)saveToMemory:(UIImage\*)image withKey:(NSString*)key {
-      
-if (mMemCache == nil) {
-          
-mMemCache = [[NSMutableDictionary alloc] initWithCapacity:100];
-      
-}
-
-UIImage* thumbnail = [self makeThumbnail:image];
-
-[mMemCache setObject:thumbnail forKey:key];
-
-return thumbnail;
-  
-}
-
--(UIImage\*)makeThumbnail:(UIImage\*)image {
-      
-// 썸네일을 먼저 만들어서 저장한다.
-      
-// @todo: 썸네일 이미지 사이즈는 별도 정책에 따를 것!
-      
-CGSize destSize = CGSizeMake(150.0f, 150.0f);
-      
-UIGraphicsBeginImageContext(destSize);
-      
-[image drawInRect:CGRectMake(0, 0, destSize.width, destSize.height)];
-
-UIImage* thumbnail = UIGraphicsGetImageFromCurrentImageContext();
-
-UIGraphicsEndImageContext();
-
-return thumbnail;
-  
-}
-
-@end
-  
-</code></pre>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/cache/">#cache</a>,
-            
-                <a href="https://jeidee.github.iotags/image-cache/">#image cache</a>,
-            
-                <a href="https://jeidee.github.iotags/md5/">#md5</a>,
-            
-                <a href="https://jeidee.github.iotags/nsurl/">#NSURL</a>,
-            
-                <a href="https://jeidee.github.iotags/thumbnail/">#thumbnail</a>,
-            
-        
-        <time class="post-date" datetime="2015-06-02T00:00:00Z">
-            2 Jun 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/19/ios-uiimagevieweba5bc-ec9b90ed9895ec9cbceba19c-ecb69ceba0a5ed9598eab8b0/">ios UIImageView를 원형으로 출력하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<pre><code class="language-objc">          
-cell.imgAvatar.layer.cornerRadius = cell.imgAvatar.frame.size.height / 2;
-          
-cell.imgAvatar.layer.masksToBounds = YES;
-          
-cell.imgAvatar.layer.borderWidth = 0;
-
-</code></pre>
-
-<p>테이블셀의 UIImaveView인 imgAvatar를 원형으로 출력하는 코드이다.</p>
-
-<h2 id="출처">출처</h2>
-
-<ul>
-<li><a href="http://stackoverflow.com/questions/4414221/uiimage-in-a-circle">UIImage in a circle</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/uiimageview/">#UIImageView</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-19T00:00:00Z">
-            19 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/19/ios-ebb984eb8f99eab8b0eba19c-ec9db4ebafb8eca780-eb8ba4ec9ab4eba19ceb939c/">ios 비동기로 이미지 다운로드</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>이미지캐시 클래스를 만들고 있는 과정인데 우선 비동기로 이미지를 다운로드 하는 코드를 작성해 보았다.</p>
-
-<p>아직 캐시 기능은 구현하지 않았다.</p>
-
-<p>ImageCache.h</p>
-
-<pre><code class="language-objc">  
-#import &lt;UIKit/UIKit.h&gt;
-
-@interface ImageCache : NSObject
-
-+(ImageCache*)getInstance;
-
--(void) loadFromUrl: (NSURL\*) url callback:(void (^)(UIImage \*image))callback;
-
-@end
-  
-</code></pre>
-
-<p>ImageCache.m</p>
-
-<pre><code class="language-objc">  
-#import &lt;UIKit/UIKit.h&gt;
-
-@interface ImageCache : NSObject
-
-+(ImageCache*)getInstance;
-
--(void) loadFromUrl: (NSURL\*) url callback:(void (^)(UIImage \*image))callback;
-
-@end
-  
-</code></pre>
-
-<p>사용</p>
-
-<pre><code class="language-objc">      
-[[ImageCache getInstance] loadFromUrl:roster.photo callback:^(UIImage *image) {
-          
-cell.imgAvatar.image = image;
-      
-}];
-  
-</code></pre>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://stackoverflow.com/questions/9786018/loading-an-image-into-uiimage-asynchronously">Loading an image into UIImage asynchronously</a></li>
-<li><a href="http://egloos.zum.com/tiger5net/v/5710279">iphone에서 메모리 문제로 URL로 데이터를 가끔씩 못 가져올 때</a></li>
-<li><a href="http://nicemohawk.com/blog/2014/03/disk-caching-with-afnetworking/">Disk Caching with AFNetworking</a></li>
-<li><a href="http://jidolstar.tistory.com/723">UIImageView에 원격이미지 비동기 로드 및 캐쉬 기능 넣기</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/cache/">#cache</a>,
-            
-                <a href="https://jeidee.github.iotags/dispatch_async/">#dispatch_async</a>,
-            
-                <a href="https://jeidee.github.iotags/image/">#image</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-19T00:00:00Z">
-            19 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580/">ios 스토리보드와 커스텀 테이블 셀</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>스토리보드에 작성한 커스텀 테이블셀을 코드에서 사용하기 위해서는 다음과 같이 작업한다.</p>
-
-<p>1) Attributes Inspector에서 Identifier를 설정한다.</p>
-
-<p>2) Custom TableViewController.mm에서 다음과 같이 작성한다.</p>
-
-<p>tableView의 dequeueReusableCellWithIdentifier 함수를 사용하면 된다.</p>
-
-<pre><code class="language-objc">  
-&amp;#8211; (UITableViewCell\*)tableView:(UITableView \*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-static NSString *cellId = @&quot;friendCell&quot;;
-
-FriendCell\* cell = (FriendCell\*)[tableView dequeueReusableCellWithIdentifier:cellId];
-
-</code></pre>
-
-<h2 id="출처">출처</h2>
-
-<ul>
-<li><a href="https://byunsooblog.wordpress.com/2014/09/19/ios-%EC%8A%A4%ED%86%A0%EB%A6%AC%EB%B3%B4%EB%93%9C%EC%97%90%EC%84%9C-%ED%85%8C%EC%9D%B4%EB%B8%94%EB%B7%B0-%EC%85%80-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0/">스토리보드에서 테이블뷰 셀 가져오기</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/storyboard/">#storyboard</a>,
-            
-                <a href="https://jeidee.github.iotags/tablecell/">#tablecell</a>,
-            
-                <a href="https://jeidee.github.iotags/tableview/">#tableview</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-19T00:00:00Z">
-            19 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0/">ios c&#43;&#43; 객체에서 objective-c 객체의 함수 콜백하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>다음과 같은 요구사항이 있다고 가정해 보자.</p>
-
-<blockquote>
-<p>c++로 작성된 MsgClient는 통신 처리를 하는 별도의 워커쓰레드가 있다.</p>
-
-<p>서버에 접속한 후 데이터를 수신하면 objective-c의 여러 ViewHandler에 데이터 수신 이벤트를 발생시켜야 한다.</p>
-
-<p>이벤트 수신을 원하는 ViewHandler가 이벤트 수신을 받은 후 UI 쓰레드에서 여러 UI 컨트롤을 처리해야 한다.</p>
-</blockquote>
-
-<p>간단히 말하면 서로 다른 쓰레드에서 동작하는 c++ 오브젝트와 objective-c 오브젝트가 있고, c++ 오브젝트에서 objective-c 오브젝트의 특정 함수를 호출(콜백)할 수 있어야 한다.</p>
-
-<p>위와 같은 요구사항을 처리하기 위해서 다양한 방법이 있겠지만 다음과 같은 구조를 사용해 해결해 보도록 하자.</p>
-
-<p>(아래에 나오는 코드는 의사코드임을 감안하도록 한다.)</p>
-
-<h2 id="c-과-objective-c간-인터페이스-정의">c++과 objective-c간 인터페이스 정의</h2>
-
-<pre><code class="language-cpp">  
-class TalkClientEventHandler {
-  
-public:
-      
-TalkClientEventHandler();
-      
-virtual ~TalkClientEventHandler();
-
-virtual void onConnect();
-      
-virtual void onDisconnect(int e);
-  
-}; // class ITalkClientEventHandler
-  
-</code></pre>
-
-<p>TalkClientEventHandler는 objective-c 클래스에서 구현하고 c++ 클래스에서 사용하게 될 인터페이스이다.</p>
-
-<h2 id="c-talkclient">c++ TalkClient</h2>
-
-<pre><code class="language-cpp">  
-#include &quot;TalkClientEventHandler.h&quot;
-
-class TalkClient : public MsgClient {
-  
-public:
-      
-virtual void handleConnect();
-      
-virtual void handleDisconnect(int e);
-
-private:
-      
-TalkClientEventHandler* mTalkClientEventHandler;
-  
-};
-
-void TalkClient::handleConnect() {
-      
-mTalkClientEventHandler-&gt;onConnect();
-  
-}
-
-void TalkClient::handleDisconnect() {
-      
-mTalkClientEventHandler-&gt;onDisconnect();
-  
-}
-
-</code></pre>
-
-<p>MsgClient 클래스는 메세지의 네트워크 통신 처리를 하는 클래스이고 별도의 워커쓰레드에서 데이터를 수신하면 handleXXX() 콜백함수를 호출하게 된다.</p>
-
-<p>TalkClient는 MsgClient를 상속하고 handleXXX() 콜백함수가 호출되면 TalkClientEventHandler를 구현한 객체의 onXXXX() 함수를 콜백한다.</p>
-
-<h2 id="objective-c-talkinterface">objective-c TalkInterface</h2>
-
-<p>이 클래스가 제일 중요한데 c++과 objective-c의 인터페이스 역할을 수행하도록 작성해야 한다.</p>
-
-<p>핵심은 TalkClientEventHandler 클래스의 구현부를 objective-c의 .mm에 작성하는 것이다.</p>
-
-<p>TalkInterface.mm 파일을 보면 알 수 있듯이, objective-c 코드를 사용할 수 있게 된다.</p>
-
-<p>TalkInterface.h</p>
-
-<pre><code class="language-objc">  
-#import &quot;TalkClientEventHandler.h&quot;
-
-@protocol TalkClientDelegate
-  
-@optional
-  
-&amp;#8211; (void) onConnect;
-  
-&amp;#8211; (void) onDisconnect:(int) e;
-  
-@end
-
-@interface TalkInterface : NSObject
-  
-{
-      
-NSMutableArray* mEventHandlerList;
-  
-}
-
-+ (TalkInterface*) getInstance;
-  
-&amp;#8211; (id) init;
-  
-&amp;#8211; (void) addEventHandler:(id )eventHandler;
-  
-&amp;#8211; (void) removeEventHandler:(id )eventHandler;
-  
-@end
-  
-</code></pre>
-
-<p>TalkInterface.mm</p>
-
-<pre><code class="language-objc">  
-#import &quot;TalkInterface.h&quot;
-
-@implementation TalkInterface
-
-TalkClientEventHandler::TalkClientEventHandler() {
-  
-}
-
-TalkClientEventHandler::~TalkClientEventHandler() {
-  
-}
-
-// TalkInterface는 objective-c의 클래스이지만 c++ 코드인 TalkClientEventHandler에서 사용할 수 있게 된다.
-  
-void TalkClientEventHandler::onConnect() {
-      
-[[TalkInterface getInstance] onConnect];
-  
-}
-
-void TalkClientEventHandler::onDisconnect(int e) {
-      
-[[TalkInterface getInstance] onDisconnect:e];
-  
-}
-
-+(TalkInterface*)getInstance {
-      
-static dispatch\_once\_t pred;
-      
-static TalkInterface* instance = nil;
-
-dispatch_once(&amp;pred, ^{
-          
-instance = [[TalkInterface alloc] init];
-      
-});
-
-return instance;
-  
-}
-
--(id)init {
-      
-self = [super init];
-      
-if (self) {
-          
-mEventHandlerList = [[NSMutableArray alloc] init];
-      
-}
-      
-return self;
-  
-}
-
--(void)addEventHandler:(id )eventHandler {
-      
-[mEventHandlerList addObject:eventHandler];
-  
-}
-
--(void)removeEventHandler:(id )eventHandler {
-      
-for (id eh in mEventHandlerList) {
-          
-if ([eh isEqual:eventHandler]) {
-              
-[mEventHandlerList removeObject:eventHandler];
-              
-return;
-          
-}
-      
-}
-  
-}
-
-/*
-   
-*
-   
-*/
-  
--(void)onConnect {
-      
-dispatch\_async(dispatch\_get\_main\_queue(), ^ {
-          
-for (id eventHandler in mEventHandlerList) {
-              
-// delegate 함수가 @optional일 경우 사용가능한지 확인이 필요하다.
-              
-if ([eventHandler respondsToSelector:@selector(onConnect)])
-                  
-[eventHandler onConnect];
-          
-}
-      
-});
-  
-}
-
--(void)onDisconnect:(int)e {
-      
-dispatch\_async(dispatch\_get\_main\_queue(), ^ {
-          
-for (id eventHandler in mEventHandlerList) {
-              
-if ([eventHandler respondsToSelector:@selector(onDisconnect:)])
-                  
-[eventHandler onDisconnect:e];
-          
-}
-      
-});
-  
-}
-
-@end
-  
-</code></pre>
-
-<h2 id="objective-c-loginviewcontroller-ui-클래스에서-delegate를-등록하고-이벤트-수신하기">objective-c LoginViewController UI 클래스에서 delegate를 등록하고 이벤트 수신하기</h2>
-
-<p>LoginViewController.h</p>
-
-<pre><code class="language-objc">  
-#import &quot;TalkInterface.h&quot;
-
-@interface LoginViewController : UIViewController
-  
-</code></pre>
-
-<p>TalkClientDelegate를 구현해야 한다.</p>
-
-<p>LogtinViewController.mm</p>
-
-<pre><code class="language-objc">  
-&amp;#8211; (void) viewWillDisappear:(BOOL)animated {
-      
-[[TalkInterface getInstance] removeEventHandler:self];
-  
-}
-
-&amp;#8211; (void) viewWillAppear:(BOOL)animated {
-      
-[[TalkInterface getInstance] addEventHandler:self];
-      
-mActivityIndicator.hidden = YES;
-  
-}
-
--(void)onConnect {
-      
-NSLog(@&quot;LoginViewController onConnect&quot;);
-  
-}
-  
-</code></pre>
-
-<p>view가 출력될 때 TalkInterface에 이벤트핸들러를 등록하고 view가 사라질 때 TalkInterface에서 이벤트핸들러를 제거한다.</p>
-
-<p>c++ 객체인 TalkClient 객체에서 handleConnect()가 콜백되면 TalkInterface를 통해 최종 LoginViewController의 onConnect() 함수가 호출되게 된다.</p>
-
-<p>눈여겨 볼 것은 TalkInterface에서 dispatch_async(dispatch_get_main_queue(), &#8230;)를 통해 UI 쓰레드에 비동기로 함수 콜백하게 되는 부분이다.</p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://iosdevelopertips.com/objective-c/the-basics-of-protocols-and-delegates.html">The Basics of Protocols and Delegates</a></li>
-<li><a href="http://stackoverflow.com/questions/9018764/not-implemented-delegate-method-leads-to-crash">not implemented delegate method leads to crash</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/callback/">#callback</a>,
-            
-                <a href="https://jeidee.github.iotags/delegate/">#delegate</a>,
-            
-                <a href="https://jeidee.github.iotags/protocol/">#protocol</a>,
-            
-        
-        <time class="post-date" datetime="2015-05-18T00:00:00Z">
-            18 May 2015
-        </time>
-    </footer>
-</article>
-
-	
-
-	<nav class="pagination" role="navigation">
-	
-	    <a class="newer-posts" href="/posts/page/8/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 9 of 20</span>
-	
-	    <a class="older-posts" href="/posts/page/10/">Older Posts &rarr;</a>
-	
-</nav>
-
-</main>
-
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
     </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
 
-</body>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
 
