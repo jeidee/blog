@@ -1,59 +1,249 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Http</title>
-	
-	
-	<link rel="stylesheet" href="https://jeidee.github.io/css/style.css">
-	<link href="https://jeidee.github.io/tags/http/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go">
-	<meta name="generator" content="Hugo 0.31.1" />
-</head>
-<body>
-	<header>
-		<a href="https://jeidee.github.io/">Erlang &amp; Go</a>
-		<nav>
-			<ul>
-				
-			</ul>
-		</nav>
-	</header>
-	<main>
-		
-		
-		<div>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
 
-1 of 0
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/tags/http/index.xml">
 
+<link rel="canonical" href="https://jeidee.github.io/tags/http/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Http - Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
+    
+    
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
+
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+    <header class="page-header">
+      <h1>Http</h1>
+    </header>
+    
+
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-10-13T00:00:00JST">Oct 13, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/10/13/go-restful-api-eab5aced9884/">go RESTful API 구현</a></h2>
+  </header>
+
+  
+  <div class="summary">예제  package main import ( &quot;encoding/json&quot; &quot;fmt&quot; &quot;net/http&quot; ) type ResponseResult struct { Result string \`json:&quot;result&quot;\` Message string \`json:&quot;message&quot;\` } type ApiServer struct { } func (as *ApiServer) Start() { http.HandleFunc(&quot;/&quot;, as.index) addr := fmt.Sprintf(&quot;:%v&quot;, 8080) fmt.Printf(&quot;API Server is listening on %v&quot;, addr) err := http.ListenAndServe(addr, nil) if err != nil { fmt.Printf(&quot;%v&quot;, err) } } func (as \*ApiServer) index(w http.ResponseWriter, r \*http.Request) { w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;) json.NewEncoder(w).Encode(ResponseResult{Result: &quot;400&quot;, Message: &quot;Bad request&quot;}) } func main() { as := ApiServer{} as.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/10/13/go-restful-api-eab5aced9884/" title="go RESTful API 구현">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-09-03T00:00:00JST">Sep 3, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/09/03/go-http-ec9a94ecb2ad-ecb298eba6ac/">go http 요청 처리</a></h2>
+  </header>
+
+  
+  <div class="summary">net/http 패키지를 사용하면 된다.
+REST API를 사용하는 간단한 예제는 다음과 같다.
+ package main import ( &quot;net/http&quot; &quot;fmt&quot; &quot;io/ioutil&quot; &quot;encoding/json&quot; ) func main() { r, err := http.Get(&quot;https://example.com/api/&amp;#8230;&quot;) if err != nil { fmt.Println(err) return } defer r.Body.Close() var body []byte body, err = ioutil.ReadAll(r.Body) if err != nil { fmt.Println(err) return } var m map[string]interface{} json.Unmarshal(body, &amp;m) fmt.Println(&quot;body is &quot;, m) }  Response가 JSON 문자열일 경우 json.Unmarshal() 함수를 사용해 map[string]interface{} 타입으로 변환할 수 있다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/09/03/go-http-ec9a94ecb2ad-ecb298eba6ac/" title="go http 요청 처리">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-http-request-handlers/">ejabberd http request handlers</a></h2>
+  </header>
+
+  
+  <div class="summary">ejabberd 모듈 개발 문서 중에 http request handlers 개발 관련해서 간단히 정리해 봅니다.
+튜토리얼 &#8220;/hello&#8221;로 시작하는 URL에 대한 모든 요청을 처리하기 위해 &#8220;mod_http_hello&#8221;를 작성한다고 가정해 봅시다, 다음과 같이:
+ http://localhost:5280/hello/world http://localhost:5280/hello/hedgehog  process/2 함수의 절을 갖는 request 핸들러를 포함하는 &#8220;mod_http_hello.erl&#8221;파일을 작성하는 것으로 시작합니다.
+&#8220;/hello/world&#8221; 요청을 처리하는 예는 다음과 같습니다:
+process(\_LocalPath = [&quot;world&quot;], \_Request) -&gt; {xmlelement, &quot;html&quot;, [{&quot;xmlns&quot;, &quot;http://www.w3.org/1999/xhtml&quot;}], [{xmlelement, &quot;head&quot;, [], [{xmlelement, &quot;title&quot;, [], []}]}, {xmlelement, &quot;body&quot;, [], [{xmlelement, &quot;p&quot;, [], [{xmlcdata, &quot;Hello, world!</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/01/21/ejabberd-http-request-handlers/" title="ejabberd http request handlers">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+
+
+  </div>
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
 </div>
-	</main>
-	<aside>
-		<div>
-			<div>
-				<h3>LATEST POSTS</h3>
-			</div>
-			<div>
-				<ul>
-					
-					<li><a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/">upstart 설정</a></li>
-					
-					<li><a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/">CentOS에서 MongoDB 설치와 Service 등록</a></li>
-					
-					<li><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/">couchbase cberl에 lcb_cntl 함수 추가</a></li>
-					
-					<li><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/">couchbase cberl의IO Plugin을 libevent로 변경</a></li>
-					
-					<li><a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a></li>
-					
-				</ul>
-			</div>
-		</div>
-	</aside>
 
-	<footer>
-		<p>&copy; 2017 <a href="https://jeidee.github.io/">Erlang &amp; Go</a></p>
-	</footer>
-</body>
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
+

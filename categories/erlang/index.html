@@ -1,59 +1,431 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Erlang</title>
-	
-	
-	<link rel="stylesheet" href="https://jeidee.github.io/css/style.css">
-	<link href="https://jeidee.github.io/categories/erlang/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go">
-	<meta name="generator" content="Hugo 0.31.1" />
-</head>
-<body>
-	<header>
-		<a href="https://jeidee.github.io/">Erlang &amp; Go</a>
-		<nav>
-			<ul>
-				
-			</ul>
-		</nav>
-	</header>
-	<main>
-		
-		
-		<div>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.31.1" />
 
-1 of 0
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/categories/erlang/index.xml">
 
+<link rel="canonical" href="https://jeidee.github.io/categories/erlang/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Erlang - Erlang &amp; Go</title>
+    
+    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
+    
+    
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
+          </div>
+
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    
+    <header class="page-header">
+      <h1>Erlang</h1>
+    </header>
+    
+
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-01-25T00:00:00JST">Jan 25, 2017</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/">couchbase cberl에 lcb_cntl 함수 추가</a></h2>
+  </header>
+
+  
+  <div class="summary">cberl에 libcouchbase의 옵션을 설정하거나 조회할 수 있는 lcb_cntl 함수를 추가해 보자.
+새로운 함수 추가를 위해 코맨드 상수를 추가해 준다.
+cberl_nif.h를 열어 다음행을 추가해 준다.
+#define CMD_CNTL 8  새로운 코맨드에 콜백함수를 등록해 주기 위해서 cberl_nif.c소스의 NIF(cberl_nif_new) 함수에 다음행을 추가해 준다.
+https://gist.github.com/jeidee/86967c348f64cee9b37c6bf41c207606
+cntl 함수의 매개변수를 위한 구조체와 함수선언문을 cb.h에 다음과 같이 추가한다.
+https://gist.github.com/jeidee/430f7cea10bc95099cafb79e71407f42
+cntl 함수 정의부를 cb.c에 다음과 같이 작성한다.
+https://gist.github.com/jeidee/07acab77aad96f32b4f79110ae202209
+이제 erlang 소스를 수정해 보자.
+cntl 함수가 erlang에서 호출될 수 있도록 cberl.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" title="couchbase cberl에 lcb_cntl 함수 추가">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-01-25T00:00:00JST">Jan 25, 2017</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/">couchbase cberl의IO Plugin을 libevent로 변경</a></h2>
+  </header>
+
+  
+  <div class="summary">cberl에는 io plugin이 default로 설정되어 있는데 이럴 경우 select를 사용한다. 동시에 열 수 있는 소켓수는 1024로 제한되어 있어, 그 이상을 처리하기 위해서는 libevent로 수정해야 한다.
+그렇지 않을 경우 cberl의 view(http)를 사용할 경우 일정한 요청(동시에 열린 소켓수가 1024를 초과하는 시점) 이상일 경우 간헐적으로 unknown error 45(0x2d)를 반환한다.
+실제 libcouchbase의 로그를 cntl함수를 사용해 erlang application process에 attach된 상태에서 stderr에 출력되는 로그를 확인해 보면 다음과 같은 오류가 출력되는 것을 확인할 수 있다.
+(cberl:cntl 함수를 사용하려면 이전 포스트를 참고해서 cberl 소스를 수정해야 한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" title="couchbase cberl의IO Plugin을 libevent로 변경">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-01-25T00:00:00JST">Jan 25, 2017</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a></h2>
+  </header>
+
+  
+  <div class="summary">Makefile.in을 열어 skip_deps=true 부분을 찾아 skip_deps=false로 수정하면 된다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" title="ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-06-28T00:00:00JST">Jun 28, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2016/06/28/tsungec9d84-ec82acec9aa9ed95b4-ejabberd-ed858cec8aa4ed8ab8ed9598eab8b0/">tsung을 사용해 ejabberd 테스트하기</a></h2>
+  </header>
+
+  
+  <div class="summary">테스트 환경  ejabber node 1대, tsung node 1대, dabase node 1대 ulimit -n 100000  tsung.xml https://gist.github.com/jeidee/ae4cb98e609f405d5ce6b60a4b53f0fe</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2016/06/28/tsungec9d84-ec82acec9aa9ed95b4-ejabberd-ed858cec8aa4ed8ab8ed9598eab8b0/" title="tsung을 사용해 ejabberd 테스트하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-05-16T00:00:00JST">May 16, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2016/05/16/erlang-ecbd94eb94a9-ed919ceca480eab3bc-eab080ec9db4eb939ceb9dbcec9db8/">Erlang 코딩 표준과 가이드라인</a></h2>
+  </header>
+
+  
+  <div class="summary">참고원문 https://github.com/inaka/erlang_guidelines
+자세한 내용은 원문을 참고하세요.
+소스 코드 레이아웃  탭은 공백문자 2개로 표현하며 탭문자를 사용하지 않는다. Examples: indent 연산자는 공백으로 감싼다. Examples: spaces 줄의 끝에서 Whitespace를 제거한다. Examples: trailing_whitespace 한 줄에 작성하는 문자는 80 컬럼을 넘지 않는다. Examples: col_width 기존 코드의 스타일을 준수한다. Examples: existing_style 깊은 중첩을 피한다. Examples: nesting case 표현식보다는 함수 패턴 매치를 사용한다.
+Examples: smaller_functions
+ public(exported)/private(unexported) 함수를 논리적으로 그룹짓는다. Examples: grouping_functions
+ 사용자정의 타입은 소스파일의 상단에 모아 놓는다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2016/05/16/erlang-ecbd94eb94a9-ed919ceca480eab3bc-eab080ec9db4eb939ceb9dbcec9db8/" title="Erlang 코딩 표준과 가이드라인">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-05-16T00:00:00JST">May 16, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2016/05/16/erlang-ed9484eba19ceab7b8eb9e98ebb08d-eab79cecb999eab3bc-ecbba8ebb2a4ec8598/">Erlang 프로그래밍 규칙과 컨벤션</a></h2>
+  </header>
+
+  
+  <div class="summary">원문 http://www.erlang.se/doc/programming_rules.shtml
+원문을 간략히 요약/정리해 보았습니다.
+SW 공학 원리  하나의 모듈에서는 가능한 적은 수의 함수를 export한다. 모듈간 의존성은 가능한 줄이도록 한다. 공통 코드는 라이브러리로 작성한다. dirty하거나 tricky한 코드는 분리된 모듈로 작성한다.
+** 예를 들면, process의 사전을 사용하거나, 이상한 목적으로 erlang:process_info/1를 사용하거나&#8230;하는 등의
+ 함수호출자가 반환된 결과로 무엇을 할 것인지 가정해서 작성하지 말고, 결과를 돌려주기만 해라.
+ 중복 코드가 발생할 것 같다면 함수를 사용해서 중복 코드를 피하라.
+ Top-down 방식(개괄에서 상세로)으로 코드를 작성해라.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2016/05/16/erlang-ed9484eba19ceab7b8eb9e98ebb08d-eab79cecb999eab3bc-ecbba8ebb2a4ec8598/" title="Erlang 프로그래밍 규칙과 컨벤션">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-02-15T00:00:00JST">Feb 15, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2016/02/15/cowboyec9790ec849c-sseeba5bc-ec82acec9aa9ed959c-ec9bb9ec849cebb284-push-eab5aced9884ed9598eab8b0/">cowboy에서 SSE를 사용한 웹서버 push 구현하기</a></h2>
+  </header>
+
+  
+  <div class="summary">ejabberd에 cowboy를 연동했다고 가정한다.
+Front-end는 AngularJS를 사용한다.
+ SSE(Server Sent Event)참고  클라이언트에서 다음과 같이 EventSource객체를 생성한 후 서버 이벤트를 위한 이벤트리스닝을 시작한다.
+https://gist.github.com/jeidee/a135060aef54b48bae1d
+서버에서는 다음과 같이 cowboy_req:chunked_reply/3 함수를 사용해 content-type이 text/event-stream인 응답을 보내고 {cowboy_loop, _, _}를 반환한다.
+일반적으로 하나의 클라이언트 요청(http request)당 하나의 erlang process를 생성하며, cowboy_req:reply/4 함수를 사용해 reponse를 보내고 {ok, _, _}를 반환하면 해당 erlang process를 종료한다.
+하지만 Server Sent Event를 위해 {cowboy_loop, _, _}를 반환하면 해당 클라이언트의 요청(Request) 객체를 erlang process에 상태로 유지하며,</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2016/02/15/cowboyec9790ec849c-sseeba5bc-ec82acec9aa9ed959c-ec9bb9ec849cebb284-push-eab5aced9884ed9598eab8b0/" title="cowboy에서 SSE를 사용한 웹서버 push 구현하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-01-15T00:00:00JST">Jan 15, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2016/01/15/couchbase-cberl-ec82acec9aa9ed95b4ec849c-view-eca1b0ed9a8cec8b9c-eca3bcec9d98ec82aced95ad/">couchbase cberl 사용해서 view 조회시 주의사항</a></h2>
+  </header>
+
+  
+  <div class="summary">couchbase의 view 조회시 데이터의 최신 본을 얻지 못할 수도 있다.
+이러한 이유는 속도의 향상을 위해 stale옵션의 기본값이 true로 설정되어 있어서 그런데, 명시적으로 stale옵션을 false로 지정해야 최신 데이터가 적용된 view를 구할 수 있다.
+cberl:view()함수를 사용할 때, stale옵션을 false로 지정하는 방법은 다음과 같다.
+https://gist.github.com/jeidee/79e08693d3c6be338e31
+Args에 {stale, false}를 추가하면 된다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2016/01/15/couchbase-cberl-ec82acec9aa9ed95b4ec849c-view-eca1b0ed9a8cec8b9c-eca3bcec9d98ec82aced95ad/" title="couchbase cberl 사용해서 view 조회시 주의사항">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-11-13T00:00:00JST">Nov 13, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/11/13/erlang-applicationec9790ec849c-protocol-buffer-ec82acec9aa9ed9598eab8b0/">erlang application에서 protocol buffer 사용하기</a></h2>
+  </header>
+
+  
+  <div class="summary">이번 역시, rebar를 사용해 프로젝트를 생성했다고 가정한다.
+basho의 protobuffs 라이브러리를 추가해 보도록 하자.
+rebar.config 수정 이전 포스트를 참고해서 기본 작업(sub_dirs 추가 등)은 완료했다고 가정한다.
+ {deps, [ {'lager', &quot;.*&quot;, {git, &quot;https://github.com/basho/lager&quot;, &quot;&quot;}}, {protobuffs, &quot;.*&quot;, {git, &quot;git://github.com/basho/erlang_protobuffs.git&quot;, {branch, &quot;master&quot;}}} ]}.   deps에 protobuffs, &#8230; 행을 복사해 넣는다.  xxx.proto 파일 생성 프로토콜을 정의한 *.proto파일을 생성한다.
+예를 들면 다음과 같은 simple.proto파일을 src 디렉토리 밑에 추가한다.
+ package simple; message Person { required string name = 1; required string address = 2; required string phone_number = 3; required int32 age = 4; optional Location location = 5; } message Location { required string region = 1; required string country = 2; }  make로 컴파일하고 나면 rebar가 .</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/11/13/erlang-applicationec9790ec849c-protocol-buffer-ec82acec9aa9ed9598eab8b0/" title="erlang application에서 protocol buffer 사용하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-11-11T00:00:00JST">Nov 11, 2015</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://jeidee.github.io/2015/11/11/erlang-applicationec9790-lagereba19ceab1b0-ecb694eab080ed9598eab8b0/">erlang application에 lager(로거)  추가하기</a></h2>
+  </header>
+
+  
+  <div class="summary">rebar를 사용해 프로젝트를 생성했다고 가정한다.
+erlang의 로거 라이브러리 중에서 많이 사용되는 basho/lager를 추가해 보도록 하자.
+rebar.config 수정  %% -\*- erlang -\*- {sub_dirs, [ &quot;apps/chat&quot;, &quot;deps&quot;, &quot;rel&quot; ]}. {erl_opts, [ {parse\_transform, lager\_transform}, %% for lager debug_info, fail\_on\_warning ]}. %% {require\_otp\_vsn, &quot;R14&quot;}. %% Example, uncomment to retrieve cowboy as a dep. {deps, [ {'lager', &quot;.*&quot;, {git, &quot;https://github.com/basho/lager&quot;, &quot;&quot;}} ]}.   sub_dirs에 deps 디렉토리를 추가하고, erl_opts(erlang 컴파일러 옵션)에 {parse_transform, lager_transform}을 추가한다.</div>
+
+  <footer>
+    <a href="https://jeidee.github.io/2015/11/11/erlang-applicationec9790-lagereba19ceab1b0-ecb694eab080ed9598eab8b0/" title="erlang application에 lager(로거)  추가하기">Read More…</a>
+  </footer>
+</article>
+</li>
+      
+    </ul>
+
+    
+<nav>
+  <ul class="pager">
+
+    
+    <li class="disabled"><a href="#">Previous</a></li>
+    
+
+    
+    <li><a href="/categories/erlang/page/2/">Next</a></li>
+    
+
+  </ul>
+</nav>
+
+
+
+  </div>
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
+      
+      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
+      
+      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
+      
+      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
+      
+      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
+      
+      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
+      
+      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
+      
+      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
+      
+      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
+      
+      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
+      
+      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
+      
+      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
+      
+      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
+      
+      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
+      
+      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
+      
+      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
+      
+      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
+      
+      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
+      
+      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
+      
+      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
+      
+      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
+      
+      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
+      
+      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
+      
+      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
 </div>
-	</main>
-	<aside>
-		<div>
-			<div>
-				<h3>LATEST POSTS</h3>
-			</div>
-			<div>
-				<ul>
-					
-					<li><a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/">upstart 설정</a></li>
-					
-					<li><a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/">CentOS에서 MongoDB 설치와 Service 등록</a></li>
-					
-					<li><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/">couchbase cberl에 lcb_cntl 함수 추가</a></li>
-					
-					<li><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/">couchbase cberl의IO Plugin을 libevent로 변경</a></li>
-					
-					<li><a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a></li>
-					
-				</ul>
-			</div>
-		</div>
-	</aside>
 
-	<footer>
-		<p>&copy; 2017 <a href="https://jeidee.github.io/">Erlang &amp; Go</a></p>
-	</footer>
-</body>
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
+
