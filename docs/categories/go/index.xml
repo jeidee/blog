@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/categories/go/</link>
+    <link>http://jeidee.github.io/blog/categories/go/</link>
     <description>Recent content in Go on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 03 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/categories/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AWS DynamoDB for Go</title>
-      <link>http://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/</link>
+      <link>http://jeidee.github.io/blog/2017/01/03/aws-dynamodb-for-go/</link>
       <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/</guid>
+      <guid>http://jeidee.github.io/blog/2017/01/03/aws-dynamodb-for-go/</guid>
       <description>AWS의 Go언어를 위한 DynamoDB SDK를 알아본다.
 credentials를 사용한 DynamoDB 세션과 DB객체 생성하기 우선 AWS에서 Credentials Key, Secret을 생성 후 개발서버에 저장한다.
 일반적으로 ~/.aws/credentials 파일에 다음과 같은 구조로 저장한 후 사용하게 되는데, 다른 경로에 설정한 경우에는 해당 파일의 경로와 프로파일을 지정해 사용할 수 있다.
@@ -26,10 +26,10 @@ https://gist.github.com/jeidee/4bb85ae4bd5cdefcee60bc4e4879eb6b</description>
     
     <item>
       <title>AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</title>
-      <link>http://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/</link>
+      <link>http://jeidee.github.io/blog/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/</link>
       <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/</guid>
+      <guid>http://jeidee.github.io/blog/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/</guid>
       <description>~/.aws/credentials 파일에 AWS의 Credentials Key를 설정해 놓고 개발하다가,
 upstart나 superviosord등을 사용해 실행하게 되면 다음과 같은 에러가 발생한다.
  NoCredentialProviders: no valid providers in chain. Deprecated.  이럴 경우 다음과 같이 AWS Credentials 정보를 환경변수로 설정해서 사용하면 문제 없이 사용 가능하다.
@@ -39,29 +39,29 @@ https://gist.github.com/34468d32d6688884f0319266ed8792fc.git</description>
     
     <item>
       <title>go RESTful API 구현</title>
-      <link>http://jeidee.github.io/2015/10/13/go-restful-api-eab5aced9884/</link>
+      <link>http://jeidee.github.io/blog/2015/10/13/go-restful-api-eab5aced9884/</link>
       <pubDate>Tue, 13 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/10/13/go-restful-api-eab5aced9884/</guid>
+      <guid>http://jeidee.github.io/blog/2015/10/13/go-restful-api-eab5aced9884/</guid>
       <description>예제  package main import ( &amp;quot;encoding/json&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;net/http&amp;quot; ) type ResponseResult struct { Result string \`json:&amp;quot;result&amp;quot;\` Message string \`json:&amp;quot;message&amp;quot;\` } type ApiServer struct { } func (as *ApiServer) Start() { http.HandleFunc(&amp;quot;/&amp;quot;, as.index) addr := fmt.Sprintf(&amp;quot;:%v&amp;quot;, 8080) fmt.Printf(&amp;quot;API Server is listening on %v&amp;quot;, addr) err := http.ListenAndServe(addr, nil) if err != nil { fmt.Printf(&amp;quot;%v&amp;quot;, err) } } func (as \*ApiServer) index(w http.ResponseWriter, r \*http.Request) { w.Header().Set(&amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot;) json.NewEncoder(w).Encode(ResponseResult{Result: &amp;quot;400&amp;quot;, Message: &amp;quot;Bad request&amp;quot;}) } func main() { as := ApiServer{} as.</description>
     </item>
     
     <item>
       <title>go debug hang</title>
-      <link>http://jeidee.github.io/2015/09/30/go-debug-hang/</link>
+      <link>http://jeidee.github.io/blog/2015/09/30/go-debug-hang/</link>
       <pubDate>Wed, 30 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/09/30/go-debug-hang/</guid>
+      <guid>http://jeidee.github.io/blog/2015/09/30/go-debug-hang/</guid>
       <description>go로 만든 어플리케이션이 hang에 걸렸을 경우 다음과 같이 해당 프로세스의 스택을 추적할 수 있다.
  $ kill -ABRT process-id  </description>
     </item>
     
     <item>
       <title>go http 요청 처리</title>
-      <link>http://jeidee.github.io/2015/09/03/go-http-ec9a94ecb2ad-ecb298eba6ac/</link>
+      <link>http://jeidee.github.io/blog/2015/09/03/go-http-ec9a94ecb2ad-ecb298eba6ac/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/09/03/go-http-ec9a94ecb2ad-ecb298eba6ac/</guid>
+      <guid>http://jeidee.github.io/blog/2015/09/03/go-http-ec9a94ecb2ad-ecb298eba6ac/</guid>
       <description>net/http 패키지를 사용하면 된다.
 REST API를 사용하는 간단한 예제는 다음과 같다.
  package main import ( &amp;quot;net/http&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;io/ioutil&amp;quot; &amp;quot;encoding/json&amp;quot; ) func main() { r, err := http.Get(&amp;quot;https://example.com/api/&amp;amp;#8230;&amp;quot;) if err != nil { fmt.Println(err) return } defer r.Body.Close() var body []byte body, err = ioutil.ReadAll(r.Body) if err != nil { fmt.Println(err) return } var m map[string]interface{} json.Unmarshal(body, &amp;amp;m) fmt.Println(&amp;quot;body is &amp;quot;, m) }  Response가 JSON 문자열일 경우 json.Unmarshal() 함수를 사용해 map[string]interface{} 타입으로 변환할 수 있다.</description>
@@ -69,10 +69,10 @@ REST API를 사용하는 간단한 예제는 다음과 같다.
     
     <item>
       <title>go coroutines 패턴 구현하기</title>
-      <link>http://jeidee.github.io/2015/09/01/go-coroutines-ed8ca8ed84b4-eab5aced9884ed9598eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2015/09/01/go-coroutines-ed8ca8ed84b4-eab5aced9884ed9598eab8b0/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/09/01/go-coroutines-ed8ca8ed84b4-eab5aced9884ed9598eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/09/01/go-coroutines-ed8ca8ed84b4-eab5aced9884ed9598eab8b0/</guid>
       <description>coroutine은 쓰레드와 유사하다고 볼 수 있다.
 다른점은, 쓰레드가 동시에 여러쓰레드에서 병렬적으로 실행된다면, coroutine은 병행성은 갖지만, 특정 시점에 단 하나의 coroutine만 실행됨을 보증한다는 것이다.
 goroutine과 coroutine의 차이를 다음과 같이 구분할 수 있다.
@@ -82,10 +82,10 @@ csharp public class PowersOf2 { static void Main() { // Display powers of 2 up t
     
     <item>
       <title>go buffered channel을 이용한 Concurrent Queue 구현</title>
-      <link>http://jeidee.github.io/2015/08/31/go-buffered-channleec9d84-ec9db4ec9aa9ed959c-concurrent-queue-eab5aced9884/</link>
+      <link>http://jeidee.github.io/blog/2015/08/31/go-buffered-channleec9d84-ec9db4ec9aa9ed959c-concurrent-queue-eab5aced9884/</link>
       <pubDate>Mon, 31 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/08/31/go-buffered-channleec9d84-ec9db4ec9aa9ed959c-concurrent-queue-eab5aced9884/</guid>
+      <guid>http://jeidee.github.io/blog/2015/08/31/go-buffered-channleec9d84-ec9db4ec9aa9ed959c-concurrent-queue-eab5aced9884/</guid>
       <description>이전 포스트에서는 cotainer/list와 sync/mutex를 사용해서 Concurrent Queue를 구현해 보았다.
 해당 큐의 단점은 Multi-Goroutine 동기화를 위해 Mutex를 사용하면서 비용이 발생하고,
 Pop()함수를 사용할 경우 값이 없을 경우에도 즉시 리턴을 하기 때문에,
@@ -96,10 +96,10 @@ Pop()함수를 사용할 경우 값이 없을 경우에도 즉시 리턴을 하�
     
     <item>
       <title>go console progress bar</title>
-      <link>http://jeidee.github.io/2015/08/31/go-console-progress-bar/</link>
+      <link>http://jeidee.github.io/blog/2015/08/31/go-console-progress-bar/</link>
       <pubDate>Mon, 31 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/08/31/go-console-progress-bar/</guid>
+      <guid>http://jeidee.github.io/blog/2015/08/31/go-console-progress-bar/</guid>
       <description>console에서 진행 상태를 프로그레스바 형태로 출력하고자 할 때 다음 패키지를 사용할 수 있다.
  https://github.com/cheggaaa/pb  사용법은 다음과 같이 간단하다.
  package main import ( &amp;quot;github.com/cheggaaa/pb&amp;quot; &amp;quot;time&amp;quot; ) func main() { count := 100000 bar := pb.StartNew(count) for i := 0; i &amp;lt; count; i++ { bar.Increment() time.Sleep(time.Millisecond) } bar.FinishPrint(&amp;quot;The End!&amp;quot;) }  console에서 프로그레스바를 출력하는 기능의 핵심은,
@@ -109,20 +109,20 @@ Pop()함수를 사용할 경우 값이 없을 경우에도 즉시 리턴을 하�
     
     <item>
       <title>go containter/list를 사용한 Concurrent Queue</title>
-      <link>http://jeidee.github.io/2015/08/26/go-containterlisteba5bc-ec82acec9aa9ed959c-concurrent-queue/</link>
+      <link>http://jeidee.github.io/blog/2015/08/26/go-containterlisteba5bc-ec82acec9aa9ed959c-concurrent-queue/</link>
       <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/08/26/go-containterlisteba5bc-ec82acec9aa9ed959c-concurrent-queue/</guid>
+      <guid>http://jeidee.github.io/blog/2015/08/26/go-containterlisteba5bc-ec82acec9aa9ed959c-concurrent-queue/</guid>
       <description>참고자료  Stack and Queue in golang   container/list와 sync.Mutex를 사용한 쓰레드(고루틴)에 안전한 Queue는 다음과 같이 만들 수 있다.
  package queue import ( &amp;quot;container/list&amp;quot; &amp;quot;sync&amp;quot; ) type Queue struct { l *list.List lock sync.Mutex } func NewQueue() *Queue { return &amp;amp;Queue{list.New(), sync.Mutex{}} } func (q *Queue) Push(i interface{}) { q.lock.Lock() defer q.lock.Unlock() q.l.PushBack(i) } func (q *Queue) Pop() (interface{}, bool) { q.lock.Lock() defer q.lock.Unlock() if q.l.Len() == 0 { return nil, false } v := q.</description>
     </item>
     
     <item>
       <title>go json 디코더를 사용해서 TCP 스트림으로 수신한 json object 처리하기</title>
-      <link>http://jeidee.github.io/2015/08/25/go-json-eb9494ecbd94eb8d94eba5bc-ec82acec9aa9ed95b4ec849c-tcp-ec8aa4ed8ab8eba6bcec9cbceba19c-ec8898ec8ba0ed959c-json-object-ecb298eba6aced9598/</link>
+      <link>http://jeidee.github.io/blog/2015/08/25/go-json-eb9494ecbd94eb8d94eba5bc-ec82acec9aa9ed95b4ec849c-tcp-ec8aa4ed8ab8eba6bcec9cbceba19c-ec8898ec8ba0ed959c-json-object-ecb298eba6aced9598/</link>
       <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/08/25/go-json-eb9494ecbd94eb8d94eba5bc-ec82acec9aa9ed95b4ec849c-tcp-ec8aa4ed8ab8eba6bcec9cbceba19c-ec8898ec8ba0ed959c-json-object-ecb298eba6aced9598/</guid>
+      <guid>http://jeidee.github.io/blog/2015/08/25/go-json-eb9494ecbd94eb8d94eba5bc-ec82acec9aa9ed95b4ec849c-tcp-ec8aa4ed8ab8eba6bcec9cbceba19c-ec8898ec8ba0ed959c-json-object-ecb298eba6aced9598/</guid>
       <description>우선 net.Conn 인스턴스(c.conn은 net.Conn 인스턴스)를 사용해서 json 디코더를 생성한다.
  d := json.NewDecoder(c.conn)  수신받은 데이터를 json 오브젝트로 디코딩한다.
  var packet map[string]interface{} err := d.Decode(&amp;amp;packet)  json 오브젝트를 특정 구조체 데이터로 캐스팅한다.
@@ -133,20 +133,20 @@ id필드 값에 따라 다른 구조체로 캐스팅하도록 한다.
     
     <item>
       <title>go tcp &#43; json decoder 사용하기</title>
-      <link>http://jeidee.github.io/2015/08/19/go-tcp-json-decoder-ec82acec9aa9ed9598eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2015/08/19/go-tcp-json-decoder-ec82acec9aa9ed9598eab8b0/</link>
       <pubDate>Wed, 19 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/08/19/go-tcp-json-decoder-ec82acec9aa9ed9598eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/08/19/go-tcp-json-decoder-ec82acec9aa9ed9598eab8b0/</guid>
       <description>다음 코드는 클라이언트에서 보낸 json 패킷을 디코딩하는 간단한 tcp 서버 예제코드이다.
  package main import ( &amp;quot;encoding/json&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net&amp;quot; ) func main() { ln, err := net.Listen(&amp;quot;tcp&amp;quot;, &amp;quot;:9080&amp;quot;) if err != nil { log.Fatal(err) return } defer ln.Close() for { c, err := ln.Accept() if err != nil { log.Fatalln(&amp;quot;Can&#39;t accept new client!&amp;quot;, err) return } defer c.Close() go requestHandler(c) } } type Packet struct { Id int16 \`json:&amp;quot;id&amp;quot;\` Data interface{} \`json:&amp;quot;data&amp;quot;\` } func requestHandler(c net.</description>
     </item>
     
     <item>
       <title>go-gtk 설치</title>
-      <link>http://jeidee.github.io/2015/08/19/go-gtk-ec84a4ecb998/</link>
+      <link>http://jeidee.github.io/blog/2015/08/19/go-gtk-ec84a4ecb998/</link>
       <pubDate>Wed, 19 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/08/19/go-gtk-ec84a4ecb998/</guid>
+      <guid>http://jeidee.github.io/blog/2015/08/19/go-gtk-ec84a4ecb998/</guid>
       <description>golang을 사용해서 gui 프로그래밍을 하려면 go-gtk를 설치하면 된다.
 go-gtk는 libgtk+ 2.0을 필요로 하는데,
 ubuntu에서 libgtk+ 2.0은 다음과 같이 설치할 수 있다.

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Osx on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/osx/</link>
+    <link>http://jeidee.github.io/blog/tags/osx/</link>
     <description>Recent content in Osx on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 May 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/osx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/osx/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>osx 유용한 명령어</title>
-      <link>http://jeidee.github.io/2015/05/18/osx-ec9ca0ec9aa9ed959c-ebaa85eba0b9ec96b4/</link>
+      <link>http://jeidee.github.io/blog/2015/05/18/osx-ec9ca0ec9aa9ed959c-ebaa85eba0b9ec96b4/</link>
       <pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/05/18/osx-ec9ca0ec9aa9ed959c-ebaa85eba0b9ec96b4/</guid>
+      <guid>http://jeidee.github.io/blog/2015/05/18/osx-ec9ca0ec9aa9ed959c-ebaa85eba0b9ec96b4/</guid>
       <description>Dock Dealy 없애기
  defaults write com.apple.Dock autohide-delay -float 0 &amp;amp;&amp;amp; killall Dock  미션 컨트롤 화면 전환 속도를 보다 빠르게
  defaults write com.apple.dock expose-animation-duration -float 0.12 &amp;amp;&amp;amp; killall Dock  숨겨진 APP 아이콘 DOCK에서 쉽게 구별 하기

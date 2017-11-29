@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unity3d Plugin on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/unity3d-plugin/</link>
+    <link>http://jeidee.github.io/blog/tags/unity3d-plugin/</link>
     <description>Recent content in Unity3d Plugin on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 25 Aug 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/unity3d-plugin/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/unity3d-plugin/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Unity3D에서 iOS &amp;#038; OSX Plugin 개발</title>
-      <link>http://jeidee.github.io/2016/08/25/unity3dec9790ec849c-ios-osx-plugin-eab09cebb09c/</link>
+      <link>http://jeidee.github.io/blog/2016/08/25/unity3dec9790ec849c-ios-osx-plugin-eab09cebb09c/</link>
       <pubDate>Thu, 25 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/08/25/unity3dec9790ec849c-ios-osx-plugin-eab09cebb09c/</guid>
+      <guid>http://jeidee.github.io/blog/2016/08/25/unity3dec9790ec849c-ios-osx-plugin-eab09cebb09c/</guid>
       <description>다음과 같은 C++ 파일이 있다.
  hello.h  #ifndef hello_hpp #define hello_hpp #include &amp;lt;stdio.h&amp;gt; class hello { public: char* getMessage(); }; extern &amp;quot;C&amp;quot; { hello* createHello(); void deleteHello(hello* obj); char\* getMessage(hello\* hello); } #endif /\* hello_hpp \*/   hello.cpp  #include &amp;quot;hello.h&amp;quot; char* hello::getMessage() { return (char*)&amp;quot;Hello, world&amp;quot;; } hello* createHello() { return new hello(); } void deleteHello(hello* obj) { if (obj == NULL) return; delete obj; } char\* getMessage(hello\* obj) { if (obj == NULL) return NULL; return obj-&amp;gt;getMessage(); }  Unity3D에서 C++로 작성된 hello 클래스를 사용하는 방법을 살펴보자.</description>
     </item>
     
     <item>
       <title>Unity3D에서 plugin import시 const char* 변환</title>
-      <link>http://jeidee.github.io/2016/08/25/unity3dec9790ec849c-plugin-importec8b9c-const-char-ebb380ed9998/</link>
+      <link>http://jeidee.github.io/blog/2016/08/25/unity3dec9790ec849c-plugin-importec8b9c-const-char-ebb380ed9998/</link>
       <pubDate>Thu, 25 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/08/25/unity3dec9790ec849c-plugin-importec8b9c-const-char-ebb380ed9998/</guid>
+      <guid>http://jeidee.github.io/blog/2016/08/25/unity3dec9790ec849c-plugin-importec8b9c-const-char-ebb380ed9998/</guid>
       <description>다음 링크를 참고한다.
 http://answers.unity3d.com/questions/160230/returning-variables-in-a-plugin.html
 내용을 간략하게 요약하면 다음과 같다.

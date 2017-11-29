@@ -2,60 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C&#43;&#43; on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/categories/c&#43;&#43;/</link>
+    <link>http://jeidee.github.io/blog/categories/c&#43;&#43;/</link>
     <description>Recent content in C&#43;&#43; on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Sep 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/categories/c++/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/categories/c++/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>c&#43;&#43; REST SDK</title>
-      <link>http://jeidee.github.io/2016/09/02/c-rest-sdk/</link>
+      <link>http://jeidee.github.io/blog/2016/09/02/c-rest-sdk/</link>
       <pubDate>Fri, 02 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/09/02/c-rest-sdk/</guid>
+      <guid>http://jeidee.github.io/blog/2016/09/02/c-rest-sdk/</guid>
       <description>https://gist.github.com/jeidee/570eb3137b2945a68593a737274214ac
 https://gist.github.com/jeidee/d96b6aaf333e856d3c44c5db1da845c9</description>
     </item>
     
     <item>
       <title>c&#43;&#43; openssl AES ECB</title>
-      <link>http://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/</link>
+      <link>http://jeidee.github.io/blog/2016/09/01/c-openssl-aes-ecb/</link>
       <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/</guid>
+      <guid>http://jeidee.github.io/blog/2016/09/01/c-openssl-aes-ecb/</guid>
       <description>https://gist.github.com/jeidee/9da72760b0de11edefbf8e5377fcba74
 https://gist.github.com/jeidee/2cc2fd6364050e00c825bbd2807d6b9b</description>
     </item>
     
     <item>
       <title>c/c&#43;&#43; hex string to byte array</title>
-      <link>http://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/</link>
+      <link>http://jeidee.github.io/blog/2016/09/01/cc-hex-string-to-byte-array/</link>
       <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/</guid>
+      <guid>http://jeidee.github.io/blog/2016/09/01/cc-hex-string-to-byte-array/</guid>
       <description>https://gist.github.com/jeidee/0f91485f3975301dd1e9fdf896c6056b</description>
     </item>
     
     <item>
       <title>Unity3D에서 iOS &amp;#038; OSX Plugin 개발</title>
-      <link>http://jeidee.github.io/2016/08/25/unity3dec9790ec849c-ios-osx-plugin-eab09cebb09c/</link>
+      <link>http://jeidee.github.io/blog/2016/08/25/unity3dec9790ec849c-ios-osx-plugin-eab09cebb09c/</link>
       <pubDate>Thu, 25 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/08/25/unity3dec9790ec849c-ios-osx-plugin-eab09cebb09c/</guid>
+      <guid>http://jeidee.github.io/blog/2016/08/25/unity3dec9790ec849c-ios-osx-plugin-eab09cebb09c/</guid>
       <description>다음과 같은 C++ 파일이 있다.
  hello.h  #ifndef hello_hpp #define hello_hpp #include &amp;lt;stdio.h&amp;gt; class hello { public: char* getMessage(); }; extern &amp;quot;C&amp;quot; { hello* createHello(); void deleteHello(hello* obj); char\* getMessage(hello\* hello); } #endif /\* hello_hpp \*/   hello.cpp  #include &amp;quot;hello.h&amp;quot; char* hello::getMessage() { return (char*)&amp;quot;Hello, world&amp;quot;; } hello* createHello() { return new hello(); } void deleteHello(hello* obj) { if (obj == NULL) return; delete obj; } char\* getMessage(hello\* obj) { if (obj == NULL) return NULL; return obj-&amp;gt;getMessage(); }  Unity3D에서 C++로 작성된 hello 클래스를 사용하는 방법을 살펴보자.</description>
     </item>
     
     <item>
       <title>Unity3D에서 plugin import시 const char* 변환</title>
-      <link>http://jeidee.github.io/2016/08/25/unity3dec9790ec849c-plugin-importec8b9c-const-char-ebb380ed9998/</link>
+      <link>http://jeidee.github.io/blog/2016/08/25/unity3dec9790ec849c-plugin-importec8b9c-const-char-ebb380ed9998/</link>
       <pubDate>Thu, 25 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/08/25/unity3dec9790ec849c-plugin-importec8b9c-const-char-ebb380ed9998/</guid>
+      <guid>http://jeidee.github.io/blog/2016/08/25/unity3dec9790ec849c-plugin-importec8b9c-const-char-ebb380ed9998/</guid>
       <description>다음 링크를 참고한다.
 http://answers.unity3d.com/questions/160230/returning-variables-in-a-plugin.html
 내용을 간략하게 요약하면 다음과 같다.
@@ -65,20 +65,20 @@ IntPtr로 받아서 Marshal.PtrToStringAnsi(&amp;#8230;)함수를 통해 string�
     
     <item>
       <title>boost, openssl prebuilt link</title>
-      <link>http://jeidee.github.io/2016/04/19/boost-openssl-prebuilt-link/</link>
+      <link>http://jeidee.github.io/blog/2016/04/19/boost-openssl-prebuilt-link/</link>
       <pubDate>Tue, 19 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/04/19/boost-openssl-prebuilt-link/</guid>
+      <guid>http://jeidee.github.io/blog/2016/04/19/boost-openssl-prebuilt-link/</guid>
       <description>boost binaries
 openssl binaries</description>
     </item>
     
     <item>
       <title>Visual C&#43;&#43; for Linux Development</title>
-      <link>http://jeidee.github.io/2016/04/05/visual-c-for-linux-development/</link>
+      <link>http://jeidee.github.io/blog/2016/04/05/visual-c-for-linux-development/</link>
       <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/04/05/visual-c-for-linux-development/</guid>
+      <guid>http://jeidee.github.io/blog/2016/04/05/visual-c-for-linux-development/</guid>
       <description>Windows 환경의 Visual Studio 2015에서 리눅스용 C++ 어플리케이션을 개발할 수 있게 되었다.
 ssh를 통해 Remote 개발을 하는 구성인데 다음 링크에서 자세한 내용을 확인할 수 있다.
  Visual C++ for Linux Development  해당 링크의 내용을 따라서 다음과 같이 진행해 보았다.
@@ -88,19 +88,19 @@ ssh를 통해 Remote 개발을 하는 구성인데 다음 링크에서 자세한
     
     <item>
       <title>osx &#43; eclipse CDT에서 boost설정</title>
-      <link>http://jeidee.github.io/2016/04/01/osx-eclipse-cdtec9790ec849c-boostec84a4eca095/</link>
+      <link>http://jeidee.github.io/blog/2016/04/01/osx-eclipse-cdtec9790ec849c-boostec84a4eca095/</link>
       <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/04/01/osx-eclipse-cdtec9790ec849c-boostec84a4eca095/</guid>
+      <guid>http://jeidee.github.io/blog/2016/04/01/osx-eclipse-cdtec9790ec849c-boostec84a4eca095/</guid>
       <description>osx에서 boost 설치  $ brew install boost  sample source #include &amp;lt;boost/regex.hpp&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; int main() { std::string line; boost::regex pat( &amp;quot;^Subject: (Re: |Aw: )\*(.\*)&amp;quot; ); while (std::cin) { std::getline(std::cin, line); boost::smatch matches; if (boost::regex_match(line, matches, pat)) std::cout &amp;lt;&amp;lt; matches[2] &amp;lt;&amp;lt; std::endl; } }  프로젝트 설정  프로젝트의 속성을 연다. C/C++ Build &amp;gt; Settings &amp;gt; Tool Settings &amp;gt; GCC C++ Linker &amp;gt; Libraries를 선택한다. Libraries(-l) 항목에 boost_regex를 입력한다.</description>
     </item>
     
     <item>
       <title>gloox xmppPing</title>
-      <link>http://jeidee.github.io/2015/06/02/gloox-xmppping/</link>
+      <link>http://jeidee.github.io/blog/2015/06/02/gloox-xmppping/</link>
       <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/06/02/gloox-xmppping/</guid>
+      <guid>http://jeidee.github.io/blog/2015/06/02/gloox-xmppping/</guid>
       <description>gloox의 경우 tcp 연결이 비정상적으로 종료되었을 때 disconnect를 감지할 수 없는 경우가 있다.
 이럴 경우를 대비해 xmpp 서버에 주기적으로 ping을 보내고 pong을 수신해서 연결 상태를 관리하는 것이 좋다.
 class MsgClient : public MessageSessionHandler , &amp;amp;#8230; , EventHandler { private: int m_heartBeat; }; void MsgClient::heartBeat() { m\_client-&amp;gt;xmppPing(m\_client-&amp;gt;jid(), this); if (++m_heartBeat &amp;gt; 3) { LOGD(&amp;quot;허트비트 무응답 초과로 연결 종료!&amp;quot;); m_client-&amp;gt;disconnect(); } } void MsgClient::handleEvent(const Event&amp;amp; event) { switch (event.eventType()) { case Event::PingPing: LOGD(&amp;quot;PingPing&amp;quot;); break; case Event::PingPong: LOGD(&amp;quot;PingPong&amp;quot;); &amp;amp;#8211;m_heartBeat; break; case Event::PingError: LOGE(&amp;quot;PingError&amp;quot;); break; default: break; } return; } // ConnectionListener void MsgClient::onConnect() { LOGD(&amp;quot;connected!</description>
@@ -108,10 +108,10 @@ class MsgClient : public MessageSessionHandler , &amp;amp;#8230; , EventHandler 
     
     <item>
       <title>c&#43;&#43; GetTickCount() on linux</title>
-      <link>http://jeidee.github.io/2015/05/13/c-gettickcount-on-linux/</link>
+      <link>http://jeidee.github.io/blog/2015/05/13/c-gettickcount-on-linux/</link>
       <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/05/13/c-gettickcount-on-linux/</guid>
+      <guid>http://jeidee.github.io/blog/2015/05/13/c-gettickcount-on-linux/</guid>
       <description>gettimeofday()는 향후 제거될 함수이며 권장되지 않기 때문에 clock_gettime()을 사용한 방법을 사용하도록 한다.
 특히 경과시간을 구하고자할 때 현재 시간을 반환하는 gettimeofday()함수는 시각 조정에 의한 오차가 발생할 수 있고 쓰레드에 안전하지 않으므로,
 clock_gettime()에 CLOCK_MONOTONIC(uptime) 옵션을 사용해서 사용하는 것이 좋다.
@@ -121,10 +121,10 @@ clock_gettime()은 쓰레드에 안전하다.
     
     <item>
       <title>c&#43;&#43; 리눅스 데몬 프로세스 만들기</title>
-      <link>http://jeidee.github.io/2015/04/15/c-eba6aceb8885ec8aa4-eb8db0ebaaac-ed9484eba19cec84b8ec8aa4-eba78ceb93a4eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2015/04/15/c-eba6aceb8885ec8aa4-eb8db0ebaaac-ed9484eba19cec84b8ec8aa4-eba78ceb93a4eab8b0/</link>
       <pubDate>Wed, 15 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/04/15/c-eba6aceb8885ec8aa4-eb8db0ebaaac-ed9484eba19cec84b8ec8aa4-eba78ceb93a4eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/04/15/c-eba6aceb8885ec8aa4-eb8db0ebaaac-ed9484eba19cec84b8ec8aa4-eba78ceb93a4eab8b0/</guid>
       <description>c/c++ 로 구현한 어플리케이션을 데몬 프로세스로 만들기 위해 다음과 같은 과정을 거쳐 추가 코드를 작성한다.
 1) fork()를 사용해 자식프로세스를 생성 후 부모 프로세스를 종료
 2) 터미널 종료시 SIGHUP 시그널 무시
@@ -136,20 +136,20 @@ clock_gettime()은 쓰레드에 안전하다.
     
     <item>
       <title>c&#43;&#43; regex를 사용해서 문자열이 날짜인지 확인</title>
-      <link>http://jeidee.github.io/2015/04/14/c-regexeba5bc-ec82acec9aa9ed95b4ec849c-ebacb8ec9e90ec97b4ec9db4-eb82a0eca79cec9db8eca780-ed9995ec9db8/</link>
+      <link>http://jeidee.github.io/blog/2015/04/14/c-regexeba5bc-ec82acec9aa9ed95b4ec849c-ebacb8ec9e90ec97b4ec9db4-eb82a0eca79cec9db8eca780-ed9995ec9db8/</link>
       <pubDate>Tue, 14 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/04/14/c-regexeba5bc-ec82acec9aa9ed95b4ec849c-ebacb8ec9e90ec97b4ec9db4-eb82a0eca79cec9db8eca780-ed9995ec9db8/</guid>
+      <guid>http://jeidee.github.io/blog/2015/04/14/c-regexeba5bc-ec82acec9aa9ed95b4ec849c-ebacb8ec9e90ec97b4ec9db4-eb82a0eca79cec9db8eca780-ed9995ec9db8/</guid>
       <description>정규표현식을 사용해서 주어진 문자열이 날짜인지 확인하는 코드는 다음과 같다.
 #include &amp;lt;string&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;regex&amp;gt; using namespace std; bool string\_util::is\_date(string source) { // yyyy-mm-dd 형식의 날짜만 지원 regex ex(&amp;quot;d{4}-d{2}-d{2}&amp;quot;); smatch matches; while (regex_search(source, matches, ex)) { for (auto m : matches) { cout &amp;lt;&amp;lt; &amp;quot;match string is &amp;quot; &amp;lt;&amp;lt; m &amp;lt;&amp;lt; endl; } return true; } return false; }  굳이 while (regex_search(&amp;#8230;)) 루프를 사용하지 않고 if (regex_search())를 사용해도 되겠지만, 용법을 살펴보는 의미로 추가했다.</description>
     </item>
     
     <item>
       <title>c&#43;&#43; tail -f 구현</title>
-      <link>http://jeidee.github.io/2015/04/14/c-tail-f-eab5aced9884/</link>
+      <link>http://jeidee.github.io/blog/2015/04/14/c-tail-f-eab5aced9884/</link>
       <pubDate>Tue, 14 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/04/14/c-tail-f-eab5aced9884/</guid>
+      <guid>http://jeidee.github.io/blog/2015/04/14/c-tail-f-eab5aced9884/</guid>
       <description>ifstream을 사용해서 tail -f를 구현해 보자.
 소스코드를 먼저 본다.
 #include &amp;lt;iostream&amp;gt; #include &amp;lt;fstream&amp;gt; #include &amp;lt;string&amp;gt; #include &amp;lt;unistd.h&amp;gt; // for sleep() using namespace std; // return code #define EXIT_OK 0 #define EXIT\_INVALID\_ARGUMENTS 1 #define EXIT\_FILE\_NOT_FOUND 2 int main(int argc, char** argv) { if (argc &amp;lt; 2) { cout &amp;lt;&amp;lt; &amp;quot;Usage: log\_collector file\_path&amp;quot; &amp;lt;&amp;lt; endl; return EXIT\_INVALID\_ARGUMENTS; } string logFilePath = &amp;quot;/home/gss.dev/server/bin/var/log/ejabberd/ejabberd.log&amp;quot;; ifstream fsLog; // open log file and go to end of file fsLog.</description>
@@ -157,10 +157,10 @@ clock_gettime()은 쓰레드에 안전하다.
     
     <item>
       <title>c&#43;&#43; ubuntu에서 mysql 개발 &amp;#8211; 연결</title>
-      <link>http://jeidee.github.io/2015/04/14/c-ubuntuec9790ec849c-mysql-eab09cebb09c-ec97b0eab2b0/</link>
+      <link>http://jeidee.github.io/blog/2015/04/14/c-ubuntuec9790ec849c-mysql-eab09cebb09c-ec97b0eab2b0/</link>
       <pubDate>Tue, 14 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/04/14/c-ubuntuec9790ec849c-mysql-eab09cebb09c-ec97b0eab2b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/04/14/c-ubuntuec9790ec849c-mysql-eab09cebb09c-ec97b0eab2b0/</guid>
       <description> ubuntu에서 mysql 개발을 위해서, 먼저 mysql library를 다음과 같이 설치한다.
  sudo apt-get install libmysqlcppconn-dev  그런 후 다음과 같이 단순 연결 코드를 작성한다. (test.cpp)
 #include &amp;lt;iostream&amp;gt; #include &amp;quot;mysql_driver.h&amp;quot; int main() { sql::mysql::MySQL_Driver *driver; sql::Connection *con; driver = sql::mysql::get\_mysql\_driver_instance(); con = driver-&amp;gt;connect(&amp;quot;tcp://127.0.0.1:3306&amp;quot;, &amp;quot;ejabberd&amp;quot;, &amp;quot;ejabberd&amp;quot;); delete con; return 0; }  g++을 사용해서 다음과 같이 컴파일 한다.
@@ -169,30 +169,30 @@ clock_gettime()은 쓰레드에 안전하다.
     
     <item>
       <title>c&#43;&#43; vector == operator overloading</title>
-      <link>http://jeidee.github.io/2015/04/14/c-vector-operator-overloading/</link>
+      <link>http://jeidee.github.io/blog/2015/04/14/c-vector-operator-overloading/</link>
       <pubDate>Tue, 14 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/04/14/c-vector-operator-overloading/</guid>
+      <guid>http://jeidee.github.io/blog/2015/04/14/c-vector-operator-overloading/</guid>
       <description>bool operator==(vector&amp;lt;int&amp;gt;&amp;amp; lhs, vector&amp;lt;int&amp;gt;&amp;amp; rhs) { if (lhs.size() != rhs.size()) return false; for (vector&amp;lt;int&amp;gt;::iterator lit = lhs.begin(), rit = rhs.begin(); lit != lhs.end() &amp;amp;&amp;amp; rit != rhs.end(); ++lit, ++rit) { if (\*lit != \*rit) return false; } return true; }  주의할 것은 클래스 내부가 아닌 외부에서 연산자를 오버로딩할 때 bool operator==() const { &amp;#8230; } 와 같이 하는 경우 다음과 같은 컴파일 에러를 만날 수 있다.
  non-member function cannot have cv-qualifier&amp;#8230;</description>
     </item>
     
     <item>
       <title>c&#43;&#43;11 foreach</title>
-      <link>http://jeidee.github.io/2015/04/14/c11-foreach/</link>
+      <link>http://jeidee.github.io/blog/2015/04/14/c11-foreach/</link>
       <pubDate>Tue, 14 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/04/14/c11-foreach/</guid>
+      <guid>http://jeidee.github.io/blog/2015/04/14/c11-foreach/</guid>
       <description> c++11에서는 foreach를 다음과 같이 사용할 수 있다.
 vector&amp;lt;string&amp;gt; tokens = &amp;amp;#8230;; for(auto token : tokens) { &amp;amp;#8230; }  참고  Range-based for loops  </description>
     </item>
     
     <item>
       <title>c&#43;&#43; eclipse에서 c&#43;&#43; 11/0x 지원 설정</title>
-      <link>http://jeidee.github.io/2015/03/17/c-eclipseec9790ec849c-c-110x-eca780ec9b90-ec84a4eca095/</link>
+      <link>http://jeidee.github.io/blog/2015/03/17/c-eclipseec9790ec849c-c-110x-eca780ec9b90-ec84a4eca095/</link>
       <pubDate>Tue, 17 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/03/17/c-eclipseec9790ec849c-c-110x-eca780ec9b90-ec84a4eca095/</guid>
+      <guid>http://jeidee.github.io/blog/2015/03/17/c-eclipseec9790ec849c-c-110x-eca780ec9b90-ec84a4eca095/</guid>
       <description> 먼저 C++ 프로젝트를 생성한다.
 생성된 프로젝트에서 Properties 메뉴를 선택한다.
 C/C++ Build &amp;gt; Settings &amp;gt; Tool Settings &amp;gt; GCC C++ Compiler &amp;gt; Miscellaneous -&amp;gt; Other Flags에 &amp;#8220;-std=c++0x&amp;#8221;값을 입력한다.

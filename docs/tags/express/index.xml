@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Express on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/express/</link>
+    <link>http://jeidee.github.io/blog/tags/express/</link>
     <description>Recent content in Express on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Jan 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/express/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/express/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>node.js &#43; express &#43; swig &#43; bootstrap 사용하기</title>
-      <link>http://jeidee.github.io/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0/</link>
       <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0/</guid>
       <description>booststrap 설치 bower를 사용해서 설치하기로 한다.
 그 외의 설치방법은 한글 booststrap 사이트를 참고하자.
 먼저 node.js와 express로 app 프로젝트가 생성되었다고 가정한다.
@@ -28,10 +28,10 @@ express + swig에 bootstrap 적용 views/layout.html파일을 다음과 같이 �
     
     <item>
       <title>node.js express로 rest api 구현하기</title>
-      <link>http://jeidee.github.io/2015/01/22/node-js-expresseba19c-rest-api-eab5aced9884ed9598eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2015/01/22/node-js-expresseba19c-rest-api-eab5aced9884ed9598eab8b0/</link>
       <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/01/22/node-js-expresseba19c-rest-api-eab5aced9884ed9598eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/01/22/node-js-expresseba19c-rest-api-eab5aced9884ed9598eab8b0/</guid>
       <description>express의 url 라우팅 처리 방식 살펴보기 express로 프로젝트를 생성 후 app.js를 열어 보자.
 소스에서 다음과 같은 내용을 찾는다.
 var routes = require(&#39;./routes/index&#39;); var users = require(&#39;./routes/users&#39;); &amp;amp;#8230; app.use(&#39;/&#39;, routes); app.use(&#39;/users&#39;, users);  먼저 24라인은 html view engine과 관계가 있으므로 스킵하고 25라인을 살펴보자.
@@ -41,10 +41,10 @@ var routes = require(&#39;./routes/index&#39;); var users = require(&#39;./route
     
     <item>
       <title>node.js express에서 swig view engine 사용하기</title>
-      <link>http://jeidee.github.io/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0/</link>
       <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0/</guid>
       <description>express view engine으로 swig를 사용해 보자.
 express로 웹앱의 기본 골격 프로젝트를 생성했다고 가정한다.
 package.json에 다음과 같이 dependencies 모듈을 추가해 준다.
@@ -55,10 +55,10 @@ var swig = require(&#39;swig&#39;);  app.js에서 view engine 관련된 코드�
     
     <item>
       <title>node.js와 express</title>
-      <link>http://jeidee.github.io/2015/01/22/node-jsec9980-express/</link>
+      <link>http://jeidee.github.io/blog/2015/01/22/node-jsec9980-express/</link>
       <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/01/22/node-jsec9980-express/</guid>
+      <guid>http://jeidee.github.io/blog/2015/01/22/node-jsec9980-express/</guid>
       <description>ubuntu에서 node.js의 express를 사용해 rest api와 webapp을 구현해 본다.
 개발환경  os: ubuntu 14.10 node: v0.10.33 express: 4.0.0  express 설치  $ sudo npm install -g express $ sudo apt-get install node-express-generator  express app 생성  $ express hello $ cd hello $ npm install  npm install을 실행하면 의존성 패키지가 설치된다.
 이렇게 하면 기본 express webapp이 생성된 상태인데, 다음과 같이 확인해 볼 수 있다.

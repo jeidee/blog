@@ -15,7 +15,7 @@
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     
 
-    <link href='http://jeidee.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    <link href='http://jeidee.github.io/blog/dist/main.css' rel='stylesheet' type="text/css" />
     
       
     
@@ -27,7 +27,7 @@
  &amp;#8211; port: 5280 module: ejabberd_http request_handlers: &quot;/hello&quot;: mod\_http\_hello &quot;/api&quot;: mod\_http\_api web_admin: true http_poll: true http_bind: true \## register: true captcha: true  위와 같이 설정할 경우 admin, api, bosh가 모두 http://localhost:5280 하에서 동작하게 되는데 https로 설정하기 위해서는 다음과 같이 5223 tls 설정과 유사하게 설정하면 된다.
  &amp;#8211; port: 5281 module: ejabberd_http certfile: &quot;/path/to/server.pem&quot; tls: true http_bind: true  주의할 것은 tls 설정항목이 starttls가 아니라 tls라는 것이다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://jeidee.github.io/2015/01/22/ejabberd-bosheba5bc-httpseba19c-ec84a4eca095ed9598eab8b0/" />
+<meta property="og:url" content="http://jeidee.github.io/blog/2015/01/22/ejabberd-bosheba5bc-httpseba19c-ec84a4eca095ed9598eab8b0/" />
 
 
 
@@ -73,7 +73,7 @@
     <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
-    <a href="http://jeidee.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+    <a href="http://jeidee.github.io/blog" class="f3 fw2 hover-white no-underline white-90 dib">
       Erlang &amp; Go
     </a>
     <div class="flex-l items-center">
@@ -1546,7 +1546,7 @@ https://localhost:5281/http-bind
     </main>
     <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://jeidee.github.io/" >
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://jeidee.github.io/blog" >
     &copy; 2017 Erlang &amp; Go
   </a>
   
@@ -1561,7 +1561,7 @@ https://localhost:5281/http-bind
   </div>
 </footer>
 
-    <script src="http://jeidee.github.io/dist/app.bundle.js" async></script>
+    <script src="http://jeidee.github.io/blog/dist/app.bundle.js" async></script>
 
   </body>
 </html>

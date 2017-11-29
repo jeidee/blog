@@ -15,7 +15,7 @@
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     
 
-    <link href='http://jeidee.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    <link href='http://jeidee.github.io/blog/dist/main.css' rel='stylesheet' type="text/css" />
     
       
     
@@ -29,7 +29,7 @@ http://localhost:5280/api/session/list URI를 호출했을 때 동작하는 API�
 process([&lt;&lt;&quot;session&quot;&gt;&gt;, &lt;&lt;&quot;list&quot;&gt;&gt;], _Request) -&gt; session\_list(\_Request);  session_list/1 함수는 내부 함수이며 다음과 같다.
 session\_list(\_Request) -&gt; ?DEBUG(&quot;session\_list() \_Request is ~p~n&quot;, [_Request]), List = mod\_admin\_extra:connected\_users\_info(), Y = [X || {[X,\_,\_,\_,\_], \_, \_, \_, \_, \_, \_} &lt;- List], Y1 = {[{list, Y}]}, Result1 = jiffy:encode(Y1), Result2 = to_bin(&quot;~s&quot;, [Result1]), {200, ?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://jeidee.github.io/2015/01/21/ejabberd-node-jsec9bb9ec9790ec849c-ejabberd-http-api-ed98b8ecb69ced9598eab8b0/" />
+<meta property="og:url" content="http://jeidee.github.io/blog/2015/01/21/ejabberd-node-jsec9bb9ec9790ec849c-ejabberd-http-api-ed98b8ecb69ced9598eab8b0/" />
 
 
 
@@ -79,7 +79,7 @@ session\_list(\_Request) -&gt; ?DEBUG(&quot;session\_list() \_Request is ~p~n&qu
     <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
-    <a href="http://jeidee.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+    <a href="http://jeidee.github.io/blog" class="f3 fw2 hover-white no-underline white-90 dib">
       Erlang &amp; Go
     </a>
     <div class="flex-l items-center">
@@ -1627,7 +1627,7 @@ res.send(data);
     </main>
     <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://jeidee.github.io/" >
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://jeidee.github.io/blog" >
     &copy; 2017 Erlang &amp; Go
   </a>
   
@@ -1642,7 +1642,7 @@ res.send(data);
   </div>
 </footer>
 
-    <script src="http://jeidee.github.io/dist/app.bundle.js" async></script>
+    <script src="http://jeidee.github.io/blog/dist/app.bundle.js" async></script>
 
   </body>
 </html>

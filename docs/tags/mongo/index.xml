@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mongo on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/mongo/</link>
+    <link>http://jeidee.github.io/blog/tags/mongo/</link>
     <description>Recent content in Mongo on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 27 Nov 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/mongo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/mongo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ejabberd mongo-db 사용하기</title>
-      <link>http://jeidee.github.io/2015/11/27/ejabberd-mongo-db-ec82acec9aa9ed9598eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2015/11/27/ejabberd-mongo-db-ec82acec9aa9ed9598eab8b0/</link>
       <pubDate>Fri, 27 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/11/27/ejabberd-mongo-db-ec82acec9aa9ed9598eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/11/27/ejabberd-mongo-db-ec82acec9aa9ed9598eab8b0/</guid>
       <description>ejabberd에는 mongodb를 사용할 수 있는 모듈이 없다.
 mongodb에서도 erlang driver를 공식적으로 지원하지 않으며, community driver(일반 개발자가 만들어 공개한)만 사용할 수 있다.
 community erlang driver중에서 mongodb-erlang을 사용해 ejabberd용 mongodb 모듈을 만들어 보자.

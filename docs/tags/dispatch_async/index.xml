@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dispatch_async on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/dispatch_async/</link>
+    <link>http://jeidee.github.io/blog/tags/dispatch_async/</link>
     <description>Recent content in Dispatch_async on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 19 May 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/dispatch_async/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/dispatch_async/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ios 비동기로 이미지 다운로드</title>
-      <link>http://jeidee.github.io/2015/05/19/ios-ebb984eb8f99eab8b0eba19c-ec9db4ebafb8eca780-eb8ba4ec9ab4eba19ceb939c/</link>
+      <link>http://jeidee.github.io/blog/2015/05/19/ios-ebb984eb8f99eab8b0eba19c-ec9db4ebafb8eca780-eb8ba4ec9ab4eba19ceb939c/</link>
       <pubDate>Tue, 19 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/05/19/ios-ebb984eb8f99eab8b0eba19c-ec9db4ebafb8eca780-eb8ba4ec9ab4eba19ceb939c/</guid>
+      <guid>http://jeidee.github.io/blog/2015/05/19/ios-ebb984eb8f99eab8b0eba19c-ec9db4ebafb8eca780-eb8ba4ec9ab4eba19ceb939c/</guid>
       <description> 이미지캐시 클래스를 만들고 있는 과정인데 우선 비동기로 이미지를 다운로드 하는 코드를 작성해 보았다.
 아직 캐시 기능은 구현하지 않았다.
 ImageCache.h
@@ -27,10 +27,10 @@ ImageCache.h
     
     <item>
       <title>ios dispatch_async 비동기 처리하기</title>
-      <link>http://jeidee.github.io/2015/05/18/ios-dispatch_async-ebb984eb8f99eab8b0-ecb298eba6aced9598eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2015/05/18/ios-dispatch_async-ebb984eb8f99eab8b0-ecb298eba6aced9598eab8b0/</link>
       <pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/05/18/ios-dispatch_async-ebb984eb8f99eab8b0-ecb298eba6aced9598eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/05/18/ios-dispatch_async-ebb984eb8f99eab8b0-ecb298eba6aced9598eab8b0/</guid>
       <description>장시간을 요하는 작업을 UI 쓰레드에서 요청할 경우 UI 쓰레드가 블럭되기 때문에 사용자는 불편을 느끼게 된다.
 이러한 경우, 별도의 쓰레드에서 작업을 수행 후 처리가 완료되면 UI 쓰레드로 결과를 돌려주는 방식(비동기)을 사용해야 한다.
 android에서는 AsyncTask를 사용하면되고 ios의 경우에는 GCD(Grand Central Dispatch)를 사용하면 된다.

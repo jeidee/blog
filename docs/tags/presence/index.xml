@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Presence on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/presence/</link>
+    <link>http://jeidee.github.io/blog/tags/presence/</link>
     <description>Recent content in Presence on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Jan 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/presence/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/presence/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ejabberd 강제로 특정 유저 presence 업데이트하기</title>
-      <link>http://jeidee.github.io/2015/01/21/ejabberd-eab095eca09ceba19c-ed8ab9eca095-ec9ca0eca080-presence-ec9785eb8db0ec9db4ed8ab8ed9598eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2015/01/21/ejabberd-eab095eca09ceba19c-ed8ab9eca095-ec9ca0eca080-presence-ec9785eb8db0ec9db4ed8ab8ed9598eab8b0/</link>
       <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/01/21/ejabberd-eab095eca09ceba19c-ed8ab9eca095-ec9ca0eca080-presence-ec9785eb8db0ec9db4ed8ab8ed9598eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/01/21/ejabberd-eab095eca09ceba19c-ed8ab9eca095-ec9ca0eca080-presence-ec9785eb8db0ec9db4ed8ab8ed9598eab8b0/</guid>
       <description>ejabberdctl debug로 쉘을 시작한 후 ejabbrd_sm 모듈의 force_update_presence/1 함수를 사용해 특정 유저의 presence를 업데이트할 수 있다.
 (ejabberd@localhost)7&amp;gt; US = {&amp;lt;&amp;lt;&amp;quot;romeo&amp;quot;&amp;gt;&amp;gt;,&amp;lt;&amp;lt;&amp;quot;localhost&amp;quot;&amp;gt;&amp;gt;}. {&amp;lt;&amp;lt;&amp;quot;romeo&amp;quot;&amp;gt;&amp;gt;,&amp;lt;&amp;lt;&amp;quot;localhost&amp;quot;&amp;gt;&amp;gt;} (ejabberd@localhost)9&amp;gt; ejabberd\_sm:force\_update_presence(US). ok  XMPP 클라이언트에서는 다음과 같이 presence stanza가 갱신되어 수신된다.
 (swift client의 Debug Console에서 확인)

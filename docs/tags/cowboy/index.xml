@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cowboy on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/cowboy/</link>
+    <link>http://jeidee.github.io/blog/tags/cowboy/</link>
     <description>Recent content in Cowboy on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Feb 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/cowboy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/cowboy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>cowboy에서 SSE를 사용한 웹서버 push 구현하기</title>
-      <link>http://jeidee.github.io/2016/02/15/cowboyec9790ec849c-sseeba5bc-ec82acec9aa9ed959c-ec9bb9ec849cebb284-push-eab5aced9884ed9598eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2016/02/15/cowboyec9790ec849c-sseeba5bc-ec82acec9aa9ed959c-ec9bb9ec849cebb284-push-eab5aced9884ed9598eab8b0/</link>
       <pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/02/15/cowboyec9790ec849c-sseeba5bc-ec82acec9aa9ed959c-ec9bb9ec849cebb284-push-eab5aced9884ed9598eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2016/02/15/cowboyec9790ec849c-sseeba5bc-ec82acec9aa9ed959c-ec9bb9ec849cebb284-push-eab5aced9884ed9598eab8b0/</guid>
       <description>ejabberd에 cowboy를 연동했다고 가정한다.
 Front-end는 AngularJS를 사용한다.
  SSE(Server Sent Event)참고  클라이언트에서 다음과 같이 EventSource객체를 생성한 후 서버 이벤트를 위한 이벤트리스닝을 시작한다.
@@ -28,10 +28,10 @@ https://gist.github.com/jeidee/a135060aef54b48bae1d
     
     <item>
       <title>ejabberd와 cowboy 연동</title>
-      <link>http://jeidee.github.io/2016/02/03/ejabberdec9980-cowboy-ec97b0eb8f99/</link>
+      <link>http://jeidee.github.io/blog/2016/02/03/ejabberdec9980-cowboy-ec97b0eb8f99/</link>
       <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/02/03/ejabberdec9980-cowboy-ec97b0eb8f99/</guid>
+      <guid>http://jeidee.github.io/blog/2016/02/03/ejabberdec9980-cowboy-ec97b0eb8f99/</guid>
       <description>ejabberd에 포함된 관리자용 웹사이트는 인터페이스가 썩 편하지 않다. 더군다나 admin 모듈(ejabberd_web_admin.erl)을 살펴보면 erlang 코드에서 직접 html을 생성하도록 코드가 작성되어 있어 수정하기가 여간 불편한게 아니다.
 이러한 이유로 erlang web framework인 cowboy를 연동하기로 했다.
 cowboy는 현재 erlang/otp 18에서 컴파일 가능하기 때문에 다음과 같이 준비가 되어 있어야 한다.

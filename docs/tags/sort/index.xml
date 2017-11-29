@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sort on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/sort/</link>
+    <link>http://jeidee.github.io/blog/tags/sort/</link>
     <description>Recent content in Sort on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Feb 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/sort/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/sort/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>erlang list sort</title>
-      <link>http://jeidee.github.io/2015/02/04/erlang-list-sort/</link>
+      <link>http://jeidee.github.io/blog/2015/02/04/erlang-list-sort/</link>
       <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/02/04/erlang-list-sort/</guid>
+      <guid>http://jeidee.github.io/blog/2015/02/04/erlang-list-sort/</guid>
       <description>다음과 같은 리스트가 있다고 가정하자.
 &amp;gt; List = [{a, 10}, {b, 5}, {c, 3}, {d, 6}].  두번째 요소인 정수값을 기준으로 오름차순으로 정렬하고자 한다면 다음과 같이 한다.
 &amp;gt; lists:sort(fun(A, B) -&amp;gt; {Name1, Order1} = A, {Name2, Order2} = B, Order1 &amp;lt; Order2 end, List).  </description>

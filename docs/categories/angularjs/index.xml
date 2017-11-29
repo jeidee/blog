@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Angularjs on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/categories/angularjs/</link>
+    <link>http://jeidee.github.io/blog/categories/angularjs/</link>
     <description>Recent content in Angularjs on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Feb 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/categories/angularjs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/categories/angularjs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>cowboy에서 SSE를 사용한 웹서버 push 구현하기</title>
-      <link>http://jeidee.github.io/2016/02/15/cowboyec9790ec849c-sseeba5bc-ec82acec9aa9ed959c-ec9bb9ec849cebb284-push-eab5aced9884ed9598eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2016/02/15/cowboyec9790ec849c-sseeba5bc-ec82acec9aa9ed959c-ec9bb9ec849cebb284-push-eab5aced9884ed9598eab8b0/</link>
       <pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/02/15/cowboyec9790ec849c-sseeba5bc-ec82acec9aa9ed959c-ec9bb9ec849cebb284-push-eab5aced9884ed9598eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2016/02/15/cowboyec9790ec849c-sseeba5bc-ec82acec9aa9ed959c-ec9bb9ec849cebb284-push-eab5aced9884ed9598eab8b0/</guid>
       <description>ejabberd에 cowboy를 연동했다고 가정한다.
 Front-end는 AngularJS를 사용한다.
  SSE(Server Sent Event)참고  클라이언트에서 다음과 같이 EventSource객체를 생성한 후 서버 이벤트를 위한 이벤트리스닝을 시작한다.
@@ -28,10 +28,10 @@ https://gist.github.com/jeidee/a135060aef54b48bae1d
     
     <item>
       <title>Angular JS와 ui-router를 사용해서 인증이 필요한 웹사이트 뼈대 만들기</title>
-      <link>http://jeidee.github.io/2016/02/03/angular-jsec9980-ui-routereba5bc-ec82acec9aa9ed95b4ec849c-ec9db8eca69dec9db4-ed9584ec9a94ed959c-ec9bb9ec82acec9db4ed8ab8-ebbc88eb8c80-eba78c/</link>
+      <link>http://jeidee.github.io/blog/2016/02/03/angular-jsec9980-ui-routereba5bc-ec82acec9aa9ed95b4ec849c-ec9db8eca69dec9db4-ed9584ec9a94ed959c-ec9bb9ec82acec9db4ed8ab8-ebbc88eb8c80-eba78c/</link>
       <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/02/03/angular-jsec9980-ui-routereba5bc-ec82acec9aa9ed95b4ec849c-ec9db8eca69dec9db4-ed9584ec9a94ed959c-ec9bb9ec82acec9db4ed8ab8-ebbc88eb8c80-eba78c/</guid>
+      <guid>http://jeidee.github.io/blog/2016/02/03/angular-jsec9980-ui-routereba5bc-ec82acec9aa9ed95b4ec849c-ec9db8eca69dec9db4-ed9584ec9a94ed959c-ec9bb9ec82acec9db4ed8ab8-ebbc88eb8c80-eba78c/</guid>
       <description>백엔드 서버는 cowboy를 사용하고, 프론트엔드는 Angular JS를 사용해서 웹사이트를 구성해 보자.
 준비  AngularJS는 1.4.9 버전을 기준으로 한다.  디렉토리 구성 디렉토리는 다음과 같이 구성한다.
  &amp;amp;#8211; root ㄴ myapp |- assets | |- css | |- img | ㄴ js |- src | |- app | | |- models | | |- services | | ㄴ app.js | |- auth | | |- controllers | | |- tmpl | | ㄴ Auth.</description>

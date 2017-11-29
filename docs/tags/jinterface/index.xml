@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jinterface on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/jinterface/</link>
+    <link>http://jeidee.github.io/blog/tags/jinterface/</link>
     <description>Recent content in Jinterface on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Mar 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/jinterface/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/jinterface/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>erlang과 java 연동</title>
-      <link>http://jeidee.github.io/2015/03/04/erlangeab3bc-java-ec97b0eb8f99/</link>
+      <link>http://jeidee.github.io/blog/2015/03/04/erlangeab3bc-java-ec97b0eb8f99/</link>
       <pubDate>Wed, 04 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/03/04/erlangeab3bc-java-ec97b0eb8f99/</guid>
+      <guid>http://jeidee.github.io/blog/2015/03/04/erlangeab3bc-java-ec97b0eb8f99/</guid>
       <description>eclipse의 maven 프로젝트 기준으로 설명한다.
 jinterface dependency 추가 먼저 pom.xml에 다음과 같이 dependency를 추가해 준다.
  &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.erlang.otp&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jinterface&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.5.3.1&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt;  maven install을 수행해 jinterface-1.5.3.1.jar 를 다운로드 받는다.

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Eredis on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/eredis/</link>
+    <link>http://jeidee.github.io/blog/tags/eredis/</link>
     <description>Recent content in Eredis on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 Jun 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/eredis/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/eredis/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ejabberd에 redis 라이브러리(eredis) 추가</title>
-      <link>http://jeidee.github.io/2015/06/03/ejabberdec9790-redis-eb9dbcec9db4ebb88ceb9faceba6aceredis-ecb694eab080/</link>
+      <link>http://jeidee.github.io/blog/2015/06/03/ejabberdec9790-redis-eb9dbcec9db4ebb88ceb9faceba6aceredis-ecb694eab080/</link>
       <pubDate>Wed, 03 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/06/03/ejabberdec9790-redis-eb9dbcec9db4ebb88ceb9faceba6aceredis-ecb694eab080/</guid>
+      <guid>http://jeidee.github.io/blog/2015/06/03/ejabberdec9790-redis-eb9dbcec9db4ebb88ceb9faceba6aceredis-ecb694eab080/</guid>
       <description>ejabberd가 15.03버전이 릴리즈되면서 redis 지원이 추가되었다.
 클라이언트 세션 관리를 redis로 할 수 있는데 직접 연관된 모듈은 ejabberd_sm 모듈이다.
 redis를 사용하려면 다음과 같이 configure에서 &amp;#8211;enable-redis 옵션을 추가해 주면 된다.

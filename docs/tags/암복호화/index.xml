@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>암복호화 on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/%EC%95%94%EB%B3%B5%ED%98%B8%ED%99%94/</link>
+    <link>http://jeidee.github.io/blog/tags/%EC%95%94%EB%B3%B5%ED%98%B8%ED%99%94/</link>
     <description>Recent content in 암복호화 on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Sep 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/%EC%95%94%EB%B3%B5%ED%98%B8%ED%99%94/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/%EC%95%94%EB%B3%B5%ED%98%B8%ED%99%94/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>c&#43;&#43; openssl AES ECB</title>
-      <link>http://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/</link>
+      <link>http://jeidee.github.io/blog/2016/09/01/c-openssl-aes-ecb/</link>
       <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/</guid>
+      <guid>http://jeidee.github.io/blog/2016/09/01/c-openssl-aes-ecb/</guid>
       <description>https://gist.github.com/jeidee/9da72760b0de11edefbf8e5377fcba74
 https://gist.github.com/jeidee/2cc2fd6364050e00c825bbd2807d6b9b</description>
     </item>

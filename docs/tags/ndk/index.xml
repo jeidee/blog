@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ndk on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/ndk/</link>
+    <link>http://jeidee.github.io/blog/tags/ndk/</link>
     <description>Recent content in Ndk on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 04 May 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/ndk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/ndk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>android cannot load library error</title>
-      <link>http://jeidee.github.io/2015/05/04/android-cannot-load-library-error/</link>
+      <link>http://jeidee.github.io/blog/2015/05/04/android-cannot-load-library-error/</link>
       <pubDate>Mon, 04 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/05/04/android-cannot-load-library-error/</guid>
+      <guid>http://jeidee.github.io/blog/2015/05/04/android-cannot-load-library-error/</guid>
       <description>ndk build후 의존성 있는 .so 라이브러리를 일부 폰에서 로드하지 못할 경우 다음과 같이 수정해 본다.
 static { System.loadLibrary(&amp;quot;gloox_lib&amp;quot;); System.loadLibrary(&amp;quot;msg_lib&amp;quot;); }  일부 폰(sdk 22)에서는 msg_lib만 로드하면 되지만, 일부 폰(sdk 16)에서는 msg_lib가 의존하는 gloox_lib를 로드하지 못하는 경우가 발생한다.
 이럴 경우 위와 같이 의존성 있는 라이브러리를 함께 로드해주면 된다.</description>
@@ -24,20 +24,20 @@ static { System.loadLibrary(&amp;quot;gloox_lib&amp;quot;); System.loadLibrary(&
     
     <item>
       <title>android ndk에서 stringstream을 쓸 경우 __atomic_fetch_add_4 관련 링크 에러가 발생</title>
-      <link>http://jeidee.github.io/2015/04/29/android-ndkec9790ec849c-stringstreamec9d84-ec93b8-eab2bdec9ab0-__atomic_fetch_add_4-eab480eba0a8-eba781ed81ac-ec9790eb9faceab080-ebb09cec839d/</link>
+      <link>http://jeidee.github.io/blog/2015/04/29/android-ndkec9790ec849c-stringstreamec9d84-ec93b8-eab2bdec9ab0-__atomic_fetch_add_4-eab480eba0a8-eba781ed81ac-ec9790eb9faceab080-ebb09cec839d/</link>
       <pubDate>Wed, 29 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/04/29/android-ndkec9790ec849c-stringstreamec9d84-ec93b8-eab2bdec9ab0-__atomic_fetch_add_4-eab480eba0a8-eba781ed81ac-ec9790eb9faceab080-ebb09cec839d/</guid>
+      <guid>http://jeidee.github.io/blog/2015/04/29/android-ndkec9790ec849c-stringstreamec9d84-ec93b8-eab2bdec9ab0-__atomic_fetch_add_4-eab480eba0a8-eba781ed81ac-ec9790eb9faceab080-ebb09cec839d/</guid>
       <description> Android.mk에 다음과 같이 추가한다.
  LOCAL_LDLIBS += -latomic  출처  Android NDK STL c++_shared w/LIBCXX_FORCE_REBUILD results in std::stringstream NOP  </description>
     </item>
     
     <item>
       <title>android ndk c&#43;&#43; 코드에서 java object 생성해서 Parameter로 넘기기</title>
-      <link>http://jeidee.github.io/2015/04/27/android-ndk-c-ecbd94eb939cec9790ec849c-java-object-ec839dec84b1ed95b4ec849c-parametereba19c-eb8498eab8b0eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2015/04/27/android-ndk-c-ecbd94eb939cec9790ec849c-java-object-ec839dec84b1ed95b4ec849c-parametereba19c-eb8498eab8b0eab8b0/</link>
       <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/04/27/android-ndk-c-ecbd94eb939cec9790ec849c-java-object-ec839dec84b1ed95b4ec849c-parametereba19c-eb8498eab8b0eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/04/27/android-ndk-c-ecbd94eb939cec9790ec849c-java-object-ec839dec84b1ed95b4ec849c-parametereba19c-eb8498eab8b0eab8b0/</guid>
       <description>java 클래스에 다음과 같은 staic 메소드가 있다.
 public class MsgClient { &amp;amp;#8230; public static void callbackRoster(RosterArray rosterArray) { &amp;amp;#8230; }  RosterArray는 다음과 같을 때,
 import java.util.HashMap; public class RosterArray { private HashMap&amp;lt;String, Roster&amp;gt; m_rosters; public RosterArray() { m_rosters = new HashMap&amp;lt;String, Roster&amp;gt;(); } public void add(String jid, String name, int subscription) { if (m_rosters.containsKey(jid)) { Roster roster = m_rosters.get(jid); roster.SetRoster(jid, name, subscription); return; } Roster newRoster = new Roster(jid, name, subscription); m_rosters.</description>
@@ -45,10 +45,10 @@ import java.util.HashMap; public class RosterArray { private HashMap&amp;lt;Stri
     
     <item>
       <title>android ndk, native c/c&#43;&#43; 코드에서 java 코드 호출</title>
-      <link>http://jeidee.github.io/2015/04/22/android-ndk-native-cc-ecbd94eb939cec9790ec849c-java-ecbd94eb939c-ed98b8ecb69c/</link>
+      <link>http://jeidee.github.io/blog/2015/04/22/android-ndk-native-cc-ecbd94eb939cec9790ec849c-java-ecbd94eb939c-ed98b8ecb69c/</link>
       <pubDate>Wed, 22 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/04/22/android-ndk-native-cc-ecbd94eb939cec9790ec849c-java-ecbd94eb939c-ed98b8ecb69c/</guid>
+      <guid>http://jeidee.github.io/blog/2015/04/22/android-ndk-native-cc-ecbd94eb939cec9790ec849c-java-ecbd94eb939c-ed98b8ecb69c/</guid>
       <description>다음과 같이 두 가지 측면에서 접근할 수 있다.
  동일 쓰레드에서 jni call(java코드에서 native c/c++ 함수 호출)을 하고, 동일 스코프에서 java object의 함수를 호출하는 경우 호출측(java) 쓰레드와 콜백(native c/c++) 쓰레드가 다른 경우  동일 쓰레드에서 콜백 구현 java
 package com.jeidee.glooxforandroid; public TestClient { public native callbackTest(); public void testCallback(String param) { Log.d(&amp;quot;JNI&amp;quot;, param); } }  native c++
@@ -57,20 +57,20 @@ include &amp;quot;com\_jeidee\_glooxforandroid_NativeCall.h&amp;quot; #include &
     
     <item>
       <title>android native ndk에서 로깅하기</title>
-      <link>http://jeidee.github.io/2015/04/21/android-native-ndkec9790ec849c-eba19ceab985ed9598eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2015/04/21/android-native-ndkec9790ec849c-eba19ceab985ed9598eab8b0/</link>
       <pubDate>Tue, 21 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/04/21/android-native-ndkec9790ec849c-eba19ceab985ed9598eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/04/21/android-native-ndkec9790ec849c-eba19ceab985ed9598eab8b0/</guid>
       <description> 다음과 같이 선언하고 printf() 사용하듯이 사용하면 된다.
 #include &amp;lt;android/log.h&amp;gt; #define LOG_TAG &amp;quot;someTag&amp;quot; #define LOGE(&amp;amp;#8230;) \_\_android\_log\_print(ANDROID\_LOG\_ERROR,LOG\_TAG,\\_\_VA\_ARGS\__) #define LOGW(&amp;amp;#8230;) \_\_android\_log\_print(ANDROID\_LOG\_WARN,LOG\_TAG,\\_\_VA\_ARGS\__) #define LOGD(&amp;amp;#8230;) \_\_android\_log\_print(ANDROID\_LOG\_DEBUG,LOG\_TAG,\\_\_VA\_ARGS\__) #define LOGI(&amp;amp;#8230;) \_\_android\_log\_print(ANDROID\_LOG\_INFO,LOG\_TAG,\\_\_VA\_ARGS\__)  출처  Logging values of variables in Android native ndk  </description>
     </item>
     
     <item>
       <title>gloox for android</title>
-      <link>http://jeidee.github.io/2015/04/21/gloox-for-android/</link>
+      <link>http://jeidee.github.io/blog/2015/04/21/gloox-for-android/</link>
       <pubDate>Tue, 21 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/04/21/gloox-for-android/</guid>
+      <guid>http://jeidee.github.io/blog/2015/04/21/gloox-for-android/</guid>
       <description>gloox를 android에서 사용하기 위한 과정을 살펴보자.
 사전 준비 작업 다음과 같은 환경이 구축되어 있다고 가정한다.
  개발 환경 : Mac OS X Yosemite 10.10.3 Android Studio : 1.1.0  Android SDK 경로는 ~/Android/sdk로 변경  NDK  ~/Android/ndk에 복사하고 path 지정   Android Studio에 ndk 설정 Preference &amp;gt; External Tools에서 + 버튼을 클릭해 javah, ndk-build, ndk-build clean 도구를 추가한다.

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Uitableview on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/uitableview/</link>
+    <link>http://jeidee.github.io/blog/tags/uitableview/</link>
     <description>Recent content in Uitableview on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 11 Jul 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/uitableview/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/uitableview/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ios UITableView 여분의 셀 구분선을 제거 하는 방법</title>
-      <link>http://jeidee.github.io/2016/07/11/ios-uitableview-ec97acebb684ec9d98-ec8580-eab5acebb684ec84a0ec9d84-eca09ceab1b0-ed9598eb8a94-ebb0a9ebb295/</link>
+      <link>http://jeidee.github.io/blog/2016/07/11/ios-uitableview-ec97acebb684ec9d98-ec8580-eab5acebb684ec84a0ec9d84-eca09ceab1b0-ed9598eb8a94-ebb0a9ebb295/</link>
       <pubDate>Mon, 11 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2016/07/11/ios-uitableview-ec97acebb684ec9d98-ec8580-eab5acebb684ec84a0ec9d84-eca09ceab1b0-ed9598eb8a94-ebb0a9ebb295/</guid>
+      <guid>http://jeidee.github.io/blog/2016/07/11/ios-uitableview-ec97acebb684ec9d98-ec8580-eab5acebb684ec84a0ec9d84-eca09ceab1b0-ed9598eb8a94-ebb0a9ebb295/</guid>
       <description>UITableView의 기본설정은 데이터가 없을 때에도 셀 구분선이 출력된다.
 Footer View를 다음과 같이 지정해서 제거할 수 있다.
 tvList.tableFooterView = UIView()  http://stackoverflow.com/questions/1369831/eliminate-extra-separators-below-uitableview</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Virtual Box on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/virtual-box/</link>
+    <link>http://jeidee.github.io/blog/tags/virtual-box/</link>
     <description>Recent content in Virtual Box on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 16 Mar 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/virtual-box/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/virtual-box/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>virtual box vdi 용량 늘리기</title>
-      <link>http://jeidee.github.io/2015/03/16/virtual-box-vdi-ec9aa9eb9f89-eb8a98eba6aceab8b0/</link>
+      <link>http://jeidee.github.io/blog/2015/03/16/virtual-box-vdi-ec9aa9eb9f89-eb8a98eba6aceab8b0/</link>
       <pubDate>Mon, 16 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/03/16/virtual-box-vdi-ec9aa9eb9f89-eb8a98eba6aceab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/03/16/virtual-box-vdi-ec9aa9eb9f89-eb8a98eba6aceab8b0/</guid>
       <description>windows 7에 virtual box를 설치하고 xubuntu를 guest os로 설치했다고 가정한다.
 저장소는 vmdk일 경우 먼저 vdi로 변경 후 사이즈를 조절하도록 한다.
 vdi 용량 늘리기 1) vmdk를 vdi로 변경

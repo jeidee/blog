@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gpb on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/gpb/</link>
+    <link>http://jeidee.github.io/blog/tags/gpb/</link>
     <description>Recent content in Gpb on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Nov 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/gpb/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/gpb/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>erlang application에서 protocol buffer 사용하기</title>
-      <link>http://jeidee.github.io/2015/11/13/erlang-applicationec9790ec849c-protocol-buffer-ec82acec9aa9ed9598eab8b0/</link>
+      <link>http://jeidee.github.io/blog/2015/11/13/erlang-applicationec9790ec849c-protocol-buffer-ec82acec9aa9ed9598eab8b0/</link>
       <pubDate>Fri, 13 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/11/13/erlang-applicationec9790ec849c-protocol-buffer-ec82acec9aa9ed9598eab8b0/</guid>
+      <guid>http://jeidee.github.io/blog/2015/11/13/erlang-applicationec9790ec849c-protocol-buffer-ec82acec9aa9ed9598eab8b0/</guid>
       <description>이번 역시, rebar를 사용해 프로젝트를 생성했다고 가정한다.
 basho의 protobuffs 라이브러리를 추가해 보도록 하자.
 rebar.config 수정 이전 포스트를 참고해서 기본 작업(sub_dirs 추가 등)은 완료했다고 가정한다.

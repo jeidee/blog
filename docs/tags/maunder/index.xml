@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Maunder on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/maunder/</link>
+    <link>http://jeidee.github.io/blog/tags/maunder/</link>
     <description>Recent content in Maunder on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Jul 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/maunder/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/maunder/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>erlang mumble server &amp;#8211; maunder</title>
-      <link>http://jeidee.github.io/2015/07/24/erlang-mumble-server-maunder/</link>
+      <link>http://jeidee.github.io/blog/2015/07/24/erlang-mumble-server-maunder/</link>
       <pubDate>Fri, 24 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/07/24/erlang-mumble-server-maunder/</guid>
+      <guid>http://jeidee.github.io/blog/2015/07/24/erlang-mumble-server-maunder/</guid>
       <description>erlang으로 구현된 mumble서버 중에 maunder라고 있다.
 2년전 커밋이 마지막이다.
 erlang 17버전에서 빌드하고 실행하면 application:start()할 때 오류가 발생한다.

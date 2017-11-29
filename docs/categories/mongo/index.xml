@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mongo on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/categories/mongo/</link>
+    <link>http://jeidee.github.io/blog/categories/mongo/</link>
     <description>Recent content in Mongo on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/categories/mongo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/categories/mongo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CentOS에서 MongoDB 설치와 Service 등록</title>
-      <link>http://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/</link>
+      <link>http://jeidee.github.io/blog/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/</link>
       <pubDate>Thu, 08 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/</guid>
+      <guid>http://jeidee.github.io/blog/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/</guid>
       <description>다음 자료를 참고한다.
 https://github.com/syokenz/mongodb-init-script</description>
     </item>
     
     <item>
       <title>mongo sharded cluster</title>
-      <link>http://jeidee.github.io/2015/12/08/mongo-sharded-cluster/</link>
+      <link>http://jeidee.github.io/blog/2015/12/08/mongo-sharded-cluster/</link>
       <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/12/08/mongo-sharded-cluster/</guid>
+      <guid>http://jeidee.github.io/blog/2015/12/08/mongo-sharded-cluster/</guid>
       <description>mongodb의 샤드 클러스터를 구성하는 방법은 다음과 같다.
 준비 mongod가 설치된 서버가 다음과 같이 3대 준비되어 있다고 가정한다.
 #1 : 192.168.56.101

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>File Upload on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/tags/file-upload/</link>
+    <link>http://jeidee.github.io/blog/tags/file-upload/</link>
     <description>Recent content in File Upload on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 26 Feb 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/tags/file-upload/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jeidee.github.io/blog/tags/file-upload/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>node.js &#43; jquery fileupload</title>
-      <link>http://jeidee.github.io/2015/02/26/node-js-jquery-fileupload/</link>
+      <link>http://jeidee.github.io/blog/2015/02/26/node-js-jquery-fileupload/</link>
       <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/2015/02/26/node-js-jquery-fileupload/</guid>
+      <guid>http://jeidee.github.io/blog/2015/02/26/node-js-jquery-fileupload/</guid>
       <description>jQuery를 사용해 파일 업로드 처리를 쉽게 할 수 있는 방법을 찾아 보자.
 client 우선 다음 링크에서 jQuery Form Plugin(jquery.form.js)을 다운로드 받는다.
 http://jquery.malsup.com/form/
