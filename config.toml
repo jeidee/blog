@@ -1,5 +1,0 @@
-baseURL = "https://jeidee.github.io/blog"
-languageCode = "en-us"
-title = "Erlang & Go"
-theme = "ananke"
-publishDir = "docs"
