@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Open Api on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/open-api/</link>
+    <link>https://jeidee.github.io/blog/tags/open-api/</link>
     <description>Recent content in Open Api on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Mar 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/open-api/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/open-api/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>node.js 기상청 날씨 api 사용</title>
-      <link>http://jeidee.github.io/blog/2015/03/05/node-js-eab8b0ec8381ecb2ad-eb82a0ec94a8-api-ec82acec9aa9/</link>
+      <link>https://jeidee.github.io/blog/2015/03/05/node-js-eab8b0ec8381ecb2ad-eb82a0ec94a8-api-ec82acec9aa9/</link>
       <pubDate>Thu, 05 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/03/05/node-js-eab8b0ec8381ecb2ad-eb82a0ec94a8-api-ec82acec9aa9/</guid>
+      <guid>https://jeidee.github.io/blog/2015/03/05/node-js-eab8b0ec8381ecb2ad-eb82a0ec94a8-api-ec82acec9aa9/</guid>
       <description>기상청에서는 동 단위의 날씨 예보를 API로 제공하고 있다.
 기상청 API를 사용해서 동네 날씨 예보를 구하는 방법은 좌표를 사용하는 방법과 법정동코드를 사용하는 방법 두 가지가 있다.
 날씨 조회 이 중에서 좌표를 사용하는 방법을 알아보자.

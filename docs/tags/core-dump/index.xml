@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Core Dump on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/core-dump/</link>
+    <link>https://jeidee.github.io/blog/tags/core-dump/</link>
     <description>Recent content in Core Dump on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Jul 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/core-dump/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/core-dump/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CentOS 6.8에서 core dump 설정</title>
-      <link>http://jeidee.github.io/blog/2016/07/20/centos-6-8ec9790ec849c-core-dump-ec84a4eca095/</link>
+      <link>https://jeidee.github.io/blog/2016/07/20/centos-6-8ec9790ec849c-core-dump-ec84a4eca095/</link>
       <pubDate>Wed, 20 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2016/07/20/centos-6-8ec9790ec849c-core-dump-ec84a4eca095/</guid>
+      <guid>https://jeidee.github.io/blog/2016/07/20/centos-6-8ec9790ec849c-core-dump-ec84a4eca095/</guid>
       <description>다음 링크를 참고한다.
 https://www.centos.org/forums/viewtopic.php?t=43577
 core dump를 확인 하는 방법은 다음 링크를 참고한다.

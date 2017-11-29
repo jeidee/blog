@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Riak on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/categories/riak/</link>
+    <link>https://jeidee.github.io/blog/categories/riak/</link>
     <description>Recent content in Riak on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Dec 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/categories/riak/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/categories/riak/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>riak 클러스터 구성</title>
-      <link>http://jeidee.github.io/blog/2015/12/08/riak-ed81b4eb9facec8aa4ed84b0-eab5acec84b1/</link>
+      <link>https://jeidee.github.io/blog/2015/12/08/riak-ed81b4eb9facec8aa4ed84b0-eab5acec84b1/</link>
       <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/12/08/riak-ed81b4eb9facec8aa4ed84b0-eab5acec84b1/</guid>
+      <guid>https://jeidee.github.io/blog/2015/12/08/riak-ed81b4eb9facec8aa4ed84b0-eab5acec84b1/</guid>
       <description>riak 설치 환경은 centos-6.7, riak 2.1.2를 기준으로 한다.
 riak 설정 riak.conf만 수정해도 된다. (단, 방화벽 설정을 하려면 app.config를 수정해야 한다.)
 클러스터로 구성할 2개의 riak 노드가 다음과 같이 준비되어 있다.
@@ -27,10 +27,10 @@ riak 설정 riak.conf만 수정해도 된다. (단, 방화벽 설정을 하려�
     
     <item>
       <title>ejabberd와 riak 연동</title>
-      <link>http://jeidee.github.io/blog/2015/06/25/ejabberdec9980-riak-ec97b0eb8f99/</link>
+      <link>https://jeidee.github.io/blog/2015/06/25/ejabberdec9980-riak-ec97b0eb8f99/</link>
       <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/06/25/ejabberdec9980-riak-ec97b0eb8f99/</guid>
+      <guid>https://jeidee.github.io/blog/2015/06/25/ejabberdec9980-riak-ec97b0eb8f99/</guid>
       <description>ejabberd 설치 ejabberd에 riak를 활성화해서 설치하는 방법은 이전 포스트를 참고해서 설치한 후, 공식 문서를 참고해서 설정한다.
 riak 설치 riak 설치방법은 여러 방법이 있지만 ubuntu에서 간단히 다음 방법을 사용해 설치한다.
  wget http://s3.amazonaws.com/downloads.basho.com/riak/2.1/2.1.1/ubuntu/precise/riak\_2.1.1-1\_amd64.deb sudo dpkg -i riak\_2.1.1-1\_amd64.deb  riak 주요 파일 위치 위와 같이 설치되면 다음의 디렉토리에 주요 파일들이 위치하게 된다.

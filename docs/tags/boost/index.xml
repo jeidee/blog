@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Boost on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/boost/</link>
+    <link>https://jeidee.github.io/blog/tags/boost/</link>
     <description>Recent content in Boost on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 19 Apr 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/boost/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/boost/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>boost, openssl prebuilt link</title>
-      <link>http://jeidee.github.io/blog/2016/04/19/boost-openssl-prebuilt-link/</link>
+      <link>https://jeidee.github.io/blog/2016/04/19/boost-openssl-prebuilt-link/</link>
       <pubDate>Tue, 19 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2016/04/19/boost-openssl-prebuilt-link/</guid>
+      <guid>https://jeidee.github.io/blog/2016/04/19/boost-openssl-prebuilt-link/</guid>
       <description>boost binaries
 openssl binaries</description>
     </item>
     
     <item>
       <title>osx &#43; eclipse CDT에서 boost설정</title>
-      <link>http://jeidee.github.io/blog/2016/04/01/osx-eclipse-cdtec9790ec849c-boostec84a4eca095/</link>
+      <link>https://jeidee.github.io/blog/2016/04/01/osx-eclipse-cdtec9790ec849c-boostec84a4eca095/</link>
       <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2016/04/01/osx-eclipse-cdtec9790ec849c-boostec84a4eca095/</guid>
+      <guid>https://jeidee.github.io/blog/2016/04/01/osx-eclipse-cdtec9790ec849c-boostec84a4eca095/</guid>
       <description>osx에서 boost 설치  $ brew install boost  sample source #include &amp;lt;boost/regex.hpp&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; int main() { std::string line; boost::regex pat( &amp;quot;^Subject: (Re: |Aw: )\*(.\*)&amp;quot; ); while (std::cin) { std::getline(std::cin, line); boost::smatch matches; if (boost::regex_match(line, matches, pat)) std::cout &amp;lt;&amp;lt; matches[2] &amp;lt;&amp;lt; std::endl; } }  프로젝트 설정  프로젝트의 속성을 연다. C/C++ Build &amp;gt; Settings &amp;gt; Tool Settings &amp;gt; GCC C++ Linker &amp;gt; Libraries를 선택한다. Libraries(-l) 항목에 boost_regex를 입력한다.</description>
     </item>
     

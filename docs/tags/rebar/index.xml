@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rebar on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/rebar/</link>
+    <link>https://jeidee.github.io/blog/tags/rebar/</link>
     <description>Recent content in Rebar on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Nov 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/rebar/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/rebar/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>erlang rebar의 project template을 활용한 application 뼈대 만들기</title>
-      <link>http://jeidee.github.io/blog/2015/11/06/erlang-rebarec9d98-project-templateec9d84-ed999cec9aa9ed959c-application-ebbc88eb8c80-eba78ceb93a4eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/11/06/erlang-rebarec9d98-project-templateec9d84-ed999cec9aa9ed959c-application-ebbc88eb8c80-eba78ceb93a4eab8b0/</link>
       <pubDate>Fri, 06 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/11/06/erlang-rebarec9d98-project-templateec9d84-ed999cec9aa9ed959c-application-ebbc88eb8c80-eba78ceb93a4eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/11/06/erlang-rebarec9d98-project-templateec9d84-ed999cec9aa9ed959c-application-ebbc88eb8c80-eba78ceb93a4eab8b0/</guid>
       <description>rebar project template rebar의 project template 기능을 활용해 erlang application 프로젝트를 손쉽게 생성하는 방법을 살펴보자.
 Richard Jones의 포스트를 보고 rebar 실습을 따라해 보니, 현재의 erlang(17.5)과 rebar(2.6.1) 버전으로는 원활하게 진행되지 않았다.
 구글링 중에 rebar의 프로젝트 템플릿을 활용하는 방법을 찾게 되었는데 몇 부분만 수정하여 문제없이 사용할 수 있었다.

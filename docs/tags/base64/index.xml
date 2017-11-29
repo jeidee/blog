@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Base64 on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/base64/</link>
+    <link>https://jeidee.github.io/blog/tags/base64/</link>
     <description>Recent content in Base64 on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Jan 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/base64/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/base64/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>erlang base64 encoding</title>
-      <link>http://jeidee.github.io/blog/2015/01/28/erlang-base64-encoding/</link>
+      <link>https://jeidee.github.io/blog/2015/01/28/erlang-base64-encoding/</link>
       <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/01/28/erlang-base64-encoding/</guid>
+      <guid>https://jeidee.github.io/blog/2015/01/28/erlang-base64-encoding/</guid>
       <description>base64 인코딩을 위해서는 base64 모듈의 encode/1 함수를 다음과 같이 사용한다.
 10&amp;gt; Enc = base64:encode(&amp;lt;&amp;gt;). &amp;lt;&amp;gt; 12&amp;gt; io:format(&amp;quot;~s~n&amp;quot;, [base64:decode(Enc)]). encode ok  </description>
     </item>

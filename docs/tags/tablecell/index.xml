@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tablecell on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/tablecell/</link>
+    <link>https://jeidee.github.io/blog/tags/tablecell/</link>
     <description>Recent content in Tablecell on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 19 May 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/tablecell/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/tablecell/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ios 스토리보드와 커스텀 테이블 셀</title>
-      <link>http://jeidee.github.io/blog/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580/</link>
+      <link>https://jeidee.github.io/blog/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580/</link>
       <pubDate>Tue, 19 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580/</guid>
+      <guid>https://jeidee.github.io/blog/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580/</guid>
       <description> 스토리보드에 작성한 커스텀 테이블셀을 코드에서 사용하기 위해서는 다음과 같이 작업한다.
 1) Attributes Inspector에서 Identifier를 설정한다.
 2) Custom TableViewController.mm에서 다음과 같이 작성한다.

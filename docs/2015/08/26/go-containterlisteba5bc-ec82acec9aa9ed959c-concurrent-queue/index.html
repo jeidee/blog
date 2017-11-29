@@ -15,7 +15,7 @@
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     
 
-    <link href='http://jeidee.github.io/blog/dist/main.css' rel='stylesheet' type="text/css" />
+    <link href='https://jeidee.github.io/blog/dist/main.css' rel='stylesheet' type="text/css" />
     
       
     
@@ -26,7 +26,7 @@
 <meta property="og:description" content="참고자료  Stack and Queue in golang   container/list와 sync.Mutex를 사용한 쓰레드(고루틴)에 안전한 Queue는 다음과 같이 만들 수 있다.
  package queue import ( &quot;container/list&quot; &quot;sync&quot; ) type Queue struct { l *list.List lock sync.Mutex } func NewQueue() *Queue { return &amp;Queue{list.New(), sync.Mutex{}} } func (q *Queue) Push(i interface{}) { q.lock.Lock() defer q.lock.Unlock() q.l.PushBack(i) } func (q *Queue) Pop() (interface{}, bool) { q.lock.Lock() defer q.lock.Unlock() if q.l.Len() == 0 { return nil, false } v := q." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://jeidee.github.io/blog/2015/08/26/go-containterlisteba5bc-ec82acec9aa9ed959c-concurrent-queue/" />
+<meta property="og:url" content="https://jeidee.github.io/blog/2015/08/26/go-containterlisteba5bc-ec82acec9aa9ed959c-concurrent-queue/" />
 
 
 
@@ -70,7 +70,7 @@
     <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
-    <a href="http://jeidee.github.io/blog" class="f3 fw2 hover-white no-underline white-90 dib">
+    <a href="https://jeidee.github.io/blog" class="f3 fw2 hover-white no-underline white-90 dib">
       Erlang &amp; Go
     </a>
     <div class="flex-l items-center">
@@ -1567,7 +1567,7 @@ return q.l.Len()
     </main>
     <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://jeidee.github.io/blog" >
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jeidee.github.io/blog" >
     &copy; 2017 Erlang &amp; Go
   </a>
   
@@ -1582,7 +1582,7 @@ return q.l.Len()
   </div>
 </footer>
 
-    <script src="http://jeidee.github.io/blog/dist/app.bundle.js" async></script>
+    <script src="https://jeidee.github.io/blog/dist/app.bundle.js" async></script>
 
   </body>
 </html>

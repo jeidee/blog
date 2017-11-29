@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Callback on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/callback/</link>
+    <link>https://jeidee.github.io/blog/tags/callback/</link>
     <description>Recent content in Callback on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 May 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/callback/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/callback/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ios c&#43;&#43; 객체에서 objective-c 객체의 함수 콜백하기</title>
-      <link>http://jeidee.github.io/blog/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0/</link>
       <pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0/</guid>
       <description>다음과 같은 요구사항이 있다고 가정해 보자.
  c++로 작성된 MsgClient는 통신 처리를 하는 별도의 워커쓰레드가 있다.
 서버에 접속한 후 데이터를 수신하면 objective-c의 여러 ViewHandler에 데이터 수신 이벤트를 발생시켜야 한다.
@@ -27,10 +27,10 @@
     
     <item>
       <title>android ndk, native c/c&#43;&#43; 코드에서 java 코드 호출</title>
-      <link>http://jeidee.github.io/blog/2015/04/22/android-ndk-native-cc-ecbd94eb939cec9790ec849c-java-ecbd94eb939c-ed98b8ecb69c/</link>
+      <link>https://jeidee.github.io/blog/2015/04/22/android-ndk-native-cc-ecbd94eb939cec9790ec849c-java-ecbd94eb939c-ed98b8ecb69c/</link>
       <pubDate>Wed, 22 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/04/22/android-ndk-native-cc-ecbd94eb939cec9790ec849c-java-ecbd94eb939c-ed98b8ecb69c/</guid>
+      <guid>https://jeidee.github.io/blog/2015/04/22/android-ndk-native-cc-ecbd94eb939cec9790ec849c-java-ecbd94eb939c-ed98b8ecb69c/</guid>
       <description>다음과 같이 두 가지 측면에서 접근할 수 있다.
  동일 쓰레드에서 jni call(java코드에서 native c/c++ 함수 호출)을 하고, 동일 스코프에서 java object의 함수를 호출하는 경우 호출측(java) 쓰레드와 콜백(native c/c++) 쓰레드가 다른 경우  동일 쓰레드에서 콜백 구현 java
 package com.jeidee.glooxforandroid; public TestClient { public native callbackTest(); public void testCallback(String param) { Log.d(&amp;quot;JNI&amp;quot;, param); } }  native c++

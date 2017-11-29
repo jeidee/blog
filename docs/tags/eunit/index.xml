@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Eunit on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/eunit/</link>
+    <link>https://jeidee.github.io/blog/tags/eunit/</link>
     <description>Recent content in Eunit on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 03 Mar 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/eunit/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/eunit/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>erlang eunit 테스트 파일 분리와 테스트 셋</title>
-      <link>http://jeidee.github.io/blog/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/</link>
+      <link>https://jeidee.github.io/blog/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/</link>
       <pubDate>Tue, 03 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/</guid>
+      <guid>https://jeidee.github.io/blog/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/</guid>
       <description>테스트 모듈 분리 eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.
 테스트 대상 모듈을 fib.erl 이라고 가정한다.
 -module(fib). -export([fib/1]). fib(0) -&amp;gt; 1; fib(1) -&amp;gt; 1; fib(N) when N &amp;gt; 1 -&amp;gt; fib(N-1) + fib(N-2).  테스트 모듈은 fib_tests.erl 로 작성한다.
@@ -25,10 +25,10 @@
     
     <item>
       <title>erlang eunit 기초</title>
-      <link>http://jeidee.github.io/blog/2015/02/24/erlang-eunit/</link>
+      <link>https://jeidee.github.io/blog/2015/02/24/erlang-eunit/</link>
       <pubDate>Tue, 24 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/02/24/erlang-eunit/</guid>
+      <guid>https://jeidee.github.io/blog/2015/02/24/erlang-eunit/</guid>
       <description>eunit 기초 eunit은 최신 버전(erlang/otp 17, eshell 6.3)에 eunit-2.2.9 버전이 포함되어 있다.
 eunit을 사용하려면 다음과 같은 순서로 진행한다.
  테스트 코드 작성 eunit 모듈을 사용해 테스트 수행  테스트 코드 작성하는 방법 먼저 살펴 보도록 한다.

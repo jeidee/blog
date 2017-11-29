@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Note on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/categories/note/</link>
+    <link>https://jeidee.github.io/blog/categories/note/</link>
     <description>Recent content in Note on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Dec 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/categories/note/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/categories/note/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>셰익스피어가 중년에게 주는 9가지 교훈</title>
-      <link>http://jeidee.github.io/blog/2015/12/08/ec85b0ec9db5ec8aa4ed94bcec96b4eab080-eca491eb8584ec9790eab28c-eca3bceb8a94-9eab080eca780-eab590ed9b88/</link>
+      <link>https://jeidee.github.io/blog/2015/12/08/ec85b0ec9db5ec8aa4ed94bcec96b4eab080-eca491eb8584ec9790eab28c-eca3bceb8a94-9eab080eca780-eab590ed9b88/</link>
       <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/12/08/ec85b0ec9db5ec8aa4ed94bcec96b4eab080-eca491eb8584ec9790eab28c-eca3bceb8a94-9eab080eca780-eab590ed9b88/</guid>
+      <guid>https://jeidee.github.io/blog/2015/12/08/ec85b0ec9db5ec8aa4ed94bcec96b4eab080-eca491eb8584ec9790eab28c-eca3bceb8a94-9eab080eca780-eab590ed9b88/</guid>
       <description>첫째. 학생으로 계속 남아 있어라.
 배움을 포기하는 순간 우리는 폭삭 늙기 시작한다.
 둘째. 과거를 자랑하지 마라.

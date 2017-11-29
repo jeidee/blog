@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ios on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/categories/ios/</link>
+    <link>https://jeidee.github.io/blog/categories/ios/</link>
     <description>Recent content in Ios on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 25 Aug 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/categories/ios/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/categories/ios/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Unity3D에서 iOS &amp;#038; OSX Plugin 개발</title>
-      <link>http://jeidee.github.io/blog/2016/08/25/unity3dec9790ec849c-ios-osx-plugin-eab09cebb09c/</link>
+      <link>https://jeidee.github.io/blog/2016/08/25/unity3dec9790ec849c-ios-osx-plugin-eab09cebb09c/</link>
       <pubDate>Thu, 25 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2016/08/25/unity3dec9790ec849c-ios-osx-plugin-eab09cebb09c/</guid>
+      <guid>https://jeidee.github.io/blog/2016/08/25/unity3dec9790ec849c-ios-osx-plugin-eab09cebb09c/</guid>
       <description>다음과 같은 C++ 파일이 있다.
  hello.h  #ifndef hello_hpp #define hello_hpp #include &amp;lt;stdio.h&amp;gt; class hello { public: char* getMessage(); }; extern &amp;quot;C&amp;quot; { hello* createHello(); void deleteHello(hello* obj); char\* getMessage(hello\* hello); } #endif /\* hello_hpp \*/   hello.cpp  #include &amp;quot;hello.h&amp;quot; char* hello::getMessage() { return (char*)&amp;quot;Hello, world&amp;quot;; } hello* createHello() { return new hello(); } void deleteHello(hello* obj) { if (obj == NULL) return; delete obj; } char\* getMessage(hello\* obj) { if (obj == NULL) return NULL; return obj-&amp;gt;getMessage(); }  Unity3D에서 C++로 작성된 hello 클래스를 사용하는 방법을 살펴보자.</description>
     </item>
     
     <item>
       <title>iOS placeholder기능을 포함한 UITextView와 내용에 따라 사이즈가 달라지는 TableViewCell 만들기</title>
-      <link>http://jeidee.github.io/blog/2016/07/14/ios-placeholdereab8b0eb8aa5ec9d84-ed8faced95a8ed959c-uitextviewec9980-eb82b4ec9aa9ec9790-eb94b0eb9dbc-ec82acec9db4eca688eab080-eb8baceb9dbc/</link>
+      <link>https://jeidee.github.io/blog/2016/07/14/ios-placeholdereab8b0eb8aa5ec9d84-ed8faced95a8ed959c-uitextviewec9980-eb82b4ec9aa9ec9790-eb94b0eb9dbc-ec82acec9db4eca688eab080-eb8baceb9dbc/</link>
       <pubDate>Thu, 14 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2016/07/14/ios-placeholdereab8b0eb8aa5ec9d84-ed8faced95a8ed959c-uitextviewec9980-eb82b4ec9aa9ec9790-eb94b0eb9dbc-ec82acec9db4eca688eab080-eb8baceb9dbc/</guid>
+      <guid>https://jeidee.github.io/blog/2016/07/14/ios-placeholdereab8b0eb8aa5ec9d84-ed8faced95a8ed959c-uitextviewec9980-eb82b4ec9aa9ec9790-eb94b0eb9dbc-ec82acec9db4eca688eab080-eb8baceb9dbc/</guid>
       <description>UITextView는 UITextField에 있는 Placeholder 속성이 없다.
 이 기능을 포함한 코드는 다음과 같다.
 https://gist.github.com/jeidee/f0c62cb6410fcfe09eb49eb76e5c894a
@@ -42,10 +42,10 @@ UITextView의 속성 중에 Scrollable은 false로 되어 있어야 함을 주�
     
     <item>
       <title>iOS playground에 custom framework 사용하기</title>
-      <link>http://jeidee.github.io/blog/2016/07/11/ios-playgroundec9790-custom-framework-ec82acec9aa9ed9598eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2016/07/11/ios-playgroundec9790-custom-framework-ec82acec9aa9ed9598eab8b0/</link>
       <pubDate>Mon, 11 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2016/07/11/ios-playgroundec9790-custom-framework-ec82acec9aa9ed9598eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2016/07/11/ios-playgroundec9790-custom-framework-ec82acec9aa9ed9598eab8b0/</guid>
       <description>반드시 다음 링크를 참고해서 작성해야 한다.
 핵심은 Target을 Cocoa Touch Framework로 추가하고, Playground를 Project Navigator의 +버튼을 사용해서 추가해야 하는 것이다.
 http://stackoverflow.com/questions/33144877/playground-import-no-such-module-foo</description>
@@ -53,10 +53,10 @@ http://stackoverflow.com/questions/33144877/playground-import-no-such-module-foo
     
     <item>
       <title>ios UITableView 여분의 셀 구분선을 제거 하는 방법</title>
-      <link>http://jeidee.github.io/blog/2016/07/11/ios-uitableview-ec97acebb684ec9d98-ec8580-eab5acebb684ec84a0ec9d84-eca09ceab1b0-ed9598eb8a94-ebb0a9ebb295/</link>
+      <link>https://jeidee.github.io/blog/2016/07/11/ios-uitableview-ec97acebb684ec9d98-ec8580-eab5acebb684ec84a0ec9d84-eca09ceab1b0-ed9598eb8a94-ebb0a9ebb295/</link>
       <pubDate>Mon, 11 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2016/07/11/ios-uitableview-ec97acebb684ec9d98-ec8580-eab5acebb684ec84a0ec9d84-eca09ceab1b0-ed9598eb8a94-ebb0a9ebb295/</guid>
+      <guid>https://jeidee.github.io/blog/2016/07/11/ios-uitableview-ec97acebb684ec9d98-ec8580-eab5acebb684ec84a0ec9d84-eca09ceab1b0-ed9598eb8a94-ebb0a9ebb295/</guid>
       <description>UITableView의 기본설정은 데이터가 없을 때에도 셀 구분선이 출력된다.
 Footer View를 다음과 같이 지정해서 제거할 수 있다.
 tvList.tableFooterView = UIView()  http://stackoverflow.com/questions/1369831/eliminate-extra-separators-below-uitableview</description>
@@ -64,10 +64,10 @@ tvList.tableFooterView = UIView()  http://stackoverflow.com/questions/1369831/el
     
     <item>
       <title>react-native remote image가 출력되지 않을 경우</title>
-      <link>http://jeidee.github.io/blog/2016/07/05/react-native-remote-imageeab080-ecb69ceba0a5eb9098eca780-ec958aec9d84-eab2bdec9ab0/</link>
+      <link>https://jeidee.github.io/blog/2016/07/05/react-native-remote-imageeab080-ecb69ceba0a5eb9098eca780-ec958aec9d84-eab2bdec9ab0/</link>
       <pubDate>Tue, 05 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2016/07/05/react-native-remote-imageeab080-ecb69ceba0a5eb9098eca780-ec958aec9d84-eab2bdec9ab0/</guid>
+      <guid>https://jeidee.github.io/blog/2016/07/05/react-native-remote-imageeab080-ecb69ceba0a5eb9098eca780-ec958aec9d84-eab2bdec9ab0/</guid>
       <description>ios에서 info.plist를 다음과 같이 수정한다.
  &amp;lt;key&amp;gt;NSAppTransportSecurity&amp;lt;/key&amp;gt; &amp;lt;dict&amp;gt; &amp;lt;key&amp;gt;NSAllowsArbitraryLoads&amp;lt;/key&amp;gt; &amp;lt;true/&amp;gt; &amp;lt;/dict&amp;gt;  다음 링크를 참고하도록 한다.
  https://github.com/facebook/react-native/issues/1563#issuecomment-162721129 https://github.com/facebook/react-native/issues/289  </description>
@@ -75,56 +75,56 @@ tvList.tableFooterView = UIView()  http://stackoverflow.com/questions/1369831/el
     
     <item>
       <title>ios sqlite.swift를 사용해서 읽기 쓰기 DB 열기</title>
-      <link>http://jeidee.github.io/blog/2015/11/04/ios-sqlite-swifteba5bc-ec82acec9aa9ed95b4ec849c-ec9dbdeab8b0-ec93b0eab8b0-db-ec97b4eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/11/04/ios-sqlite-swifteba5bc-ec82acec9aa9ed95b4ec849c-ec9dbdeab8b0-ec93b0eab8b0-db-ec97b4eab8b0/</link>
       <pubDate>Wed, 04 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/11/04/ios-sqlite-swifteba5bc-ec82acec9aa9ed95b4ec849c-ec9dbdeab8b0-ec93b0eab8b0-db-ec97b4eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/11/04/ios-sqlite-swifteba5bc-ec82acec9aa9ed95b4ec849c-ec9dbdeab8b0-ec93b0eab8b0-db-ec97b4eab8b0/</guid>
       <description>do { let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first! let db = try Connection(&amp;quot;\(path)/db.sqlite3&amp;quot;) } catch { NSLog(&amp;quot;DB Connection error!&amp;quot;) }  </description>
     </item>
     
     <item>
       <title>ios UIImage 썸네일 이미지 만들기</title>
-      <link>http://jeidee.github.io/blog/2015/06/02/ios-uiimage-ec8db8eb84a4ec9dbc-ec9db4ebafb8eca780-eba78ceb93a4eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/06/02/ios-uiimage-ec8db8eb84a4ec9dbc-ec9db4ebafb8eca780-eba78ceb93a4eab8b0/</link>
       <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/06/02/ios-uiimage-ec8db8eb84a4ec9dbc-ec9db4ebafb8eca780-eba78ceb93a4eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/06/02/ios-uiimage-ec8db8eb84a4ec9dbc-ec9db4ebafb8eca780-eba78ceb93a4eab8b0/</guid>
       <description> -(UIImage\*)makeThumbnail:(UIImage\*)image withSize:(CGSize)destSize{ UIGraphicsBeginImageContext(destSize); [image drawInRect:CGRectMake(0, 0, destSize.width, destSize.height)]; UIImage* thumbnail = UIGraphicsGetImageFromCurrentImageContext(); UIGraphicsEndImageContext(); return thumbnail; }  출처  HOW TO CREATE THUMBNAIL OF UIIMAGE – XCODE IOS  </description>
     </item>
     
     <item>
       <title>ios md5 해시 키 생성</title>
-      <link>http://jeidee.github.io/blog/2015/06/02/ios-md5-ed95b4ec8b9c-ed82a4-ec839dec84b1/</link>
+      <link>https://jeidee.github.io/blog/2015/06/02/ios-md5-ed95b4ec8b9c-ed82a4-ec839dec84b1/</link>
       <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/06/02/ios-md5-ed95b4ec8b9c-ed82a4-ec839dec84b1/</guid>
+      <guid>https://jeidee.github.io/blog/2015/06/02/ios-md5-ed95b4ec8b9c-ed82a4-ec839dec84b1/</guid>
       <description> #import &amp;lt;CommonCrypto/CommonDigest.h&amp;gt; -(NSString\*)md5:(NSString \*)str { const char *cStr = [str UTF8String]; unsigned char result[CC\_MD5\_DIGEST_LENGTH]; CC_MD5( cStr, strlen(cStr), result ); return [NSString stringWithFormat:@&amp;quot;%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X&amp;quot;, result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7], result[8], result[9], result[10], result[11], result[12], result[13], result[14], result[15] ]; }  출처  MD5 algorithm in Objective C  </description>
     </item>
     
     <item>
       <title>ios sqlite3</title>
-      <link>http://jeidee.github.io/blog/2015/06/02/ios-sqlite3/</link>
+      <link>https://jeidee.github.io/blog/2015/06/02/ios-sqlite3/</link>
       <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/06/02/ios-sqlite3/</guid>
+      <guid>https://jeidee.github.io/blog/2015/06/02/ios-sqlite3/</guid>
       <description>아래 참고 링크에서 DBManager를 가져와 다음과 같이 사용하면 된다.
 insert or update -(void) addOrSetRoomToDB:(NSChatRoom*)room { if (room == nil) { NSLog(@&amp;quot;addOrSetRoomToDB()&amp;amp;#8230; room is nil!&amp;quot;); return; } DBManager* dbManager = [[TalkInterface getInstance] dbManager]; if (dbManager == nil) { NSLog(@&amp;quot;addOrSetRoomToDB()&amp;amp;#8230; dbManager is nil!&amp;quot;); return; } NSString* query = [NSString stringWithFormat:@&amp;quot;insert or replace into chatRoom(roomId, lastMessage, lastDateTime, unreadCount) values(&#39;%@&#39;, &#39;%@&#39;, &#39;%@&#39;, %d);&amp;quot;, room.roomId, room.lastMessage, room.lastDateTime, room.unreadCount]; [dbManager executeQuery:query]; if (dbManager.affectedRows != 0) { NSLog(@&amp;quot;채팅룸 DB 추가 성공!</description>
     </item>
     
     <item>
       <title>ios url 캐시 설정</title>
-      <link>http://jeidee.github.io/blog/2015/06/02/ios-url-ecba90ec8b9c-ec84a4eca095/</link>
+      <link>https://jeidee.github.io/blog/2015/06/02/ios-url-ecba90ec8b9c-ec84a4eca095/</link>
       <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/06/02/ios-url-ecba90ec8b9c-ec84a4eca095/</guid>
+      <guid>https://jeidee.github.io/blog/2015/06/02/ios-url-ecba90ec8b9c-ec84a4eca095/</guid>
       <description> // url 캐시 설정 // 메모리 : 10MB, 디스크 : 50MB NSURLCache \*urlCache = [[NSURLCache alloc] initWithMemoryCapacity:10 \* 1024 \* 1024 diskCapacity:50 \* 1024 * 1024 diskPath:nil]; [NSURLCache setSharedURLCache:urlCache];  출처  iphone에서 메모리 문제로 URL로 데이터를 가끔씩 못 가져올 때 AFNetworking, NSURLCache로 이미지 캐시하기  </description>
     </item>
     
     <item>
       <title>ios 이미지 캐시 구현하기</title>
-      <link>http://jeidee.github.io/blog/2015/06/02/ios-ec9db4ebafb8eca780-ecba90ec8b9c-eab5aced9884ed9598eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/06/02/ios-ec9db4ebafb8eca780-ecba90ec8b9c-eab5aced9884ed9598eab8b0/</link>
       <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/06/02/ios-ec9db4ebafb8eca780-ecba90ec8b9c-eab5aced9884ed9598eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/06/02/ios-ec9db4ebafb8eca780-ecba90ec8b9c-eab5aced9884ed9598eab8b0/</guid>
       <description>URL에서 이미지를 가져와 출력하는 것은 매우 성능이 좋지 않다. 상황에 따라서는 수 초간(또는 그 이상) 이미지를 불러오지 못하는 경우도 생길 수 있고, 비동기로 많은 이미지를 가져올 경우 상황은 더욱 좋지 않게 된다.
 이런 경우 대부분 이미지를 캐시해 놓고 이후 요청에서는 캐시에서 이미지를 불러오도록 하는데, 메모리와 디스크를 병행해서 캐시해야 프로세스를 재시작해도 캐시를 지속적으로 사용할 수 있는 이득을 볼 수 있다.
 간단한 플로우는 다음과 같다.
@@ -134,20 +134,20 @@ insert or update -(void) addOrSetRoomToDB:(NSChatRoom*)room { if (room == nil) {
     
     <item>
       <title>ios UIImageView를 원형으로 출력하기</title>
-      <link>http://jeidee.github.io/blog/2015/05/19/ios-uiimagevieweba5bc-ec9b90ed9895ec9cbceba19c-ecb69ceba0a5ed9598eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/05/19/ios-uiimagevieweba5bc-ec9b90ed9895ec9cbceba19c-ecb69ceba0a5ed9598eab8b0/</link>
       <pubDate>Tue, 19 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/05/19/ios-uiimagevieweba5bc-ec9b90ed9895ec9cbceba19c-ecb69ceba0a5ed9598eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/05/19/ios-uiimagevieweba5bc-ec9b90ed9895ec9cbceba19c-ecb69ceba0a5ed9598eab8b0/</guid>
       <description> cell.imgAvatar.layer.cornerRadius = cell.imgAvatar.frame.size.height / 2; cell.imgAvatar.layer.masksToBounds = YES; cell.imgAvatar.layer.borderWidth = 0;  테이블셀의 UIImaveView인 imgAvatar를 원형으로 출력하는 코드이다.
 출처  UIImage in a circle  </description>
     </item>
     
     <item>
       <title>ios 비동기로 이미지 다운로드</title>
-      <link>http://jeidee.github.io/blog/2015/05/19/ios-ebb984eb8f99eab8b0eba19c-ec9db4ebafb8eca780-eb8ba4ec9ab4eba19ceb939c/</link>
+      <link>https://jeidee.github.io/blog/2015/05/19/ios-ebb984eb8f99eab8b0eba19c-ec9db4ebafb8eca780-eb8ba4ec9ab4eba19ceb939c/</link>
       <pubDate>Tue, 19 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/05/19/ios-ebb984eb8f99eab8b0eba19c-ec9db4ebafb8eca780-eb8ba4ec9ab4eba19ceb939c/</guid>
+      <guid>https://jeidee.github.io/blog/2015/05/19/ios-ebb984eb8f99eab8b0eba19c-ec9db4ebafb8eca780-eb8ba4ec9ab4eba19ceb939c/</guid>
       <description> 이미지캐시 클래스를 만들고 있는 과정인데 우선 비동기로 이미지를 다운로드 하는 코드를 작성해 보았다.
 아직 캐시 기능은 구현하지 않았다.
 ImageCache.h
@@ -158,10 +158,10 @@ ImageCache.h
     
     <item>
       <title>ios 스토리보드와 커스텀 테이블 셀</title>
-      <link>http://jeidee.github.io/blog/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580/</link>
+      <link>https://jeidee.github.io/blog/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580/</link>
       <pubDate>Tue, 19 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580/</guid>
+      <guid>https://jeidee.github.io/blog/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580/</guid>
       <description> 스토리보드에 작성한 커스텀 테이블셀을 코드에서 사용하기 위해서는 다음과 같이 작업한다.
 1) Attributes Inspector에서 Identifier를 설정한다.
 2) Custom TableViewController.mm에서 다음과 같이 작성한다.
@@ -171,10 +171,10 @@ tableView의 dequeueReusableCellWithIdentifier 함수를 사용하면 된다.
     
     <item>
       <title>ios c&#43;&#43; 객체에서 objective-c 객체의 함수 콜백하기</title>
-      <link>http://jeidee.github.io/blog/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0/</link>
       <pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0/</guid>
       <description>다음과 같은 요구사항이 있다고 가정해 보자.
  c++로 작성된 MsgClient는 통신 처리를 하는 별도의 워커쓰레드가 있다.
 서버에 접속한 후 데이터를 수신하면 objective-c의 여러 ViewHandler에 데이터 수신 이벤트를 발생시켜야 한다.
@@ -185,10 +185,10 @@ tableView의 dequeueReusableCellWithIdentifier 함수를 사용하면 된다.
     
     <item>
       <title>ios dispatch_async 비동기 처리하기</title>
-      <link>http://jeidee.github.io/blog/2015/05/18/ios-dispatch_async-ebb984eb8f99eab8b0-ecb298eba6aced9598eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/05/18/ios-dispatch_async-ebb984eb8f99eab8b0-ecb298eba6aced9598eab8b0/</link>
       <pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/05/18/ios-dispatch_async-ebb984eb8f99eab8b0-ecb298eba6aced9598eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/05/18/ios-dispatch_async-ebb984eb8f99eab8b0-ecb298eba6aced9598eab8b0/</guid>
       <description>장시간을 요하는 작업을 UI 쓰레드에서 요청할 경우 UI 쓰레드가 블럭되기 때문에 사용자는 불편을 느끼게 된다.
 이러한 경우, 별도의 쓰레드에서 작업을 수행 후 처리가 완료되면 UI 쓰레드로 결과를 돌려주는 방식(비동기)을 사용해야 한다.
 android에서는 AsyncTask를 사용하면되고 ios의 경우에는 GCD(Grand Central Dispatch)를 사용하면 된다.
@@ -198,10 +198,10 @@ mLoginView.hidden = YES; mActivityIndicator.hidden = NO; [mActivityIndicator sta
     
     <item>
       <title>ios storyboard에서 컨트롤의 위치가 의도한대로 출력되지 않을 때</title>
-      <link>http://jeidee.github.io/blog/2015/05/14/ios-storyboardec9790ec849c-ecbba8ed8ab8eba1a4ec9d98-ec9c84ecb998eab080-ec9d98eb8f84ed959ceb8c80eba19c-ecb69ceba0a5eb9098eca780-ec958aec9d84/</link>
+      <link>https://jeidee.github.io/blog/2015/05/14/ios-storyboardec9790ec849c-ecbba8ed8ab8eba1a4ec9d98-ec9c84ecb998eab080-ec9d98eb8f84ed959ceb8c80eba19c-ecb69ceba0a5eb9098eca780-ec958aec9d84/</link>
       <pubDate>Thu, 14 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/05/14/ios-storyboardec9790ec849c-ecbba8ed8ab8eba1a4ec9d98-ec9c84ecb998eab080-ec9d98eb8f84ed959ceb8c80eba19c-ecb69ceba0a5eb9098eca780-ec958aec9d84/</guid>
+      <guid>https://jeidee.github.io/blog/2015/05/14/ios-storyboardec9790ec849c-ecbba8ed8ab8eba1a4ec9d98-ec9c84ecb998eab080-ec9d98eb8f84ed959ceb8c80eba19c-ecb69ceba0a5eb9098eca780-ec958aec9d84/</guid>
       <description> Auto Layout을 사용해 컨트롤에 Constraints를 추가해도 의도한대로 출력되지 않는 경우가 있다.
 이럴 경우 다음과 같이 스토리보드 레이아웃이 제대로 설정되어 있는지 확인한다.
 위 이미지의 설정은 iPhone의 각 스크린 인치별 portrait와 landscape를 지원한다.
@@ -210,10 +210,10 @@ mLoginView.hidden = YES; mActivityIndicator.hidden = NO; [mActivityIndicator sta
     
     <item>
       <title>ios 스토리보드의 segue를 코드로 작동시키기</title>
-      <link>http://jeidee.github.io/blog/2015/05/13/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9d98-segueeba5bc-ecbd94eb939ceba19c-ec9e91eb8f99ec8b9ced82a4eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/05/13/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9d98-segueeba5bc-ecbd94eb939ceba19c-ec9e91eb8f99ec8b9ced82a4eab8b0/</link>
       <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/05/13/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9d98-segueeba5bc-ecbd94eb939ceba19c-ec9e91eb8f99ec8b9ced82a4eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/05/13/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9d98-segueeba5bc-ecbd94eb939ceba19c-ec9e91eb8f99ec8b9ced82a4eab8b0/</guid>
       <description>스토리보드(Main.storyboard)를 다음과 같이 작성했다고 가정해 보자.
  =&amp;gt;(Entry) Login View Controller =&amp;gt;(Segue id: moveToTabBar) Tab Bar Controller  Entry 뷰는 Login View이다.
 Login View에서 Tab Bar Controller로 이동하는 seque를 생성한 후 Attributes Inspector에서 Identifier값을 &amp;#8220;moveToTabBar&amp;#8221;로 수정한다.

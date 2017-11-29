@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mysql on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/mysql/</link>
+    <link>https://jeidee.github.io/blog/tags/mysql/</link>
     <description>Recent content in Mysql on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Apr 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>c&#43;&#43; ubuntu에서 mysql 개발 &amp;#8211; 연결</title>
-      <link>http://jeidee.github.io/blog/2015/04/14/c-ubuntuec9790ec849c-mysql-eab09cebb09c-ec97b0eab2b0/</link>
+      <link>https://jeidee.github.io/blog/2015/04/14/c-ubuntuec9790ec849c-mysql-eab09cebb09c-ec97b0eab2b0/</link>
       <pubDate>Tue, 14 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/04/14/c-ubuntuec9790ec849c-mysql-eab09cebb09c-ec97b0eab2b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/04/14/c-ubuntuec9790ec849c-mysql-eab09cebb09c-ec97b0eab2b0/</guid>
       <description> ubuntu에서 mysql 개발을 위해서, 먼저 mysql library를 다음과 같이 설치한다.
  sudo apt-get install libmysqlcppconn-dev  그런 후 다음과 같이 단순 연결 코드를 작성한다. (test.cpp)
 #include &amp;lt;iostream&amp;gt; #include &amp;quot;mysql_driver.h&amp;quot; int main() { sql::mysql::MySQL_Driver *driver; sql::Connection *con; driver = sql::mysql::get\_mysql\_driver_instance(); con = driver-&amp;gt;connect(&amp;quot;tcp://127.0.0.1:3306&amp;quot;, &amp;quot;ejabberd&amp;quot;, &amp;quot;ejabberd&amp;quot;); delete con; return 0; }  g++을 사용해서 다음과 같이 컴파일 한다.
@@ -25,20 +25,20 @@
     
     <item>
       <title>mysql root 계정 초기화</title>
-      <link>http://jeidee.github.io/blog/2015/01/22/mysql-root-eab384eca095-ecb488eab8b0ed9994/</link>
+      <link>https://jeidee.github.io/blog/2015/01/22/mysql-root-eab384eca095-ecb488eab8b0ed9994/</link>
       <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/01/22/mysql-root-eab384eca095-ecb488eab8b0ed9994/</guid>
+      <guid>https://jeidee.github.io/blog/2015/01/22/mysql-root-eab384eca095-ecb488eab8b0ed9994/</guid>
       <description>mysql root 계정의 패스워드를 분실했을 경우 다음 절차를 따라 root 계정의 패스워드를 변경할 수 있다.
  $ service mysql stop $ mysqld\_safe &amp;amp;#8211;skip\_grant &amp;amp; $ mysql mysql&amp;gt; use mysql; mysql&amp;gt; update user set password=password(&#39;root&#39;) where user=&#39;root&#39;; mysql&amp;gt; flush privileges;  </description>
     </item>
     
     <item>
       <title>ejabberd jabber search 수정하기</title>
-      <link>http://jeidee.github.io/blog/2015/01/21/ejabberd-jabber-search-ec8898eca095ed9598eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/01/21/ejabberd-jabber-search-ec8898eca095ed9598eab8b0/</link>
       <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/01/21/ejabberd-jabber-search-ec8898eca095ed9598eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/01/21/ejabberd-jabber-search-ec8898eca095ed9598eab8b0/</guid>
       <description>jabber search를 다음과 같이 수정해야 한다고 가정해 본다.
  like query 가능해야 함 페이징 가능해야 함  우선 페이징이 가능하도록 검색폼과 결과폼을 다음과 같이 수정해야 한다.
  검색폼 : page no, page size 필드 추가 결과폼 : 현재 page no, 현재 page size(result count), 결과가 더 있는지 여부(more result) 필드 추가  검색폼 수정 검색폼을 수정하기 위해 ejabberd의 모듈 중에 mod_vcard.erl을 다음과 같이 수정하면 된다.
@@ -47,10 +47,10 @@
     
     <item>
       <title>ejabberd mysql odbc 설정</title>
-      <link>http://jeidee.github.io/blog/2015/01/21/ejabberd-mysql-odbc-ec84a4eca095/</link>
+      <link>https://jeidee.github.io/blog/2015/01/21/ejabberd-mysql-odbc-ec84a4eca095/</link>
       <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/01/21/ejabberd-mysql-odbc-ec84a4eca095/</guid>
+      <guid>https://jeidee.github.io/blog/2015/01/21/ejabberd-mysql-odbc-ec84a4eca095/</guid>
       <description>mysql 설정은 다음과 같이 한다.
  $ vi /etc/ejabberd/ejabberd.yml auth_method: odbc \## auth_method: internal에서 변경한다. \## MySQL server: ## odbc_type: mysql odbc_server: &amp;quot;localhost&amp;quot; odbc_database: &amp;quot;ejabberd&amp;quot; odbc_username: &amp;quot;ejabberd&amp;quot; odbc_password: &amp;quot;ejabberd&amp;quot;  위와 같이 한 후 모듈별로 db_type을 설정해야 하는데, roster와 vcard를 mysql에 저장하도록 하려면 다음과 같이 ejabberd.yml파일을 수정한다.
  mod_roster: db_type: odbc mod\_shared\_roster: {} mod_stats: {} mod_time: {} mod_vcard: db_type: odbc  </description>

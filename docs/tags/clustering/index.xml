@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Clustering on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/clustering/</link>
+    <link>https://jeidee.github.io/blog/tags/clustering/</link>
     <description>Recent content in Clustering on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Dec 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/clustering/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/clustering/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>mongo sharded cluster</title>
-      <link>http://jeidee.github.io/blog/2015/12/08/mongo-sharded-cluster/</link>
+      <link>https://jeidee.github.io/blog/2015/12/08/mongo-sharded-cluster/</link>
       <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/12/08/mongo-sharded-cluster/</guid>
+      <guid>https://jeidee.github.io/blog/2015/12/08/mongo-sharded-cluster/</guid>
       <description>mongodb의 샤드 클러스터를 구성하는 방법은 다음과 같다.
 준비 mongod가 설치된 서버가 다음과 같이 3대 준비되어 있다고 가정한다.
 #1 : 192.168.56.101
@@ -30,10 +30,10 @@ shard 서버 구동 @192.168.56.101/102/103 공통
     
     <item>
       <title>riak 클러스터 구성</title>
-      <link>http://jeidee.github.io/blog/2015/12/08/riak-ed81b4eb9facec8aa4ed84b0-eab5acec84b1/</link>
+      <link>https://jeidee.github.io/blog/2015/12/08/riak-ed81b4eb9facec8aa4ed84b0-eab5acec84b1/</link>
       <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/12/08/riak-ed81b4eb9facec8aa4ed84b0-eab5acec84b1/</guid>
+      <guid>https://jeidee.github.io/blog/2015/12/08/riak-ed81b4eb9facec8aa4ed84b0-eab5acec84b1/</guid>
       <description>riak 설치 환경은 centos-6.7, riak 2.1.2를 기준으로 한다.
 riak 설정 riak.conf만 수정해도 된다. (단, 방화벽 설정을 하려면 app.config를 수정해야 한다.)
 클러스터로 구성할 2개의 riak 노드가 다음과 같이 준비되어 있다.
@@ -44,10 +44,10 @@ riak 설정 riak.conf만 수정해도 된다. (단, 방화벽 설정을 하려�
     
     <item>
       <title>ejabberd clustering</title>
-      <link>http://jeidee.github.io/blog/2015/01/21/ejabberd-clustering/</link>
+      <link>https://jeidee.github.io/blog/2015/01/21/ejabberd-clustering/</link>
       <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/01/21/ejabberd-clustering/</guid>
+      <guid>https://jeidee.github.io/blog/2015/01/21/ejabberd-clustering/</guid>
       <description>process-one 사이트에 명시된 p1-spec 문서는 찾을 수가 없었다.
 대신 install guide에 포함된 clustering guide를 살펴보고 cluster-node를 구축하는 방법을 살펴보도록 한다.
 cluster 구성을 위한 환경 다음과 같이 Virtualbox를 사용해 Windows 7 호스트에 ubuntu 14.10 게스트 OS를 설치해서 클러스터링을 구성한다.

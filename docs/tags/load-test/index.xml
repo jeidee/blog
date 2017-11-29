@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Load Test on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/load-test/</link>
+    <link>https://jeidee.github.io/blog/tags/load-test/</link>
     <description>Recent content in Load Test on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Jun 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/load-test/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/load-test/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>erlang 벤치마킹 툴 tsung</title>
-      <link>http://jeidee.github.io/blog/2016/06/27/erlang-ebb2a4ecb998eba788ed82b9-ed88b4-tsung/</link>
+      <link>https://jeidee.github.io/blog/2016/06/27/erlang-ebb2a4ecb998eba788ed82b9-ed88b4-tsung/</link>
       <pubDate>Mon, 27 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2016/06/27/erlang-ebb2a4ecb998eba788ed82b9-ed88b4-tsung/</guid>
+      <guid>https://jeidee.github.io/blog/2016/06/27/erlang-ebb2a4ecb998eba788ed82b9-ed88b4-tsung/</guid>
       <description>Tsung은 오픈소스 분산 테스팅 도구이다.
 http, xmpp등을 테스트할 수 있으며 Client Agent와 서버 모니터링 도구를 제공하고, 결과는 다양한 그래프로 출력해 준다.
 설치 centos 6  참고   yum -y install erlang perl gnuplot perl-Template-Toolkit wget http://tsung.erlang-projects.org/dist/tsung-1.6.0.tar.gz tar zxfv tsung-1.6.0.tar.gz cd tsung-1.6.0 ./configure &amp;amp;#8211;prefix=/usr/local/ &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install cp /usr/share/doc/tsung/examples/http_simple.xml /root/.tsung/tsung.xml  ubuntu  sudo apt-get install erlang sudo apt-get install tsung  실행 간단한 http 테스팅 위와 같이 설치하고 나면 다음 경로에서 예제 테스팅 템플릿 파일을 찾을 수 있다.</description>

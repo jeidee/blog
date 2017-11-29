@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Actionbar on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/actionbar/</link>
+    <link>https://jeidee.github.io/blog/tags/actionbar/</link>
     <description>Recent content in Actionbar on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 May 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/actionbar/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/actionbar/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>android orientation이 변경될 때 탭바의 아이콘이 없어질 때</title>
-      <link>http://jeidee.github.io/blog/2015/05/12/android-orientationec9db4-ebb380eab2bdeb90a0-eb958c-ed83adebb094ec9d98-ec9584ec9db4ecbd98ec9db4-ec9786ec96b4eca788-eb958c/</link>
+      <link>https://jeidee.github.io/blog/2015/05/12/android-orientationec9db4-ebb380eab2bdeb90a0-eb958c-ed83adebb094ec9d98-ec9584ec9db4ecbd98ec9db4-ec9786ec96b4eca788-eb958c/</link>
       <pubDate>Tue, 12 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/05/12/android-orientationec9db4-ebb380eab2bdeb90a0-eb958c-ed83adebb094ec9d98-ec9584ec9db4ecbd98ec9db4-ec9786ec96b4eca788-eb958c/</guid>
+      <guid>https://jeidee.github.io/blog/2015/05/12/android-orientationec9db4-ebb380eab2bdeb90a0-eb958c-ed83adebb094ec9d98-ec9584ec9db4ecbd98ec9db4-ec9786ec96b4eca788-eb958c/</guid>
       <description> 최신 android 버전(API 22)에서는 문제가 없어 보이지만 특정 버전(API 16, Android 4.1.2)에서 아이콘이 사라지는 문제가 발생한다.
 해결책은 AndriodManifest.xml에서 해당 Activity의 configChanges 어트리뷰트에서 orientation을 제거하면 되는데,
 근본적인 해결책이라고 볼 순 없는 것 같다.
@@ -25,10 +25,10 @@
     
     <item>
       <title>android action bar를 커스텀 뷰로 대체하기</title>
-      <link>http://jeidee.github.io/blog/2015/05/02/android-action-bareba5bc-ecbba4ec8aa4ed8580-ebb7b0eba19c-eb8c80ecb2b4ed9598eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/05/02/android-action-bareba5bc-ecbba4ec8aa4ed8580-ebb7b0eba19c-eb8c80ecb2b4ed9598eab8b0/</link>
       <pubDate>Sat, 02 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/05/02/android-action-bareba5bc-ecbba4ec8aa4ed8580-ebb7b0eba19c-eb8c80ecb2b4ed9598eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/05/02/android-action-bareba5bc-ecbba4ec8aa4ed8580-ebb7b0eba19c-eb8c80ecb2b4ed9598eab8b0/</guid>
       <description> Action Bar에 버튼을 추가하거나 삭제하는 등의 편집을 위해서는 menu/menu_xxx.xml을 편집하면 된다.
 조금 더 다양한 레이아웃을 사용하기 위해서는 커스텀 뷰를 만들어 사용해야 한다.
 커스텀 뷰를 만들고 Action Bar의 높이 사이즈가 맞지 않을 경우 다음과 같이 styles.xml에 추가하도록 한다.

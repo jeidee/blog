@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coroutine on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/coroutine/</link>
+    <link>https://jeidee.github.io/blog/tags/coroutine/</link>
     <description>Recent content in Coroutine on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Sep 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/coroutine/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/coroutine/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>go coroutines 패턴 구현하기</title>
-      <link>http://jeidee.github.io/blog/2015/09/01/go-coroutines-ed8ca8ed84b4-eab5aced9884ed9598eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/09/01/go-coroutines-ed8ca8ed84b4-eab5aced9884ed9598eab8b0/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/09/01/go-coroutines-ed8ca8ed84b4-eab5aced9884ed9598eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/09/01/go-coroutines-ed8ca8ed84b4-eab5aced9884ed9598eab8b0/</guid>
       <description>coroutine은 쓰레드와 유사하다고 볼 수 있다.
 다른점은, 쓰레드가 동시에 여러쓰레드에서 병렬적으로 실행된다면, coroutine은 병행성은 갖지만, 특정 시점에 단 하나의 coroutine만 실행됨을 보증한다는 것이다.
 goroutine과 coroutine의 차이를 다음과 같이 구분할 수 있다.

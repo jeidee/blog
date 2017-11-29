@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shard on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/shard/</link>
+    <link>https://jeidee.github.io/blog/tags/shard/</link>
     <description>Recent content in Shard on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Dec 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/shard/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/shard/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>mongo sharded cluster</title>
-      <link>http://jeidee.github.io/blog/2015/12/08/mongo-sharded-cluster/</link>
+      <link>https://jeidee.github.io/blog/2015/12/08/mongo-sharded-cluster/</link>
       <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/12/08/mongo-sharded-cluster/</guid>
+      <guid>https://jeidee.github.io/blog/2015/12/08/mongo-sharded-cluster/</guid>
       <description>mongodb의 샤드 클러스터를 구성하는 방법은 다음과 같다.
 준비 mongod가 설치된 서버가 다음과 같이 3대 준비되어 있다고 가정한다.
 #1 : 192.168.56.101

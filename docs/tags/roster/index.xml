@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Roster on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/roster/</link>
+    <link>https://jeidee.github.io/blog/tags/roster/</link>
     <description>Recent content in Roster on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Jan 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/roster/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/roster/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ejabberd roster 조회 api 만들기</title>
-      <link>http://jeidee.github.io/blog/2015/01/21/ejabberd-roster-eca1b0ed9a8c-api-eba78ceb93a4eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/01/21/ejabberd-roster-eca1b0ed9a8c-api-eba78ceb93a4eab8b0/</link>
       <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/01/21/ejabberd-roster-eca1b0ed9a8c-api-eba78ceb93a4eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/01/21/ejabberd-roster-eca1b0ed9a8c-api-eba78ceb93a4eab8b0/</guid>
       <description>process handler 추가 mod_http_api.erl을 작성했다고 가정한다.
 request handler에 다음과 같은 코드를 추가한다.
 process([&amp;lt;&amp;lt;&amp;quot;friend&amp;quot;&amp;gt;&amp;gt;, &amp;lt;&amp;lt;&amp;quot;list&amp;quot;&amp;gt;&amp;gt;], _Request) -&amp;gt; try get\_friend\_list(_Request) catch throw: {Message, Result} -&amp;gt; {200, ?OPTIONS\_HEADER, list\_to_json(Message, Result)}; \_:\_ -&amp;gt; {200, ?OPTIONS\_HEADER, list\_to_json(&amp;lt;&amp;lt;&amp;quot;An error occured during the requested work.&amp;quot;&amp;gt;&amp;gt;, &amp;lt;&amp;lt;&amp;quot;500&amp;quot;&amp;gt;&amp;gt;)} end;  mod_http_api 모듈이 /api에 바인딩되어 있다면 위의 request 핸들러는 다음과 같은 url을 처리하게 된다.

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vcard on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/vcard/</link>
+    <link>https://jeidee.github.io/blog/tags/vcard/</link>
     <description>Recent content in Vcard on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Jan 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/vcard/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/vcard/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ejabberd mod_admin_extra 사용해서 vcard 가져오기</title>
-      <link>http://jeidee.github.io/blog/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-eab080eca0b8ec98a4eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-eab080eca0b8ec98a4eab8b0/</link>
       <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-eab080eca0b8ec98a4eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-eab080eca0b8ec98a4eab8b0/</guid>
       <description>ejabberd에서는 커스텀 플러그인 모듈을 다음 URL에서 별도로 배포하고 있다.
 https://www.ejabberd.im/ejabberd-modules
 하지만 일부 모듈의 경우 최신 버전에서 사용할 수 없고, 수정된 모듈에서도 이전 버전과 인터페이스 호환이 되지 않아 문제를 일으키는 경우가 있으므로 주의해야 한다.
@@ -25,10 +25,10 @@ mod_admin_extra 모듈을 사용해 ejabberdctl의 get_vcard 코맨드 실행 ej
     
     <item>
       <title>ejabberd mod_admin_extra 사용해서 vcard 설정하기</title>
-      <link>http://jeidee.github.io/blog/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-ec84a4eca095ed9598eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-ec84a4eca095ed9598eab8b0/</link>
       <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-ec84a4eca095ed9598eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-ec84a4eca095ed9598eab8b0/</guid>
       <description>이전 글에서 설명한 vcard 가져오기 관련된 내용 중에 수정할 부분이 있다.
 ejabberd_modules의 경우 최신 버전(현재 14.07)에서는 호환이 안되며 대신 ejabberd_contrib를 사용해야 한다.
 https://www.ejabberd.im/ejabberd-contrib

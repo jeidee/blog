@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Upstart on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/upstart/</link>
+    <link>https://jeidee.github.io/blog/tags/upstart/</link>
     <description>Recent content in Upstart on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 31 Aug 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/upstart/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/upstart/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>upstart 설정</title>
-      <link>http://jeidee.github.io/blog/2017/08/31/upstart-ec84a4eca095/</link>
+      <link>https://jeidee.github.io/blog/2017/08/31/upstart-ec84a4eca095/</link>
       <pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2017/08/31/upstart-ec84a4eca095/</guid>
+      <guid>https://jeidee.github.io/blog/2017/08/31/upstart-ec84a4eca095/</guid>
       <description>/etc/init/appname.conf
  description &amp;amp;quot;appname&amp;amp;quot; author &amp;amp;quot;xxx&amp;amp;quot; start on startup stop on shutdown chdir /home/xxx/appname respawn script export HOME=&amp;amp;quot;/home/xxx&amp;amp;quot; export AWS\_ACCESS\_KEY_ID= export AWS\_SECRET\_ACCESS_KEY= exec /home/xxx/appname/app -c=&amp;amp;quot;config.json&amp;amp;quot; end script   $ sudo initctl reload-configuration   $ sudo start appname  </description>
     </item>
     
     <item>
       <title>AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</title>
-      <link>http://jeidee.github.io/blog/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/</link>
+      <link>https://jeidee.github.io/blog/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/</link>
       <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/</guid>
+      <guid>https://jeidee.github.io/blog/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/</guid>
       <description>~/.aws/credentials 파일에 AWS의 Credentials Key를 설정해 놓고 개발하다가,
 upstart나 superviosord등을 사용해 실행하게 되면 다음과 같은 에러가 발생한다.
  NoCredentialProviders: no valid providers in chain. Deprecated.  이럴 경우 다음과 같이 AWS Credentials 정보를 환경변수로 설정해서 사용하면 문제 없이 사용 가능하다.

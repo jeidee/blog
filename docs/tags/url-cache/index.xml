@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Url Cache on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/url-cache/</link>
+    <link>https://jeidee.github.io/blog/tags/url-cache/</link>
     <description>Recent content in Url Cache on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 02 Jun 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/url-cache/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/url-cache/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ios url 캐시 설정</title>
-      <link>http://jeidee.github.io/blog/2015/06/02/ios-url-ecba90ec8b9c-ec84a4eca095/</link>
+      <link>https://jeidee.github.io/blog/2015/06/02/ios-url-ecba90ec8b9c-ec84a4eca095/</link>
       <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/06/02/ios-url-ecba90ec8b9c-ec84a4eca095/</guid>
+      <guid>https://jeidee.github.io/blog/2015/06/02/ios-url-ecba90ec8b9c-ec84a4eca095/</guid>
       <description> // url 캐시 설정 // 메모리 : 10MB, 디스크 : 50MB NSURLCache \*urlCache = [[NSURLCache alloc] initWithMemoryCapacity:10 \* 1024 \* 1024 diskCapacity:50 \* 1024 * 1024 diskPath:nil]; [NSURLCache setSharedURLCache:urlCache];  출처  iphone에서 메모리 문제로 URL로 데이터를 가끔씩 못 가져올 때 AFNetworking, NSURLCache로 이미지 캐시하기  </description>
     </item>
     

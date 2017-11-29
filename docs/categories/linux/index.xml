@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/categories/linux/</link>
+    <link>https://jeidee.github.io/blog/categories/linux/</link>
     <description>Recent content in Linux on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 31 Aug 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>upstart 설정</title>
-      <link>http://jeidee.github.io/blog/2017/08/31/upstart-ec84a4eca095/</link>
+      <link>https://jeidee.github.io/blog/2017/08/31/upstart-ec84a4eca095/</link>
       <pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2017/08/31/upstart-ec84a4eca095/</guid>
+      <guid>https://jeidee.github.io/blog/2017/08/31/upstart-ec84a4eca095/</guid>
       <description>/etc/init/appname.conf
  description &amp;amp;quot;appname&amp;amp;quot; author &amp;amp;quot;xxx&amp;amp;quot; start on startup stop on shutdown chdir /home/xxx/appname respawn script export HOME=&amp;amp;quot;/home/xxx&amp;amp;quot; export AWS\_ACCESS\_KEY_ID= export AWS\_SECRET\_ACCESS_KEY= exec /home/xxx/appname/app -c=&amp;amp;quot;config.json&amp;amp;quot; end script   $ sudo initctl reload-configuration   $ sudo start appname  </description>
     </item>

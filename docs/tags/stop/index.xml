@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stop on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/stop/</link>
+    <link>https://jeidee.github.io/blog/tags/stop/</link>
     <description>Recent content in Stop on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Nov 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/stop/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/stop/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>erlang gen_server를 구현한 프로세스 종료하기</title>
-      <link>http://jeidee.github.io/blog/2015/11/11/erlang-gen_servereba5bc-eab5aced9884ed959c-ed9484eba19cec84b8ec8aa4-eca285eba38ced9598eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/11/11/erlang-gen_servereba5bc-eab5aced9884ed959c-ed9484eba19cec84b8ec8aa4-eca285eba38ced9598eab8b0/</link>
       <pubDate>Wed, 11 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/11/11/erlang-gen_servereba5bc-eab5aced9884ed959c-ed9484eba19cec84b8ec8aa4-eca285eba38ced9598eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/11/11/erlang-gen_servereba5bc-eab5aced9884ed959c-ed9484eba19cec84b8ec8aa4-eca285eba38ced9598eab8b0/</guid>
       <description>gen_server를 구현한 프로세스를 종료하려면 callback함수에서 {stop, Reason, NewState}을 반환하면 된다.
 일반적으로는 다음과 같은 패턴으로 구현한다.
 handle_cast({stop, Reason}, State) -&amp;gt; {stop, Reason, State}; &amp;amp;#8230; do_stop(Pid) -&amp;gt; gen_server:cast(Pid, {stop, {shutdown, &amp;lt;&amp;lt;&amp;quot;Reason string&amp;amp;#8230;&amp;quot;&amp;gt;&amp;gt;}}).  handle_cast/2에서 {stop, Reason, NewState}가 아니라 {stop, Reason}만 반환할 경우,

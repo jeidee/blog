@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Swig on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/swig/</link>
+    <link>https://jeidee.github.io/blog/tags/swig/</link>
     <description>Recent content in Swig on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Jan 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/swig/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/swig/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>node.js &#43; express &#43; swig &#43; bootstrap 사용하기</title>
-      <link>http://jeidee.github.io/blog/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0/</link>
       <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0/</guid>
       <description>booststrap 설치 bower를 사용해서 설치하기로 한다.
 그 외의 설치방법은 한글 booststrap 사이트를 참고하자.
 먼저 node.js와 express로 app 프로젝트가 생성되었다고 가정한다.
@@ -28,10 +28,10 @@ express + swig에 bootstrap 적용 views/layout.html파일을 다음과 같이 �
     
     <item>
       <title>node.js express에서 swig view engine 사용하기</title>
-      <link>http://jeidee.github.io/blog/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0/</link>
+      <link>https://jeidee.github.io/blog/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0/</link>
       <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0/</guid>
+      <guid>https://jeidee.github.io/blog/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0/</guid>
       <description>express view engine으로 swig를 사용해 보자.
 express로 웹앱의 기본 골격 프로젝트를 생성했다고 가정한다.
 package.json에 다음과 같이 dependencies 모듈을 추가해 준다.

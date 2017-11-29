@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Concurrent on Erlang &amp; Go</title>
-    <link>http://jeidee.github.io/blog/tags/concurrent/</link>
+    <link>https://jeidee.github.io/blog/tags/concurrent/</link>
     <description>Recent content in Concurrent on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 31 Aug 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jeidee.github.io/blog/tags/concurrent/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeidee.github.io/blog/tags/concurrent/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>go buffered channel을 이용한 Concurrent Queue 구현</title>
-      <link>http://jeidee.github.io/blog/2015/08/31/go-buffered-channleec9d84-ec9db4ec9aa9ed959c-concurrent-queue-eab5aced9884/</link>
+      <link>https://jeidee.github.io/blog/2015/08/31/go-buffered-channleec9d84-ec9db4ec9aa9ed959c-concurrent-queue-eab5aced9884/</link>
       <pubDate>Mon, 31 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jeidee.github.io/blog/2015/08/31/go-buffered-channleec9d84-ec9db4ec9aa9ed959c-concurrent-queue-eab5aced9884/</guid>
+      <guid>https://jeidee.github.io/blog/2015/08/31/go-buffered-channleec9d84-ec9db4ec9aa9ed959c-concurrent-queue-eab5aced9884/</guid>
       <description>이전 포스트에서는 cotainer/list와 sync/mutex를 사용해서 Concurrent Queue를 구현해 보았다.
 해당 큐의 단점은 Multi-Goroutine 동기화를 위해 Mutex를 사용하면서 비용이 발생하고,
 Pop()함수를 사용할 경우 값이 없을 경우에도 즉시 리턴을 하기 때문에,
