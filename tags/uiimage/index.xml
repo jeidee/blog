@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Uiimage on Erlang &amp; Go</title>
+    <link>https://jeidee.github.io/tags/uiimage/</link>
+    <description>Recent content in Uiimage on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jun 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jeidee.github.io/tags/uiimage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ios UIImage 썸네일 이미지 만들기</title>
+      <link>https://jeidee.github.io/2015/06/02/ios-uiimage-ec8db8eb84a4ec9dbc-ec9db4ebafb8eca780-eba78ceb93a4eab8b0/</link>
+      <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/02/ios-uiimage-ec8db8eb84a4ec9dbc-ec9db4ebafb8eca780-eba78ceb93a4eab8b0/</guid>
+      <description> -(UIImage\*)makeThumbnail:(UIImage\*)image withSize:(CGSize)destSize{ UIGraphicsBeginImageContext(destSize); [image drawInRect:CGRectMake(0, 0, destSize.width, destSize.height)]; UIImage* thumbnail = UIGraphicsGetImageFromCurrentImageContext(); UIGraphicsEndImageContext(); return thumbnail; }  출처  HOW TO CREATE THUMBNAIL OF UIIMAGE – XCODE IOS  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maunder on Erlang &amp; Go</title>
+    <link>https://jeidee.github.io/tags/maunder/</link>
+    <description>Recent content in Maunder on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Jul 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jeidee.github.io/tags/maunder/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>erlang mumble server &amp;#8211; maunder</title>
+      <link>https://jeidee.github.io/2015/07/24/erlang-mumble-server-maunder/</link>
+      <pubDate>Fri, 24 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/07/24/erlang-mumble-server-maunder/</guid>
+      <description>erlang으로 구현된 mumble서버 중에 maunder라고 있다.
+2년전 커밋이 마지막이다.
+erlang 17버전에서 빌드하고 실행하면 application:start()할 때 오류가 발생한다.
+원인은 erlang 17버전에서 public_key application이 asn1을 의존하기 때문인데,
+maunder.erl 소스를 다음과 같이 수정하고 다시 빌드하면 문제가 해결된다.
+ %% @spec start() -&amp;gt; ok %% @doc Start the maunder server. start() -&amp;gt; ensure_started(sasl), ensure_started(crypto), ensure_started(asn1), ensure\_started(public\_key), ensure_started(ssl), application:start(maunder).  기동시 eaddrinuse 관련 에러가 발생하는 경우,
+maunder_app.erl의 DEF_PORT값(기본값은 8080)을 변경한 후 다시 빌드하면 된다.
+매번 포트를 변경할 때마다 재빌드하는게 번거로울 경우 빌드후 생성되는 ebin/maunder.</description>
+    </item>
+    
+  </channel>
+</rss>

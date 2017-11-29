@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jabber Search on Erlang &amp; Go</title>
+    <link>https://jeidee.github.io/tags/jabber-search/</link>
+    <description>Recent content in Jabber Search on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Jan 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jeidee.github.io/tags/jabber-search/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ejabberd jabber search 수정하기</title>
+      <link>https://jeidee.github.io/2015/01/21/ejabberd-jabber-search-ec8898eca095ed9598eab8b0/</link>
+      <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/01/21/ejabberd-jabber-search-ec8898eca095ed9598eab8b0/</guid>
+      <description>jabber search를 다음과 같이 수정해야 한다고 가정해 본다.
+ like query 가능해야 함 페이징 가능해야 함  우선 페이징이 가능하도록 검색폼과 결과폼을 다음과 같이 수정해야 한다.
+ 검색폼 : page no, page size 필드 추가 결과폼 : 현재 page no, 현재 page size(result count), 결과가 더 있는지 여부(more result) 필드 추가  검색폼 수정 검색폼을 수정하기 위해 ejabberd의 모듈 중에 mod_vcard.erl을 다음과 같이 수정하면 된다.
+-define(FORM(JID), ?TLFIELD(&amp;lt;&amp;lt;&amp;quot;text-single&amp;quot;&amp;gt;&amp;gt;, &amp;lt;&amp;lt;&amp;quot;Organization Unit&amp;quot;&amp;gt;&amp;gt;, &amp;lt;&amp;lt;&amp;quot;orgunit&amp;quot;&amp;gt;&amp;gt;), ?</description>
+    </item>
+    
+  </channel>
+</rss>

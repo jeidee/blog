@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Erlang &amp; Go  | Erlang</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.31.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://jeidee.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+      <link href="https://jeidee.github.io/categories/erlang/index.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
+      <link href="https://jeidee.github.io/categories/erlang/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go" />
+    
+
+    <meta property="og:title" content="Erlang" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jeidee.github.io/categories/erlang/" />
+
+
+
+<meta property="og:updated_time" content="2017-01-25T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Erlang">
+<meta itemprop="description" content="">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Erlang"/>
+<meta name="twitter:description" content=""/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://jeidee.github.io/images/gohugo-default-sample-hero-image.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jeidee.github.io" class="f3 fw2 hover-white no-underline white-90 dib">
+      Erlang &amp; Go
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+          Erlang
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
+      <p>Below you will find pages that utilize the taxonomy term “Erlang”</p>
+    </div>
+  </article>
+  <div class="mw8 center">
+    
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080" class="link black dim">
+        couchbase cberl에 lcb_cntl 함수 추가
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      cberl에 libcouchbase의 옵션을 설정하거나 조회할 수 있는 lcb_cntl 함수를 추가해 보자.
+새로운 함수 추가를 위해 코맨드 상수를 추가해 준다.
+cberl_nif.h를 열어 다음행을 추가해 준다.
+#define CMD_CNTL 8  새로운 코맨드에 콜백함수를 등록해 주기 위해서 cberl_nif.c소스의 NIF(cberl_nif_new) 함수에 다음행을 추가해 준다.
+https://gist.github.com/jeidee/86967c348f64cee9b37c6bf41c207606
+cntl 함수의 매개변수를 위한 구조체와 함수선언문을 cb.h에 다음과 같이 추가한다.
+https://gist.github.com/jeidee/430f7cea10bc95099cafb79e71407f42
+cntl 함수 정의부를 cb.c에 다음과 같이 작성한다.
+https://gist.github.com/jeidee/07acab77aad96f32b4f79110ae202209
+이제 erlang 소스를 수정해 보자.
+cntl 함수가 erlang에서 호출될 수 있도록 cberl.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd" class="link black dim">
+        couchbase cberl의IO Plugin을 libevent로 변경
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      cberl에는 io plugin이 default로 설정되어 있는데 이럴 경우 select를 사용한다. 동시에 열 수 있는 소켓수는 1024로 제한되어 있어, 그 이상을 처리하기 위해서는 libevent로 수정해야 한다.
+그렇지 않을 경우 cberl의 view(http)를 사용할 경우 일정한 요청(동시에 열린 소켓수가 1024를 초과하는 시점) 이상일 경우 간헐적으로 unknown error 45(0x2d)를 반환한다.
+실제 libcouchbase의 로그를 cntl함수를 사용해 erlang application process에 attach된 상태에서 stderr에 출력되는 로그를 확인해 보면 다음과 같은 오류가 출력되는 것을 확인할 수 있다.
+(cberl:cntl 함수를 사용하려면 이전 포스트를 참고해서 cberl 소스를 수정해야 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c" class="link black dim">
+        ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Makefile.in을 열어 skip_deps=true 부분을 찾아 skip_deps=false로 수정하면 된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/06/28/tsungec9d84-ec82acec9aa9ed95b4-ejabberd-ed858cec8aa4ed8ab8ed9598eab8b0" class="link black dim">
+        tsung을 사용해 ejabberd 테스트하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      테스트 환경  ejabber node 1대, tsung node 1대, dabase node 1대 ulimit -n 100000  tsung.xml https://gist.github.com/jeidee/ae4cb98e609f405d5ce6b60a4b53f0fe
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/05/16/erlang-ecbd94eb94a9-ed919ceca480eab3bc-eab080ec9db4eb939ceb9dbcec9db8" class="link black dim">
+        Erlang 코딩 표준과 가이드라인
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      참고원문 https://github.com/inaka/erlang_guidelines
+자세한 내용은 원문을 참고하세요.
+소스 코드 레이아웃  탭은 공백문자 2개로 표현하며 탭문자를 사용하지 않는다. Examples: indent 연산자는 공백으로 감싼다. Examples: spaces 줄의 끝에서 Whitespace를 제거한다. Examples: trailing_whitespace 한 줄에 작성하는 문자는 80 컬럼을 넘지 않는다. Examples: col_width 기존 코드의 스타일을 준수한다. Examples: existing_style 깊은 중첩을 피한다. Examples: nesting case 표현식보다는 함수 패턴 매치를 사용한다.
+Examples: smaller_functions
+ public(exported)/private(unexported) 함수를 논리적으로 그룹짓는다. Examples: grouping_functions
+ 사용자정의 타입은 소스파일의 상단에 모아 놓는다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/05/16/erlang-ed9484eba19ceab7b8eb9e98ebb08d-eab79cecb999eab3bc-ecbba8ebb2a4ec8598" class="link black dim">
+        Erlang 프로그래밍 규칙과 컨벤션
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      원문 http://www.erlang.se/doc/programming_rules.shtml
+원문을 간략히 요약/정리해 보았습니다.
+SW 공학 원리  하나의 모듈에서는 가능한 적은 수의 함수를 export한다. 모듈간 의존성은 가능한 줄이도록 한다. 공통 코드는 라이브러리로 작성한다. dirty하거나 tricky한 코드는 분리된 모듈로 작성한다.
+** 예를 들면, process의 사전을 사용하거나, 이상한 목적으로 erlang:process_info/1를 사용하거나&#8230;하는 등의
+ 함수호출자가 반환된 결과로 무엇을 할 것인지 가정해서 작성하지 말고, 결과를 돌려주기만 해라.
+ 중복 코드가 발생할 것 같다면 함수를 사용해서 중복 코드를 피하라.
+ Top-down 방식(개괄에서 상세로)으로 코드를 작성해라.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/02/15/cowboyec9790ec849c-sseeba5bc-ec82acec9aa9ed959c-ec9bb9ec849cebb284-push-eab5aced9884ed9598eab8b0" class="link black dim">
+        cowboy에서 SSE를 사용한 웹서버 push 구현하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd에 cowboy를 연동했다고 가정한다.
+Front-end는 AngularJS를 사용한다.
+ SSE(Server Sent Event)참고  클라이언트에서 다음과 같이 EventSource객체를 생성한 후 서버 이벤트를 위한 이벤트리스닝을 시작한다.
+https://gist.github.com/jeidee/a135060aef54b48bae1d
+서버에서는 다음과 같이 cowboy_req:chunked_reply/3 함수를 사용해 content-type이 text/event-stream인 응답을 보내고 {cowboy_loop, _, _}를 반환한다.
+일반적으로 하나의 클라이언트 요청(http request)당 하나의 erlang process를 생성하며, cowboy_req:reply/4 함수를 사용해 reponse를 보내고 {ok, _, _}를 반환하면 해당 erlang process를 종료한다.
+하지만 Server Sent Event를 위해 {cowboy_loop, _, _}를 반환하면 해당 클라이언트의 요청(Request) 객체를 erlang process에 상태로 유지하며,
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/01/15/couchbase-cberl-ec82acec9aa9ed95b4ec849c-view-eca1b0ed9a8cec8b9c-eca3bcec9d98ec82aced95ad" class="link black dim">
+        couchbase cberl 사용해서 view 조회시 주의사항
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      couchbase의 view 조회시 데이터의 최신 본을 얻지 못할 수도 있다.
+이러한 이유는 속도의 향상을 위해 stale옵션의 기본값이 true로 설정되어 있어서 그런데, 명시적으로 stale옵션을 false로 지정해야 최신 데이터가 적용된 view를 구할 수 있다.
+cberl:view()함수를 사용할 때, stale옵션을 false로 지정하는 방법은 다음과 같다.
+https://gist.github.com/jeidee/79e08693d3c6be338e31
+Args에 {stale, false}를 추가하면 된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/11/13/erlang-applicationec9790ec849c-protocol-buffer-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        erlang application에서 protocol buffer 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      이번 역시, rebar를 사용해 프로젝트를 생성했다고 가정한다.
+basho의 protobuffs 라이브러리를 추가해 보도록 하자.
+rebar.config 수정 이전 포스트를 참고해서 기본 작업(sub_dirs 추가 등)은 완료했다고 가정한다.
+ {deps, [ {'lager', &quot;.*&quot;, {git, &quot;https://github.com/basho/lager&quot;, &quot;&quot;}}, {protobuffs, &quot;.*&quot;, {git, &quot;git://github.com/basho/erlang_protobuffs.git&quot;, {branch, &quot;master&quot;}}} ]}.   deps에 protobuffs, &#8230; 행을 복사해 넣는다.  xxx.proto 파일 생성 프로토콜을 정의한 *.proto파일을 생성한다.
+예를 들면 다음과 같은 simple.proto파일을 src 디렉토리 밑에 추가한다.
+ package simple; message Person { required string name = 1; required string address = 2; required string phone_number = 3; required int32 age = 4; optional Location location = 5; } message Location { required string region = 1; required string country = 2; }  make로 컴파일하고 나면 rebar가 .
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/11/11/erlang-applicationec9790-lagereba19ceab1b0-ecb694eab080ed9598eab8b0" class="link black dim">
+        erlang application에 lager(로거)  추가하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      rebar를 사용해 프로젝트를 생성했다고 가정한다.
+erlang의 로거 라이브러리 중에서 많이 사용되는 basho/lager를 추가해 보도록 하자.
+rebar.config 수정  %% -\*- erlang -\*- {sub_dirs, [ &quot;apps/chat&quot;, &quot;deps&quot;, &quot;rel&quot; ]}. {erl_opts, [ {parse\_transform, lager\_transform}, %% for lager debug_info, fail\_on\_warning ]}. %% {require\_otp\_vsn, &quot;R14&quot;}. %% Example, uncomment to retrieve cowboy as a dep. {deps, [ {'lager', &quot;.*&quot;, {git, &quot;https://github.com/basho/lager&quot;, &quot;&quot;}} ]}.   sub_dirs에 deps 디렉토리를 추가하고, erl_opts(erlang 컴파일러 옵션)에 {parse_transform, lager_transform}을 추가한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/11/11/erlang-gen_servereba5bc-eab5aced9884ed959c-ed9484eba19cec84b8ec8aa4-eca285eba38ced9598eab8b0" class="link black dim">
+        erlang gen_server를 구현한 프로세스 종료하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      gen_server를 구현한 프로세스를 종료하려면 callback함수에서 {stop, Reason, NewState}을 반환하면 된다.
+일반적으로는 다음과 같은 패턴으로 구현한다.
+handle_cast({stop, Reason}, State) -&gt; {stop, Reason, State}; &amp;#8230; do_stop(Pid) -&gt; gen_server:cast(Pid, {stop, {shutdown, &lt;&lt;&quot;Reason string&amp;#8230;&quot;&gt;&gt;}}).  handle_cast/2에서 {stop, Reason, NewState}가 아니라 {stop, Reason}만 반환할 경우,
+bad_return_value에 따른 프로세스 크래시가 발생하므로 주의한다.
+supervisor에 의해 관리되는 프로세스라면 크래시된 프로세스는 정책에 따라 재시작 될 것이다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/11/06/erlang-rebarec9d98-project-templateec9d84-ed999cec9aa9ed959c-application-ebbc88eb8c80-eba78ceb93a4eab8b0" class="link black dim">
+        erlang rebar의 project template을 활용한 application 뼈대 만들기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      rebar project template rebar의 project template 기능을 활용해 erlang application 프로젝트를 손쉽게 생성하는 방법을 살펴보자.
+Richard Jones의 포스트를 보고 rebar 실습을 따라해 보니, 현재의 erlang(17.5)과 rebar(2.6.1) 버전으로는 원활하게 진행되지 않았다.
+구글링 중에 rebar의 프로젝트 템플릿을 활용하는 방법을 찾게 되었는데 몇 부분만 수정하여 문제없이 사용할 수 있었다.
+해당 Repository를 Fork해서 오류부분을 수정해 보았다.
+https://github.com/jeidee/rebar-project-template
+사용법은 다음과 같다.
+rebar 설치 우분투라면 다음과 같이 설치한다.
+ $ sudo apt-get install rebar  rebar repository에서 소스를 내려 받아 빌드해서 사용해도 된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/25/erlang-ec8998ec9790ec849c-observereba5bc-ec82acec9aa9ed95b4-ec9b90eab2a9-eb85b8eb939c-eca091ec868d" class="link black dim">
+        erlang 쉘에서 observer를 사용해 원격 노드 접속
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      먼저 A와 B, 두 노드가 있고, A에서 B노드에 연결한다고 가정한다.
+두 노드를 연결하기 위해서는 다음 조건을 우선 만족시켜야 한다.
+1) short name을 사용하는 경우
+ A와 B노드는 동일한 네트워크에 있고, 방화벽을 통하지 않는다.
+ 방화벽을 통해 접속할 경우 B노드의 다음 TCP포트(아래 예에서는 47242)가 Inbound 오픈되어 있어야 한다.
+   B&gt; net_adm:names(); {ok, [{&quot;ejabberd&quot;, 47242}, &amp;#8230;]}   A와 B노드의 erlang secretkey(cookie)는 동일해야 한다.   $ erl -sname A@node1 -setcookie secret $ erl -sname B@node2 -setcookie secret A&gt; erlang:get_cookie().
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/07/24/erlang-mumble-server-maunder" class="link black dim">
+        erlang mumble server &amp;#8211; maunder
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang으로 구현된 mumble서버 중에 maunder라고 있다.
+2년전 커밋이 마지막이다.
+erlang 17버전에서 빌드하고 실행하면 application:start()할 때 오류가 발생한다.
+원인은 erlang 17버전에서 public_key application이 asn1을 의존하기 때문인데,
+maunder.erl 소스를 다음과 같이 수정하고 다시 빌드하면 문제가 해결된다.
+ %% @spec start() -&gt; ok %% @doc Start the maunder server. start() -&gt; ensure_started(sasl), ensure_started(crypto), ensure_started(asn1), ensure\_started(public\_key), ensure_started(ssl), application:start(maunder).  기동시 eaddrinuse 관련 에러가 발생하는 경우,
+maunder_app.erl의 DEF_PORT값(기본값은 8080)을 변경한 후 다시 빌드하면 된다.
+매번 포트를 변경할 때마다 재빌드하는게 번거로울 경우 빌드후 생성되는 ebin/maunder.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/18/erlangeab3bc-cc-ed86b5ed95a9ed9598eab8b0-erlang-nif" class="link black dim">
+        erlang과 c/c&#43;&#43; 통합하기 &amp;#8211; erlang nif
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       erlang과 다른 언어를 통합하려면 포트를 사용하면 된다.
+포트의 경우erlang 프로세스에서 다른 언어로 작성된 프로세스를 자식 프로세스로 생성하고, 두 프로세스간 입출력 스트림을 파이프로 연결해 통신하는 방법이라고 할 수 있다.
+c언어의 경우 포트 이외에 R14부터 채용된 erlang nif을 사용해서 통합할 수 있는데, 포트보다 사용방법이 간단하다. (c++의 경우 wrapper인 nifpp를 사용해서 구현할 수 있다.)
+자세한 내용은 하단의 링크를 참고하도록 한다.
+참고  Erlang NIFs How to integrate C with Erlang program example or Erlang NIFs A c NIF wrapper for erlang to support aes/ecb/pkcs5padding add star Erlang과 C의 연결 C++11 Wrapper for Erlang NIF API/nifpp  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/13/erlang-kerl-ec82acec9aa9ed95b4-ec84a4ecb998-ebb08f-ebb284eca084-eab480eba6ac" class="link black dim">
+        erlang kerl 사용해 설치 및 버전 관리
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      kerl을 사용해 여러 버전의 erlang을 설치한 후 원하는 버전을 활성화할 수 있다.
+자세한 내용은 다음 링크를 참고한다.
+ kerl  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/04/erlangeab3bc-java-ec97b0eb8f99" class="link black dim">
+        erlang과 java 연동
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      eclipse의 maven 프로젝트 기준으로 설명한다.
+jinterface dependency 추가 먼저 pom.xml에 다음과 같이 dependency를 추가해 준다.
+ &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;org.erlang.otp&lt;/groupId&gt; &lt;artifactId&gt;jinterface&lt;/artifactId&gt; &lt;version&gt;1.5.3.1&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt;  maven install을 수행해 jinterface-1.5.3.1.jar 를 다운로드 받는다.
+erl shell 시작 erl shell은 노드명과 매직쿠키를 지정해서 다음과 같이 실행해 준다.
+ erl -sname enode -setcookie erlang  또는
+ erl -name enode -setcookie erlang  java를 사용해 접속 테스트 eclipse에서 ErlConnection 클래스를 추가하고 다음과 같이 작성한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b" class="link black dim">
+        erlang eunit 테스트 파일 분리와 테스트 셋
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      테스트 모듈 분리 eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.
+테스트 대상 모듈을 fib.erl 이라고 가정한다.
+-module(fib). -export([fib/1]). fib(0) -&gt; 1; fib(1) -&gt; 1; fib(N) when N &gt; 1 -&gt; fib(N-1) + fib(N-2).  테스트 모듈은 fib_tests.erl 로 작성한다.
+-module(fib_tests). -include_lib(&quot;eunit/include/eunit.hrl&quot;). fib0_test() -&gt; ?assert(fib:fib(0) =:= 1). fib1_test() -&gt; ?assert(fib:fib(1) =:= 1). fib2_test() -&gt; ?assert(fib:fib(2) =:= 2). fib3_test() -&gt; ?
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/24/erlang-eunit" class="link black dim">
+        erlang eunit 기초
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      eunit 기초 eunit은 최신 버전(erlang/otp 17, eshell 6.3)에 eunit-2.2.9 버전이 포함되어 있다.
+eunit을 사용하려면 다음과 같은 순서로 진행한다.
+ 테스트 코드 작성 eunit 모듈을 사용해 테스트 수행  테스트 코드 작성하는 방법 먼저 살펴 보도록 한다.
+테스트 코드 작성 먼저 eunit 헤더 파일을 include한다.
+-module(test). -include_lib(&quot;eunit/include/eunit.hrl&quot;).  그런 후 다음과 같이 테스트 코드를 작성한다.
+reverse\_nil\_test() -&gt; [] = lists:reverse([]). reverse\_one\_test() -&gt; [1] = lists:reverse([1]). reverse\_two\_test() -&gt; [2,1] = lists:reverse([1,2]). length_test() -&gt; ?
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/14/mnesia-eab8b0ecb488-14" class="link black dim">
+        mnesia 기초 1/4
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      레코드 레코드는 튜플의 특별한 형태로 메타데이터를 정의할 수 있는 튜플이라고 할 수 있다.
+레코드 정의는 다음과 같이 할 수 있다.
+ -record(레코드명, {컬럼명 = 기본값 :: 데이터타입, &amp;#8230;.}).  레코드명과 컬럼명은 atom 타입이며 기본값은 값을 지정하지 않았을 때 입력되는 기본값이다.
+:: 뒤의 데이터타입은 컬럼의 데이터타입을 기술할 수 있고 다음과 같은 형태로 정의할 수 있다.
+기본 데이터타입  binary() : 바이너리 데이터타입 string() : 문자열 데이터타입 integer() : 정수형 데이터타입 &#8230;  이 외에도 다음과 같이 직접 데이터타입을 정의해서 사용할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/14/mnesia-eab8b0ecb488-24-match-spec" class="link black dim">
+        mnesia 기초 2/4 &amp;#8211; Match Spec
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Match Spec mnesia:select 또는 mnesia:dirty_select에 Match Spec을 정의해서 데이터를 검색할 수 있다.
+MatchSpec의 기본형은 다음과 같다.
+[{ {매치패턴}, [조건식], [결과값]}]  매치패턴은 튜플의 형태로 테이블의 레코드의 구조와 동일해야한다.
+[{ {'$1', '$2', &amp;#8230;}, [], &amp;#8230;  $1, $2는 바인드 변수이며 Match Spec안에서만 사용된다.
+조건식은 다음과 같이 논리연산자, 비교컬럼지정자, 검색값 형식으로 입력한다.
+['&gt;', '$1', &quot;abcd&quot;]  예를 들면 다음과 같다.
+-type my_color() :: red | yellow | blue; -record(shape, {name = &quot;&quot; :: string(), color = red :: fruit_color(), count = 0 :: integer()}).
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/14/mnesia-eab8b0ecb488-34-getting-started-with-mnesia-1" class="link black dim">
+        mnesia 기초 3/4 &amp;#8211; Getting Started with Mnesia 1/2
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Erlang 공식 문서 중에 Getting Started with Mnesia문서를 기준으로 몇몇내용을 추가해 다음과 같이 작성해 보았다.
+mnesia 시작 mnesia를 시작하기 위해서 다음의 과정이 필요하다.
+ erlang node에 mnesia의 데이터가 저장될 경로를 지정하여 erlang shell을 시작한다. 새로운 빈 스키마를 생성한다. 스키마는 데이터베이스의 정보를 포함한다. mnesia DBMS를 시작한다. 테이블을 생성한다. 데이터베이스 정보를 조회한다.  위의 과정을 수행하기 위해 다음과 같이 따라해 보자.
+ $ erl -mnesia dir '&quot;tmp/funky&quot;'  tmp/funky 디렉토리에 mnesia 데이터가 저장되도록 -mnesia dir 옵션을 사용해 erlang shell을 시작한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/14/mnesia-eab8b0ecb488-44-getting-started-with-mnesia-22" class="link black dim">
+        mnesia 기초 4/4 &amp;#8211; Getting Started with Mnesia 2/2
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      데이터 추가 테이블에 데이터를 추가하기 위해서는 트랜잭션을 사용해야 한다. 트랜잭션은 매개변수가 없는 익명의 fun에 여러 DB 오퍼레이션을 묶어 생성할 수 있다.
+테이블에 데이터를 입력할 때는 mnesia:write/1 함수를 사용할 수 있으면 매개변수는 레코드를 사용한다.
+insert_emp(Emp, DeptId, ProjNames) -&gt; Ename = Emp#employee.name, Fun = fun() -&gt; mnesia:write(Emp), AtDep = #at\_dep{emp = Ename, dept\_id = DeptId}, mnesia:write(AtDep), mk_projs(Ename, ProjNames) end, mnesia:transaction(Fun). mk_projs(Ename, [ProjName|Tail]) -&gt; mnesia:write(#in\_proj{emp = Ename, proj\_name = ProjName}), mk_projs(Ename, Tail); mk\_projs(\_, []) -&gt; ok.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/06/erlang-debug" class="link black dim">
+        erlang debug
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang에서 디버깅하는 방법은 다음과 같다.
+ 주의할 것은 erlang 설치 전에 wxWiget 라이브러리를 먼저 설치한 후 erlang을 설치해야 한다는 것이다. 관련 설치방법은 erlang/otp 설치 문서를 참고!  erl 노드를 실행시킨 후 debugger monitor를 실행시킨다.
+ &gt; debugger:start().  Monitor윈도가 실행되면 Module &gt; Interpret 메뉴를 선택한다.
+파일 선택기에서 디버깅하고자 하는 .erl 파일을 선택한다.
+반드시 erl 노드가 import한 모듈의 소스여야 한다.
+예를 들어 ejabberd의 디버그 쉘을 실행시킨 후 디버깅할 수 있는 모듈은 ejabberd 모듈에 한정된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/04/erlang-list-sort" class="link black dim">
+        erlang list sort
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같은 리스트가 있다고 가정하자.
+&gt; List = [{a, 10}, {b, 5}, {c, 3}, {d, 6}].  두번째 요소인 정수값을 기준으로 오름차순으로 정렬하고자 한다면 다음과 같이 한다.
+&gt; lists:sort(fun(A, B) -&gt; {Name1, Order1} = A, {Name2, Order2} = B, Order1 &lt; Order2 end, List).  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/01/erlang-intellijec9790ec849c-eab09cebb09ced9598eab8b0" class="link black dim">
+        erlang intellij에서 개발하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      현재까지 찾아본 바로는 쓸만한 erlang ide는 eclipse + erlide와 intellij + erlang plugin 정도가 될 것 같다.
+webstorm의 경우 erlang plugin을 설치하고 소스코드를 편집할 수 있지만, 프로젝트를 생성하거나 컴파일하고 실행하는 등의 작업은 할 수 없기 때문에 제외한다.
+eclipse에 비해 intellij가 상대적으로 많은 기능을 제외하고 편집기 자체도 뛰어나며 community edition을 사용할 경우 무료로 사용할 수 있기 때문에 intellij를 사용하기로 한다.
+intellij에 elang plugin 설치 우선 intellij community edition을 설치한다.(JetBrains 홈페이지에서 다운로드할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/28/erlang-base64-encoding" class="link black dim">
+        erlang base64 encoding
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      base64 인코딩을 위해서는 base64 모듈의 encode/1 함수를 다음과 같이 사용한다.
+10&gt; Enc = base64:encode(&lt;&gt;). &lt;&gt; 12&gt; io:format(&quot;~s~n&quot;, [base64:decode(Enc)]). encode ok  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/28/erlang-ideeba5bc-ec9c84ed959c-webstorm-ec8690ebb3b4eab8b0" class="link black dim">
+        erlang ide를 위한 webstorm 손보기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang plugin 설치 먼저 jetbrain plugin 페이지에서 erlang plugin을 다운로드 받는다.
+적당한 폴더에 압축을 풀어놓고 Erlang폴더 전체를 webstorm이 설치된 경로의 plugin폴더 하위에 복사한다.
+마지막으로 webstorm을 재시작하면 적용된다.
+consolas 폰트 설치 이 페이지에 자세히 설명되어 있으므로 따라 설치하자.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-1ebb0b1eba78c-tcp-eb8f99ec8b9c-eca091ec868d-ecb298eba6ac" class="link black dim">
+        erlang 1백만 tcp 동시 접속 처리
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      http://www.erlang-factory.com/upload/presentations/558/efsf2012-whatsapp-scaling.pdf
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-game-server-programming" class="link black dim">
+        erlang game server programming
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      http://www.diva-portal.org/smash/get/diva2:641311/FULLTEXT01.pdf
+http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-key-value-ed8a9ced948c-eba6acec8aa4ed8ab8ec9790ec849c-keyeba19c-value-ecb0beeab8b0" class="link black dim">
+        erlang key-value 튜플 리스트에서 key로 value 찾기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      proplists 모듈의 get_value/2를 사용하면 된다.
+proplists:get_value(Key, List).  예를 들어 다음과 같이 과일의 수량정보를 갖는 리스트가 있다고 하자.
+List = [{apple, 10}, {orange, 20}].  위 리스트에서 apple을 key로 사용해서 apple의 개수를 얻으려면 다음과 같이 하면 된다.
+proplists:get_value(apple, List).  튜플 자체를 구하고자 한다면 다음과 같이 한다.
+proplists:lookup(apple, List).  get_value/2와 lookup/2은 매치하는 튜플 중에서 첫 번째 엔트리만 반환하기 때문에 모두 찾고자 한다면 get_all_values/2나 lookup_all/2을 사용해야 한다. 단 결과는 리스트로 반환된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-otp-eb9494ec9e90ec9db8-ecbba8ec8589" class="link black dim">
+        erlang otp 디자인 컨셉
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      supervision tree erlang otp 디자인 컨셉의 기본은 supervision tree이다.
+supervision tree는 supervisor(감독 프로세스)와 worker(실제 업무 수행 프로세스) 기반으로 모델링한 프로세스 구조이다.
+ worker는 계산 등의 실제 업무를 수행하는 프로세스이다. supervisor는 worker의 행동을 모니터하는 프로세스이며 worker에 이상을 감지하면 worker를 재시작할 수 있다. supervision tree는 worker와 supervisor의 계층적인 구조를 갖고, 내고장성(fault-tolerant) 소프트웨어 디자인을 가능케 한다.    위 그림은 Supervision Tree이며 박스는 supervisor를, 원은 worker를 나타낸다.
+behaviours supervision tree에서 대부분의 프로세스는 동일한 패턴에 동일한 구조를 갖는다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-timestamp-ec96bbeab8b0" class="link black dim">
+        erlang timestamp 얻기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      os모듈의 timestamp/0 함수를 사용한다.
+{MegaSecs, Secs, MicroSecs} = os:timestamp().  MegaSecs는 seconds의 (1000 * 1000)배이다.
+위의 결과값을 milliseconds로 변환하기 위해서는 microseconds를 구해서 1000으로 나눠줘야 한다.
+((MegaSecs\*1000000 + Secs) \* 1000000 + MicroSecs)/1000.  소숫점 이하를 버리고자 한다면 div 연산을 사용해서 몫만 구하면 된다.
+((MegaSecs\*1000000 + Secs) \* 1000000 + MicroSecs) div 1000.  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-ebacb8ec9e90ec97b4-ed8faceba7b7-ed9b84-binaryeba19c-ebb380ed9998" class="link black dim">
+        erlang 문자열 포맷 후 binary로 변환
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      c의 sprintf() 같은 문자열 포맷 함수인 io_lib:format()을 사용하면 &#8220;Count : 10&#8221; 과 같은 문자열을 binary로 만들 수 있다.
+Count = 20. Result = io_lib:format(&quot;Count : ~p&quot;, [Count]). Bin = binary:list\_to\_bin(Result).  또는 간략하게 다음과 같이 줄일 수도 있다.
+Bin = binary:list\_to\_bin(io_lib:format(&quot;Count : ~p&quot;, [Count]).  erlang에서 문자열이 곧 리스트이기 때문에 binary 모듈의 list_to_bin()함수의 매개변수로 리스트 대신 문자열을 입력해도 된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-ebacb8ec9e90ec97b4-ed8faceba7b7ed8c85" class="link black dim">
+        erlang 문자열 포맷팅
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      문자열 포맷하기 위해서는 io_lib:format/2 함수를 사용하면 된다.
+하지만 다음과 같이 바로 사용할 수 없는 형태이다.
+17&gt; Str = io_lib:format(&quot;name=~p&amp;age=~p&quot;, [&quot;romeo&quot;, 10]). [110,97,109,101,61,&quot;\&quot;romeo\&quot;&quot;,38,97,103,101,61,&quot;10&quot;] 18&gt; Str. [110,97,109,101,61,&quot;\&quot;romeo\&quot;&quot;,38,97,103,101,61,&quot;10&quot;] 19&gt;  이럴 경우 lists모듈의 flatten/1 함수를 사용한다.
+19&gt; Result = lists:flatten(Str). &quot;name=\&quot;romeo\&quot;&amp;age=10&quot;  한 줄로 줄여서 다음과 같이 사용해도 된다.
+20&gt; lists:flatten(io_lib:format(&quot;name=~p&amp;age=~p&quot;, [&quot;romeo&quot;, 10])). &quot;name=\&quot;romeo\&quot;&amp;age=10&quot;  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-ec84a4ecb998" class="link black dim">
+        erlang 설치
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang/otp 설치 준비 우선 git repository에서 clone합니다.
+ git clone git://github.com/erlang/otp.git  ubuntu : aptitude는 다음과 같이 설치합니다.
+ sudo apt-get install aptitude  erlang/otp의 기본 설치를 원할 경우
+ubuntu
+ aptitude install autoconf libncurses-dev build-essential  centos 6.*
+ yum install ncurses-devel  wxWidgets과 함께 설치를 원할 경우
+ aptitude install libwxgtk2.8-dev libgl1-mesa-dev libglu1-mesa-dev libpng3  jinterface와 함께 설치를 원할 경우
+ aptitude install sun-java6-jre sun-java6-jdk sun-java6-bin  다른 c++ 프로젝트와 함께 설치를 원할 경우
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-ec9d98-caseec9980-if" class="link black dim">
+        erlang 의 case와 if
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang에서는 조건 분기문에 해당하는 case와 if가 다른 언어와는 형태가 조금 다르다.
+처음 보면 어떻게 사용해야 할지 감이 오지 않는데, 알고 보면 다른 언어와 크게 다르지도 않다는 것을 알 수 있다.
+erlang의 if와 case는 가드(guard)를 이용한 구문으로 되어 있는데, if와 case를 살펴보기 전에 먼저 가드를 간략히 살펴보자.
+guard 가드는 true와 false 애텀으로 평가받는 식이며 다음과 같은 형식으로 사용할 수 있다.
+max(X, Y) when X &gt; Y -&gt; X; max(X, Y) -&gt; Y.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlangotp-application" class="link black dim">
+        erlang/otp application
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      application concept 어떤 특정 기능을 수행하는 코드를 작성할 때, 우리는 다른 시스템에서 재사용될 수 있으며, 유닛으로써 시작과 중지할 수 있는 컴포넌트인 application에 코드를 작성할 수 있길 원한다.
+이것을 위해 Erlang/OTP에서는 application callback module을 제공한다. application이 어떻게 시작되고 중지될 수 있는지에 대해서는 application callback moudule과 함께 설명하도록 하겠다.
+application 명세는 application resource file에 포함하는데, 해당 명세에는 application을 구성하는 모듈과 callback module의 이름이 명시되어 있다.
+코드 패키징을 위한 Erlang/OTP 도구인 systool을 사용한다면(자세한 내용은 Release참조) , 각각의 application 코드들은 미리 정의된 디렉토리 구조(뒤에 설명함)를 따르는 구분된 디렉토리에 위치해야 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlangec9790ec849c-httphttps-posted9598eab8b0" class="link black dim">
+        erlang에서 http(https)  post하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      http(https) post하는 대표적인 방법은 urlencoded방식과 json방식이 있다.
+가장 보편적으로 사용되는 urlencoded 방식의 코드는 다음과 같다.
+post_test1() -&gt; Method = post, URL = &quot;https://www.google.co.kr/search&quot;, Header = [], Type = &quot;application/x-www-form-urlencoded&quot;, Body = &quot;q=erlang+http+post+example&quot;, HTTPOptions = [{ssl, [{verify, 0}]}], Options = [], R = httpc:request(Method, {URL, Header, Type, Body}, HTTPOptions, Options), io:format(&quot;~p&quot;, [R]), ok.  json 방식은 다음과 같이 Type을 &ldquo;application/json&rdquo;으로 설정하고 , Body를 json 데이터로 입력해서 post하면 된다.
+post_test2() -&gt; Method = post, URL = &quot;https://www.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlangec9790ec849c-https-client-eab5aced9884" class="link black dim">
+        erlang에서 https client 구현
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       쉘에서 테스트하기 stackoverflow의 자료를 참고해서 테스트해 보았다.
+해당 링크에선 언급하고 있지 않지만 ssl을 시작할 때 오류가 발생할 경우 다음과 같은 순서로 application을 시작해야 한다.
+ 주의: asn1에서 1은 숫자 &#8216;1&#8217;이지 영문자 &#8216;l&#8217;이 아니다.
+ application:start(asn1). application:start(public_key). application:start(crypto). application:start(ssl). application:start(inets).  그런 후 httpc 모듈을 사용해서 url을 request한다.
+httpc:request(head, {&quot;https://github.com/ostinelli/misultin&quot;, []}, [{ssl, [{verify, 0}]}], []).  결과는 다음과 같다.
+{ok,{ {&quot;HTTP/1.1&quot;,200,&quot;OK&quot;}, [{&quot;cache-control&quot;,&quot;no-cache&quot;}, {&quot;date&quot;,&quot;Wed, 17 Dec 2014 02:39:06 GMT&quot;}, {&quot;server&quot;,&quot;GitHub.com&quot;}, {&quot;vary&quot;,&quot;X-PJAX&quot;}, {&quot;content-type&quot;,&quot;text/html; charset=utf-8&quot;}, {&quot;status&quot;,&quot;200 OK&quot;}, &amp;#8230; (중간 생략) []}}  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlangec9790ec849c-md5-hash-key-ec839dec84b1ed9598eab8b0" class="link black dim">
+        erlang에서 md5 hash key 생성하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang 모듈의 md5/1 함수를 사용하면 md5 hash 를 생성할 수 있다.
+33&gt; erlang:md5(&quot;abcdefg&quot;). &lt;&lt;122,198,108,15,20,141,233,81,155,139,210,100,49,44,77, 100&gt;&gt;  md5는 128bit 숫자이고 위의 결과가 의미하는 바는 1byte * 16개의 binary 데이터를 의미하기 때문에 8 * 16 = 128(bit)가 된다.
+1byte 정수를 16진수(hex code) 문자열로 변환해서 출력하고 싶을 경우 바이너리를 해석(binary comprehensions, &lt;=)해서 다음과 같이 출력할 수 있다.
+lists:flatten([io_lib:format(&quot;~2.16.0b&quot;, [B]) || &lt;&lt;B&gt;&gt; &lt;= erlang:md5(&quot;abcd&quot;)]).  리스트 해석(list comprehensions)과 달리 바이너리 해석은 &lt;- 대신 &lt;= 연산자를 사용한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+    </section>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jeidee.github.io" >
+    &copy; 2017 Erlang &amp; Go
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    <script src="https://jeidee.github.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

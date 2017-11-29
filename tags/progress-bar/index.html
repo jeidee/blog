@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Erlang &amp; Go  | Progress Bar</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.31.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://jeidee.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+      <link href="https://jeidee.github.io/tags/progress-bar/index.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
+      <link href="https://jeidee.github.io/tags/progress-bar/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go" />
+    
+
+    <meta property="og:title" content="Progress Bar" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jeidee.github.io/tags/progress-bar/" />
+
+
+
+<meta property="og:updated_time" content="2015-08-31T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Progress Bar">
+<meta itemprop="description" content="">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Progress Bar"/>
+<meta name="twitter:description" content=""/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://jeidee.github.io/images/gohugo-default-sample-hero-image.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jeidee.github.io" class="f3 fw2 hover-white no-underline white-90 dib">
+      Erlang &amp; Go
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+          Progress Bar
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
+      <p>Below you will find pages that utilize the taxonomy term “Progress Bar”</p>
+    </div>
+  </article>
+  <div class="mw8 center">
+    
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/31/go-console-progress-bar" class="link black dim">
+        go console progress bar
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      console에서 진행 상태를 프로그레스바 형태로 출력하고자 할 때 다음 패키지를 사용할 수 있다.
+ https://github.com/cheggaaa/pb  사용법은 다음과 같이 간단하다.
+ package main import ( &quot;github.com/cheggaaa/pb&quot; &quot;time&quot; ) func main() { count := 100000 bar := pb.StartNew(count) for i := 0; i &lt; count; i++ { bar.Increment() time.Sleep(time.Millisecond) } bar.FinishPrint(&quot;The End!&quot;) }  console에서 프로그레스바를 출력하는 기능의 핵심은,
+고정된 위치에 문자열을 출력하는 것이라 할 수 있다.
+(보통 Print()문을 사용할 경우 커서가 계속 이동하며 \r\n을 만나면 다음 줄의 처음으로 커서를 이동)
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+    </section>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jeidee.github.io" >
+    &copy; 2017 Erlang &amp; Go
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    <script src="https://jeidee.github.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

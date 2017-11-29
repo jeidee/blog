@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Playground on Erlang &amp; Go</title>
+    <link>https://jeidee.github.io/tags/playground/</link>
+    <description>Recent content in Playground on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Jul 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jeidee.github.io/tags/playground/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>iOS playground에 custom framework 사용하기</title>
+      <link>https://jeidee.github.io/2016/07/11/ios-playgroundec9790-custom-framework-ec82acec9aa9ed9598eab8b0/</link>
+      <pubDate>Mon, 11 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2016/07/11/ios-playgroundec9790-custom-framework-ec82acec9aa9ed9598eab8b0/</guid>
+      <description>반드시 다음 링크를 참고해서 작성해야 한다.
+핵심은 Target을 Cocoa Touch Framework로 추가하고, Playground를 Project Navigator의 +버튼을 사용해서 추가해야 하는 것이다.
+http://stackoverflow.com/questions/33144877/playground-import-no-such-module-foo</description>
+    </item>
+    
+  </channel>
+</rss>

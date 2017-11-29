@@ -1,0 +1,4291 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Erlang &amp; Go  | Posts</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.31.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://jeidee.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+      <link href="https://jeidee.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
+      <link href="https://jeidee.github.io/posts/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go" />
+    
+
+    <meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jeidee.github.io/posts/" />
+
+
+
+<meta property="og:updated_time" content="2017-08-31T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Posts">
+<meta itemprop="description" content="">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content=""/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://jeidee.github.io/images/gohugo-default-sample-hero-image.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jeidee.github.io" class="f3 fw2 hover-white no-underline white-90 dib">
+      Erlang &amp; Go
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+          Posts
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">                
+      
+    </div>
+  </article>
+  <div class="mw8 center">
+    
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2017/08/31/upstart-ec84a4eca095" class="link black dim">
+        upstart 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      /etc/init/appname.conf
+ description &amp;quot;appname&amp;quot; author &amp;quot;xxx&amp;quot; start on startup stop on shutdown chdir /home/xxx/appname respawn script export HOME=&amp;quot;/home/xxx&amp;quot; export AWS\_ACCESS\_KEY_ID= export AWS\_SECRET\_ACCESS_KEY= exec /home/xxx/appname/app -c=&amp;quot;config.json&amp;quot; end script   $ sudo initctl reload-configuration   $ sudo start appname  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d" class="link black dim">
+        CentOS에서 MongoDB 설치와 Service 등록
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음 자료를 참고한다.
+https://github.com/syokenz/mongodb-init-script
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080" class="link black dim">
+        couchbase cberl에 lcb_cntl 함수 추가
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      cberl에 libcouchbase의 옵션을 설정하거나 조회할 수 있는 lcb_cntl 함수를 추가해 보자.
+새로운 함수 추가를 위해 코맨드 상수를 추가해 준다.
+cberl_nif.h를 열어 다음행을 추가해 준다.
+#define CMD_CNTL 8  새로운 코맨드에 콜백함수를 등록해 주기 위해서 cberl_nif.c소스의 NIF(cberl_nif_new) 함수에 다음행을 추가해 준다.
+https://gist.github.com/jeidee/86967c348f64cee9b37c6bf41c207606
+cntl 함수의 매개변수를 위한 구조체와 함수선언문을 cb.h에 다음과 같이 추가한다.
+https://gist.github.com/jeidee/430f7cea10bc95099cafb79e71407f42
+cntl 함수 정의부를 cb.c에 다음과 같이 작성한다.
+https://gist.github.com/jeidee/07acab77aad96f32b4f79110ae202209
+이제 erlang 소스를 수정해 보자.
+cntl 함수가 erlang에서 호출될 수 있도록 cberl.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd" class="link black dim">
+        couchbase cberl의IO Plugin을 libevent로 변경
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      cberl에는 io plugin이 default로 설정되어 있는데 이럴 경우 select를 사용한다. 동시에 열 수 있는 소켓수는 1024로 제한되어 있어, 그 이상을 처리하기 위해서는 libevent로 수정해야 한다.
+그렇지 않을 경우 cberl의 view(http)를 사용할 경우 일정한 요청(동시에 열린 소켓수가 1024를 초과하는 시점) 이상일 경우 간헐적으로 unknown error 45(0x2d)를 반환한다.
+실제 libcouchbase의 로그를 cntl함수를 사용해 erlang application process에 attach된 상태에서 stderr에 출력되는 로그를 확인해 보면 다음과 같은 오류가 출력되는 것을 확인할 수 있다.
+(cberl:cntl 함수를 사용하려면 이전 포스트를 참고해서 cberl 소스를 수정해야 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c" class="link black dim">
+        ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Makefile.in을 열어 skip_deps=true 부분을 찾아 skip_deps=false로 수정하면 된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2017/01/03/aws-dynamodb-for-go" class="link black dim">
+        AWS DynamoDB for Go
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      AWS의 Go언어를 위한 DynamoDB SDK를 알아본다.
+credentials를 사용한 DynamoDB 세션과 DB객체 생성하기 우선 AWS에서 Credentials Key, Secret을 생성 후 개발서버에 저장한다.
+일반적으로 ~/.aws/credentials 파일에 다음과 같은 구조로 저장한 후 사용하게 되는데, 다른 경로에 설정한 경우에는 해당 파일의 경로와 프로파일을 지정해 사용할 수 있다.
+ [default] aws\_access\_key_id = xxx aws\_secret\_access_key = xxx  위와 같이 Credentials 파일을 생성한 후 DynamoDB에 접근할 수 있는 세션과 객체를 생성하는 코드는 다음과 같다.
+https://gist.github.com/jeidee/4bb85ae4bd5cdefcee60bc4e4879eb6b
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0" class="link black dim">
+        AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ~/.aws/credentials 파일에 AWS의 Credentials Key를 설정해 놓고 개발하다가,
+upstart나 superviosord등을 사용해 실행하게 되면 다음과 같은 에러가 발생한다.
+ NoCredentialProviders: no valid providers in chain. Deprecated.  이럴 경우 다음과 같이 AWS Credentials 정보를 환경변수로 설정해서 사용하면 문제 없이 사용 가능하다.
+관련 정보는 링크를 참고한다.
+https://gist.github.com/34468d32d6688884f0319266ed8792fc.git
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/09/02/c-rest-sdk" class="link black dim">
+        c&#43;&#43; REST SDK
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      https://gist.github.com/jeidee/570eb3137b2945a68593a737274214ac
+https://gist.github.com/jeidee/d96b6aaf333e856d3c44c5db1da845c9
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/09/01/c-openssl-aes-ecb" class="link black dim">
+        c&#43;&#43; openssl AES ECB
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      https://gist.github.com/jeidee/9da72760b0de11edefbf8e5377fcba74
+https://gist.github.com/jeidee/2cc2fd6364050e00c825bbd2807d6b9b
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/09/01/cc-hex-string-to-byte-array" class="link black dim">
+        c/c&#43;&#43; hex string to byte array
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      https://gist.github.com/jeidee/0f91485f3975301dd1e9fdf896c6056b
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/08/25/unity3dec9790ec849c-ios-osx-plugin-eab09cebb09c" class="link black dim">
+        Unity3D에서 iOS &amp;#038; OSX Plugin 개발
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같은 C++ 파일이 있다.
+ hello.h  #ifndef hello_hpp #define hello_hpp #include &lt;stdio.h&gt; class hello { public: char* getMessage(); }; extern &quot;C&quot; { hello* createHello(); void deleteHello(hello* obj); char\* getMessage(hello\* hello); } #endif /\* hello_hpp \*/   hello.cpp  #include &quot;hello.h&quot; char* hello::getMessage() { return (char*)&quot;Hello, world&quot;; } hello* createHello() { return new hello(); } void deleteHello(hello* obj) { if (obj == NULL) return; delete obj; } char\* getMessage(hello\* obj) { if (obj == NULL) return NULL; return obj-&gt;getMessage(); }  Unity3D에서 C++로 작성된 hello 클래스를 사용하는 방법을 살펴보자.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/08/25/unity3dec9790ec849c-plugin-importec8b9c-const-char-ebb380ed9998" class="link black dim">
+        Unity3D에서 plugin import시 const char* 변환
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음 링크를 참고한다.
+http://answers.unity3d.com/questions/160230/returning-variables-in-a-plugin.html
+내용을 간략하게 요약하면 다음과 같다.
+C/C++의 const char* 데이터타입을 C#으로 변환할 때는,
+IntPtr로 받아서 Marshal.PtrToStringAnsi(&#8230;)함수를 통해 string으로 변환할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/07/20/centos-6-8ec9790ec849c-core-dump-ec84a4eca095" class="link black dim">
+        CentOS 6.8에서 core dump 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음 링크를 참고한다.
+https://www.centos.org/forums/viewtopic.php?t=43577
+core dump를 확인 하는 방법은 다음 링크를 참고한다.
+http://wyseburn.tistory.com/entry/%EB%A6%AC%EB%88%85%EC%8A%A4-core-dump-%ED%8C%8C%EC%9D%BC-%EC%98%A4%EB%A5%98-%ED%99%95%EC%9D%B8-%EB%B0%A9%EB%B2%95
+debuginfo-install 설치하는 방법은 다음과 같다.
+http://stackoverflow.com/questions/10389988/missing-separate-debuginfos-use-debuginfo-install-glibc-2-12-1-47-el6-2-9-i686
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/07/14/ios-placeholdereab8b0eb8aa5ec9d84-ed8faced95a8ed959c-uitextviewec9980-eb82b4ec9aa9ec9790-eb94b0eb9dbc-ec82acec9db4eca688eab080-eb8baceb9dbc" class="link black dim">
+        iOS placeholder기능을 포함한 UITextView와 내용에 따라 사이즈가 달라지는 TableViewCell 만들기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      UITextView는 UITextField에 있는 Placeholder 속성이 없다.
+이 기능을 포함한 코드는 다음과 같다.
+https://gist.github.com/jeidee/f0c62cb6410fcfe09eb49eb76e5c894a
+UITableViewController를 사용해 입력 폼을 작성할 때,
+TableViewCell에 UITextView를 추가할 경우 줄이 길어지면 해당 셀의 높이를 자동으로 조정하고 싶은 경우가 있다.
+우선 UITextView를 TableViewCell의 ContentView를 기준으로 Auto Layout 설정을 했다고 가정한다.
+TableViewController 클래스를 다음 코드를 참고해서 작성한다.
+https://gist.github.com/jeidee/5742d62e21fbc20c3fc6b2a5cc495a35
+UITextView의 속성 중에 Scrollable은 false로 되어 있어야 함을 주의한다.
+주요 부분만 살펴보자면 다음과 같이 요약할 수 있다.
+ TableViewController는 UITextViewWithPlaceholderDelegate를 구현 tableView(&#8230;, cellForRowAtIndexPath&#8230;)에서 UITextView의 참조와 extdelegate(UITableViewWithPlaceholder 클래스에서 설정한 프로토콜)를 self로 설정 textViewDidChange(&#8230;)가 콜백되면 테이블의 데이터를 reload하지 않고 다시 그림 tableView(&#8230;, heightForRowAtIndexPath&#8230;)에서 UITextView의 내용에 맞게 Cell의 높이를 재조정  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/07/11/ios-playgroundec9790-custom-framework-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        iOS playground에 custom framework 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      반드시 다음 링크를 참고해서 작성해야 한다.
+핵심은 Target을 Cocoa Touch Framework로 추가하고, Playground를 Project Navigator의 +버튼을 사용해서 추가해야 하는 것이다.
+http://stackoverflow.com/questions/33144877/playground-import-no-such-module-foo
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/07/11/ios-uitableview-ec97acebb684ec9d98-ec8580-eab5acebb684ec84a0ec9d84-eca09ceab1b0-ed9598eb8a94-ebb0a9ebb295" class="link black dim">
+        ios UITableView 여분의 셀 구분선을 제거 하는 방법
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      UITableView의 기본설정은 데이터가 없을 때에도 셀 구분선이 출력된다.
+Footer View를 다음과 같이 지정해서 제거할 수 있다.
+tvList.tableFooterView = UIView()  http://stackoverflow.com/questions/1369831/eliminate-extra-separators-below-uitableview
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/07/05/react-native-remote-imageeab080-ecb69ceba0a5eb9098eca780-ec958aec9d84-eab2bdec9ab0" class="link black dim">
+        react-native remote image가 출력되지 않을 경우
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ios에서 info.plist를 다음과 같이 수정한다.
+ &lt;key&gt;NSAppTransportSecurity&lt;/key&gt; &lt;dict&gt; &lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt; &lt;true/&gt; &lt;/dict&gt;  다음 링크를 참고하도록 한다.
+ https://github.com/facebook/react-native/issues/1563#issuecomment-162721129 https://github.com/facebook/react-native/issues/289  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/06/28/tsungec9d84-ec82acec9aa9ed95b4-ejabberd-ed858cec8aa4ed8ab8ed9598eab8b0" class="link black dim">
+        tsung을 사용해 ejabberd 테스트하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      테스트 환경  ejabber node 1대, tsung node 1대, dabase node 1대 ulimit -n 100000  tsung.xml https://gist.github.com/jeidee/ae4cb98e609f405d5ce6b60a4b53f0fe
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/06/27/erlang-ebb2a4ecb998eba788ed82b9-ed88b4-tsung" class="link black dim">
+        erlang 벤치마킹 툴 tsung
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Tsung은 오픈소스 분산 테스팅 도구이다.
+http, xmpp등을 테스트할 수 있으며 Client Agent와 서버 모니터링 도구를 제공하고, 결과는 다양한 그래프로 출력해 준다.
+설치 centos 6  참고   yum -y install erlang perl gnuplot perl-Template-Toolkit wget http://tsung.erlang-projects.org/dist/tsung-1.6.0.tar.gz tar zxfv tsung-1.6.0.tar.gz cd tsung-1.6.0 ./configure &amp;#8211;prefix=/usr/local/ &amp;&amp; make &amp;&amp; make install cp /usr/share/doc/tsung/examples/http_simple.xml /root/.tsung/tsung.xml  ubuntu  sudo apt-get install erlang sudo apt-get install tsung  실행 간단한 http 테스팅 위와 같이 설치하고 나면 다음 경로에서 예제 테스팅 템플릿 파일을 찾을 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/06/23/android-mked8c8cec9dbc-ec82acec9aa9ed95b4ec849c-c-ecbd98ec8694-ec9d91ec9aa9ed9484eba19ceab7b8eb9ea8-ebb98ceb939c-ed9b84-ed858cec8aa4ed8ab8" class="link black dim">
+        Android.mk파일 사용해서 C&#43;&#43; 콘솔 응용프로그램 빌드 후 테스트
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      목표 ndk-build를 사용해 안드로이드 C++ 콘솔 응용프로그램을 빌드 후 디바이스에 배포해서 실행 테스트한다.
+디렉토리 구조 다음과 같은 구조를 갖도록 디렉토리와 빈 파일을 생성한다.
+ ndktest (Dir) &amp;#8212; jni (Dir) &amp;#8212; Android.mk (File) &amp;#8212; Application.mk (File) &amp;#8212; hello.cpp (File)  hello.cpp  #include &lt;iostream&gt; using namespace std; int main() { cout &lt;&lt; &quot;Hello, World!&quot; &lt;&lt; endl; return 0; }  Application.mk stl을 사용하기 위해 다음과 같이 입력한다.
+ APP\_STL := stlport\_static  Android.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/06/22/android-studio-2-2-preview3ec9790ec849c-errorconflict-with-dependency-com-android-supportsupport-annotations-resolved-versions-for-app-23-1-1-and-test-app-22-2-1-differ-see-httpg" class="link black dim">
+        Android Studio 2.2 Preview3에서 Error:Conflict with dependency &amp;#8216;com.android.support:support-annotations&amp;#8217;. Resolved versions for app (23.1.1) and test app (22.2.1) differ. See http://g.co/androidstudio/app-test-app-conflict for details.
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      build.gradle(Module: app)에 다음을 추가한다.
+ android { compileSdkVersion 22 buildToolsVersion &quot;23.0.2&quot; &amp;#8230; configurations.all { resolutionStrategy { force 'com.android.support:support-annotations:23.1.1' } } }   참고글  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/05/16/erlang-ecbd94eb94a9-ed919ceca480eab3bc-eab080ec9db4eb939ceb9dbcec9db8" class="link black dim">
+        Erlang 코딩 표준과 가이드라인
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      참고원문 https://github.com/inaka/erlang_guidelines
+자세한 내용은 원문을 참고하세요.
+소스 코드 레이아웃  탭은 공백문자 2개로 표현하며 탭문자를 사용하지 않는다. Examples: indent 연산자는 공백으로 감싼다. Examples: spaces 줄의 끝에서 Whitespace를 제거한다. Examples: trailing_whitespace 한 줄에 작성하는 문자는 80 컬럼을 넘지 않는다. Examples: col_width 기존 코드의 스타일을 준수한다. Examples: existing_style 깊은 중첩을 피한다. Examples: nesting case 표현식보다는 함수 패턴 매치를 사용한다.
+Examples: smaller_functions
+ public(exported)/private(unexported) 함수를 논리적으로 그룹짓는다. Examples: grouping_functions
+ 사용자정의 타입은 소스파일의 상단에 모아 놓는다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/05/16/erlang-ed9484eba19ceab7b8eb9e98ebb08d-eab79cecb999eab3bc-ecbba8ebb2a4ec8598" class="link black dim">
+        Erlang 프로그래밍 규칙과 컨벤션
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      원문 http://www.erlang.se/doc/programming_rules.shtml
+원문을 간략히 요약/정리해 보았습니다.
+SW 공학 원리  하나의 모듈에서는 가능한 적은 수의 함수를 export한다. 모듈간 의존성은 가능한 줄이도록 한다. 공통 코드는 라이브러리로 작성한다. dirty하거나 tricky한 코드는 분리된 모듈로 작성한다.
+** 예를 들면, process의 사전을 사용하거나, 이상한 목적으로 erlang:process_info/1를 사용하거나&#8230;하는 등의
+ 함수호출자가 반환된 결과로 무엇을 할 것인지 가정해서 작성하지 말고, 결과를 돌려주기만 해라.
+ 중복 코드가 발생할 것 같다면 함수를 사용해서 중복 코드를 피하라.
+ Top-down 방식(개괄에서 상세로)으로 코드를 작성해라.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/04/22/erlang-ec96b4ed948ceba6acecbc80ec9db4ec8598-eca491eb8ba8-ec9786ec9db4-ebb380eab2bdeb909c-ebaaa8eb9388eba78c-eba6aceba19ceb939ced9598" class="link black dim">
+        erlang 어플리케이션 중단 없이 변경된 모듈만 리로드하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang 어플리케이션이 작동 중인 상황에서 중단 없이 변경된 모듈만 리로드 하고 싶은 경우가 있다.
+단순히 .beam 파일만 교체하는 것으로 해결되지는 않으며,
+변경된 .beam 파일로 교체(copy)한 후 실행 중인 어플리케이션에 콘솔로 접속한 후 다음과 같이 변경된 모듈을 명시적으로 리로드해야 한다.
+&gt; code:purge(M), code:load_file(M).  code:purge/1 함수는 정해진 모듈을 메모리에서 제거하는데, 해당 모듈을 사용하는 프로세스가 있을 경우 먼저 해당 프로세스들을 kill하게 된다.
+프로세스를 kill할 수 없는 경우 code:purge/1는 false를 리턴한다.
+보통 서버 모듈(gen_server를 구현했거나 자체 루프를 가지고 프로세스 형태로 존재하는)의 경우 code:purge/1함수를 호출하면 false를 반환할 것이다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/04/19/boost-openssl-prebuilt-link" class="link black dim">
+        boost, openssl prebuilt link
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      boost binaries
+openssl binaries
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/04/05/visual-c-for-linux-development" class="link black dim">
+        Visual C&#43;&#43; for Linux Development
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Windows 환경의 Visual Studio 2015에서 리눅스용 C++ 어플리케이션을 개발할 수 있게 되었다.
+ssh를 통해 Remote 개발을 하는 구성인데 다음 링크에서 자세한 내용을 확인할 수 있다.
+ Visual C++ for Linux Development  해당 링크의 내용을 따라서 다음과 같이 진행해 보았다.
+1) 우분투 설정  $ sudo apt-get install openssh-server g++ gdb gdbserver  2) Visual Studio 2015용 확장 기능 설치 https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e
+3) Visual Studio에서 Linux용 C++ 프로젝트 생성 New Project &gt; Templates &gt; Visual C++ &gt; Cross Platform &gt; Linux &gt; Empty Project(Linux)
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/04/01/osx-eclipse-cdtec9790ec849c-boostec84a4eca095" class="link black dim">
+        osx &#43; eclipse CDT에서 boost설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      osx에서 boost 설치  $ brew install boost  sample source #include &lt;boost/regex.hpp&gt; #include &lt;iostream&gt; #include &lt;string&gt; int main() { std::string line; boost::regex pat( &quot;^Subject: (Re: |Aw: )\*(.\*)&quot; ); while (std::cin) { std::getline(std::cin, line); boost::smatch matches; if (boost::regex_match(line, matches, pat)) std::cout &lt;&lt; matches[2] &lt;&lt; std::endl; } }  프로젝트 설정  프로젝트의 속성을 연다. C/C++ Build &gt; Settings &gt; Tool Settings &gt; GCC C++ Linker &gt; Libraries를 선택한다. Libraries(-l) 항목에 boost_regex를 입력한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/02/19/ed8ab9eca095-ed8faced8ab8eba5bc-ec82acec9aa9ed9598eb8a94-ed9484eba19ceab7b8eb9ea8-ecb0beeab8b0" class="link black dim">
+        특정 포트를 사용하는 프로그램 찾기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       netstat -tulpn | grep 12345 -t | &amp;#8211;tcp -u | &amp;#8211;udp -l | &amp;#8211;listening -p | &amp;#8211;programs -n | &amp;#8211;numeric (don't resolve name)  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/02/15/cowboyec9790ec849c-sseeba5bc-ec82acec9aa9ed959c-ec9bb9ec849cebb284-push-eab5aced9884ed9598eab8b0" class="link black dim">
+        cowboy에서 SSE를 사용한 웹서버 push 구현하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd에 cowboy를 연동했다고 가정한다.
+Front-end는 AngularJS를 사용한다.
+ SSE(Server Sent Event)참고  클라이언트에서 다음과 같이 EventSource객체를 생성한 후 서버 이벤트를 위한 이벤트리스닝을 시작한다.
+https://gist.github.com/jeidee/a135060aef54b48bae1d
+서버에서는 다음과 같이 cowboy_req:chunked_reply/3 함수를 사용해 content-type이 text/event-stream인 응답을 보내고 {cowboy_loop, _, _}를 반환한다.
+일반적으로 하나의 클라이언트 요청(http request)당 하나의 erlang process를 생성하며, cowboy_req:reply/4 함수를 사용해 reponse를 보내고 {ok, _, _}를 반환하면 해당 erlang process를 종료한다.
+하지만 Server Sent Event를 위해 {cowboy_loop, _, _}를 반환하면 해당 클라이언트의 요청(Request) 객체를 erlang process에 상태로 유지하며,
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/02/03/angular-jsec9980-ui-routereba5bc-ec82acec9aa9ed95b4ec849c-ec9db8eca69dec9db4-ed9584ec9a94ed959c-ec9bb9ec82acec9db4ed8ab8-ebbc88eb8c80-eba78c" class="link black dim">
+        Angular JS와 ui-router를 사용해서 인증이 필요한 웹사이트 뼈대 만들기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      백엔드 서버는 cowboy를 사용하고, 프론트엔드는 Angular JS를 사용해서 웹사이트를 구성해 보자.
+준비  AngularJS는 1.4.9 버전을 기준으로 한다.  디렉토리 구성 디렉토리는 다음과 같이 구성한다.
+ &amp;#8211; root ㄴ myapp |- assets | |- css | |- img | ㄴ js |- src | |- app | | |- models | | |- services | | ㄴ app.js | |- auth | | |- controllers | | |- tmpl | | ㄴ Auth.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/02/03/ejabberdec9980-cowboy-ec97b0eb8f99" class="link black dim">
+        ejabberd와 cowboy 연동
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd에 포함된 관리자용 웹사이트는 인터페이스가 썩 편하지 않다. 더군다나 admin 모듈(ejabberd_web_admin.erl)을 살펴보면 erlang 코드에서 직접 html을 생성하도록 코드가 작성되어 있어 수정하기가 여간 불편한게 아니다.
+이러한 이유로 erlang web framework인 cowboy를 연동하기로 했다.
+cowboy는 현재 erlang/otp 18에서 컴파일 가능하기 때문에 다음과 같이 준비가 되어 있어야 한다.
+준비  erlang/otp 18 ejabberd 15.04  ejabberd의 최신 버전의 경우 erlang/otp 18을 정상 지원하지만, 현재 사용하고 있는 15.04의 경우 일부 모듈(특히 ejabberd_riak관련 의존성 모듈들)은 erlang/otp 18에서 컴파일 되지 않는 문제가 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/01/15/couchbase-cberl-ec82acec9aa9ed95b4ec849c-view-eca1b0ed9a8cec8b9c-eca3bcec9d98ec82aced95ad" class="link black dim">
+        couchbase cberl 사용해서 view 조회시 주의사항
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      couchbase의 view 조회시 데이터의 최신 본을 얻지 못할 수도 있다.
+이러한 이유는 속도의 향상을 위해 stale옵션의 기본값이 true로 설정되어 있어서 그런데, 명시적으로 stale옵션을 false로 지정해야 최신 데이터가 적용된 view를 구할 수 있다.
+cberl:view()함수를 사용할 때, stale옵션을 false로 지정하는 방법은 다음과 같다.
+https://gist.github.com/jeidee/79e08693d3c6be338e31
+Args에 {stale, false}를 추가하면 된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/01/06/couchbase-eb8f84ed8190eba8bced8ab8-ebb0b1ec9785" class="link black dim">
+        couchbase 도큐먼트 백업
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       cbbackup http://[host]:8091 [backup-location] -x design\_doc\_only=1 -b [bucket-name]   출처  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/12/30/ejabberd-couchbase-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        ejabberd couchbase 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      mongodb와 마찬가지로 couchbase역시 ejabberd에서 공식 지원하지 않는다. erlang driver도 커뮤니티에서 만든 driver만 제공하므로 사용상 주의할 필요가 있다.
+couchbase의 erlang driver인 cberl을 사용해서 ejabberd용 couchbase 모듈을 만들어보자.
+준비  erlang/otp 17(or 17.5) ejabberd 15.04 couchbase server 4.x  cberl의 경우 빌드서버에는 libcouchbase2와 libcouchbase-dev가 설치되어 있어야 하며, 운영서버에는 libcouchbase2가 설치되어 있어야 한다.
+ sudo wget -O/etc/yum.repos.d/couchbase.repo http://packages.couchbase.com/rpm/couchbase-centos62-x86_64.repo sudo yum check-update sudo yum install &amp;#8211;enablerepo=epel libcouchbase2 libcouchbase-devel  cberl의 경우 ejabberd에 연동시 cberl_drv.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/12/08/mongo-sharded-cluster" class="link black dim">
+        mongo sharded cluster
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      mongodb의 샤드 클러스터를 구성하는 방법은 다음과 같다.
+준비 mongod가 설치된 서버가 다음과 같이 3대 준비되어 있다고 가정한다.
+#1 : 192.168.56.101
+#1 : 192.168.56.102
+#1 : 192.168.56.103
+shard 서버 구동 @192.168.56.101/102/103 공통
+ nohup mongod &amp;#8211;shardsvr &amp;#8211;dbpath /var/lib/mongo/ &gt; /var/log/mongod.log &amp;  config 서버 구동 @192.168.56.101
+ mkdir /var/lib/mongo/configdb nohup mongod &amp;#8211;configsvr &amp;#8211;dbpath /var/lib/mongo/configdb &gt; /var/log/mongod_config.log &amp;  mongos 구동 @192.168.56.101
+ nohup mongos &amp;#8211;configdb 192.168.56.101:27019 &amp;#8211;chunkSize 1 &gt; /var/log/mongos.log &amp;  클러스터 설정 @192.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/12/08/riak-ed81b4eb9facec8aa4ed84b0-eab5acec84b1" class="link black dim">
+        riak 클러스터 구성
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      riak 설치 환경은 centos-6.7, riak 2.1.2를 기준으로 한다.
+riak 설정 riak.conf만 수정해도 된다. (단, 방화벽 설정을 하려면 app.config를 수정해야 한다.)
+클러스터로 구성할 2개의 riak 노드가 다음과 같이 준비되어 있다.
+ riak@192.168.56.101 riak@192.168.56.102  두 riak 노드간 tcp/udp의 방화벽을 해제하거나 다음 문서를 참고해서 특정 포트를 열어 놓아야 한다.
+ Riak network security and firewall configurations  riak.conf 수정 ** riak@192.168.56.101 **
+ listener.protobuf.internal = 0.0.0.0:8087 nodename = riak@192.168.56.101 distributed_cookie = riak storage_backend = leveldb   listener.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/12/08/ec85b0ec9db5ec8aa4ed94bcec96b4eab080-eca491eb8584ec9790eab28c-eca3bceb8a94-9eab080eca780-eab590ed9b88" class="link black dim">
+        셰익스피어가 중년에게 주는 9가지 교훈
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      첫째. 학생으로 계속 남아 있어라.
+배움을 포기하는 순간 우리는 폭삭 늙기 시작한다.
+둘째. 과거를 자랑하지 마라.
+옛날 이야기밖에 가진 것이 없을 때 당신은 처량해진다.
+삶을 사는 지혜는 지금 가지고 있는 것을 즐기는 것이다,
+셋째. 젊은 사람과 경쟁하지 마라.
+대신 그들의 성장을 인정하고 그들에게 용기를 주고
+그들과 함께 즐겨라,
+넷째. 부탁 받지 않은 충고는 굳이 하려고 마라.
+늙은이의 기우와 잔소리로 오해 받는다.
+다섯째. 삶을 철학으로 대체하지 마라.
+로미오가 한 말을 기억하라
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/11/27/ejabberd-mongo-db-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        ejabberd mongo-db 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd에는 mongodb를 사용할 수 있는 모듈이 없다.
+mongodb에서도 erlang driver를 공식적으로 지원하지 않으며, community driver(일반 개발자가 만들어 공개한)만 사용할 수 있다.
+community erlang driver중에서 mongodb-erlang을 사용해 ejabberd용 mongodb 모듈을 만들어 보자.
+준비  erlang/otp 17(or 17.5) ejabberd 15.04 mongodb 3.0.7  mongodb-erlang의 경우 의존하고 있는 라이브러리 중에서 pbkdf2가 최신 버전의 erlang(17~)에서 컴파일이 안되는 문제(rebar.config에 명시된 {require_min_otp_vsn, &#8220;R14B03&#8221;}. 때문)가 있고, bson-erlang 역시 동일한 문제가 있어, 이를 수정해서 다음과 같이 fork를 생성했다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/11/13/erlang-applicationec9790ec849c-protocol-buffer-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        erlang application에서 protocol buffer 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      이번 역시, rebar를 사용해 프로젝트를 생성했다고 가정한다.
+basho의 protobuffs 라이브러리를 추가해 보도록 하자.
+rebar.config 수정 이전 포스트를 참고해서 기본 작업(sub_dirs 추가 등)은 완료했다고 가정한다.
+ {deps, [ {'lager', &quot;.*&quot;, {git, &quot;https://github.com/basho/lager&quot;, &quot;&quot;}}, {protobuffs, &quot;.*&quot;, {git, &quot;git://github.com/basho/erlang_protobuffs.git&quot;, {branch, &quot;master&quot;}}} ]}.   deps에 protobuffs, &#8230; 행을 복사해 넣는다.  xxx.proto 파일 생성 프로토콜을 정의한 *.proto파일을 생성한다.
+예를 들면 다음과 같은 simple.proto파일을 src 디렉토리 밑에 추가한다.
+ package simple; message Person { required string name = 1; required string address = 2; required string phone_number = 3; required int32 age = 4; optional Location location = 5; } message Location { required string region = 1; required string country = 2; }  make로 컴파일하고 나면 rebar가 .
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/11/11/erlang-applicationec9790-lagereba19ceab1b0-ecb694eab080ed9598eab8b0" class="link black dim">
+        erlang application에 lager(로거)  추가하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      rebar를 사용해 프로젝트를 생성했다고 가정한다.
+erlang의 로거 라이브러리 중에서 많이 사용되는 basho/lager를 추가해 보도록 하자.
+rebar.config 수정  %% -\*- erlang -\*- {sub_dirs, [ &quot;apps/chat&quot;, &quot;deps&quot;, &quot;rel&quot; ]}. {erl_opts, [ {parse\_transform, lager\_transform}, %% for lager debug_info, fail\_on\_warning ]}. %% {require\_otp\_vsn, &quot;R14&quot;}. %% Example, uncomment to retrieve cowboy as a dep. {deps, [ {'lager', &quot;.*&quot;, {git, &quot;https://github.com/basho/lager&quot;, &quot;&quot;}} ]}.   sub_dirs에 deps 디렉토리를 추가하고, erl_opts(erlang 컴파일러 옵션)에 {parse_transform, lager_transform}을 추가한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/11/11/erlang-gen_servereba5bc-eab5aced9884ed959c-ed9484eba19cec84b8ec8aa4-eca285eba38ced9598eab8b0" class="link black dim">
+        erlang gen_server를 구현한 프로세스 종료하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      gen_server를 구현한 프로세스를 종료하려면 callback함수에서 {stop, Reason, NewState}을 반환하면 된다.
+일반적으로는 다음과 같은 패턴으로 구현한다.
+handle_cast({stop, Reason}, State) -&gt; {stop, Reason, State}; &amp;#8230; do_stop(Pid) -&gt; gen_server:cast(Pid, {stop, {shutdown, &lt;&lt;&quot;Reason string&amp;#8230;&quot;&gt;&gt;}}).  handle_cast/2에서 {stop, Reason, NewState}가 아니라 {stop, Reason}만 반환할 경우,
+bad_return_value에 따른 프로세스 크래시가 발생하므로 주의한다.
+supervisor에 의해 관리되는 프로세스라면 크래시된 프로세스는 정책에 따라 재시작 될 것이다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/11/06/erlang-rebarec9d98-project-templateec9d84-ed999cec9aa9ed959c-application-ebbc88eb8c80-eba78ceb93a4eab8b0" class="link black dim">
+        erlang rebar의 project template을 활용한 application 뼈대 만들기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      rebar project template rebar의 project template 기능을 활용해 erlang application 프로젝트를 손쉽게 생성하는 방법을 살펴보자.
+Richard Jones의 포스트를 보고 rebar 실습을 따라해 보니, 현재의 erlang(17.5)과 rebar(2.6.1) 버전으로는 원활하게 진행되지 않았다.
+구글링 중에 rebar의 프로젝트 템플릿을 활용하는 방법을 찾게 되었는데 몇 부분만 수정하여 문제없이 사용할 수 있었다.
+해당 Repository를 Fork해서 오류부분을 수정해 보았다.
+https://github.com/jeidee/rebar-project-template
+사용법은 다음과 같다.
+rebar 설치 우분투라면 다음과 같이 설치한다.
+ $ sudo apt-get install rebar  rebar repository에서 소스를 내려 받아 빌드해서 사용해도 된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/11/04/ios-sqlite-swifteba5bc-ec82acec9aa9ed95b4ec849c-ec9dbdeab8b0-ec93b0eab8b0-db-ec97b4eab8b0" class="link black dim">
+        ios sqlite.swift를 사용해서 읽기 쓰기 DB 열기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      do { let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first! let db = try Connection(&quot;\(path)/db.sqlite3&quot;) } catch { NSLog(&quot;DB Connection error!&quot;) }  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/10/13/go-restful-api-eab5aced9884" class="link black dim">
+        go RESTful API 구현
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      예제  package main import ( &quot;encoding/json&quot; &quot;fmt&quot; &quot;net/http&quot; ) type ResponseResult struct { Result string \`json:&quot;result&quot;\` Message string \`json:&quot;message&quot;\` } type ApiServer struct { } func (as *ApiServer) Start() { http.HandleFunc(&quot;/&quot;, as.index) addr := fmt.Sprintf(&quot;:%v&quot;, 8080) fmt.Printf(&quot;API Server is listening on %v&quot;, addr) err := http.ListenAndServe(addr, nil) if err != nil { fmt.Printf(&quot;%v&quot;, err) } } func (as \*ApiServer) index(w http.ResponseWriter, r \*http.Request) { w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;) json.NewEncoder(w).Encode(ResponseResult{Result: &quot;400&quot;, Message: &quot;Bad request&quot;}) } func main() { as := ApiServer{} as.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/09/30/go-debug-hang" class="link black dim">
+        go debug hang
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      go로 만든 어플리케이션이 hang에 걸렸을 경우 다음과 같이 해당 프로세스의 스택을 추적할 수 있다.
+ $ kill -ABRT process-id  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/09/08/ec849cebb284ec9790-eba3a8ed8ab8-ec9db8eca69dec849c-ec84a4ecb998ed9598eab8b0" class="link black dim">
+        서버에 루트 인증서 설치하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       CentOS 6.X  ca-certificates package 설치   yum install ca-certificates   update-ca-trust 기능 활성화   update-ca-trust enable   /etc/pki/ca-trust/source/anchors/ 경로에 인증서 복사(*.crt 또는 *.cer)   cp foo.crt /etc/pki/ca-trust/source/anchors/   마무리   update-ca-trust extract  출처  Adding trusted root certificates to the server  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/09/03/go-http-ec9a94ecb2ad-ecb298eba6ac" class="link black dim">
+        go http 요청 처리
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      net/http 패키지를 사용하면 된다.
+REST API를 사용하는 간단한 예제는 다음과 같다.
+ package main import ( &quot;net/http&quot; &quot;fmt&quot; &quot;io/ioutil&quot; &quot;encoding/json&quot; ) func main() { r, err := http.Get(&quot;https://example.com/api/&amp;#8230;&quot;) if err != nil { fmt.Println(err) return } defer r.Body.Close() var body []byte body, err = ioutil.ReadAll(r.Body) if err != nil { fmt.Println(err) return } var m map[string]interface{} json.Unmarshal(body, &amp;m) fmt.Println(&quot;body is &quot;, m) }  Response가 JSON 문자열일 경우 json.Unmarshal() 함수를 사용해 map[string]interface{} 타입으로 변환할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/09/01/go-coroutines-ed8ca8ed84b4-eab5aced9884ed9598eab8b0" class="link black dim">
+        go coroutines 패턴 구현하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      coroutine은 쓰레드와 유사하다고 볼 수 있다.
+다른점은, 쓰레드가 동시에 여러쓰레드에서 병렬적으로 실행된다면, coroutine은 병행성은 갖지만, 특정 시점에 단 하나의 coroutine만 실행됨을 보증한다는 것이다.
+goroutine과 coroutine의 차이를 다음과 같이 구분할 수 있다.
+ goroutine은 병렬적이지만 coroutine은 그렇지 않다. goroutine간에는 채널을 통해 통신하며, coroutine간에는 yield와 resume 동작에 의해 통신한다.  c#에서는 yield 키워드를 통해서 iterator를 구현할 때 주로 사용하며, 유니티의 coroutine은 이러한 yield키워드를 사용해서 메인쓰레드에서 여러 함수를 동시에 실행시키는데 사용한다.
+csharp public class PowersOf2 { static void Main() { // Display powers of 2 up to the exponent of 8: foreach (int i in Power(2, 8)) { Console.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/31/go-buffered-channleec9d84-ec9db4ec9aa9ed959c-concurrent-queue-eab5aced9884" class="link black dim">
+        go buffered channel을 이용한 Concurrent Queue 구현
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      이전 포스트에서는 cotainer/list와 sync/mutex를 사용해서 Concurrent Queue를 구현해 보았다.
+해당 큐의 단점은 Multi-Goroutine 동기화를 위해 Mutex를 사용하면서 비용이 발생하고,
+Pop()함수를 사용할 경우 값이 없을 경우에도 즉시 리턴을 하기 때문에,
+외부 모듈에서는 큐에서 값을 가져오기 위해 계속해서 Pop()함수를 호출해야 하는 비용이 발생했다.
+이러한 단점을 보완하기 위해 go에서 제공하는 buffered channel을 사용해 다음과 같이 구현할 수 있다.
+ package queue import ( &quot;sync/atomic&quot; ) type ChanQueue struct { syncChan chan interface{} size int32 } func NewChanQueue(maxSize int) *ChanQueue { return &amp;ChanQueue{syncChan: make(chan interface{}, maxSize)} } func (q *ChanQueue) Push(v interface{}) { atomic.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/31/go-console-progress-bar" class="link black dim">
+        go console progress bar
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      console에서 진행 상태를 프로그레스바 형태로 출력하고자 할 때 다음 패키지를 사용할 수 있다.
+ https://github.com/cheggaaa/pb  사용법은 다음과 같이 간단하다.
+ package main import ( &quot;github.com/cheggaaa/pb&quot; &quot;time&quot; ) func main() { count := 100000 bar := pb.StartNew(count) for i := 0; i &lt; count; i++ { bar.Increment() time.Sleep(time.Millisecond) } bar.FinishPrint(&quot;The End!&quot;) }  console에서 프로그레스바를 출력하는 기능의 핵심은,
+고정된 위치에 문자열을 출력하는 것이라 할 수 있다.
+(보통 Print()문을 사용할 경우 커서가 계속 이동하며 \r\n을 만나면 다음 줄의 처음으로 커서를 이동)
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/26/go-containterlisteba5bc-ec82acec9aa9ed959c-concurrent-queue" class="link black dim">
+        go containter/list를 사용한 Concurrent Queue
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      참고자료  Stack and Queue in golang   container/list와 sync.Mutex를 사용한 쓰레드(고루틴)에 안전한 Queue는 다음과 같이 만들 수 있다.
+ package queue import ( &quot;container/list&quot; &quot;sync&quot; ) type Queue struct { l *list.List lock sync.Mutex } func NewQueue() *Queue { return &amp;Queue{list.New(), sync.Mutex{}} } func (q *Queue) Push(i interface{}) { q.lock.Lock() defer q.lock.Unlock() q.l.PushBack(i) } func (q *Queue) Pop() (interface{}, bool) { q.lock.Lock() defer q.lock.Unlock() if q.l.Len() == 0 { return nil, false } v := q.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/25/erlang-ec8998ec9790ec849c-observereba5bc-ec82acec9aa9ed95b4-ec9b90eab2a9-eb85b8eb939c-eca091ec868d" class="link black dim">
+        erlang 쉘에서 observer를 사용해 원격 노드 접속
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      먼저 A와 B, 두 노드가 있고, A에서 B노드에 연결한다고 가정한다.
+두 노드를 연결하기 위해서는 다음 조건을 우선 만족시켜야 한다.
+1) short name을 사용하는 경우
+ A와 B노드는 동일한 네트워크에 있고, 방화벽을 통하지 않는다.
+ 방화벽을 통해 접속할 경우 B노드의 다음 TCP포트(아래 예에서는 47242)가 Inbound 오픈되어 있어야 한다.
+   B&gt; net_adm:names(); {ok, [{&quot;ejabberd&quot;, 47242}, &amp;#8230;]}   A와 B노드의 erlang secretkey(cookie)는 동일해야 한다.   $ erl -sname A@node1 -setcookie secret $ erl -sname B@node2 -setcookie secret A&gt; erlang:get_cookie().
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/25/go-json-eb9494ecbd94eb8d94eba5bc-ec82acec9aa9ed95b4ec849c-tcp-ec8aa4ed8ab8eba6bcec9cbceba19c-ec8898ec8ba0ed959c-json-object-ecb298eba6aced9598" class="link black dim">
+        go json 디코더를 사용해서 TCP 스트림으로 수신한 json object 처리하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      우선 net.Conn 인스턴스(c.conn은 net.Conn 인스턴스)를 사용해서 json 디코더를 생성한다.
+ d := json.NewDecoder(c.conn)  수신받은 데이터를 json 오브젝트로 디코딩한다.
+ var packet map[string]interface{} err := d.Decode(&amp;packet)  json 오브젝트를 특정 구조체 데이터로 캐스팅한다.
+그 전에 송수신 하는 json 오브젝트에 id필드가 있다고 가정하며,
+id필드 값에 따라 다른 구조체로 캐스팅하도록 한다.
+ type ReqLoginPacket struct { Id int \`json:&quot;id&quot;\` UserId string \`json:&quot;user_id&quot;\` } pid := int(p[&quot;id&quot;].(float64)) switch pid { case 1: reqPacket := new(ReqLoginPacket) MapToObject(packet, reqPacket) &amp;#8230; }  MapToObject/2 함수는 다음과 같다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/19/go-tcp-json-decoder-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        go tcp &#43; json decoder 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음 코드는 클라이언트에서 보낸 json 패킷을 디코딩하는 간단한 tcp 서버 예제코드이다.
+ package main import ( &quot;encoding/json&quot; &quot;log&quot; &quot;net&quot; ) func main() { ln, err := net.Listen(&quot;tcp&quot;, &quot;:9080&quot;) if err != nil { log.Fatal(err) return } defer ln.Close() for { c, err := ln.Accept() if err != nil { log.Fatalln(&quot;Can't accept new client!&quot;, err) return } defer c.Close() go requestHandler(c) } } type Packet struct { Id int16 \`json:&quot;id&quot;\` Data interface{} \`json:&quot;data&quot;\` } func requestHandler(c net.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/19/go-gtk-ec84a4ecb998" class="link black dim">
+        go-gtk 설치
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      golang을 사용해서 gui 프로그래밍을 하려면 go-gtk를 설치하면 된다.
+go-gtk는 libgtk+ 2.0을 필요로 하는데,
+ubuntu에서 libgtk+ 2.0은 다음과 같이 설치할 수 있다.
+ $ sudo apt-get install libgtk2.0-dev $ go get github.com/mattn/go-gtk/gtk  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/07/24/erlang-mumble-server-maunder" class="link black dim">
+        erlang mumble server &amp;#8211; maunder
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang으로 구현된 mumble서버 중에 maunder라고 있다.
+2년전 커밋이 마지막이다.
+erlang 17버전에서 빌드하고 실행하면 application:start()할 때 오류가 발생한다.
+원인은 erlang 17버전에서 public_key application이 asn1을 의존하기 때문인데,
+maunder.erl 소스를 다음과 같이 수정하고 다시 빌드하면 문제가 해결된다.
+ %% @spec start() -&gt; ok %% @doc Start the maunder server. start() -&gt; ensure_started(sasl), ensure_started(crypto), ensure_started(asn1), ensure\_started(public\_key), ensure_started(ssl), application:start(maunder).  기동시 eaddrinuse 관련 에러가 발생하는 경우,
+maunder_app.erl의 DEF_PORT값(기본값은 8080)을 변경한 후 다시 빌드하면 된다.
+매번 포트를 변경할 때마다 재빌드하는게 번거로울 경우 빌드후 생성되는 ebin/maunder.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/07/23/ejabberd-ec9ab0ebb684ed88acec9790ec849c-fqdnec9d84-ec82acec9aa9ed95b4-long-node-nameec9d84-ec84a4eca095ed95a0-eb958c-cant-set-long-node-name-ec9790" class="link black dim">
+        ejabberd 우분투에서 FQDN을 사용해 long node name을 설정할 때, Can&amp;#8217;t set long node name 에러 발생하는 경우
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      제목과 같이 우분투에서 long node name을 사용해 ejabberd(erlang) 노드를 사용할 경우,
+ejabberdctl의 status, debug등의 명령을 실행하면 다음과 같은 에러가 발생하는 경우가 있다.
+ &quot;Can't set long node name!nPlease check your configurationn&quot;,[]}  예를 들어, 노드명을 ejabberd@hello.world.com 으로 사용할 경우 다음과 같이 hostname을 확인해 본다.
+ $ sudo hostname  hostname이 hello.world.com으로 설정되어 있어야 한다.
+만약, 제대로 설정되어 있지 않은 경우 다음과 같이 설정한다.
+ $ sudo hostname hello.world.com  영구적으로 사용하고자 한다면 /etc/hostname의 값도 수정해야 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/25/ejabberdec9980-riak-ec97b0eb8f99" class="link black dim">
+        ejabberd와 riak 연동
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd 설치 ejabberd에 riak를 활성화해서 설치하는 방법은 이전 포스트를 참고해서 설치한 후, 공식 문서를 참고해서 설정한다.
+riak 설치 riak 설치방법은 여러 방법이 있지만 ubuntu에서 간단히 다음 방법을 사용해 설치한다.
+ wget http://s3.amazonaws.com/downloads.basho.com/riak/2.1/2.1.1/ubuntu/precise/riak\_2.1.1-1\_amd64.deb sudo dpkg -i riak\_2.1.1-1\_amd64.deb  riak 주요 파일 위치 위와 같이 설치되면 다음의 디렉토리에 주요 파일들이 위치하게 된다.
+1) 실행파일
+/usr/sbin/riak
+/usr/sbin/riak-admin
+/usr/sbin/riak-debug
+2) 설정파일
+/etc/riak/riak.conf
+3) 로그파일
+/var/log/riak/console.log
+/var/log/riak/crash.log
+/var/log/riak/error.log
+/var/log/riak/erlang.log
+/var/log/riak/run_erl.log
+riak 실행 확인 설치가 완료되면 다음과 같이 riak를 시작한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/21/elixir-where-to-go-next-2121" class="link black dim">
+        Elixir Where to go next (#21/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 더 배우고 싶은가? 그럼 계속 읽어보자.
+Build your first Elixir project 우리의 첫 프로젝트를 시작하기 위해, elixir는 Mix라는 빌드 툴을 제공한다. 우리는 다음과 같이 간단하게 첫 프로젝트를 만들 수 있다.
+ mix new path/to/new/project  위의 과정을 통해 우리는 슈퍼비전 트리, 설정, 테스트등을 갖는 elixir 응용프로그램을 만들 수 있다. 다음 가이드를 통해 우리는 분산된 노드에 분산된 key-value 저장소를 갖는 응용프로그램을 만드는 방법을 배울 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/19/elixir-sigils-1821" class="link black dim">
+        Elixir Sigils (#18/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 우리는 이미 elixir의 문자열과 문자 리스트를 배웠다. 하지만, 언어에 있어 텍스트의 표현을 위한 구조의 겉면만 다루었을 뿐이다. atom을 예로 들면, 대부분 :atom 형식으로 표현되는 식이다.
+elixir의 목표 중 하나는 확장성이다: elixir를 사용하면 개발자가 어떤 도메인에도 꼭 맞도록 언어를 확장할 수 있다. 개발자나, 회사, 또는 커뮤티니들이 그들과 관련된 도메인안에서 언어를 확장할 수 있도록 만들어졌다는 말이다.
+이번 챕터에서 우리는, 텍스트 처리에 사용하는 매커니즘 중 하나인 sigil &#8211; $foo에서 $와 같은 기호에 대해서 알아볼 것이다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/19/elixir-try-catch-and-rescue-1921" class="link black dim">
+        Elixir try, catch and rescue (#19/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ elixir는 세 개의 에러 매커니즘을 갖는다: errors, throws, exits. 이번 챕터에서 우리는 이들 각각을 살펴보도록 한다.
+Errors 에러(또는 예외)는 코드에서 예외적인 상황이 발생할 때 사용된다. 숫자를 atom에 더할 때 발생할 수 있는 에러를 살펴보자.
+ iex&gt; :foo + 1 ** (ArithmeticError) bad argument in arithmetic expression :erlang.+(:foo, 1)  raise/1 함수를 사용하면 아무 때나 런타임에 에러를 발생시킬 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/18/elixir-comprehensions-1721" class="link black dim">
+        Elixir Comprehensions (#17/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ elixir에서는, 열거형을 반복문에서 열거하고 요소를 필터링해 다른 리스트로 반환하는 일이 매우 일반적이다. 해석식(Comprehensions)은 그러한 패턴을 쉽게 하도록 도와준다. 해석식은 for와 같은 특별한 형태를 사용해 그러한 작업을 처리할 수 있다.
+예를 들면, 정수 리스트에서 각 요소의 제곱을 구해 새로운 리스트를 반환하는 작업은 다음과 같이 구현할 수 있다.
+ iex&gt; for n &lt;- [1, 2, 3, 4], do: n * n [1, 4, 9, 16]  해석식은 세 부분으로 구성된다: 발생기(generator), 필터, 수집자(collectables).
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/18/elixir-protocols-1621" class="link black dim">
+        Elixir Protocols (#16/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 프로토콜은 elixir에서 다형성을 구현하는 매커니즘이다. 프로토콜은 어떤 데이터 타입에서도 사용할 수 있다. 예제를 보도록 하자.
+elixir에서는 false와 nil만이 false처럼 처리된다. 그 외에는 모든 것이 true로 평가된다. 응용프로그램에 따라, blank로 처리되는 데이터타입을 위해 boolean값을 반환하는 blank? 프로토콜을 명시하는 것이 중요할 수도 있다. 예를 들어, 빈 리스트나 빈 바이너리는 blank로 간주될 수 있다.
+우리는 이러한 프로토콜을 다음과 같이 정의할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/18/phoenix-eb8db0ebaaacec9cbceba19c-ec8ba4ed9689ed9598eab8b0" class="link black dim">
+        phoenix 데몬으로 실행하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       run.sh파일을 하나 만들고 다음과 같이 입력한다.
+포트는 원하는 포트로 입력하면 된다.
+ MIX_ENV=prod PORT=4001 elixir &amp;#8211;detached -S mix phoenix.server  출처  How to start phoenix server as daemon?  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/17/elixir-io-and-the-file-system-1221" class="link black dim">
+        Elixir IO and the file system (#12/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 이번 챕터에서는 IO, File, Path 모듈과 관련된 입/출력 매커니즘과 파일 시스템 관련 태스크를 소개하도록 한다.
+The IO module elixir의 IO 모듈은 표준 입출력, 표준 에러, 파일과 다른 IO 장치들을 읽고 쓸 수 있도록 해주는 주요 매커니즘이다. 모듈의 사용법은 꽤 직관적이다.
+ iex&gt; IO.puts &quot;hello world&quot; hello world :ok iex&gt; IO.gets &quot;yes or no? &quot; yes or no?
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/17/elixir-module-attributes-1421" class="link black dim">
+        Elixir Module attributes (#14/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ elixir에서 모듈의 속성은 3개의 목적으로 제공된다.
+ 모듈에 주석을 제공한다. 사용자와 VM에 정보를 제공한다. 상수로 동작한다. 컴파일하는 동안 임시 모듈 저장공간으로 사용된다.  하나씩 살펴보자.
+As annotations elixir는 모듈 속성 컨셉을 Erlang에서 가져왔다. 예를 보자.
+ defmodule MyServer do @vsn 2 end  위의 예는, 모듈의 버전 속성을 명시적으로 설정한다. @vsn은 Erlang VM이 모듈이 수정되었는지 여부를 검사해서 코드를 리로딩할 지 결정하는 매커니즘으로 사용한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/17/elixir-structs-1521" class="link black dim">
+        Elixir Structs (#15/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 이전 챕터에서 우리는 맵에 대해 배웠다.
+ iex&gt; map = %{a: 1, b: 2} %{a: 1, b: 2} iex&gt; map[:a] 1 iex&gt; %{map | a: 3} %{a: 3, b: 2}  구조체는 컴파일 타임 검사와 기본값을 제공하는 맵의 확장이다.
+Defining structs 구조체를 정의하기 위해, defstruct를 사용한다.
+ iex&gt; defmodule User do &amp;#8230;&gt; defstruct name: &quot;John&quot;, age: 27 &amp;#8230;&gt; end  defstruct에 사용된 키워드 리스트는, 어떤 필드가 어떤 기본값을 갖는지 정의한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/17/elixir-alias-require-and-import-1321" class="link black dim">
+        Elixir alias, require and import (#13/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 소프트웨어 재사용을 쉽게 하기 위해, elixir는 3개의 지시자(directives)를 제공한다. 이들 지시자는 정적 유효범위(lexical scope)를 갖는다.(일반적인 언어에서 변수의 선언과 유효범위는 대부분 lexical scope를 갖는다.)
+alias alias는 모듈이름의 별칭을 허용한다. 우리가 만든 Math 모듈에 특별한 List가 있다고 가정해 보자.
+ defmodule Math do alias Math.List, as: List end  이제 Math 모듈 안에서 List는 자동적으로 Math.List로 확장된다. 만약 본래의 List 모듈에 접근하고자 한다면, Elixir.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/16/elixir-processes-1121" class="link black dim">
+        Elixir Processes (#11/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ elixir에서, 모든 코드는 프로세스 안에서 실행된다. 프로세스는 서로 분리되어 있고, 서로 동시에(concurrent) 실행되며, 메세지를 건네는 것을 통해 통신한다.
+프로세스는 elixir의 동시성 뿐만 아니라, 분산 된 구조와 결함 내구성(fault-tolerant) 역시 제공한다.
+elixir의 프로세스를 OS(운영체제)의 프로세스와 혼동하면 안된다. elixir의 프로세스는 메모리와 CPU에 있어 극단적으로 경량화되어 있다(다른 프로그래밍 언어의 쓰레드와 다르게). 이러한 이유로, 수백 수천의 프로세스가 동시에 수행되는 것이 일반적이다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/15/elixir-enumerables-and-streams-1021" class="link black dim">
+        Elixir Enumerables and Streams (#10/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ Enumerables elixir는 열거가능한 자료구조(enumerables) 컨셉과 그들을 처리하기 위한 Enum 모듈을 제공한다. 우리는 이미 두 개의 열거가능한 자료구조(lists and maps)를 배웠다.
+ iex&gt; Enum.map([1, 2, 3], fn x -&gt; x * 2 end) [2, 4, 6] iex&gt; Enum.map(%{1 =&gt; 2, 3 =&gt; 4}, fn {k, v} -&gt; k * v end) [2, 12]  Enum 모듈은 열거가능한 자료구조에서 transform(변형), sort(정렬), group, filter등의 처리를 통해 아이템을 얻을 수 있는 수많은 함수들을 제공한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/12/elixir-binaries-strings-and-char-lists-621" class="link black dim">
+        Elixir Binaries, strings and char lists (#6/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ &#8220;Basic types&#8221;에서 문자열에 대해 배웠고, 타입 검사를 위해 is_binary/1 함수를 사용했다.
+ iex&gt; string = &quot;hello&quot; &quot;hello&quot; iex&gt; is_binary string true  이번 챕터에서는, 바이너리가 무엇인가를 이해하고, 문자열과 어떤 연관이 있으며, &#8221;(single-quoted value)값,&#8217;이런 값&#8217;,이 무엇을 의미하는지 살펴본다.
+UTF-8과 유니코드 문자열은 UTF-8로 인코딩된 바이너리이다. 이것이 무엇을 의미하는지 정확히 이해하기 위해서는, 바이트와 코드 포인트(bytes and code-points)의 차이가 무엇인지 먼저 이해해야 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/12/elixir-keywords-maps-and-dicts-721" class="link black dim">
+        Elixir Keywords, maps and dicts (#7/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 지금까지 자료구조와 관련된 논의는 하지 않았다. 예를 들어, 키에 특정 값을 연관시키는 자료구조 같은 것 등을 말이다. 다른 언어에서는 이러한 자료구조를 사전(Dictionary), 해시(Hash), 연관 배열(Associative Array), 맵(Map)등으로 부른다.
+elixir에는 두 개의 주요 연관 자료구조가 있다: 키워드 리스트(keyword lists)와 맵(maps)이다. 이번에는 이들에 대해 배워보도록 한다.
+Keyword lists 많은 함수형 프로그래밍 언어에서는, 연관 자료구조를 표현하는데 tuple 두 개를 사용한 리스트를 일반적으로 사용한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/12/elixir-modules-821" class="link black dim">
+        Elixir Modules (#8/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ elixir에서 우리는 모듈에 여러 함수를 그룹지을 수 있다. 우리는 이전 챕터에서 String 모듈 같은 여러 다른 모듈들을 사용했다.
+ iex&gt; String.length &quot;hello&quot; 5  elixir에서 우리만의 모듈을 만들기 위해, 우리는 defmodule 매크로를 사용해야 한다. 우리는 우리의 모듈에서 함수를 정의하기 위해 def 매크로를 사용할 수 있다.
+ iex&gt; defmodule Math do &amp;#8230;&gt; def sum(a, b) do &amp;#8230;&gt; a + b &amp;#8230;&gt; end &amp;#8230;&gt; end iex&gt; Math.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/12/elixir-recursion-921" class="link black dim">
+        Elixir Recursion (#9/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ Loops through recursion 불변성때문에, elixir에서 loop는(모든 함수형 프로그래밍 언어에서 마찬가지로) 다른 언어들과 다르게 작성한다. 예를 들어, c 언어 같은 경우에는 다음과 같을 것이다.
+ for(i = 0; i &lt; array.length; i++) { array[i] = array[i] * 2 }  위의 예제가 보여주는 바는, i와 array 둘 모두 값이 변경되는 가변성이다. 가변성은 elixir에서 가능하지 않다. 대신, 함수형 언어는 재귀(recursion)에 의존한다: 함수는 조건이 지속되는 상황에서 종료되는 상황에 이를때까지 재귀적으로 호출된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/11/elixir-basic-operators" class="link black dim">
+        Elixir Basic operators (#3/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 이전 챕터에서는 +, -, *, / 산술 연산자를 살펴보았다.
+이 외에도 elixir는 리스트 연산을 위해 ++와 &#8212; 연산자를 제공한다.
+ iex&gt; [1,2,3] ++ [4,5,6] [1,2,3,4,5,6] iex&gt; [1,2,3] &amp;#8212; [2] [1,3]  문자열의 결합에는 연산자를 사용한다.
+ iex&gt; &quot;foo&quot; &lt;&gt; &quot;bar&quot; &quot;foobar&quot;  elixir는 논리 연산을 위해 or, and, not과 같은 논리 연산자를 제공한다. 연산의 결과는 true 또는 false값이며 연산자의 매개변수 역신 boolean타입(true or false)이어야 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/11/elixir-pattern-matching-421" class="link black dim">
+        Elixir Pattern matching (#4/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 이번 챕터에서는 = 연산자가 매치 연산자로 어떻게 사용되는지와 자료구조안에서 패턴매치가 어떻게 이뤄지는지 살펴볼 것이다. 마지막으로 핀 연산자(^)를 알아본다.
+매치 연산자 elixir에서 변수에 값을 할당하기 위해 = 연산자를 여러번 사용했다.
+ iex&gt; x = 1 1 iex&gt; x 1  c/c++에서 = 연산자는 대입연산자(또는 할당연산자)라고 불리우지만 erlang과 elixir에서는 매치 연산자라고 부른다.
+왜 그런지 살펴보자.
+ iex&gt; 1 = x 1 iex&gt; 2 = x ** (MatchError) no match of right hand side value: 1  1 = x 표현식이 유효함을 주목한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/11/elixir-case-cond-and-if-521" class="link black dim">
+        Elixir case, cond and if (#5/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 이번 챕터에서는 흐름 제어에 사용되는 case, cond, if에 대해 알아본다.
+case case는 매치되는 하나를 찾기 위해 많은 패턴과 값을 비교할 때 사용한다.
+ iex&gt; case {1, 2, 3} do &amp;#8230;&gt; {4, 5, 6} -&gt; &amp;#8230;&gt; &quot;This clause won't match&quot; &amp;#8230;&gt; {1, x, 3} -&gt; &amp;#8230;&gt; &quot;This clause will match and bind x to 2 in this clause&quot; &amp;#8230;&gt; _ -&gt; &amp;#8230;&gt; &quot;This clause would match any value&quot; &amp;#8230;&gt; end &quot;This clause will match and bind x to 2 in this clause&quot;  기존의 변수에 패턴매치를 사용하고 싶다면 핀 연산자(^)를 사용해야 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/10/elixir-basic-types" class="link black dim">
+        Elixir Basic types (#2/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ elixir의 기본 데이터 타입을 살펴보자.
+기본 산술 표현식과 타입  iex&gt; 1 + 2 3 iex&gt; 5 * 5 25 iex&gt; 10 / 2 5.0  산술 연산자는 각각 +, -, *, / 연산자를 사용하면 된다.
+주목할 것은 / 연산자인데, 결과값이 항상 float이다.
+몫과 나머지를 각각 구하고자 한다면 다음과 같은 기본 산술 함수를 사용하도록 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/10/elixir-ec84a4ecb998ed9598eab8b0" class="link black dim">
+        Elixir Introduction (#1/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      소개 elixir(일릭서라고 발음, 한글번역은 엘릭서가 자연스러워 보인다.)는 erlang vm에서 동작하는 함수형 언어이다.
+erlang과 완벽하게 호환되고 통합 사용할 수 있으며, 함수형 언어를 접해 보지 않은 프로그래머가 처음 erlang을 접했을 때 느끼는 기괴함과 불편함에 비하면, elixir의 문법은 굉장히 세련되고 친근하게 느껴진다.
+2012년에 처음 발표됐고(erlang은 1989년) 역사가 그리 길지 않지만, erlang의 장점(병행성, 분산성, 뛰어난 내고장성-fault-tolerant, 무정지 애플리케이션)을 모두 포함하고 있으며 완성도 또한 매우 뛰어난 다크호스 같은 언어이다.
+단지, erlang도 한국내에서는 비주류언어이고 겨우 번역본 한 권이 나온 상황이며, elixir는 번역 자료뿐 아니라 관련 한국 자료는 구글링해서 한 건도 검색이 되지 않는다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/03/ejabberdec9790-redis-eb9dbcec9db4ebb88ceb9faceba6aceredis-ecb694eab080" class="link black dim">
+        ejabberd에 redis 라이브러리(eredis) 추가
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd가 15.03버전이 릴리즈되면서 redis 지원이 추가되었다.
+클라이언트 세션 관리를 redis로 할 수 있는데 직접 연관된 모듈은 ejabberd_sm 모듈이다.
+redis를 사용하려면 다음과 같이 configure에서 &#8211;enable-redis 옵션을 추가해 주면 된다.
+ ./configure &amp;#8230; &amp;#8211;enable-redis  위와 같이 해 준후에 rebar를 사용해 의존 라이브러리를 다운로드 받아 컴파일해야 한다.
+ rebar get-deps rebar compile  그런 후 make &amp;&amp; make install을 수행하면 된다.
+ejabberd.yml에서 sm_db_type을 redis로 설정하기 위해서는 다음 라인을 추가해 주면 된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/02/gloox-xmppping" class="link black dim">
+        gloox xmppPing
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      gloox의 경우 tcp 연결이 비정상적으로 종료되었을 때 disconnect를 감지할 수 없는 경우가 있다.
+이럴 경우를 대비해 xmpp 서버에 주기적으로 ping을 보내고 pong을 수신해서 연결 상태를 관리하는 것이 좋다.
+class MsgClient : public MessageSessionHandler , &amp;#8230; , EventHandler { private: int m_heartBeat; }; void MsgClient::heartBeat() { m\_client-&gt;xmppPing(m\_client-&gt;jid(), this); if (++m_heartBeat &gt; 3) { LOGD(&quot;허트비트 무응답 초과로 연결 종료!&quot;); m_client-&gt;disconnect(); } } void MsgClient::handleEvent(const Event&amp; event) { switch (event.eventType()) { case Event::PingPing: LOGD(&quot;PingPing&quot;); break; case Event::PingPong: LOGD(&quot;PingPong&quot;); &amp;#8211;m_heartBeat; break; case Event::PingError: LOGE(&quot;PingError&quot;); break; default: break; } return; } // ConnectionListener void MsgClient::onConnect() { LOGD(&quot;connected!
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/02/ios-uiimage-ec8db8eb84a4ec9dbc-ec9db4ebafb8eca780-eba78ceb93a4eab8b0" class="link black dim">
+        ios UIImage 썸네일 이미지 만들기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       -(UIImage\*)makeThumbnail:(UIImage\*)image withSize:(CGSize)destSize{ UIGraphicsBeginImageContext(destSize); [image drawInRect:CGRectMake(0, 0, destSize.width, destSize.height)]; UIImage* thumbnail = UIGraphicsGetImageFromCurrentImageContext(); UIGraphicsEndImageContext(); return thumbnail; }  출처  HOW TO CREATE THUMBNAIL OF UIIMAGE – XCODE IOS  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/02/ios-md5-ed95b4ec8b9c-ed82a4-ec839dec84b1" class="link black dim">
+        ios md5 해시 키 생성
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       #import &lt;CommonCrypto/CommonDigest.h&gt; -(NSString\*)md5:(NSString \*)str { const char *cStr = [str UTF8String]; unsigned char result[CC\_MD5\_DIGEST_LENGTH]; CC_MD5( cStr, strlen(cStr), result ); return [NSString stringWithFormat:@&quot;%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X&quot;, result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7], result[8], result[9], result[10], result[11], result[12], result[13], result[14], result[15] ]; }  출처  MD5 algorithm in Objective C  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/02/ios-sqlite3" class="link black dim">
+        ios sqlite3
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      아래 참고 링크에서 DBManager를 가져와 다음과 같이 사용하면 된다.
+insert or update -(void) addOrSetRoomToDB:(NSChatRoom*)room { if (room == nil) { NSLog(@&quot;addOrSetRoomToDB()&amp;#8230; room is nil!&quot;); return; } DBManager* dbManager = [[TalkInterface getInstance] dbManager]; if (dbManager == nil) { NSLog(@&quot;addOrSetRoomToDB()&amp;#8230; dbManager is nil!&quot;); return; } NSString* query = [NSString stringWithFormat:@&quot;insert or replace into chatRoom(roomId, lastMessage, lastDateTime, unreadCount) values('%@', '%@', '%@', %d);&quot;, room.roomId, room.lastMessage, room.lastDateTime, room.unreadCount]; [dbManager executeQuery:query]; if (dbManager.affectedRows != 0) { NSLog(@&quot;채팅룸 DB 추가 성공!
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/02/ios-url-ecba90ec8b9c-ec84a4eca095" class="link black dim">
+        ios url 캐시 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       // url 캐시 설정 // 메모리 : 10MB, 디스크 : 50MB NSURLCache \*urlCache = [[NSURLCache alloc] initWithMemoryCapacity:10 \* 1024 \* 1024 diskCapacity:50 \* 1024 * 1024 diskPath:nil]; [NSURLCache setSharedURLCache:urlCache];  출처  iphone에서 메모리 문제로 URL로 데이터를 가끔씩 못 가져올 때 AFNetworking, NSURLCache로 이미지 캐시하기  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/02/ios-ec9db4ebafb8eca780-ecba90ec8b9c-eab5aced9884ed9598eab8b0" class="link black dim">
+        ios 이미지 캐시 구현하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      URL에서 이미지를 가져와 출력하는 것은 매우 성능이 좋지 않다. 상황에 따라서는 수 초간(또는 그 이상) 이미지를 불러오지 못하는 경우도 생길 수 있고, 비동기로 많은 이미지를 가져올 경우 상황은 더욱 좋지 않게 된다.
+이런 경우 대부분 이미지를 캐시해 놓고 이후 요청에서는 캐시에서 이미지를 불러오도록 하는데, 메모리와 디스크를 병행해서 캐시해야 프로세스를 재시작해도 캐시를 지속적으로 사용할 수 있는 이득을 볼 수 있다.
+간단한 플로우는 다음과 같다.
+1) 메모리 캐시에서 이미지를 검색한다.
+2) 없을 경우, 디스크 캐시에서 이미지를 검색한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/19/ios-uiimagevieweba5bc-ec9b90ed9895ec9cbceba19c-ecb69ceba0a5ed9598eab8b0" class="link black dim">
+        ios UIImageView를 원형으로 출력하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       cell.imgAvatar.layer.cornerRadius = cell.imgAvatar.frame.size.height / 2; cell.imgAvatar.layer.masksToBounds = YES; cell.imgAvatar.layer.borderWidth = 0;  테이블셀의 UIImaveView인 imgAvatar를 원형으로 출력하는 코드이다.
+출처  UIImage in a circle  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/19/ios-ebb984eb8f99eab8b0eba19c-ec9db4ebafb8eca780-eb8ba4ec9ab4eba19ceb939c" class="link black dim">
+        ios 비동기로 이미지 다운로드
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       이미지캐시 클래스를 만들고 있는 과정인데 우선 비동기로 이미지를 다운로드 하는 코드를 작성해 보았다.
+아직 캐시 기능은 구현하지 않았다.
+ImageCache.h
+#import &lt;UIKit/UIKit.h&gt; @interface ImageCache : NSObject +(ImageCache*)getInstance; -(void) loadFromUrl: (NSURL\*) url callback:(void (^)(UIImage \*image))callback; @end  ImageCache.m
+#import &lt;UIKit/UIKit.h&gt; @interface ImageCache : NSObject +(ImageCache*)getInstance; -(void) loadFromUrl: (NSURL\*) url callback:(void (^)(UIImage \*image))callback; @end  사용
+[[ImageCache getInstance] loadFromUrl:roster.photo callback:^(UIImage *image) { cell.imgAvatar.image = image; }];  참고  Loading an image into UIImage asynchronously iphone에서 메모리 문제로 URL로 데이터를 가끔씩 못 가져올 때 Disk Caching with AFNetworking UIImageView에 원격이미지 비동기 로드 및 캐쉬 기능 넣기  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580" class="link black dim">
+        ios 스토리보드와 커스텀 테이블 셀
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       스토리보드에 작성한 커스텀 테이블셀을 코드에서 사용하기 위해서는 다음과 같이 작업한다.
+1) Attributes Inspector에서 Identifier를 설정한다.
+2) Custom TableViewController.mm에서 다음과 같이 작성한다.
+tableView의 dequeueReusableCellWithIdentifier 함수를 사용하면 된다.
+&amp;#8211; (UITableViewCell\*)tableView:(UITableView \*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath { static NSString *cellId = @&quot;friendCell&quot;; FriendCell\* cell = (FriendCell\*)[tableView dequeueReusableCellWithIdentifier:cellId];  출처  스토리보드에서 테이블뷰 셀 가져오기  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0" class="link black dim">
+        ios c&#43;&#43; 객체에서 objective-c 객체의 함수 콜백하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같은 요구사항이 있다고 가정해 보자.
+ c++로 작성된 MsgClient는 통신 처리를 하는 별도의 워커쓰레드가 있다.
+서버에 접속한 후 데이터를 수신하면 objective-c의 여러 ViewHandler에 데이터 수신 이벤트를 발생시켜야 한다.
+이벤트 수신을 원하는 ViewHandler가 이벤트 수신을 받은 후 UI 쓰레드에서 여러 UI 컨트롤을 처리해야 한다.
+ 간단히 말하면 서로 다른 쓰레드에서 동작하는 c++ 오브젝트와 objective-c 오브젝트가 있고, c++ 오브젝트에서 objective-c 오브젝트의 특정 함수를 호출(콜백)할 수 있어야 한다.
+위와 같은 요구사항을 처리하기 위해서 다양한 방법이 있겠지만 다음과 같은 구조를 사용해 해결해 보도록 하자.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/18/ios-dispatch_async-ebb984eb8f99eab8b0-ecb298eba6aced9598eab8b0" class="link black dim">
+        ios dispatch_async 비동기 처리하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      장시간을 요하는 작업을 UI 쓰레드에서 요청할 경우 UI 쓰레드가 블럭되기 때문에 사용자는 불편을 느끼게 된다.
+이러한 경우, 별도의 쓰레드에서 작업을 수행 후 처리가 완료되면 UI 쓰레드로 결과를 돌려주는 방식(비동기)을 사용해야 한다.
+android에서는 AsyncTask를 사용하면되고 ios의 경우에는 GCD(Grand Central Dispatch)를 사용하면 된다.
+GCD 중에서 dispatch_async를 사용해 무거운 작업을 백그라운드 쓰레드에서 실행 후 실행완료된 결과를 UI쓰레드에서 처리하는 예제를 살펴보자.
+mLoginView.hidden = YES; mActivityIndicator.hidden = NO; [mActivityIndicator startAnimating]; dispatch\_async(dispatch\_get\_global\_queue(DISPATCH\_QUEUE\_PRIORITY_DEFAULT, 0), ^{ bool success = TALK_CLIENT-&gt;connect(jid, pwd, host, port); dispatch\_async(dispatch\_get\_main\_queue(), ^ { if (success) { [self performSegueWithIdentifier:@&quot;moveFromLoginToTabBar&quot; sender:nil]; } else { [mLbError setText:@&quot;로그인 실패&quot;]; mLoginView.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/18/osx-ec9ca0ec9aa9ed959c-ebaa85eba0b9ec96b4" class="link black dim">
+        osx 유용한 명령어
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Dock Dealy 없애기
+ defaults write com.apple.Dock autohide-delay -float 0 &amp;&amp; killall Dock  미션 컨트롤 화면 전환 속도를 보다 빠르게
+ defaults write com.apple.dock expose-animation-duration -float 0.12 &amp;&amp; killall Dock  숨겨진 APP 아이콘 DOCK에서 쉽게 구별 하기
+ defaults write com.apple.Dock showhidden -bool YES &amp;&amp; killall Dock  OSX 메일에서 EMAIL 주소 대신 이름으로 가리는 문제 해결 하기
+ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false  미리보기에서 문자열 선택 가능 하기
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/14/ios-storyboardec9790ec849c-ecbba8ed8ab8eba1a4ec9d98-ec9c84ecb998eab080-ec9d98eb8f84ed959ceb8c80eba19c-ecb69ceba0a5eb9098eca780-ec958aec9d84" class="link black dim">
+        ios storyboard에서 컨트롤의 위치가 의도한대로 출력되지 않을 때
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       Auto Layout을 사용해 컨트롤에 Constraints를 추가해도 의도한대로 출력되지 않는 경우가 있다.
+이럴 경우 다음과 같이 스토리보드 레이아웃이 제대로 설정되어 있는지 확인한다.
+위 이미지의 설정은 iPhone의 각 스크린 인치별 portrait와 landscape를 지원한다.
+참고  Auto Layout #2. Auto Layout with Storyboard  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/13/backoff-ec958ceab3a0eba6aceca698" class="link black dim">
+        Backoff 알고리즘
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      연결 재접속이나 데이터 재전송을 위한 Backoff 알고리즘을 java로 구현해 본다.
+&lt;br /&gt;public class BackoffManager { private int mMaxRetryCount = 10; // 최대 재시도 횟수 private int mInitWaitBackoffSeconds = 2; // 현재 재시도 간격(단위: 초) private boolean mNoGiveupAndRepeat = false; // 최대 재시도 횟수를 초과할 경우 재시도 포기여부 private int mRetryCount; private int mWaitBackoffSeconds; private int mRepeatCycle; // 최대 재시도횟수를 초과한 횟수 public void init(int maxRetryCount, int initWaitBackoffSeconds, boolean noGiveupAndRepeat) { mMaxRetryCount = maxRetryCount; mInitWaitBackoffSeconds = initWaitBackoffSeconds; mNoGiveupAndRepeat = noGiveupAndRepeat; mRetryCount = 0; mWaitBackoffSeconds = mInitWaitBackoffSeconds; } // 연결이 완료되면 백오프 리셋 public void reset() { mRetryCount = 0; mWaitBackoffSeconds = mInitWaitBackoffSeconds; } public boolean retry() throws InterruptedException { if (mNoGiveupAndRepeat == false &amp;&amp; mRepeatCycle &gt; 0) { return false; } mRetryCount++; mWaitBackoffSeconds *= 2; if (mRetryCount &gt; mMaxRetryCount) { mRetryCount = 0; mWaitBackoffSeconds = mInitWaitBackoffSeconds; mRepeatCycle++; } // 대기 Thread.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/13/c-gettickcount-on-linux" class="link black dim">
+        c&#43;&#43; GetTickCount() on linux
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      gettimeofday()는 향후 제거될 함수이며 권장되지 않기 때문에 clock_gettime()을 사용한 방법을 사용하도록 한다.
+특히 경과시간을 구하고자할 때 현재 시간을 반환하는 gettimeofday()함수는 시각 조정에 의한 오차가 발생할 수 있고 쓰레드에 안전하지 않으므로,
+clock_gettime()에 CLOCK_MONOTONIC(uptime) 옵션을 사용해서 사용하는 것이 좋다.
+clock_gettime()은 쓰레드에 안전하다.
+#include &lt;unistd.h&gt; #include &lt;time.h&gt; uint32_t getTick() { struct timespec ts; unsigned theTick = 0U; clock\_gettime( CLOCK\_MONOTONIC, &amp;ts ); theTick = ts.tv_nsec / 1000000; theTick += ts.tv_sec * 1000; return theTick; }  osx에서는 clock_gettime()을 사용할 수 없으므로 다음과 같이 코드한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/13/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9d98-segueeba5bc-ecbd94eb939ceba19c-ec9e91eb8f99ec8b9ced82a4eab8b0" class="link black dim">
+        ios 스토리보드의 segue를 코드로 작동시키기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      스토리보드(Main.storyboard)를 다음과 같이 작성했다고 가정해 보자.
+ =&gt;(Entry) Login View Controller =&gt;(Segue id: moveToTabBar) Tab Bar Controller  Entry 뷰는 Login View이다.
+Login View에서 Tab Bar Controller로 이동하는 seque를 생성한 후 Attributes Inspector에서 Identifier값을 &#8220;moveToTabBar&#8221;로 수정한다.
+그리고 이동하고자 하는 지점의 코드에서 다음과 같이 작성하면 된다.
+[self performSegueWithIdentifier:@&quot;moveToTabController&quot; sender:nil];  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/12/android-orientationec9db4-ebb380eab2bdeb90a0-eb958c-ed83adebb094ec9d98-ec9584ec9db4ecbd98ec9db4-ec9786ec96b4eca788-eb958c" class="link black dim">
+        android orientation이 변경될 때 탭바의 아이콘이 없어질 때
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       최신 android 버전(API 22)에서는 문제가 없어 보이지만 특정 버전(API 16, Android 4.1.2)에서 아이콘이 사라지는 문제가 발생한다.
+해결책은 AndriodManifest.xml에서 해당 Activity의 configChanges 어트리뷰트에서 orientation을 제거하면 되는데,
+근본적인 해결책이라고 볼 순 없는 것 같다.
+ &lt;activity android:name=&quot;.ui.MainActivity&quot; &lt;!&amp;#8211;android:configChanges=&quot;orientation|screenSize&quot;&amp;#8211;&gt; android:label=&quot;@string/app_name&quot; &gt; &lt;/activity&gt;  참고  Custom tab view vanishes after orientation change  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/05/java-genericec9790ec849c-t-class-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        java generic에서 T.class 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Class 클래스는 T 클래스의 메타정보를 갖는 클래스이다.
+T가 Temp라는 사용자 정의 클래스라고 할 때,
+Temp.class와 Class.forName(&#8220;com.example.Temp&#8221;)은 Class 오브젝트를 반환한다.
+이 Class 오브젝트를 사용해 Temp 클래스의 인스턴스를 생성할 수 있고, 메소드와 필드를 Reflection할 수 있다.
+Class를 사용해 T의 새로운 인스턴스를 생성하고자 할 때는 다음과 같이 newInstance()를 사용할 수 있다.
+Temp temp = (Temp) Temp.class.newInstance(); Temp temp2 = (Temp) Class.forName(&quot;com.example.Temp&quot;).newInstance();  문제는 다음과 같은 Generic 클래스를 정의할 때 타입 T의 Class 오브젝트를 T.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/04/android-cannot-load-library-error" class="link black dim">
+        android cannot load library error
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ndk build후 의존성 있는 .so 라이브러리를 일부 폰에서 로드하지 못할 경우 다음과 같이 수정해 본다.
+static { System.loadLibrary(&quot;gloox_lib&quot;); System.loadLibrary(&quot;msg_lib&quot;); }  일부 폰(sdk 22)에서는 msg_lib만 로드하면 되지만, 일부 폰(sdk 16)에서는 msg_lib가 의존하는 gloox_lib를 로드하지 못하는 경우가 발생한다.
+이럴 경우 위와 같이 의존성 있는 라이브러리를 함께 로드해주면 된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/04/android-orientationec9db4-ebb380eab2bdeb90a0-eb958c-eab090eca780ed9598eb8a94-ebb0a9ebb295" class="link black dim">
+        android orientation이 변경될 때 감지하는 방법
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      별도의 작업 없이는 orientation이 변경될 때 감지할 수 없다.
+orientation 변경을 감지할 수 있는 방법은 다음과 같이 두 가지가 있다.
+1) Activity에서 단순히 landscape와 portrait감지만 필요한 경우
+감지할 Activity에서 onConfigurationChanged() 함수를 override한다.
+@Override public void onConfigurationChanged(Configuration newConfig) { super.onConfigurationChanged(newConfig); // Checks the orientation of the screen if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) { Toast.makeText(this, &quot;landscape&quot;, Toast.LENGTH_SHORT).show(); } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){ Toast.makeText(this, &quot;portrait&quot;, Toast.LENGTH_SHORT).show(); } }  위와 같이 추가한 후 빌드해서 실행해보면 제대로 동작하지 않는다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/02/android-circle-image-view" class="link black dim">
+        android Circle Image View
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       ImageView를 round처리하거나 원형으로 처리하고자 할 때 사용할 수 있는 방법은 다음과 같다.
+먼저 RoundedAvatarDrawable 클래스를 다운로드 받아 프로젝트에 추가한다.
+레이아웃에 ImageView를 하나 추가한 후 Activity의 onCreate()함수 안에서 다음과 같이 코딩한다.
+BitmapDrawable bImage = (BitmapDrawable) getResources().getDrawable(R.drawable.unnamed); ImageView mImg = (ImageView) mCustomView.findViewById(R.id.imageView1); mImg.setImageDrawable(new RoundedAvatarDrawable(bImage.getBitmap()));  참고  How can i use RoundedAvatarDrawable for creating round image? 효율적인 Bitmap 이미지 라운딩 처리 방법 네모난 비트맵을 둥글게 사용하기  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/02/android-action-bareba5bc-ecbba4ec8aa4ed8580-ebb7b0eba19c-eb8c80ecb2b4ed9598eab8b0" class="link black dim">
+        android action bar를 커스텀 뷰로 대체하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       Action Bar에 버튼을 추가하거나 삭제하는 등의 편집을 위해서는 menu/menu_xxx.xml을 편집하면 된다.
+조금 더 다양한 레이아웃을 사용하기 위해서는 커스텀 뷰를 만들어 사용해야 한다.
+커스텀 뷰를 만들고 Action Bar의 높이 사이즈가 맞지 않을 경우 다음과 같이 styles.xml에 추가하도록 한다.
+ &lt;style name=&quot;AppTheme&quot; parent=&quot;@android:style/Theme.Holo.Light&quot;&gt; &lt;item name=&quot;android:attr/actionBarSize&quot;&gt;120dp&lt;/item&gt; &lt;/style&gt;  참고  ActionBar with Custom View Example in Android Adding Action Button  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/29/android-ndkec9790ec849c-stringstreamec9d84-ec93b8-eab2bdec9ab0-__atomic_fetch_add_4-eab480eba0a8-eba781ed81ac-ec9790eb9faceab080-ebb09cec839d" class="link black dim">
+        android ndk에서 stringstream을 쓸 경우 __atomic_fetch_add_4 관련 링크 에러가 발생
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       Android.mk에 다음과 같이 추가한다.
+ LOCAL_LDLIBS += -latomic  출처  Android NDK STL c++_shared w/LIBCXX_FORCE_REBUILD results in std::stringstream NOP  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/27/android-ndk-c-ecbd94eb939cec9790ec849c-java-object-ec839dec84b1ed95b4ec849c-parametereba19c-eb8498eab8b0eab8b0" class="link black dim">
+        android ndk c&#43;&#43; 코드에서 java object 생성해서 Parameter로 넘기기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      java 클래스에 다음과 같은 staic 메소드가 있다.
+public class MsgClient { &amp;#8230; public static void callbackRoster(RosterArray rosterArray) { &amp;#8230; }  RosterArray는 다음과 같을 때,
+import java.util.HashMap; public class RosterArray { private HashMap&lt;String, Roster&gt; m_rosters; public RosterArray() { m_rosters = new HashMap&lt;String, Roster&gt;(); } public void add(String jid, String name, int subscription) { if (m_rosters.containsKey(jid)) { Roster roster = m_rosters.get(jid); roster.SetRoster(jid, name, subscription); return; } Roster newRoster = new Roster(jid, name, subscription); m_rosters.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/27/android-urlec9790ec849c-ec9db4ebafb8eca780eba5bc-ebb984eb8f99eab8b0eba19c-eb8ba4ec9ab4eba19ceb939c-ebb09bec9584-imageviewec9790-ecb69ceba0a5" class="link black dim">
+        android url에서 이미지를 비동기로 다운로드 받아 ImageView에 출력하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Custome List Adapter의 getView() 함수 안에서 다음과 같이 사용한다.
+new DownloadImageTask(pView.GetIconView()).execute(roster.vcard().photo());  private class DownloadImageTask extends AsyncTask&lt;String, Void, Bitmap&gt; { ImageView bmImage; public DownloadImageTask(ImageView bmImage) { this.bmImage = bmImage; } protected Bitmap doInBackground(String&amp;#8230; urls) { String urldisplay = urls[0]; Bitmap mIcon11 = null; try { InputStream in = new java.net.URL(urldisplay).openStream(); mIcon11 = BitmapFactory.decodeStream(in); } catch (Exception e) { Log.e(&quot;Error&quot;, e.getMessage()); e.printStackTrace(); } return mIcon11; } protected void onPostExecute(Bitmap result) { bmImage.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/23/android-ndk-jstring-to-charor-stdstring" class="link black dim">
+        android ndk jstring to char*(or std::string)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      string toString(JNIEnv* env, jstring in) { char* nativeStr; const char* temp = env-&gt;GetStringUTFChars(in, 0); nativeStr = strdup(temp); env-&gt;ReleaseStringUTFChars(in, temp); LOGD(&quot;toString() %s&quot;, nativeStr); return string(nativeStr); }  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/22/android-ndk-native-cc-ecbd94eb939cec9790ec849c-java-ecbd94eb939c-ed98b8ecb69c" class="link black dim">
+        android ndk, native c/c&#43;&#43; 코드에서 java 코드 호출
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같이 두 가지 측면에서 접근할 수 있다.
+ 동일 쓰레드에서 jni call(java코드에서 native c/c++ 함수 호출)을 하고, 동일 스코프에서 java object의 함수를 호출하는 경우 호출측(java) 쓰레드와 콜백(native c/c++) 쓰레드가 다른 경우  동일 쓰레드에서 콜백 구현 java
+package com.jeidee.glooxforandroid; public TestClient { public native callbackTest(); public void testCallback(String param) { Log.d(&quot;JNI&quot;, param); } }  native c++
+include &quot;com\_jeidee\_glooxforandroid_NativeCall.h&quot; #include &quot;client.h&quot; JNIEXPORT void JNICALL Java\_com\_jeidee\_glooxforandroid\_NativeCall_callbackTest (JNIEnv *env, jobject obj) { static jmethodID cb = NULL; jclass cls = env-&gt;GetObjectClass(obj); if (cb == NULL) { cb = env-&gt;GetMethodID(cls, &quot;testCallback&quot;, &quot;(Ljava/lang/String;)V&quot;); if (cb == NULL) return; } env-&gt;CallVoidMethod(obj, cb, env-&gt;NewStringUTF(&quot;call testCallback()&quot;)); }  JNI함수인 callbackTest()를 호출한 java측 object에 testCallback(String) 함수가 있을 경우 위의 코드는 정상 동작한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/21/android-ndkec9790ec849c-socket-ec82acec9aa9" class="link black dim">
+        Android NDK에서 socket 사용
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       AndroidMenifest.xml에 다음과 같이 추가한다.
+ &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt; &lt;application  주의할 것은 application 태그 위에 입력해야 한다는 것이다.
+출처  Using Socket() in Android NDK  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/21/android-native-ndkec9790ec849c-eba19ceab985ed9598eab8b0" class="link black dim">
+        android native ndk에서 로깅하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       다음과 같이 선언하고 printf() 사용하듯이 사용하면 된다.
+#include &lt;android/log.h&gt; #define LOG_TAG &quot;someTag&quot; #define LOGE(&amp;#8230;) \_\_android\_log\_print(ANDROID\_LOG\_ERROR,LOG\_TAG,\\_\_VA\_ARGS\__) #define LOGW(&amp;#8230;) \_\_android\_log\_print(ANDROID\_LOG\_WARN,LOG\_TAG,\\_\_VA\_ARGS\__) #define LOGD(&amp;#8230;) \_\_android\_log\_print(ANDROID\_LOG\_DEBUG,LOG\_TAG,\\_\_VA\_ARGS\__) #define LOGI(&amp;#8230;) \_\_android\_log\_print(ANDROID\_LOG\_INFO,LOG\_TAG,\\_\_VA\_ARGS\__)  출처  Logging values of variables in Android native ndk  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/21/gloox-for-android" class="link black dim">
+        gloox for android
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      gloox를 android에서 사용하기 위한 과정을 살펴보자.
+사전 준비 작업 다음과 같은 환경이 구축되어 있다고 가정한다.
+ 개발 환경 : Mac OS X Yosemite 10.10.3 Android Studio : 1.1.0  Android SDK 경로는 ~/Android/sdk로 변경  NDK  ~/Android/ndk에 복사하고 path 지정   Android Studio에 ndk 설정 Preference &gt; External Tools에서 + 버튼을 클릭해 javah, ndk-build, ndk-build clean 도구를 추가한다.
+1) javah
+2) ndk-build
+3) ndk-build clean
+Android Project 생성후 NDK 테스트 1) GlooxForAndroid 이름을 갖는 Android Project를 생성한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/15/c-eba6aceb8885ec8aa4-eb8db0ebaaac-ed9484eba19cec84b8ec8aa4-eba78ceb93a4eab8b0" class="link black dim">
+        c&#43;&#43; 리눅스 데몬 프로세스 만들기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      c/c++ 로 구현한 어플리케이션을 데몬 프로세스로 만들기 위해 다음과 같은 과정을 거쳐 추가 코드를 작성한다.
+1) fork()를 사용해 자식프로세스를 생성 후 부모 프로세스를 종료
+2) 터미널 종료시 SIGHUP 시그널 무시
+3) (선택) 루트 디렉토리로 경로 변경
+4) setsid()로 새로운 세션 생성
+5) while(true) 루프 생성
+#include &lt;sys/types.h&gt; #include &lt;sys/stat.h&gt; #include &lt;stdio.h&gt; #include &lt;fcntl.h&gt; #include &lt;signal.h&gt; #include &lt;stdlib.h&gt; int main() { pid_t pid; // fork 에러 if (( pid = fork()) &lt; 0) exit(0); // 정상 : 부모프로세스를 종료한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/14/c-regexeba5bc-ec82acec9aa9ed95b4ec849c-ebacb8ec9e90ec97b4ec9db4-eb82a0eca79cec9db8eca780-ed9995ec9db8" class="link black dim">
+        c&#43;&#43; regex를 사용해서 문자열이 날짜인지 확인
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      정규표현식을 사용해서 주어진 문자열이 날짜인지 확인하는 코드는 다음과 같다.
+#include &lt;string&gt; #include &lt;iostream&gt; #include &lt;regex&gt; using namespace std; bool string\_util::is\_date(string source) { // yyyy-mm-dd 형식의 날짜만 지원 regex ex(&quot;d{4}-d{2}-d{2}&quot;); smatch matches; while (regex_search(source, matches, ex)) { for (auto m : matches) { cout &lt;&lt; &quot;match string is &quot; &lt;&lt; m &lt;&lt; endl; } return true; } return false; }  굳이 while (regex_search(&#8230;)) 루프를 사용하지 않고 if (regex_search())를 사용해도 되겠지만, 용법을 살펴보는 의미로 추가했다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/14/c-tail-f-eab5aced9884" class="link black dim">
+        c&#43;&#43; tail -f 구현
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ifstream을 사용해서 tail -f를 구현해 보자.
+소스코드를 먼저 본다.
+#include &lt;iostream&gt; #include &lt;fstream&gt; #include &lt;string&gt; #include &lt;unistd.h&gt; // for sleep() using namespace std; // return code #define EXIT_OK 0 #define EXIT\_INVALID\_ARGUMENTS 1 #define EXIT\_FILE\_NOT_FOUND 2 int main(int argc, char** argv) { if (argc &lt; 2) { cout &lt;&lt; &quot;Usage: log\_collector file\_path&quot; &lt;&lt; endl; return EXIT\_INVALID\_ARGUMENTS; } string logFilePath = &quot;/home/gss.dev/server/bin/var/log/ejabberd/ejabberd.log&quot;; ifstream fsLog; // open log file and go to end of file fsLog.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/14/c-ubuntuec9790ec849c-mysql-eab09cebb09c-ec97b0eab2b0" class="link black dim">
+        c&#43;&#43; ubuntu에서 mysql 개발 &amp;#8211; 연결
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       ubuntu에서 mysql 개발을 위해서, 먼저 mysql library를 다음과 같이 설치한다.
+ sudo apt-get install libmysqlcppconn-dev  그런 후 다음과 같이 단순 연결 코드를 작성한다. (test.cpp)
+#include &lt;iostream&gt; #include &quot;mysql_driver.h&quot; int main() { sql::mysql::MySQL_Driver *driver; sql::Connection *con; driver = sql::mysql::get\_mysql\_driver_instance(); con = driver-&gt;connect(&quot;tcp://127.0.0.1:3306&quot;, &quot;ejabberd&quot;, &quot;ejabberd&quot;); delete con; return 0; }  g++을 사용해서 다음과 같이 컴파일 한다.
+ g++ -Wall -I/usr/include/cppconn -o test test.cpp -L/usr/lib -lmysqlcppconn  참고  MySQL Connector/C++ Developer Guide C++ / mysql Connector &#8211; undefined reference to get_driver_instance &#8211; already tried the easy stuff  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/14/c-vector-operator-overloading" class="link black dim">
+        c&#43;&#43; vector == operator overloading
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      bool operator==(vector&lt;int&gt;&amp; lhs, vector&lt;int&gt;&amp; rhs) { if (lhs.size() != rhs.size()) return false; for (vector&lt;int&gt;::iterator lit = lhs.begin(), rit = rhs.begin(); lit != lhs.end() &amp;&amp; rit != rhs.end(); ++lit, ++rit) { if (\*lit != \*rit) return false; } return true; }  주의할 것은 클래스 내부가 아닌 외부에서 연산자를 오버로딩할 때 bool operator==() const { &#8230; } 와 같이 하는 경우 다음과 같은 컴파일 에러를 만날 수 있다.
+ non-member function cannot have cv-qualifier&#8230;
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/04/14/c11-foreach" class="link black dim">
+        c&#43;&#43;11 foreach
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       c++11에서는 foreach를 다음과 같이 사용할 수 있다.
+vector&lt;string&gt; tokens = &amp;#8230;; for(auto token : tokens) { &amp;#8230; }  참고  Range-based for loops  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/30/ngrinderec9980-smack-apieba5bc-ec82acec9aa9ed95b4-ejabberd-ed858cec8aa4ed8ab8ed9598eab8b0" class="link black dim">
+        nGrinder와 smack api를 사용해 ejabberd 테스트하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      테스트 환경 smack api는 3.2.2, nGrinder는 3.3 버전이다.
+192.168.56.101서버에 ejabberd가 실행중이고, ngrinder-controller, -agent, -monitor가 실행중이라고 가정한다.
+테스트 스크립트 작성 1) Script &gt; Create a script 버튼을 클릭해 다음과 같이 스크립트를 만들어 준다.
+ Script Name : testXmpp
+Type : Groovy
+URL to be tested :
+Create Lib and Resource folders : Check
+ 2) smack-3.2.2.jar 파일을 lib 폴더에 업로드한다.
+3) 만들어진 스크립트를 다음과 같이 수정한다.
+testXmpp.groovy
+package org.ngrinder; import static net.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/19/ngrinder-ec84a4ecb998" class="link black dim">
+        nGrinder 설치
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      nGrinder를 설치하는 방법을 살펴보자.
+사전 준비 nGrinder를 설치하려면 Oracle JDK 1.6 이상 또는 OpenJDK 1.7 버전 이상이 필요하다.
+ nGrinder의 사용 포트  Agent : Any =&gt; Controller : 16001 Agent : Any =&gt; Controller : 12000 ~ 12000+(동시 테스트 수 만큼) Controller : Any =&gt; Monitor : 13243 Controller =&gt; Public User: 톰캣 설정에 따르지만 기본값은 8080   Conroller, Agent, Monitor등의 개념을 알고자 한다면 nGrinder 문서 중에서 Architecure 문서를 참고해야 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/18/erlangeab3bc-cc-ed86b5ed95a9ed9598eab8b0-erlang-nif" class="link black dim">
+        erlang과 c/c&#43;&#43; 통합하기 &amp;#8211; erlang nif
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       erlang과 다른 언어를 통합하려면 포트를 사용하면 된다.
+포트의 경우erlang 프로세스에서 다른 언어로 작성된 프로세스를 자식 프로세스로 생성하고, 두 프로세스간 입출력 스트림을 파이프로 연결해 통신하는 방법이라고 할 수 있다.
+c언어의 경우 포트 이외에 R14부터 채용된 erlang nif을 사용해서 통합할 수 있는데, 포트보다 사용방법이 간단하다. (c++의 경우 wrapper인 nifpp를 사용해서 구현할 수 있다.)
+자세한 내용은 하단의 링크를 참고하도록 한다.
+참고  Erlang NIFs How to integrate C with Erlang program example or Erlang NIFs A c NIF wrapper for erlang to support aes/ecb/pkcs5padding add star Erlang과 C의 연결 C++11 Wrapper for Erlang NIF API/nifpp  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/17/c-eclipseec9790ec849c-c-110x-eca780ec9b90-ec84a4eca095" class="link black dim">
+        c&#43;&#43; eclipse에서 c&#43;&#43; 11/0x 지원 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       먼저 C++ 프로젝트를 생성한다.
+생성된 프로젝트에서 Properties 메뉴를 선택한다.
+C/C++ Build &gt; Settings &gt; Tool Settings &gt; GCC C++ Compiler &gt; Miscellaneous -&gt; Other Flags에 &#8220;-std=c++0x&#8221;값을 입력한다.
+C/C++ General &gt; Paths and Symbols &gt; Symbols &gt; GNU C++에서 &#8220;Add&#8221;버튼을 클릭하고 Name필드에 &#8220;GXX_EXPERIMENTAL_CXX0X&#8220;값을 입력한다. Value필드는 빈 채로 둔다.
+Apply버튼을 클릭하고 OK 버튼을 클릭한다.
+다시 빌드한다.
+참고  eclipse cdt c++11/0x support  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/16/virtual-box-vdi-ec9aa9eb9f89-eb8a98eba6aceab8b0" class="link black dim">
+        virtual box vdi 용량 늘리기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      windows 7에 virtual box를 설치하고 xubuntu를 guest os로 설치했다고 가정한다.
+저장소는 vmdk일 경우 먼저 vdi로 변경 후 사이즈를 조절하도록 한다.
+vdi 용량 늘리기 1) vmdk를 vdi로 변경
+cmd를 열고 vmdk 파일이 있는 곳으로 이동한다.
+VBoxManage.exe의 clonehd 기능으로 vmdk파일을 vdi로 변경한다.
+ &gt; &quot;C:Program FilesOracleVirtualBoxVBoxManage.exe&quot; clonehd server1-disk1.vmdk server1-disk1.vdi &amp;#8211;format vdi  2) vdi 사이즈 수정
+vdi의 사이즈를 변경하기 위해서 VBoxManage.exe의 modifyhd 기능으로 사이즈를 변경한다. &#8211;resize 매개변수의 값은 단위가 MB이며 30GB를 원할 경우 30 * 1024 = 31744를 입력하도록 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/15/ionicec9790ec849c-csseba5bc-ec82acec9aa9ed959c-flip-card-eab5aced9884ed9598eab8b0" class="link black dim">
+        ionic에서 css를 사용한 flip card 구현하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같이 간략하게 과정을 정리해 본다.
+1) html
+toggle &lt;section class=&quot;container&quot;&gt; &lt;div id=&quot;card&quot;&gt; &lt;figure class=&quot;front&quot;&gt;1&lt;/figure&gt; &lt;figure class=&quot;back&quot;&gt;2&lt;/figure&gt; &lt;/div&gt; &lt;/section&gt;  2) css
+.container { width: 200px; height: 260px; position: relative; perspective: 800px; } #card { width: 100%; height: 100%; position: absolute; transform-style: preserve-3d; transition: transform 1s; } #card figure { display: block; position: absolute; width: 100%; height: 100%; backface-visibility: hidden; } #card .front { background: red; } #card .back { background: blue; transform: rotateY( 180deg ); } #card.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/13/erlang-kerl-ec82acec9aa9ed95b4-ec84a4ecb998-ebb08f-ebb284eca084-eab480eba6ac" class="link black dim">
+        erlang kerl 사용해 설치 및 버전 관리
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      kerl을 사용해 여러 버전의 erlang을 설치한 후 원하는 버전을 활성화할 수 있다.
+자세한 내용은 다음 링크를 참고한다.
+ kerl  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/12/ubunt-open-file-max-ec8898eca095ed9598eab8b0" class="link black dim">
+        ubunt open file max 수정하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       test 계정이 있다고 가정하고 다음과 같이 작업합니다.
+1) sysctl.conf 수정
+ $ sudo vi /etc/sysctl.conf fs.file-max = 1513687 &amp;#8230; $ sudo sysctl -p fs.file-max = 1513687  2) limits.conf 수정
+ $ sudo vi /etc/security/limits.conf test soft nofile 100000 test hard nofile 100000  3) reboot
+ $ sudo reboot &amp;#8230; $ ulimit -n 100000  참고  file의 open handle 개수 늘리기  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/11/ssh-scpeb93b1ec9d84-ec9594ed98b8-ec9e85eba0a5-ec9786ec9db4-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        ssh, scp등을 암호 입력 없이 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음의 순서로 진행한다.
+1) 키 생성
+ $ ssh-keygen -t rsa  키 생성할 때는 passphrase를 빈 값으로(아무 값도 입력하지 않고 엔터) 입력해야 함을 주의하자.
+2) 공개키 리포트 서버에 등록
+ $ ssh-copy-id -i ~/.ssh/id_rsa.pub [remote-host]  여기까지 하면 완료되었다.
+다음과 같이 암호 입력없이 정상 접속 되는지 확인해 본다.
+ $ ssh [remote-host]  만약 다음과 같은 에러가 출력된다면,
+ Agent admitted failure to sign using the key.  다음과 같이 ssh 사용을 활성화한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/11/eca0a0ed82a8ec8aa4-ec82acec9aa9ebb295" class="link black dim">
+        젠킨스 사용법
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      우분투에 설치 공식홈 설치 안내를 따라 다음과 같이 설치한다.
+1) 젠킨스 설치를 위한 데비안 패키지 리포지토리사용을 위해 다음과 같이 시스템에 키를 추가해 준다.
+ wget -q -O &amp;#8211; http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add &amp;#8211;  2) /etc/apt/sources.list 파일에 다음 내용을 추가해 준다.
+ deb http://pkg.jenkins-ci.org/debian binary/  2) 젠킨스를 설치한다.
+ sudo apt-get update sudo apt-get install jenkins  실행 설치된 젠킨스를 다음과 같이 시작한다.
+ sudo service jenkins start  젠킨스의 초기 사용 포트는 8080이며 다음과 같이 변경할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/05/ejabberd-ed8ca8ed82b7-ed9b84ed82b9-ebb08f-ed9584ed84b0eba781" class="link black dim">
+        ejabberd 패킷 후킹 및 필터링
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd에서 패킷을 후킹한 후 필터링하고 싶다면 다음과 같이 커스텀 모듈을 생성해 처리하면 된다.
+다음 코드는 chat 메세지 패킷을 가로체 디버그 로그에 출력해 주는 소스이다.
+-module(mod\_packet\_hook). -behaviour(gen_mod). -export([start/2, stop/1]). -export([on\_filter\_packet/1]). -include(&quot;ejabberd.hrl&quot;). -include(&quot;jlib.hrl&quot;). -include(&quot;logger.hrl&quot;). start(\_Host, \_Opts) -&gt; ejabberd\_hooks:add(filter\_packet, global, ?MODULE, on\_filter\_packet, 0), ok. stop(_Host) -&gt; ejabberd\_hooks:delete(filter\_packet, global, ?MODULE, on\_filter\_packet, 0), ok. on\_filter\_packet({From, To, XML} = Packet) -&gt; %% does something with a packet %% should return modified Packet or atom \`drop\` to drop the packet Type = proplists:get_value(&lt;&lt;&quot;type&quot;&gt;&gt;, XML#xmlel.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/05/node-js-eab8b0ec8381ecb2ad-eb82a0ec94a8-api-ec82acec9aa9" class="link black dim">
+        node.js 기상청 날씨 api 사용
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      기상청에서는 동 단위의 날씨 예보를 API로 제공하고 있다.
+기상청 API를 사용해서 동네 날씨 예보를 구하는 방법은 좌표를 사용하는 방법과 법정동코드를 사용하는 방법 두 가지가 있다.
+날씨 조회 이 중에서 좌표를 사용하는 방법을 알아보자.
+(좌표는 위경도가 아닌 구역 그리드 좌표인 것 같다.)
+먼저 도/시, 시/군/구, 읍/면/동 정보로 좌표를 구하는 방법은 다음과 같다.
+1) 도/시 정보 구하기
+다음 URL을 사용해서 json 포맷의 도/시 정보를 구한다.
+http://www.kma.go.kr/DFSROOT/POINT/DATA/top.json.txt
+아래와 같은 json 포맷의 데이터를 구할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/04/ejabberd-external-component-ec97b0eb8f99" class="link black dim">
+        ejabberd external component 연동
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      xmpp component 개요 xmpp에는 external component 관련 공식 프로토콜인 Jabber Component Protocol이 있다.
+Jabber Component Protocol은 외부 컴포넌트를 XMPP서버와 연동하기 위한 규약을 제안하는데 크게 accept와 connect에 대한 XML 스키마와 handshake flow를 명세하고 있다.
+xmpp의 external component는 프로토콜만 준수한다면 어떤 언어를 사용해서도 구현할 수 있다. 3rd-party 컴포넌트를 ejabberd와 연동하는 방법은 Install Components and Transports to othe networks 문서를 참고하도록 한다.
+echo-bot component 만들어서 연동해 보기 node-xmpp-component 모듈을 사용해서 간단한 에코봇을 컴포넌트로 만들어 ejabberd와 연동해 보도록 하자.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/04/erlangeab3bc-java-ec97b0eb8f99" class="link black dim">
+        erlang과 java 연동
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      eclipse의 maven 프로젝트 기준으로 설명한다.
+jinterface dependency 추가 먼저 pom.xml에 다음과 같이 dependency를 추가해 준다.
+ &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;org.erlang.otp&lt;/groupId&gt; &lt;artifactId&gt;jinterface&lt;/artifactId&gt; &lt;version&gt;1.5.3.1&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt;  maven install을 수행해 jinterface-1.5.3.1.jar 를 다운로드 받는다.
+erl shell 시작 erl shell은 노드명과 매직쿠키를 지정해서 다음과 같이 실행해 준다.
+ erl -sname enode -setcookie erlang  또는
+ erl -name enode -setcookie erlang  java를 사용해 접속 테스트 eclipse에서 ErlConnection 클래스를 추가하고 다음과 같이 작성한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b" class="link black dim">
+        erlang eunit 테스트 파일 분리와 테스트 셋
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      테스트 모듈 분리 eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.
+테스트 대상 모듈을 fib.erl 이라고 가정한다.
+-module(fib). -export([fib/1]). fib(0) -&gt; 1; fib(1) -&gt; 1; fib(N) when N &gt; 1 -&gt; fib(N-1) + fib(N-2).  테스트 모듈은 fib_tests.erl 로 작성한다.
+-module(fib_tests). -include_lib(&quot;eunit/include/eunit.hrl&quot;). fib0_test() -&gt; ?assert(fib:fib(0) =:= 1). fib1_test() -&gt; ?assert(fib:fib(1) =:= 1). fib2_test() -&gt; ?assert(fib:fib(2) =:= 2). fib3_test() -&gt; ?
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/26/node-js-jquery-fileupload" class="link black dim">
+        node.js &#43; jquery fileupload
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      jQuery를 사용해 파일 업로드 처리를 쉽게 할 수 있는 방법을 찾아 보자.
+client 우선 다음 링크에서 jQuery Form Plugin(jquery.form.js)을 다운로드 받는다.
+http://jquery.malsup.com/form/
+js 디렉토리에 위치한다고 가정하고 다음과 같이 스크립트를 포함시켜 준다.
+jquery는 bower를 사용해 install 했다.
+&lt;script src=&quot;/bower_components/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;/js/jquery.form.js&quot;&gt;&lt;/script&gt; &lt;form id=&quot;form\_upload&quot; name=&quot;form\_upload&quot; action=&quot;/upload&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt; &lt;input type=&quot;file&quot; id=&quot;file&quot; name=&quot;file&quot;&gt; &lt;button type=&quot;submit&quot;&gt;업로드&lt;/button&gt; &lt;progress class=&quot;sr-only&quot;&gt;&lt;/progress&gt; &lt;/form&gt;  form을 위와 같이 추가하고 progress도 추가해 준다.
+$(document).ready(function() { $('#form_upload').ajaxForm({ beforeSubmit:function(data, frm, opt) { $('progress').
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/26/node-js-http-getec9790ec849c-multi-chunk-ecb298eba6ac" class="link black dim">
+        node.js http get에서 multi-chunk 처리
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      node.js의 http 또는 https 모듈을 사용해 url request를 할 경우 받는 데이터의 크기가 크게 되면 한 번에 데이터가 오지 않고 여러번 나뉘어 오게 된다.
+다음과 같은 코드가 있을 경우,
+http.get({host: host, port: port, path: path}, function(res) { res.on('data', function(res_data) { callback(res_data); }); });  res_data 데이터 사이즈가 클 경우 &#8216;data&#8217; 이벤트는 여러 차례 도착하게 된다.
+따라서 위와 같이 처리하면 안되고 &#8216;readable&#8217; 이벤트를 사용해서 여러 chunk 데이터를 모아서 처리해야 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/24/erlang-eunit" class="link black dim">
+        erlang eunit 기초
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      eunit 기초 eunit은 최신 버전(erlang/otp 17, eshell 6.3)에 eunit-2.2.9 버전이 포함되어 있다.
+eunit을 사용하려면 다음과 같은 순서로 진행한다.
+ 테스트 코드 작성 eunit 모듈을 사용해 테스트 수행  테스트 코드 작성하는 방법 먼저 살펴 보도록 한다.
+테스트 코드 작성 먼저 eunit 헤더 파일을 include한다.
+-module(test). -include_lib(&quot;eunit/include/eunit.hrl&quot;).  그런 후 다음과 같이 테스트 코드를 작성한다.
+reverse\_nil\_test() -&gt; [] = lists:reverse([]). reverse\_one\_test() -&gt; [1] = lists:reverse([1]). reverse\_two\_test() -&gt; [2,1] = lists:reverse([1,2]). length_test() -&gt; ?
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/14/mnesia-eab8b0ecb488-14" class="link black dim">
+        mnesia 기초 1/4
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      레코드 레코드는 튜플의 특별한 형태로 메타데이터를 정의할 수 있는 튜플이라고 할 수 있다.
+레코드 정의는 다음과 같이 할 수 있다.
+ -record(레코드명, {컬럼명 = 기본값 :: 데이터타입, &amp;#8230;.}).  레코드명과 컬럼명은 atom 타입이며 기본값은 값을 지정하지 않았을 때 입력되는 기본값이다.
+:: 뒤의 데이터타입은 컬럼의 데이터타입을 기술할 수 있고 다음과 같은 형태로 정의할 수 있다.
+기본 데이터타입  binary() : 바이너리 데이터타입 string() : 문자열 데이터타입 integer() : 정수형 데이터타입 &#8230;  이 외에도 다음과 같이 직접 데이터타입을 정의해서 사용할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/14/mnesia-eab8b0ecb488-24-match-spec" class="link black dim">
+        mnesia 기초 2/4 &amp;#8211; Match Spec
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Match Spec mnesia:select 또는 mnesia:dirty_select에 Match Spec을 정의해서 데이터를 검색할 수 있다.
+MatchSpec의 기본형은 다음과 같다.
+[{ {매치패턴}, [조건식], [결과값]}]  매치패턴은 튜플의 형태로 테이블의 레코드의 구조와 동일해야한다.
+[{ {'$1', '$2', &amp;#8230;}, [], &amp;#8230;  $1, $2는 바인드 변수이며 Match Spec안에서만 사용된다.
+조건식은 다음과 같이 논리연산자, 비교컬럼지정자, 검색값 형식으로 입력한다.
+['&gt;', '$1', &quot;abcd&quot;]  예를 들면 다음과 같다.
+-type my_color() :: red | yellow | blue; -record(shape, {name = &quot;&quot; :: string(), color = red :: fruit_color(), count = 0 :: integer()}).
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/14/mnesia-eab8b0ecb488-34-getting-started-with-mnesia-1" class="link black dim">
+        mnesia 기초 3/4 &amp;#8211; Getting Started with Mnesia 1/2
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Erlang 공식 문서 중에 Getting Started with Mnesia문서를 기준으로 몇몇내용을 추가해 다음과 같이 작성해 보았다.
+mnesia 시작 mnesia를 시작하기 위해서 다음의 과정이 필요하다.
+ erlang node에 mnesia의 데이터가 저장될 경로를 지정하여 erlang shell을 시작한다. 새로운 빈 스키마를 생성한다. 스키마는 데이터베이스의 정보를 포함한다. mnesia DBMS를 시작한다. 테이블을 생성한다. 데이터베이스 정보를 조회한다.  위의 과정을 수행하기 위해 다음과 같이 따라해 보자.
+ $ erl -mnesia dir '&quot;tmp/funky&quot;'  tmp/funky 디렉토리에 mnesia 데이터가 저장되도록 -mnesia dir 옵션을 사용해 erlang shell을 시작한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/14/mnesia-eab8b0ecb488-44-getting-started-with-mnesia-22" class="link black dim">
+        mnesia 기초 4/4 &amp;#8211; Getting Started with Mnesia 2/2
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      데이터 추가 테이블에 데이터를 추가하기 위해서는 트랜잭션을 사용해야 한다. 트랜잭션은 매개변수가 없는 익명의 fun에 여러 DB 오퍼레이션을 묶어 생성할 수 있다.
+테이블에 데이터를 입력할 때는 mnesia:write/1 함수를 사용할 수 있으면 매개변수는 레코드를 사용한다.
+insert_emp(Emp, DeptId, ProjNames) -&gt; Ename = Emp#employee.name, Fun = fun() -&gt; mnesia:write(Emp), AtDep = #at\_dep{emp = Ename, dept\_id = DeptId}, mnesia:write(AtDep), mk_projs(Ename, ProjNames) end, mnesia:transaction(Fun). mk_projs(Ename, [ProjName|Tail]) -&gt; mnesia:write(#in\_proj{emp = Ename, proj\_name = ProjName}), mk_projs(Ename, Tail); mk\_projs(\_, []) -&gt; ok.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/10/javascript-json-ebacb8ec9e90ec97b4ec9d84-ec9888ec8198eab28c-ed8faceba7b7ed8c85ed9598eab8b0" class="link black dim">
+        javascript JSON 문자열을 예쁘게 포맷팅하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같이 사용할 수 있다.
+var obj = JSON.parse(jsonTxt); var html = '&lt;pre&gt;' + JSON.stringify(obj, null, 4) + '&lt;/pre&gt;';  참고 URL은 다음과 같다.
+ http://stackoverflow.com/questions/8007763/json-formatter-lib  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/09/ha-proxyeba5bc-ec82acec9aa9ed95b4ec849c-l7-switch-eab5acec84b1" class="link black dim">
+        HA proxy를 사용해서 L7 switch 구성
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같이 HA Proxy를 구성하고 싶다고 가정하자.  A 서버 : 웹서버  http://192.168.56.101:3000/ : 홈 http://192.168.56.101:3000/admin : 관리 &#8230;  B 서버 : RESTful API 서버  http://192.168.56.102:5281/api  C 서버 : HA Proxy 서버  https://192.168.56.103/ =&gt; http://192.168.56.101:3000/ https://192.168.56.103/admin =&gt; http://192.168.56.101:3000/admin https://192.168.56.103/api =&gt; http://192.168.56.102:5281/api   네트워크 토폴로지는 다음과 같다.
+ +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ https +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ | Client | &amp;#8212;&amp;#8212;&gt;| HA Proxy | | | | 192.168.56.103 | +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ | http V +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ +&amp;#8212;&amp;#8212;-| fire wall | | +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ | | http | V | +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ | | 192.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/06/erlang-debug" class="link black dim">
+        erlang debug
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang에서 디버깅하는 방법은 다음과 같다.
+ 주의할 것은 erlang 설치 전에 wxWiget 라이브러리를 먼저 설치한 후 erlang을 설치해야 한다는 것이다. 관련 설치방법은 erlang/otp 설치 문서를 참고!  erl 노드를 실행시킨 후 debugger monitor를 실행시킨다.
+ &gt; debugger:start().  Monitor윈도가 실행되면 Module &gt; Interpret 메뉴를 선택한다.
+파일 선택기에서 디버깅하고자 하는 .erl 파일을 선택한다.
+반드시 erl 노드가 import한 모듈의 소스여야 한다.
+예를 들어 ejabberd의 디버그 쉘을 실행시킨 후 디버깅할 수 있는 모듈은 ejabberd 모듈에 한정된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/04/ha-proxy-ec84a4eca095" class="link black dim">
+        HA Proxy 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      우분투에서 HA Proxy 설정하는 방법을 알아보자.
+HA Proxy 설치 다음과 같이 1.5.x 버전을 설치한다.
+ $ sudo add-apt-repository ppa:vbernat/haproxy-1.5 $ sudo apt-get update $ sudo apt-get install haproxy  HA Proxy 설정 HA Proxy를 위와 같이 설치하면 설정파일은 다음 위치에서 찾을 수 있다.
+ /etc/haproxy/haproxy.cfg  기본 설정은 다음과 같이 두 영역으로 구분된다.
+ global: process 전역 매개변수 proxies: defaults, listen, frontend, backend 섹션으로 구성  이 중에서 listen 영역은 TCP 프록시에서만 사용하며 frontend와 backend를 모두 설정할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/04/erlang-list-sort" class="link black dim">
+        erlang list sort
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같은 리스트가 있다고 가정하자.
+&gt; List = [{a, 10}, {b, 5}, {c, 3}, {d, 6}].  두번째 요소인 정수값을 기준으로 오름차순으로 정렬하고자 한다면 다음과 같이 한다.
+&gt; lists:sort(fun(A, B) -&gt; {Name1, Order1} = A, {Name2, Order2} = B, Order1 &lt; Order2 end, List).  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/04/node-js-get-local-ip" class="link black dim">
+        node.js get local ip
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      node.js에서 지정된 도메인의 IP주소를 찾는 방법은 다음과 같다.
+var getLocalIp = function(callback) { require('dns').lookup(require('os').hostname(), function (err, add, fam) { console.log('addr: '+add); callback(add); }); };  위 코드에서 require(&#8216;os&#8217;).hostname()은 로컬호스트명이며, 해당 값에 다른 도메인을 입력해서 IP주소를 구할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/03/javascript-base64-encoding-aes-encryption" class="link black dim">
+        javascript base64 encoding  &amp;#038; aes encryption
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      BASE64 Encoding  참고 url  // Create Base64 Object var Base64={\_keyStr:&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=&quot;,encode:function(e){var t=&quot;&quot;;var n,r,i,s,o,u,a;var f=0;e=Base64.\_utf8\_encode(e);while(f&lt;e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n&gt;&gt;2;o=(n&amp;3)&lt;&lt;4|r&gt;&gt;4;u=(r&amp;15)&lt;&lt;2|i&gt;&gt;6;a=i&amp;63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this.\_keyStr.charAt(s)+this.\_keyStr.charAt(o)+this.\_keyStr.charAt(u)+this.\_keyStr.charAt(a)}return t},decode:function(e){var t=&quot;&quot;;var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,&quot;&quot;);while(f&lt;e.length){s=this.\_keyStr.indexOf(e.charAt(f++));o=this.\_keyStr.indexOf(e.charAt(f++));u=this.\_keyStr.indexOf(e.charAt(f++));a=this.\_keyStr.indexOf(e.charAt(f++));n=s&lt;&lt;2|o&gt;&gt;4;r=(o&amp;15)&lt;&lt;4|u&gt;&gt;2;i=(u&amp;3)&lt;&lt;6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64.\_utf8\_decode(t);return t},\_utf8\_encode:function(e){e=e.replace(/rn/g,&quot;n&quot;);var t=&quot;&quot;;for(var n=0;n&lt;e.length;n++){var r=e.charCodeAt(n);if(r&lt;128){t+=String.fromCharCode(r)}else if(r&gt;127&amp;&amp;r&lt;2048){t+=String.fromCharCode(r&gt;&gt;6|192);t+=String.fromCharCode(r&amp;63|128)}else{t+=String.fromCharCode(r&gt;&gt;12|224);t+=String.fromCharCode(r&gt;&gt;6&amp;63|128);t+=String.fromCharCode(r&amp;63|128)}}return t},\_utf8_decode:function(e){var t=&quot;&quot;;var n=0;var r=c1=c2=0;while(n&lt;e.length){r=e.charCodeAt(n);if(r&lt;128){t+=String.fromCharCode(r);n++}else if(r&gt;191&amp;&amp;r&lt;224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&amp;31)&lt;&lt;6|c2&amp;63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&amp;15)&lt;&lt;12|(c2&amp;63)&lt;&lt;6|c3&amp;63);n+=3}}return t}} // Define the string var string = 'Hello World!'; // Encode the String var encodedString = Base64.encode(string); console.log(encodedString); // Outputs: &quot;SGVsbG8gV29ybGQh&quot; // Decode the String var decodedString = Base64.decode(encodedString); console.log(decodedString); // Outputs: &quot;Hello World!&quot;  AES Encription  참고 URL aes.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/01/erlang-intellijec9790ec849c-eab09cebb09ced9598eab8b0" class="link black dim">
+        erlang intellij에서 개발하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      현재까지 찾아본 바로는 쓸만한 erlang ide는 eclipse + erlide와 intellij + erlang plugin 정도가 될 것 같다.
+webstorm의 경우 erlang plugin을 설치하고 소스코드를 편집할 수 있지만, 프로젝트를 생성하거나 컴파일하고 실행하는 등의 작업은 할 수 없기 때문에 제외한다.
+eclipse에 비해 intellij가 상대적으로 많은 기능을 제외하고 편집기 자체도 뛰어나며 community edition을 사용할 경우 무료로 사용할 수 있기 때문에 intellij를 사용하기로 한다.
+intellij에 elang plugin 설치 우선 intellij community edition을 설치한다.(JetBrains 홈페이지에서 다운로드할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/31/ejabberd-riak-ed999cec84b1ed9994-ec84a4ecb998" class="link black dim">
+        ejabberd riak 활성화 설치
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      riak를 활성화하려면 다음과 같이 설치한다.
+ $ ./configure &amp;#8211;enable-riak $ make &amp;&amp; make install  ejabberd 15.03 이후 릴리즈에서는 erlc 버전이 r17 이상 버전에서 정상 컴파일되는 것을 확인했다.
+ejabberd 14.07 이전 릴리즈에서는 meck.erl 관련 compile에러가 날 경우 erlc 버전이 r16b3인지 확인해야 한다.
+riak 모듈을 제외한 모든 플러그인 모듈을 설치하기 위해서는 다음과 같이 설치하면 된다.
+ $ ./configure &amp;#8211;enable-all &amp;#8211;disable-riak  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/31/ejabberd-ec84a4ecb998eca084-ed9584ec8898-eb9dbcec9db4ebb88ceb9faceba6ac" class="link black dim">
+        ejabberd 설치전 필수 라이브러리
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      PAM 라이브러리 설치
+ $ sudo apt-get install libpam0g-dev  expat 라이브러리 설치
+ $ sudo apt-get install libexpat1-dev  rebar 설치
+ $ sudo apt-get install rebar  ssl 라이브러리 설치
+ $ sudo apt-get install libssl-dev  yaml 라이브러리 설치
+ $ sudo apt-get install libyaml-dev  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/28/erlang-base64-encoding" class="link black dim">
+        erlang base64 encoding
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      base64 인코딩을 위해서는 base64 모듈의 encode/1 함수를 다음과 같이 사용한다.
+10&gt; Enc = base64:encode(&lt;&gt;). &lt;&gt; 12&gt; io:format(&quot;~s~n&quot;, [base64:decode(Enc)]). encode ok  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/28/erlang-ideeba5bc-ec9c84ed959c-webstorm-ec8690ebb3b4eab8b0" class="link black dim">
+        erlang ide를 위한 webstorm 손보기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang plugin 설치 먼저 jetbrain plugin 페이지에서 erlang plugin을 다운로드 받는다.
+적당한 폴더에 압축을 풀어놓고 Erlang폴더 전체를 webstorm이 설치된 경로의 plugin폴더 하위에 복사한다.
+마지막으로 webstorm을 재시작하면 적용된다.
+consolas 폰트 설치 이 페이지에 자세히 설명되어 있으므로 따라 설치하자.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        node.js &#43; express &#43; swig &#43; bootstrap 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      booststrap 설치 bower를 사용해서 설치하기로 한다.
+그 외의 설치방법은 한글 booststrap 사이트를 참고하자.
+먼저 node.js와 express로 app 프로젝트가 생성되었다고 가정한다.
+생성된 app 프로젝트의 root에서 다음과 같이 실행한다.
+ $ cd public $ bower install bootstrap  위와 같이 bootstrap을 설치하면 public/bower_components 하위에 bootstrap과 jquery가 설치된다.
+express + swig에 bootstrap 적용 views/layout.html파일을 다음과 같이 만든다.
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;UP Messenger&lt;/title&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;!&amp;#8211; 부트스트랩 &amp;#8211;&gt; &lt;link href=&quot;/bower_components/bootstrap/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt; &lt;!
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/ejabberd-bosheba5bc-httpseba19c-ec84a4eca095ed9598eab8b0" class="link black dim">
+        ejabberd bosh를 https로 설정하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd에서 bosh를 설정하기 위해서는 다음과 같이 ejabberd.yml에서 ejabberd_http 모듈을 설정해야 한다.
+ &amp;#8211; port: 5280 module: ejabberd_http request_handlers: &quot;/hello&quot;: mod\_http\_hello &quot;/api&quot;: mod\_http\_api web_admin: true http_poll: true http_bind: true \## register: true captcha: true  위와 같이 설정할 경우 admin, api, bosh가 모두 http://localhost:5280 하에서 동작하게 되는데 https로 설정하기 위해서는 다음과 같이 5223 tls 설정과 유사하게 설정하면 된다.
+ &amp;#8211; port: 5281 module: ejabberd_http certfile: &quot;/path/to/server.pem&quot; tls: true http_bind: true  주의할 것은 tls 설정항목이 starttls가 아니라 tls라는 것이다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/git-proxy-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        git proxy 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      git proxy 설정 corkscrew 사용할 경우 먼저 git proxy를 사용하기 위해 corkscrew를 설치한다.
+ $ sudo apt-get install corkscrew  그리고 proxy shell 스크립트를 다음과 같이 생성한다.
+ $ vi ~/git-proxy.sh  git-proxy.sh 파일을 다음과 같이 작성하고
+ #!/bin/bash /usr/bin/corkscrew proxyIP proxyPort $1 $2  git-proxy.sh파일에 실행권한을 준다.
+ $ chmod u+x ~/git-proxy.sh  마지막으로 다음과 같이 gitconfig를 수정한다.
+ $ vi ~/.gitconfig [core] gitproxy=&quot;~/git-proxy.sh&quot;  ~부분은 절대경로로 수정한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/jade-include" class="link black dim">
+        jade include
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      jade에서 jade, html, css, js 등의 외부 파일을 jade파일 안에 포함시키고 싶을 경우 다음과 같이 include를 사용하면 된다.
+ include test.html  문제는 test.html을 변수명으로 입력 받을 수 있는 방법을 찾을 수가 없어서 다음과 같이 처리할 수 밖에 없었다.(추후에 방법을 찾을 경우 내용 갱신 필요)
+ extends layout block content case menu when 'menu1' include menu1.html when 'menu2' include menu2.html default include default.html  jade는 탭을 사용하지 않으므로 들여쓰기는 공백 2문자로 처리하는 것이 좋다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/mysql-root-eab384eca095-ecb488eab8b0ed9994" class="link black dim">
+        mysql root 계정 초기화
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      mysql root 계정의 패스워드를 분실했을 경우 다음 절차를 따라 root 계정의 패스워드를 변경할 수 있다.
+ $ service mysql stop $ mysqld\_safe &amp;#8211;skip\_grant &amp; $ mysql mysql&gt; use mysql; mysql&gt; update user set password=password('root') where user='root'; mysql&gt; flush privileges;  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/node-js-expresseba19c-rest-api-eab5aced9884ed9598eab8b0" class="link black dim">
+        node.js express로 rest api 구현하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      express의 url 라우팅 처리 방식 살펴보기 express로 프로젝트를 생성 후 app.js를 열어 보자.
+소스에서 다음과 같은 내용을 찾는다.
+var routes = require('./routes/index'); var users = require('./routes/users'); &amp;#8230; app.use('/', routes); app.use('/users', users);  먼저 24라인은 html view engine과 관계가 있으므로 스킵하고 25라인을 살펴보자.
+25번 라인이 의미하는 바는 다음과 같다.
+ http://localhost:3000/users 이하 url이 입력되면 users object에서 처리한다.  users object는 9번 라인에서 ./routes/users(.js) 모듈에서 가져왔는데, 해당 모듈의 소스는 다음과 같다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        node.js express에서 swig view engine 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      express view engine으로 swig를 사용해 보자.
+express로 웹앱의 기본 골격 프로젝트를 생성했다고 가정한다.
+package.json에 다음과 같이 dependencies 모듈을 추가해 준다.
+ &quot;swig&quot;: &quot;1.4.2&quot;  app.js에 다음 코드를 추가한다.
+var swig = require('swig');  app.js에서 view engine 관련된 코드를 다음과 같이 수정한다.
+// view engine setup //app.set('views', path.join(__dirname, 'views')); //app.set('view engine', 'jade'); app.set('view engine', 'html'); app.set('views', __dirname + '/views'); app.engine('.html', swig.renderFile);  cache를 false로 하지 않으면 template html을 수정해도 cache된 template html을 사용하므로 다음과 같이 cache를 false로 설정한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/node-js-osxec9790ec849c-stanza-io-installed95a0-eb958c-hashlib-eab480eba0a8-ec9790eb9fac" class="link black dim">
+        node.js osx에서 stanza.io install할 때 hashlib 관련 에러
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같이 openssl을 upgrade하고 링크를 다시 생성한다.
+ brew install &amp;#8211;upgrade openssl brew unlink openssl &amp;&amp; brew link openssl &amp;#8211;force  에러가 발생하는 이유는 macport와 brew의 install 경로가 다음과 같이 다르기 때문이다.
+ macport : /opt/local brew : /usr/local  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/node-jseba19c-https-ec9bb9ec849cebb284-eba78ceb93a4eab8b0" class="link black dim">
+        node.js로 https 웹서버 만들기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음 문서를 참고했습니다.
+http://blog.saltfactory.net/221
+준비 openssl이 설치되어 있고 ubuntu에서 작업한다고 가정합니다.
+설치되어 있지 않을 경우 다음과 같이 설치합니다.
+ sudo apt-get install openssl  개인키를 생성합니다.
+ openssl genrsa 1024 &gt; key.pem  만들어진 개인키를 사용해 cert 인증서 파일을 생성합니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/node-jsec9980-express" class="link black dim">
+        node.js와 express
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ubuntu에서 node.js의 express를 사용해 rest api와 webapp을 구현해 본다.
+개발환경  os: ubuntu 14.10 node: v0.10.33 express: 4.0.0  express 설치  $ sudo npm install -g express $ sudo apt-get install node-express-generator  express app 생성  $ express hello $ cd hello $ npm install  npm install을 실행하면 의존성 패키지가 설치된다.
+이렇게 하면 기본 express webapp이 생성된 상태인데, 다음과 같이 확인해 볼 수 있다.
+ $ npm start  디버그 메세지를 확인하고 싶다면 npm start 전에 다음과 같이 입력한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/nodejs-https-ec84a4eca095" class="link black dim">
+        nodejs https 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      nodejs에 express사용해서 개발하고 있다면 다음과 같이 처리하면 된다.
+var debug = require('debug')('test_app'); var app = require('../app'); var http = require('http'); var https = require('https'); var fs = require('fs'); //var port = 90; var port2 = 443; //http.createServer(app).listen(port, function() { // debug('http server listening on port' + port); //}); var options = { key: fs.readFileSync('key.pem'), cert: fs.readFileSync('cert.pem') }; https.createServer(options, app).listen(port2, function() { debug('https server listening on port' + port2); });  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/npm-proxy-ec84a4eca095" class="link black dim">
+        npm proxy 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      npm proxy 설정이 필요할 경우 다음과 같이 처리한다.
+ npm config set proxy proxy주소 npm config set https-proxy proxy주소  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/ubuntuec9790ec849c-proxyeba5bc-ec82acec9aa9ed959c-apt-get-ec82acec9aa9" class="link black dim">
+        ubuntu에서 proxy를 사용한 apt-get 사용
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같이 proxy 서버를 설정해 준 다음 사용 가능하다.
+ $ sudo vi /etc/apt/apt.conf Acquire::http::Proxy &quot;http://192.168.0.1:8080/&quot;;  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/webstormec9790ec849c-node-js-ed9484eba19ceca09ded8ab8-ec839dec84b1-ec8b9c-npm-eaccess-ec9790eb9fac-ebb09cec839d" class="link black dim">
+        webstorm에서 node.js 프로젝트 생성 시 .npm eaccess 에러 발생
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같이 .npm 디렉토리의 소유권을 변경한다.
+ $ sudo chown -R Omar ~/.npm  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-clustering" class="link black dim">
+        ejabberd clustering
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      process-one 사이트에 명시된 p1-spec 문서는 찾을 수가 없었다.
+대신 install guide에 포함된 clustering guide를 살펴보고 cluster-node를 구축하는 방법을 살펴보도록 한다.
+cluster 구성을 위한 환경 다음과 같이 Virtualbox를 사용해 Windows 7 호스트에 ubuntu 14.10 게스트 OS를 설치해서 클러스터링을 구성한다.
+ 호스트 OS  Windows 7  게스트 OS #1  Ubuntu 14.10 desktop ip: 192.168.56.101 hostname: hello.world ejabberd 역할: slave node  게스트 OS #2  Ubuntu 14.10 desktop ip: 192.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-http-request-handlers" class="link black dim">
+        ejabberd http request handlers
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd 모듈 개발 문서 중에 http request handlers 개발 관련해서 간단히 정리해 봅니다.
+튜토리얼 &#8220;/hello&#8221;로 시작하는 URL에 대한 모든 요청을 처리하기 위해 &#8220;mod_http_hello&#8221;를 작성한다고 가정해 봅시다, 다음과 같이:
+ http://localhost:5280/hello/world http://localhost:5280/hello/hedgehog  process/2 함수의 절을 갖는 request 핸들러를 포함하는 &#8220;mod_http_hello.erl&#8221;파일을 작성하는 것으로 시작합니다.
+&#8220;/hello/world&#8221; 요청을 처리하는 예는 다음과 같습니다:
+process(\_LocalPath = [&quot;world&quot;], \_Request) -&gt; {xmlelement, &quot;html&quot;, [{&quot;xmlns&quot;, &quot;http://www.w3.org/1999/xhtml&quot;}], [{xmlelement, &quot;head&quot;, [], [{xmlelement, &quot;title&quot;, [], []}]}, {xmlelement, &quot;body&quot;, [], [{xmlelement, &quot;p&quot;, [], [{xmlcdata, &quot;Hello, world!
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-jabber-search-ec8898eca095ed9598eab8b0" class="link black dim">
+        ejabberd jabber search 수정하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      jabber search를 다음과 같이 수정해야 한다고 가정해 본다.
+ like query 가능해야 함 페이징 가능해야 함  우선 페이징이 가능하도록 검색폼과 결과폼을 다음과 같이 수정해야 한다.
+ 검색폼 : page no, page size 필드 추가 결과폼 : 현재 page no, 현재 page size(result count), 결과가 더 있는지 여부(more result) 필드 추가  검색폼 수정 검색폼을 수정하기 위해 ejabberd의 모듈 중에 mod_vcard.erl을 다음과 같이 수정하면 된다.
+-define(FORM(JID), ?TLFIELD(&lt;&lt;&quot;text-single&quot;&gt;&gt;, &lt;&lt;&quot;Organization Unit&quot;&gt;&gt;, &lt;&lt;&quot;orgunit&quot;&gt;&gt;), ?
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-eab080eca0b8ec98a4eab8b0" class="link black dim">
+        ejabberd mod_admin_extra 사용해서 vcard 가져오기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd에서는 커스텀 플러그인 모듈을 다음 URL에서 별도로 배포하고 있다.
+https://www.ejabberd.im/ejabberd-modules
+하지만 일부 모듈의 경우 최신 버전에서 사용할 수 없고, 수정된 모듈에서도 이전 버전과 인터페이스 호환이 되지 않아 문제를 일으키는 경우가 있으므로 주의해야 한다.
+mod_admin_extra 모듈을 사용해 ejabberdctl의 get_vcard 코맨드 실행 ejabberd-modules 중에서 mod_ctlextra와 mod_admin_extra 모듈은 ejabberdctl용(관리자 콘솔 코맨드) 확장 코맨드 모듈이다. 둘 중에서 mod_admin_extra가 최신 버전이지만 최신 버전의 ejabberd(현재 기준 14.07)에서 사용되는 gen_mod:get_module_opt/5와 호환되지 않아(mod_admin_extra는 gen_mod:get_module_opt/4를 사용) 일부 코드를 수정해야 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-ec84a4eca095ed9598eab8b0" class="link black dim">
+        ejabberd mod_admin_extra 사용해서 vcard 설정하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      이전 글에서 설명한 vcard 가져오기 관련된 내용 중에 수정할 부분이 있다.
+ejabberd_modules의 경우 최신 버전(현재 14.07)에서는 호환이 안되며 대신 ejabberd_contrib를 사용해야 한다.
+https://www.ejabberd.im/ejabberd-contrib
+ git clone git://github.com/processone/ejabberd-contrib.git  ejabberd-contrib에 포함된 mod_admin_extra는 ejaberd_modules에서 생기는 호환 문제가 해결되어 있으므로 수정할 필요없이 그대로 사용하면 된다.
+설치(mod_admin_extra.erl을 ejabberd/src파일에 복사한 후 make &amp;&amp; make install, ejabberd.yml에 mod_admin_extra 모듈 등록)하고 ejabberd를 재시작한 후 터미널에서 다음과 같이 테스트해 보자.
+ $ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; hello $ ejabberdctl set_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; &quot;world&quot; $ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; world  닉네임이 잘 변경된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-mysql-odbc-ec84a4eca095" class="link black dim">
+        ejabberd mysql odbc 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      mysql 설정은 다음과 같이 한다.
+ $ vi /etc/ejabberd/ejabberd.yml auth_method: odbc \## auth_method: internal에서 변경한다. \## MySQL server: ## odbc_type: mysql odbc_server: &quot;localhost&quot; odbc_database: &quot;ejabberd&quot; odbc_username: &quot;ejabberd&quot; odbc_password: &quot;ejabberd&quot;  위와 같이 한 후 모듈별로 db_type을 설정해야 하는데, roster와 vcard를 mysql에 저장하도록 하려면 다음과 같이 ejabberd.yml파일을 수정한다.
+ mod_roster: db_type: odbc mod\_shared\_roster: {} mod_stats: {} mod_time: {} mod_vcard: db_type: odbc  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-node-jsec9bb9ec9790ec849c-ejabberd-http-api-ed98b8ecb69ced9598eab8b0" class="link black dim">
+        ejabberd node.js웹에서 ejabberd http api 호출하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd rest api를 위한 http 커스텀 모듈 ejabberd 의 http 커스텀 모듈을 mod_http_api.erl로 만들었다고 가정한다.
+(mod_http_api.erl 관련 내용은 이전의 Post에서 참조)
+http://localhost:5280/api/session/list URI를 호출했을 때 동작하는 API를 만들기 위해 mod_http_api.erl에 다음과 같이 추가한다.
+process([&lt;&lt;&quot;session&quot;&gt;&gt;, &lt;&lt;&quot;list&quot;&gt;&gt;], _Request) -&gt; session\_list(\_Request);  session_list/1 함수는 내부 함수이며 다음과 같다.
+session\_list(\_Request) -&gt; ?DEBUG(&quot;session\_list() \_Request is ~p~n&quot;, [_Request]), List = mod\_admin\_extra:connected\_users\_info(), Y = [X || {[X,\_,\_,\_,\_], \_, \_, \_, \_, \_, \_} &lt;- List], Y1 = {[{list, Y}]}, Result1 = jiffy:encode(Y1), Result2 = to_bin(&quot;~s&quot;, [Result1]), {200, ?
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-roster-eca1b0ed9a8c-api-eba78ceb93a4eab8b0" class="link black dim">
+        ejabberd roster 조회 api 만들기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      process handler 추가 mod_http_api.erl을 작성했다고 가정한다.
+request handler에 다음과 같은 코드를 추가한다.
+process([&lt;&lt;&quot;friend&quot;&gt;&gt;, &lt;&lt;&quot;list&quot;&gt;&gt;], _Request) -&gt; try get\_friend\_list(_Request) catch throw: {Message, Result} -&gt; {200, ?OPTIONS\_HEADER, list\_to_json(Message, Result)}; \_:\_ -&gt; {200, ?OPTIONS\_HEADER, list\_to_json(&lt;&lt;&quot;An error occured during the requested work.&quot;&gt;&gt;, &lt;&lt;&quot;500&quot;&gt;&gt;)} end;  mod_http_api 모듈이 /api에 바인딩되어 있다면 위의 request 핸들러는 다음과 같은 url을 처리하게 된다.
+ /api/friend/list  try&#8230;catch 블럭은 get_friend_list/1에서 예외가 발생할 경우 catch해 올바른 포맷의 결과를 클라이언트에 전달할 수 있도록 해준다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-eab095eca09ceba19c-ed8ab9eca095-ec9ca0eca080-presence-ec9785eb8db0ec9db4ed8ab8ed9598eab8b0" class="link black dim">
+        ejabberd 강제로 특정 유저 presence 업데이트하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberdctl debug로 쉘을 시작한 후 ejabbrd_sm 모듈의 force_update_presence/1 함수를 사용해 특정 유저의 presence를 업데이트할 수 있다.
+(ejabberd@localhost)7&gt; US = {&lt;&lt;&quot;romeo&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;}. {&lt;&lt;&quot;romeo&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;} (ejabberd@localhost)9&gt; ejabberd\_sm:force\_update_presence(US). ok  XMPP 클라이언트에서는 다음과 같이 presence stanza가 갱신되어 수신된다.
+(swift client의 Debug Console에서 확인)
+ &lt;!&amp;#8211; IN &amp;#8211;&gt; &lt;presence from='romeo@localhost/2239860841418983868905790' to='romeo@localhost/2239860841418983868905790'&gt;&lt;status/&gt;&lt;c xmlns='http://jabber.org/protocol/caps' hash='sha-1' node='http://swift.im' ver='rs/tl9NCfXBpKoOYUy+JdBbPGDg='/&gt;&lt;/presence&gt;&lt;r xmlns='urn:xmpp:sm:2'/&gt;  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-eb9494ebb284eab7b8-ebaaa8eb939ceba19c-ejabberd-core-ebaaa8eb9388-ed858cec8aa4ed8ab8ed95b4-ebb3b4eab8b0" class="link black dim">
+        ejabberd 디버그 모드로 ejabberd  core 모듈 테스트해 보기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd를 실행한 상태에서 ejabberdctl의 debug 쉘을 사용해 실행 중인 ejabberd 노드에 접속해 core 모듈을 테스트해 볼 수 있다.
+먼저 debug 쉘을 실행한다.
+ ejabberdctl debug  ejabberd 모듈과 api를 확인하려면 ejabberd의 문서를 확인하거나 src 폴더의 .erl 소스파일을 열어 직접 확인해 볼 수 있다.
+여러 모듈 중에서 인증 모듈을 사용해 유저가 존재하는지 여부를 체크해 보자.
+(ejabberd@localhost)2&gt; ejabberd\_auth:is\_user_exists(&lt;&lt;&quot;test1&quot;&gt;&gt;, &lt;&lt;&quot;admin&quot;&gt;&gt;). false (ejabberd@localhost)3&gt; ejabberd\_auth:is\_user_exists(&lt;&lt;&quot;test&quot;&gt;&gt;, &lt;&lt;&quot;admin&quot;&gt;&gt;). true  위와 같이 테스트해 볼 수 있고, 실행 중인 ejabberd 노드의 상태를 모니터링하거나 dets/mnesia 테이블의 내용을 확인해 보기 위해 observer를 실행할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-ebaaa8eb9388-eab09cebb09c" class="link black dim">
+        ejabberd 모듈 개발
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd 모듈 개발 공식 문서 번역  원문  소개 ejabberd의 내부 모듈은 플러그인처럼 작동합니다. 각 모듈들은 &#8220;mod_&#8221;로 시작하는 erlang 모듈입니다. 만약 erlang을 모른다면 erlang 입문서를 먼저 보고 오세요.
+모듈 API 모든 모듈은 &#8220;gen_mod&#8221; behavior를 사용해야 합니다.
+해당 behavior는 다음 API를 제공합니다:
+start(Host, Opts) -&gt; ok stop(Host) -&gt; ok * Host = string() * Opts = [{Name, Value}] * Name = Value = string()  Host는 모듈이 동작하는 가상호스트의 이름입니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-ebb0b1ec9785eab3bc-ebb3b5ec9b90" class="link black dim">
+        ejabberd 백업과 복원
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberdctl의 admin 명령어를 사용해 백업과 복원을 수행할 수 있다.
+백업
+ $ ejabberdctl backup 백업파일명  복원
+ $ ejabberdctl restore 백업파일명  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-ec84a4ecb998ec9980-eab8b0ebb3b8-ec84a4eca095" class="link black dim">
+        ejabberd 설치와 기본 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      사전에 설치해야 하는 것 들  GNU Make GCC Libexpat 1.95 or higher Erlang/OTP R15B or higher. Libyaml 0.1.4 or higher OpenSSL 0.9.8 or higher, for STARTTLS, SASL and SSL encryption. Zlib 1.2.3 or higher, for Stream Compression support (XEP-01383
+). Optional.
+ PAM library. Optional. For Pluggable Authentication Modules (PAM). See section 3.1.5.
+ GNU Iconv 1.8 or higher, for the IRC Transport (mod irc). Optional. Not needed on
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-ec99b8ebb680-ec9db8eca69d-ebaaa8eb9388" class="link black dim">
+        ejabberd 외부 인증 모듈
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd 외부 인증 모듈  참고문서  개요 외부 인증 스크립트는 erlang port driver API를 따릅니다.
+스크립트는 다음과 같은 일을 수행하는 무한 루프로 구성해야 합니다:
+ stdin에서 AABBBBBB&#8230;.형식의 byte stream을 읽는다.  A: 데이터의 길이를 의미하는 2bytes 정수(네트워크 바이트 오더 사용) B: 다음과 같은 plain 텍스트 오퍼레이션을 포함  auth:User:Server:Password(username/password 검사) isuser:User:Server(유효한 user인지 검사) setpass:User:Server:Password(user의 암호 설정) tryregister:User:Server:Password(계정 등록 시도) removeuser:User:Server(계정 삭제) removeuser3:User:Server:Password(암호가 유효하면 계정 삭제)   stdout에 결과 출력: AABB  A: 다음 결과값에 대한 길이.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-ec99b8ebb680-ec9db8eca69d-ebaaa8eb9388eab3bc-http-ecbba4ec8aa4ed8580-ebaaa8eb9388-ec97b0eb8f99" class="link black dim">
+        ejabberd 외부 인증 모듈과 http 커스텀 모듈 연동
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd의 외부 인증 모듈을 사용해서 인증 처리를 할 경우, 기존 멤버쉽과 연동하는 방법을 찾아 보도록 한다.
+우선 들어가기에 앞서 작업 개요를 살펴보면 다음과 같다.
+ python으로 외부 인증 모듈 작성 ejabberd를 외부에서 제어할 수 있도록 mod_http_api.erl 을 작성해 커스텀 모듈 등록 mod_http_api에서 기존 멤버쉽의 회원 정보 조회(편의상 internal rest api가 존재한다고 가정한다.)  다음과 같은 로그인 처리 시나리오를 가정해 보자.
+ 로그인 할 경우 외부 인증 모듈에서 http://localhost:5280/api/auth?user=romeo&amp;server=localhost&amp;password=1234와 같은 형식으로 호출한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberdec9790-json-eb9dbcec9db4ebb88ceb9faceba6acjiffy-ecb694eab080" class="link black dim">
+        ejabberd에 json 라이브러리(jiffy) 추가
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd에서 json 라이브러리를 사용하려면 jiffy를 사용하면 된다.
+ejabberd가 설치될 때 의존성을 걸어 함께 설치되도록 하려면 다음과 같이 configure에서 &#8211;enable-json을 추가해 주면 된다.
+ ./configure &amp;#8211;prefix={&amp;#8230;} &amp;#8211;enable-json  위와 같이 설치하려면 configure를 해 준 후에 rebar를 사용해 의존 라이브러리를 다운로드 받아야 하는데, 다음과 같이 처리한다.
+ rebar get-deps rebar compile  그런 후 make &amp; make install을 실행하자.
+만약 jiffy.so 파일의 경로를 찾지 못하는 에러가 발생할 경우 다음과 같이 Makeifle.in 파일을 수정하면 된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-1ebb0b1eba78c-tcp-eb8f99ec8b9c-eca091ec868d-ecb298eba6ac" class="link black dim">
+        erlang 1백만 tcp 동시 접속 처리
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      http://www.erlang-factory.com/upload/presentations/558/efsf2012-whatsapp-scaling.pdf
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-game-server-programming" class="link black dim">
+        erlang game server programming
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      http://www.diva-portal.org/smash/get/diva2:641311/FULLTEXT01.pdf
+http://www.erlang-factory.com/upload/presentations/395/ErlangandFirst-PersonShooters.pdf
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-key-value-ed8a9ced948c-eba6acec8aa4ed8ab8ec9790ec849c-keyeba19c-value-ecb0beeab8b0" class="link black dim">
+        erlang key-value 튜플 리스트에서 key로 value 찾기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      proplists 모듈의 get_value/2를 사용하면 된다.
+proplists:get_value(Key, List).  예를 들어 다음과 같이 과일의 수량정보를 갖는 리스트가 있다고 하자.
+List = [{apple, 10}, {orange, 20}].  위 리스트에서 apple을 key로 사용해서 apple의 개수를 얻으려면 다음과 같이 하면 된다.
+proplists:get_value(apple, List).  튜플 자체를 구하고자 한다면 다음과 같이 한다.
+proplists:lookup(apple, List).  get_value/2와 lookup/2은 매치하는 튜플 중에서 첫 번째 엔트리만 반환하기 때문에 모두 찾고자 한다면 get_all_values/2나 lookup_all/2을 사용해야 한다. 단 결과는 리스트로 반환된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-otp-eb9494ec9e90ec9db8-ecbba8ec8589" class="link black dim">
+        erlang otp 디자인 컨셉
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      supervision tree erlang otp 디자인 컨셉의 기본은 supervision tree이다.
+supervision tree는 supervisor(감독 프로세스)와 worker(실제 업무 수행 프로세스) 기반으로 모델링한 프로세스 구조이다.
+ worker는 계산 등의 실제 업무를 수행하는 프로세스이다. supervisor는 worker의 행동을 모니터하는 프로세스이며 worker에 이상을 감지하면 worker를 재시작할 수 있다. supervision tree는 worker와 supervisor의 계층적인 구조를 갖고, 내고장성(fault-tolerant) 소프트웨어 디자인을 가능케 한다.    위 그림은 Supervision Tree이며 박스는 supervisor를, 원은 worker를 나타낸다.
+behaviours supervision tree에서 대부분의 프로세스는 동일한 패턴에 동일한 구조를 갖는다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-timestamp-ec96bbeab8b0" class="link black dim">
+        erlang timestamp 얻기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      os모듈의 timestamp/0 함수를 사용한다.
+{MegaSecs, Secs, MicroSecs} = os:timestamp().  MegaSecs는 seconds의 (1000 * 1000)배이다.
+위의 결과값을 milliseconds로 변환하기 위해서는 microseconds를 구해서 1000으로 나눠줘야 한다.
+((MegaSecs\*1000000 + Secs) \* 1000000 + MicroSecs)/1000.  소숫점 이하를 버리고자 한다면 div 연산을 사용해서 몫만 구하면 된다.
+((MegaSecs\*1000000 + Secs) \* 1000000 + MicroSecs) div 1000.  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-ebacb8ec9e90ec97b4-ed8faceba7b7-ed9b84-binaryeba19c-ebb380ed9998" class="link black dim">
+        erlang 문자열 포맷 후 binary로 변환
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      c의 sprintf() 같은 문자열 포맷 함수인 io_lib:format()을 사용하면 &#8220;Count : 10&#8221; 과 같은 문자열을 binary로 만들 수 있다.
+Count = 20. Result = io_lib:format(&quot;Count : ~p&quot;, [Count]). Bin = binary:list\_to\_bin(Result).  또는 간략하게 다음과 같이 줄일 수도 있다.
+Bin = binary:list\_to\_bin(io_lib:format(&quot;Count : ~p&quot;, [Count]).  erlang에서 문자열이 곧 리스트이기 때문에 binary 모듈의 list_to_bin()함수의 매개변수로 리스트 대신 문자열을 입력해도 된다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-ebacb8ec9e90ec97b4-ed8faceba7b7ed8c85" class="link black dim">
+        erlang 문자열 포맷팅
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      문자열 포맷하기 위해서는 io_lib:format/2 함수를 사용하면 된다.
+하지만 다음과 같이 바로 사용할 수 없는 형태이다.
+17&gt; Str = io_lib:format(&quot;name=~p&amp;age=~p&quot;, [&quot;romeo&quot;, 10]). [110,97,109,101,61,&quot;\&quot;romeo\&quot;&quot;,38,97,103,101,61,&quot;10&quot;] 18&gt; Str. [110,97,109,101,61,&quot;\&quot;romeo\&quot;&quot;,38,97,103,101,61,&quot;10&quot;] 19&gt;  이럴 경우 lists모듈의 flatten/1 함수를 사용한다.
+19&gt; Result = lists:flatten(Str). &quot;name=\&quot;romeo\&quot;&amp;age=10&quot;  한 줄로 줄여서 다음과 같이 사용해도 된다.
+20&gt; lists:flatten(io_lib:format(&quot;name=~p&amp;age=~p&quot;, [&quot;romeo&quot;, 10])). &quot;name=\&quot;romeo\&quot;&amp;age=10&quot;  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-ec84a4ecb998" class="link black dim">
+        erlang 설치
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang/otp 설치 준비 우선 git repository에서 clone합니다.
+ git clone git://github.com/erlang/otp.git  ubuntu : aptitude는 다음과 같이 설치합니다.
+ sudo apt-get install aptitude  erlang/otp의 기본 설치를 원할 경우
+ubuntu
+ aptitude install autoconf libncurses-dev build-essential  centos 6.*
+ yum install ncurses-devel  wxWidgets과 함께 설치를 원할 경우
+ aptitude install libwxgtk2.8-dev libgl1-mesa-dev libglu1-mesa-dev libpng3  jinterface와 함께 설치를 원할 경우
+ aptitude install sun-java6-jre sun-java6-jdk sun-java6-bin  다른 c++ 프로젝트와 함께 설치를 원할 경우
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-ec9d98-caseec9980-if" class="link black dim">
+        erlang 의 case와 if
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang에서는 조건 분기문에 해당하는 case와 if가 다른 언어와는 형태가 조금 다르다.
+처음 보면 어떻게 사용해야 할지 감이 오지 않는데, 알고 보면 다른 언어와 크게 다르지도 않다는 것을 알 수 있다.
+erlang의 if와 case는 가드(guard)를 이용한 구문으로 되어 있는데, if와 case를 살펴보기 전에 먼저 가드를 간략히 살펴보자.
+guard 가드는 true와 false 애텀으로 평가받는 식이며 다음과 같은 형식으로 사용할 수 있다.
+max(X, Y) when X &gt; Y -&gt; X; max(X, Y) -&gt; Y.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlangotp-application" class="link black dim">
+        erlang/otp application
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      application concept 어떤 특정 기능을 수행하는 코드를 작성할 때, 우리는 다른 시스템에서 재사용될 수 있으며, 유닛으로써 시작과 중지할 수 있는 컴포넌트인 application에 코드를 작성할 수 있길 원한다.
+이것을 위해 Erlang/OTP에서는 application callback module을 제공한다. application이 어떻게 시작되고 중지될 수 있는지에 대해서는 application callback moudule과 함께 설명하도록 하겠다.
+application 명세는 application resource file에 포함하는데, 해당 명세에는 application을 구성하는 모듈과 callback module의 이름이 명시되어 있다.
+코드 패키징을 위한 Erlang/OTP 도구인 systool을 사용한다면(자세한 내용은 Release참조) , 각각의 application 코드들은 미리 정의된 디렉토리 구조(뒤에 설명함)를 따르는 구분된 디렉토리에 위치해야 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlangec9790ec849c-httphttps-posted9598eab8b0" class="link black dim">
+        erlang에서 http(https)  post하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      http(https) post하는 대표적인 방법은 urlencoded방식과 json방식이 있다.
+가장 보편적으로 사용되는 urlencoded 방식의 코드는 다음과 같다.
+post_test1() -&gt; Method = post, URL = &quot;https://www.google.co.kr/search&quot;, Header = [], Type = &quot;application/x-www-form-urlencoded&quot;, Body = &quot;q=erlang+http+post+example&quot;, HTTPOptions = [{ssl, [{verify, 0}]}], Options = [], R = httpc:request(Method, {URL, Header, Type, Body}, HTTPOptions, Options), io:format(&quot;~p&quot;, [R]), ok.  json 방식은 다음과 같이 Type을 &ldquo;application/json&rdquo;으로 설정하고 , Body를 json 데이터로 입력해서 post하면 된다.
+post_test2() -&gt; Method = post, URL = &quot;https://www.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlangec9790ec849c-https-client-eab5aced9884" class="link black dim">
+        erlang에서 https client 구현
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       쉘에서 테스트하기 stackoverflow의 자료를 참고해서 테스트해 보았다.
+해당 링크에선 언급하고 있지 않지만 ssl을 시작할 때 오류가 발생할 경우 다음과 같은 순서로 application을 시작해야 한다.
+ 주의: asn1에서 1은 숫자 &#8216;1&#8217;이지 영문자 &#8216;l&#8217;이 아니다.
+ application:start(asn1). application:start(public_key). application:start(crypto). application:start(ssl). application:start(inets).  그런 후 httpc 모듈을 사용해서 url을 request한다.
+httpc:request(head, {&quot;https://github.com/ostinelli/misultin&quot;, []}, [{ssl, [{verify, 0}]}], []).  결과는 다음과 같다.
+{ok,{ {&quot;HTTP/1.1&quot;,200,&quot;OK&quot;}, [{&quot;cache-control&quot;,&quot;no-cache&quot;}, {&quot;date&quot;,&quot;Wed, 17 Dec 2014 02:39:06 GMT&quot;}, {&quot;server&quot;,&quot;GitHub.com&quot;}, {&quot;vary&quot;,&quot;X-PJAX&quot;}, {&quot;content-type&quot;,&quot;text/html; charset=utf-8&quot;}, {&quot;status&quot;,&quot;200 OK&quot;}, &amp;#8230; (중간 생략) []}}  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlangec9790ec849c-md5-hash-key-ec839dec84b1ed9598eab8b0" class="link black dim">
+        erlang에서 md5 hash key 생성하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang 모듈의 md5/1 함수를 사용하면 md5 hash 를 생성할 수 있다.
+33&gt; erlang:md5(&quot;abcdefg&quot;). &lt;&lt;122,198,108,15,20,141,233,81,155,139,210,100,49,44,77, 100&gt;&gt;  md5는 128bit 숫자이고 위의 결과가 의미하는 바는 1byte * 16개의 binary 데이터를 의미하기 때문에 8 * 16 = 128(bit)가 된다.
+1byte 정수를 16진수(hex code) 문자열로 변환해서 출력하고 싶을 경우 바이너리를 해석(binary comprehensions, &lt;=)해서 다음과 같이 출력할 수 있다.
+lists:flatten([io_lib:format(&quot;~2.16.0b&quot;, [B]) || &lt;&lt;B&gt;&gt; &lt;= erlang:md5(&quot;abcd&quot;)]).  리스트 해석(list comprehensions)과 달리 바이너리 해석은 &lt;- 대신 &lt;= 연산자를 사용한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/virtualbox-eab28cec8aa4ed8ab8eab084-ed86b5ec8ba0-ed9998eab2bd-eab5acec84b1" class="link black dim">
+        virtualbox 게스트간 통신 환경 구성
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      virtualbox에 다음과 같은 환경을 구축하려고 한다.
+ 호스트  Windows 7  게스트  ubuntu 14.10 desktop #1 ubuntu 14.10 desktop #2   호스트와 게스트간 통신도 가능해야 하고 게스트간 통신도 가능해야 한다.
+ virtualbox에서 파일&gt;환경설정&gt;네트워크를 선택한다. 호스트 전용 네트워크가 비어 있을 경우 새로 추가한다. 추가한 호스트 네트워크를 더블 클릭한다. IPv4 주소를 192.168.56.1로 설정한다. IPv4 서브넷 마스크를 255.255.255.0으로 설정한다. DHCP 서버 사용에 체크를 해제한다. ubuntu 게스트 OS를 설치하고 게스트 OS의 네트워크 설정을 선택한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+    </section>
+  
+
+<ul class="pagination">
+    
+    <li>
+        <a href="/posts/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li
+    class="disabled">
+    <a href="" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    class="active"><a href="/posts/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/posts/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/posts/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="disabled"><span aria-hidden="true">&hellip;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/posts/page/20/">20</a></li>
+    
+    
+    <li
+    >
+    <a href="/posts/page/2/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li>
+        <a href="/posts/page/20/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jeidee.github.io" >
+    &copy; 2017 Erlang &amp; Go
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    <script src="https://jeidee.github.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

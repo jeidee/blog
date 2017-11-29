@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thumbnail on Erlang &amp; Go</title>
+    <link>https://jeidee.github.io/tags/thumbnail/</link>
+    <description>Recent content in Thumbnail on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jun 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jeidee.github.io/tags/thumbnail/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ios UIImage 썸네일 이미지 만들기</title>
+      <link>https://jeidee.github.io/2015/06/02/ios-uiimage-ec8db8eb84a4ec9dbc-ec9db4ebafb8eca780-eba78ceb93a4eab8b0/</link>
+      <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/02/ios-uiimage-ec8db8eb84a4ec9dbc-ec9db4ebafb8eca780-eba78ceb93a4eab8b0/</guid>
+      <description> -(UIImage\*)makeThumbnail:(UIImage\*)image withSize:(CGSize)destSize{ UIGraphicsBeginImageContext(destSize); [image drawInRect:CGRectMake(0, 0, destSize.width, destSize.height)]; UIImage* thumbnail = UIGraphicsGetImageFromCurrentImageContext(); UIGraphicsEndImageContext(); return thumbnail; }  출처  HOW TO CREATE THUMBNAIL OF UIIMAGE – XCODE IOS  </description>
+    </item>
+    
+    <item>
+      <title>ios 이미지 캐시 구현하기</title>
+      <link>https://jeidee.github.io/2015/06/02/ios-ec9db4ebafb8eca780-ecba90ec8b9c-eab5aced9884ed9598eab8b0/</link>
+      <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/02/ios-ec9db4ebafb8eca780-ecba90ec8b9c-eab5aced9884ed9598eab8b0/</guid>
+      <description>URL에서 이미지를 가져와 출력하는 것은 매우 성능이 좋지 않다. 상황에 따라서는 수 초간(또는 그 이상) 이미지를 불러오지 못하는 경우도 생길 수 있고, 비동기로 많은 이미지를 가져올 경우 상황은 더욱 좋지 않게 된다.
+이런 경우 대부분 이미지를 캐시해 놓고 이후 요청에서는 캐시에서 이미지를 불러오도록 하는데, 메모리와 디스크를 병행해서 캐시해야 프로세스를 재시작해도 캐시를 지속적으로 사용할 수 있는 이득을 볼 수 있다.
+간단한 플로우는 다음과 같다.
+1) 메모리 캐시에서 이미지를 검색한다.
+2) 없을 경우, 디스크 캐시에서 이미지를 검색한다.</description>
+    </item>
+    
+  </channel>
+</rss>
