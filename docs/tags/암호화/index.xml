@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>암호화 on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/tags/%EC%95%94%ED%98%B8%ED%99%94/</link>
+    <description>Recent content in 암호화 on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Feb 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/tags/%EC%95%94%ED%98%B8%ED%99%94/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>javascript base64 encoding  &amp;#038; aes encryption</title>
+      <link>http://jeidee.github.io/2015/02/03/javascript-base64-encoding-aes-encryption/</link>
+      <pubDate>Tue, 03 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/02/03/javascript-base64-encoding-aes-encryption/</guid>
+      <description>BASE64 Encoding  참고 url  // Create Base64 Object var Base64={\_keyStr:&amp;quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=&amp;quot;,encode:function(e){var t=&amp;quot;&amp;quot;;var n,r,i,s,o,u,a;var f=0;e=Base64.\_utf8\_encode(e);while(f&amp;lt;e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n&amp;gt;&amp;gt;2;o=(n&amp;amp;3)&amp;lt;&amp;lt;4|r&amp;gt;&amp;gt;4;u=(r&amp;amp;15)&amp;lt;&amp;lt;2|i&amp;gt;&amp;gt;6;a=i&amp;amp;63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this.\_keyStr.charAt(s)+this.\_keyStr.charAt(o)+this.\_keyStr.charAt(u)+this.\_keyStr.charAt(a)}return t},decode:function(e){var t=&amp;quot;&amp;quot;;var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,&amp;quot;&amp;quot;);while(f&amp;lt;e.length){s=this.\_keyStr.indexOf(e.charAt(f++));o=this.\_keyStr.indexOf(e.charAt(f++));u=this.\_keyStr.indexOf(e.charAt(f++));a=this.\_keyStr.indexOf(e.charAt(f++));n=s&amp;lt;&amp;lt;2|o&amp;gt;&amp;gt;4;r=(o&amp;amp;15)&amp;lt;&amp;lt;4|u&amp;gt;&amp;gt;2;i=(u&amp;amp;3)&amp;lt;&amp;lt;6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64.\_utf8\_decode(t);return t},\_utf8\_encode:function(e){e=e.replace(/rn/g,&amp;quot;n&amp;quot;);var t=&amp;quot;&amp;quot;;for(var n=0;n&amp;lt;e.length;n++){var r=e.charCodeAt(n);if(r&amp;lt;128){t+=String.fromCharCode(r)}else if(r&amp;gt;127&amp;amp;&amp;amp;r&amp;lt;2048){t+=String.fromCharCode(r&amp;gt;&amp;gt;6|192);t+=String.fromCharCode(r&amp;amp;63|128)}else{t+=String.fromCharCode(r&amp;gt;&amp;gt;12|224);t+=String.fromCharCode(r&amp;gt;&amp;gt;6&amp;amp;63|128);t+=String.fromCharCode(r&amp;amp;63|128)}}return t},\_utf8_decode:function(e){var t=&amp;quot;&amp;quot;;var n=0;var r=c1=c2=0;while(n&amp;lt;e.length){r=e.charCodeAt(n);if(r&amp;lt;128){t+=String.fromCharCode(r);n++}else if(r&amp;gt;191&amp;amp;&amp;amp;r&amp;lt;224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&amp;amp;31)&amp;lt;&amp;lt;6|c2&amp;amp;63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&amp;amp;15)&amp;lt;&amp;lt;12|(c2&amp;amp;63)&amp;lt;&amp;lt;6|c3&amp;amp;63);n+=3}}return t}} // Define the string var string = &#39;Hello World!&#39;; // Encode the String var encodedString = Base64.encode(string); console.log(encodedString); // Outputs: &amp;quot;SGVsbG8gV29ybGQh&amp;quot; // Decode the String var decodedString = Base64.decode(encodedString); console.log(decodedString); // Outputs: &amp;quot;Hello World!&amp;quot;  AES Encription  참고 URL aes.</description>
+    </item>
+    
+  </channel>
+</rss>

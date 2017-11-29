@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ngrinder on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/tags/ngrinder/</link>
+    <description>Recent content in Ngrinder on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Mar 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/tags/ngrinder/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>nGrinder와 smack api를 사용해 ejabberd 테스트하기</title>
+      <link>http://jeidee.github.io/2015/03/30/ngrinderec9980-smack-apieba5bc-ec82acec9aa9ed95b4-ejabberd-ed858cec8aa4ed8ab8ed9598eab8b0/</link>
+      <pubDate>Mon, 30 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/03/30/ngrinderec9980-smack-apieba5bc-ec82acec9aa9ed95b4-ejabberd-ed858cec8aa4ed8ab8ed9598eab8b0/</guid>
+      <description>테스트 환경 smack api는 3.2.2, nGrinder는 3.3 버전이다.
+192.168.56.101서버에 ejabberd가 실행중이고, ngrinder-controller, -agent, -monitor가 실행중이라고 가정한다.
+테스트 스크립트 작성 1) Script &amp;gt; Create a script 버튼을 클릭해 다음과 같이 스크립트를 만들어 준다.
+ Script Name : testXmpp
+Type : Groovy
+URL to be tested :
+Create Lib and Resource folders : Check
+ 2) smack-3.2.2.jar 파일을 lib 폴더에 업로드한다.
+3) 만들어진 스크립트를 다음과 같이 수정한다.
+testXmpp.groovy
+package org.ngrinder; import static net.</description>
+    </item>
+    
+    <item>
+      <title>nGrinder 설치</title>
+      <link>http://jeidee.github.io/2015/03/19/ngrinder-ec84a4ecb998/</link>
+      <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/03/19/ngrinder-ec84a4ecb998/</guid>
+      <description>nGrinder를 설치하는 방법을 살펴보자.
+사전 준비 nGrinder를 설치하려면 Oracle JDK 1.6 이상 또는 OpenJDK 1.7 버전 이상이 필요하다.
+ nGrinder의 사용 포트  Agent : Any =&amp;gt; Controller : 16001 Agent : Any =&amp;gt; Controller : 12000 ~ 12000+(동시 테스트 수 만큼) Controller : Any =&amp;gt; Monitor : 13243 Controller =&amp;gt; Public User: 톰캣 설정에 따르지만 기본값은 8080   Conroller, Agent, Monitor등의 개념을 알고자 한다면 nGrinder 문서 중에서 Architecure 문서를 참고해야 한다.</description>
+    </item>
+    
+  </channel>
+</rss>

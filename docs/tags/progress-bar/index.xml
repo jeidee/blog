@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Progress Bar on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/tags/progress-bar/</link>
+    <description>Recent content in Progress Bar on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Aug 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/tags/progress-bar/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>go console progress bar</title>
+      <link>http://jeidee.github.io/2015/08/31/go-console-progress-bar/</link>
+      <pubDate>Mon, 31 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/08/31/go-console-progress-bar/</guid>
+      <description>console에서 진행 상태를 프로그레스바 형태로 출력하고자 할 때 다음 패키지를 사용할 수 있다.
+ https://github.com/cheggaaa/pb  사용법은 다음과 같이 간단하다.
+ package main import ( &amp;quot;github.com/cheggaaa/pb&amp;quot; &amp;quot;time&amp;quot; ) func main() { count := 100000 bar := pb.StartNew(count) for i := 0; i &amp;lt; count; i++ { bar.Increment() time.Sleep(time.Millisecond) } bar.FinishPrint(&amp;quot;The End!&amp;quot;) }  console에서 프로그레스바를 출력하는 기능의 핵심은,
+고정된 위치에 문자열을 출력하는 것이라 할 수 있다.
+(보통 Print()문을 사용할 경우 커서가 계속 이동하며 \r\n을 만나면 다음 줄의 처음으로 커서를 이동)</description>
+    </item>
+    
+  </channel>
+</rss>

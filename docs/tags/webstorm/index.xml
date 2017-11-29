@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webstorm on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/tags/webstorm/</link>
+    <description>Recent content in Webstorm on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Jan 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/tags/webstorm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>erlang ide를 위한 webstorm 손보기</title>
+      <link>http://jeidee.github.io/2015/01/28/erlang-ideeba5bc-ec9c84ed959c-webstorm-ec8690ebb3b4eab8b0/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/28/erlang-ideeba5bc-ec9c84ed959c-webstorm-ec8690ebb3b4eab8b0/</guid>
+      <description>erlang plugin 설치 먼저 jetbrain plugin 페이지에서 erlang plugin을 다운로드 받는다.
+적당한 폴더에 압축을 풀어놓고 Erlang폴더 전체를 webstorm이 설치된 경로의 plugin폴더 하위에 복사한다.
+마지막으로 webstorm을 재시작하면 적용된다.
+consolas 폰트 설치 이 페이지에 자세히 설명되어 있으므로 따라 설치하자.</description>
+    </item>
+    
+    <item>
+      <title>webstorm에서 node.js 프로젝트 생성 시 .npm eaccess 에러 발생</title>
+      <link>http://jeidee.github.io/2015/01/22/webstormec9790ec849c-node-js-ed9484eba19ceca09ded8ab8-ec839dec84b1-ec8b9c-npm-eaccess-ec9790eb9fac-ebb09cec839d/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/22/webstormec9790ec849c-node-js-ed9484eba19ceca09ded8ab8-ec839dec84b1-ec8b9c-npm-eaccess-ec9790eb9fac-ebb09cec839d/</guid>
+      <description>다음과 같이 .npm 디렉토리의 소유권을 변경한다.
+ $ sudo chown -R Omar ~/.npm  </description>
+    </item>
+    
+  </channel>
+</rss>

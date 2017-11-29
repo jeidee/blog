@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.js on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/categories/node.js/</link>
+    <description>Recent content in Node.js on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Mar 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/categories/node.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>node.js 기상청 날씨 api 사용</title>
+      <link>http://jeidee.github.io/2015/03/05/node-js-eab8b0ec8381ecb2ad-eb82a0ec94a8-api-ec82acec9aa9/</link>
+      <pubDate>Thu, 05 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/03/05/node-js-eab8b0ec8381ecb2ad-eb82a0ec94a8-api-ec82acec9aa9/</guid>
+      <description>기상청에서는 동 단위의 날씨 예보를 API로 제공하고 있다.
+기상청 API를 사용해서 동네 날씨 예보를 구하는 방법은 좌표를 사용하는 방법과 법정동코드를 사용하는 방법 두 가지가 있다.
+날씨 조회 이 중에서 좌표를 사용하는 방법을 알아보자.
+(좌표는 위경도가 아닌 구역 그리드 좌표인 것 같다.)
+먼저 도/시, 시/군/구, 읍/면/동 정보로 좌표를 구하는 방법은 다음과 같다.
+1) 도/시 정보 구하기
+다음 URL을 사용해서 json 포맷의 도/시 정보를 구한다.
+http://www.kma.go.kr/DFSROOT/POINT/DATA/top.json.txt
+아래와 같은 json 포맷의 데이터를 구할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>node.js &#43; jquery fileupload</title>
+      <link>http://jeidee.github.io/2015/02/26/node-js-jquery-fileupload/</link>
+      <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/02/26/node-js-jquery-fileupload/</guid>
+      <description>jQuery를 사용해 파일 업로드 처리를 쉽게 할 수 있는 방법을 찾아 보자.
+client 우선 다음 링크에서 jQuery Form Plugin(jquery.form.js)을 다운로드 받는다.
+http://jquery.malsup.com/form/
+js 디렉토리에 위치한다고 가정하고 다음과 같이 스크립트를 포함시켜 준다.
+jquery는 bower를 사용해 install 했다.
+&amp;lt;script src=&amp;quot;/bower_components/jquery/dist/jquery.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;quot;/js/jquery.form.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;form id=&amp;quot;form\_upload&amp;quot; name=&amp;quot;form\_upload&amp;quot; action=&amp;quot;/upload&amp;quot; method=&amp;quot;post&amp;quot; enctype=&amp;quot;multipart/form-data&amp;quot;&amp;gt; &amp;lt;input type=&amp;quot;file&amp;quot; id=&amp;quot;file&amp;quot; name=&amp;quot;file&amp;quot;&amp;gt; &amp;lt;button type=&amp;quot;submit&amp;quot;&amp;gt;업로드&amp;lt;/button&amp;gt; &amp;lt;progress class=&amp;quot;sr-only&amp;quot;&amp;gt;&amp;lt;/progress&amp;gt; &amp;lt;/form&amp;gt;  form을 위와 같이 추가하고 progress도 추가해 준다.
+$(document).ready(function() { $(&#39;#form_upload&#39;).ajaxForm({ beforeSubmit:function(data, frm, opt) { $(&#39;progress&#39;).</description>
+    </item>
+    
+    <item>
+      <title>node.js http get에서 multi-chunk 처리</title>
+      <link>http://jeidee.github.io/2015/02/26/node-js-http-getec9790ec849c-multi-chunk-ecb298eba6ac/</link>
+      <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/02/26/node-js-http-getec9790ec849c-multi-chunk-ecb298eba6ac/</guid>
+      <description>node.js의 http 또는 https 모듈을 사용해 url request를 할 경우 받는 데이터의 크기가 크게 되면 한 번에 데이터가 오지 않고 여러번 나뉘어 오게 된다.
+다음과 같은 코드가 있을 경우,
+http.get({host: host, port: port, path: path}, function(res) { res.on(&#39;data&#39;, function(res_data) { callback(res_data); }); });  res_data 데이터 사이즈가 클 경우 &amp;#8216;data&amp;#8217; 이벤트는 여러 차례 도착하게 된다.
+따라서 위와 같이 처리하면 안되고 &amp;#8216;readable&amp;#8217; 이벤트를 사용해서 여러 chunk 데이터를 모아서 처리해야 한다.</description>
+    </item>
+    
+    <item>
+      <title>javascript JSON 문자열을 예쁘게 포맷팅하기</title>
+      <link>http://jeidee.github.io/2015/02/10/javascript-json-ebacb8ec9e90ec97b4ec9d84-ec9888ec8198eab28c-ed8faceba7b7ed8c85ed9598eab8b0/</link>
+      <pubDate>Tue, 10 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/02/10/javascript-json-ebacb8ec9e90ec97b4ec9d84-ec9888ec8198eab28c-ed8faceba7b7ed8c85ed9598eab8b0/</guid>
+      <description>다음과 같이 사용할 수 있다.
+var obj = JSON.parse(jsonTxt); var html = &#39;&amp;lt;pre&amp;gt;&#39; + JSON.stringify(obj, null, 4) + &#39;&amp;lt;/pre&amp;gt;&#39;;  참고 URL은 다음과 같다.
+ http://stackoverflow.com/questions/8007763/json-formatter-lib  </description>
+    </item>
+    
+    <item>
+      <title>node.js get local ip</title>
+      <link>http://jeidee.github.io/2015/02/04/node-js-get-local-ip/</link>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/02/04/node-js-get-local-ip/</guid>
+      <description>node.js에서 지정된 도메인의 IP주소를 찾는 방법은 다음과 같다.
+var getLocalIp = function(callback) { require(&#39;dns&#39;).lookup(require(&#39;os&#39;).hostname(), function (err, add, fam) { console.log(&#39;addr: &#39;+add); callback(add); }); };  위 코드에서 require(&amp;#8216;os&amp;#8217;).hostname()은 로컬호스트명이며, 해당 값에 다른 도메인을 입력해서 IP주소를 구할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>javascript base64 encoding  &amp;#038; aes encryption</title>
+      <link>http://jeidee.github.io/2015/02/03/javascript-base64-encoding-aes-encryption/</link>
+      <pubDate>Tue, 03 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/02/03/javascript-base64-encoding-aes-encryption/</guid>
+      <description>BASE64 Encoding  참고 url  // Create Base64 Object var Base64={\_keyStr:&amp;quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=&amp;quot;,encode:function(e){var t=&amp;quot;&amp;quot;;var n,r,i,s,o,u,a;var f=0;e=Base64.\_utf8\_encode(e);while(f&amp;lt;e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n&amp;gt;&amp;gt;2;o=(n&amp;amp;3)&amp;lt;&amp;lt;4|r&amp;gt;&amp;gt;4;u=(r&amp;amp;15)&amp;lt;&amp;lt;2|i&amp;gt;&amp;gt;6;a=i&amp;amp;63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this.\_keyStr.charAt(s)+this.\_keyStr.charAt(o)+this.\_keyStr.charAt(u)+this.\_keyStr.charAt(a)}return t},decode:function(e){var t=&amp;quot;&amp;quot;;var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,&amp;quot;&amp;quot;);while(f&amp;lt;e.length){s=this.\_keyStr.indexOf(e.charAt(f++));o=this.\_keyStr.indexOf(e.charAt(f++));u=this.\_keyStr.indexOf(e.charAt(f++));a=this.\_keyStr.indexOf(e.charAt(f++));n=s&amp;lt;&amp;lt;2|o&amp;gt;&amp;gt;4;r=(o&amp;amp;15)&amp;lt;&amp;lt;4|u&amp;gt;&amp;gt;2;i=(u&amp;amp;3)&amp;lt;&amp;lt;6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64.\_utf8\_decode(t);return t},\_utf8\_encode:function(e){e=e.replace(/rn/g,&amp;quot;n&amp;quot;);var t=&amp;quot;&amp;quot;;for(var n=0;n&amp;lt;e.length;n++){var r=e.charCodeAt(n);if(r&amp;lt;128){t+=String.fromCharCode(r)}else if(r&amp;gt;127&amp;amp;&amp;amp;r&amp;lt;2048){t+=String.fromCharCode(r&amp;gt;&amp;gt;6|192);t+=String.fromCharCode(r&amp;amp;63|128)}else{t+=String.fromCharCode(r&amp;gt;&amp;gt;12|224);t+=String.fromCharCode(r&amp;gt;&amp;gt;6&amp;amp;63|128);t+=String.fromCharCode(r&amp;amp;63|128)}}return t},\_utf8_decode:function(e){var t=&amp;quot;&amp;quot;;var n=0;var r=c1=c2=0;while(n&amp;lt;e.length){r=e.charCodeAt(n);if(r&amp;lt;128){t+=String.fromCharCode(r);n++}else if(r&amp;gt;191&amp;amp;&amp;amp;r&amp;lt;224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&amp;amp;31)&amp;lt;&amp;lt;6|c2&amp;amp;63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&amp;amp;15)&amp;lt;&amp;lt;12|(c2&amp;amp;63)&amp;lt;&amp;lt;6|c3&amp;amp;63);n+=3}}return t}} // Define the string var string = &#39;Hello World!&#39;; // Encode the String var encodedString = Base64.encode(string); console.log(encodedString); // Outputs: &amp;quot;SGVsbG8gV29ybGQh&amp;quot; // Decode the String var decodedString = Base64.decode(encodedString); console.log(decodedString); // Outputs: &amp;quot;Hello World!&amp;quot;  AES Encription  참고 URL aes.</description>
+    </item>
+    
+    <item>
+      <title>node.js &#43; express &#43; swig &#43; bootstrap 사용하기</title>
+      <link>http://jeidee.github.io/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0/</guid>
+      <description>booststrap 설치 bower를 사용해서 설치하기로 한다.
+그 외의 설치방법은 한글 booststrap 사이트를 참고하자.
+먼저 node.js와 express로 app 프로젝트가 생성되었다고 가정한다.
+생성된 app 프로젝트의 root에서 다음과 같이 실행한다.
+ $ cd public $ bower install bootstrap  위와 같이 bootstrap을 설치하면 public/bower_components 하위에 bootstrap과 jquery가 설치된다.
+express + swig에 bootstrap 적용 views/layout.html파일을 다음과 같이 만든다.
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;UP Messenger&amp;lt;/title&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;!&amp;amp;#8211; 부트스트랩 &amp;amp;#8211;&amp;gt; &amp;lt;link href=&amp;quot;/bower_components/bootstrap/dist/css/bootstrap.min.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;screen&amp;quot;&amp;gt; &amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title>jade include</title>
+      <link>http://jeidee.github.io/2015/01/22/jade-include/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/22/jade-include/</guid>
+      <description>jade에서 jade, html, css, js 등의 외부 파일을 jade파일 안에 포함시키고 싶을 경우 다음과 같이 include를 사용하면 된다.
+ include test.html  문제는 test.html을 변수명으로 입력 받을 수 있는 방법을 찾을 수가 없어서 다음과 같이 처리할 수 밖에 없었다.(추후에 방법을 찾을 경우 내용 갱신 필요)
+ extends layout block content case menu when &#39;menu1&#39; include menu1.html when &#39;menu2&#39; include menu2.html default include default.html  jade는 탭을 사용하지 않으므로 들여쓰기는 공백 2문자로 처리하는 것이 좋다.</description>
+    </item>
+    
+    <item>
+      <title>node.js express로 rest api 구현하기</title>
+      <link>http://jeidee.github.io/2015/01/22/node-js-expresseba19c-rest-api-eab5aced9884ed9598eab8b0/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/22/node-js-expresseba19c-rest-api-eab5aced9884ed9598eab8b0/</guid>
+      <description>express의 url 라우팅 처리 방식 살펴보기 express로 프로젝트를 생성 후 app.js를 열어 보자.
+소스에서 다음과 같은 내용을 찾는다.
+var routes = require(&#39;./routes/index&#39;); var users = require(&#39;./routes/users&#39;); &amp;amp;#8230; app.use(&#39;/&#39;, routes); app.use(&#39;/users&#39;, users);  먼저 24라인은 html view engine과 관계가 있으므로 스킵하고 25라인을 살펴보자.
+25번 라인이 의미하는 바는 다음과 같다.
+ http://localhost:3000/users 이하 url이 입력되면 users object에서 처리한다.  users object는 9번 라인에서 ./routes/users(.js) 모듈에서 가져왔는데, 해당 모듈의 소스는 다음과 같다.</description>
+    </item>
+    
+    <item>
+      <title>node.js express에서 swig view engine 사용하기</title>
+      <link>http://jeidee.github.io/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0/</guid>
+      <description>express view engine으로 swig를 사용해 보자.
+express로 웹앱의 기본 골격 프로젝트를 생성했다고 가정한다.
+package.json에 다음과 같이 dependencies 모듈을 추가해 준다.
+ &amp;quot;swig&amp;quot;: &amp;quot;1.4.2&amp;quot;  app.js에 다음 코드를 추가한다.
+var swig = require(&#39;swig&#39;);  app.js에서 view engine 관련된 코드를 다음과 같이 수정한다.
+// view engine setup //app.set(&#39;views&#39;, path.join(__dirname, &#39;views&#39;)); //app.set(&#39;view engine&#39;, &#39;jade&#39;); app.set(&#39;view engine&#39;, &#39;html&#39;); app.set(&#39;views&#39;, __dirname + &#39;/views&#39;); app.engine(&#39;.html&#39;, swig.renderFile);  cache를 false로 하지 않으면 template html을 수정해도 cache된 template html을 사용하므로 다음과 같이 cache를 false로 설정한다.</description>
+    </item>
+    
+    <item>
+      <title>node.js osx에서 stanza.io install할 때 hashlib 관련 에러</title>
+      <link>http://jeidee.github.io/2015/01/22/node-js-osxec9790ec849c-stanza-io-installed95a0-eb958c-hashlib-eab480eba0a8-ec9790eb9fac/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/22/node-js-osxec9790ec849c-stanza-io-installed95a0-eb958c-hashlib-eab480eba0a8-ec9790eb9fac/</guid>
+      <description>다음과 같이 openssl을 upgrade하고 링크를 다시 생성한다.
+ brew install &amp;amp;#8211;upgrade openssl brew unlink openssl &amp;amp;&amp;amp; brew link openssl &amp;amp;#8211;force  에러가 발생하는 이유는 macport와 brew의 install 경로가 다음과 같이 다르기 때문이다.
+ macport : /opt/local brew : /usr/local  </description>
+    </item>
+    
+    <item>
+      <title>node.js로 https 웹서버 만들기</title>
+      <link>http://jeidee.github.io/2015/01/22/node-jseba19c-https-ec9bb9ec849cebb284-eba78ceb93a4eab8b0/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/22/node-jseba19c-https-ec9bb9ec849cebb284-eba78ceb93a4eab8b0/</guid>
+      <description>다음 문서를 참고했습니다.
+http://blog.saltfactory.net/221
+준비 openssl이 설치되어 있고 ubuntu에서 작업한다고 가정합니다.
+설치되어 있지 않을 경우 다음과 같이 설치합니다.
+ sudo apt-get install openssl  개인키를 생성합니다.
+ openssl genrsa 1024 &amp;gt; key.pem  만들어진 개인키를 사용해 cert 인증서 파일을 생성합니다.</description>
+    </item>
+    
+    <item>
+      <title>node.js와 express</title>
+      <link>http://jeidee.github.io/2015/01/22/node-jsec9980-express/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/22/node-jsec9980-express/</guid>
+      <description>ubuntu에서 node.js의 express를 사용해 rest api와 webapp을 구현해 본다.
+개발환경  os: ubuntu 14.10 node: v0.10.33 express: 4.0.0  express 설치  $ sudo npm install -g express $ sudo apt-get install node-express-generator  express app 생성  $ express hello $ cd hello $ npm install  npm install을 실행하면 의존성 패키지가 설치된다.
+이렇게 하면 기본 express webapp이 생성된 상태인데, 다음과 같이 확인해 볼 수 있다.
+ $ npm start  디버그 메세지를 확인하고 싶다면 npm start 전에 다음과 같이 입력한다.</description>
+    </item>
+    
+    <item>
+      <title>nodejs https 설정</title>
+      <link>http://jeidee.github.io/2015/01/22/nodejs-https-ec84a4eca095/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/22/nodejs-https-ec84a4eca095/</guid>
+      <description>nodejs에 express사용해서 개발하고 있다면 다음과 같이 처리하면 된다.
+var debug = require(&#39;debug&#39;)(&#39;test_app&#39;); var app = require(&#39;../app&#39;); var http = require(&#39;http&#39;); var https = require(&#39;https&#39;); var fs = require(&#39;fs&#39;); //var port = 90; var port2 = 443; //http.createServer(app).listen(port, function() { // debug(&#39;http server listening on port&#39; + port); //}); var options = { key: fs.readFileSync(&#39;key.pem&#39;), cert: fs.readFileSync(&#39;cert.pem&#39;) }; https.createServer(options, app).listen(port2, function() { debug(&#39;https server listening on port&#39; + port2); });  </description>
+    </item>
+    
+    <item>
+      <title>npm proxy 설정</title>
+      <link>http://jeidee.github.io/2015/01/22/npm-proxy-ec84a4eca095/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/22/npm-proxy-ec84a4eca095/</guid>
+      <description>npm proxy 설정이 필요할 경우 다음과 같이 처리한다.
+ npm config set proxy proxy주소 npm config set https-proxy proxy주소  </description>
+    </item>
+    
+    <item>
+      <title>webstorm에서 node.js 프로젝트 생성 시 .npm eaccess 에러 발생</title>
+      <link>http://jeidee.github.io/2015/01/22/webstormec9790ec849c-node-js-ed9484eba19ceca09ded8ab8-ec839dec84b1-ec8b9c-npm-eaccess-ec9790eb9fac-ebb09cec839d/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/22/webstormec9790ec849c-node-js-ed9484eba19ceca09ded8ab8-ec839dec84b1-ec8b9c-npm-eaccess-ec9790eb9fac-ebb09cec839d/</guid>
+      <description>다음과 같이 .npm 디렉토리의 소유권을 변경한다.
+ $ sudo chown -R Omar ~/.npm  </description>
+    </item>
+    
+    <item>
+      <title>ejabberd node.js웹에서 ejabberd http api 호출하기</title>
+      <link>http://jeidee.github.io/2015/01/21/ejabberd-node-jsec9bb9ec9790ec849c-ejabberd-http-api-ed98b8ecb69ced9598eab8b0/</link>
+      <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/21/ejabberd-node-jsec9bb9ec9790ec849c-ejabberd-http-api-ed98b8ecb69ced9598eab8b0/</guid>
+      <description>ejabberd rest api를 위한 http 커스텀 모듈 ejabberd 의 http 커스텀 모듈을 mod_http_api.erl로 만들었다고 가정한다.
+(mod_http_api.erl 관련 내용은 이전의 Post에서 참조)
+http://localhost:5280/api/session/list URI를 호출했을 때 동작하는 API를 만들기 위해 mod_http_api.erl에 다음과 같이 추가한다.
+process([&amp;lt;&amp;lt;&amp;quot;session&amp;quot;&amp;gt;&amp;gt;, &amp;lt;&amp;lt;&amp;quot;list&amp;quot;&amp;gt;&amp;gt;], _Request) -&amp;gt; session\_list(\_Request);  session_list/1 함수는 내부 함수이며 다음과 같다.
+session\_list(\_Request) -&amp;gt; ?DEBUG(&amp;quot;session\_list() \_Request is ~p~n&amp;quot;, [_Request]), List = mod\_admin\_extra:connected\_users\_info(), Y = [X || {[X,\_,\_,\_,\_], \_, \_, \_, \_, \_, \_} &amp;lt;- List], Y1 = {[{list, Y}]}, Result1 = jiffy:encode(Y1), Result2 = to_bin(&amp;quot;~s&amp;quot;, [Result1]), {200, ?</description>
+    </item>
+    
+  </channel>
+</rss>

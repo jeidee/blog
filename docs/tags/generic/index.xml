@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Generic on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/tags/generic/</link>
+    <description>Recent content in Generic on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 May 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/tags/generic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>java generic에서 T.class 사용하기</title>
+      <link>http://jeidee.github.io/2015/05/05/java-genericec9790ec849c-t-class-ec82acec9aa9ed9598eab8b0/</link>
+      <pubDate>Tue, 05 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/05/05/java-genericec9790ec849c-t-class-ec82acec9aa9ed9598eab8b0/</guid>
+      <description>Class 클래스는 T 클래스의 메타정보를 갖는 클래스이다.
+T가 Temp라는 사용자 정의 클래스라고 할 때,
+Temp.class와 Class.forName(&amp;#8220;com.example.Temp&amp;#8221;)은 Class 오브젝트를 반환한다.
+이 Class 오브젝트를 사용해 Temp 클래스의 인스턴스를 생성할 수 있고, 메소드와 필드를 Reflection할 수 있다.
+Class를 사용해 T의 새로운 인스턴스를 생성하고자 할 때는 다음과 같이 newInstance()를 사용할 수 있다.
+Temp temp = (Temp) Temp.class.newInstance(); Temp temp2 = (Temp) Class.forName(&amp;quot;com.example.Temp&amp;quot;).newInstance();  문제는 다음과 같은 Generic 클래스를 정의할 때 타입 T의 Class 오브젝트를 T.</description>
+    </item>
+    
+  </channel>
+</rss>

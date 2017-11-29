@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Erlang &amp; Go  | Node.js</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.31.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='http://jeidee.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+      <link href="http://jeidee.github.io/categories/node.js/index.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
+      <link href="http://jeidee.github.io/categories/node.js/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go" />
+    
+
+    <meta property="og:title" content="Node.js" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://jeidee.github.io/categories/node.js/" />
+
+
+
+<meta property="og:updated_time" content="2015-03-05T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Node.js">
+<meta itemprop="description" content="">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Node.js"/>
+<meta name="twitter:description" content=""/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('http://jeidee.github.io/images/gohugo-default-sample-hero-image.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://jeidee.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Erlang &amp; Go
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+          Node.js
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
+      <p>Below you will find pages that utilize the taxonomy term “Node.js”</p>
+    </div>
+  </article>
+  <div class="mw8 center">
+    
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/05/node-js-eab8b0ec8381ecb2ad-eb82a0ec94a8-api-ec82acec9aa9" class="link black dim">
+        node.js 기상청 날씨 api 사용
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      기상청에서는 동 단위의 날씨 예보를 API로 제공하고 있다.
+기상청 API를 사용해서 동네 날씨 예보를 구하는 방법은 좌표를 사용하는 방법과 법정동코드를 사용하는 방법 두 가지가 있다.
+날씨 조회 이 중에서 좌표를 사용하는 방법을 알아보자.
+(좌표는 위경도가 아닌 구역 그리드 좌표인 것 같다.)
+먼저 도/시, 시/군/구, 읍/면/동 정보로 좌표를 구하는 방법은 다음과 같다.
+1) 도/시 정보 구하기
+다음 URL을 사용해서 json 포맷의 도/시 정보를 구한다.
+http://www.kma.go.kr/DFSROOT/POINT/DATA/top.json.txt
+아래와 같은 json 포맷의 데이터를 구할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/26/node-js-jquery-fileupload" class="link black dim">
+        node.js &#43; jquery fileupload
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      jQuery를 사용해 파일 업로드 처리를 쉽게 할 수 있는 방법을 찾아 보자.
+client 우선 다음 링크에서 jQuery Form Plugin(jquery.form.js)을 다운로드 받는다.
+http://jquery.malsup.com/form/
+js 디렉토리에 위치한다고 가정하고 다음과 같이 스크립트를 포함시켜 준다.
+jquery는 bower를 사용해 install 했다.
+&lt;script src=&quot;/bower_components/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;/js/jquery.form.js&quot;&gt;&lt;/script&gt; &lt;form id=&quot;form\_upload&quot; name=&quot;form\_upload&quot; action=&quot;/upload&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt; &lt;input type=&quot;file&quot; id=&quot;file&quot; name=&quot;file&quot;&gt; &lt;button type=&quot;submit&quot;&gt;업로드&lt;/button&gt; &lt;progress class=&quot;sr-only&quot;&gt;&lt;/progress&gt; &lt;/form&gt;  form을 위와 같이 추가하고 progress도 추가해 준다.
+$(document).ready(function() { $('#form_upload').ajaxForm({ beforeSubmit:function(data, frm, opt) { $('progress').
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/26/node-js-http-getec9790ec849c-multi-chunk-ecb298eba6ac" class="link black dim">
+        node.js http get에서 multi-chunk 처리
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      node.js의 http 또는 https 모듈을 사용해 url request를 할 경우 받는 데이터의 크기가 크게 되면 한 번에 데이터가 오지 않고 여러번 나뉘어 오게 된다.
+다음과 같은 코드가 있을 경우,
+http.get({host: host, port: port, path: path}, function(res) { res.on('data', function(res_data) { callback(res_data); }); });  res_data 데이터 사이즈가 클 경우 &#8216;data&#8217; 이벤트는 여러 차례 도착하게 된다.
+따라서 위와 같이 처리하면 안되고 &#8216;readable&#8217; 이벤트를 사용해서 여러 chunk 데이터를 모아서 처리해야 한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/10/javascript-json-ebacb8ec9e90ec97b4ec9d84-ec9888ec8198eab28c-ed8faceba7b7ed8c85ed9598eab8b0" class="link black dim">
+        javascript JSON 문자열을 예쁘게 포맷팅하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같이 사용할 수 있다.
+var obj = JSON.parse(jsonTxt); var html = '&lt;pre&gt;' + JSON.stringify(obj, null, 4) + '&lt;/pre&gt;';  참고 URL은 다음과 같다.
+ http://stackoverflow.com/questions/8007763/json-formatter-lib  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/04/node-js-get-local-ip" class="link black dim">
+        node.js get local ip
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      node.js에서 지정된 도메인의 IP주소를 찾는 방법은 다음과 같다.
+var getLocalIp = function(callback) { require('dns').lookup(require('os').hostname(), function (err, add, fam) { console.log('addr: '+add); callback(add); }); };  위 코드에서 require(&#8216;os&#8217;).hostname()은 로컬호스트명이며, 해당 값에 다른 도메인을 입력해서 IP주소를 구할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/03/javascript-base64-encoding-aes-encryption" class="link black dim">
+        javascript base64 encoding  &amp;#038; aes encryption
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      BASE64 Encoding  참고 url  // Create Base64 Object var Base64={\_keyStr:&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=&quot;,encode:function(e){var t=&quot;&quot;;var n,r,i,s,o,u,a;var f=0;e=Base64.\_utf8\_encode(e);while(f&lt;e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n&gt;&gt;2;o=(n&amp;3)&lt;&lt;4|r&gt;&gt;4;u=(r&amp;15)&lt;&lt;2|i&gt;&gt;6;a=i&amp;63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this.\_keyStr.charAt(s)+this.\_keyStr.charAt(o)+this.\_keyStr.charAt(u)+this.\_keyStr.charAt(a)}return t},decode:function(e){var t=&quot;&quot;;var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,&quot;&quot;);while(f&lt;e.length){s=this.\_keyStr.indexOf(e.charAt(f++));o=this.\_keyStr.indexOf(e.charAt(f++));u=this.\_keyStr.indexOf(e.charAt(f++));a=this.\_keyStr.indexOf(e.charAt(f++));n=s&lt;&lt;2|o&gt;&gt;4;r=(o&amp;15)&lt;&lt;4|u&gt;&gt;2;i=(u&amp;3)&lt;&lt;6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64.\_utf8\_decode(t);return t},\_utf8\_encode:function(e){e=e.replace(/rn/g,&quot;n&quot;);var t=&quot;&quot;;for(var n=0;n&lt;e.length;n++){var r=e.charCodeAt(n);if(r&lt;128){t+=String.fromCharCode(r)}else if(r&gt;127&amp;&amp;r&lt;2048){t+=String.fromCharCode(r&gt;&gt;6|192);t+=String.fromCharCode(r&amp;63|128)}else{t+=String.fromCharCode(r&gt;&gt;12|224);t+=String.fromCharCode(r&gt;&gt;6&amp;63|128);t+=String.fromCharCode(r&amp;63|128)}}return t},\_utf8_decode:function(e){var t=&quot;&quot;;var n=0;var r=c1=c2=0;while(n&lt;e.length){r=e.charCodeAt(n);if(r&lt;128){t+=String.fromCharCode(r);n++}else if(r&gt;191&amp;&amp;r&lt;224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&amp;31)&lt;&lt;6|c2&amp;63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&amp;15)&lt;&lt;12|(c2&amp;63)&lt;&lt;6|c3&amp;63);n+=3}}return t}} // Define the string var string = 'Hello World!'; // Encode the String var encodedString = Base64.encode(string); console.log(encodedString); // Outputs: &quot;SGVsbG8gV29ybGQh&quot; // Decode the String var decodedString = Base64.decode(encodedString); console.log(decodedString); // Outputs: &quot;Hello World!&quot;  AES Encription  참고 URL aes.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/28/node-js-express-swig-bootstrap-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        node.js &#43; express &#43; swig &#43; bootstrap 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      booststrap 설치 bower를 사용해서 설치하기로 한다.
+그 외의 설치방법은 한글 booststrap 사이트를 참고하자.
+먼저 node.js와 express로 app 프로젝트가 생성되었다고 가정한다.
+생성된 app 프로젝트의 root에서 다음과 같이 실행한다.
+ $ cd public $ bower install bootstrap  위와 같이 bootstrap을 설치하면 public/bower_components 하위에 bootstrap과 jquery가 설치된다.
+express + swig에 bootstrap 적용 views/layout.html파일을 다음과 같이 만든다.
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;UP Messenger&lt;/title&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;!&amp;#8211; 부트스트랩 &amp;#8211;&gt; &lt;link href=&quot;/bower_components/bootstrap/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt; &lt;!
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/jade-include" class="link black dim">
+        jade include
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      jade에서 jade, html, css, js 등의 외부 파일을 jade파일 안에 포함시키고 싶을 경우 다음과 같이 include를 사용하면 된다.
+ include test.html  문제는 test.html을 변수명으로 입력 받을 수 있는 방법을 찾을 수가 없어서 다음과 같이 처리할 수 밖에 없었다.(추후에 방법을 찾을 경우 내용 갱신 필요)
+ extends layout block content case menu when 'menu1' include menu1.html when 'menu2' include menu2.html default include default.html  jade는 탭을 사용하지 않으므로 들여쓰기는 공백 2문자로 처리하는 것이 좋다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/node-js-expresseba19c-rest-api-eab5aced9884ed9598eab8b0" class="link black dim">
+        node.js express로 rest api 구현하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      express의 url 라우팅 처리 방식 살펴보기 express로 프로젝트를 생성 후 app.js를 열어 보자.
+소스에서 다음과 같은 내용을 찾는다.
+var routes = require('./routes/index'); var users = require('./routes/users'); &amp;#8230; app.use('/', routes); app.use('/users', users);  먼저 24라인은 html view engine과 관계가 있으므로 스킵하고 25라인을 살펴보자.
+25번 라인이 의미하는 바는 다음과 같다.
+ http://localhost:3000/users 이하 url이 입력되면 users object에서 처리한다.  users object는 9번 라인에서 ./routes/users(.js) 모듈에서 가져왔는데, 해당 모듈의 소스는 다음과 같다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/node-js-expressec9790ec849c-swig-view-engine-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        node.js express에서 swig view engine 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      express view engine으로 swig를 사용해 보자.
+express로 웹앱의 기본 골격 프로젝트를 생성했다고 가정한다.
+package.json에 다음과 같이 dependencies 모듈을 추가해 준다.
+ &quot;swig&quot;: &quot;1.4.2&quot;  app.js에 다음 코드를 추가한다.
+var swig = require('swig');  app.js에서 view engine 관련된 코드를 다음과 같이 수정한다.
+// view engine setup //app.set('views', path.join(__dirname, 'views')); //app.set('view engine', 'jade'); app.set('view engine', 'html'); app.set('views', __dirname + '/views'); app.engine('.html', swig.renderFile);  cache를 false로 하지 않으면 template html을 수정해도 cache된 template html을 사용하므로 다음과 같이 cache를 false로 설정한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/node-js-osxec9790ec849c-stanza-io-installed95a0-eb958c-hashlib-eab480eba0a8-ec9790eb9fac" class="link black dim">
+        node.js osx에서 stanza.io install할 때 hashlib 관련 에러
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같이 openssl을 upgrade하고 링크를 다시 생성한다.
+ brew install &amp;#8211;upgrade openssl brew unlink openssl &amp;&amp; brew link openssl &amp;#8211;force  에러가 발생하는 이유는 macport와 brew의 install 경로가 다음과 같이 다르기 때문이다.
+ macport : /opt/local brew : /usr/local  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/node-jseba19c-https-ec9bb9ec849cebb284-eba78ceb93a4eab8b0" class="link black dim">
+        node.js로 https 웹서버 만들기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음 문서를 참고했습니다.
+http://blog.saltfactory.net/221
+준비 openssl이 설치되어 있고 ubuntu에서 작업한다고 가정합니다.
+설치되어 있지 않을 경우 다음과 같이 설치합니다.
+ sudo apt-get install openssl  개인키를 생성합니다.
+ openssl genrsa 1024 &gt; key.pem  만들어진 개인키를 사용해 cert 인증서 파일을 생성합니다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/node-jsec9980-express" class="link black dim">
+        node.js와 express
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ubuntu에서 node.js의 express를 사용해 rest api와 webapp을 구현해 본다.
+개발환경  os: ubuntu 14.10 node: v0.10.33 express: 4.0.0  express 설치  $ sudo npm install -g express $ sudo apt-get install node-express-generator  express app 생성  $ express hello $ cd hello $ npm install  npm install을 실행하면 의존성 패키지가 설치된다.
+이렇게 하면 기본 express webapp이 생성된 상태인데, 다음과 같이 확인해 볼 수 있다.
+ $ npm start  디버그 메세지를 확인하고 싶다면 npm start 전에 다음과 같이 입력한다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/nodejs-https-ec84a4eca095" class="link black dim">
+        nodejs https 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      nodejs에 express사용해서 개발하고 있다면 다음과 같이 처리하면 된다.
+var debug = require('debug')('test_app'); var app = require('../app'); var http = require('http'); var https = require('https'); var fs = require('fs'); //var port = 90; var port2 = 443; //http.createServer(app).listen(port, function() { // debug('http server listening on port' + port); //}); var options = { key: fs.readFileSync('key.pem'), cert: fs.readFileSync('cert.pem') }; https.createServer(options, app).listen(port2, function() { debug('https server listening on port' + port2); });  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/npm-proxy-ec84a4eca095" class="link black dim">
+        npm proxy 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      npm proxy 설정이 필요할 경우 다음과 같이 처리한다.
+ npm config set proxy proxy주소 npm config set https-proxy proxy주소  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/webstormec9790ec849c-node-js-ed9484eba19ceca09ded8ab8-ec839dec84b1-ec8b9c-npm-eaccess-ec9790eb9fac-ebb09cec839d" class="link black dim">
+        webstorm에서 node.js 프로젝트 생성 시 .npm eaccess 에러 발생
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같이 .npm 디렉토리의 소유권을 변경한다.
+ $ sudo chown -R Omar ~/.npm  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-node-jsec9bb9ec9790ec849c-ejabberd-http-api-ed98b8ecb69ced9598eab8b0" class="link black dim">
+        ejabberd node.js웹에서 ejabberd http api 호출하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd rest api를 위한 http 커스텀 모듈 ejabberd 의 http 커스텀 모듈을 mod_http_api.erl로 만들었다고 가정한다.
+(mod_http_api.erl 관련 내용은 이전의 Post에서 참조)
+http://localhost:5280/api/session/list URI를 호출했을 때 동작하는 API를 만들기 위해 mod_http_api.erl에 다음과 같이 추가한다.
+process([&lt;&lt;&quot;session&quot;&gt;&gt;, &lt;&lt;&quot;list&quot;&gt;&gt;], _Request) -&gt; session\_list(\_Request);  session_list/1 함수는 내부 함수이며 다음과 같다.
+session\_list(\_Request) -&gt; ?DEBUG(&quot;session\_list() \_Request is ~p~n&quot;, [_Request]), List = mod\_admin\_extra:connected\_users\_info(), Y = [X || {[X,\_,\_,\_,\_], \_, \_, \_, \_, \_, \_} &lt;- List], Y1 = {[{list, Y}]}, Result1 = jiffy:encode(Y1), Result2 = to_bin(&quot;~s&quot;, [Result1]), {200, ?
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+    </section>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://jeidee.github.io/" >
+    &copy; 2017 Erlang &amp; Go
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    <script src="http://jeidee.github.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

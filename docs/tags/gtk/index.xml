@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gtk on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/tags/gtk/</link>
+    <description>Recent content in Gtk on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Aug 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/tags/gtk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>go-gtk 설치</title>
+      <link>http://jeidee.github.io/2015/08/19/go-gtk-ec84a4ecb998/</link>
+      <pubDate>Wed, 19 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/08/19/go-gtk-ec84a4ecb998/</guid>
+      <description>golang을 사용해서 gui 프로그래밍을 하려면 go-gtk를 설치하면 된다.
+go-gtk는 libgtk+ 2.0을 필요로 하는데,
+ubuntu에서 libgtk+ 2.0은 다음과 같이 설치할 수 있다.
+ $ sudo apt-get install libgtk2.0-dev $ go get github.com/mattn/go-gtk/gtk  </description>
+    </item>
+    
+  </channel>
+</rss>

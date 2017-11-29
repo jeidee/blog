@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Segue on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/tags/segue/</link>
+    <description>Recent content in Segue on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 May 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/tags/segue/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ios 스토리보드의 segue를 코드로 작동시키기</title>
+      <link>http://jeidee.github.io/2015/05/13/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9d98-segueeba5bc-ecbd94eb939ceba19c-ec9e91eb8f99ec8b9ced82a4eab8b0/</link>
+      <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/05/13/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9d98-segueeba5bc-ecbd94eb939ceba19c-ec9e91eb8f99ec8b9ced82a4eab8b0/</guid>
+      <description>스토리보드(Main.storyboard)를 다음과 같이 작성했다고 가정해 보자.
+ =&amp;gt;(Entry) Login View Controller =&amp;gt;(Segue id: moveToTabBar) Tab Bar Controller  Entry 뷰는 Login View이다.
+Login View에서 Tab Bar Controller로 이동하는 seque를 생성한 후 Attributes Inspector에서 Identifier값을 &amp;#8220;moveToTabBar&amp;#8221;로 수정한다.
+그리고 이동하고자 하는 지점의 코드에서 다음과 같이 작성하면 된다.
+[self performSegueWithIdentifier:@&amp;quot;moveToTabController&amp;quot; sender:nil];  </description>
+    </item>
+    
+  </channel>
+</rss>

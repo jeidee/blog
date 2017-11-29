@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Note on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/categories/note/</link>
+    <description>Recent content in Note on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Dec 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/categories/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>셰익스피어가 중년에게 주는 9가지 교훈</title>
+      <link>http://jeidee.github.io/2015/12/08/ec85b0ec9db5ec8aa4ed94bcec96b4eab080-eca491eb8584ec9790eab28c-eca3bceb8a94-9eab080eca780-eab590ed9b88/</link>
+      <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/12/08/ec85b0ec9db5ec8aa4ed94bcec96b4eab080-eca491eb8584ec9790eab28c-eca3bceb8a94-9eab080eca780-eab590ed9b88/</guid>
+      <description>첫째. 학생으로 계속 남아 있어라.
+배움을 포기하는 순간 우리는 폭삭 늙기 시작한다.
+둘째. 과거를 자랑하지 마라.
+옛날 이야기밖에 가진 것이 없을 때 당신은 처량해진다.
+삶을 사는 지혜는 지금 가지고 있는 것을 즐기는 것이다,
+셋째. 젊은 사람과 경쟁하지 마라.
+대신 그들의 성장을 인정하고 그들에게 용기를 주고
+그들과 함께 즐겨라,
+넷째. 부탁 받지 않은 충고는 굳이 하려고 마라.
+늙은이의 기우와 잔소리로 오해 받는다.
+다섯째. 삶을 철학으로 대체하지 마라.
+로미오가 한 말을 기억하라</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openssl on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/tags/openssl/</link>
+    <description>Recent content in Openssl on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 19 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/tags/openssl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>boost, openssl prebuilt link</title>
+      <link>http://jeidee.github.io/2016/04/19/boost-openssl-prebuilt-link/</link>
+      <pubDate>Tue, 19 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2016/04/19/boost-openssl-prebuilt-link/</guid>
+      <description>boost binaries
+openssl binaries</description>
+    </item>
+    
+    <item>
+      <title>gloox for android</title>
+      <link>http://jeidee.github.io/2015/04/21/gloox-for-android/</link>
+      <pubDate>Tue, 21 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/04/21/gloox-for-android/</guid>
+      <description>gloox를 android에서 사용하기 위한 과정을 살펴보자.
+사전 준비 작업 다음과 같은 환경이 구축되어 있다고 가정한다.
+ 개발 환경 : Mac OS X Yosemite 10.10.3 Android Studio : 1.1.0  Android SDK 경로는 ~/Android/sdk로 변경  NDK  ~/Android/ndk에 복사하고 path 지정   Android Studio에 ndk 설정 Preference &amp;gt; External Tools에서 + 버튼을 클릭해 javah, ndk-build, ndk-build clean 도구를 추가한다.
+1) javah
+2) ndk-build
+3) ndk-build clean
+Android Project 생성후 NDK 테스트 1) GlooxForAndroid 이름을 갖는 Android Project를 생성한다.</description>
+    </item>
+    
+  </channel>
+</rss>

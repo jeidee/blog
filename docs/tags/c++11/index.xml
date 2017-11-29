@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43;11 on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/tags/c&#43;&#43;11/</link>
+    <description>Recent content in C&#43;&#43;11 on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Apr 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/tags/c++11/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>c&#43;&#43;11 foreach</title>
+      <link>http://jeidee.github.io/2015/04/14/c11-foreach/</link>
+      <pubDate>Tue, 14 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/04/14/c11-foreach/</guid>
+      <description> c++11에서는 foreach를 다음과 같이 사용할 수 있다.
+vector&amp;lt;string&amp;gt; tokens = &amp;amp;#8230;; for(auto token : tokens) { &amp;amp;#8230; }  참고  Range-based for loops  </description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43; eclipse에서 c&#43;&#43; 11/0x 지원 설정</title>
+      <link>http://jeidee.github.io/2015/03/17/c-eclipseec9790ec849c-c-110x-eca780ec9b90-ec84a4eca095/</link>
+      <pubDate>Tue, 17 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/03/17/c-eclipseec9790ec849c-c-110x-eca780ec9b90-ec84a4eca095/</guid>
+      <description> 먼저 C++ 프로젝트를 생성한다.
+생성된 프로젝트에서 Properties 메뉴를 선택한다.
+C/C++ Build &amp;gt; Settings &amp;gt; Tool Settings &amp;gt; GCC C++ Compiler &amp;gt; Miscellaneous -&amp;gt; Other Flags에 &amp;#8220;-std=c++0x&amp;#8221;값을 입력한다.
+C/C++ General &amp;gt; Paths and Symbols &amp;gt; Symbols &amp;gt; GNU C++에서 &amp;#8220;Add&amp;#8221;버튼을 클릭하고 Name필드에 &amp;#8220;GXX_EXPERIMENTAL_CXX0X&amp;#8220;값을 입력한다. Value필드는 빈 채로 둔다.
+Apply버튼을 클릭하고 OK 버튼을 클릭한다.
+다시 빌드한다.
+참고  eclipse cdt c++11/0x support  </description>
+    </item>
+    
+  </channel>
+</rss>

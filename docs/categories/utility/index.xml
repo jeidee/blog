@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Utility on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/categories/utility/</link>
+    <description>Recent content in Utility on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Jul 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/categories/utility/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CentOS 6.8에서 core dump 설정</title>
+      <link>http://jeidee.github.io/2016/07/20/centos-6-8ec9790ec849c-core-dump-ec84a4eca095/</link>
+      <pubDate>Wed, 20 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2016/07/20/centos-6-8ec9790ec849c-core-dump-ec84a4eca095/</guid>
+      <description>다음 링크를 참고한다.
+https://www.centos.org/forums/viewtopic.php?t=43577
+core dump를 확인 하는 방법은 다음 링크를 참고한다.
+http://wyseburn.tistory.com/entry/%EB%A6%AC%EB%88%85%EC%8A%A4-core-dump-%ED%8C%8C%EC%9D%BC-%EC%98%A4%EB%A5%98-%ED%99%95%EC%9D%B8-%EB%B0%A9%EB%B2%95
+debuginfo-install 설치하는 방법은 다음과 같다.
+http://stackoverflow.com/questions/10389988/missing-separate-debuginfos-use-debuginfo-install-glibc-2-12-1-47-el6-2-9-i686</description>
+    </item>
+    
+    <item>
+      <title>erlang 벤치마킹 툴 tsung</title>
+      <link>http://jeidee.github.io/2016/06/27/erlang-ebb2a4ecb998eba788ed82b9-ed88b4-tsung/</link>
+      <pubDate>Mon, 27 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2016/06/27/erlang-ebb2a4ecb998eba788ed82b9-ed88b4-tsung/</guid>
+      <description>Tsung은 오픈소스 분산 테스팅 도구이다.
+http, xmpp등을 테스트할 수 있으며 Client Agent와 서버 모니터링 도구를 제공하고, 결과는 다양한 그래프로 출력해 준다.
+설치 centos 6  참고   yum -y install erlang perl gnuplot perl-Template-Toolkit wget http://tsung.erlang-projects.org/dist/tsung-1.6.0.tar.gz tar zxfv tsung-1.6.0.tar.gz cd tsung-1.6.0 ./configure &amp;amp;#8211;prefix=/usr/local/ &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install cp /usr/share/doc/tsung/examples/http_simple.xml /root/.tsung/tsung.xml  ubuntu  sudo apt-get install erlang sudo apt-get install tsung  실행 간단한 http 테스팅 위와 같이 설치하고 나면 다음 경로에서 예제 테스팅 템플릿 파일을 찾을 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>특정 포트를 사용하는 프로그램 찾기</title>
+      <link>http://jeidee.github.io/2016/02/19/ed8ab9eca095-ed8faced8ab8eba5bc-ec82acec9aa9ed9598eb8a94-ed9484eba19ceab7b8eb9ea8-ecb0beeab8b0/</link>
+      <pubDate>Fri, 19 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2016/02/19/ed8ab9eca095-ed8faced8ab8eba5bc-ec82acec9aa9ed9598eb8a94-ed9484eba19ceab7b8eb9ea8-ecb0beeab8b0/</guid>
+      <description> netstat -tulpn | grep 12345 -t | &amp;amp;#8211;tcp -u | &amp;amp;#8211;udp -l | &amp;amp;#8211;listening -p | &amp;amp;#8211;programs -n | &amp;amp;#8211;numeric (don&#39;t resolve name)  </description>
+    </item>
+    
+    <item>
+      <title>서버에 루트 인증서 설치하기</title>
+      <link>http://jeidee.github.io/2015/09/08/ec849cebb284ec9790-eba3a8ed8ab8-ec9db8eca69dec849c-ec84a4ecb998ed9598eab8b0/</link>
+      <pubDate>Tue, 08 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/09/08/ec849cebb284ec9790-eba3a8ed8ab8-ec9db8eca69dec849c-ec84a4ecb998ed9598eab8b0/</guid>
+      <description> CentOS 6.X  ca-certificates package 설치   yum install ca-certificates   update-ca-trust 기능 활성화   update-ca-trust enable   /etc/pki/ca-trust/source/anchors/ 경로에 인증서 복사(*.crt 또는 *.cer)   cp foo.crt /etc/pki/ca-trust/source/anchors/   마무리   update-ca-trust extract  출처  Adding trusted root certificates to the server  </description>
+    </item>
+    
+    <item>
+      <title>osx 유용한 명령어</title>
+      <link>http://jeidee.github.io/2015/05/18/osx-ec9ca0ec9aa9ed959c-ebaa85eba0b9ec96b4/</link>
+      <pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/05/18/osx-ec9ca0ec9aa9ed959c-ebaa85eba0b9ec96b4/</guid>
+      <description>Dock Dealy 없애기
+ defaults write com.apple.Dock autohide-delay -float 0 &amp;amp;&amp;amp; killall Dock  미션 컨트롤 화면 전환 속도를 보다 빠르게
+ defaults write com.apple.dock expose-animation-duration -float 0.12 &amp;amp;&amp;amp; killall Dock  숨겨진 APP 아이콘 DOCK에서 쉽게 구별 하기
+ defaults write com.apple.Dock showhidden -bool YES &amp;amp;&amp;amp; killall Dock  OSX 메일에서 EMAIL 주소 대신 이름으로 가리는 문제 해결 하기
+ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false  미리보기에서 문자열 선택 가능 하기</description>
+    </item>
+    
+    <item>
+      <title>nGrinder 설치</title>
+      <link>http://jeidee.github.io/2015/03/19/ngrinder-ec84a4ecb998/</link>
+      <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/03/19/ngrinder-ec84a4ecb998/</guid>
+      <description>nGrinder를 설치하는 방법을 살펴보자.
+사전 준비 nGrinder를 설치하려면 Oracle JDK 1.6 이상 또는 OpenJDK 1.7 버전 이상이 필요하다.
+ nGrinder의 사용 포트  Agent : Any =&amp;gt; Controller : 16001 Agent : Any =&amp;gt; Controller : 12000 ~ 12000+(동시 테스트 수 만큼) Controller : Any =&amp;gt; Monitor : 13243 Controller =&amp;gt; Public User: 톰캣 설정에 따르지만 기본값은 8080   Conroller, Agent, Monitor등의 개념을 알고자 한다면 nGrinder 문서 중에서 Architecure 문서를 참고해야 한다.</description>
+    </item>
+    
+    <item>
+      <title>virtual box vdi 용량 늘리기</title>
+      <link>http://jeidee.github.io/2015/03/16/virtual-box-vdi-ec9aa9eb9f89-eb8a98eba6aceab8b0/</link>
+      <pubDate>Mon, 16 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/03/16/virtual-box-vdi-ec9aa9eb9f89-eb8a98eba6aceab8b0/</guid>
+      <description>windows 7에 virtual box를 설치하고 xubuntu를 guest os로 설치했다고 가정한다.
+저장소는 vmdk일 경우 먼저 vdi로 변경 후 사이즈를 조절하도록 한다.
+vdi 용량 늘리기 1) vmdk를 vdi로 변경
+cmd를 열고 vmdk 파일이 있는 곳으로 이동한다.
+VBoxManage.exe의 clonehd 기능으로 vmdk파일을 vdi로 변경한다.
+ &amp;gt; &amp;quot;C:Program FilesOracleVirtualBoxVBoxManage.exe&amp;quot; clonehd server1-disk1.vmdk server1-disk1.vdi &amp;amp;#8211;format vdi  2) vdi 사이즈 수정
+vdi의 사이즈를 변경하기 위해서 VBoxManage.exe의 modifyhd 기능으로 사이즈를 변경한다. &amp;#8211;resize 매개변수의 값은 단위가 MB이며 30GB를 원할 경우 30 * 1024 = 31744를 입력하도록 한다.</description>
+    </item>
+    
+    <item>
+      <title>ubunt open file max 수정하기</title>
+      <link>http://jeidee.github.io/2015/03/12/ubunt-open-file-max-ec8898eca095ed9598eab8b0/</link>
+      <pubDate>Thu, 12 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/03/12/ubunt-open-file-max-ec8898eca095ed9598eab8b0/</guid>
+      <description> test 계정이 있다고 가정하고 다음과 같이 작업합니다.
+1) sysctl.conf 수정
+ $ sudo vi /etc/sysctl.conf fs.file-max = 1513687 &amp;amp;#8230; $ sudo sysctl -p fs.file-max = 1513687  2) limits.conf 수정
+ $ sudo vi /etc/security/limits.conf test soft nofile 100000 test hard nofile 100000  3) reboot
+ $ sudo reboot &amp;amp;#8230; $ ulimit -n 100000  참고  file의 open handle 개수 늘리기  </description>
+    </item>
+    
+    <item>
+      <title>ssh, scp등을 암호 입력 없이 사용하기</title>
+      <link>http://jeidee.github.io/2015/03/11/ssh-scpeb93b1ec9d84-ec9594ed98b8-ec9e85eba0a5-ec9786ec9db4-ec82acec9aa9ed9598eab8b0/</link>
+      <pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/03/11/ssh-scpeb93b1ec9d84-ec9594ed98b8-ec9e85eba0a5-ec9786ec9db4-ec82acec9aa9ed9598eab8b0/</guid>
+      <description>다음의 순서로 진행한다.
+1) 키 생성
+ $ ssh-keygen -t rsa  키 생성할 때는 passphrase를 빈 값으로(아무 값도 입력하지 않고 엔터) 입력해야 함을 주의하자.
+2) 공개키 리포트 서버에 등록
+ $ ssh-copy-id -i ~/.ssh/id_rsa.pub [remote-host]  여기까지 하면 완료되었다.
+다음과 같이 암호 입력없이 정상 접속 되는지 확인해 본다.
+ $ ssh [remote-host]  만약 다음과 같은 에러가 출력된다면,
+ Agent admitted failure to sign using the key.  다음과 같이 ssh 사용을 활성화한다.</description>
+    </item>
+    
+    <item>
+      <title>젠킨스 사용법</title>
+      <link>http://jeidee.github.io/2015/03/11/eca0a0ed82a8ec8aa4-ec82acec9aa9ebb295/</link>
+      <pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/03/11/eca0a0ed82a8ec8aa4-ec82acec9aa9ebb295/</guid>
+      <description>우분투에 설치 공식홈 설치 안내를 따라 다음과 같이 설치한다.
+1) 젠킨스 설치를 위한 데비안 패키지 리포지토리사용을 위해 다음과 같이 시스템에 키를 추가해 준다.
+ wget -q -O &amp;amp;#8211; http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add &amp;amp;#8211;  2) /etc/apt/sources.list 파일에 다음 내용을 추가해 준다.
+ deb http://pkg.jenkins-ci.org/debian binary/  2) 젠킨스를 설치한다.
+ sudo apt-get update sudo apt-get install jenkins  실행 설치된 젠킨스를 다음과 같이 시작한다.
+ sudo service jenkins start  젠킨스의 초기 사용 포트는 8080이며 다음과 같이 변경할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>HA proxy를 사용해서 L7 switch 구성</title>
+      <link>http://jeidee.github.io/2015/02/09/ha-proxyeba5bc-ec82acec9aa9ed95b4ec849c-l7-switch-eab5acec84b1/</link>
+      <pubDate>Mon, 09 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/02/09/ha-proxyeba5bc-ec82acec9aa9ed95b4ec849c-l7-switch-eab5acec84b1/</guid>
+      <description>다음과 같이 HA Proxy를 구성하고 싶다고 가정하자.  A 서버 : 웹서버  http://192.168.56.101:3000/ : 홈 http://192.168.56.101:3000/admin : 관리 &amp;#8230;  B 서버 : RESTful API 서버  http://192.168.56.102:5281/api  C 서버 : HA Proxy 서버  https://192.168.56.103/ =&amp;gt; http://192.168.56.101:3000/ https://192.168.56.103/admin =&amp;gt; http://192.168.56.101:3000/admin https://192.168.56.103/api =&amp;gt; http://192.168.56.102:5281/api   네트워크 토폴로지는 다음과 같다.
+ +&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;+ https +&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8211;+ | Client | &amp;amp;#8212;&amp;amp;#8212;&amp;gt;| HA Proxy | | | | 192.168.56.103 | +&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;+ +&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8211;+ | http V +&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8211;+ +&amp;amp;#8212;&amp;amp;#8212;-| fire wall | | +&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8211;+ | | http | V | +&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;&amp;amp;#8212;+ | | 192.</description>
+    </item>
+    
+    <item>
+      <title>HA Proxy 설정</title>
+      <link>http://jeidee.github.io/2015/02/04/ha-proxy-ec84a4eca095/</link>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/02/04/ha-proxy-ec84a4eca095/</guid>
+      <description>우분투에서 HA Proxy 설정하는 방법을 알아보자.
+HA Proxy 설치 다음과 같이 1.5.x 버전을 설치한다.
+ $ sudo add-apt-repository ppa:vbernat/haproxy-1.5 $ sudo apt-get update $ sudo apt-get install haproxy  HA Proxy 설정 HA Proxy를 위와 같이 설치하면 설정파일은 다음 위치에서 찾을 수 있다.
+ /etc/haproxy/haproxy.cfg  기본 설정은 다음과 같이 두 영역으로 구분된다.
+ global: process 전역 매개변수 proxies: defaults, listen, frontend, backend 섹션으로 구성  이 중에서 listen 영역은 TCP 프록시에서만 사용하며 frontend와 backend를 모두 설정할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>git proxy 사용하기</title>
+      <link>http://jeidee.github.io/2015/01/22/git-proxy-ec82acec9aa9ed9598eab8b0/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/22/git-proxy-ec82acec9aa9ed9598eab8b0/</guid>
+      <description>git proxy 설정 corkscrew 사용할 경우 먼저 git proxy를 사용하기 위해 corkscrew를 설치한다.
+ $ sudo apt-get install corkscrew  그리고 proxy shell 스크립트를 다음과 같이 생성한다.
+ $ vi ~/git-proxy.sh  git-proxy.sh 파일을 다음과 같이 작성하고
+ #!/bin/bash /usr/bin/corkscrew proxyIP proxyPort $1 $2  git-proxy.sh파일에 실행권한을 준다.
+ $ chmod u+x ~/git-proxy.sh  마지막으로 다음과 같이 gitconfig를 수정한다.
+ $ vi ~/.gitconfig [core] gitproxy=&amp;quot;~/git-proxy.sh&amp;quot;  ~부분은 절대경로로 수정한다.</description>
+    </item>
+    
+    <item>
+      <title>mysql root 계정 초기화</title>
+      <link>http://jeidee.github.io/2015/01/22/mysql-root-eab384eca095-ecb488eab8b0ed9994/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/22/mysql-root-eab384eca095-ecb488eab8b0ed9994/</guid>
+      <description>mysql root 계정의 패스워드를 분실했을 경우 다음 절차를 따라 root 계정의 패스워드를 변경할 수 있다.
+ $ service mysql stop $ mysqld\_safe &amp;amp;#8211;skip\_grant &amp;amp; $ mysql mysql&amp;gt; use mysql; mysql&amp;gt; update user set password=password(&#39;root&#39;) where user=&#39;root&#39;; mysql&amp;gt; flush privileges;  </description>
+    </item>
+    
+    <item>
+      <title>ubuntu에서 proxy를 사용한 apt-get 사용</title>
+      <link>http://jeidee.github.io/2015/01/22/ubuntuec9790ec849c-proxyeba5bc-ec82acec9aa9ed959c-apt-get-ec82acec9aa9/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/22/ubuntuec9790ec849c-proxyeba5bc-ec82acec9aa9ed959c-apt-get-ec82acec9aa9/</guid>
+      <description>다음과 같이 proxy 서버를 설정해 준 다음 사용 가능하다.
+ $ sudo vi /etc/apt/apt.conf Acquire::http::Proxy &amp;quot;http://192.168.0.1:8080/&amp;quot;;  </description>
+    </item>
+    
+    <item>
+      <title>virtualbox 게스트간 통신 환경 구성</title>
+      <link>http://jeidee.github.io/2015/01/21/virtualbox-eab28cec8aa4ed8ab8eab084-ed86b5ec8ba0-ed9998eab2bd-eab5acec84b1/</link>
+      <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/21/virtualbox-eab28cec8aa4ed8ab8eab084-ed86b5ec8ba0-ed9998eab2bd-eab5acec84b1/</guid>
+      <description>virtualbox에 다음과 같은 환경을 구축하려고 한다.
+ 호스트  Windows 7  게스트  ubuntu 14.10 desktop #1 ubuntu 14.10 desktop #2   호스트와 게스트간 통신도 가능해야 하고 게스트간 통신도 가능해야 한다.
+ virtualbox에서 파일&amp;gt;환경설정&amp;gt;네트워크를 선택한다. 호스트 전용 네트워크가 비어 있을 경우 새로 추가한다. 추가한 호스트 네트워크를 더블 클릭한다. IPv4 주소를 192.168.56.1로 설정한다. IPv4 서브넷 마스크를 255.255.255.0으로 설정한다. DHCP 서버 사용에 체크를 해제한다. ubuntu 게스트 OS를 설치하고 게스트 OS의 네트워크 설정을 선택한다.</description>
+    </item>
+    
+  </channel>
+</rss>

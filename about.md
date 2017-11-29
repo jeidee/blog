@@ -1,8 +1,9 @@
 ---
-layout: page
-title: About
 permalink: /about/
+title: About
+url: /about
 ---
+
 
 You can contact me by the below methods:
 

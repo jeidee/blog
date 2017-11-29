@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Erlang &amp; Go  | Go</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.31.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='http://jeidee.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+      <link href="http://jeidee.github.io/categories/go/index.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
+      <link href="http://jeidee.github.io/categories/go/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go" />
+    
+
+    <meta property="og:title" content="Go" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://jeidee.github.io/categories/go/" />
+
+
+
+<meta property="og:updated_time" content="2017-01-03T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Go">
+<meta itemprop="description" content="">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Go"/>
+<meta name="twitter:description" content=""/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('http://jeidee.github.io/images/gohugo-default-sample-hero-image.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://jeidee.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Erlang &amp; Go
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+          Go
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
+      <p>Below you will find pages that utilize the taxonomy term “Go”</p>
+    </div>
+  </article>
+  <div class="mw8 center">
+    
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2017/01/03/aws-dynamodb-for-go" class="link black dim">
+        AWS DynamoDB for Go
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      AWS의 Go언어를 위한 DynamoDB SDK를 알아본다.
+credentials를 사용한 DynamoDB 세션과 DB객체 생성하기 우선 AWS에서 Credentials Key, Secret을 생성 후 개발서버에 저장한다.
+일반적으로 ~/.aws/credentials 파일에 다음과 같은 구조로 저장한 후 사용하게 되는데, 다른 경로에 설정한 경우에는 해당 파일의 경로와 프로파일을 지정해 사용할 수 있다.
+ [default] aws\_access\_key_id = xxx aws\_secret\_access_key = xxx  위와 같이 Credentials 파일을 생성한 후 DynamoDB에 접근할 수 있는 세션과 객체를 생성하는 코드는 다음과 같다.
+https://gist.github.com/jeidee/4bb85ae4bd5cdefcee60bc4e4879eb6b
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0" class="link black dim">
+        AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ~/.aws/credentials 파일에 AWS의 Credentials Key를 설정해 놓고 개발하다가,
+upstart나 superviosord등을 사용해 실행하게 되면 다음과 같은 에러가 발생한다.
+ NoCredentialProviders: no valid providers in chain. Deprecated.  이럴 경우 다음과 같이 AWS Credentials 정보를 환경변수로 설정해서 사용하면 문제 없이 사용 가능하다.
+관련 정보는 링크를 참고한다.
+https://gist.github.com/34468d32d6688884f0319266ed8792fc.git
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/10/13/go-restful-api-eab5aced9884" class="link black dim">
+        go RESTful API 구현
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      예제  package main import ( &quot;encoding/json&quot; &quot;fmt&quot; &quot;net/http&quot; ) type ResponseResult struct { Result string \`json:&quot;result&quot;\` Message string \`json:&quot;message&quot;\` } type ApiServer struct { } func (as *ApiServer) Start() { http.HandleFunc(&quot;/&quot;, as.index) addr := fmt.Sprintf(&quot;:%v&quot;, 8080) fmt.Printf(&quot;API Server is listening on %v&quot;, addr) err := http.ListenAndServe(addr, nil) if err != nil { fmt.Printf(&quot;%v&quot;, err) } } func (as \*ApiServer) index(w http.ResponseWriter, r \*http.Request) { w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;) json.NewEncoder(w).Encode(ResponseResult{Result: &quot;400&quot;, Message: &quot;Bad request&quot;}) } func main() { as := ApiServer{} as.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/09/30/go-debug-hang" class="link black dim">
+        go debug hang
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      go로 만든 어플리케이션이 hang에 걸렸을 경우 다음과 같이 해당 프로세스의 스택을 추적할 수 있다.
+ $ kill -ABRT process-id  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/09/03/go-http-ec9a94ecb2ad-ecb298eba6ac" class="link black dim">
+        go http 요청 처리
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      net/http 패키지를 사용하면 된다.
+REST API를 사용하는 간단한 예제는 다음과 같다.
+ package main import ( &quot;net/http&quot; &quot;fmt&quot; &quot;io/ioutil&quot; &quot;encoding/json&quot; ) func main() { r, err := http.Get(&quot;https://example.com/api/&amp;#8230;&quot;) if err != nil { fmt.Println(err) return } defer r.Body.Close() var body []byte body, err = ioutil.ReadAll(r.Body) if err != nil { fmt.Println(err) return } var m map[string]interface{} json.Unmarshal(body, &amp;m) fmt.Println(&quot;body is &quot;, m) }  Response가 JSON 문자열일 경우 json.Unmarshal() 함수를 사용해 map[string]interface{} 타입으로 변환할 수 있다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/09/01/go-coroutines-ed8ca8ed84b4-eab5aced9884ed9598eab8b0" class="link black dim">
+        go coroutines 패턴 구현하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      coroutine은 쓰레드와 유사하다고 볼 수 있다.
+다른점은, 쓰레드가 동시에 여러쓰레드에서 병렬적으로 실행된다면, coroutine은 병행성은 갖지만, 특정 시점에 단 하나의 coroutine만 실행됨을 보증한다는 것이다.
+goroutine과 coroutine의 차이를 다음과 같이 구분할 수 있다.
+ goroutine은 병렬적이지만 coroutine은 그렇지 않다. goroutine간에는 채널을 통해 통신하며, coroutine간에는 yield와 resume 동작에 의해 통신한다.  c#에서는 yield 키워드를 통해서 iterator를 구현할 때 주로 사용하며, 유니티의 coroutine은 이러한 yield키워드를 사용해서 메인쓰레드에서 여러 함수를 동시에 실행시키는데 사용한다.
+csharp public class PowersOf2 { static void Main() { // Display powers of 2 up to the exponent of 8: foreach (int i in Power(2, 8)) { Console.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/31/go-buffered-channleec9d84-ec9db4ec9aa9ed959c-concurrent-queue-eab5aced9884" class="link black dim">
+        go buffered channel을 이용한 Concurrent Queue 구현
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      이전 포스트에서는 cotainer/list와 sync/mutex를 사용해서 Concurrent Queue를 구현해 보았다.
+해당 큐의 단점은 Multi-Goroutine 동기화를 위해 Mutex를 사용하면서 비용이 발생하고,
+Pop()함수를 사용할 경우 값이 없을 경우에도 즉시 리턴을 하기 때문에,
+외부 모듈에서는 큐에서 값을 가져오기 위해 계속해서 Pop()함수를 호출해야 하는 비용이 발생했다.
+이러한 단점을 보완하기 위해 go에서 제공하는 buffered channel을 사용해 다음과 같이 구현할 수 있다.
+ package queue import ( &quot;sync/atomic&quot; ) type ChanQueue struct { syncChan chan interface{} size int32 } func NewChanQueue(maxSize int) *ChanQueue { return &amp;ChanQueue{syncChan: make(chan interface{}, maxSize)} } func (q *ChanQueue) Push(v interface{}) { atomic.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/31/go-console-progress-bar" class="link black dim">
+        go console progress bar
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      console에서 진행 상태를 프로그레스바 형태로 출력하고자 할 때 다음 패키지를 사용할 수 있다.
+ https://github.com/cheggaaa/pb  사용법은 다음과 같이 간단하다.
+ package main import ( &quot;github.com/cheggaaa/pb&quot; &quot;time&quot; ) func main() { count := 100000 bar := pb.StartNew(count) for i := 0; i &lt; count; i++ { bar.Increment() time.Sleep(time.Millisecond) } bar.FinishPrint(&quot;The End!&quot;) }  console에서 프로그레스바를 출력하는 기능의 핵심은,
+고정된 위치에 문자열을 출력하는 것이라 할 수 있다.
+(보통 Print()문을 사용할 경우 커서가 계속 이동하며 \r\n을 만나면 다음 줄의 처음으로 커서를 이동)
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/26/go-containterlisteba5bc-ec82acec9aa9ed959c-concurrent-queue" class="link black dim">
+        go containter/list를 사용한 Concurrent Queue
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      참고자료  Stack and Queue in golang   container/list와 sync.Mutex를 사용한 쓰레드(고루틴)에 안전한 Queue는 다음과 같이 만들 수 있다.
+ package queue import ( &quot;container/list&quot; &quot;sync&quot; ) type Queue struct { l *list.List lock sync.Mutex } func NewQueue() *Queue { return &amp;Queue{list.New(), sync.Mutex{}} } func (q *Queue) Push(i interface{}) { q.lock.Lock() defer q.lock.Unlock() q.l.PushBack(i) } func (q *Queue) Pop() (interface{}, bool) { q.lock.Lock() defer q.lock.Unlock() if q.l.Len() == 0 { return nil, false } v := q.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/25/go-json-eb9494ecbd94eb8d94eba5bc-ec82acec9aa9ed95b4ec849c-tcp-ec8aa4ed8ab8eba6bcec9cbceba19c-ec8898ec8ba0ed959c-json-object-ecb298eba6aced9598" class="link black dim">
+        go json 디코더를 사용해서 TCP 스트림으로 수신한 json object 처리하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      우선 net.Conn 인스턴스(c.conn은 net.Conn 인스턴스)를 사용해서 json 디코더를 생성한다.
+ d := json.NewDecoder(c.conn)  수신받은 데이터를 json 오브젝트로 디코딩한다.
+ var packet map[string]interface{} err := d.Decode(&amp;packet)  json 오브젝트를 특정 구조체 데이터로 캐스팅한다.
+그 전에 송수신 하는 json 오브젝트에 id필드가 있다고 가정하며,
+id필드 값에 따라 다른 구조체로 캐스팅하도록 한다.
+ type ReqLoginPacket struct { Id int \`json:&quot;id&quot;\` UserId string \`json:&quot;user_id&quot;\` } pid := int(p[&quot;id&quot;].(float64)) switch pid { case 1: reqPacket := new(ReqLoginPacket) MapToObject(packet, reqPacket) &amp;#8230; }  MapToObject/2 함수는 다음과 같다.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/19/go-tcp-json-decoder-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        go tcp &#43; json decoder 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음 코드는 클라이언트에서 보낸 json 패킷을 디코딩하는 간단한 tcp 서버 예제코드이다.
+ package main import ( &quot;encoding/json&quot; &quot;log&quot; &quot;net&quot; ) func main() { ln, err := net.Listen(&quot;tcp&quot;, &quot;:9080&quot;) if err != nil { log.Fatal(err) return } defer ln.Close() for { c, err := ln.Accept() if err != nil { log.Fatalln(&quot;Can't accept new client!&quot;, err) return } defer c.Close() go requestHandler(c) } } type Packet struct { Id int16 \`json:&quot;id&quot;\` Data interface{} \`json:&quot;data&quot;\` } func requestHandler(c net.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/19/go-gtk-ec84a4ecb998" class="link black dim">
+        go-gtk 설치
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      golang을 사용해서 gui 프로그래밍을 하려면 go-gtk를 설치하면 된다.
+go-gtk는 libgtk+ 2.0을 필요로 하는데,
+ubuntu에서 libgtk+ 2.0은 다음과 같이 설치할 수 있다.
+ $ sudo apt-get install libgtk2.0-dev $ go get github.com/mattn/go-gtk/gtk  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+    </section>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://jeidee.github.io/" >
+    &copy; 2017 Erlang &amp; Go
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    <script src="http://jeidee.github.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

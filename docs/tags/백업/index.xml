@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>백업 on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/tags/%EB%B0%B1%EC%97%85/</link>
+    <description>Recent content in 백업 on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Jan 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/tags/%EB%B0%B1%EC%97%85/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ejabberd 백업과 복원</title>
+      <link>http://jeidee.github.io/2015/01/21/ejabberd-ebb0b1ec9785eab3bc-ebb3b5ec9b90/</link>
+      <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2015/01/21/ejabberd-ebb0b1ec9785eab3bc-ebb3b5ec9b90/</guid>
+      <description>ejabberdctl의 admin 명령어를 사용해 백업과 복원을 수행할 수 있다.
+백업
+ $ ejabberdctl backup 백업파일명  복원
+ $ ejabberdctl restore 백업파일명  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws Sdk Go on Erlang &amp; Go</title>
+    <link>http://jeidee.github.io/tags/aws-sdk-go/</link>
+    <description>Recent content in Aws Sdk Go on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Dec 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jeidee.github.io/tags/aws-sdk-go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</title>
+      <link>http://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/</link>
+      <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/</guid>
+      <description>~/.aws/credentials 파일에 AWS의 Credentials Key를 설정해 놓고 개발하다가,
+upstart나 superviosord등을 사용해 실행하게 되면 다음과 같은 에러가 발생한다.
+ NoCredentialProviders: no valid providers in chain. Deprecated.  이럴 경우 다음과 같이 AWS Credentials 정보를 환경변수로 설정해서 사용하면 문제 없이 사용 가능하다.
+관련 정보는 링크를 참고한다.
+https://gist.github.com/34468d32d6688884f0319266ed8792fc.git</description>
+    </item>
+    
+  </channel>
+</rss>
