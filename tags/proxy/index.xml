@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proxy on Erlang &amp; Go</title>
+    <link>https://jeidee.github.io/tags/proxy/</link>
+    <description>Recent content in Proxy on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Jan 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jeidee.github.io/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>git proxy 사용하기</title>
+      <link>https://jeidee.github.io/2015/01/22/git-proxy-ec82acec9aa9ed9598eab8b0/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/01/22/git-proxy-ec82acec9aa9ed9598eab8b0/</guid>
+      <description>git proxy 설정 corkscrew 사용할 경우 먼저 git proxy를 사용하기 위해 corkscrew를 설치한다.
+ $ sudo apt-get install corkscrew  그리고 proxy shell 스크립트를 다음과 같이 생성한다.
+ $ vi ~/git-proxy.sh  git-proxy.sh 파일을 다음과 같이 작성하고
+ #!/bin/bash /usr/bin/corkscrew proxyIP proxyPort $1 $2  git-proxy.sh파일에 실행권한을 준다.
+ $ chmod u+x ~/git-proxy.sh  마지막으로 다음과 같이 gitconfig를 수정한다.
+ $ vi ~/.gitconfig [core] gitproxy=&amp;quot;~/git-proxy.sh&amp;quot;  ~부분은 절대경로로 수정한다.</description>
+    </item>
+    
+    <item>
+      <title>npm proxy 설정</title>
+      <link>https://jeidee.github.io/2015/01/22/npm-proxy-ec84a4eca095/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/01/22/npm-proxy-ec84a4eca095/</guid>
+      <description>npm proxy 설정이 필요할 경우 다음과 같이 처리한다.
+ npm config set proxy proxy주소 npm config set https-proxy proxy주소  </description>
+    </item>
+    
+    <item>
+      <title>ubuntu에서 proxy를 사용한 apt-get 사용</title>
+      <link>https://jeidee.github.io/2015/01/22/ubuntuec9790ec849c-proxyeba5bc-ec82acec9aa9ed959c-apt-get-ec82acec9aa9/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/01/22/ubuntuec9790ec849c-proxyeba5bc-ec82acec9aa9ed959c-apt-get-ec82acec9aa9/</guid>
+      <description>다음과 같이 proxy 서버를 설정해 준 다음 사용 가능하다.
+ $ sudo vi /etc/apt/apt.conf Acquire::http::Proxy &amp;quot;http://192.168.0.1:8080/&amp;quot;;  </description>
+    </item>
+    
+  </channel>
+</rss>

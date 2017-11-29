@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intellij on Erlang &amp; Go</title>
+    <link>https://jeidee.github.io/tags/intellij/</link>
+    <description>Recent content in Intellij on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Feb 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jeidee.github.io/tags/intellij/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>erlang intellij에서 개발하기</title>
+      <link>https://jeidee.github.io/2015/02/01/erlang-intellijec9790ec849c-eab09cebb09ced9598eab8b0/</link>
+      <pubDate>Sun, 01 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/02/01/erlang-intellijec9790ec849c-eab09cebb09ced9598eab8b0/</guid>
+      <description>현재까지 찾아본 바로는 쓸만한 erlang ide는 eclipse + erlide와 intellij + erlang plugin 정도가 될 것 같다.
+webstorm의 경우 erlang plugin을 설치하고 소스코드를 편집할 수 있지만, 프로젝트를 생성하거나 컴파일하고 실행하는 등의 작업은 할 수 없기 때문에 제외한다.
+eclipse에 비해 intellij가 상대적으로 많은 기능을 제외하고 편집기 자체도 뛰어나며 community edition을 사용할 경우 무료로 사용할 수 있기 때문에 intellij를 사용하기로 한다.
+intellij에 elang plugin 설치 우선 intellij community edition을 설치한다.(JetBrains 홈페이지에서 다운로드할 수 있다.</description>
+    </item>
+    
+  </channel>
+</rss>

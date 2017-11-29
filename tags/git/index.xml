@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Erlang &amp; Go</title>
+    <link>https://jeidee.github.io/tags/git/</link>
+    <description>Recent content in Git on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Jan 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jeidee.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>git proxy 사용하기</title>
+      <link>https://jeidee.github.io/2015/01/22/git-proxy-ec82acec9aa9ed9598eab8b0/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/01/22/git-proxy-ec82acec9aa9ed9598eab8b0/</guid>
+      <description>git proxy 설정 corkscrew 사용할 경우 먼저 git proxy를 사용하기 위해 corkscrew를 설치한다.
+ $ sudo apt-get install corkscrew  그리고 proxy shell 스크립트를 다음과 같이 생성한다.
+ $ vi ~/git-proxy.sh  git-proxy.sh 파일을 다음과 같이 작성하고
+ #!/bin/bash /usr/bin/corkscrew proxyIP proxyPort $1 $2  git-proxy.sh파일에 실행권한을 준다.
+ $ chmod u+x ~/git-proxy.sh  마지막으로 다음과 같이 gitconfig를 수정한다.
+ $ vi ~/.gitconfig [core] gitproxy=&amp;quot;~/git-proxy.sh&amp;quot;  ~부분은 절대경로로 수정한다.</description>
+    </item>
+    
+  </channel>
+</rss>

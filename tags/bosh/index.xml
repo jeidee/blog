@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bosh on Erlang &amp; Go</title>
+    <link>https://jeidee.github.io/tags/bosh/</link>
+    <description>Recent content in Bosh on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Jan 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jeidee.github.io/tags/bosh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ejabberd bosh를 https로 설정하기</title>
+      <link>https://jeidee.github.io/2015/01/22/ejabberd-bosheba5bc-httpseba19c-ec84a4eca095ed9598eab8b0/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/01/22/ejabberd-bosheba5bc-httpseba19c-ec84a4eca095ed9598eab8b0/</guid>
+      <description>ejabberd에서 bosh를 설정하기 위해서는 다음과 같이 ejabberd.yml에서 ejabberd_http 모듈을 설정해야 한다.
+ &amp;amp;#8211; port: 5280 module: ejabberd_http request_handlers: &amp;quot;/hello&amp;quot;: mod\_http\_hello &amp;quot;/api&amp;quot;: mod\_http\_api web_admin: true http_poll: true http_bind: true \## register: true captcha: true  위와 같이 설정할 경우 admin, api, bosh가 모두 http://localhost:5280 하에서 동작하게 되는데 https로 설정하기 위해서는 다음과 같이 5223 tls 설정과 유사하게 설정하면 된다.
+ &amp;amp;#8211; port: 5281 module: ejabberd_http certfile: &amp;quot;/path/to/server.pem&amp;quot; tls: true http_bind: true  주의할 것은 tls 설정항목이 starttls가 아니라 tls라는 것이다.</description>
+    </item>
+    
+  </channel>
+</rss>

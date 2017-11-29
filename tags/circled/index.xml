@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Circled on Erlang &amp; Go</title>
+    <link>https://jeidee.github.io/tags/circled/</link>
+    <description>Recent content in Circled on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 May 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jeidee.github.io/tags/circled/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>android Circle Image View</title>
+      <link>https://jeidee.github.io/2015/05/02/android-circle-image-view/</link>
+      <pubDate>Sat, 02 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/05/02/android-circle-image-view/</guid>
+      <description> ImageView를 round처리하거나 원형으로 처리하고자 할 때 사용할 수 있는 방법은 다음과 같다.
+먼저 RoundedAvatarDrawable 클래스를 다운로드 받아 프로젝트에 추가한다.
+레이아웃에 ImageView를 하나 추가한 후 Activity의 onCreate()함수 안에서 다음과 같이 코딩한다.
+BitmapDrawable bImage = (BitmapDrawable) getResources().getDrawable(R.drawable.unnamed); ImageView mImg = (ImageView) mCustomView.findViewById(R.id.imageView1); mImg.setImageDrawable(new RoundedAvatarDrawable(bImage.getBitmap()));  참고  How can i use RoundedAvatarDrawable for creating round image? 효율적인 Bitmap 이미지 라운딩 처리 방법 네모난 비트맵을 둥글게 사용하기  </description>
+    </item>
+    
+  </channel>
+</rss>

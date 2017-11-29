@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ci on Erlang &amp; Go</title>
+    <link>https://jeidee.github.io/tags/ci/</link>
+    <description>Recent content in Ci on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Mar 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jeidee.github.io/tags/ci/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>젠킨스 사용법</title>
+      <link>https://jeidee.github.io/2015/03/11/eca0a0ed82a8ec8aa4-ec82acec9aa9ebb295/</link>
+      <pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/03/11/eca0a0ed82a8ec8aa4-ec82acec9aa9ebb295/</guid>
+      <description>우분투에 설치 공식홈 설치 안내를 따라 다음과 같이 설치한다.
+1) 젠킨스 설치를 위한 데비안 패키지 리포지토리사용을 위해 다음과 같이 시스템에 키를 추가해 준다.
+ wget -q -O &amp;amp;#8211; http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add &amp;amp;#8211;  2) /etc/apt/sources.list 파일에 다음 내용을 추가해 준다.
+ deb http://pkg.jenkins-ci.org/debian binary/  2) 젠킨스를 설치한다.
+ sudo apt-get update sudo apt-get install jenkins  실행 설치된 젠킨스를 다음과 같이 시작한다.
+ sudo service jenkins start  젠킨스의 초기 사용 포트는 8080이며 다음과 같이 변경할 수 있다.</description>
+    </item>
+    
+  </channel>
+</rss>

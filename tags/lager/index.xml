@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lager on Erlang &amp; Go</title>
+    <link>https://jeidee.github.io/tags/lager/</link>
+    <description>Recent content in Lager on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Nov 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jeidee.github.io/tags/lager/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>erlang application에 lager(로거)  추가하기</title>
+      <link>https://jeidee.github.io/2015/11/11/erlang-applicationec9790-lagereba19ceab1b0-ecb694eab080ed9598eab8b0/</link>
+      <pubDate>Wed, 11 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/11/11/erlang-applicationec9790-lagereba19ceab1b0-ecb694eab080ed9598eab8b0/</guid>
+      <description>rebar를 사용해 프로젝트를 생성했다고 가정한다.
+erlang의 로거 라이브러리 중에서 많이 사용되는 basho/lager를 추가해 보도록 하자.
+rebar.config 수정  %% -\*- erlang -\*- {sub_dirs, [ &amp;quot;apps/chat&amp;quot;, &amp;quot;deps&amp;quot;, &amp;quot;rel&amp;quot; ]}. {erl_opts, [ {parse\_transform, lager\_transform}, %% for lager debug_info, fail\_on\_warning ]}. %% {require\_otp\_vsn, &amp;quot;R14&amp;quot;}. %% Example, uncomment to retrieve cowboy as a dep. {deps, [ {&#39;lager&#39;, &amp;quot;.*&amp;quot;, {git, &amp;quot;https://github.com/basho/lager&amp;quot;, &amp;quot;&amp;quot;}} ]}.   sub_dirs에 deps 디렉토리를 추가하고, erl_opts(erlang 컴파일러 옵션)에 {parse_transform, lager_transform}을 추가한다.</description>
+    </item>
+    
+  </channel>
+</rss>

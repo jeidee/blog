@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial on Erlang &amp; Go</title>
+    <link>https://jeidee.github.io/tags/tutorial/</link>
+    <description>Recent content in Tutorial on Erlang &amp; Go</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Jun 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jeidee.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Elixir Where to go next (#21/21)</title>
+      <link>https://jeidee.github.io/2015/06/21/elixir-where-to-go-next-2121/</link>
+      <pubDate>Sun, 21 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/21/elixir-where-to-go-next-2121/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 더 배우고 싶은가? 그럼 계속 읽어보자.
+Build your first Elixir project 우리의 첫 프로젝트를 시작하기 위해, elixir는 Mix라는 빌드 툴을 제공한다. 우리는 다음과 같이 간단하게 첫 프로젝트를 만들 수 있다.
+ mix new path/to/new/project  위의 과정을 통해 우리는 슈퍼비전 트리, 설정, 테스트등을 갖는 elixir 응용프로그램을 만들 수 있다. 다음 가이드를 통해 우리는 분산된 노드에 분산된 key-value 저장소를 갖는 응용프로그램을 만드는 방법을 배울 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir Sigils (#18/21)</title>
+      <link>https://jeidee.github.io/2015/06/19/elixir-sigils-1821/</link>
+      <pubDate>Fri, 19 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/19/elixir-sigils-1821/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 우리는 이미 elixir의 문자열과 문자 리스트를 배웠다. 하지만, 언어에 있어 텍스트의 표현을 위한 구조의 겉면만 다루었을 뿐이다. atom을 예로 들면, 대부분 :atom 형식으로 표현되는 식이다.
+elixir의 목표 중 하나는 확장성이다: elixir를 사용하면 개발자가 어떤 도메인에도 꼭 맞도록 언어를 확장할 수 있다. 개발자나, 회사, 또는 커뮤티니들이 그들과 관련된 도메인안에서 언어를 확장할 수 있도록 만들어졌다는 말이다.
+이번 챕터에서 우리는, 텍스트 처리에 사용하는 매커니즘 중 하나인 sigil &amp;#8211; $foo에서 $와 같은 기호에 대해서 알아볼 것이다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir try, catch and rescue (#19/21)</title>
+      <link>https://jeidee.github.io/2015/06/19/elixir-try-catch-and-rescue-1921/</link>
+      <pubDate>Fri, 19 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/19/elixir-try-catch-and-rescue-1921/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ elixir는 세 개의 에러 매커니즘을 갖는다: errors, throws, exits. 이번 챕터에서 우리는 이들 각각을 살펴보도록 한다.
+Errors 에러(또는 예외)는 코드에서 예외적인 상황이 발생할 때 사용된다. 숫자를 atom에 더할 때 발생할 수 있는 에러를 살펴보자.
+ iex&amp;gt; :foo + 1 ** (ArithmeticError) bad argument in arithmetic expression :erlang.+(:foo, 1)  raise/1 함수를 사용하면 아무 때나 런타임에 에러를 발생시킬 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir Comprehensions (#17/21)</title>
+      <link>https://jeidee.github.io/2015/06/18/elixir-comprehensions-1721/</link>
+      <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/18/elixir-comprehensions-1721/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ elixir에서는, 열거형을 반복문에서 열거하고 요소를 필터링해 다른 리스트로 반환하는 일이 매우 일반적이다. 해석식(Comprehensions)은 그러한 패턴을 쉽게 하도록 도와준다. 해석식은 for와 같은 특별한 형태를 사용해 그러한 작업을 처리할 수 있다.
+예를 들면, 정수 리스트에서 각 요소의 제곱을 구해 새로운 리스트를 반환하는 작업은 다음과 같이 구현할 수 있다.
+ iex&amp;gt; for n &amp;lt;- [1, 2, 3, 4], do: n * n [1, 4, 9, 16]  해석식은 세 부분으로 구성된다: 발생기(generator), 필터, 수집자(collectables).</description>
+    </item>
+    
+    <item>
+      <title>Elixir Protocols (#16/21)</title>
+      <link>https://jeidee.github.io/2015/06/18/elixir-protocols-1621/</link>
+      <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/18/elixir-protocols-1621/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 프로토콜은 elixir에서 다형성을 구현하는 매커니즘이다. 프로토콜은 어떤 데이터 타입에서도 사용할 수 있다. 예제를 보도록 하자.
+elixir에서는 false와 nil만이 false처럼 처리된다. 그 외에는 모든 것이 true로 평가된다. 응용프로그램에 따라, blank로 처리되는 데이터타입을 위해 boolean값을 반환하는 blank? 프로토콜을 명시하는 것이 중요할 수도 있다. 예를 들어, 빈 리스트나 빈 바이너리는 blank로 간주될 수 있다.
+우리는 이러한 프로토콜을 다음과 같이 정의할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir IO and the file system (#12/21)</title>
+      <link>https://jeidee.github.io/2015/06/17/elixir-io-and-the-file-system-1221/</link>
+      <pubDate>Wed, 17 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/17/elixir-io-and-the-file-system-1221/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 이번 챕터에서는 IO, File, Path 모듈과 관련된 입/출력 매커니즘과 파일 시스템 관련 태스크를 소개하도록 한다.
+The IO module elixir의 IO 모듈은 표준 입출력, 표준 에러, 파일과 다른 IO 장치들을 읽고 쓸 수 있도록 해주는 주요 매커니즘이다. 모듈의 사용법은 꽤 직관적이다.
+ iex&amp;gt; IO.puts &amp;quot;hello world&amp;quot; hello world :ok iex&amp;gt; IO.gets &amp;quot;yes or no? &amp;quot; yes or no?</description>
+    </item>
+    
+    <item>
+      <title>Elixir Module attributes (#14/21)</title>
+      <link>https://jeidee.github.io/2015/06/17/elixir-module-attributes-1421/</link>
+      <pubDate>Wed, 17 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/17/elixir-module-attributes-1421/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ elixir에서 모듈의 속성은 3개의 목적으로 제공된다.
+ 모듈에 주석을 제공한다. 사용자와 VM에 정보를 제공한다. 상수로 동작한다. 컴파일하는 동안 임시 모듈 저장공간으로 사용된다.  하나씩 살펴보자.
+As annotations elixir는 모듈 속성 컨셉을 Erlang에서 가져왔다. 예를 보자.
+ defmodule MyServer do @vsn 2 end  위의 예는, 모듈의 버전 속성을 명시적으로 설정한다. @vsn은 Erlang VM이 모듈이 수정되었는지 여부를 검사해서 코드를 리로딩할 지 결정하는 매커니즘으로 사용한다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir Structs (#15/21)</title>
+      <link>https://jeidee.github.io/2015/06/17/elixir-structs-1521/</link>
+      <pubDate>Wed, 17 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/17/elixir-structs-1521/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 이전 챕터에서 우리는 맵에 대해 배웠다.
+ iex&amp;gt; map = %{a: 1, b: 2} %{a: 1, b: 2} iex&amp;gt; map[:a] 1 iex&amp;gt; %{map | a: 3} %{a: 3, b: 2}  구조체는 컴파일 타임 검사와 기본값을 제공하는 맵의 확장이다.
+Defining structs 구조체를 정의하기 위해, defstruct를 사용한다.
+ iex&amp;gt; defmodule User do &amp;amp;#8230;&amp;gt; defstruct name: &amp;quot;John&amp;quot;, age: 27 &amp;amp;#8230;&amp;gt; end  defstruct에 사용된 키워드 리스트는, 어떤 필드가 어떤 기본값을 갖는지 정의한다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir alias, require and import (#13/21)</title>
+      <link>https://jeidee.github.io/2015/06/17/elixir-alias-require-and-import-1321/</link>
+      <pubDate>Wed, 17 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/17/elixir-alias-require-and-import-1321/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 소프트웨어 재사용을 쉽게 하기 위해, elixir는 3개의 지시자(directives)를 제공한다. 이들 지시자는 정적 유효범위(lexical scope)를 갖는다.(일반적인 언어에서 변수의 선언과 유효범위는 대부분 lexical scope를 갖는다.)
+alias alias는 모듈이름의 별칭을 허용한다. 우리가 만든 Math 모듈에 특별한 List가 있다고 가정해 보자.
+ defmodule Math do alias Math.List, as: List end  이제 Math 모듈 안에서 List는 자동적으로 Math.List로 확장된다. 만약 본래의 List 모듈에 접근하고자 한다면, Elixir.</description>
+    </item>
+    
+    <item>
+      <title>Elixir Processes (#11/21)</title>
+      <link>https://jeidee.github.io/2015/06/16/elixir-processes-1121/</link>
+      <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/16/elixir-processes-1121/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ elixir에서, 모든 코드는 프로세스 안에서 실행된다. 프로세스는 서로 분리되어 있고, 서로 동시에(concurrent) 실행되며, 메세지를 건네는 것을 통해 통신한다.
+프로세스는 elixir의 동시성 뿐만 아니라, 분산 된 구조와 결함 내구성(fault-tolerant) 역시 제공한다.
+elixir의 프로세스를 OS(운영체제)의 프로세스와 혼동하면 안된다. elixir의 프로세스는 메모리와 CPU에 있어 극단적으로 경량화되어 있다(다른 프로그래밍 언어의 쓰레드와 다르게). 이러한 이유로, 수백 수천의 프로세스가 동시에 수행되는 것이 일반적이다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir Enumerables and Streams (#10/21)</title>
+      <link>https://jeidee.github.io/2015/06/15/elixir-enumerables-and-streams-1021/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/15/elixir-enumerables-and-streams-1021/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ Enumerables elixir는 열거가능한 자료구조(enumerables) 컨셉과 그들을 처리하기 위한 Enum 모듈을 제공한다. 우리는 이미 두 개의 열거가능한 자료구조(lists and maps)를 배웠다.
+ iex&amp;gt; Enum.map([1, 2, 3], fn x -&amp;gt; x * 2 end) [2, 4, 6] iex&amp;gt; Enum.map(%{1 =&amp;gt; 2, 3 =&amp;gt; 4}, fn {k, v} -&amp;gt; k * v end) [2, 12]  Enum 모듈은 열거가능한 자료구조에서 transform(변형), sort(정렬), group, filter등의 처리를 통해 아이템을 얻을 수 있는 수많은 함수들을 제공한다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir Binaries, strings and char lists (#6/21)</title>
+      <link>https://jeidee.github.io/2015/06/12/elixir-binaries-strings-and-char-lists-621/</link>
+      <pubDate>Fri, 12 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/12/elixir-binaries-strings-and-char-lists-621/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ &amp;#8220;Basic types&amp;#8221;에서 문자열에 대해 배웠고, 타입 검사를 위해 is_binary/1 함수를 사용했다.
+ iex&amp;gt; string = &amp;quot;hello&amp;quot; &amp;quot;hello&amp;quot; iex&amp;gt; is_binary string true  이번 챕터에서는, 바이너리가 무엇인가를 이해하고, 문자열과 어떤 연관이 있으며, &amp;#8221;(single-quoted value)값,&amp;#8217;이런 값&amp;#8217;,이 무엇을 의미하는지 살펴본다.
+UTF-8과 유니코드 문자열은 UTF-8로 인코딩된 바이너리이다. 이것이 무엇을 의미하는지 정확히 이해하기 위해서는, 바이트와 코드 포인트(bytes and code-points)의 차이가 무엇인지 먼저 이해해야 한다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir Keywords, maps and dicts (#7/21)</title>
+      <link>https://jeidee.github.io/2015/06/12/elixir-keywords-maps-and-dicts-721/</link>
+      <pubDate>Fri, 12 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/12/elixir-keywords-maps-and-dicts-721/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 지금까지 자료구조와 관련된 논의는 하지 않았다. 예를 들어, 키에 특정 값을 연관시키는 자료구조 같은 것 등을 말이다. 다른 언어에서는 이러한 자료구조를 사전(Dictionary), 해시(Hash), 연관 배열(Associative Array), 맵(Map)등으로 부른다.
+elixir에는 두 개의 주요 연관 자료구조가 있다: 키워드 리스트(keyword lists)와 맵(maps)이다. 이번에는 이들에 대해 배워보도록 한다.
+Keyword lists 많은 함수형 프로그래밍 언어에서는, 연관 자료구조를 표현하는데 tuple 두 개를 사용한 리스트를 일반적으로 사용한다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir Modules (#8/21)</title>
+      <link>https://jeidee.github.io/2015/06/12/elixir-modules-821/</link>
+      <pubDate>Fri, 12 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/12/elixir-modules-821/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ elixir에서 우리는 모듈에 여러 함수를 그룹지을 수 있다. 우리는 이전 챕터에서 String 모듈 같은 여러 다른 모듈들을 사용했다.
+ iex&amp;gt; String.length &amp;quot;hello&amp;quot; 5  elixir에서 우리만의 모듈을 만들기 위해, 우리는 defmodule 매크로를 사용해야 한다. 우리는 우리의 모듈에서 함수를 정의하기 위해 def 매크로를 사용할 수 있다.
+ iex&amp;gt; defmodule Math do &amp;amp;#8230;&amp;gt; def sum(a, b) do &amp;amp;#8230;&amp;gt; a + b &amp;amp;#8230;&amp;gt; end &amp;amp;#8230;&amp;gt; end iex&amp;gt; Math.</description>
+    </item>
+    
+    <item>
+      <title>Elixir Recursion (#9/21)</title>
+      <link>https://jeidee.github.io/2015/06/12/elixir-recursion-921/</link>
+      <pubDate>Fri, 12 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/12/elixir-recursion-921/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ Loops through recursion 불변성때문에, elixir에서 loop는(모든 함수형 프로그래밍 언어에서 마찬가지로) 다른 언어들과 다르게 작성한다. 예를 들어, c 언어 같은 경우에는 다음과 같을 것이다.
+ for(i = 0; i &amp;lt; array.length; i++) { array[i] = array[i] * 2 }  위의 예제가 보여주는 바는, i와 array 둘 모두 값이 변경되는 가변성이다. 가변성은 elixir에서 가능하지 않다. 대신, 함수형 언어는 재귀(recursion)에 의존한다: 함수는 조건이 지속되는 상황에서 종료되는 상황에 이를때까지 재귀적으로 호출된다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir Basic operators (#3/21)</title>
+      <link>https://jeidee.github.io/2015/06/11/elixir-basic-operators/</link>
+      <pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/11/elixir-basic-operators/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 이전 챕터에서는 +, -, *, / 산술 연산자를 살펴보았다.
+이 외에도 elixir는 리스트 연산을 위해 ++와 &amp;#8212; 연산자를 제공한다.
+ iex&amp;gt; [1,2,3] ++ [4,5,6] [1,2,3,4,5,6] iex&amp;gt; [1,2,3] &amp;amp;#8212; [2] [1,3]  문자열의 결합에는 연산자를 사용한다.
+ iex&amp;gt; &amp;quot;foo&amp;quot; &amp;lt;&amp;gt; &amp;quot;bar&amp;quot; &amp;quot;foobar&amp;quot;  elixir는 논리 연산을 위해 or, and, not과 같은 논리 연산자를 제공한다. 연산의 결과는 true 또는 false값이며 연산자의 매개변수 역신 boolean타입(true or false)이어야 한다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir Pattern matching (#4/21)</title>
+      <link>https://jeidee.github.io/2015/06/11/elixir-pattern-matching-421/</link>
+      <pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/11/elixir-pattern-matching-421/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 이번 챕터에서는 = 연산자가 매치 연산자로 어떻게 사용되는지와 자료구조안에서 패턴매치가 어떻게 이뤄지는지 살펴볼 것이다. 마지막으로 핀 연산자(^)를 알아본다.
+매치 연산자 elixir에서 변수에 값을 할당하기 위해 = 연산자를 여러번 사용했다.
+ iex&amp;gt; x = 1 1 iex&amp;gt; x 1  c/c++에서 = 연산자는 대입연산자(또는 할당연산자)라고 불리우지만 erlang과 elixir에서는 매치 연산자라고 부른다.
+왜 그런지 살펴보자.
+ iex&amp;gt; 1 = x 1 iex&amp;gt; 2 = x ** (MatchError) no match of right hand side value: 1  1 = x 표현식이 유효함을 주목한다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir case, cond and if (#5/21)</title>
+      <link>https://jeidee.github.io/2015/06/11/elixir-case-cond-and-if-521/</link>
+      <pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/11/elixir-case-cond-and-if-521/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 이번 챕터에서는 흐름 제어에 사용되는 case, cond, if에 대해 알아본다.
+case case는 매치되는 하나를 찾기 위해 많은 패턴과 값을 비교할 때 사용한다.
+ iex&amp;gt; case {1, 2, 3} do &amp;amp;#8230;&amp;gt; {4, 5, 6} -&amp;gt; &amp;amp;#8230;&amp;gt; &amp;quot;This clause won&#39;t match&amp;quot; &amp;amp;#8230;&amp;gt; {1, x, 3} -&amp;gt; &amp;amp;#8230;&amp;gt; &amp;quot;This clause will match and bind x to 2 in this clause&amp;quot; &amp;amp;#8230;&amp;gt; _ -&amp;gt; &amp;amp;#8230;&amp;gt; &amp;quot;This clause would match any value&amp;quot; &amp;amp;#8230;&amp;gt; end &amp;quot;This clause will match and bind x to 2 in this clause&amp;quot;  기존의 변수에 패턴매치를 사용하고 싶다면 핀 연산자(^)를 사용해야 한다.</description>
+    </item>
+    
+    <item>
+      <title>Elixir Basic types (#2/21)</title>
+      <link>https://jeidee.github.io/2015/06/10/elixir-basic-types/</link>
+      <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeidee.github.io/2015/06/10/elixir-basic-types/</guid>
+      <description>본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ elixir의 기본 데이터 타입을 살펴보자.
+기본 산술 표현식과 타입  iex&amp;gt; 1 + 2 3 iex&amp;gt; 5 * 5 25 iex&amp;gt; 10 / 2 5.0  산술 연산자는 각각 +, -, *, / 연산자를 사용하면 된다.
+주목할 것은 / 연산자인데, 결과값이 항상 float이다.
+몫과 나머지를 각각 구하고자 한다면 다음과 같은 기본 산술 함수를 사용하도록 한다.</description>
+    </item>
+    
+  </channel>
+</rss>
