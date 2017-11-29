@@ -1,4 +1,4 @@
-baseURL = "http://jeidee.github.io/"
+baseURL = "http://jeidee.github.io/blog"
 languageCode = "en-us"
 title = "Erlang & Go"
 theme = "ananke"
