@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" C&#43;&#43; &middot;  Erlang &amp; Go" />
+  	<meta property="og:site_name" content="Erlang &amp; Go" />
+  	<meta property="og:url" content="https://jeidee.github.io/categories/c&#43;&#43;/" />
+    
+    
+    <meta property="og:type" content="website" />
+    
+
+  <title>
+     C&#43;&#43; &middot;  Erlang &amp; Go
+  </title>
+
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
+    
+    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
+      
+      
+        <link href="https://jeidee.github.io/categories/c&#43;&#43;/index.xml" rel="alternate" type="application/rss+xml" title="C&#43;&#43; &middot; Erlang &amp; Go" />
+      
+    
+    <meta name="generator" content="Hugo 0.31.1" />
+
+    <link rel="canonical" href="https://jeidee.github.io/categories/c&#43;&#43;/" />
+
+    
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://jeidee.github.iojs/particles.js"></script>   
+</head>
+<body class="nav-closed">
+
+  
+
+
+ <div class="site-wrapper">
+
+
+
+
+	<header class="main-header tag-head no-cover">
+
+    <nav class="main-nav overlay clearfix">
+      
+      
+        
+          <a class="menu-button icon-feed" href="https://jeidee.github.io/categories/c&#43;&#43;/index.xml">&nbsp;&nbsp;Subscribe</a>
+        
+      
+    </nav>
+    <div class="vertical">
+
+        <div class="main-header-content inner">
+            <h1 class="page-title">
+
+              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
+          </h1>
+        </div>
+</div>
+    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+</header>
+
+<main id="content" class="content" role="main">
+    
+
+	<div class="extra-pagination inner">
+    <nav class="pagination" role="navigation">
+	
+	    <a class="newer-posts" href="/categories/c&#43;&#43;/">&larr; Newer Posts</a>
+	
+	<span class="page-number">Page 2 of 2</span>
+	
+</nav>
+
+	</div>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/04/15/c-eba6aceb8885ec8aa4-eb8db0ebaaac-ed9484eba19cec84b8ec8aa4-eba78ceb93a4eab8b0/">c&#43;&#43; 리눅스 데몬 프로세스 만들기</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p>c/c++ 로 구현한 어플리케이션을 데몬 프로세스로 만들기 위해 다음과 같은 과정을 거쳐 추가 코드를 작성한다.</p>
+
+<p>1) fork()를 사용해 자식프로세스를 생성 후 부모 프로세스를 종료</p>
+
+<p>2) 터미널 종료시 SIGHUP 시그널 무시</p>
+
+<p>3) (선택) 루트 디렉토리로 경로 변경</p>
+
+<p>4) setsid()로 새로운 세션 생성</p>
+
+<p>5) while(true) 루프 생성</p>
+
+<pre><code class="language-cpp">  
+#include &lt;sys/types.h&gt;
+  
+#include &lt;sys/stat.h&gt;
+  
+#include &lt;stdio.h&gt;
+  
+#include &lt;fcntl.h&gt;
+  
+#include &lt;signal.h&gt;
+  
+#include &lt;stdlib.h&gt;
+
+int main()
+  
+{
+      
+pid_t pid;
+
+// fork 에러
+      
+if (( pid = fork()) &lt; 0)
+          
+exit(0);
+      
+// 정상 : 부모프로세스를 종료한다.
+      
+else if(pid != 0)
+          
+exit(0);
+
+// 터미널 종료 시 signal의 영향을 받지 않도록 처리
+      
+signal(SIGHUP, SIG_IGN);
+      
+close(0);
+      
+close(1);
+      
+close(2);
+
+chdir(&quot;/&quot;);
+
+setsid(); 
+
+// 여기에 프로그램 본체를 넣는다.
+      
+while(1)
+      
+{
+          
+sleep(1);
+      
+}
+      
+exit(0);
+  
+}
+  
+</code></pre>
+
+<p>실행 후 프로세스를 살펴보면 PPID가 1(ubuntu에서 upstart를 사용할 경우 upstart pid)인 것을 확인할 수 있다.</p>
+
+<p>init 프로세스의 pid가 1이다.</p>
+
+<h2 id="참고">참고</h2>
+
+<ul>
+<li><a href="http://www.joinc.co.kr/modules/moniwiki/wiki.php/article/%B5%A5%B8%F3(daemon)%20%C7%C1%B7%CE%B1%D7%B7%A5%BF%A1%20%B4%EB%C7%D1%20%C0%CC%C7%D8">데몬 프로그램에 대한 이해</a></li>
+<li><a href="http://www.freezner.com/archives/503">Linux Daemon 만들기</a></li>
+<li><a href="http://realmind.tistory.com/entry/linux-Daemon%EB%8D%B0%EB%AA%AC-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%A0%9C%EC%9E%91%EB%B0%A9%EB%B2%95">Linux Daemon 프로그램 제작방법</a></li>
+</ul>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/daemon/">#daemon</a>,
+            
+        
+        <time class="post-date" datetime="2015-04-15T00:00:00Z">
+            15 Apr 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/04/14/c-regexeba5bc-ec82acec9aa9ed95b4ec849c-ebacb8ec9e90ec97b4ec9db4-eb82a0eca79cec9db8eca780-ed9995ec9db8/">c&#43;&#43; regex를 사용해서 문자열이 날짜인지 확인</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p>정규표현식을 사용해서 주어진 문자열이 날짜인지 확인하는 코드는 다음과 같다.</p>
+
+<pre><code class="language-cpp">  
+#include &lt;string&gt;
+  
+#include &lt;iostream&gt;
+  
+#include &lt;regex&gt;
+
+using namespace std;
+
+bool string\_util::is\_date(string source) {
+      
+// yyyy-mm-dd 형식의 날짜만 지원
+      
+regex ex(&quot;d{4}-d{2}-d{2}&quot;);
+      
+smatch matches;
+
+while (regex_search(source, matches, ex)) {
+          
+for (auto m : matches) {
+              
+cout &lt;&lt; &quot;match string is &quot; &lt;&lt; m &lt;&lt; endl;
+          
+}
+
+return true;
+      
+}
+
+return false;
+  
+}
+
+</code></pre>
+
+<p>굳이 while (regex_search(&#8230;)) 루프를 사용하지 않고 if (regex_search())를 사용해도 되겠지만, 용법을 살펴보는 의미로 추가했다.</p>
+
+<p>또한 제한된 날짜 포맷(yyyy-mm-dd)만 체크 가능하며 9999-99-99와 같이 유효하지 않은 날짜도 패스시키는 단점이 있으니 필요할 경우 보강해서 사용하도록 한다.</p>
+
+<p>참고 링크에는 boost의 posix_time을 사용해서 다양한 날짜와 시간 포맷의 문자열을 처리하는 방법도 있다.</p>
+
+<h2 id="참고">참고</h2>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/3786201/how-to-parse-date-time-from-string">How to parse date/time from string?</a></li>
+<li><a href="http://www.cplusplus.com/reference/regex/regex_search/">regex_search</a></li>
+</ul>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/regex/">#regex</a>,
+            
+        
+        <time class="post-date" datetime="2015-04-14T00:00:00Z">
+            14 Apr 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/04/14/c-tail-f-eab5aced9884/">c&#43;&#43; tail -f 구현</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            <p>ifstream을 사용해서 tail -f를 구현해 보자.</p>
+
+<p>소스코드를 먼저 본다.</p>
+
+<pre><code class="language-cpp">  
+#include &lt;iostream&gt;
+  
+#include &lt;fstream&gt;
+  
+#include &lt;string&gt;
+
+#include &lt;unistd.h&gt; // for sleep()
+
+using namespace std;
+
+// return code
+  
+#define EXIT_OK 0
+  
+#define EXIT\_INVALID\_ARGUMENTS 1
+  
+#define EXIT\_FILE\_NOT_FOUND 2
+
+int main(int argc, char** argv) {
+      
+if (argc &lt; 2) {
+          
+cout &lt;&lt; &quot;Usage: log\_collector file\_path&quot; &lt;&lt; endl;
+          
+return EXIT\_INVALID\_ARGUMENTS;
+      
+}
+      
+string logFilePath = &quot;/home/gss.dev/server/bin/var/log/ejabberd/ejabberd.log&quot;;
+
+ifstream fsLog;
+
+// open log file and go to end of file
+      
+fsLog.open(logFilePath.c_str(), ios::in | ios::ate);
+
+if (!fsLog.is_open()) {
+          
+cout &lt;&lt; logFilePath &lt;&lt; &quot; is not exist.&quot; &lt;&lt; endl;
+          
+return EXIT\_FILE\_NOT_FOUND;
+      
+}
+
+string line(&quot;&quot;);
+      
+while (true) {
+          
+while(getline(fsLog, line)) cout &lt;&lt; line &lt;&lt; endl;
+
+if (!fsLog.eof()) break; // ensure end of read was EOF.
+          
+fsLog.clear();
+
+sleep(1);
+      
+}
+
+fsLog.close();
+      
+return EXIT_OK;
+  
+}
+
+</code></pre>
+
+<p>위 코드에서 중요한 부분은 다음 두 곳이다.</p>
+
+<pre><code class="language-cpp">      
+// open log file and go to end of file
+      
+fsLog.open(logFilePath.c_str(), ios::in | ios::ate);
+  
+</code></pre>
+
+<p>먼저 파일을 열고 파일 포인터를 맨 끝으로 이동한다.</p>
+
+<pre><code class="language-cpp">      
+while (true) {
+          
+while(getline(fsLog, line)) cout &lt;&lt; line &lt;&lt; endl;
+
+if (!fsLog.eof()) break; // ensure end of read was EOF.
+          
+fsLog.clear();
+
+sleep(1);
+      
+}
+
+</code></pre>
+
+<p>fsLog.clear()함수의 역할이 중요한데, getline()에 의해 EOF에 도달하거나 다른 에러가 발생할 경우 파일 상태 플래그를 리셋하는 역할을 수행한다.</p>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/file/">#file</a>,
+            
+                <a href="https://jeidee.github.iotags/tail--f/">#tail -f</a>,
+            
+        
+        <time class="post-date" datetime="2015-04-14T00:00:00Z">
+            14 Apr 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/04/14/c-ubuntuec9790ec849c-mysql-eab09cebb09c-ec97b0eab2b0/">c&#43;&#43; ubuntu에서 mysql 개발 &amp;#8211; 연결</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p>ubuntu에서 mysql 개발을 위해서, 먼저 mysql library를 다음과 같이 설치한다.</p>
+
+<pre><code>  
+sudo apt-get install libmysqlcppconn-dev
+  
+</code></pre>
+
+<p>그런 후 다음과 같이 단순 연결 코드를 작성한다. (test.cpp)</p>
+
+<pre><code class="language-cpp">  
+#include &lt;iostream&gt;
+  
+#include &quot;mysql_driver.h&quot;
+
+int main() {
+      
+sql::mysql::MySQL_Driver *driver;
+      
+sql::Connection *con;
+
+driver = sql::mysql::get\_mysql\_driver_instance();
+
+con = driver-&gt;connect(&quot;tcp://127.0.0.1:3306&quot;, &quot;ejabberd&quot;, &quot;ejabberd&quot;);
+
+delete con;
+
+return 0;
+  
+}
+  
+</code></pre>
+
+<p>g++을 사용해서 다음과 같이 컴파일 한다.</p>
+
+<pre><code>  
+g++ -Wall -I/usr/include/cppconn -o test test.cpp -L/usr/lib -lmysqlcppconn
+  
+</code></pre>
+
+<h2 id="참고">참고</h2>
+
+<ul>
+<li><a href="http://dev.mysql.com/doc/connector-cpp/en/">MySQL Connector/C++ Developer Guide</a></li>
+<li><a href="http://stackoverflow.com/questions/15995319/c-mysql-connector-undefined-reference-to-get-driver-instance-already-tri">C++ / mysql Connector &#8211; undefined reference to get_driver_instance &#8211; already tried the easy stuff</a></li>
+</ul>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/mysql/">#mysql</a>,
+            
+        
+        <time class="post-date" datetime="2015-04-14T00:00:00Z">
+            14 Apr 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/04/14/c-vector-operator-overloading/">c&#43;&#43; vector == operator overloading</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            <pre><code class="language-cpp">  
+bool operator==(vector&lt;int&gt;&amp; lhs, vector&lt;int&gt;&amp; rhs) {
+      
+if (lhs.size() != rhs.size()) return false;
+
+for (vector&lt;int&gt;::iterator lit = lhs.begin(), rit = rhs.begin();
+              
+lit != lhs.end() &amp;&amp; rit != rhs.end();
+              
+++lit, ++rit) {
+          
+if (\*lit != \*rit) return false;
+      
+}
+
+return true;
+  
+}
+  
+</code></pre>
+
+<p>주의할 것은 클래스 내부가 아닌 외부에서 연산자를 오버로딩할 때 bool operator==() <strong>const</strong> { &#8230; } 와 같이 하는 경우 다음과 같은 컴파일 에러를 만날 수 있다.</p>
+
+<blockquote>
+<p>non-member function cannot have cv-qualifier&#8230;</p>
+</blockquote>
+
+<p>원인은 <strong>const</strong> { &#8230; }의 경우 {} 블럭 안에서 클래스의 멤버 변수를 변경하지 않겠다고 명시하는 것이기 때문이며, const를 제거해 주면 해결된다.</p>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/operator-overloading/">#operator overloading</a>,
+            
+                <a href="https://jeidee.github.iotags/vector/">#vector</a>,
+            
+        
+        <time class="post-date" datetime="2015-04-14T00:00:00Z">
+            14 Apr 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/04/14/c11-foreach/">c&#43;&#43;11 foreach</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p>c++11에서는 foreach를 다음과 같이 사용할 수 있다.</p>
+
+<pre><code class="language-cpp">  
+vector&lt;string&gt; tokens = &amp;#8230;;
+  
+for(auto token : tokens) {
+      
+&amp;#8230;
+  
+}
+  
+</code></pre>
+
+<h2 id="참고">참고</h2>
+
+<ul>
+<li><a href="http://www.cprogramming.com/c++11/c++11-ranged-for-loop.html">Range-based for loops</a></li>
+</ul>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/c&#43;&#43;11/">#c&#43;&#43;11</a>,
+            
+        
+        <time class="post-date" datetime="2015-04-14T00:00:00Z">
+            14 Apr 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/03/17/c-eclipseec9790ec849c-c-110x-eca780ec9b90-ec84a4eca095/">c&#43;&#43; eclipse에서 c&#43;&#43; 11/0x 지원 설정</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p>먼저 C++ 프로젝트를 생성한다.</p>
+
+<p>생성된 프로젝트에서 Properties 메뉴를 선택한다.</p>
+
+<p>C/C++ Build &gt; Settings &gt; Tool Settings &gt; GCC C++ Compiler &gt; Miscellaneous -&gt; Other Flags에 &#8220;-std=c++0x&#8221;값을 입력한다.</p>
+
+<p>C/C++ General &gt; Paths and Symbols &gt; Symbols &gt; GNU C++에서 &#8220;Add&#8221;버튼을 클릭하고 Name필드에 &#8220;<strong>GXX_EXPERIMENTAL_CXX0X</strong>&#8220;값을 입력한다. Value필드는 빈 채로 둔다.</p>
+
+<p>Apply버튼을 클릭하고 OK 버튼을 클릭한다.</p>
+
+<p>다시 빌드한다.</p>
+
+<h2 id="참고">참고</h2>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/9131763/eclipse-cdt-c11-c0x-support">eclipse cdt c++11/0x support</a></li>
+</ul>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/c&#43;&#43;11/">#c&#43;&#43;11</a>,
+            
+                <a href="https://jeidee.github.iotags/eclipse/">#eclipse</a>,
+            
+        
+        <time class="post-date" datetime="2015-03-17T00:00:00Z">
+            17 Mar 2015
+        </time>
+    </footer>
+</article>
+
+	
+
+	<nav class="pagination" role="navigation">
+	
+	    <a class="newer-posts" href="/categories/c&#43;&#43;/">&larr; Newer Posts</a>
+	
+	<span class="page-number">Page 2 of 2</span>
+	
+</nav>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
+    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
+
+</body>
+</html>
+

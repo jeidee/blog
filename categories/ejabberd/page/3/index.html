@@ -1,0 +1,2552 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" Ejabberd &middot;  Erlang &amp; Go" />
+  	<meta property="og:site_name" content="Erlang &amp; Go" />
+  	<meta property="og:url" content="https://jeidee.github.io/categories/ejabberd/" />
+    
+    
+    <meta property="og:type" content="website" />
+    
+
+  <title>
+     Ejabberd &middot;  Erlang &amp; Go
+  </title>
+
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
+    
+    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
+      
+      
+        <link href="https://jeidee.github.io/categories/ejabberd/index.xml" rel="alternate" type="application/rss+xml" title="Ejabberd &middot; Erlang &amp; Go" />
+      
+    
+    <meta name="generator" content="Hugo 0.31.1" />
+
+    <link rel="canonical" href="https://jeidee.github.io/categories/ejabberd/" />
+
+    
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://jeidee.github.iojs/particles.js"></script>   
+</head>
+<body class="nav-closed">
+
+  
+
+
+ <div class="site-wrapper">
+
+
+
+
+	<header class="main-header tag-head no-cover">
+
+    <nav class="main-nav overlay clearfix">
+      
+      
+        
+          <a class="menu-button icon-feed" href="https://jeidee.github.io/categories/ejabberd/index.xml">&nbsp;&nbsp;Subscribe</a>
+        
+      
+    </nav>
+    <div class="vertical">
+
+        <div class="main-header-content inner">
+            <h1 class="page-title">
+
+              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
+          </h1>
+        </div>
+</div>
+    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+</header>
+
+<main id="content" class="content" role="main">
+    
+
+	<div class="extra-pagination inner">
+    <nav class="pagination" role="navigation">
+	
+	    <a class="newer-posts" href="/categories/ejabberd/page/2/">&larr; Newer Posts</a>
+	
+	<span class="page-number">Page 3 of 4</span>
+	
+	    <a class="older-posts" href="/categories/ejabberd/page/4/">Older Posts &rarr;</a>
+	
+</nav>
+
+	</div>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/01/21/ejabberd-http-request-handlers/">ejabberd http request handlers</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p><a href="https://erlnote.wordpress.com/2015/01/21/ejabberd-%EB%AA%A8%EB%93%88-%EA%B0%9C%EB%B0%9C/">ejabberd 모듈 개발 문서</a> 중에 http request handlers 개발 관련해서 간단히 정리해 봅니다.</p>
+
+<h2 id="튜토리얼">튜토리얼</h2>
+
+<p>&#8220;/hello&#8221;로 시작하는 URL에 대한 모든 요청을 처리하기 위해 &#8220;mod_http_hello&#8221;를 작성한다고 가정해 봅시다, 다음과 같이:</p>
+
+<ul>
+<li><a href="http://localhost:5280/hello/world">http://localhost:5280/hello/world</a></li>
+<li><a href="http://localhost:5280/hello/hedgehog">http://localhost:5280/hello/hedgehog</a></li>
+</ul>
+
+<p>process/2 함수의 절을 갖는 request 핸들러를 포함하는 &#8220;mod_http_hello.erl&#8221;파일을 작성하는 것으로 시작합니다.</p>
+
+<p>&#8220;/hello/world&#8221; 요청을 처리하는 예는 다음과 같습니다:</p>
+
+<pre><code class="language-erlang">      
+process(\_LocalPath = [&quot;world&quot;], \_Request) -&gt;
+          
+{xmlelement, &quot;html&quot;, [{&quot;xmlns&quot;, &quot;http://www.w3.org/1999/xhtml&quot;}],
+           
+[{xmlelement, &quot;head&quot;, [],
+             
+[{xmlelement, &quot;title&quot;, [], []}]},
+            
+{xmlelement, &quot;body&quot;, [],
+             
+[{xmlelement, &quot;p&quot;, [], [{xmlcdata, &quot;Hello, world!&quot;}]}]}]};
+  
+</code></pre>
+
+<blockquote>
+<p>모든 핸들러와 공통이기때문에, &#8220;hello&#8221; 파트는 여기에서 다루지 않습니다.</p>
+</blockquote>
+
+<p>&#8220;mod_http_hello.erl&#8221; 파일의 전체 소스는 다음과 같습니다:</p>
+
+<pre><code class="language-erlang">  
+%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
+  
+%%% File : mod\_http\_hello.erl
+  
+%%% Author : Your Name
+  
+%%% Purpose : Sample module that extends embedded ejabberd HTTP server
+  
+%%% Created :
+  
+%%% Id :
+  
+%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
+
+-module(mod\_http\_hello).
+  
+-author('your@email.org').
+  
+-vsn('').
+  
+-define(ejabberd_debug, true).
+
+-behaviour(gen_mod).
+
+-export([
+      
+start/2,
+      
+stop/1,
+      
+process/2
+      
+]).
+
+-include(&quot;ejabberd.hrl&quot;).
+  
+-include(&quot;jlib.hrl&quot;).
+  
+-include(&quot;ejabberd_http.hrl&quot;).
+
+%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
+  
+%%% REQUEST HANDLERS
+  
+%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
+
+process([&quot;world&quot;], _Request) -&gt;
+      
+{xmlelement, &quot;html&quot;, [{&quot;xmlns&quot;, &quot;http://www.w3.org/1999/xhtml&quot;}],
+       
+[{xmlelement, &quot;head&quot;, [],
+         
+[{xmlelement, &quot;title&quot;, [], []}]},
+        
+{xmlelement, &quot;body&quot;, [],
+         
+[{xmlelement, &quot;p&quot;, [], [{xmlcdata, &quot;Hello, world!&quot;}]}]}]};
+
+process([&quot;produce\_error&quot;], \_Request) -&gt;
+      
+{400, [], {xmlelement, &quot;h1&quot;, [],
+                 
+[{xmlcdata, &quot;400 Bad Request&quot;}]}};
+
+process(LocalPath, _Request) -&gt;
+      
+{xmlelement, &quot;html&quot;, [{&quot;xmlns&quot;, &quot;http://www.w3.org/1999/xhtml&quot;}],
+       
+[{xmlelement, &quot;head&quot;, [],
+         
+[{xmlelement, &quot;title&quot;, [], []}]},
+        
+{xmlelement, &quot;body&quot;, [],
+         
+[{xmlelement, &quot;p&quot;, [], [{xmlcdata, io_lib:format(&quot;Called with path: ~p&quot;, [LocalPath])}]}]}]}.
+
+%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
+  
+%%% BEHAVIOUR CALLBACKS
+  
+%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
+
+start(\_Host, \_Opts) -&gt;
+      
+ok.
+
+stop(_Host) -&gt;
+      
+ok.
+  
+</code></pre>
+
+<p>ejabberd가 시작할 때 mod_http_hello를 로드하기 위해 ejabberd.yml을 다음과 같이 수정합니다.</p>
+
+<blockquote>
+<p>원문은 이전 버전의 ejabberd.cfg와 관련한 내용을 다루지만 번역자가 임의로 ejabberd.yml 관련 내용으로 변경했음을 알립니다.</p>
+</blockquote>
+
+<pre><code>      
+modules:
+        
+mod\_http\_hello: {}
+  
+</code></pre>
+
+<p>&rdquo;/hello/&rdquo; 요청을 디스패치하기 위해 ejabberd.yml파일의 ejabberd_http 모듈의 request_handlers에 다음과 같이 mod_http_hello를 등록합니다.</p>
+
+<pre><code>      
+port: 5280
+      
+module: ejabberd_http
+        
+request_handlers:
+          
+&quot;/hello&quot;: mod\_http\_hello
+      
+web_admin: true
+      
+http_poll: true
+  
+</code></pre>
+
+<h2 id="api">API</h2>
+
+<p>gen_mod가 요구하는 콜백과는 별개로, 커스텀 모듈은 (하나 이상의 절을 갖는) process/2 함수를 구현해야 합니다:</p>
+
+<ul>
+<li>your_http_module:process(LocalPath, Request)</li>
+</ul>
+
+<p>process/2 함수는 HTTP 요청을 처리하며 클라이언트에 보낼 데이터를 반환합니다. 선택적으로 상태 코드와 추가 헤더를 포함하기도 합니다.</p>
+
+<p>process/2 함수는 두개의 매개변수를 갖습니다: LocalPath와 Request</p>
+
+<p>LocalPath는 &ldquo;local to the module&rdquo;이라 불리는 요청 URL의 일부분을 포함하는 리스트입니다.</p>
+
+<p>예를 들어 mod_foo가 다음과 같이 설정되었다고 가정하면:</p>
+
+<pre><code>      
+port: 5280
+      
+module: ejabberd_http
+        
+request_handlers:
+          
+&quot;/a/b&quot;: mod_foo
+      
+web_admin: true
+      
+http_poll: true
+  
+</code></pre>
+
+<p>유저의 요청 URL이 다음과 같을 때:</p>
+
+<p><a href="http://server:5280/a/b/c/d">http://server:5280/a/b/c/d</a></p>
+
+<p>&ldquo;local to the moudle&rdquo;은 다음과 같습니다:</p>
+
+<pre><code>      
+[&quot;c&quot;, &quot;d&quot;]
+  
+</code></pre>
+
+<p>일반적으로 서버 관리자는 그들이 선택한 path 접두사만 사용 가능하도록 모듈을 만들 수 있기 때문에, 여러분은 full path(Request#request.path) 대신에 local path 기반의 핸들러를 선택하고 싶을 것입니다.</p>
+
+<p>Request 매개변수는 ejabberd_http.hrl에 정의된 HTTP request에 대한 정보를 포함하는 레코드입니다. 다음 필드로 구성됩니다:</p>
+
+<pre><code>  
+{
+    
+&quot;request&quot;,
+    
+method, %% HTTP method (&quot;GET&quot; or &quot;POST&quot;)
+    
+path, %% Full path to requested resource
+               
+%% e.g. for &quot;http://server:5280/a/b/c/d&quot;: [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]
+    
+q, %% Query part of the URL
+               
+%% e.g. for &quot;http://server:5280/a/b/c/d?foo=bar&quot;: [{&quot;foo&quot;, &quot;bar&quot;}]
+    
+us, %% Authenticated user and server. Used in ejabberd\_web\_admin for now.
+               
+%% e.g. for &quot;foo@jabber.server.org&quot;: {&quot;foo&quot;, &quot;jabber.server.org&quot;}
+    
+auth, %% Information provided for HTTP-auth (if any)
+               
+%% e.g. for a user &quot;john&quot; who entered the password &quot;secret&quot;: {&quot;john&quot;, &quot;secret&quot;}
+    
+lang = &quot;&quot;, %% Language code
+    
+data = &quot;&quot;, %% POST data
+  
+}
+  
+</code></pre>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/custom-module/">#custom module</a>,
+            
+                <a href="https://jeidee.github.iotags/http/">#http</a>,
+            
+        
+        <time class="post-date" datetime="2015-01-21T00:00:00Z">
+            21 Jan 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/01/21/ejabberd-jabber-search-ec8898eca095ed9598eab8b0/">ejabberd jabber search 수정하기</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p>jabber search를 다음과 같이 수정해야 한다고 가정해 본다.</p>
+
+<ul>
+<li>like query 가능해야 함</li>
+<li>페이징 가능해야 함</li>
+</ul>
+
+<p>우선 페이징이 가능하도록 검색폼과 결과폼을 다음과 같이 수정해야 한다.</p>
+
+<ul>
+<li>검색폼 : page no, page size 필드 추가</li>
+<li>결과폼 : 현재 page no, 현재 page size(result count), 결과가 더 있는지 여부(more result) 필드 추가</li>
+</ul>
+
+<h2 id="검색폼-수정">검색폼 수정</h2>
+
+<p>검색폼을 수정하기 위해 ejabberd의 모듈 중에 mod_vcard.erl을 다음과 같이 수정하면 된다.</p>
+
+<pre><code class="language-erlang">  
+-define(FORM(JID),
+               
+?TLFIELD(&lt;&lt;&quot;text-single&quot;&gt;&gt;, &lt;&lt;&quot;Organization Unit&quot;&gt;&gt;,
+                    
+&lt;&lt;&quot;orgunit&quot;&gt;&gt;),
+               
+?TLFIELD(&lt;&lt;&quot;text-single&quot;&gt;&gt;, &lt;&lt;&quot;Page Number&quot;&gt;&gt;,
+                    
+&lt;&lt;&quot;pageno&quot;&gt;&gt;),
+               
+?TLFIELD(&lt;&lt;&quot;text-single&quot;&gt;&gt;, &lt;&lt;&quot;Page Size&quot;&gt;&gt;,
+                    
+&lt;&lt;&quot;pagesize&quot;&gt;&gt;)]}]).
+  
+</code></pre>
+
+<p>?FORM 매크로의 마지막 부분에 pageno와 pagesize 필드를 추가한다.</p>
+
+<p>FORM은 클라이언트에서 submit해야 하는 데이터폼을 정의한다.</p>
+
+<h2 id="결과폼-수정">결과폼 수정</h2>
+
+<p>결과폼을 수정하기 위해서 다음과 같이 수정한다.</p>
+
+<pre><code class="language-erlang">  
+search_result(Lang, JID, ServerHost, Data) -&gt;
+      
+?DEBUG(&quot;============ search_result, Data = ~p~n&quot;, [Data]),
+      
+SearchResult = search(ServerHost, Data),
+      
+[TPageNo] = proplists:get_value(&lt;&gt;, Data),
+      
+[TPageSize] = proplists:get_value(&lt;&gt;, Data),
+      
+PageNo = binary\_to\_integer(TPageNo),
+      
+PageSize = binary\_to\_integer(TPageSize),
+      
+ResultSize = length(SearchResult),
+      
+More = (PageNo * PageSize
+      
+%%?DEBUG(&quot;========== search(~p, ~p)~n&quot;, [LServer, Data]),
+      
+[TNickname] = proplists:get_value(&lt;&gt;, Data),
+      
+Nickname =
+          
+case str:suffix(&lt;&gt;, TNickname) of
+              
+true -&gt;
+                  
+str:substr(TNickname, 1, byte_size(TNickname) &amp;#8211; 1);
+              
+_ -&gt; TNickname
+          
+end,
+      
+[TPageNo] = proplists:get_value(&lt;&gt;, Data),
+      
+[TPageSize] = proplists:get_value(&lt;&gt;, Data),
+      
+PageNo = binary\_to\_integer(TPageNo),
+      
+PageSize = binary\_to\_integer(TPageSize),
+      
+Result = search(LServer, MatchSpec, AllowReturnAll, PageNo, PageSize, DBType),
+      
+Result.
+  
+</code></pre>
+
+<p>search/4함수를 PageNo, PageSize 매개변수를 추가해서 search/6함수가 호출되도록 수정하였다.</p>
+
+<p>위 코드의 변경사항은 페이징을 위해 출력할 페이지번호와 페이지당 출력할 건수 정보를 검색폼에서 가져와 search/6함수에 넘겨주는 내용이다.</p>
+
+<p>기존의 search/4함수에 PageNo와 PageSize를 추가해서 다음과 같이 search/6함수로 변경한다.</p>
+
+<pre><code class="language-erlang">  
+search(LServer, MatchSpec, AllowReturnAll, PageNo, PageSize, odbc) -&gt;
+      
+if (MatchSpec == &lt;&gt;) and not AllowReturnAll -&gt; [];
+         
+true -&gt;
+         
+Limit = case gen\_mod:get\_module_opt(LServer, ?MODULE, matches,
+                                                 
+fun(infinity) -&gt; infinity;
+                                                    
+(I) when is_integer(I),
+                                                             
+I&gt;0 -&gt;
+                                                         
+I
+                                                 
+end, ?JUD_MATCHES) of
+                         
+infinity -&gt;
+                             
+&lt;&gt;;
+                         
+Val -&gt;
+                             
+[&lt;&gt;,
+                              
+jlib:integer\_to\_binary(Val)]
+                     
+end,
+       
+?DEBUG(&quot;=========== Limit is ~p&quot;, [Limit]),
+         
+case catch ejabberd\_odbc:sql\_query(LServer,
+                            
+[&lt;&gt;,
+                             
+MatchSpec, [&lt;&gt;,list\_to\_binary(io_lib:format(&quot;~p,~p&quot;, [PageNo * PageSize, PageSize]))], &lt;&gt;])
+             
+of
+           
+{selected,
+            
+[&lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;,
+             
+&lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;,
+             
+&lt;&gt;, &lt;&gt;, &lt;&gt;,
+             
+&lt;&gt;],
+            
+Rs}
+           
+when is_list(Rs) -&gt;
+           
+Rs;
+           
+Error -&gt; ?ERROR_MSG(&quot;~p&quot;, [Error]), []
+         
+end
+      
+end;
+  
+</code></pre>
+
+<p>search(~, odbc) 함수 외에도 search(~, mnesia)와 search(~, riak)함수의 매개변수를 동일하게 수정해야 한다.</p>
+
+<p>위 코드에서 페이징과 관련한 부분은 Limit 부분이다.</p>
+
+<p>페이징을 위해 다음과 같은 코드를 사용한다.</p>
+
+<pre><code class="language-erlang">  
+[&lt;&gt;,list\_to\_binary(io_lib:format(&quot;~p,~p&quot;, [PageNo * PageSize, PageSize]))], &lt;&gt;])
+  
+</code></pre>
+
+<p>주의할 것은, 위의 페이징을 위한 코드는 mysql에서만 동작한다는 것이다.</p>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/jabber-search/">#jabber search</a>,
+            
+                <a href="https://jeidee.github.iotags/mysql/">#mysql</a>,
+            
+        
+        <time class="post-date" datetime="2015-01-21T00:00:00Z">
+            21 Jan 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-eab080eca0b8ec98a4eab8b0/">ejabberd mod_admin_extra 사용해서 vcard 가져오기</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<p>ejabberd에서는 커스텀 플러그인 모듈을 다음 URL에서 별도로 배포하고 있다.</p>
+
+<p><a href="https://www.ejabberd.im/ejabberd-modules">https://www.ejabberd.im/ejabberd-modules</a></p>
+
+<p>하지만 일부 모듈의 경우 최신 버전에서 사용할 수 없고, 수정된 모듈에서도 이전 버전과 인터페이스 호환이 되지 않아 문제를 일으키는 경우가 있으므로 주의해야 한다.</p>
+
+<h2 id="mod-admin-extra-모듈을-사용해-ejabberdctl의-get-vcard-코맨드-실행">mod_admin_extra 모듈을 사용해 ejabberdctl의 get_vcard 코맨드 실행</h2>
+
+<p>ejabberd-modules 중에서 mod_ctlextra와 mod_admin_extra 모듈은 ejabberdctl용(관리자 콘솔 코맨드) 확장 코맨드 모듈이다. 둘 중에서 mod_admin_extra가 최신 버전이지만 최신 버전의 ejabberd(현재 기준 14.07)에서 사용되는 gen_mod:get_module_opt/5와 호환되지 않아(mod_admin_extra는 gen_mod:get_module_opt/4를 사용) 일부 코드를 수정해야 한다.</p>
+
+<pre><code class="language-erlang">       
+963 get\_module\_resource(Server) -&gt;
+       
+964 case gen\_mod:get\_module\_opt(Server, ?MODULE, module\_resource, none) of
+       
+965 none -&gt; atom\_to\_list(?MODULE);
+       
+966 R when is_list(R) -&gt; R
+       
+967 end.
+  
+</code></pre>
+
+<p>964 라인을 다음과 같이 수정한다.</p>
+
+<pre><code class="language-erlang">       
+964 case gen\_mod:get\_module\_opt(global, Server, ?MODULE, module\_resource, none) of
+  
+</code></pre>
+
+<p>그런 후 디버그 쉘(ejabberdctl debug)을 실행하고 다음과 같이 입력한다.</p>
+
+<pre><code class="language-erlang">      
+&gt; mod\_admin\_extra:get\_module\_resource(&lt;&lt;&quot;localhost&quot;&gt;&gt;).
+      
+&quot;mod\_admin\_extra&quot;
+  
+</code></pre>
+
+<p>위와 같이 출력되면 이상이 없는 것이다.</p>
+
+<p>이 외에도 get_vcard와 get_vcard_content 함수를 다음과 같이 수정한다.</p>
+
+<pre><code class="language-erlang">      
+get_vcard(User, Host, Name) -&gt;
+          
+if
+              
+is\_list(User) -&gt; U = list\_to_binary(User);
+              
+true -&gt; U = User
+          
+end,
+          
+if
+              
+is\_list(Host) -&gt; H = list\_to_binary(Host);
+              
+true -&gt; H = Host
+          
+end,
+          
+if
+              
+is\_list(Name) -&gt; N = list\_to_binary(Name);
+              
+true -&gt; N = Name
+          
+end,
+          
+[Res | \_] = get\_vcard_content(U, H, [N]),
+          
+Res.
+
+get_vcard(User, Host, Name, Subname) -&gt;
+          
+if
+              
+is\_list(User) -&gt; U = list\_to_binary(User);
+              
+true -&gt; U = User
+          
+end,
+          
+if
+              
+is\_list(Host) -&gt; H = list\_to_binary(Host);
+              
+true -&gt; H = Host
+          
+end,
+          
+if
+              
+is\_list(Name) -&gt; N = list\_to_binary(Name);
+              
+true -&gt; N = Name
+          
+end,
+          
+if
+              
+is\_list(Subname) -&gt; SN = list\_to_binary(Subname);
+              
+true -&gt; SN = Subname
+          
+end,
+          
+[Res | \_] = get\_vcard_content(U, H, [N, SN]),
+          
+Res.
+
+get\_vcard\_content(User, Server, Data) -&gt;
+          
+[{\_, Module, Function, \_Opts}] = ets:lookup(sm\_iqtable, {?NS\_VCARD, Server}),
+          
+JID = jlib:make\_jid(User, Server, list\_to\_binary(get\_module_resource(Server))),
+          
+IQ = #iq{type = get, xmlns = ?NS_VCARD},
+          
+IQr = Module:Function(JID, JID, IQ),
+          
+case IQr#iq.sub_el of
+          
+[A1] -&gt;
+              
+case get_vcard(Data, A1) of
+              
+[] -&gt; throw(error\_no\_value\_found\_in_vcard);
+              
+ElemList -&gt; [xml:get\_tag\_cdata(Elem) || Elem &lt;- ElemList]
+              
+end;
+          
+[] -&gt;
+              
+throw(error\_no\_vcard_found)
+          
+end.
+  
+</code></pre>
+
+<p>그런 후 소스를 재컴파일 &amp; 재배포(make &amp;&amp; make install)한 후 ejabberd를 실행한다.</p>
+
+<p>쉘(erl 쉘이 아니다.)에서 다음과 같이 실행해 보자.</p>
+
+<pre><code>      
+$ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot;
+  
+</code></pre>
+
+<p>만약 romeo@localhost의 vcard가 있고 NICKNAME이 설정되어 있다면 정상적으로 출력될 것이다.</p>
+
+<p>이제 제대로 작동하는 것을 확인했다면 소스를 살펴보도록 한다.</p>
+
+<h2 id="mod-admin-extra의-get-vcard-3-관련-소스-살펴보기">mod_admin_extra의 get_vcard/3 관련 소스 살펴보기</h2>
+
+<p>mod_admin_extra모듈은 vcard 관련 작업을 할 때 mod_vcard모듈의 process_sm_iq/3 함수를 호출하는데, 이 때 세 번째 파라미터로 사용하는 Iq의 경우 레코드타입이므로 쉘에서 테스트해보고자 한다면 #iq레코드가 정의되어 있어야 한다.</p>
+
+<p>xml.hrl과 jlib.hrl을 rr() 코맨드로 load해서 레코드를 등록해도 되지만, 어떤 이유에서인지 jlib.hrl은 xmlel 레코드가 정의되어 있지 않다는 에러를 내뿜으며 제대로 불러지지 않는다.</p>
+
+<p>따라서 다음과 같이 직접 erl 쉘에서 레코드를 등록해 사용하도록 하자.</p>
+
+<pre><code class="language-erlang">      
+rd(xmlel, {name= &lt;&lt;&quot;&quot;&gt;&gt;, attrs= [], children= []}).
+      
+rd(iq, {id= &lt;&lt;&quot;&quot;&gt;&gt;, type=get, xmlns= &lt;&lt;&quot;&quot;&gt;&gt;, lang= &lt;&lt;&quot;&quot;&gt;&gt;, sub_el= #xmlel{}}).
+  
+</code></pre>
+
+<p>주의할 것은 바이너리 값(&lt;&gt;)을 매치연산자(=)와 같이 사용할 때는 꼭 = &lt; 그 전에, erl 쉘에서 테스트를 용이하게 하기 위해 mod_admin_extra의 모든 함수를 export하자.(기존 -export 부분을 주석처리하고 -compile(export_all). 사용)</p>
+
+<p>mod_admin_extra모듈에는 get_vcard가 다음과 같이 정의되어 있다.</p>
+
+<pre><code class="language-erlang">      
+get_vcard(User, Host, Name) -&gt;
+          
+[Res | \_] = get\_vcard_content(User, Host, [Name]),
+          
+Res. 
+
+get_vcard(User, Host, Name, Subname) -&gt;
+          
+[Res | \_] = get\_vcard_content(User, Host, [Name, Subname]),
+          
+Res.
+  
+</code></pre>
+
+<p>get_vcard_content/3 함수를 사용하는데 해당 함수는 다음과 같다.</p>
+
+<pre><code class="language-erlang">      
+get\_vcard\_content(User, Server, Data) -&gt;
+          
+[{\_, Module, Function, \_Opts}] = ets:lookup(sm\_iqtable, {?NS\_VCARD, Server}),
+          
+JID = jlib:make\_jid(User, Server, list\_to\_binary(get\_module_resource(Server))),
+          
+IQ = #iq{type = get, xmlns = ?NS_VCARD},
+          
+IQr = Module:Function(JID, JID, IQ),
+          
+case IQr#iq.sub_el of
+          
+[A1] -&gt;
+              
+case get_vcard(Data, A1) of
+              
+[] -&gt; throw(error\_no\_value\_found\_in_vcard);
+              
+ElemList -&gt; [xml:get\_tag\_cdata(Elem) || Elem &lt;- ElemList]
+              
+end;
+          
+[] -&gt;
+              
+throw(error\_no\_vcard_found)
+          
+end.
+  
+</code></pre>
+
+<p>위의 코드를 보면서, 쉘에서 테스트해 보도록 하자.</p>
+
+<p>(xmlel과 iq레코드는 이미 정의했고 ejabberdctl debug로 디버그 쉘을 시작했다고 가정한다.)</p>
+
+<p>먼저 첫 번째 라인을 사용해 ets에서 sm_iqtable에 저장되어 있는(observer:stat()를 사용해 observer 윈도우를 출력한 후 Table Viewer에서 ets의 sm_iqtable을 조회해 볼 수 있다.) ?NS_VCARD(매크로이며 &lt;&gt;값을 갖는다) 네임스페이스의 Server(&lt;&gt;&#8230;)에 해당하는 mod_vcard 모듈과 process_sm_iq함수명을 가져온다.</p>
+
+<pre><code class="language-erlang">      
+&gt; [{\_, Module, Function, \_Opts}] = ets:lookup(sm_iqtable, {&lt;&lt;&quot;vcard-temp&quot;&gt;&gt;, &lt;&lt;&quot;localhost&quot;&gt;&gt;}).
+      
+[{ {&lt;&lt;&quot;vcard-temp&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;},
+        
+mod\_vcard,process\_sm_iq,
+        
+{one_queue,&lt;0.442.0&gt;}}]
+  
+</code></pre>
+
+<p>Module은 &#8220;mod_vcard이고 Function은 process_sm_iq이다.</p>
+
+<p>다음엔 JID를 생성한다.</p>
+
+<pre><code class="language-erlang">      
+(ejabberd@localhost)14&gt; JID = jlib:make\_jid(&lt;&lt;&quot;romeo&quot;&gt;&gt;, &lt;&lt;&quot;localhost&quot;&gt;&gt;, list\_to\_binary(mod\_admin\_extra:get\_module_resource(&lt;&lt;&quot;localhost&quot;&gt;&gt;))).
+      
+{jid,&lt;&lt;&quot;romeo&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;,&lt;&lt;&quot;mod\_admin\_extra&quot;&gt;&gt;,
+           
+&lt;&lt;&quot;romeo&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;,&lt;&lt;&quot;mod\_admin\_extra&quot;&gt;&gt;}
+  
+</code></pre>
+
+<p>그리고 IQ레코드를 생성하고,</p>
+
+<pre><code class="language-erlang">      
+(ejabberd@localhost)18&gt; IQ = #iq{type = get, xmlns = &lt;&lt;&quot;vcard-temp&quot;&gt;&gt;}.
+      
+#iq{id = &lt;&lt;&gt;&gt;,type = get,xmlns = &lt;&lt;&quot;vcard-temp&quot;&gt;&gt;,
+          
+lang = &lt;&lt;&gt;&gt;,
+          
+sub_el = #xmlel{name = &lt;&lt;&gt;&gt;,attrs = [],children = []}}
+  
+</code></pre>
+
+<p>mod_vcard:process_sm_iq/3함수를 호출한다.</p>
+
+<pre><code class="language-erlang">      
+(ejabberd@localhost)19&gt; IQr = Module:Function(JID, JID, IQ).
+      
+#iq{id = &lt;&lt;&gt;&gt;,type = result,xmlns = &lt;&lt;&quot;vcard-temp&quot;&gt;&gt;,
+          
+lang = &lt;&lt;&gt;&gt;,
+          
+sub_el = [#xmlel{name = &lt;&lt;&quot;vCard&quot;&gt;&gt;,
+                           
+attrs = [{&lt;&lt;&quot;xmlns&quot;&gt;&gt;,&lt;&lt;&quot;vcard-temp&quot;&gt;&gt;}],
+                           
+children = [#xmlel{name = &lt;&lt;&quot;NICKNAME&quot;&gt;&gt;,attrs = [],
+                                              
+children = [{xmlcdata,&lt;&lt;&quot;kkk&quot;&gt;&gt;}]}]}]}
+  
+</code></pre>
+
+<p>A1에 vCard의 xml 엘리먼트를 가져와 담고,</p>
+
+<pre><code class="language-erlang">      
+(ejabberd@localhost)22&gt; [A1] = IQr#iq.sub_el.
+      
+[#xmlel{name = &lt;&lt;&quot;vCard&quot;&gt;&gt;,
+              
+attrs = [{&lt;&lt;&quot;xmlns&quot;&gt;&gt;,&lt;&lt;&quot;vcard-temp&quot;&gt;&gt;}],
+              
+children = [#xmlel{name = &lt;&lt;&quot;NICKNAME&quot;&gt;&gt;,attrs = [],
+                                 
+children = [{xmlcdata,&lt;&lt;&quot;kkk&quot;&gt;&gt;}]}]}]
+  
+</code></pre>
+
+<p>get_vcard/2 함수를 호출해 NICKNAME과 매치하는 children 요소를 가져오고,</p>
+
+<pre><code class="language-erlang">      
+(ejabberd@localhost)49&gt; ElemList = mod\_admin\_extra:get_vcard([&lt;&lt;&quot;NICKNAME&quot;&gt;&gt;], A1).
+      
+[#xmlel{name = &lt;&lt;&quot;NICKNAME&quot;&gt;&gt;,attrs = [],
+              
+children = [{xmlcdata,&lt;&lt;&quot;kkk&quot;&gt;&gt;}]}]
+  
+</code></pre>
+
+<p>XML cdata를 구하면 NICKNAME의 값을 가져올 수 있다.</p>
+
+<p>(리스트 해석 사용함)</p>
+
+<pre><code class="language-erlang">      
+(ejabberd@localhost)51&gt; [xml:get\_tag\_cdata(Elem) || Elem &lt;- ElemList].
+      
+[&lt;&lt;&quot;kkk&quot;&gt;&gt;]
+  
+</code></pre>
+
+<p>다음에는 vcard를 설정하는 코드를 살펴보자.</p>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/vcard/">#vcard</a>,
+            
+        
+        <time class="post-date" datetime="2015-01-21T00:00:00Z">
+            21 Jan 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-ec84a4eca095ed9598eab8b0/">ejabberd mod_admin_extra 사용해서 vcard 설정하기</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            <p>이전 글에서 설명한 vcard 가져오기 관련된 내용 중에 수정할 부분이 있다.</p>
+
+<p>ejabberd_modules의 경우 최신 버전(현재 14.07)에서는 호환이 안되며 대신 ejabberd_contrib를 사용해야 한다.</p>
+
+<p><a href="https://www.ejabberd.im/ejabberd-contrib">https://www.ejabberd.im/ejabberd-contrib</a></p>
+
+<pre><code>      
+git clone git://github.com/processone/ejabberd-contrib.git
+  
+</code></pre>
+
+<p>ejabberd-contrib에 포함된 mod_admin_extra는 ejaberd_modules에서 생기는 호환 문제가 해결되어 있으므로 수정할 필요없이 그대로 사용하면 된다.</p>
+
+<p>설치(mod_admin_extra.erl을 ejabberd/src파일에 복사한 후 make &amp;&amp; make install, ejabberd.yml에 mod_admin_extra 모듈 등록)하고 ejabberd를 재시작한 후 터미널에서 다음과 같이 테스트해 보자.</p>
+
+<pre><code>      
+$ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot;
+      
+hello
+      
+$ ejabberdctl set_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; &quot;world&quot;
+      
+$ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot;
+      
+world
+  
+</code></pre>
+
+<p>닉네임이 잘 변경된다.</p>
+
+<p>erl 디버그 쉘에서는 해당 모듈의 함수를 직접 호출해 테스트해보도록 하자.</p>
+
+<pre><code>      
+$ ejabberdctl debug
+      
+(ejabberd@localhost)7&gt; mod\_admin\_extra:get_vcard(&lt;&lt;&quot;romeo&quot;&gt;&gt;, &lt;&lt;&quot;localhost&quot;&gt;&gt;, &lt;&lt;&quot;NICKNAME&quot;&gt;&gt;).
+      
+&lt;&lt;&quot;world&quot;&gt;&gt;
+  
+</code></pre>
+
+<p>get_vcard/3의 파라미터에 문자열 대신 바이너리를 입력한 이유는 다음과 같다.</p>
+
+<pre><code class="language-erlang">  
+#ejabberd\_commands{name = get\_vcard, tags = [vcard],
+         
+desc = &quot;Get content from a vCard field&quot;,
+         
+longdesc = Vcard1FieldsString ++ &quot;n&quot; ++ Vcard2FieldsString ++ &quot;nn&quot; ++ VcardXEP,
+         
+module = ?MODULE, function = get_vcard,
+         
+args = [{user, binary}, {host, binary}, {name, binary}],
+         
+result = {content, string}},
+  
+</code></pre>
+
+<p>args를 보면 파라미터의 데이터타입이 모두 binary로 되어 있다.</p>
+
+<p>이제 mod_admin_extra모듈의 get_vcard/3과 set_vcard/4 함수를 사용하면 vcard를 가져오거나 설정할 수 있게 된다.</p>
+
+<p>코드 리뷰는 이전 글의 vcard 가져오기 내용을 참조하도록 하고 이 글은 여기에서 마무리 한다.</p>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/vcard/">#vcard</a>,
+            
+        
+        <time class="post-date" datetime="2015-01-21T00:00:00Z">
+            21 Jan 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/01/21/ejabberd-mysql-odbc-ec84a4eca095/">ejabberd mysql odbc 설정</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            <p>mysql 설정은 다음과 같이 한다.</p>
+
+<pre><code>      
+$ vi /etc/ejabberd/ejabberd.yml
+
+auth_method: odbc
+      
+\## auth_method: internal에서 변경한다.
+
+\## MySQL server:
+      
+##
+      
+odbc_type: mysql
+      
+odbc_server: &quot;localhost&quot;
+      
+odbc_database: &quot;ejabberd&quot;
+      
+odbc_username: &quot;ejabberd&quot;
+      
+odbc_password: &quot;ejabberd&quot;
+  
+</code></pre>
+
+<p>위와 같이 한 후 모듈별로 db_type을 설정해야 하는데, roster와 vcard를 mysql에 저장하도록 하려면 다음과 같이 ejabberd.yml파일을 수정한다.</p>
+
+<pre><code>        
+mod_roster:
+          
+db_type: odbc
+        
+mod\_shared\_roster: {}
+        
+mod_stats: {}
+        
+mod_time: {}
+        
+mod_vcard:
+          
+db_type: odbc
+  
+</code></pre>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/mysql/">#mysql</a>,
+            
+        
+        <time class="post-date" datetime="2015-01-21T00:00:00Z">
+            21 Jan 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/01/21/ejabberd-node-jsec9bb9ec9790ec849c-ejabberd-http-api-ed98b8ecb69ced9598eab8b0/">ejabberd node.js웹에서 ejabberd http api 호출하기</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<h2 id="ejabberd-rest-api를-위한-http-커스텀-모듈">ejabberd rest api를 위한 http 커스텀 모듈</h2>
+
+<p>ejabberd 의 http 커스텀 모듈을 mod_http_api.erl로 만들었다고 가정한다.</p>
+
+<p>(mod_http_api.erl 관련 내용은 <a href="https://erlnote.wordpress.com/2015/01/21/ejabberd-http-request-handlers/">이전의 Post</a>에서 참조)</p>
+
+<p><a href="http://localhost:5280/api/session/list">http://localhost:5280/api/session/list</a> URI를 호출했을 때 동작하는 API를 만들기 위해 mod_http_api.erl에 다음과 같이 추가한다.</p>
+
+<pre><code class="language-erlang">  
+process([&lt;&lt;&quot;session&quot;&gt;&gt;, &lt;&lt;&quot;list&quot;&gt;&gt;], _Request) -&gt;
+       
+session\_list(\_Request);
+  
+</code></pre>
+
+<p>session_list/1 함수는 내부 함수이며 다음과 같다.</p>
+
+<pre><code class="language-erlang">  
+session\_list(\_Request) -&gt;
+      
+?DEBUG(&quot;session\_list() \_Request is ~p~n&quot;, [_Request]),
+      
+List = mod\_admin\_extra:connected\_users\_info(),
+      
+Y = [X || {[X,\_,\_,\_,\_], \_, \_, \_, \_, \_, \_} &lt;- List],
+      
+Y1 = {[{list, Y}]},
+      
+Result1 = jiffy:encode(Y1),
+      
+Result2 = to_bin(&quot;~s&quot;, [Result1]),
+      
+{200, ?OPTIONS_HEADER, Result2}.
+  
+</code></pre>
+
+<p>한 줄씩 살펴보자.</p>
+
+<p>(mod_admin_extra 모듈은 <a href="https://erlnote.wordpress.com/2015/01/21/ejabberd-mod_admin_extra-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%84%9C-vcard-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/">이전 Post</a>에서 참조)</p>
+
+<p>mod_admin_extra모듈의 connected_users_info/0 함수는 현재 ejabberd에 접속한 유저 정보를 리스트로 반환한다.</p>
+
+<pre><code class="language-erlang">  
+(ejabberd@localhost)1&gt; mod\_admin\_extra:connected\_users\_info().
+  
+[{[&lt;&gt;,64,&lt;&gt;,47,
+     
+&lt;&gt;],
+    
+&quot;c2s&quot;,&quot;10.0.2.2&quot;,59753,0,&quot;ejabberd@localhost&quot;,1278},
+   
+{[&lt;&gt;,64,&lt;&gt;,47,
+     
+&lt;&gt;],
+    
+&quot;c2s&quot;,&quot;10.0.2.2&quot;,59754,0,&quot;ejabberd@localhost&quot;,1278}]
+  
+</code></pre>
+
+<p>위와 같은 리스트를 갖는데, 이 데이터 중에서 &lt;&lt;&ldquo;romeo&rdquo;&gt;&gt;와 &lt;&lt;&ldquo;juliet&rdquo;&gt;&gt;을 얻기 위해 다음과 같이 리스트 해석을 사용한다.</p>
+
+<pre><code class="language-erlang">  
+(ejabberd@localhost)2&gt; List = mod\_admin\_extra:connected\_users\_info().
+  
+(ejabberd@localhost)3&gt; Y = [X || {[X,\_,\_,\_,\_], \_, \_, \_, \_, \_, \_} &lt;- List].
+  
+[&lt;&gt;,&lt;&gt;]
+  
+</code></pre>
+
+<p>그런 후 jiffy 모듈의 encode/1 함수를 사용해 Json 문서로 인코딩해야 하는데, 그 전에 다음과 같이 해당 리스트를 JSON문서 변환을 위해 EJSON포맷으로 변경해 준다.</p>
+
+<pre><code class="language-erlang">  
+Y1 = {[{list, Y}]},
+  
+Result1 = jiffy:encode(Y1),
+  
+Result2 = to_bin(&quot;~s&quot;, [Result1]),
+  
+</code></pre>
+
+<p>to_bin/2 함수는 문자열 포맷팅한 후 바이너리로 변환해 주는 유틸 함수로 erlang 내부 함수가 아님을 주의하자.</p>
+
+<p>마지막으로 response를 돌려 주면 된다.</p>
+
+<pre><code>  
+{200, ?OPTIONS_HEADER, Result2}.
+  
+</code></pre>
+
+<p>?HEADER는 XML 컨텐츠타입이며, ?OPTIONS_HEADER는 palin text 컨텐츠 타입이다.</p>
+
+<h2 id="node-js에서-ejabberd-rest-api-호출">node.js에서 ejabberd rest api 호출</h2>
+
+<p>다음과 같이 호출한다.</p>
+
+<pre><code class="language-javascript">  
+router.get('/session/list', function(req, res) {
+    
+//var query = url.parse(req.url, true).query;
+    
+//debug('get query = ', query)
+    
+request(&quot;http://localhost:5280/api/session/list&quot;,
+      
+function(error, response, body) {
+          
+data = JSON.parse(body);
+          
+debug(data.list.length);
+          
+res.send(data);
+      
+});
+  
+});
+  
+</code></pre>
+
+<p>웹 브라우저에서 출력하면 다음과 같이 출력된다.</p>
+
+<pre><code>  
+{&quot;list&quot;:[&quot;romeo&quot;,&quot;juliet&quot;]}
+  
+</code></pre>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/custom-module/">#custom module</a>,
+            
+                <a href="https://jeidee.github.iotags/mod_http_api/">#mod_http_api</a>,
+            
+                <a href="https://jeidee.github.iotags/rest-api/">#rest api</a>,
+            
+        
+        <time class="post-date" datetime="2015-01-21T00:00:00Z">
+            21 Jan 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/01/21/ejabberd-roster-eca1b0ed9a8c-api-eba78ceb93a4eab8b0/">ejabberd roster 조회 api 만들기</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<h2 id="process-handler-추가">process handler 추가</h2>
+
+<p><a href="https://erlnote.wordpress.com/2015/01/21/ejabberd-http-request-handlers/">mod_http_api.erl</a>을 작성했다고 가정한다.</p>
+
+<p>request handler에 다음과 같은 코드를 추가한다.</p>
+
+<pre><code class="language-erlang">      
+process([&lt;&lt;&quot;friend&quot;&gt;&gt;, &lt;&lt;&quot;list&quot;&gt;&gt;], _Request) -&gt;
+        
+try get\_friend\_list(_Request)
+        
+catch
+          
+throw: {Message, Result} -&gt; {200, ?OPTIONS\_HEADER, list\_to_json(Message, Result)};
+          
+\_:\_ -&gt; {200, ?OPTIONS\_HEADER, list\_to_json(&lt;&lt;&quot;An error occured during the requested work.&quot;&gt;&gt;, &lt;&lt;&quot;500&quot;&gt;&gt;)}
+        
+end;
+  
+</code></pre>
+
+<p>mod_http_api 모듈이 /api에 바인딩되어 있다면 위의 request 핸들러는 다음과 같은 url을 처리하게 된다.</p>
+
+<pre><code>      
+/api/friend/list
+  
+</code></pre>
+
+<p>try&#8230;catch 블럭은 get_friend_list/1에서 예외가 발생할 경우 catch해 올바른 포맷의 결과를 클라이언트에 전달할 수 있도록 해준다.</p>
+
+<p>만약 try&#8230;catch를 하지 않을 경우 해당 요청 처리 중에 예외가 발생하면 클라이언트는 아무런 결과도 받지 못하게 된다.</p>
+
+<h2 id="get-friend-list-1">get_friend_list/1</h2>
+
+<p>실제로 roster를 조회하는 get_friend_list/1 함수는 다음과 같다.</p>
+
+<pre><code class="language-erlang">      
+get\_friend\_list(_Request) -&gt;
+        
+%%?DEBUG(&quot;get\_friend\_list() \_Request is ~p~n&quot;, [\_Request]),
+        
+Args = element(4, _Request),
+        
+check_ticket(Args),
+        
+User = proplists:get_value(&lt;&gt;, Args),
+        
+Server = proplists:get_value(&lt;&gt;, Args),
+        
+?DEBUG(&quot;==== prameter User ~p, Server ~p ~n&quot;,
+          
+[User, Server]),
+        
+if
+          
+User == undefined;
+          
+Server == undefined -&gt;
+            
+throw({&lt;&gt;, &lt;&gt;});
+          
+true -&gt; ok
+        
+end,
+        
+Rosters = mod\_admin\_extra:get_roster(User, Server),
+        
+if length(Rosters) == 0 -&gt;
+          
+throw({&lt;&gt;, &lt;&gt;});
+          
+true -&gt; ok
+        
+end,
+        
+% JSON Document로 변환
+        
+Result = [{[{jid, Jid}, {subscription, list\_to\_binary(Subscription)}]} || {Jid, \_, Subscription, \_, _} &lt;- Rosters],
+        
+{200, ?OPTIONS\_HEADER, list\_to_json(value, Result, &lt;&gt;, &lt;&gt;)}.
+  
+</code></pre>
+
+<p>check_ticket/1함수는 유효한 API인지 검사하기 위한 internal 함수인데 생략하도록 한다.</p>
+
+<p>함수의 flow를 개략적으로 살펴보면 다음과 같다.</p>
+
+<ol>
+<li>_Request에서 query string 분리</li>
+<li>query string에서 파라미터 분리</li>
+<li>파라미터 유효성 검사</li>
+<li>mod_admin_extra:get_roster/2 함수를 사용해 roster 조회</li>
+<li>roster가 비어 있을 경우 예외 발생</li>
+<li>roster를 JSON으로 encoding하기 위해 리스트해석을 통해 EJSON term으로 변경</li>
+<li>list_to_json/4함수를 사용해 EJSON term을 JSON으로 변경해서 클라이언트에 반환</li>
+</ol>
+
+<p>위 flow에서 중요한 부분은 4번과 6번이다.</p>
+
+<p>jiffy의 encode/1 함수에 입력되는 변수는 반드시 다음 포맷과 일치해야 한다.</p>
+
+<pre><code>      
+{[ {}, {}, &amp;#8230; ]}
+  
+</code></pre>
+
+<p>즉 term의 리스트를 요소로 갖는 term이어야 한다.</p>
+
+<p>내부의 term({}) 리스트에는 JSON으로 변환되었을 때 key: value의 값이 되기 위해 두 개의 요소를 입력하면 된다.</p>
+
+<p>예는 다음과 같다.</p>
+
+<pre><code>      
+{[ {name, &lt;&gt;}, {age, 10} ]}
+  
+</code></pre>
+
+<p>위의 입력 값은 다음과 같이 변환된다.</p>
+
+<pre><code>      
+{
+          
+name: &quot;Juliet&quot;,
+          
+age: 10
+      
+}
+  
+</code></pre>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/roster/">#roster</a>,
+            
+        
+        <time class="post-date" datetime="2015-01-21T00:00:00Z">
+            21 Jan 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/01/21/ejabberd-eab095eca09ceba19c-ed8ab9eca095-ec9ca0eca080-presence-ec9785eb8db0ec9db4ed8ab8ed9598eab8b0/">ejabberd 강제로 특정 유저 presence 업데이트하기</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            <p>ejabberdctl debug로 쉘을 시작한 후 ejabbrd_sm 모듈의 force_update_presence/1 함수를 사용해 특정 유저의 presence를 업데이트할 수 있다.</p>
+
+<pre><code class="language-erlang">  
+(ejabberd@localhost)7&gt; US = {&lt;&lt;&quot;romeo&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;}.
+  
+{&lt;&lt;&quot;romeo&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;}
+
+(ejabberd@localhost)9&gt; ejabberd\_sm:force\_update_presence(US).
+  
+ok
+  
+</code></pre>
+
+<p>XMPP 클라이언트에서는 다음과 같이 presence stanza가 갱신되어 수신된다.</p>
+
+<p>(swift client의 Debug Console에서 확인)</p>
+
+<pre><code>  
+&lt;!&amp;#8211; IN &amp;#8211;&gt;
+  
+&lt;presence from='romeo@localhost/2239860841418983868905790' to='romeo@localhost/2239860841418983868905790'&gt;&lt;status/&gt;&lt;c xmlns='http://jabber.org/protocol/caps' hash='sha-1' node='http://swift.im' ver='rs/tl9NCfXBpKoOYUy+JdBbPGDg='/&gt;&lt;/presence&gt;&lt;r xmlns='urn:xmpp:sm:2'/&gt;
+  
+</code></pre>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/presence/">#presence</a>,
+            
+        
+        <time class="post-date" datetime="2015-01-21T00:00:00Z">
+            21 Jan 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/01/21/ejabberd-eb9494ebb284eab7b8-ebaaa8eb939ceba19c-ejabberd-core-ebaaa8eb9388-ed858cec8aa4ed8ab8ed95b4-ebb3b4eab8b0/">ejabberd 디버그 모드로 ejabberd  core 모듈 테스트해 보기</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            <p>ejabberd를 실행한 상태에서 ejabberdctl의 debug 쉘을 사용해 실행 중인 ejabberd 노드에 접속해 core 모듈을 테스트해 볼 수 있다.</p>
+
+<p>먼저 debug 쉘을 실행한다.</p>
+
+<pre><code>  
+ejabberdctl debug
+  
+</code></pre>
+
+<p>ejabberd 모듈과 api를 확인하려면 ejabberd의 문서를 확인하거나 src 폴더의 .erl 소스파일을 열어 직접 확인해 볼 수 있다.</p>
+
+<p>여러 모듈 중에서 인증 모듈을 사용해 유저가 존재하는지 여부를 체크해 보자.</p>
+
+<pre><code class="language-erlang">  
+(ejabberd@localhost)2&gt; ejabberd\_auth:is\_user_exists(&lt;&lt;&quot;test1&quot;&gt;&gt;, &lt;&lt;&quot;admin&quot;&gt;&gt;).
+  
+false
+  
+(ejabberd@localhost)3&gt; ejabberd\_auth:is\_user_exists(&lt;&lt;&quot;test&quot;&gt;&gt;, &lt;&lt;&quot;admin&quot;&gt;&gt;).
+  
+true
+  
+</code></pre>
+
+<p>위와 같이 테스트해 볼 수 있고, 실행 중인 ejabberd 노드의 상태를 모니터링하거나 dets/mnesia 테이블의 내용을 확인해 보기 위해 observer를 실행할 수 있다.</p>
+
+<pre><code class="language-erlang">      
+&gt; observer:start().
+  
+</code></pre>
+
+<p>erlang을 빌드할 때 wxWidget 라이브러리가 시스템에 설치된 상태라면 observer 윈도우가 문제 없이 실행될 것이다.</p>
+
+<blockquote>
+<p>wxWidget 라이브러리를 설치하고 erlang/otp를 인스톨하는 방법은 <a href="http://jeidee.tumblr.com/post/105423833606/erlang">http://jeidee.tumblr.com/post/105423833606/erlang</a> 문서를 참고하도록 한다.</p>
+</blockquote>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/debug/">#debug</a>,
+            
+        
+        <time class="post-date" datetime="2015-01-21T00:00:00Z">
+            21 Jan 2015
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post posts">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/2015/01/21/ejabberd-ebaaa8eb9388-eab09cebb09c/">ejabberd 모듈 개발</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            
+
+<h2 id="ejabberd-모듈-개발-공식-문서-번역">ejabberd 모듈 개발 공식 문서 번역</h2>
+
+<ul>
+<li><a href="https://www.process-one.net/en/wiki/ejabberd_module_development/">원문</a></li>
+</ul>
+
+<h3 id="소개">소개</h3>
+
+<p>ejabberd의 내부 모듈은 플러그인처럼 작동합니다. 각 모듈들은 &#8220;mod_&#8221;로 시작하는 erlang 모듈입니다. 만약 erlang을 모른다면 <a href="http://erlang.org/doc/getting_started/">erlang 입문서</a>를 먼저 보고 오세요.</p>
+
+<h3 id="모듈-api">모듈 API</h3>
+
+<p>모든 모듈은 &#8220;gen_mod&#8221; behavior를 사용해야 합니다.</p>
+
+<p>해당 behavior는 다음 API를 제공합니다:</p>
+
+<pre><code class="language-erlang">      
+start(Host, Opts) -&gt; ok
+      
+stop(Host) -&gt; ok
+      
+* Host = string()
+      
+* Opts = [{Name, Value}]
+      
+* Name = Value = string()
+  
+</code></pre>
+
+<p>Host는 모듈이 동작하는 가상호스트의 이름입니다. start/2와 stop/1 함수는 서버의 시작과 중지시에 각 가상호스트에 의해 호출됩니다.</p>
+
+<p>Opts는 모듈을 위한 환경설정(configuration) 파일에 있는 옵션집합의 목록입니다. Opts는 <a href="https://www.process-one.net/en/wiki/gen_mod/">gen_mod:get_opt/3</a> 함수로 받을 수 있습니다.</p>
+
+<h3 id="ejabberd-api">ejabberd API</h3>
+
+<p>모듈들은 다음 메커니즘을 하나 이상 사용해서 ejabberd와 상호작용합니다.</p>
+
+<ul>
+<li><a href="https://www.process-one.net/en/wiki/ejabberd_core_modules/">ejabberd core modules</a></li>
+<li><a href="https://www.process-one.net/en/wiki/ejabberd_events_and_hooks/">ejabberd events and hooks</a></li>
+<li><a href="https://www.process-one.net/en/wiki/ejabberd_IQ_handlers/">ejabberd IQ handlers</a></li>
+<li><a href="https://www.process-one.net/en/wiki/ejabberd_route_table/">ejabberd route table</a></li>
+<li><a href="https://www.process-one.net/en/wiki/ejabberd_HTTP_request_handlers/">ejabberd HTTP request handlers</a></li>
+</ul>
+
+<h4 id="core-modules">core modules</h4>
+
+<h5 id="router-ejabberd-router">Router (ejabberd_router)</h5>
+
+<p>이 모듈은 각 노드에서 XMPP 패킷 처리를 위한 메인 라운터입니다. 패킷을 목적지 도메인에 기반해 라우트합니다. 이 모듈은 local 과 global routes 테이블을 갖습니다. 먼저 각 패킷의 목적지 도메인을 local 테이블에서 찾아 해당 패킷을 적합한 process에 라우트합니다. 못 찾을 경우 global 테이블에서 찾아 적합한 ejabberd node나 process에 라우트합니다. 두 테이블에서 모두 찾을 수 없을 경우, 해당 패킷은 S2S manager에 보냅니다.</p>
+
+<ul>
+<li><a href="https://www.process-one.net/en/wiki/ejabberd_router/">Router API</a></li>
+</ul>
+
+<h5 id="local-router-ejabberd-local">Local router (ejabberd_local)</h5>
+
+<p>이 모듈은 서버의 가상 호스트중 하나와 일치하는 목적지 도메인을 갖는 패킷을 라우트합니다. 목적지 JID의 유저 파트가 비어있지 않다면, 패킷을 session manager에 보내고 그렇지 않을 경우 패킷의 내용에 기반해 처리합니다.</p>
+
+<ul>
+<li><a href="https://www.process-one.net/en/wiki/ejabberd_local/">Local router API</a></li>
+</ul>
+
+<h5 id="session-manager-ejabberd-sm">Session manager (ejabberd_sm)</h5>
+
+<p>현재 열린 세션들을 처리합니다.</p>
+
+<p>이 모듈은 패킷을 로컬 유저에게 라우트합니다. 이 모듈은 presence 테이블을 통해 어떤 유저 리소스(디바이스)에 패킷을 보내야 할지 결정합니다. 유저 리소스가 이 노드에 연결되어 있다면 C2S 매니저에 라우트합니다. 다른 노드에 연결되어 있다면 패킷은 해당 노드의 세션 매니저에 보내집니다.</p>
+
+<ul>
+<li><a href="https://www.process-one.net/en/wiki/ejabberd_sm/">Session manager API</a></li>
+</ul>
+
+<h5 id="utilities-jlib">Utilities (jlib)</h5>
+
+<p>각종 헬퍼 함수들입니다. 모듈들은 <a href="https://forge.process-one.net/browse/ejabberd/trunk/src/jlib.hrl?r=trunk">jlib.hrl</a>에 정의된 레코드들을 사용하기 위해서 jlib.hrl을 포함(include)해야 합니다.</p>
+
+<ul>
+<li><a href="https://www.process-one.net/en/wiki/jlib/">jlib API</a></li>
+</ul>
+
+<h5 id="modules-utilities-gen-mod">Modules utilities (gen_mod)</h5>
+
+<p>유용한 유틸리티 함수들이 있습니다. 이 모듈은 &#8220;gen_mod&#8221; behavior를 정의합니다.</p>
+
+<ul>
+<li><a href="https://www.process-one.net/en/wiki/gen_mod/">gen mod API</a></li>
+</ul>
+
+<h5 id="xml-utilities-xml">XML utilities (xml)</h5>
+
+<p>XML 패킷을 처리하는 각종 유틸리티들을 포함합니다.</p>
+
+<ul>
+<li><a href="https://www.process-one.net/en/wiki/xml/">XML API</a></li>
+</ul>
+
+<h5 id="관계형-데이터베이스-ejabberd-odbc">관계형 데이터베이스 (ejabberd_odbc)</h5>
+
+<p>SQL 쿼리를 실행하는데 사용합니다.</p>
+
+<ul>
+<li><a href="https://www.process-one.net/en/wiki/ejabberd_odbc/">Relational database API</a></li>
+</ul>
+
+<h4 id="events-and-hooks">events and hooks</h4>
+
+<p>event: 정의된 이벤트</p>
+
+<p>hook: 이벤트가 발생될 때 호출될 콜백함수</p>
+
+<h5 id="소개-1">소개</h5>
+
+<p>ejabberd는 이벤트 매커니즘을 제공합니다. 각 모듈은 이벤트가 발생할 때 호출되는 후크를 등록할 수 있습니다.</p>
+
+<h5 id="예제">예제</h5>
+
+<p>mod_offline.elr은 어떻게 events/hooks 매커니즘이 사용될 수 있는지를 보여주는 예제 모듈 입니다.</p>
+
+<h5 id="api">API</h5>
+
+<pre><code class="language-erlang">      
+ejabberd_hooks:add(Hook, Host, Module, Function, Priority)
+      
+ejabberd_hooks:delete(Hook, Host, Module, Function, Priority)
+      
+* Hook = atom()
+      
+* Host = string() | global
+      
+* Module = atom()
+      
+* Function = atom()
+      
+* Priority = integer()
+  
+</code></pre>
+
+<ul>
+<li>Hook: 이벤트의 이름</li>
+<li>Host: 이벤트와 관련된 가상 호스트의 이름이거나 &#8216;global&#8217; atom. 일부 이벤트는 &#8216;global&#8217; atom일때만 동작하도록 설계되었습니다.</li>
+<li>Module and Function: 이벤트가 발생할 때 호출되는 콜백함수(the hook)</li>
+<li>Priority: 여러 개의 hook이 동일 이벤트에 등록되어 있을 때 호출되는 우선 순위. 후크간 의존성이 있을 때 사용합니다.</li>
+</ul>
+
+<p>후크에서 ejabberd가 다른 함수를 호출하는 것(call chain)을 막고 싶다면, stop atom()을 반환해야 합니다. 호출 체인은 막는 다른 방법은 {stop, Val} 튜플을 반환하는 것입니다.</p>
+
+<h5 id="이벤트-목록">이벤트 목록</h5>
+
+<p>사용가능한 이벤트의 목록과 후크에 전달되는 매개변수의 각종 타입에 대한 설명은 다음과 같습니다.</p>
+
+<p><strong>events</strong></p>
+
+<p>아래 목록이외에도 최근 버전에 추가된 문서화되지 않은 이벤트가 많이 있습니다.</p>
+
+<p>adhoc_local_items(Acc, From, To, Lang) -&gt; Adhoc</p>
+
+<p>adhoc_sm_items(Acc, From, To, Lang) -&gt; Adhoc</p>
+
+<p>c2s_stream_features(Acc)</p>
+
+<p>c2s_unauthenticated_iq(Acc, Server, IQ) -&gt; Adhoc</p>
+
+<p>disco_local_features(Acc, From, To, Node, Lang) -&gt; Adhoc</p>
+
+<p>disco_local_identity(Acc, From, To, Node, Lang) -&gt; Adhoc</p>
+
+<p>&#8211; 이 이벤트는 <a href="http://xmpp.org/extensions/xep-0030.html">XEP-0030</a>과 관련되어 있습니다.</p>
+
+<p>disco_local_items(Acc, From, To, Node, Lang) -&gt; Adhoc</p>
+
+<p>&#8211; 이 이벤트는 <a href="http://xmpp.org/extensions/xep-0030.html">XEP-0030</a>과 관련되어 있습니다.</p>
+
+<p>disco_sm_features(Acc, From, To, Node, Lang) -&gt; Adhoc</p>
+
+<p>disco_sm_identity(Acc, From, To, Node, Lang) -&gt; Adhoc</p>
+
+<p>disco_sm_items(Acc, From, To, Node, Lang) -&gt; Adhoc</p>
+
+<p>ejabberd_ctl_process(Args) -&gt; CtlStatus</p>
+
+<p>filter_packet({From, To, Packet}) -&gt; {From, To, Packet}</p>
+
+<p>&#8211; 이 이벤트에 후크를 등록하면 Host=global 을 전달 받습니다.</p>
+
+<p>local_send_to_resource_hook(From, To, Packet) -&gt; ok</p>
+
+<p>offline_message_hook(From, To, Packet) -&gt; ok</p>
+
+<p>&#8211; 메세지가 오프라인 유저에게 전달될 때 트리거됩니다. ejabberd 세션 매니저는 offline_message_hook 체인(서비스 불능 에러와 함께 들어오는 메세지를 넘기는)에 기본 함수를 추가합니다. 이 후크는 체인에 아무것도 남아있지 않을때 실행되도록 가장 낮은 우선순위를 갖습니다.</p>
+
+<p>privacy_check_packet(Acc, User, Server, PrivacyList, {From, To, Packet}, Dir) -&gt; Auth</p>
+
+<p>privacy_get_user_list(Acc, User, Server) -&gt; PrivacyList</p>
+
+<p>privacy_iq_get(Acc, From, To, IQ) -&gt; {result, Packet} | {error, Error}</p>
+
+<p>privacy_iq_set(Acc, From, To, IQ) -&gt; {result, Packet} | {error, Error}</p>
+
+<p>privacy_updated_list(Acc, OldPrivacyList, NewPrivacyList) -&gt; PrivacyList</p>
+
+<p>pubsub_publish_item(From, To, Node, ItemID, Payload) -&gt; ok</p>
+
+<p>remove_user(User, Server) -&gt; ok</p>
+
+<p>resend_offline_messages_hook(Acc, User, Server) -&gt; [Route]</p>
+
+<p>resend_subscription_requests_hook(Acc, User, Server) -&gt; [Packet]</p>
+
+<p>roster_get(Acc, {User, Server}) -&gt; [RosterItem]</p>
+
+<p>roster_get_jid_info(Acc, User, Server, JID) -&gt; {Subscription, Groups}</p>
+
+<p>roster_get_subscription_lists(Acc, User, Server) -&gt; {[FromSubscription], [ToSubscription]}</p>
+
+<p>roster_in_subscription(Acc, User, Server, JID, SubscriptionType, Reason) -&gt; bool()</p>
+
+<p>roster_out_subscription(User, Server, JID, SubscriptionType) -&gt; bool()</p>
+
+<p>roster_process_item(RosterItem, Server) -&gt; RosterItem</p>
+
+<p>set_presence_hook(User, Server, Resource, Packet) -&gt; none</p>
+
+<p>&#8211; 이 후크는 연결된 유저가 서버에 presence stanza를 보낼때는 언제나 처리됩니다.</p>
+
+<p>sm_register_connection_hook(SID, JID) -&gt; ok</p>
+
+<p>sm_remove_connection_hook(SID, JID, SessionInfo) -&gt; ok</p>
+
+<p>unset_presence_hook(User, Server, Resource, Status) -&gt; void()</p>
+
+<p>user_available_hook(JID) -&gt; ok</p>
+
+<p>user_receive_packet(JID, From, To, Packet) -&gt; ok</p>
+
+<p>&#8211; 이 후크는 서버가 클라이언트에 통과시킬 stanza를 생성할때는 언제나 처리됩니다. 예를 들어: A유저가 MUC X(Multi User Chat)에 메세지를 보내고, X에는 A와 B 유저가 있다고 가정할 때, 이 후크는 2번 처리됩니다: 한 번은 (JID=A, From=X, To=A, Packet=Payload), 다른 한 번은 (JID=B, From=X, To=B, Packet=Payload).</p>
+
+<p>user_send_packet(From, To, Packet) -&gt; ok</p>
+
+<p>&#8211; 이 후크는 클라이언트가 서버에 stanza를 보내고 서버가 그것을 목적지로 전달할 때는 언제나 처리됩니다. 예를 들어: A 유저가 B 유저에게 메세지를 보낼 때(From=A, To=B, Packet=Payload); A 유저가 MUC X에 메세지를 보낼 때(From=A, To=X, Packet=Payload).</p>
+
+<p><strong>types</strong></p>
+
+<p>To = From = JID = ServerJID = #jid (see jlib)</p>
+
+<p>Packet = Payload = {xmlelement, Name, Attrs, SubEl}</p>
+
+<p>IQ = #iq (see jlib)</p>
+
+<p>Error = ?STANZA_ERROR/3 (see jlib.h)</p>
+
+<p>Lang = string()</p>
+
+<p>Dir = in | out</p>
+
+<p>Auth = allow | deny</p>
+
+<p>PrivacyList = OldPrivacyList = NewPrivacyList = none | #userlist</p>
+
+<p>CtlStatus = false | ?STATUS_SUCCESS | ?STATUS_ERROR | ?STATUS_USAGE | ?STATUS_BADRPC (see ejabberd_ctl.hrl&#8221;)</p>
+
+<p>Adhoc = {result, I} | {error, Error} | empty</p>
+
+<p>Arg = [string()]</p>
+
+<p>Node = [string()]</p>
+
+<p>ItemID = string()</p>
+
+<p>Route = {route, From, To, Packet</p>
+
+<p>RosterItem = #roster (see mod_roster.hrl)</p>
+
+<p>Subscription = none | from | to | both | remove</p>
+
+<p>SubscriptionType = subscribe | subscribed | unsubscribe | unsubscribed</p>
+
+<p>Reason = string()</p>
+
+<p>Groups = [string()]</p>
+
+<p>SimpleJID = FromSubscription = ToSubscription = {User, Server, Resource}</p>
+
+<p>User = string()</p>
+
+<p>Server = string()</p>
+
+<p>Resource = string()</p>
+
+<p>Status = string()</p>
+
+<p>SID = {Time, pid()}</p>
+
+<p>Time = {MegaSecs, Secs, MicroSecs} (see erlang:now/0)</p>
+
+<p>MegaSecs = Secs = MicroSecs = int()</p>
+
+<p>Acc = same type as the return type of the function. Each module adds to the accumulator Acc their contribution</p>
+
+<h4 id="iq-handlers">IQ handlers</h4>
+
+<h5 id="소개-2">소개</h5>
+
+<p>ejabberd의 내부 모듈들은 특정 네임스페이스를 사용해서 IQ를 처리하기 위해 스스로 등록할 수 있습니다.(events and hooks 매커니즘과 유사한 방법으로)</p>
+
+<h5 id="예제-1">예제</h5>
+
+<p>mod_last.erl은 IQ 처리 매커니즘을 사용한 예입니다. 해당 모듈은 events and hooks 매커니즘 역시 사용합니다.</p>
+
+<h5 id="api-1">API</h5>
+
+<pre><code class="language-erlang">  
+gen\_iq\_handler:add\_iq\_handler(Scope, Host, Namespace, Module, Function, IQDisc)
+  
+gen\_iq\_handler:remove\_iq\_handler(Scope, Host, Namespace, Module, Function, IQDisc)
+
+* Scope = ejabberd\_local | ejabberd\_sm
+      
+* Namespace = string() (some namespaces macros are defined in jlib.hrl)
+      
+* Host = string()
+      
+* Module = atom()
+      
+* Fonction = atom()
+      
+* IQDisc = no\_queue | one\_queue | {queues, N} | parallel
+      
+* N = integer()
+  
+</code></pre>
+
+<p>ejabberd_local Scope는 서버에 지정된 IQ를 등록합니다. ejabberd_sm Scope는 계정의 순수 JID(bare JID, resource 파트가 없는)-서버파트가 서버인-에 지정된 IQ를 등록합니다.</p>
+
+<p>Host는 IQ와 관계된 가상 호스트 이름입니다.</p>
+
+<p>Module과 Function은 IQ가 수신될 때 호출되는 처리 함수입니다. 처리 함수는 다음 매개변수 타입을 가져야 합니다:</p>
+
+<pre><code class="language-erlang">  
+Module:Function(From, To, IQ) -&gt; IQ
+      
+* From = To = #jid
+      
+* IQ = #iq
+  
+</code></pre>
+
+<p>처리함수는 결과 IQ를 반환해야 합니다.</p>
+
+<p>IQDisc는 동시에 수신된 IQ(concurrent IQ)를 어떻게 처리할지 설명합니다:</p>
+
+<ul>
+<li><p>no_queue: 핸들러를 실행하기 위해 어떤 쓰레드도 만들지 않는다.</p></li>
+
+<li><p>one_queue: 핸들러를 실행하기 위해 독점 쓰레드 하나만 생성한다.</p></li>
+
+<li><p>{queues, N}: 핸들러를 실행하기 위해 N개의 쓰레드를 생성한다.</p></li>
+
+<li><p>parallel: 각각의 IQ를 처리하기 위한 개별 쓰레드를 생성한다.</p></li>
+</ul>
+
+<h4 id="route-table">route table</h4>
+
+<h5 id="소개-3">소개</h5>
+
+<p>ejabberd 내부 모듈은 XMPP 이름을 갖는 서버의 라우트 테이블에 스스로를 등록할 수 있습니다. 이 모듈들은 &#8220;services&#8221; 로 알려져 있습니다.</p>
+
+<p>서비스 모듈들은 &#8220;gen_mod&#8221;에 더해 &#8220;gen_server&#8221; behavior를 사용해야 합니다.</p>
+
+<h5 id="예제-2">예제</h5>
+
+<p>mod_echo.erl 모듈은 라우트 매커니즘을 사용한 좋은 예제입니다.</p>
+
+<h5 id="api-2">API</h5>
+
+<pre><code class="language-erlang">  
+ejabberd\_router:register\_route(Host)
+  
+ejabberd\_router:unregister\_route(Host),
+      
+* Host = string()
+  
+</code></pre>
+
+<p>Host는 모듈의 XMPP 이름입니다.</p>
+
+<h5 id="gen-server-api">gen_server API</h5>
+
+<p>다음 세 함수들은 아래 처럼 모듈의 API로 사용될 수 있습니다.</p>
+
+<p>PROCNAME 매크로는 커스텀 모듈에서 정의한 매크로입니다.</p>
+
+<pre><code class="language-erlang">  
+start_link(Host, Opts) -&gt;
+      
+Proc = gen\_mod:get\_module_proc(Host, ?PROCNAME),
+      
+gen\_server:start\_link({local, Proc}, ?MODULE, [Host, Opts], []).
+
+start(Host, Opts) -&gt;
+      
+Proc = gen\_mod:get\_module_proc(Host, ?PROCNAME),
+      
+ChildSpec =
+      
+{Proc,
+       
+{?MODULE, start_link, [Host, Opts]},
+       
+temporary,
+       
+1000,
+       
+worker,
+       
+[?MODULE]},
+      
+supervisor:start\_child(ejabberd\_sup, ChildSpec).
+
+stop(Host) -&gt;
+      
+Proc = gen\_mod:get\_module_proc(Host, ?PROCNAME),
+      
+gen_server:call(Proc, stop),
+      
+supervisor:terminate\_child(ejabberd\_sup, Proc),
+      
+supervisor:delete\_child(ejabberd\_sup, Proc).
+  
+</code></pre>
+
+<h5 id="gen-server-callbacks">gen_server callbacks</h5>
+
+<p>다음 함수들은 커스텀 모듈에서 정의되고 export되어야 합니다.</p>
+
+<pre><code class="language-erlang">  
+init([Host, Opts]) -&gt; {ok, State} |
+                               
+{ok, State, Timeout} |
+                                
+ignore |
+                               
+{stop, Reason}
+
+handle_info(Info, State) -&gt; {noreply, State} |
+                                         
+{noreply, State, Timeout} |
+                                         
+{stop, Reason, State}
+  
+* Info = {route, From, To, Packet}
+  
+* To = From = #jid (see jlib core module)
+  
+* Packet = {xmlelement, Name, Attrs, SubEl}
+
+terminate(Reason, State) -&gt; void()
+
+handle\_call(stop, \_From, State) -&gt;
+      
+{stop, normal, ok, State}.
+
+handle\_cast(\_Msg, State) -&gt;
+      
+{noreply, State}.
+
+code\_change(\_OldVsn, State, _Extra) -&gt;
+      
+{ok, State}.
+  
+</code></pre>
+
+<p>init 콜백은 모듈을 초기화하기 위해 사용됩니다. Host는 모듈이 실행되는 가상 호스트의 이름입니다. Opts는 설정 파일(ejabberd.yml)에 정의된 모듈 옵션 셋의 목록이며 gen_mod:get_opt/3 함수로 가져올 수 있습니다. <a href="https://www.process-one.net/en/wiki/ejabberd_router/">ejabberd_router:register_route/1</a> 함수는 이 콜백에서 실행합니다.</p>
+
+<p>terminate/2 함수는 모듈을 중지할 때 사용합니다. ejabberd_router:unregister_route 함수는 이 콜백에서 실행합니다. handle_info/2 함수는 모듈에 보낸 XMPP 패킷을 수신하기 위해 사용합니다. [ejabberd_router:route/3]() 함수는 패킷을 리라우트(reroute)하기 위해 사용합니다.</p>
+
+<p>모든 다른 콜백은 위에 보여진대로 쓰여질 수 있습니다.</p>
+
+<h4 id="http-request-handlers">HTTP request handlers</h4>
+
+<p>ejabberd에 포함된 웹서버는 커스텀 모듈을 사용해 확장할 수 있습니다.</p>
+
+<h5 id="튜토리얼">튜토리얼</h5>
+
+<p>&#8220;/hello&#8221;로 시작하는 URL에 대한 모든 요청을 처리하기 위해 &#8220;mod_http_hello&#8221;를 작성한다고 가정해 봅시다, 다음과 같이:</p>
+
+<ul>
+<li><a href="http://localhost:5280/hello/world">http://localhost:5280/hello/world</a></li>
+<li><a href="http://localhost:5280/hello/hedgehog">http://localhost:5280/hello/hedgehog</a></li>
+</ul>
+
+<p>process/2 함수의 절을 갖는 request 핸들러를 포함하는 &#8220;mod_http_hello.erl&#8221;파일을 작성하는 것으로 시작합니다.</p>
+
+<p>&#8220;/hello/world&#8221; 요청을 처리하는 예는 다음과 같습니다:</p>
+
+<pre><code class="language-erlang">  
+process(\_LocalPath = [&quot;world&quot;], \_Request) -&gt;
+      
+{xmlelement, &quot;html&quot;, [{&quot;xmlns&quot;, &quot;http://www.w3.org/1999/xhtml&quot;}],
+       
+[{xmlelement, &quot;head&quot;, [],
+         
+[{xmlelement, &quot;title&quot;, [], []}]},
+        
+{xmlelement, &quot;body&quot;, [],
+         
+[{xmlelement, &quot;p&quot;, [], [{xmlcdata, &quot;Hello, world!&quot;}]}]}]};
+  
+</code></pre>
+
+<blockquote>
+<p>모든 핸들러와 공통이기때문에, &#8220;hello&#8221; 파트는 여기에서 다루지 않습니다.</p>
+</blockquote>
+
+<p>&#8220;mod_http_hello.erl&#8221; 파일의 전체 소스는 다음과 같습니다:</p>
+
+<pre><code class="language-erlang">  
+%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
+  
+%%% File : mod\_http\_hello.erl
+  
+%%% Author : Your Name
+  
+%%% Purpose : Sample module that extends embedded ejabberd HTTP server
+  
+%%% Created :
+  
+%%% Id :
+  
+%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
+
+-module(mod\_http\_hello).
+  
+-author('your@email.org').
+  
+-vsn('').
+  
+-define(ejabberd_debug, true).
+
+-behaviour(gen_mod).
+
+-export([
+     
+start/2,
+     
+stop/1,
+     
+process/2
+     
+]).
+
+-include(&quot;ejabberd.hrl&quot;).
+  
+-include(&quot;jlib.hrl&quot;).
+  
+-include(&quot;ejabberd_http.hrl&quot;).
+
+%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
+  
+%%% REQUEST HANDLERS
+  
+%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
+
+process([&quot;world&quot;], _Request) -&gt;
+     
+{xmlelement, &quot;html&quot;, [{&quot;xmlns&quot;, &quot;http://www.w3.org/1999/xhtml&quot;}],
+      
+[{xmlelement, &quot;head&quot;, [],
+        
+[{xmlelement, &quot;title&quot;, [], []}]},
+       
+{xmlelement, &quot;body&quot;, [],
+        
+[{xmlelement, &quot;p&quot;, [], [{xmlcdata, &quot;Hello, world!&quot;}]}]}]};
+
+process([&quot;produce\_error&quot;], \_Request) -&gt;
+     
+{400, [], {xmlelement, &quot;h1&quot;, [],
+                
+[{xmlcdata, &quot;400 Bad Request&quot;}]}};
+
+process(LocalPath, _Request) -&gt;
+     
+{xmlelement, &quot;html&quot;, [{&quot;xmlns&quot;, &quot;http://www.w3.org/1999/xhtml&quot;}],
+      
+[{xmlelement, &quot;head&quot;, [],
+        
+[{xmlelement, &quot;title&quot;, [], []}]},
+       
+{xmlelement, &quot;body&quot;, [],
+        
+[{xmlelement, &quot;p&quot;, [], [{xmlcdata, io_lib:format(&quot;Called with path: ~p&quot;, [LocalPath])}]}]}]}.
+
+%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
+  
+%%% BEHAVIOUR CALLBACKS
+  
+%%%&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
+
+start(\_Host, \_Opts) -&gt;
+     
+ok.
+
+stop(_Host) -&gt;
+     
+ok.
+  
+</code></pre>
+
+<p>ejabberd가 시작할 때 mod_http_hello를 로드하기 위해 ejabberd.yml을 다음과 같이 수정합니다.</p>
+
+<blockquote>
+<p>원문은 이전 버전의 ejabberd.cfg와 관련한 내용을 다루지만 번역자가 임의로 ejabberd.yml 관련 내용으로 변경했음을 알립니다.</p>
+</blockquote>
+
+<pre><code>      
+modules:
+        
+mod\_http\_hello: {}
+  
+</code></pre>
+
+<p>&rdquo;/hello/&rdquo; 요청을 디스패치하기 위해 ejabberd.yml파일의 ejabberd_http 모듈의 request_handlers에 다음과 같이 mod_http_hello를 등록합니다.</p>
+
+<pre><code>      
+port: 5280
+      
+module: ejabberd_http
+        
+request_handlers:
+          
+&quot;/hello&quot;: mod\_http\_hello
+      
+web_admin: true
+      
+http_poll: true
+  
+</code></pre>
+
+<h5 id="api-3">API</h5>
+
+<p>gen_mod가 요구하는 콜백과는 별개로, 커스텀 모듈은 (하나 이상의 절을 갖는) process/2 함수를 구현해야 합니다:</p>
+
+<ul>
+<li>your_http_module:process(LocalPath, Request)</li>
+</ul>
+
+<p>process/2 함수는 HTTP 요청을 처리하며 클라이언트에 보낼 데이터를 반환합니다. 선택적으로 상태 코드와 추가 헤더를 포함하기도 합니다.</p>
+
+<p>process/2 함수는 두개의 매개변수를 갖습니다: LocalPath와 Request</p>
+
+<p>LocalPath는 &ldquo;local to the module&rdquo;이라 불리는 요청 URL의 일부분을 포함하는 리스트입니다.</p>
+
+<p>예를 들어 mod_foo가 다음과 같이 설정되었다고 가정하면:</p>
+
+<pre><code>      
+port: 5280
+      
+module: ejabberd_http
+        
+request_handlers:
+          
+&quot;/a/b&quot;: mod_foo
+      
+web_admin: true
+      
+http_poll: true
+  
+</code></pre>
+
+<p>유저의 요청 URL이 다음과 같을 때:</p>
+
+<p><a href="http://server:5280/a/b/c/d">http://server:5280/a/b/c/d</a></p>
+
+<p>&ldquo;local to the moudle&rdquo;은 다음과 같습니다:</p>
+
+<pre><code>      
+[&quot;c&quot;, &quot;d&quot;]
+  
+</code></pre>
+
+<p>일반적으로 서버 관리자는 그들이 선택한 path 접두사만 사용 가능하도록 모듈을 만들 수 있기 때문에, 여러분은 full path(Request#request.path) 대신에 local path 기반의 핸들러를 선택하고 싶을 것입니다.</p>
+
+<p>Request 매개변수는 ejabberd_http.hrl에 정의된 HTTP request에 대한 정보를 포함하는 레코드입니다. 다음 필드로 구성됩니다:</p>
+
+<pre><code>      
+{
+        
+&quot;request&quot;,
+        
+method, %% HTTP method (&quot;GET&quot; or &quot;POST&quot;)
+        
+path, %% Full path to requested resource
+                   
+%% e.g. for &quot;http://server:5280/a/b/c/d&quot;: [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]
+        
+q, %% Query part of the URL
+                   
+%% e.g. for &quot;http://server:5280/a/b/c/d?foo=bar&quot;: [{&quot;foo&quot;, &quot;bar&quot;}]
+        
+us, %% Authenticated user and server. Used in ejabberd\_web\_admin for now.
+                   
+%% e.g. for &quot;foo@jabber.server.org&quot;: {&quot;foo&quot;, &quot;jabber.server.org&quot;}
+        
+auth, %% Information provided for HTTP-auth (if any)
+                   
+%% e.g. for a user &quot;john&quot; who entered the password &quot;secret&quot;: {&quot;john&quot;, &quot;secret&quot;}
+        
+lang = &quot;&quot;, %% Language code
+        
+data = &quot;&quot;, %% POST data
+      
+}
+  
+</code></pre>
+
+<h3 id="내부-모듈을-외부-모듈처럼-실행하기">내부 모듈을 외부 모듈처럼 실행하기</h3>
+
+<p>라우트 테이블만 사용하는 ejabberd 내부 모듈은 <a href="https://blog.process-one.net/epeios_write_a_module_for_an_xmpp_server_once_run_it_everywhere/">epeios</a>와 함께 <a href="http://www.xmpp.org/extensions/xep-0114.html">XEP-0114</a>를 준수하는 외부 모듈처럼 사용될 수 있으므로, 다른 XEP-0114와 호환되는 XMPP 서버들과 함께 사용될 수 있습니다.</p>
+
+<h2 id="ejabberd-모듈-개발-시작">ejabberd 모듈 개발 시작</h2>
+
+<h3 id="ejabberd-설치-및-모듈-개발을-위한-준비">ejabberd 설치 및 모듈 개발을 위한 준비</h3>
+
+<p>ejabberd는 /services/app/ejabberd에 설치되었으며,</p>
+
+<p>ejabberd 소스는 /services/app/ejabberd/src/ejabberd-14.07 디렉토리에 있다고 가정합니다.</p>
+
+<p>커스텀 모드파일 소스는 /services/app/ejabberd/src/ejabberd-14.07/src에 추가합니다.(이후 src로 통칭)</p>
+
+<p>자세한 설치 관련 내용은 <a href="ejabberd.md">ejabberd</a> 문서를 참조하세요.</p>
+
+<h3 id="개발">개발</h3>
+
+<h4 id="스켈레톤-모듈">스켈레톤 모듈</h4>
+
+<p>ejabberd의 모듈개발을 위한 뼈대 코드는 다음과 같습니다.</p>
+
+<pre><code class="language-erlang">  
+-module(mod_foo).
+
+-behavior(gen_mod).
+
+-export([start/2, stop/1]).
+
+start(\_Host, \_Opts) -&gt;
+      
+ok.
+
+stop(_Host) -&gt;
+      
+ok.
+  
+</code></pre>
+
+<h4 id="개발-목표">개발 목표</h4>
+
+<p>ejabberd의 <a href="https://www.process-one.net/en/wiki/ejabberd_events_and_hooks/">events and hooks</a>방식을 사용해서 커스텀 모듈을 작성해 보겠습니다.</p>
+
+<p><a href="http://metajack.im/2008/08/28/writing-ejabberd-modules-presence-storms/">Writing ejabberd modules: Presence Storms</a>문서를 참조해서 진행할 예정이며 모듈명은 mod_shunshine입니다.</p>
+
+<h5 id="커스텀-모듈-추가">커스텀 모듈 추가</h5>
+
+<p>/services/app/ejabberd/etc/ejabberd/ejabberd.yml파일을 열어 modules: 밑에 다음과 같이 추가합니다.</p>
+
+<pre><code>      
+modules:
+          
+mode_sunshine: {}
+  
+</code></pre>
+
+<p>들여쓰기할 때 주의할 점은 tab을 사용하지 말고 공백 2문자를 사용해야 합니다.</p>
+
+<h5 id="mod-sunshine-erl-생성-및-간단한-로깅">mod_sunshine.erl 생성 및 간단한 로깅</h5>
+
+<p>src 디렉토리 밑에 mod_sunshine.erl파일을 생성한 후 다음과 같이 입력합니다.</p>
+
+<pre><code class="language-erlang">  
+vim mod_sunshine.erl
+
+-module(mod_sunshine).
+
+-behavior(gen_mod).
+
+-include(&quot;ejabberd.hrl&quot;).
+
+-include(&quot;logger.hrl&quot;).
+
+-export([start/2, stop/1, on_presence/4]).
+
+start(Host, _Opts) -&gt;
+      
+?INFO\_MSG(&quot;mod\_sunshine starting&quot;, []),
+      
+ok.
+
+stop(Host) -&gt;
+      
+?INFO\_MSG(&quot;mod\_sunshine stopping&quot;, []),
+      
+ok.
+  
+</code></pre>
+
+<blockquote>
+<p>주의 : 참고 문서에는 logger.hrl이 include되지 않았지만 ejabberd 14.07에서는 logger.hrl을 포함해야 합니다.</p>
+</blockquote>
+
+<p>로깅을 위해 logger.hrl을 포함하고,</p>
+
+<p>?INFO_MSG(format, args) 매크로를 사용해 info로그를 생성합니다.</p>
+
+<p>로그파일에는 다음과 같이 출력됩니다.</p>
+
+<pre><code>      
+17:23:19.860 [info] mod_sunshine starting
+  
+</code></pre>
+
+<h5 id="presence-후킹">presence 후킹</h5>
+
+<p>유저의 presence stanza를 수신할 때를 가로채 봅시다.</p>
+
+<pre><code class="language-erlang">  
+start(Host, _Opts) -&gt;
+      
+?INFO\_MSG(&quot;mod\_sunshine starting&quot;, []),
+      
+ejabberd\_hooks:add(set\_presence\_hook, Host, ?MODULE, on\_presence, 50),
+      
+ok.
+
+stop(Host) -&gt;
+      
+?INFO\_MSG(&quot;mod\_sunshine stopping&quot;, []),
+      
+ejabberd\_hooks:delete(set\_presence\_hook, Host, ?MODULE, on\_presence, 50),
+      
+ok.
+
+on\_presence(\_User, \_Server, \_Resource, _Packet) -&gt;
+      
+none.
+  
+</code></pre>
+
+<p>이벤트 후킹을 위해 ejabberd_hooks모듈을 사용하며 add와 delete로 이벤트 후킹시 콜백할 함수를 등록하거나 제거할 수 있습니다.</p>
+
+<p>set_presence_hook은 presence 이벤트를 후킹하게 됩니다.</p>
+
+<h5 id="옵션-처리">옵션 처리</h5>
+
+<p>커스텀 모듈에 옵션(설정)값을 전달하는 방법을 설명합니다.</p>
+
+<ul>
+<li>우선 ejabberd.yml 파일을 다음과 같이 수정합니다.</li>
+</ul>
+
+<pre><code>        
+mod_sunshine:
+          
+count: 10
+          
+interval: 60
+  
+</code></pre>
+
+<blockquote>
+<p>주의: 들여쓰기는 tab을 사용하지 않고 반드시 공백으로 처리합니다.</p>
+</blockquote>
+
+<ul>
+<li>소스 파일을 다음과 같이 수정합니다.</li>
+</ul>
+
+<pre><code class="language-erlang">  
+-export([start/2, stop/1, on_presence/4]).
+
+start(Host, _Opts) -&gt;
+      
+?INFO\_MSG(&quot;mod\_sunshine starting&quot;, []),
+      
+ejabberd\_hooks:add(set\_presence\_hook, Host, ?MODULE, on\_presence, 50),
+      
+ok.
+
+stop(Host) -&gt;
+      
+?INFO\_MSG(&quot;mod\_sunshine stopping&quot;, []),
+      
+ejabberd\_hooks:delete(set\_presence\_hook, Host, ?MODULE, on\_presence, 50),
+      
+ok.
+
+on\_presence(\_User, Server, \_Resource, \_Packet) -&gt;
+      
+%% get options
+      
+StormCount = gen\_mod:get\_module_opt(Server, ?MODULE, count, 10),
+      
+TimeInterval = gen\_mod:get\_module_opt(Server, ?MODULE, interval, 60),
+      
+none.
+  
+</code></pre>
+
+<p>on_presence 함수에서 gen_mod:get_module_opt()함수를 호출해 옵션을 가져옵니다.</p>
+
+<ul>
+<li>계속 작업 필요(erlang이 익숙해지면 후속 리서치 진행할 예정입니다.)</li>
+</ul>
+
+<h4 id="컴파일">컴파일</h4>
+
+<p>make &amp;&amp; make install을 수행해서 변경된 소스만 배포합니다.</p>
+
+<h5 id="컴파일-오류">컴파일 오류</h5>
+
+<ul>
+<li><p>p1_xml/include/xml.hrl이 없다는 오류는</p>
+
+<p><a href="http://stackoverflow.com/questions/25407167/ejabberd-cant-find-include-lib-p1-xml-include">링크</a>를 참고해서 다음과 같이 처리하면 됩니다.</p></li>
+</ul>
+
+<p>ejabberd 소스 루트에서 디펜던시 라이브러리를 컴파일합니다.</p>
+
+<pre><code>./rebar get-deps
+./rebar compile
+</code></pre>
+
+<p>그런 후 결과물을 다음과 같이 복사합니다.</p>
+
+<pre><code> cp -R deps/* /services/app/ejabberd/lib/ejabberd/include/
+</code></pre>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/22193106/how-to-develop-custom-functions-on-top-of-ejabberd">ejabberd module development</a></li>
+<li><a href="http://metajack.im/2008/08/28/writing-ejabberd-modules-presence-storms/">Writing ejabberd modules: Presence Stoms</a></li>
+<li><a href="http://sacharya.com/writing-ejabberd-modules/">writing ejabberd modules</a></li>
+<li><a href="http://happy.cat/blog/XMPP-Bots-ejabberd-mod-motion-2010-02-01-10-00.html">XMPP bots ejabberd mod motion</a></li>
+<li><a href="http://stackoverflow.com/questions/22193106/how-to-develop-custom-functions-on-top-of-ejabberd">How to develop custom functions on top of ejabberd?</a></li>
+</ul>
+
+          </section>
+      </p>
+      
+    </section>
+    <footer class="post-meta">
+        
+        
+        
+            
+        
+        on
+            
+                <a href="https://jeidee.github.iotags/custom-module/">#custom module</a>,
+            
+        
+        <time class="post-date" datetime="2015-01-21T00:00:00Z">
+            21 Jan 2015
+        </time>
+    </footer>
+</article>
+
+	
+
+	<nav class="pagination" role="navigation">
+	
+	    <a class="newer-posts" href="/categories/ejabberd/page/2/">&larr; Newer Posts</a>
+	
+	<span class="page-number">Page 3 of 4</span>
+	
+	    <a class="older-posts" href="/categories/ejabberd/page/4/">Older Posts &rarr;</a>
+	
+</nav>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
+    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
+
+</body>
+</html>
+
