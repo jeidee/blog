@@ -1,288 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  	<meta property="og:title" content=" Coroutine &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/tags/coroutine/" />
-    
-    
-    <meta property="og:type" content="website" />
-    
-
-  <title>
-     Coroutine &middot;  Erlang &amp; Go
-  </title>
-
-    <meta name="description" content="" />
-
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-        <link href="https://jeidee.github.io/tags/coroutine/index.xml" rel="alternate" type="application/rss+xml" title="Coroutine &middot; Erlang &amp; Go" />
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/tags/coroutine/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Coroutine</title>
+	
+	
+	<link rel="stylesheet" href="https://jeidee.github.iocss/style.css">
+	<link href="https://jeidee.github.io/tags/coroutine/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go">
+	<meta name="generator" content="Hugo 0.31.1" />
 </head>
-<body class="nav-closed">
+<body>
+	<header>
+		<a href="https://jeidee.github.io">Erlang &amp; Go</a>
+		<nav>
+			<ul>
+				
+			</ul>
+		</nav>
+	</header>
+	<main>
+		
+		
+		<div>
 
-  
+1 of 0
 
-
- <div class="site-wrapper">
-
-
-
-
-	<header class="main-header tag-head no-cover">
-
-    <nav class="main-nav overlay clearfix">
-      
-      
-        
-          <a class="menu-button icon-feed" href="https://jeidee.github.io/tags/coroutine/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
-        </div>
 </div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
+	</main>
+	<aside>
+		<div>
+			<div>
+				<h3>LATEST POSTS</h3>
+			</div>
+			<div>
+				<ul>
+					
+					<li><a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/">upstart 설정</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/">CentOS에서 MongoDB 설치와 Service 등록</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/">couchbase cberl에 lcb_cntl 함수 추가</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/">couchbase cberl의IO Plugin을 libevent로 변경</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</aside>
 
-<main id="content" class="content" role="main">
-    
-
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
-
-	</div>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/09/01/go-coroutines-ed8ca8ed84b4-eab5aced9884ed9598eab8b0/">go coroutines 패턴 구현하기</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<p>coroutine은 쓰레드와 유사하다고 볼 수 있다.</p>
-
-<p>다른점은, 쓰레드가 동시에 여러쓰레드에서 병렬적으로 실행된다면, coroutine은 병행성은 갖지만, 특정 시점에 단 하나의 coroutine만 실행됨을 보증한다는 것이다.</p>
-
-<p>goroutine과 coroutine의 차이를 다음과 같이 구분할 수 있다.</p>
-
-<ul>
-<li>goroutine은 병렬적이지만 coroutine은 그렇지 않다.</li>
-<li>goroutine간에는 채널을 통해 통신하며, coroutine간에는 yield와 resume 동작에 의해 통신한다.</li>
-</ul>
-
-<p>c#에서는 yield 키워드를 통해서 iterator를 구현할 때 주로 사용하며, 유니티의 coroutine은 이러한 yield키워드를 사용해서 메인쓰레드에서 여러 함수를 동시에 실행시키는데 사용한다.</p>
-
-<h3 id="csharp">csharp</h3>
-
-<pre><code class="language-csharp">  
-public class PowersOf2
-  
-{
-      
-static void Main()
-      
-{
-          
-// Display powers of 2 up to the exponent of 8:
-          
-foreach (int i in Power(2, 8))
-          
-{
-              
-Console.Write(&quot;{0} &quot;, i);
-          
-}
-      
-}
-
-public static System.Collections.IEnumerable Power(int number, int exponent)
-      
-{
-          
-int result = 1;
-
-for (int i = 0; i &lt; exponent; i++)
-          
-{
-              
-result = result * number;
-              
-yield return result;
-          
-}
-      
-}
-
-// Output: 2 4 8 16 32 64 128 256
-  
-}
-  
-</code></pre>
-
-<p>Power/2함수는 주어진 수의 멱수를 구하는 함수인데 열거가능한 집합처럼 취급되었다.</p>
-
-<p>일반적으로 함수를 호출하면 함수가 완료되기 전까지 호출한 지점으로 제어권이 넘어오지 않는다.</p>
-
-<p>하지만 위의 예제에서는 Power()함수 안의 for(&#8230;)문에서 i가 하나 증가할 때마다 yield return result를 통해 매번 그 결과를 Main()함수의 foreach(&#8230;)문의 i에 전달하고 실행지점이 Power()함수에서 Main()함수로 변경되게 된다.</p>
-
-<p>즉, 싱글쓰레드에서 실행지점만 변경하면서 동시에 두 함수가 동작하는 결과를 낳는다.</p>
-
-<h3 id="go">go</h3>
-
-<p>go언어에는 이와 동일한 coroutine은 제공하지 않지만, goroutine과 channel을 사용해 동일한 기능을 제공하는 패턴을 구현할 수 있다.</p>
-
-<pre><code>  
-package main
-
-import (
-      
-&quot;fmt&quot;
-  
-)
-
-func main() {
-      
-number := 2
-      
-exponent := 8
-
-resume := power(number, exponent)
-      
-for i := 0; i &lt; exponent; i++ {
-          
-result := &lt;-resume
-          
-fmt.Println(&quot;Result : &quot;, result)
-      
-}
-  
-}
-
-func power(number int, exponent int) chan int {
-      
-yield := make(chan int)
-      
-result := 1
-      
-go func() {
-          
-for i := 0; i &lt; exponent; i++ {
-              
-result = result * number
-              
-yield &lt;- result
-          
-}
-      
-}()
-      
-return yield
-  
-}
-  
-</code></pre>
-
-<p>goroutine은 go언어에서 사용하는 경량프로세스로서, 쓰레드와 유사하다.</p>
-
-<p>멀티쓰레드환경에서 발생할 수 있는 많은 문제(Race-condition, Dead-Lock, 절차의 동기화)가 goroutine에서도 동일하게 발생한다.</p>
-
-<p>서로다른 goroutine 문맥에서 절차의 동기화를 위해 channel을 사용할 수 있는데,</p>
-
-<p>이러한 channel 동기화를 통해 coroutine 패턴을 구현할 수 있다.</p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="http://www.golangpatterns.info/concurrency/coroutines">Go Coroutines</a></li>
-<li><a href="http://egloos.zum.com/minjang/v/2517211">Concurrent와 Parallel의 차이</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/coroutine/">#coroutine</a>,
-            
-        
-        <time class="post-date" datetime="2015-09-01T00:00:00Z">
-            1 Sep 2015
-        </time>
-    </footer>
-</article>
-
-	
-
-	<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
-
-</main>
-
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
-    </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
-
+	<footer>
+		<p>&copy; 2017 <a href="https://jeidee.github.io">Erlang &amp; Go</a></p>
+	</footer>
 </body>
 </html>
-

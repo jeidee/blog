@@ -1,179 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  	<meta property="og:title" content=" Vector &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/tags/vector/" />
-    
-    
-    <meta property="og:type" content="website" />
-    
-
-  <title>
-     Vector &middot;  Erlang &amp; Go
-  </title>
-
-    <meta name="description" content="" />
-
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-        <link href="https://jeidee.github.io/tags/vector/index.xml" rel="alternate" type="application/rss+xml" title="Vector &middot; Erlang &amp; Go" />
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/tags/vector/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vector</title>
+	
+	
+	<link rel="stylesheet" href="https://jeidee.github.iocss/style.css">
+	<link href="https://jeidee.github.io/tags/vector/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go">
+	<meta name="generator" content="Hugo 0.31.1" />
 </head>
-<body class="nav-closed">
+<body>
+	<header>
+		<a href="https://jeidee.github.io">Erlang &amp; Go</a>
+		<nav>
+			<ul>
+				
+			</ul>
+		</nav>
+	</header>
+	<main>
+		
+		
+		<div>
 
-  
+1 of 0
 
-
- <div class="site-wrapper">
-
-
-
-
-	<header class="main-header tag-head no-cover">
-
-    <nav class="main-nav overlay clearfix">
-      
-      
-        
-          <a class="menu-button icon-feed" href="https://jeidee.github.io/tags/vector/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
-        </div>
 </div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
+	</main>
+	<aside>
+		<div>
+			<div>
+				<h3>LATEST POSTS</h3>
+			</div>
+			<div>
+				<ul>
+					
+					<li><a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/">upstart 설정</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/">CentOS에서 MongoDB 설치와 Service 등록</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/">couchbase cberl에 lcb_cntl 함수 추가</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/">couchbase cberl의IO Plugin을 libevent로 변경</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</aside>
 
-<main id="content" class="content" role="main">
-    
-
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
-
-	</div>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/04/14/c-vector-operator-overloading/">c&#43;&#43; vector == operator overloading</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <pre><code class="language-cpp">  
-bool operator==(vector&lt;int&gt;&amp; lhs, vector&lt;int&gt;&amp; rhs) {
-      
-if (lhs.size() != rhs.size()) return false;
-
-for (vector&lt;int&gt;::iterator lit = lhs.begin(), rit = rhs.begin();
-              
-lit != lhs.end() &amp;&amp; rit != rhs.end();
-              
-++lit, ++rit) {
-          
-if (\*lit != \*rit) return false;
-      
-}
-
-return true;
-  
-}
-  
-</code></pre>
-
-<p>주의할 것은 클래스 내부가 아닌 외부에서 연산자를 오버로딩할 때 bool operator==() <strong>const</strong> { &#8230; } 와 같이 하는 경우 다음과 같은 컴파일 에러를 만날 수 있다.</p>
-
-<blockquote>
-<p>non-member function cannot have cv-qualifier&#8230;</p>
-</blockquote>
-
-<p>원인은 <strong>const</strong> { &#8230; }의 경우 {} 블럭 안에서 클래스의 멤버 변수를 변경하지 않겠다고 명시하는 것이기 때문이며, const를 제거해 주면 해결된다.</p>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/operator-overloading/">#operator overloading</a>,
-            
-                <a href="https://jeidee.github.iotags/vector/">#vector</a>,
-            
-        
-        <time class="post-date" datetime="2015-04-14T00:00:00Z">
-            14 Apr 2015
-        </time>
-    </footer>
-</article>
-
-	
-
-	<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
-
-</main>
-
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
-    </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
-
+	<footer>
+		<p>&copy; 2017 <a href="https://jeidee.github.io">Erlang &amp; Go</a></p>
+	</footer>
 </body>
 </html>
-

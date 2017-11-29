@@ -1,524 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  	<meta property="og:title" content=" Riak &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/categories/riak/" />
-    
-    
-    <meta property="og:type" content="website" />
-    
-
-  <title>
-     Riak &middot;  Erlang &amp; Go
-  </title>
-
-    <meta name="description" content="" />
-
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-        <link href="https://jeidee.github.io/categories/riak/index.xml" rel="alternate" type="application/rss+xml" title="Riak &middot; Erlang &amp; Go" />
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/categories/riak/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Riak</title>
+	
+	
+	<link rel="stylesheet" href="https://jeidee.github.iocss/style.css">
+	<link href="https://jeidee.github.io/categories/riak/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go">
+	<meta name="generator" content="Hugo 0.31.1" />
 </head>
-<body class="nav-closed">
+<body>
+	<header>
+		<a href="https://jeidee.github.io">Erlang &amp; Go</a>
+		<nav>
+			<ul>
+				
+			</ul>
+		</nav>
+	</header>
+	<main>
+		
+		
+		<div>
 
-  
+1 of 0
 
-
- <div class="site-wrapper">
-
-
-
-
-	<header class="main-header tag-head no-cover">
-
-    <nav class="main-nav overlay clearfix">
-      
-      
-        
-          <a class="menu-button icon-feed" href="https://jeidee.github.io/categories/riak/index.xml">&nbsp;&nbsp;Subscribe</a>
-        
-      
-    </nav>
-    <div class="vertical">
-
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
-        </div>
 </div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
-
-<main id="content" class="content" role="main">
-    
-
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
-
-	</div>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/12/08/riak-ed81b4eb9facec8aa4ed84b0-eab5acec84b1/">riak 클러스터 구성</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="riak-설치">riak 설치</h2>
-
-<p>환경은 centos-6.7, riak 2.1.2를 기준으로 한다.</p>
-
-<h2 id="riak-설정">riak 설정</h2>
-
-<p>riak.conf만 수정해도 된다. (단, 방화벽 설정을 하려면 app.config를 수정해야 한다.)</p>
-
-<p>클러스터로 구성할 2개의 riak 노드가 다음과 같이 준비되어 있다.</p>
-
-<ul>
-<li>riak@192.168.56.101</li>
-<li>riak@192.168.56.102</li>
-</ul>
-
-<p>두 riak 노드간 tcp/udp의 방화벽을 해제하거나 다음 문서를 참고해서 특정 포트를 열어 놓아야 한다.</p>
-
-<ul>
-<li><a href="https://docs.basho.com/riak/1.1.0/cookbooks/Network-Security-and-Firewall-Configurations/">Riak network security and firewall configurations</a></li>
-</ul>
-
-<h3 id="riak-conf-수정">riak.conf 수정</h3>
-
-<p>** riak@192.168.56.101 **</p>
-
-<pre><code>  
-listener.protobuf.internal = 0.0.0.0:8087
-  
-nodename = riak@192.168.56.101
-  
-distributed_cookie = riak
-  
-storage_backend = leveldb
-  
-</code></pre>
-
-<ul>
-<li>listener.protobuf.internal : riak 포트</li>
-<li>nodename : riak 노드명</li>
-<li>distributed_cookie : 클러스터에 참여하는 모든 노드는 동일한 매직쿠키를 설정</li>
-<li>storage_backend : leveldb로 설정한다. 자세한 내용은 riak문서 참고</li>
-</ul>
-
-<p>우선은 이정도 설정만 하도록 하며, 나머지 설정은 추후 자세히 살펴보도록 한다.</p>
-
-<h2 id="cluster-구성">cluster 구성</h2>
-
-<p>다음과 같이 각각의 노드에서 riak를 시작한다.</p>
-
-<pre><code>  
-$ sudo riak start
-  
-</code></pre>
-
-<p>riak@192.168.56.101 노드를 마스터 노드로 가정하고,</p>
-
-<p>riak@192.168.56.102 노드에서 다음과 같이 클러스터에 조인한다.</p>
-
-<pre><code>  
-$ sudo riak-admin cluster join riak@192.168.56.101
-  
-</code></pre>
-
-<p>그런 후 현재 클러스트 계획을 확인하고,</p>
-
-<pre><code>  
-$ sudo riak-admin cluster plan
-  
-</code></pre>
-
-<p>문제 없을 경우 최종 커밋한다.</p>
-
-<pre><code>  
-$ sudo riak-admin cluster commit
-  
-</code></pre>
-
-<p>문제없이 커밋이 완료될 경우 다음과 같이 ring members를 확인해 보도록 한다.</p>
-
-<pre><code>  
-$ sudo riak-admin status | grep ring_members
-  
-</code></pre>
-
-<p>최종 확인은 다음과 같이 수행한다.</p>
-
-<pre><code>  
-$ sudo riak attach
-  
-(riak@192.168.56.102)1&gt; riak\_core\_ring\_manager:get\_my_ring().
-  
-</code></pre>
-
-<p>노드를 추가하려면 위의 순서를 반복하면 된다.</p>
-
-<h2 id="관리콘솔">관리콘솔</h2>
-
-<p>riak.conf의 다음 설정을 off에서 on으로 수정하면 된다.</p>
-
-<pre><code>  
-riak_control = on
-  
-</code></pre>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><a href="https://docs.basho.com/riak/1.2.0/cookbooks/Basic-Cluster-Setup/">Riak basic cluster setup</a></li>
-<li><a href="https://docs.basho.com/riak/1.2.0/cookbooks/Adding-and-Removing-Nodes/">Riak adding and removing nodes</a></li>
-<li><a href="http://docs.basho.com/riak/latest/ops/advanced/riak-control/">Riak control</a></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/clustering/">#clustering</a>,
-            
-        
-        <time class="post-date" datetime="2015-12-08T00:00:00Z">
-            8 Dec 2015
-        </time>
-    </footer>
-</article>
-
-	
-	   
-<article class="post posts">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/2015/06/25/ejabberdec9980-riak-ec97b0eb8f99/">ejabberd와 riak 연동</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            
-
-<h2 id="ejabberd-설치">ejabberd 설치</h2>
-
-<p>ejabberd에 riak를 활성화해서 설치하는 방법은 <a href="https://erlnote.wordpress.com/2015/01/31/ejabberd-riak-%ED%99%9C%EC%84%B1%ED%99%94-%EC%84%A4%EC%B9%98/">이전 포스트</a>를 참고해서 설치한 후, <a href="http://docs.ejabberd.im/admin/guide/configuration/#database-and-ldap-configuration">공식 문서</a>를 참고해서 설정한다.</p>
-
-<h2 id="riak-설치">riak 설치</h2>
-
-<p>riak 설치방법은 여러 방법이 있지만 ubuntu에서 간단히 다음 방법을 사용해 설치한다.</p>
-
-<pre><code>  
-wget http://s3.amazonaws.com/downloads.basho.com/riak/2.1/2.1.1/ubuntu/precise/riak\_2.1.1-1\_amd64.deb
-  
-sudo dpkg -i riak\_2.1.1-1\_amd64.deb
-  
-</code></pre>
-
-<h3 id="riak-주요-파일-위치">riak 주요 파일 위치</h3>
-
-<p>위와 같이 설치되면 다음의 디렉토리에 주요 파일들이 위치하게 된다.</p>
-
-<p>1) 실행파일</p>
-
-<p>/usr/sbin/riak</p>
-
-<p>/usr/sbin/riak-admin</p>
-
-<p>/usr/sbin/riak-debug</p>
-
-<p>2) 설정파일</p>
-
-<p>/etc/riak/riak.conf</p>
-
-<p>3) 로그파일</p>
-
-<p>/var/log/riak/console.log</p>
-
-<p>/var/log/riak/crash.log</p>
-
-<p>/var/log/riak/error.log</p>
-
-<p>/var/log/riak/erlang.log</p>
-
-<p>/var/log/riak/run_erl.log</p>
-
-<h3 id="riak-실행-확인">riak 실행 확인</h3>
-
-<p>설치가 완료되면 다음과 같이 riak를 시작한다.</p>
-
-<pre><code>  
-$ sudo riak start
-  
-</code></pre>
-
-<p>정상적으로 실행되었고 에러가 없는지 확인한다.</p>
-
-<pre><code>  
-$ sudo riak ping
-  
-pong
-  
-</code></pre>
-
-<p>pong이 출력되고 crash.log와 error.log에 로그가 없다면 정상 실행된 것이다.</p>
-
-<pre><code>  
-$ sudo vi /var/log/riak/crash.log
-  
-$ sudo vi /var/log/riak/error.log
-  
-</code></pre>
-
-<h2 id="riak-ejabberd-연동-설정">riak ejabberd 연동 설정</h2>
-
-<p>riak를 설치한 후 <a href="http://docs.ejabberd.im/admin/guide/configuration/#database-and-ldap-configuration">ejabberd의 riak 연동 문서</a>를 보고 다음과 같이 riak의 환경설정을 수정한다.</p>
-
-<h3 id="ejabberd-yml-수정">ejabberd.yml 수정</h3>
-
-<pre><code>  
-default_db: riak
-  
-</code></pre>
-
-<p>이 외에도 다음과 같이 riak 연결 설정을 할 수 있다.</p>
-
-<ul>
-<li>riak_server: String # 기본값은 localhost이므로 생략 가능</li>
-<li>riak_port: Port # 기본값은 8087이며 생략 가능</li>
-<li>riak_pool_size: N # 기본값은 10이며 생략 가능. ejabberd가 열게 되는 riak 연결 수</li>
-<li>riak_start_interval: N # 기본값은 30초. Riak 연결이 실패하면 재시도 대기하는 시간</li>
-</ul>
-
-<h3 id="riak-conf-수정">riak.conf 수정</h3>
-
-<pre><code>  
-$ sudo vi /etc/riak/riak.conf
-
-&amp;#8230;
-  
-storage_backend = leveldb
-
-</code></pre>
-
-<h3 id="vm-args-생성">vm.args 생성</h3>
-
-<pre><code>  
-$ sudo vi /etc/riak/vm.args
-
-&amp;#8230;
-  
--pz /lib/ejabberd/ebin
-  
-</code></pre>
-
-<p>ejabberd/ebin 디렉토리는 ejabberd를 어디에 설치했는지에 따라 다르므로 각자의 환경에 맞게 수정한다.</p>
-
-<h3 id="riak-재실행">riak 재실행</h3>
-
-<pre><code>  
-$ sudo riak restart
-  
-</code></pre>
-
-<p>위와 같이 재실행하고 나면 riak가 정상실행되지 않고 crash된다.</p>
-
-<p>console.log를 확인하면 다음과 같은 에러메세지와 함께 crash 로그를 확인할 수 있다.</p>
-
-<pre><code>  
-[error] &lt;0.186.0&gt; gen\_server riak\_core\_capability terminated with reason: no function cla use matching orddict:fetch(nonode@nohost, [{'riak@127.0.0.1',[{ {riak\_control,member\_info\_version},[v1,v0]},{ {riak \_core,bucket\_types},[true,&amp;#8230;]},&amp;#8230;]}]) line 72
-
-</code></pre>
-
-<p>우리가 만든 vm.args에 -pz 이외의 필요한 설정값들이 없기 때문이다.</p>
-
-<p>위의 에러는 노드명이 지정되지 않아서 생긴 문제인데, vm.args파일을 다른 이름으로 변경한 후 다시 riak를 실행해 보자.</p>
-
-<pre><code>  
-$ sudo mv /etc/riak/vm.args /etc/riak/vm.args.bak
-  
-$ sudo riak start
-  
-</code></pre>
-
-<p>그런 후 riak 프로세스를 살펴보면 다음과 같이 erlang vm의 시작 옵션에 -vm_args 옵션이 설정되어 있음을 확인할 수 있다.</p>
-
-<pre><code>  
-$ ps -ef | grep riak
-
-&amp;#8230;
-  
-riak 9534 9531 22 09:48 pts/12 00:00:02 /usr/lib/riak/erts-5.10.3/bin/beam.smp -scl false -sfwi 500 -P 256000 -e 256000 -Q 65536 -A 64 -K true -W w -zdbbl 32768 &amp;#8212; -root /usr/lib/riak -progname riak &amp;#8212; -home /var/lib/riak &amp;#8212; -boot /usr/lib/riak/releases/2.1.0/riak -config /var/lib/riak/generated.configs/app.2015.06.25.09.48.44.config -setcookie riak -name riak@127.0.0.1 -smp enable -vm_args /var/lib/riak/generated.configs/vm.2015.06.25.09.48.44.args -pa /usr/lib/riak/lib/basho-patches &amp;#8212; console
-  
-</code></pre>
-
-<p>/var/lib/riak에는 riak에서 생성한 데이터파일과 기타 설정 파일들이 위치하는데, generated.configs 디렉토리에 vm.2015.06.25.09.48.44.args 파일이 있음을 확인할 수 있다.</p>
-
-<p>해당 파일을 열어보면 다음과 같은 내용을 확인할 수 있다.</p>
-
-<pre><code>  
-+scl false
-  
-+sfwi 500
-  
-+P 256000
-  
-+e 256000
-  
--env ERL\_CRASH\_DUMP /var/log/riak/erl_crash.dump
-  
--env ERL\_FULLSWEEP\_AFTER 0
-  
-+Q 65536
-  
-+A 64
-  
--setcookie riak
-  
--name riak@127.0.0.1
-  
-+K true
-  
-+W w
-  
--smp enable
-  
-+zdbbl 32768
-  
-</code></pre>
-
-<p>위 값들은 erlang vm의 시작옵션들이며 각각의 옵션이 의미하는 바는 <a href="http://erlang.org/doc/man/erl.html">Erl</a>문서를 참고하도록 한다.</p>
-
-<p>위의 옵션들을 우리가 만든 vm.args.bak파일에 추가해 준다.(vm.args.bak에는 -pz 옵션만 설정되어 있다.)</p>
-
-<p>vm.args.bak파일을 vm.args로 변경한 후 riak를 재실행해 준다.</p>
-
-<p>riak를 재실행한 후 다음과 같은 에러가 console.log에 출력된다면 다음과 같이 cookie를 수정해 주도록 한다.</p>
-
-<pre><code>  
-[error] &lt;0.2424.0&gt; \*\* Connection attempt from disallowed node 'riak\_maint\_10788@127.0.0.1' \*\*
-  
-</code></pre>
-
-<p>ejabberd 노드의 cookie를 다음과 같이 확인한 후,</p>
-
-<pre><code>  
-$ ejabberdctl debug
-
-&gt; erlang:get_cookie().
-  
-'XGKYILEFXQKKCTWXBVFA'
-  
-</code></pre>
-
-<p>vm.args의 -setcookie 옵션을 다음과 같이 변경해 준다.</p>
-
-<pre><code>  
--setcookie XGKYILEFXQKKCTWXBVFA
-  
-</code></pre>
-
-<p>그런 후 /var/lib/riak안에 생성된 파일들을 모두 제거한 후 다시 riak를 실행하면 된다.</p>
-
-<h2 id="참고">참고</h2>
-
-<ul>
-<li><p><a href="https://erlnote.wordpress.com/2015/01/31/ejabberd-riak-%ED%99%9C%EC%84%B1%ED%99%94-%EC%84%A4%EC%B9%98/">ejabberd riak 활성화 설치</a></p></li>
-
-<li><p><a href="http://docs.ejabberd.im/admin/guide/configuration">ejabberd configuration guide</a></p></li>
-
-<li><p><a href="http://docs.basho.com/riak/latest/ops/building/installing/debian-ubuntu/">riak installing guide</a></p></li>
-</ul>
-
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://jeidee.github.iotags/nosql/">#nosql</a>,
-            
-        
-        <time class="post-date" datetime="2015-06-25T00:00:00Z">
-            25 Jun 2015
-        </time>
-    </footer>
-</article>
-
-	
-
-	<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
-
-</main>
-
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
-    </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
-
+	</main>
+	<aside>
+		<div>
+			<div>
+				<h3>LATEST POSTS</h3>
+			</div>
+			<div>
+				<ul>
+					
+					<li><a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/">upstart 설정</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/">CentOS에서 MongoDB 설치와 Service 등록</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/">couchbase cberl에 lcb_cntl 함수 추가</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/">couchbase cberl의IO Plugin을 libevent로 변경</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</aside>
+
+	<footer>
+		<p>&copy; 2017 <a href="https://jeidee.github.io">Erlang &amp; Go</a></p>
+	</footer>
 </body>
 </html>
-

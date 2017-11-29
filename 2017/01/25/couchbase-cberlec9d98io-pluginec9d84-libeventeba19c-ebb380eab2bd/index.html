@@ -1,102 +1,31 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  	<meta property="og:title" content=" couchbase cberl의IO Plugin을 libevent로 변경 &middot;  Erlang &amp; Go" />
-  	<meta property="og:site_name" content="Erlang &amp; Go" />
-  	<meta property="og:url" content="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" />
-    
-    
-  	<meta property="og:type" content="article" />
-
-    <meta property="og:article:published_time" content="2017-01-25T00:00:00Z" />
-
-    
-    <meta property="og:article:tag" content="45" />
-    
-    <meta property="og:article:tag" content="cberl" />
-    
-    
-
-  <title>
-     couchbase cberl의IO Plugin을 libevent로 변경 &middot;  Erlang &amp; Go
-  </title>
-
-    <meta name="description" content="" />
-
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="https://jeidee.github.ioimages/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://jeidee.github.ioimages/apple-touch-icon.png" />
-    
-    <link rel="stylesheet" type="text/css" href="https://jeidee.github.iocss/screen.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-
-
-    
-      
-          <link href="https://jeidee.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
-      
-      
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-
-    <link rel="canonical" href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" />
-
-    
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://jeidee.github.iojs/particles.js"></script>   
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>couchbase cberl의IO Plugin을 libevent로 변경</title>
+	
+	
+	<link rel="stylesheet" href="https://jeidee.github.iocss/style.css">
+	
+	<meta name="generator" content="Hugo 0.31.1" />
 </head>
-<body class="nav-closed">
-
-  
-
-
- <div class="site-wrapper">
-
-
-
-<header class="main-header " style="background-image: url(https://jeidee.github.io)">
-    
-    <nav class="main-nav overlay clearfix">
-        
-        
-    </nav>
-<div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">
-              <a class="btn-bootstrap-2" href="#content">Erlang &amp; Go</a>
-          </h1>
-          <h2 class="page-description"></h2>
-        </div>
-</div>
-    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
-</header>
-
-  <main id="content" class="content" role="main">
-
-
-  <article class="post posts">
-
-    <header class="post-header">
-        <h1 class="post-title">couchbase cberl의IO Plugin을 libevent로 변경</h1>
-        <section class="post-meta">
-        
-         
-          <span class="post-tag small"><a href="https://jeidee.github.iotags/45/">#45</a></span>
-         
-          <span class="post-tag small"><a href="https://jeidee.github.iotags/cberl/">#cberl</a></span>
-         
-        </section>
-    </header>
-  
-    <section class="post-content">
-      <p>cberl에는 io plugin이 default로 설정되어 있는데 이럴 경우 select를 사용한다. 동시에 열 수 있는 소켓수는 1024로 제한되어 있어, 그 이상을 처리하기 위해서는 libevent로 수정해야 한다.</p>
+<body>
+	<header>
+		<a href="https://jeidee.github.io">Erlang &amp; Go</a>
+		<nav>
+			<ul>
+				
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<h1>couchbase cberl의IO Plugin을 libevent로 변경</h1>
+			<time>25.01.2017 00:00</time>
+			<div>
+				<p>cberl에는 io plugin이 default로 설정되어 있는데 이럴 경우 select를 사용한다. 동시에 열 수 있는 소켓수는 1024로 제한되어 있어, 그 이상을 처리하기 위해서는 libevent로 수정해야 한다.</p>
 
 <p>그렇지 않을 경우 cberl의 view(http)를 사용할 경우 일정한 요청(동시에 열린 소켓수가 1024를 초과하는 시점) 이상일 경우 간헐적으로 unknown error 45(0x2d)를 반환한다.</p>
 
@@ -138,70 +67,46 @@ COUCHBASE: too many FDs. Cannot have socket FD_SETSIZE. Use other I/O plugin
   
 </code></pre>
 
-    </section>
+			</div>
+			<div>
+				<ul id="tags">
+					
+					<li><a href="/tags/45">45</a> </li>
+					
+					<li><a href="/tags/cberl">cberl</a> </li>
+					
+				</ul>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+	<aside>
+		<div>
+			<div>
+				<h3>LATEST POSTS</h3>
+			</div>
+			<div>
+				<ul>
+					
+					<li><a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/">upstart 설정</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/">CentOS에서 MongoDB 설치와 Service 등록</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/">couchbase cberl에 lcb_cntl 함수 추가</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/">couchbase cberl의IO Plugin을 libevent로 변경</a></li>
+					
+					<li><a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</aside>
 
-
-  <footer class="post-footer">
-
-
-    
-
-    
-
-
-
-
-
-<section class="author">
-  <h4><a href="https://jeidee.github.io"></a></h4>
-  
-  <p>Read <a href="https://jeidee.github.io">more posts</a> by this author.</p>
-  
-  <div class="author-meta">
-    
-    
-  </div>
-</section>
-
-
-
-    
-    <section class="share">
-      <h4>Share this posts</h4>
-      <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=couchbase%20cberl%ec%9d%98IO%20Plugin%ec%9d%84%20libevent%eb%a1%9c%20%eb%b3%80%ea%b2%bd&amp;url=https%3a%2f%2fjeidee.github.io%2f2017%2f01%2f25%2fcouchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd%2f"
-          onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-          <span class="hidden">Twitter</span>
-      </a>
-      <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjeidee.github.io%2f2017%2f01%2f25%2fcouchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd%2f"
-          onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-          <span class="hidden">Facebook</span>
-      </a>
-      <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fjeidee.github.io%2f2017%2f01%2f25%2fcouchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd%2f"
-         onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-          <span class="hidden">Google+</span>
-      </a>
-    </section>
-    
-
-    
-    
-    
-
-  </footer>
-</article>
-
-</main>
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Erlang &amp; Go</a> </section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="https://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/syui/hugo-theme-air">hugo-theme-air</a> theme</section>
-        
-    </footer>
-    </div>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://jeidee.github.iojs/index.js"></script>
-
+	<footer>
+		<p>&copy; 2017 <a href="https://jeidee.github.io">Erlang &amp; Go</a></p>
+	</footer>
 </body>
 </html>
-
