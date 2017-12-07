@@ -16,21 +16,21 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
     <title>upstart 설정 - Erlang &amp; Go</title>
     
-<meta name="description" content="/etc/init/appname.conf description &amp;amp;quot;appname&amp;amp;quot; author &amp;amp;quot;xxx&amp;amp;quot; start on startup stop on shutdown chdir /home/xxx/appname respawn script export HOME=&amp;amp;quot;/home/xxx&amp;amp;quot; export AWS\_ACCESS\_KEY_ID= export AWS\_SECRET\_ACCESS_KEY= exec /home/xxx/appname/app -c=&amp;amp;quot;config.json&amp;amp;quot; end script   $ sudo initctl reload-configuration   $ sudo start appname  ">
+<meta name="description" content="/etc/init/appname.conf description &amp;quot;appname&amp;quot; author &amp;quot;xxx&amp;quot; start on startup stop on shutdown chdir /home/xxx/appname respawn script export HOME=&amp;quot;/home/xxx&amp;quot; export AWS\_ACCESS\_KEY_ID= export AWS\_SECRET\_ACCESS_KEY= exec /home/xxx/appname/app -c=&amp;quot;config.json&amp;quot; end script   $ sudo initctl reload-configuration   $ sudo start appname  ">
 
 <meta property="og:title" content="upstart 설정 - Erlang &amp; Go">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/">
 <meta property="og:image" content="https://jeidee.github.io/images/default.png">
 <meta property="og:site_name" content="Erlang &amp; Go">
-<meta property="og:description" content="/etc/init/appname.conf description &amp;amp;quot;appname&amp;amp;quot; author &amp;amp;quot;xxx&amp;amp;quot; start on startup stop on shutdown chdir /home/xxx/appname respawn script export HOME=&amp;amp;quot;/home/xxx&amp;amp;quot; export AWS\_ACCESS\_KEY_ID= export AWS\_SECRET\_ACCESS_KEY= exec /home/xxx/appname/app -c=&amp;amp;quot;config.json&amp;amp;quot; end script   $ sudo initctl reload-configuration   $ sudo start appname  ">
+<meta property="og:description" content="/etc/init/appname.conf description &amp;quot;appname&amp;quot; author &amp;quot;xxx&amp;quot; start on startup stop on shutdown chdir /home/xxx/appname respawn script export HOME=&amp;quot;/home/xxx&amp;quot; export AWS\_ACCESS\_KEY_ID= export AWS\_SECRET\_ACCESS_KEY= exec /home/xxx/appname/app -c=&amp;quot;config.json&amp;quot; end script   $ sudo initctl reload-configuration   $ sudo start appname  ">
 <meta property="og:locale" content="ja_JP">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="Erlang &amp; Go">
 <meta name="twitter:url" content="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/">
 <meta name="twitter:title" content="upstart 설정 - Erlang &amp; Go">
-<meta name="twitter:description" content="/etc/init/appname.conf description &amp;amp;quot;appname&amp;amp;quot; author &amp;amp;quot;xxx&amp;amp;quot; start on startup stop on shutdown chdir /home/xxx/appname respawn script export HOME=&amp;amp;quot;/home/xxx&amp;amp;quot; export AWS\_ACCESS\_KEY_ID= export AWS\_SECRET\_ACCESS_KEY= exec /home/xxx/appname/app -c=&amp;amp;quot;config.json&amp;amp;quot; end script   $ sudo initctl reload-configuration   $ sudo start appname  ">
+<meta name="twitter:description" content="/etc/init/appname.conf description &amp;quot;appname&amp;quot; author &amp;quot;xxx&amp;quot; start on startup stop on shutdown chdir /home/xxx/appname respawn script export HOME=&amp;quot;/home/xxx&amp;quot; export AWS\_ACCESS\_KEY_ID= export AWS\_SECRET\_ACCESS_KEY= exec /home/xxx/appname/app -c=&amp;quot;config.json&amp;quot; end script   $ sudo initctl reload-configuration   $ sudo start appname  ">
 <meta name="twitter:image" content="https://jeidee.github.io/images/default.png">
 
 
@@ -66,7 +66,7 @@
       }
     },
     "description": "/etc/init/appname.conf
- description &amp;quot;appname&amp;quot; author &amp;quot;xxx&amp;quot; start on startup stop on shutdown chdir /home/xxx/appname respawn script export HOME=&amp;quot;/home/xxx&amp;quot; export AWS\_ACCESS\_KEY_ID= export AWS\_SECRET\_ACCESS_KEY= exec /home/xxx/appname/app -c=&amp;quot;config.json&amp;quot; end script   $ sudo initctl reload-configuration   $ sudo start appname  "
+ description &quot;appname&quot; author &quot;xxx&quot; start on startup stop on shutdown chdir /home/xxx/appname respawn script export HOME=&quot;/home/xxx&quot; export AWS\_ACCESS\_KEY_ID= export AWS\_SECRET\_ACCESS_KEY= exec /home/xxx/appname/app -c=&quot;config.json&quot; end script   $ sudo initctl reload-configuration   $ sudo start appname  "
   }
 </script>
 
@@ -142,9 +142,9 @@ ga('send', 'pageview');
   <div class="article-body"><p>/etc/init/appname.conf</p>
 
 <pre><code>  
-description &amp;quot;appname&amp;quot;
+description &quot;appname&quot;
   
-author &amp;quot;xxx&amp;quot;
+author &quot;xxx&quot;
 
 start on startup
   
@@ -156,13 +156,13 @@ respawn
 
 script
       
-export HOME=&amp;quot;/home/xxx&amp;quot;
+export HOME=&quot;/home/xxx&quot;
       
 export AWS\_ACCESS\_KEY_ID=
       
 export AWS\_SECRET\_ACCESS_KEY=
       
-exec /home/xxx/appname/app -c=&amp;quot;config.json&amp;quot;
+exec /home/xxx/appname/app -c=&quot;config.json&quot;
   
 end script
   
