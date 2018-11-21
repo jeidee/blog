@@ -93,6 +93,43 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-ec84a4eca095ed9598eab8b0" class="link black dim">
+        ejabberd mod_admin_extra 사용해서 vcard 설정하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      이전 글에서 설명한 vcard 가져오기 관련된 내용 중에 수정할 부분이 있다.
+ejabberd_modules의 경우 최신 버전(현재 14.07)에서는 호환이 안되며 대신 ejabberd_contrib를 사용해야 한다.
+https://www.ejabberd.im/ejabberd-contrib
+ git clone git://github.com/processone/ejabberd-contrib.git  ejabberd-contrib에 포함된 mod_admin_extra는 ejaberd_modules에서 생기는 호환 문제가 해결되어 있으므로 수정할 필요없이 그대로 사용하면 된다.
+설치(mod_admin_extra.erl을 ejabberd/src파일에 복사한 후 make &amp;&amp; make install, ejabberd.yml에 mod_admin_extra 모듈 등록)하고 ejabberd를 재시작한 후 터미널에서 다음과 같이 테스트해 보자.
+ $ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; hello $ ejabberdctl set_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; &quot;world&quot; $ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; world  닉네임이 잘 변경된다.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-mysql-odbc-ec84a4eca095" class="link black dim">
+        ejabberd mysql odbc 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      mysql 설정은 다음과 같이 한다.
+ $ vi /etc/ejabberd/ejabberd.yml auth_method: odbc \## auth_method: internal에서 변경한다. \## MySQL server: ## odbc_type: mysql odbc_server: &quot;localhost&quot; odbc_database: &quot;ejabberd&quot; odbc_username: &quot;ejabberd&quot; odbc_password: &quot;ejabberd&quot;  위와 같이 한 후 모듈별로 db_type을 설정해야 하는데, roster와 vcard를 mysql에 저장하도록 하려면 다음과 같이 ejabberd.yml파일을 수정한다.
+ mod_roster: db_type: odbc mod\_shared\_roster: {} mod_stats: {} mod_time: {} mod_vcard: db_type: odbc  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/2015/01/21/ejabberd-node-jsec9bb9ec9790ec849c-ejabberd-http-api-ed98b8ecb69ced9598eab8b0" class="link black dim">
         ejabberd node.js웹에서 ejabberd http api 호출하기
       </a>
@@ -229,43 +266,6 @@ start(Host, Opts) -&gt; ok stop(Host) -&gt; ok * Host = string() * Opts = [{Name
       ejabberd 외부 인증 모듈  참고문서  개요 외부 인증 스크립트는 erlang port driver API를 따릅니다.
 스크립트는 다음과 같은 일을 수행하는 무한 루프로 구성해야 합니다:
  stdin에서 AABBBBBB&#8230;.형식의 byte stream을 읽는다.  A: 데이터의 길이를 의미하는 2bytes 정수(네트워크 바이트 오더 사용) B: 다음과 같은 plain 텍스트 오퍼레이션을 포함  auth:User:Server:Password(username/password 검사) isuser:User:Server(유효한 user인지 검사) setpass:User:Server:Password(user의 암호 설정) tryregister:User:Server:Password(계정 등록 시도) removeuser:User:Server(계정 삭제) removeuser3:User:Server:Password(암호가 유효하면 계정 삭제)   stdout에 결과 출력: AABB  A: 다음 결과값에 대한 길이.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/01/21/ejabberd-ec99b8ebb680-ec9db8eca69d-ebaaa8eb9388eab3bc-http-ecbba4ec8aa4ed8580-ebaaa8eb9388-ec97b0eb8f99" class="link black dim">
-        ejabberd 외부 인증 모듈과 http 커스텀 모듈 연동
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      ejabberd의 외부 인증 모듈을 사용해서 인증 처리를 할 경우, 기존 멤버쉽과 연동하는 방법을 찾아 보도록 한다.
-우선 들어가기에 앞서 작업 개요를 살펴보면 다음과 같다.
- python으로 외부 인증 모듈 작성 ejabberd를 외부에서 제어할 수 있도록 mod_http_api.erl 을 작성해 커스텀 모듈 등록 mod_http_api에서 기존 멤버쉽의 회원 정보 조회(편의상 internal rest api가 존재한다고 가정한다.)  다음과 같은 로그인 처리 시나리오를 가정해 보자.
- 로그인 할 경우 외부 인증 모듈에서 http://localhost:5280/api/auth?user=romeo&amp;server=localhost&amp;password=1234와 같은 형식으로 호출한다.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/01/21/ejabberdec9790-json-eb9dbcec9db4ebb88ceb9faceba6acjiffy-ecb694eab080" class="link black dim">
-        ejabberd에 json 라이브러리(jiffy) 추가
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      ejabberd에서 json 라이브러리를 사용하려면 jiffy를 사용하면 된다.
-ejabberd가 설치될 때 의존성을 걸어 함께 설치되도록 하려면 다음과 같이 configure에서 &#8211;enable-json을 추가해 주면 된다.
- ./configure &amp;#8211;prefix={&amp;#8230;} &amp;#8211;enable-json  위와 같이 설치하려면 configure를 해 준 후에 rebar를 사용해 의존 라이브러리를 다운로드 받아야 하는데, 다음과 같이 처리한다.
- rebar get-deps rebar compile  그런 후 make &amp; make install을 실행하자.
-만약 jiffy.so 파일의 경로를 찾지 못하는 에러가 발생할 경우 다음과 같이 Makeifle.in 파일을 수정하면 된다.
     </div>
   </div>
 </div>

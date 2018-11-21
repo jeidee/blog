@@ -35,7 +35,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jeidee.github.io/posts/" />
-<meta property="og:updated_time" content="2015-11-11T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2015-11-13T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
@@ -88,6 +88,43 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
   <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></main>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/11/13/erlang-applicationec9790ec849c-protocol-buffer-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        erlang application에서 protocol buffer 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      이번 역시, rebar를 사용해 프로젝트를 생성했다고 가정한다.
+basho의 protobuffs 라이브러리를 추가해 보도록 하자.
+rebar.config 수정 이전 포스트를 참고해서 기본 작업(sub_dirs 추가 등)은 완료했다고 가정한다.
+ {deps, [ {'lager', &quot;.*&quot;, {git, &quot;https://github.com/basho/lager&quot;, &quot;&quot;}}, {protobuffs, &quot;.*&quot;, {git, &quot;git://github.com/basho/erlang_protobuffs.git&quot;, {branch, &quot;master&quot;}}} ]}.   deps에 protobuffs, &#8230; 행을 복사해 넣는다.  xxx.proto 파일 생성 프로토콜을 정의한 *.proto파일을 생성한다.
+예를 들면 다음과 같은 simple.proto파일을 src 디렉토리 밑에 추가한다.
+ package simple; message Person { required string name = 1; required string address = 2; required string phone_number = 3; required int32 age = 4; optional Location location = 5; } message Location { required string region = 1; required string country = 2; }  make로 컴파일하고 나면 rebar가 .
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/11/11/erlang-applicationec9790-lagereba19ceab1b0-ecb694eab080ed9598eab8b0" class="link black dim">
+        erlang application에 lager(로거)  추가하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      rebar를 사용해 프로젝트를 생성했다고 가정한다.
+erlang의 로거 라이브러리 중에서 많이 사용되는 basho/lager를 추가해 보도록 하자.
+rebar.config 수정  %% -\*- erlang -\*- {sub_dirs, [ &quot;apps/chat&quot;, &quot;deps&quot;, &quot;rel&quot; ]}. {erl_opts, [ {parse\_transform, lager\_transform}, %% for lager debug_info, fail\_on\_warning ]}. %% {require\_otp\_vsn, &quot;R14&quot;}. %% Example, uncomment to retrieve cowboy as a dep. {deps, [ {'lager', &quot;.*&quot;, {git, &quot;https://github.com/basho/lager&quot;, &quot;&quot;}} ]}.   sub_dirs에 deps 디렉토리를 추가하고, erl_opts(erlang 컴파일러 옵션)에 {parse_transform, lager_transform}을 추가한다.
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -222,45 +259,6 @@ REST API를 사용하는 간단한 예제는 다음과 같다.
 goroutine과 coroutine의 차이를 다음과 같이 구분할 수 있다.
  goroutine은 병렬적이지만 coroutine은 그렇지 않다. goroutine간에는 채널을 통해 통신하며, coroutine간에는 yield와 resume 동작에 의해 통신한다.  c#에서는 yield 키워드를 통해서 iterator를 구현할 때 주로 사용하며, 유니티의 coroutine은 이러한 yield키워드를 사용해서 메인쓰레드에서 여러 함수를 동시에 실행시키는데 사용한다.
 csharp public class PowersOf2 { static void Main() { // Display powers of 2 up to the exponent of 8: foreach (int i in Power(2, 8)) { Console.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/08/31/go-buffered-channleec9d84-ec9db4ec9aa9ed959c-concurrent-queue-eab5aced9884" class="link black dim">
-        go buffered channel을 이용한 Concurrent Queue 구현
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      이전 포스트에서는 cotainer/list와 sync/mutex를 사용해서 Concurrent Queue를 구현해 보았다.
-해당 큐의 단점은 Multi-Goroutine 동기화를 위해 Mutex를 사용하면서 비용이 발생하고,
-Pop()함수를 사용할 경우 값이 없을 경우에도 즉시 리턴을 하기 때문에,
-외부 모듈에서는 큐에서 값을 가져오기 위해 계속해서 Pop()함수를 호출해야 하는 비용이 발생했다.
-이러한 단점을 보완하기 위해 go에서 제공하는 buffered channel을 사용해 다음과 같이 구현할 수 있다.
- package queue import ( &quot;sync/atomic&quot; ) type ChanQueue struct { syncChan chan interface{} size int32 } func NewChanQueue(maxSize int) *ChanQueue { return &amp;ChanQueue{syncChan: make(chan interface{}, maxSize)} } func (q *ChanQueue) Push(v interface{}) { atomic.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/08/31/go-console-progress-bar" class="link black dim">
-        go console progress bar
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      console에서 진행 상태를 프로그레스바 형태로 출력하고자 할 때 다음 패키지를 사용할 수 있다.
- https://github.com/cheggaaa/pb  사용법은 다음과 같이 간단하다.
- package main import ( &quot;github.com/cheggaaa/pb&quot; &quot;time&quot; ) func main() { count := 100000 bar := pb.StartNew(count) for i := 0; i &lt; count; i++ { bar.Increment() time.Sleep(time.Millisecond) } bar.FinishPrint(&quot;The End!&quot;) }  console에서 프로그레스바를 출력하는 기능의 핵심은,
-고정된 위치에 문자열을 출력하는 것이라 할 수 있다.
-(보통 Print()문을 사용할 경우 커서가 계속 이동하며 \r\n을 만나면 다음 줄의 처음으로 커서를 이동)
     </div>
   </div>
 </div>

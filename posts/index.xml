@@ -6,10 +6,30 @@
     <description>Recent content in Posts on Erlang &amp; Go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 31 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Nov 2018 15:15:01 +0900</lastBuildDate>
     
 	<atom:link href="https://jeidee.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Test</title>
+      <link>https://jeidee.github.io/posts/test/</link>
+      <pubDate>Wed, 21 Nov 2018 15:15:01 +0900</pubDate>
+      
+      <guid>https://jeidee.github.io/posts/test/</guid>
+      <description>작성 테스트</description>
+    </item>
+    
+    <item>
+      <title>Docker Registry</title>
+      <link>https://jeidee.github.io/posts/2017-11-30-docker-registry/</link>
+      <pubDate>Thu, 30 Nov 2017 10:07:39 +0900</pubDate>
+      
+      <guid>https://jeidee.github.io/posts/2017-11-30-docker-registry/</guid>
+      <description>도커 레지스트리를 만들 때 아래 링크의 문서를 참고합니다:
+ 나만의 private docker registry 구성하기  윈도우즈나 Mac이 아니라 리눅스의 도커에서 private docker registry에 push할 때는, /etc/docker에 daemon.json을 생성하고 다음 내용을 입력합니다.
+{ &amp;quot;insecure-registries&amp;quot;: [&amp;quot;xxx.xxx.xxx.xxx:5000&amp;quot;] }   Deploy a plain http registry  </description>
+    </item>
     
     <item>
       <title>upstart 설정</title>

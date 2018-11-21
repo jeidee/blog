@@ -35,7 +35,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jeidee.github.io/posts/" />
-<meta property="og:updated_time" content="2015-05-18T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2015-05-19T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
@@ -88,6 +88,45 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
   <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></main>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580" class="link black dim">
+        ios 스토리보드와 커스텀 테이블 셀
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       스토리보드에 작성한 커스텀 테이블셀을 코드에서 사용하기 위해서는 다음과 같이 작업한다.
+1) Attributes Inspector에서 Identifier를 설정한다.
+2) Custom TableViewController.mm에서 다음과 같이 작성한다.
+tableView의 dequeueReusableCellWithIdentifier 함수를 사용하면 된다.
+&amp;#8211; (UITableViewCell\*)tableView:(UITableView \*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath { static NSString *cellId = @&quot;friendCell&quot;; FriendCell\* cell = (FriendCell\*)[tableView dequeueReusableCellWithIdentifier:cellId];  출처  스토리보드에서 테이블뷰 셀 가져오기  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0" class="link black dim">
+        ios c&#43;&#43; 객체에서 objective-c 객체의 함수 콜백하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같은 요구사항이 있다고 가정해 보자.
+ c++로 작성된 MsgClient는 통신 처리를 하는 별도의 워커쓰레드가 있다.
+서버에 접속한 후 데이터를 수신하면 objective-c의 여러 ViewHandler에 데이터 수신 이벤트를 발생시켜야 한다.
+이벤트 수신을 원하는 ViewHandler가 이벤트 수신을 받은 후 UI 쓰레드에서 여러 UI 컨트롤을 처리해야 한다.
+ 간단히 말하면 서로 다른 쓰레드에서 동작하는 c++ 오브젝트와 objective-c 오브젝트가 있고, c++ 오브젝트에서 objective-c 오브젝트의 특정 함수를 호출(콜백)할 수 있어야 한다.
+위와 같은 요구사항을 처리하기 위해서 다양한 방법이 있겠지만 다음과 같은 구조를 사용해 해결해 보도록 하자.
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -232,42 +271,6 @@ Temp.class와 Class.forName(&#8220;com.example.Temp&#8221;)은 Class 오브젝�
 이 Class 오브젝트를 사용해 Temp 클래스의 인스턴스를 생성할 수 있고, 메소드와 필드를 Reflection할 수 있다.
 Class를 사용해 T의 새로운 인스턴스를 생성하고자 할 때는 다음과 같이 newInstance()를 사용할 수 있다.
 Temp temp = (Temp) Temp.class.newInstance(); Temp temp2 = (Temp) Class.forName(&quot;com.example.Temp&quot;).newInstance();  문제는 다음과 같은 Generic 클래스를 정의할 때 타입 T의 Class 오브젝트를 T.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/05/04/android-cannot-load-library-error" class="link black dim">
-        android cannot load library error
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      ndk build후 의존성 있는 .so 라이브러리를 일부 폰에서 로드하지 못할 경우 다음과 같이 수정해 본다.
-static { System.loadLibrary(&quot;gloox_lib&quot;); System.loadLibrary(&quot;msg_lib&quot;); }  일부 폰(sdk 22)에서는 msg_lib만 로드하면 되지만, 일부 폰(sdk 16)에서는 msg_lib가 의존하는 gloox_lib를 로드하지 못하는 경우가 발생한다.
-이럴 경우 위와 같이 의존성 있는 라이브러리를 함께 로드해주면 된다.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/05/04/android-orientationec9db4-ebb380eab2bdeb90a0-eb958c-eab090eca780ed9598eb8a94-ebb0a9ebb295" class="link black dim">
-        android orientation이 변경될 때 감지하는 방법
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      별도의 작업 없이는 orientation이 변경될 때 감지할 수 없다.
-orientation 변경을 감지할 수 있는 방법은 다음과 같이 두 가지가 있다.
-1) Activity에서 단순히 landscape와 portrait감지만 필요한 경우
-감지할 Activity에서 onConfigurationChanged() 함수를 override한다.
-@Override public void onConfigurationChanged(Configuration newConfig) { super.onConfigurationChanged(newConfig); // Checks the orientation of the screen if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) { Toast.makeText(this, &quot;landscape&quot;, Toast.LENGTH_SHORT).show(); } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){ Toast.makeText(this, &quot;portrait&quot;, Toast.LENGTH_SHORT).show(); } }  위와 같이 추가한 후 빌드해서 실행해보면 제대로 동작하지 않는다.
     </div>
   </div>
 </div>

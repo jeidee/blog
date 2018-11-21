@@ -93,6 +93,43 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-ec99b8ebb680-ec9db8eca69d-ebaaa8eb9388eab3bc-http-ecbba4ec8aa4ed8580-ebaaa8eb9388-ec97b0eb8f99" class="link black dim">
+        ejabberd 외부 인증 모듈과 http 커스텀 모듈 연동
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd의 외부 인증 모듈을 사용해서 인증 처리를 할 경우, 기존 멤버쉽과 연동하는 방법을 찾아 보도록 한다.
+우선 들어가기에 앞서 작업 개요를 살펴보면 다음과 같다.
+ python으로 외부 인증 모듈 작성 ejabberd를 외부에서 제어할 수 있도록 mod_http_api.erl 을 작성해 커스텀 모듈 등록 mod_http_api에서 기존 멤버쉽의 회원 정보 조회(편의상 internal rest api가 존재한다고 가정한다.)  다음과 같은 로그인 처리 시나리오를 가정해 보자.
+ 로그인 할 경우 외부 인증 모듈에서 http://localhost:5280/api/auth?user=romeo&amp;server=localhost&amp;password=1234와 같은 형식으로 호출한다.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberdec9790-json-eb9dbcec9db4ebb88ceb9faceba6acjiffy-ecb694eab080" class="link black dim">
+        ejabberd에 json 라이브러리(jiffy) 추가
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd에서 json 라이브러리를 사용하려면 jiffy를 사용하면 된다.
+ejabberd가 설치될 때 의존성을 걸어 함께 설치되도록 하려면 다음과 같이 configure에서 &#8211;enable-json을 추가해 주면 된다.
+ ./configure &amp;#8211;prefix={&amp;#8230;} &amp;#8211;enable-json  위와 같이 설치하려면 configure를 해 준 후에 rebar를 사용해 의존 라이브러리를 다운로드 받아야 하는데, 다음과 같이 처리한다.
+ rebar get-deps rebar compile  그런 후 make &amp; make install을 실행하자.
+만약 jiffy.so 파일의 경로를 찾지 못하는 에러가 발생할 경우 다음과 같이 Makeifle.in 파일을 수정하면 된다.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/2015/01/21/erlang-1ebb0b1eba78c-tcp-eb8f99ec8b9c-eca091ec868d-ecb298eba6ac" class="link black dim">
         erlang 1백만 tcp 동시 접속 처리
       </a>
@@ -229,43 +266,6 @@ ubuntu
  yum install ncurses-devel  wxWidgets과 함께 설치를 원할 경우
  aptitude install libwxgtk2.8-dev libgl1-mesa-dev libglu1-mesa-dev libpng3  jinterface와 함께 설치를 원할 경우
  aptitude install sun-java6-jre sun-java6-jdk sun-java6-bin  다른 c++ 프로젝트와 함께 설치를 원할 경우
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/01/21/erlang-ec9d98-caseec9980-if" class="link black dim">
-        erlang 의 case와 if
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      erlang에서는 조건 분기문에 해당하는 case와 if가 다른 언어와는 형태가 조금 다르다.
-처음 보면 어떻게 사용해야 할지 감이 오지 않는데, 알고 보면 다른 언어와 크게 다르지도 않다는 것을 알 수 있다.
-erlang의 if와 case는 가드(guard)를 이용한 구문으로 되어 있는데, if와 case를 살펴보기 전에 먼저 가드를 간략히 살펴보자.
-guard 가드는 true와 false 애텀으로 평가받는 식이며 다음과 같은 형식으로 사용할 수 있다.
-max(X, Y) when X &gt; Y -&gt; X; max(X, Y) -&gt; Y.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/01/21/erlangotp-application" class="link black dim">
-        erlang/otp application
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      application concept 어떤 특정 기능을 수행하는 코드를 작성할 때, 우리는 다른 시스템에서 재사용될 수 있으며, 유닛으로써 시작과 중지할 수 있는 컴포넌트인 application에 코드를 작성할 수 있길 원한다.
-이것을 위해 Erlang/OTP에서는 application callback module을 제공한다. application이 어떻게 시작되고 중지될 수 있는지에 대해서는 application callback moudule과 함께 설명하도록 하겠다.
-application 명세는 application resource file에 포함하는데, 해당 명세에는 application을 구성하는 모듈과 callback module의 이름이 명시되어 있다.
-코드 패키징을 위한 Erlang/OTP 도구인 systool을 사용한다면(자세한 내용은 Release참조) , 각각의 application 코드들은 미리 정의된 디렉토리 구조(뒤에 설명함)를 따르는 구분된 디렉토리에 위치해야 한다.
     </div>
   </div>
 </div>

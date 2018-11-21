@@ -35,7 +35,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jeidee.github.io/posts/" />
-<meta property="og:updated_time" content="2015-03-03T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2015-03-04T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
@@ -88,6 +88,44 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
   <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></main>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/04/ejabberd-external-component-ec97b0eb8f99" class="link black dim">
+        ejabberd external component 연동
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      xmpp component 개요 xmpp에는 external component 관련 공식 프로토콜인 Jabber Component Protocol이 있다.
+Jabber Component Protocol은 외부 컴포넌트를 XMPP서버와 연동하기 위한 규약을 제안하는데 크게 accept와 connect에 대한 XML 스키마와 handshake flow를 명세하고 있다.
+xmpp의 external component는 프로토콜만 준수한다면 어떤 언어를 사용해서도 구현할 수 있다. 3rd-party 컴포넌트를 ejabberd와 연동하는 방법은 Install Components and Transports to othe networks 문서를 참고하도록 한다.
+echo-bot component 만들어서 연동해 보기 node-xmpp-component 모듈을 사용해서 간단한 에코봇을 컴포넌트로 만들어 ejabberd와 연동해 보도록 하자.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/04/erlangeab3bc-java-ec97b0eb8f99" class="link black dim">
+        erlang과 java 연동
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      eclipse의 maven 프로젝트 기준으로 설명한다.
+jinterface dependency 추가 먼저 pom.xml에 다음과 같이 dependency를 추가해 준다.
+ &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;org.erlang.otp&lt;/groupId&gt; &lt;artifactId&gt;jinterface&lt;/artifactId&gt; &lt;version&gt;1.5.3.1&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt;  maven install을 수행해 jinterface-1.5.3.1.jar 를 다운로드 받는다.
+erl shell 시작 erl shell은 노드명과 매직쿠키를 지정해서 다음과 같이 실행해 준다.
+ erl -sname enode -setcookie erlang  또는
+ erl -name enode -setcookie erlang  java를 사용해 접속 테스트 eclipse에서 ErlConnection 클래스를 추가하고 다음과 같이 작성한다.
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -236,39 +274,6 @@ mnesia 시작 mnesia를 시작하기 위해서 다음의 과정이 필요하다.
       데이터 추가 테이블에 데이터를 추가하기 위해서는 트랜잭션을 사용해야 한다. 트랜잭션은 매개변수가 없는 익명의 fun에 여러 DB 오퍼레이션을 묶어 생성할 수 있다.
 테이블에 데이터를 입력할 때는 mnesia:write/1 함수를 사용할 수 있으면 매개변수는 레코드를 사용한다.
 insert_emp(Emp, DeptId, ProjNames) -&gt; Ename = Emp#employee.name, Fun = fun() -&gt; mnesia:write(Emp), AtDep = #at\_dep{emp = Ename, dept\_id = DeptId}, mnesia:write(AtDep), mk_projs(Ename, ProjNames) end, mnesia:transaction(Fun). mk_projs(Ename, [ProjName|Tail]) -&gt; mnesia:write(#in\_proj{emp = Ename, proj\_name = ProjName}), mk_projs(Ename, Tail); mk\_projs(\_, []) -&gt; ok.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/02/10/javascript-json-ebacb8ec9e90ec97b4ec9d84-ec9888ec8198eab28c-ed8faceba7b7ed8c85ed9598eab8b0" class="link black dim">
-        javascript JSON 문자열을 예쁘게 포맷팅하기
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      다음과 같이 사용할 수 있다.
-var obj = JSON.parse(jsonTxt); var html = '&lt;pre&gt;' + JSON.stringify(obj, null, 4) + '&lt;/pre&gt;';  참고 URL은 다음과 같다.
- http://stackoverflow.com/questions/8007763/json-formatter-lib  
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/02/09/ha-proxyeba5bc-ec82acec9aa9ed95b4ec849c-l7-switch-eab5acec84b1" class="link black dim">
-        HA proxy를 사용해서 L7 switch 구성
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      다음과 같이 HA Proxy를 구성하고 싶다고 가정하자.  A 서버 : 웹서버  http://192.168.56.101:3000/ : 홈 http://192.168.56.101:3000/admin : 관리 &#8230;  B 서버 : RESTful API 서버  http://192.168.56.102:5281/api  C 서버 : HA Proxy 서버  https://192.168.56.103/ =&gt; http://192.168.56.101:3000/ https://192.168.56.103/admin =&gt; http://192.168.56.101:3000/admin https://192.168.56.103/api =&gt; http://192.168.56.102:5281/api   네트워크 토폴로지는 다음과 같다.
- +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ https +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ | Client | &amp;#8212;&amp;#8212;&gt;| HA Proxy | | | | 192.168.56.103 | +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ | http V +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ +&amp;#8212;&amp;#8212;-| fire wall | | +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ | | http | V | +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ | | 192.
     </div>
   </div>
 </div>

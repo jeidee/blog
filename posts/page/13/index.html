@@ -35,7 +35,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jeidee.github.io/posts/" />
-<meta property="og:updated_time" content="2015-03-16T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2015-03-18T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
@@ -88,6 +88,46 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
   <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></main>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/18/erlangeab3bc-cc-ed86b5ed95a9ed9598eab8b0-erlang-nif" class="link black dim">
+        erlang과 c/c&#43;&#43; 통합하기 &amp;#8211; erlang nif
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       erlang과 다른 언어를 통합하려면 포트를 사용하면 된다.
+포트의 경우erlang 프로세스에서 다른 언어로 작성된 프로세스를 자식 프로세스로 생성하고, 두 프로세스간 입출력 스트림을 파이프로 연결해 통신하는 방법이라고 할 수 있다.
+c언어의 경우 포트 이외에 R14부터 채용된 erlang nif을 사용해서 통합할 수 있는데, 포트보다 사용방법이 간단하다. (c++의 경우 wrapper인 nifpp를 사용해서 구현할 수 있다.)
+자세한 내용은 하단의 링크를 참고하도록 한다.
+참고  Erlang NIFs How to integrate C with Erlang program example or Erlang NIFs A c NIF wrapper for erlang to support aes/ecb/pkcs5padding add star Erlang과 C의 연결 C++11 Wrapper for Erlang NIF API/nifpp  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/03/17/c-eclipseec9790ec849c-c-110x-eca780ec9b90-ec84a4eca095" class="link black dim">
+        c&#43;&#43; eclipse에서 c&#43;&#43; 11/0x 지원 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       먼저 C++ 프로젝트를 생성한다.
+생성된 프로젝트에서 Properties 메뉴를 선택한다.
+C/C++ Build &gt; Settings &gt; Tool Settings &gt; GCC C++ Compiler &gt; Miscellaneous -&gt; Other Flags에 &#8220;-std=c++0x&#8221;값을 입력한다.
+C/C++ General &gt; Paths and Symbols &gt; Symbols &gt; GNU C++에서 &#8220;Add&#8221;버튼을 클릭하고 Name필드에 &#8220;GXX_EXPERIMENTAL_CXX0X&#8220;값을 입력한다. Value필드는 빈 채로 둔다.
+Apply버튼을 클릭하고 OK 버튼을 클릭한다.
+다시 빌드한다.
+참고  eclipse cdt c++11/0x support  
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -241,44 +281,6 @@ toggle &lt;section class=&quot;container&quot;&gt; &lt;div id=&quot;card&quot;&g
 다음 URL을 사용해서 json 포맷의 도/시 정보를 구한다.
 http://www.kma.go.kr/DFSROOT/POINT/DATA/top.json.txt
 아래와 같은 json 포맷의 데이터를 구할 수 있다.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/03/04/ejabberd-external-component-ec97b0eb8f99" class="link black dim">
-        ejabberd external component 연동
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      xmpp component 개요 xmpp에는 external component 관련 공식 프로토콜인 Jabber Component Protocol이 있다.
-Jabber Component Protocol은 외부 컴포넌트를 XMPP서버와 연동하기 위한 규약을 제안하는데 크게 accept와 connect에 대한 XML 스키마와 handshake flow를 명세하고 있다.
-xmpp의 external component는 프로토콜만 준수한다면 어떤 언어를 사용해서도 구현할 수 있다. 3rd-party 컴포넌트를 ejabberd와 연동하는 방법은 Install Components and Transports to othe networks 문서를 참고하도록 한다.
-echo-bot component 만들어서 연동해 보기 node-xmpp-component 모듈을 사용해서 간단한 에코봇을 컴포넌트로 만들어 ejabberd와 연동해 보도록 하자.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/03/04/erlangeab3bc-java-ec97b0eb8f99" class="link black dim">
-        erlang과 java 연동
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      eclipse의 maven 프로젝트 기준으로 설명한다.
-jinterface dependency 추가 먼저 pom.xml에 다음과 같이 dependency를 추가해 준다.
- &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;org.erlang.otp&lt;/groupId&gt; &lt;artifactId&gt;jinterface&lt;/artifactId&gt; &lt;version&gt;1.5.3.1&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt;  maven install을 수행해 jinterface-1.5.3.1.jar 를 다운로드 받는다.
-erl shell 시작 erl shell은 노드명과 매직쿠키를 지정해서 다음과 같이 실행해 준다.
- erl -sname enode -setcookie erlang  또는
- erl -name enode -setcookie erlang  java를 사용해 접속 테스트 eclipse에서 ErlConnection 클래스를 추가하고 다음과 같이 작성한다.
     </div>
   </div>
 </div>

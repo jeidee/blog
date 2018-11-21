@@ -93,6 +93,43 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlang-ec9d98-caseec9980-if" class="link black dim">
+        erlang 의 case와 if
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang에서는 조건 분기문에 해당하는 case와 if가 다른 언어와는 형태가 조금 다르다.
+처음 보면 어떻게 사용해야 할지 감이 오지 않는데, 알고 보면 다른 언어와 크게 다르지도 않다는 것을 알 수 있다.
+erlang의 if와 case는 가드(guard)를 이용한 구문으로 되어 있는데, if와 case를 살펴보기 전에 먼저 가드를 간략히 살펴보자.
+guard 가드는 true와 false 애텀으로 평가받는 식이며 다음과 같은 형식으로 사용할 수 있다.
+max(X, Y) when X &gt; Y -&gt; X; max(X, Y) -&gt; Y.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/erlangotp-application" class="link black dim">
+        erlang/otp application
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      application concept 어떤 특정 기능을 수행하는 코드를 작성할 때, 우리는 다른 시스템에서 재사용될 수 있으며, 유닛으로써 시작과 중지할 수 있는 컴포넌트인 application에 코드를 작성할 수 있길 원한다.
+이것을 위해 Erlang/OTP에서는 application callback module을 제공한다. application이 어떻게 시작되고 중지될 수 있는지에 대해서는 application callback moudule과 함께 설명하도록 하겠다.
+application 명세는 application resource file에 포함하는데, 해당 명세에는 application을 구성하는 모듈과 callback module의 이름이 명시되어 있다.
+코드 패키징을 위한 Erlang/OTP 도구인 systool을 사용한다면(자세한 내용은 Release참조) , 각각의 application 코드들은 미리 정의된 디렉토리 구조(뒤에 설명함)를 따르는 구분된 디렉토리에 위치해야 한다.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/2015/01/21/erlangec9790ec849c-httphttps-posted9598eab8b0" class="link black dim">
         erlang에서 http(https)  post하기
       </a>

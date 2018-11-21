@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jeidee.github.io/posts/test/</loc>
+    <lastmod>2018-11-21T15:15:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jeidee.github.io/posts/2017-11-30-docker-registry/</loc>
+    <lastmod>2017-11-30T10:07:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/</loc>
     <lastmod>2017-08-31T00:00:00+00:00</lastmod>
   </url>
@@ -1256,7 +1266,7 @@
   
   <url>
     <loc>https://jeidee.github.io/</loc>
-    <lastmod>2017-08-31T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-21T15:15:01+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1700,7 +1710,7 @@
   
   <url>
     <loc>https://jeidee.github.io/posts/</loc>
-    <lastmod>2017-08-31T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-21T15:15:01+09:00</lastmod>
     <priority>0</priority>
   </url>
   

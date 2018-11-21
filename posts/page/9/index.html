@@ -35,7 +35,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jeidee.github.io/posts/" />
-<meta property="og:updated_time" content="2015-06-02T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2015-06-10T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
@@ -88,6 +88,44 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
   <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></main>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/10/elixir-ec84a4ecb998ed9598eab8b0" class="link black dim">
+        Elixir Introduction (#1/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      소개 elixir(일릭서라고 발음, 한글번역은 엘릭서가 자연스러워 보인다.)는 erlang vm에서 동작하는 함수형 언어이다.
+erlang과 완벽하게 호환되고 통합 사용할 수 있으며, 함수형 언어를 접해 보지 않은 프로그래머가 처음 erlang을 접했을 때 느끼는 기괴함과 불편함에 비하면, elixir의 문법은 굉장히 세련되고 친근하게 느껴진다.
+2012년에 처음 발표됐고(erlang은 1989년) 역사가 그리 길지 않지만, erlang의 장점(병행성, 분산성, 뛰어난 내고장성-fault-tolerant, 무정지 애플리케이션)을 모두 포함하고 있으며 완성도 또한 매우 뛰어난 다크호스 같은 언어이다.
+단지, erlang도 한국내에서는 비주류언어이고 겨우 번역본 한 권이 나온 상황이며, elixir는 번역 자료뿐 아니라 관련 한국 자료는 구글링해서 한 건도 검색이 되지 않는다.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/03/ejabberdec9790-redis-eb9dbcec9db4ebb88ceb9faceba6aceredis-ecb694eab080" class="link black dim">
+        ejabberd에 redis 라이브러리(eredis) 추가
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd가 15.03버전이 릴리즈되면서 redis 지원이 추가되었다.
+클라이언트 세션 관리를 redis로 할 수 있는데 직접 연관된 모듈은 ejabberd_sm 모듈이다.
+redis를 사용하려면 다음과 같이 configure에서 &#8211;enable-redis 옵션을 추가해 주면 된다.
+ ./configure &amp;#8230; &amp;#8211;enable-redis  위와 같이 해 준후에 rebar를 사용해 의존 라이브러리를 다운로드 받아 컴파일해야 한다.
+ rebar get-deps rebar compile  그런 후 make &amp;&amp; make install을 수행하면 된다.
+ejabberd.yml에서 sm_db_type을 redis로 설정하기 위해서는 다음 라인을 추가해 주면 된다.
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -217,45 +255,6 @@ ImageCache.h
 #import &lt;UIKit/UIKit.h&gt; @interface ImageCache : NSObject +(ImageCache*)getInstance; -(void) loadFromUrl: (NSURL\*) url callback:(void (^)(UIImage \*image))callback; @end  ImageCache.m
 #import &lt;UIKit/UIKit.h&gt; @interface ImageCache : NSObject +(ImageCache*)getInstance; -(void) loadFromUrl: (NSURL\*) url callback:(void (^)(UIImage \*image))callback; @end  사용
 [[ImageCache getInstance] loadFromUrl:roster.photo callback:^(UIImage *image) { cell.imgAvatar.image = image; }];  참고  Loading an image into UIImage asynchronously iphone에서 메모리 문제로 URL로 데이터를 가끔씩 못 가져올 때 Disk Caching with AFNetworking UIImageView에 원격이미지 비동기 로드 및 캐쉬 기능 넣기  
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/05/19/ios-ec8aa4ed86a0eba6acebb3b4eb939cec9980-ecbba4ec8aa4ed8580-ed858cec9db4ebb894-ec8580" class="link black dim">
-        ios 스토리보드와 커스텀 테이블 셀
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-       스토리보드에 작성한 커스텀 테이블셀을 코드에서 사용하기 위해서는 다음과 같이 작업한다.
-1) Attributes Inspector에서 Identifier를 설정한다.
-2) Custom TableViewController.mm에서 다음과 같이 작성한다.
-tableView의 dequeueReusableCellWithIdentifier 함수를 사용하면 된다.
-&amp;#8211; (UITableViewCell\*)tableView:(UITableView \*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath { static NSString *cellId = @&quot;friendCell&quot;; FriendCell\* cell = (FriendCell\*)[tableView dequeueReusableCellWithIdentifier:cellId];  출처  스토리보드에서 테이블뷰 셀 가져오기  
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/05/18/ios-c-eab09decb2b4ec9790ec849c-objective-c-eab09decb2b4ec9d98-ed95a8ec8898-ecbd9cebb0b1ed9598eab8b0" class="link black dim">
-        ios c&#43;&#43; 객체에서 objective-c 객체의 함수 콜백하기
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      다음과 같은 요구사항이 있다고 가정해 보자.
- c++로 작성된 MsgClient는 통신 처리를 하는 별도의 워커쓰레드가 있다.
-서버에 접속한 후 데이터를 수신하면 objective-c의 여러 ViewHandler에 데이터 수신 이벤트를 발생시켜야 한다.
-이벤트 수신을 원하는 ViewHandler가 이벤트 수신을 받은 후 UI 쓰레드에서 여러 UI 컨트롤을 처리해야 한다.
- 간단히 말하면 서로 다른 쓰레드에서 동작하는 c++ 오브젝트와 objective-c 오브젝트가 있고, c++ 오브젝트에서 objective-c 오브젝트의 특정 함수를 호출(콜백)할 수 있어야 한다.
-위와 같은 요구사항을 처리하기 위해서 다양한 방법이 있겠지만 다음과 같은 구조를 사용해 해결해 보도록 하자.
     </div>
   </div>
 </div>

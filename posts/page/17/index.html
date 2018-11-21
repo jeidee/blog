@@ -93,6 +93,44 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/2015/01/22/node-jseba19c-https-ec9bb9ec849cebb284-eba78ceb93a4eab8b0" class="link black dim">
+        node.js로 https 웹서버 만들기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음 문서를 참고했습니다.
+http://blog.saltfactory.net/221
+준비 openssl이 설치되어 있고 ubuntu에서 작업한다고 가정합니다.
+설치되어 있지 않을 경우 다음과 같이 설치합니다.
+ sudo apt-get install openssl  개인키를 생성합니다.
+ openssl genrsa 1024 &gt; key.pem  만들어진 개인키를 사용해 cert 인증서 파일을 생성합니다.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/22/node-jsec9980-express" class="link black dim">
+        node.js와 express
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ubuntu에서 node.js의 express를 사용해 rest api와 webapp을 구현해 본다.
+개발환경  os: ubuntu 14.10 node: v0.10.33 express: 4.0.0  express 설치  $ sudo npm install -g express $ sudo apt-get install node-express-generator  express app 생성  $ express hello $ cd hello $ npm install  npm install을 실행하면 의존성 패키지가 설치된다.
+이렇게 하면 기본 express webapp이 생성된 상태인데, 다음과 같이 확인해 볼 수 있다.
+ $ npm start  디버그 메세지를 확인하고 싶다면 npm start 전에 다음과 같이 입력한다.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/2015/01/22/nodejs-https-ec84a4eca095" class="link black dim">
         nodejs https 설정
       </a>
@@ -221,43 +259,6 @@ process(\_LocalPath = [&quot;world&quot;], \_Request) -&gt; {xmlelement, &quot;h
 https://www.ejabberd.im/ejabberd-modules
 하지만 일부 모듈의 경우 최신 버전에서 사용할 수 없고, 수정된 모듈에서도 이전 버전과 인터페이스 호환이 되지 않아 문제를 일으키는 경우가 있으므로 주의해야 한다.
 mod_admin_extra 모듈을 사용해 ejabberdctl의 get_vcard 코맨드 실행 ejabberd-modules 중에서 mod_ctlextra와 mod_admin_extra 모듈은 ejabberdctl용(관리자 콘솔 코맨드) 확장 코맨드 모듈이다. 둘 중에서 mod_admin_extra가 최신 버전이지만 최신 버전의 ejabberd(현재 기준 14.07)에서 사용되는 gen_mod:get_module_opt/5와 호환되지 않아(mod_admin_extra는 gen_mod:get_module_opt/4를 사용) 일부 코드를 수정해야 한다.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/01/21/ejabberd-mod_admin_extra-ec82acec9aa9ed95b4ec849c-vcard-ec84a4eca095ed9598eab8b0" class="link black dim">
-        ejabberd mod_admin_extra 사용해서 vcard 설정하기
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      이전 글에서 설명한 vcard 가져오기 관련된 내용 중에 수정할 부분이 있다.
-ejabberd_modules의 경우 최신 버전(현재 14.07)에서는 호환이 안되며 대신 ejabberd_contrib를 사용해야 한다.
-https://www.ejabberd.im/ejabberd-contrib
- git clone git://github.com/processone/ejabberd-contrib.git  ejabberd-contrib에 포함된 mod_admin_extra는 ejaberd_modules에서 생기는 호환 문제가 해결되어 있으므로 수정할 필요없이 그대로 사용하면 된다.
-설치(mod_admin_extra.erl을 ejabberd/src파일에 복사한 후 make &amp;&amp; make install, ejabberd.yml에 mod_admin_extra 모듈 등록)하고 ejabberd를 재시작한 후 터미널에서 다음과 같이 테스트해 보자.
- $ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; hello $ ejabberdctl set_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; &quot;world&quot; $ ejabberdctl get_vcard &quot;romeo&quot; &quot;localhost&quot; &quot;NICKNAME&quot; world  닉네임이 잘 변경된다.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/01/21/ejabberd-mysql-odbc-ec84a4eca095" class="link black dim">
-        ejabberd mysql odbc 설정
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      mysql 설정은 다음과 같이 한다.
- $ vi /etc/ejabberd/ejabberd.yml auth_method: odbc \## auth_method: internal에서 변경한다. \## MySQL server: ## odbc_type: mysql odbc_server: &quot;localhost&quot; odbc_database: &quot;ejabberd&quot; odbc_username: &quot;ejabberd&quot; odbc_password: &quot;ejabberd&quot;  위와 같이 한 후 모듈별로 db_type을 설정해야 하는데, roster와 vcard를 mysql에 저장하도록 하려면 다음과 같이 ejabberd.yml파일을 수정한다.
- mod_roster: db_type: odbc mod\_shared\_roster: {} mod_stats: {} mod_time: {} mod_vcard: db_type: odbc  
     </div>
   </div>
 </div>

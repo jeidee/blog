@@ -35,7 +35,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jeidee.github.io/posts/" />
-<meta property="og:updated_time" content="2015-02-06T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2015-02-10T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
@@ -88,6 +88,39 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
   <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></main>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/10/javascript-json-ebacb8ec9e90ec97b4ec9d84-ec9888ec8198eab28c-ed8faceba7b7ed8c85ed9598eab8b0" class="link black dim">
+        javascript JSON 문자열을 예쁘게 포맷팅하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같이 사용할 수 있다.
+var obj = JSON.parse(jsonTxt); var html = '&lt;pre&gt;' + JSON.stringify(obj, null, 4) + '&lt;/pre&gt;';  참고 URL은 다음과 같다.
+ http://stackoverflow.com/questions/8007763/json-formatter-lib  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/09/ha-proxyeba5bc-ec82acec9aa9ed95b4ec849c-l7-switch-eab5acec84b1" class="link black dim">
+        HA proxy를 사용해서 L7 switch 구성
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같이 HA Proxy를 구성하고 싶다고 가정하자.  A 서버 : 웹서버  http://192.168.56.101:3000/ : 홈 http://192.168.56.101:3000/admin : 관리 &#8230;  B 서버 : RESTful API 서버  http://192.168.56.102:5281/api  C 서버 : HA Proxy 서버  https://192.168.56.103/ =&gt; http://192.168.56.101:3000/ https://192.168.56.103/admin =&gt; http://192.168.56.101:3000/admin https://192.168.56.103/api =&gt; http://192.168.56.102:5281/api   네트워크 토폴로지는 다음과 같다.
+ +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ https +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ | Client | &amp;#8212;&amp;#8212;&gt;| HA Proxy | | | | 192.168.56.103 | +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ | http V +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ +&amp;#8212;&amp;#8212;-| fire wall | | +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;+ | | http | V | +&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;+ | | 192.
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -228,40 +261,6 @@ riak 모듈을 제외한 모든 플러그인 모듈을 설치하기 위해서는
  $ sudo apt-get install rebar  ssl 라이브러리 설치
  $ sudo apt-get install libssl-dev  yaml 라이브러리 설치
  $ sudo apt-get install libyaml-dev  
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/01/28/erlang-base64-encoding" class="link black dim">
-        erlang base64 encoding
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      base64 인코딩을 위해서는 base64 모듈의 encode/1 함수를 다음과 같이 사용한다.
-10&gt; Enc = base64:encode(&lt;&gt;). &lt;&gt; 12&gt; io:format(&quot;~s~n&quot;, [base64:decode(Enc)]). encode ok  
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/2015/01/28/erlang-ideeba5bc-ec9c84ed959c-webstorm-ec8690ebb3b4eab8b0" class="link black dim">
-        erlang ide를 위한 webstorm 손보기
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      erlang plugin 설치 먼저 jetbrain plugin 페이지에서 erlang plugin을 다운로드 받는다.
-적당한 폴더에 압축을 풀어놓고 Erlang폴더 전체를 webstorm이 설치된 경로의 plugin폴더 하위에 복사한다.
-마지막으로 webstorm을 재시작하면 적용된다.
-consolas 폰트 설치 이 페이지에 자세히 설명되어 있으므로 따라 설치하자.
     </div>
   </div>
 </div>
