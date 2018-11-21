@@ -1,439 +1,528 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko-kr">
   <head>
     <meta charset="utf-8">
-<meta name="pinterest" content="nopin">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.31.1" />
-
-<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/posts/index.xml">
-
-<link rel="canonical" href="https://jeidee.github.io/posts/">
-
-
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <title>Posts - Erlang &amp; Go</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    <title>Erlang &amp; Go </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.51" />
     
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.e08a958ae3e530145318b6373195c765.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+      <link href="https://jeidee.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
+      <link href="https://jeidee.github.io/posts/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go" />
+    
+
+    <meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jeidee.github.io/posts/" />
+<meta property="og:updated_time" content="2015-06-19T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="Posts">
+<meta itemprop="description" content="">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content=""/>
 
   </head>
 
-  <body>
-    
-    
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-110408557-1', 'auto');
-ga('send', 'pageview');
-</script>
+  <body class="ma0 avenir bg-near-white">
 
     
 
-    <header class="l-header">
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
-          </div>
-
-          
-
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <div class="container">
-        
-<div class="row">
-  <div class="col-md-8">
-
-    
-    <header class="page-header">
-      <h1>Posts</h1>
-    </header>
-    
-
-    <ul class="p-articles">
-      
-      <li><article class="li">
   <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-19T00:00:00JST">Jun 19, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jeidee.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Erlang &amp; Go
+    </a>
+    <div class="flex-l items-center">
       
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/06/19/elixir-try-catch-and-rescue-1921/">Elixir try, catch and rescue (#19/21)</a></h2>
+      
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          Posts
+        </h1>
+        
+      </div>
+    </div>
   </header>
 
-  
-  <div class="summary">본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+
+    <main class="pb7" role="main">
+      
+  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
+  <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></main>
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/19/elixir-try-catch-and-rescue-1921" class="link black dim">
+        Elixir try, catch and rescue (#19/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
 자세한 내용은 원문을 참조해 주세요.
  elixir는 세 개의 에러 매커니즘을 갖는다: errors, throws, exits. 이번 챕터에서 우리는 이들 각각을 살펴보도록 한다.
 Errors 에러(또는 예외)는 코드에서 예외적인 상황이 발생할 때 사용된다. 숫자를 atom에 더할 때 발생할 수 있는 에러를 살펴보자.
- iex&gt; :foo + 1 ** (ArithmeticError) bad argument in arithmetic expression :erlang.+(:foo, 1)  raise/1 함수를 사용하면 아무 때나 런타임에 에러를 발생시킬 수 있다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/06/19/elixir-try-catch-and-rescue-1921/" title="Elixir try, catch and rescue (#19/21)">Read More…</a>
-  </footer>
-</article>
-</li>
+ iex&gt; :foo + 1 ** (ArithmeticError) bad argument in arithmetic expression :erlang.+(:foo, 1)  raise/1 함수를 사용하면 아무 때나 런타임에 에러를 발생시킬 수 있다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-18T00:00:00JST">Jun 18, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/06/18/elixir-comprehensions-1721/">Elixir Comprehensions (#17/21)</a></h2>
-  </header>
-
-  
-  <div class="summary">본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/18/elixir-comprehensions-1721" class="link black dim">
+        Elixir Comprehensions (#17/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
 자세한 내용은 원문을 참조해 주세요.
  elixir에서는, 열거형을 반복문에서 열거하고 요소를 필터링해 다른 리스트로 반환하는 일이 매우 일반적이다. 해석식(Comprehensions)은 그러한 패턴을 쉽게 하도록 도와준다. 해석식은 for와 같은 특별한 형태를 사용해 그러한 작업을 처리할 수 있다.
 예를 들면, 정수 리스트에서 각 요소의 제곱을 구해 새로운 리스트를 반환하는 작업은 다음과 같이 구현할 수 있다.
- iex&gt; for n &lt;- [1, 2, 3, 4], do: n * n [1, 4, 9, 16]  해석식은 세 부분으로 구성된다: 발생기(generator), 필터, 수집자(collectables).</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/06/18/elixir-comprehensions-1721/" title="Elixir Comprehensions (#17/21)">Read More…</a>
-  </footer>
-</article>
-</li>
+ iex&gt; for n &lt;- [1, 2, 3, 4], do: n * n [1, 4, 9, 16]  해석식은 세 부분으로 구성된다: 발생기(generator), 필터, 수집자(collectables).
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-18T00:00:00JST">Jun 18, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/06/18/elixir-protocols-1621/">Elixir Protocols (#16/21)</a></h2>
-  </header>
-
-  
-  <div class="summary">본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/18/elixir-protocols-1621" class="link black dim">
+        Elixir Protocols (#16/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
 자세한 내용은 원문을 참조해 주세요.
  프로토콜은 elixir에서 다형성을 구현하는 매커니즘이다. 프로토콜은 어떤 데이터 타입에서도 사용할 수 있다. 예제를 보도록 하자.
 elixir에서는 false와 nil만이 false처럼 처리된다. 그 외에는 모든 것이 true로 평가된다. 응용프로그램에 따라, blank로 처리되는 데이터타입을 위해 boolean값을 반환하는 blank? 프로토콜을 명시하는 것이 중요할 수도 있다. 예를 들어, 빈 리스트나 빈 바이너리는 blank로 간주될 수 있다.
-우리는 이러한 프로토콜을 다음과 같이 정의할 수 있다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/06/18/elixir-protocols-1621/" title="Elixir Protocols (#16/21)">Read More…</a>
-  </footer>
-</article>
-</li>
+우리는 이러한 프로토콜을 다음과 같이 정의할 수 있다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-18T00:00:00JST">Jun 18, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/06/18/phoenix-eb8db0ebaaacec9cbceba19c-ec8ba4ed9689ed9598eab8b0/">phoenix 데몬으로 실행하기</a></h2>
-  </header>
-
-  
-  <div class="summary"> run.sh파일을 하나 만들고 다음과 같이 입력한다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/18/phoenix-eb8db0ebaaacec9cbceba19c-ec8ba4ed9689ed9598eab8b0" class="link black dim">
+        phoenix 데몬으로 실행하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       run.sh파일을 하나 만들고 다음과 같이 입력한다.
 포트는 원하는 포트로 입력하면 된다.
- MIX_ENV=prod PORT=4001 elixir &amp;#8211;detached -S mix phoenix.server  출처  How to start phoenix server as daemon?  </div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/06/18/phoenix-eb8db0ebaaacec9cbceba19c-ec8ba4ed9689ed9598eab8b0/" title="phoenix 데몬으로 실행하기">Read More…</a>
-  </footer>
-</article>
-</li>
+ MIX_ENV=prod PORT=4001 elixir &amp;#8211;detached -S mix phoenix.server  출처  How to start phoenix server as daemon?  
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-17T00:00:00JST">Jun 17, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/06/17/elixir-io-and-the-file-system-1221/">Elixir IO and the file system (#12/21)</a></h2>
-  </header>
-
-  
-  <div class="summary">본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/17/elixir-io-and-the-file-system-1221" class="link black dim">
+        Elixir IO and the file system (#12/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
 자세한 내용은 원문을 참조해 주세요.
  이번 챕터에서는 IO, File, Path 모듈과 관련된 입/출력 매커니즘과 파일 시스템 관련 태스크를 소개하도록 한다.
 The IO module elixir의 IO 모듈은 표준 입출력, 표준 에러, 파일과 다른 IO 장치들을 읽고 쓸 수 있도록 해주는 주요 매커니즘이다. 모듈의 사용법은 꽤 직관적이다.
- iex&gt; IO.puts &quot;hello world&quot; hello world :ok iex&gt; IO.gets &quot;yes or no? &quot; yes or no?</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/06/17/elixir-io-and-the-file-system-1221/" title="Elixir IO and the file system (#12/21)">Read More…</a>
-  </footer>
-</article>
-</li>
+ iex&gt; IO.puts &quot;hello world&quot; hello world :ok iex&gt; IO.gets &quot;yes or no? &quot; yes or no?
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-17T00:00:00JST">Jun 17, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/06/17/elixir-module-attributes-1421/">Elixir Module attributes (#14/21)</a></h2>
-  </header>
-
-  
-  <div class="summary">본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/17/elixir-module-attributes-1421" class="link black dim">
+        Elixir Module attributes (#14/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
 자세한 내용은 원문을 참조해 주세요.
  elixir에서 모듈의 속성은 3개의 목적으로 제공된다.
  모듈에 주석을 제공한다. 사용자와 VM에 정보를 제공한다. 상수로 동작한다. 컴파일하는 동안 임시 모듈 저장공간으로 사용된다.  하나씩 살펴보자.
 As annotations elixir는 모듈 속성 컨셉을 Erlang에서 가져왔다. 예를 보자.
- defmodule MyServer do @vsn 2 end  위의 예는, 모듈의 버전 속성을 명시적으로 설정한다. @vsn은 Erlang VM이 모듈이 수정되었는지 여부를 검사해서 코드를 리로딩할 지 결정하는 매커니즘으로 사용한다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/06/17/elixir-module-attributes-1421/" title="Elixir Module attributes (#14/21)">Read More…</a>
-  </footer>
-</article>
-</li>
+ defmodule MyServer do @vsn 2 end  위의 예는, 모듈의 버전 속성을 명시적으로 설정한다. @vsn은 Erlang VM이 모듈이 수정되었는지 여부를 검사해서 코드를 리로딩할 지 결정하는 매커니즘으로 사용한다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-17T00:00:00JST">Jun 17, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/06/17/elixir-structs-1521/">Elixir Structs (#15/21)</a></h2>
-  </header>
-
-  
-  <div class="summary">본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/17/elixir-structs-1521" class="link black dim">
+        Elixir Structs (#15/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
 자세한 내용은 원문을 참조해 주세요.
  이전 챕터에서 우리는 맵에 대해 배웠다.
  iex&gt; map = %{a: 1, b: 2} %{a: 1, b: 2} iex&gt; map[:a] 1 iex&gt; %{map | a: 3} %{a: 3, b: 2}  구조체는 컴파일 타임 검사와 기본값을 제공하는 맵의 확장이다.
 Defining structs 구조체를 정의하기 위해, defstruct를 사용한다.
- iex&gt; defmodule User do &amp;#8230;&gt; defstruct name: &quot;John&quot;, age: 27 &amp;#8230;&gt; end  defstruct에 사용된 키워드 리스트는, 어떤 필드가 어떤 기본값을 갖는지 정의한다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/06/17/elixir-structs-1521/" title="Elixir Structs (#15/21)">Read More…</a>
-  </footer>
-</article>
-</li>
+ iex&gt; defmodule User do &amp;#8230;&gt; defstruct name: &quot;John&quot;, age: 27 &amp;#8230;&gt; end  defstruct에 사용된 키워드 리스트는, 어떤 필드가 어떤 기본값을 갖는지 정의한다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-17T00:00:00JST">Jun 17, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/06/17/elixir-alias-require-and-import-1321/">Elixir alias, require and import (#13/21)</a></h2>
-  </header>
-
-  
-  <div class="summary">본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/17/elixir-alias-require-and-import-1321" class="link black dim">
+        Elixir alias, require and import (#13/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
 자세한 내용은 원문을 참조해 주세요.
  소프트웨어 재사용을 쉽게 하기 위해, elixir는 3개의 지시자(directives)를 제공한다. 이들 지시자는 정적 유효범위(lexical scope)를 갖는다.(일반적인 언어에서 변수의 선언과 유효범위는 대부분 lexical scope를 갖는다.)
 alias alias는 모듈이름의 별칭을 허용한다. 우리가 만든 Math 모듈에 특별한 List가 있다고 가정해 보자.
- defmodule Math do alias Math.List, as: List end  이제 Math 모듈 안에서 List는 자동적으로 Math.List로 확장된다. 만약 본래의 List 모듈에 접근하고자 한다면, Elixir.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/06/17/elixir-alias-require-and-import-1321/" title="Elixir alias, require and import (#13/21)">Read More…</a>
-  </footer>
-</article>
-</li>
+ defmodule Math do alias Math.List, as: List end  이제 Math 모듈 안에서 List는 자동적으로 Math.List로 확장된다. 만약 본래의 List 모듈에 접근하고자 한다면, Elixir.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-16T00:00:00JST">Jun 16, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/06/16/elixir-processes-1121/">Elixir Processes (#11/21)</a></h2>
-  </header>
-
-  
-  <div class="summary">본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/16/elixir-processes-1121" class="link black dim">
+        Elixir Processes (#11/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
 자세한 내용은 원문을 참조해 주세요.
  elixir에서, 모든 코드는 프로세스 안에서 실행된다. 프로세스는 서로 분리되어 있고, 서로 동시에(concurrent) 실행되며, 메세지를 건네는 것을 통해 통신한다.
 프로세스는 elixir의 동시성 뿐만 아니라, 분산 된 구조와 결함 내구성(fault-tolerant) 역시 제공한다.
-elixir의 프로세스를 OS(운영체제)의 프로세스와 혼동하면 안된다. elixir의 프로세스는 메모리와 CPU에 있어 극단적으로 경량화되어 있다(다른 프로그래밍 언어의 쓰레드와 다르게). 이러한 이유로, 수백 수천의 프로세스가 동시에 수행되는 것이 일반적이다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/06/16/elixir-processes-1121/" title="Elixir Processes (#11/21)">Read More…</a>
-  </footer>
-</article>
-</li>
-      
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-15T00:00:00JST">Jun 15, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/06/15/elixir-enumerables-and-streams-1021/">Elixir Enumerables and Streams (#10/21)</a></h2>
-  </header>
-
-  
-  <div class="summary">본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
-자세한 내용은 원문을 참조해 주세요.
- Enumerables elixir는 열거가능한 자료구조(enumerables) 컨셉과 그들을 처리하기 위한 Enum 모듈을 제공한다. 우리는 이미 두 개의 열거가능한 자료구조(lists and maps)를 배웠다.
- iex&gt; Enum.map([1, 2, 3], fn x -&gt; x * 2 end) [2, 4, 6] iex&gt; Enum.map(%{1 =&gt; 2, 3 =&gt; 4}, fn {k, v} -&gt; k * v end) [2, 12]  Enum 모듈은 열거가능한 자료구조에서 transform(변형), sort(정렬), group, filter등의 처리를 통해 아이템을 얻을 수 있는 수많은 함수들을 제공한다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/06/15/elixir-enumerables-and-streams-1021/" title="Elixir Enumerables and Streams (#10/21)">Read More…</a>
-  </footer>
-</article>
-</li>
-      
-    </ul>
-
-    
-<nav>
-  <ul class="pager">
-
-    
-    <li><a href="/posts/page/6/">Previous</a></li>
-    
-
-    
-    <li><a href="/posts/page/8/">Next</a></li>
-    
-
-  </ul>
-</nav>
-
-
-
-  </div>
-  <div class="col-md-4">
-    
-<aside class="l-sidebar">
-
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">LATESTS</div>
+elixir의 프로세스를 OS(운영체제)의 프로세스와 혼동하면 안된다. elixir의 프로세스는 메모리와 CPU에 있어 극단적으로 경량화되어 있다(다른 프로그래밍 언어의 쓰레드와 다르게). 이러한 이유로, 수백 수천의 프로세스가 동시에 수행되는 것이 일반적이다.
     </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
-      
-      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
-      
-      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
-      
-      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
-      
-      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
-      
-      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
-      
-      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
-      
-    </div>
-  </section>
-
-  
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">CATEGORY</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
-      
-      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
-      
-      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
-      
-      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
-      
-      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
-      
-      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
-      
-      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
-      
-      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
-      
-      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
-      
-      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
-      
-    </div>
-  </section>
-  
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">TAG</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
-      
-      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
-      
-      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
-      
-      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
-      
-      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
-      
-      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
-      
-      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
-      
-      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
-      
-      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
-      
-      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
-      
-    </div>
-  </section>
-  
-
-</aside>
-
-
   </div>
 </div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/15/elixir-enumerables-and-streams-1021" class="link black dim">
+        Elixir Enumerables and Streams (#10/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ Enumerables elixir는 열거가능한 자료구조(enumerables) 컨셉과 그들을 처리하기 위한 Enum 모듈을 제공한다. 우리는 이미 두 개의 열거가능한 자료구조(lists and maps)를 배웠다.
+ iex&gt; Enum.map([1, 2, 3], fn x -&gt; x * 2 end) [2, 4, 6] iex&gt; Enum.map(%{1 =&gt; 2, 3 =&gt; 4}, fn {k, v} -&gt; k * v end) [2, 12]  Enum 모듈은 열거가능한 자료구조에서 transform(변형), sort(정렬), group, filter등의 처리를 통해 아이템을 얻을 수 있는 수많은 함수들을 제공한다.
+    </div>
+  </div>
+</div>
+</div>
+      
+    </section>
 
-      </div>
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="/posts/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+    <a href="/posts/page/6/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/6/">6</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="/posts/page/7/">7</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/8/">8</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/20/">20</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/posts/page/8/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="/posts/page/20/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+</article>
+
     </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jeidee.github.io/" >
+    &copy; 2018 Erlang &amp; Go
+  </a>
+    <div>
 
-    <footer class="l-footer">
-      <div class="container">
-        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
-        <aside>
-          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
-          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
-        </aside>
-      </div>
-    </footer>
 
-    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
   </body>
 </html>
-

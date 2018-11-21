@@ -1,147 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko-kr">
   <head>
     <meta charset="utf-8">
-<meta name="pinterest" content="nopin">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.31.1" />
-
-
-
-<link rel="canonical" href="https://jeidee.github.io/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/">
-
-
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <title>erlang eunit 테스트 파일 분리와 테스트 셋 - Erlang &amp; Go</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-<meta name="description" content="테스트 모듈 분리 eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.테스트 대상 모듈을 fib.erl 이라고 가정한다.-module(fib). -export([fib/1]). fib(0) -&amp;gt; 1; fib(1) -&amp;gt; 1; fib(N) when N &amp;gt; 1 -&amp;gt; fib(N-1) &#43; fib(N-2).  테스트 모듈은 fib_tests.erl 로 작성한다.-module(fib_tests). -include_lib(&amp;quot;eunit/include/eunit.hrl&amp;quot;). fib0_test() -&amp;gt; ?assert(fib:fib(0) =:= 1). fib1_test() -&amp;gt; ?assert(fib:fib(1) =:= 1). fib2_test() -&amp;gt; ?assert(fib:fib(2) =:= 2). fib3_test() -&amp;gt; ?">
+    <title>Erlang &amp; Go  | erlang eunit 테스트 파일 분리와 테스트 셋</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
 
-<meta property="og:title" content="erlang eunit 테스트 파일 분리와 테스트 셋 - Erlang &amp; Go">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://jeidee.github.io/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/">
-<meta property="og:image" content="https://jeidee.github.io/images/default.png">
-<meta property="og:site_name" content="Erlang &amp; Go">
-<meta property="og:description" content="테스트 모듈 분리 eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.테스트 대상 모듈을 fib.erl 이라고 가정한다.-module(fib). -export([fib/1]). fib(0) -&amp;gt; 1; fib(1) -&amp;gt; 1; fib(N) when N &amp;gt; 1 -&amp;gt; fib(N-1) &#43; fib(N-2).  테스트 모듈은 fib_tests.erl 로 작성한다.-module(fib_tests). -include_lib(&amp;quot;eunit/include/eunit.hrl&amp;quot;). fib0_test() -&amp;gt; ?assert(fib:fib(0) =:= 1). fib1_test() -&amp;gt; ?assert(fib:fib(1) =:= 1). fib2_test() -&amp;gt; ?assert(fib:fib(2) =:= 2). fib3_test() -&amp;gt; ?">
-<meta property="og:locale" content="ja_JP">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.51" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="Erlang &amp; Go">
-<meta name="twitter:url" content="https://jeidee.github.io/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/">
-<meta name="twitter:title" content="erlang eunit 테스트 파일 분리와 테스트 셋 - Erlang &amp; Go">
-<meta name="twitter:description" content="테스트 모듈 분리 eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.테스트 대상 모듈을 fib.erl 이라고 가정한다.-module(fib). -export([fib/1]). fib(0) -&amp;gt; 1; fib(1) -&amp;gt; 1; fib(N) when N &amp;gt; 1 -&amp;gt; fib(N-1) &#43; fib(N-2).  테스트 모듈은 fib_tests.erl 로 작성한다.-module(fib_tests). -include_lib(&amp;quot;eunit/include/eunit.hrl&amp;quot;). fib0_test() -&amp;gt; ?assert(fib:fib(0) =:= 1). fib1_test() -&amp;gt; ?assert(fib:fib(1) =:= 1). fib2_test() -&amp;gt; ?assert(fib:fib(2) =:= 2). fib3_test() -&amp;gt; ?">
-<meta name="twitter:image" content="https://jeidee.github.io/images/default.png">
+    
+    
+      <link href="/dist/css/app.e08a958ae3e530145318b6373195c765.css" rel="stylesheet">
+    
 
+    
 
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "NewsArticle",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id":"https://jeidee.github.io/"
-    },
-    "headline": "erlang eunit 테스트 파일 분리와 테스트 셋 - Erlang &amp; Go",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://jeidee.github.io/images/default.png",
-      "height": 800,
-      "width": 800
-    },
-    "datePublished": "2015-03-03T00:00:00JST",
-    "dateModified": "2015-03-03T00:00:00JST",
-    "author": {
-      "@type": "Person",
-      "name": "Erlang &amp; Go"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Erlang &amp; Go",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://jeidee.github.io/images/logo.png",
-        "width": 600,
-        "height": 60
-      }
-    },
-    "description": "테스트 모듈 분리 eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="erlang eunit 테스트 파일 분리와 테스트 셋" />
+<meta property="og:description" content="테스트 모듈 분리 eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.
 테스트 대상 모듈을 fib.erl 이라고 가정한다.
--module(fib). -export([fib/1]). fib(0) -&gt; 1; fib(1) -&gt; 1; fib(N) when N &gt; 1 -&gt; fib(N-1) + fib(N-2).  테스트 모듈은 fib_tests.erl 로 작성한다.
--module(fib_tests). -include_lib(&quot;eunit/include/eunit.hrl&quot;). fib0_test() -&gt; ?assert(fib:fib(0) =:= 1). fib1_test() -&gt; ?assert(fib:fib(1) =:= 1). fib2_test() -&gt; ?assert(fib:fib(2) =:= 2). fib3_test() -&gt; ?"
-  }
-</script>
+-module(fib). -export([fib/1]). fib(0) -&gt; 1; fib(1) -&gt; 1; fib(N) when N &gt; 1 -&gt; fib(N-1) &#43; fib(N-2).  테스트 모듈은 fib_tests.erl 로 작성한다.
+-module(fib_tests). -include_lib(&quot;eunit/include/eunit.hrl&quot;). fib0_test() -&gt; ?assert(fib:fib(0) =:= 1). fib1_test() -&gt; ?assert(fib:fib(1) =:= 1). fib2_test() -&gt; ?assert(fib:fib(2) =:= 2). fib3_test() -&gt; ?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jeidee.github.io/2015/03/03/erlang-eunit-ed858cec8aa4ed8ab8-ed8c8cec9dbc-ebb684eba6acec9980-ed858cec8aa4ed8ab8-ec858b/" /><meta property="article:published_time" content="2015-03-03T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2015-03-03T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="erlang eunit 테스트 파일 분리와 테스트 셋">
+<meta itemprop="description" content="테스트 모듈 분리 eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.
+테스트 대상 모듈을 fib.erl 이라고 가정한다.
+-module(fib). -export([fib/1]). fib(0) -&gt; 1; fib(1) -&gt; 1; fib(N) when N &gt; 1 -&gt; fib(N-1) &#43; fib(N-2).  테스트 모듈은 fib_tests.erl 로 작성한다.
+-module(fib_tests). -include_lib(&quot;eunit/include/eunit.hrl&quot;). fib0_test() -&gt; ?assert(fib:fib(0) =:= 1). fib1_test() -&gt; ?assert(fib:fib(1) =:= 1). fib2_test() -&gt; ?assert(fib:fib(2) =:= 2). fib3_test() -&gt; ?">
 
 
-    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
-    
+<meta itemprop="datePublished" content="2015-03-03T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-03-03T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="199">
+
+
+
+<meta itemprop="keywords" content="eunit," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="erlang eunit 테스트 파일 분리와 테스트 셋"/>
+<meta name="twitter:description" content="테스트 모듈 분리 eunit을 사용할 경우 테스트 대상 모듈에 테스트 코드를 추가할 수도 있고 다음과 같이 테스트 모듈을 분리할 수도 있다.
+테스트 대상 모듈을 fib.erl 이라고 가정한다.
+-module(fib). -export([fib/1]). fib(0) -&gt; 1; fib(1) -&gt; 1; fib(N) when N &gt; 1 -&gt; fib(N-1) &#43; fib(N-2).  테스트 모듈은 fib_tests.erl 로 작성한다.
+-module(fib_tests). -include_lib(&quot;eunit/include/eunit.hrl&quot;). fib0_test() -&gt; ?assert(fib:fib(0) =:= 1). fib1_test() -&gt; ?assert(fib:fib(1) =:= 1). fib2_test() -&gt; ?assert(fib:fib(2) =:= 2). fib3_test() -&gt; ?"/>
 
   </head>
 
-  <body>
-    
-    
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-110408557-1', 'auto');
-ga('send', 'pageview');
-</script>
+  <body class="ma0 avenir bg-near-white">
 
     
-
-    <header class="l-header">
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
-          </div>
-
-          
-
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <div class="container">
-        
-<div class="row">
-  <div class="col-md-8">
-
-    <nav class="p-crumb">
-      <ol class="breadcrumb">
-        <li><a href="https://jeidee.github.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-        
-        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://jeidee.github.io/posts/" itemprop="url"><span itemprop="title">posts</span></a></li>
-        
-        <li class="active">erlang eunit 테스트 파일 분리와 테스트 셋</li>
-      </ol>
-    </nav>
-
-    <article class="single">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-03-03T00:00:00JST">Mar 3, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-
-    <h1 class="title">erlang eunit 테스트 파일 분리와 테스트 셋</h1>
-  </header>
-
+   
   
 
-  <div class="article-body">
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jeidee.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Erlang &amp; Go
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3 ph0-l">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">erlang eunit 테스트 파일 분리와 테스트 셋</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-03-03T00:00:00Z">March 3, 2015</time>      
+      
+      
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
 
 <h2 id="테스트-모듈-분리">테스트 모듈 분리</h2>
 
@@ -237,48 +207,16 @@ fib\_test\_() -&gt;
 </code></pre>
 
 <p>이와 같은 예외가 발생했는지 확인해 주는 매크로가 바로 ?_assertException 매크로 이다.</p>
-</div>
-
-  <footer class="article-footer">
-    
-    
-    
-    <section class="bordered">
-      <header>
-        <div class="panel-title">CATEGORIES</div>
-      </header>
-      <div>
-        <ul class="p-terms">
-          
-          <li><a href="https://jeidee.github.io/categories/erlang/">erlang</a></li>
-          
-        </ul>
-      </div>
-    </section>
-    
-    
-    
-    <section class="bordered">
-      <header>
-        <div class="panel-title">TAGS</div>
-      </header>
-      <div>
-        <ul class="p-terms">
-          
-          <li><a href="https://jeidee.github.io/tags/eunit/">eunit</a></li>
-          
-        </ul>
-      </div>
-    </section>
-    
-    
-  </footer>
-
-</article>
-
-
-    <div id="disqus_thread"></div>
-<script>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/eunit" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">eunit</a>
+   </li>
+  
+</ul>
+<div class="mt6">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
@@ -297,124 +235,52 @@ fib\_test\_() -&gt;
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-  </div>
-
-  <div class="col-md-4">
-    
-<aside class="l-sidebar">
-
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">LATESTS</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
-      
-      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
-      
-      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
-      
-      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
-      
-      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
-      
-      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
-      
-      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
-      
-    </div>
-  </section>
-
-  
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">CATEGORY</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
-      
-      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
-      
-      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
-      
-      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
-      
-      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
-      
-      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
-      
-      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
-      
-      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
-      
-      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
-      
-      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
-      
-    </div>
-  </section>
-  
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">TAG</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
-      
-      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
-      
-      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
-      
-      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
-      
-      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
-      
-      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
-      
-      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
-      
-      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
-      
-      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
-      
-      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
-      
-    </div>
-  </section>
-  
-
-</aside>
-
-
-  </div>
-</div>
-
       </div>
     </main>
 
-    <footer class="l-footer">
-      <div class="container">
-        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
-        <aside>
-          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
-          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
-        </aside>
-      </div>
-    </footer>
+    <aside class="w-30-l mt6-l">
 
-    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/2015/02/24/erlang-eunit/">erlang eunit 기초</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jeidee.github.io/" >
+    &copy; 2018 Erlang &amp; Go
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
   </body>
 </html>
-

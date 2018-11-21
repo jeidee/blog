@@ -1,150 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko-kr">
   <head>
     <meta charset="utf-8">
-<meta name="pinterest" content="nopin">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.31.1" />
-
-
-
-<link rel="canonical" href="https://jeidee.github.io/2015/06/11/elixir-pattern-matching-421/">
-
-
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <title>Elixir Pattern matching (#4/21) - Erlang &amp; Go</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-<meta name="description" content="본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.자세한 내용은 원문을 참조해 주세요. 이번 챕터에서는 = 연산자가 매치 연산자로 어떻게 사용되는지와 자료구조안에서 패턴매치가 어떻게 이뤄지는지 살펴볼 것이다. 마지막으로 핀 연산자(^)를 알아본다.매치 연산자 elixir에서 변수에 값을 할당하기 위해 = 연산자를 여러번 사용했다. iex&amp;gt; x = 1 1 iex&amp;gt; x 1  c/c&#43;&#43;에서 = 연산자는 대입연산자(또는 할당연산자)라고 불리우지만 erlang과 elixir에서는 매치 연산자라고 부른다.왜 그런지 살펴보자. iex&amp;gt; 1 = x 1 iex&amp;gt; 2 = x ** (MatchError) no match of right hand side value: 1  1 = x 표현식이 유효함을 주목한다.">
+    <title>Erlang &amp; Go  | Elixir Pattern matching (#4/21)</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
 
-<meta property="og:title" content="Elixir Pattern matching (#4/21) - Erlang &amp; Go">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://jeidee.github.io/2015/06/11/elixir-pattern-matching-421/">
-<meta property="og:image" content="https://jeidee.github.io/images/default.png">
-<meta property="og:site_name" content="Erlang &amp; Go">
-<meta property="og:description" content="본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.자세한 내용은 원문을 참조해 주세요. 이번 챕터에서는 = 연산자가 매치 연산자로 어떻게 사용되는지와 자료구조안에서 패턴매치가 어떻게 이뤄지는지 살펴볼 것이다. 마지막으로 핀 연산자(^)를 알아본다.매치 연산자 elixir에서 변수에 값을 할당하기 위해 = 연산자를 여러번 사용했다. iex&amp;gt; x = 1 1 iex&amp;gt; x 1  c/c&#43;&#43;에서 = 연산자는 대입연산자(또는 할당연산자)라고 불리우지만 erlang과 elixir에서는 매치 연산자라고 부른다.왜 그런지 살펴보자. iex&amp;gt; 1 = x 1 iex&amp;gt; 2 = x ** (MatchError) no match of right hand side value: 1  1 = x 표현식이 유효함을 주목한다.">
-<meta property="og:locale" content="ja_JP">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.51" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="Erlang &amp; Go">
-<meta name="twitter:url" content="https://jeidee.github.io/2015/06/11/elixir-pattern-matching-421/">
-<meta name="twitter:title" content="Elixir Pattern matching (#4/21) - Erlang &amp; Go">
-<meta name="twitter:description" content="본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.자세한 내용은 원문을 참조해 주세요. 이번 챕터에서는 = 연산자가 매치 연산자로 어떻게 사용되는지와 자료구조안에서 패턴매치가 어떻게 이뤄지는지 살펴볼 것이다. 마지막으로 핀 연산자(^)를 알아본다.매치 연산자 elixir에서 변수에 값을 할당하기 위해 = 연산자를 여러번 사용했다. iex&amp;gt; x = 1 1 iex&amp;gt; x 1  c/c&#43;&#43;에서 = 연산자는 대입연산자(또는 할당연산자)라고 불리우지만 erlang과 elixir에서는 매치 연산자라고 부른다.왜 그런지 살펴보자. iex&amp;gt; 1 = x 1 iex&amp;gt; 2 = x ** (MatchError) no match of right hand side value: 1  1 = x 표현식이 유효함을 주목한다.">
-<meta name="twitter:image" content="https://jeidee.github.io/images/default.png">
+    
+    
+      <link href="/dist/css/app.e08a958ae3e530145318b6373195c765.css" rel="stylesheet">
+    
 
+    
 
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "NewsArticle",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id":"https://jeidee.github.io/"
-    },
-    "headline": "Elixir Pattern matching (#4/21) - Erlang &amp; Go",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://jeidee.github.io/images/default.png",
-      "height": 800,
-      "width": 800
-    },
-    "datePublished": "2015-06-11T00:00:00JST",
-    "dateModified": "2015-06-11T00:00:00JST",
-    "author": {
-      "@type": "Person",
-      "name": "Erlang &amp; Go"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Erlang &amp; Go",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://jeidee.github.io/images/logo.png",
-        "width": 600,
-        "height": 60
-      }
-    },
-    "description": "본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Elixir Pattern matching (#4/21)" />
+<meta property="og:description" content="본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
 자세한 내용은 원문을 참조해 주세요.
  이번 챕터에서는 = 연산자가 매치 연산자로 어떻게 사용되는지와 자료구조안에서 패턴매치가 어떻게 이뤄지는지 살펴볼 것이다. 마지막으로 핀 연산자(^)를 알아본다.
 매치 연산자 elixir에서 변수에 값을 할당하기 위해 = 연산자를 여러번 사용했다.
- iex&gt; x = 1 1 iex&gt; x 1  c/c++에서 = 연산자는 대입연산자(또는 할당연산자)라고 불리우지만 erlang과 elixir에서는 매치 연산자라고 부른다.
+ iex&gt; x = 1 1 iex&gt; x 1  c/c&#43;&#43;에서 = 연산자는 대입연산자(또는 할당연산자)라고 불리우지만 erlang과 elixir에서는 매치 연산자라고 부른다.
 왜 그런지 살펴보자.
- iex&gt; 1 = x 1 iex&gt; 2 = x ** (MatchError) no match of right hand side value: 1  1 = x 표현식이 유효함을 주목한다."
-  }
-</script>
+ iex&gt; 1 = x 1 iex&gt; 2 = x ** (MatchError) no match of right hand side value: 1  1 = x 표현식이 유효함을 주목한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jeidee.github.io/2015/06/11/elixir-pattern-matching-421/" /><meta property="article:published_time" content="2015-06-11T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2015-06-11T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="Elixir Pattern matching (#4/21)">
+<meta itemprop="description" content="본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 이번 챕터에서는 = 연산자가 매치 연산자로 어떻게 사용되는지와 자료구조안에서 패턴매치가 어떻게 이뤄지는지 살펴볼 것이다. 마지막으로 핀 연산자(^)를 알아본다.
+매치 연산자 elixir에서 변수에 값을 할당하기 위해 = 연산자를 여러번 사용했다.
+ iex&gt; x = 1 1 iex&gt; x 1  c/c&#43;&#43;에서 = 연산자는 대입연산자(또는 할당연산자)라고 불리우지만 erlang과 elixir에서는 매치 연산자라고 부른다.
+왜 그런지 살펴보자.
+ iex&gt; 1 = x 1 iex&gt; 2 = x ** (MatchError) no match of right hand side value: 1  1 = x 표현식이 유효함을 주목한다.">
 
 
-    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
-    
+<meta itemprop="datePublished" content="2015-06-11T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-06-11T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="693">
+
+
+
+<meta itemprop="keywords" content="tutorial," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Elixir Pattern matching (#4/21)"/>
+<meta name="twitter:description" content="본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+자세한 내용은 원문을 참조해 주세요.
+ 이번 챕터에서는 = 연산자가 매치 연산자로 어떻게 사용되는지와 자료구조안에서 패턴매치가 어떻게 이뤄지는지 살펴볼 것이다. 마지막으로 핀 연산자(^)를 알아본다.
+매치 연산자 elixir에서 변수에 값을 할당하기 위해 = 연산자를 여러번 사용했다.
+ iex&gt; x = 1 1 iex&gt; x 1  c/c&#43;&#43;에서 = 연산자는 대입연산자(또는 할당연산자)라고 불리우지만 erlang과 elixir에서는 매치 연산자라고 부른다.
+왜 그런지 살펴보자.
+ iex&gt; 1 = x 1 iex&gt; 2 = x ** (MatchError) no match of right hand side value: 1  1 = x 표현식이 유효함을 주목한다."/>
 
   </head>
 
-  <body>
-    
-    
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-110408557-1', 'auto');
-ga('send', 'pageview');
-</script>
+  <body class="ma0 avenir bg-near-white">
 
     
-
-    <header class="l-header">
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
-          </div>
-
-          
-
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <div class="container">
-        
-<div class="row">
-  <div class="col-md-8">
-
-    <nav class="p-crumb">
-      <ol class="breadcrumb">
-        <li><a href="https://jeidee.github.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-        
-        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://jeidee.github.io/posts/" itemprop="url"><span itemprop="title">posts</span></a></li>
-        
-        <li class="active">Elixir Pattern matching (#4/21)</li>
-      </ol>
-    </nav>
-
-    <article class="single">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-11T00:00:00JST">Jun 11, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-
-    <h1 class="title">Elixir Pattern matching (#4/21)</h1>
-  </header>
-
+   
   
 
-  <div class="article-body">
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jeidee.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Erlang &amp; Go
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3 ph0-l">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Elixir Pattern matching (#4/21)</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-06-11T00:00:00Z">June 11, 2015</time>      
+      
+      
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
 
 <blockquote>
 <p>본 문서는 elixir-lang.org의 <a href="http://elixir-lang.org/getting-started/introduction.html">Getting Started</a>문서의 한글 번역본입니다.</p>
@@ -404,48 +380,16 @@ iex&gt; length([1,[2],3]) = 3
 <ul>
 <li><a href="http://elixir-lang.org/getting-started/pattern-matching.html">Elixir Pattern matching</a></li>
 </ul>
-</div>
-
-  <footer class="article-footer">
-    
-    
-    
-    <section class="bordered">
-      <header>
-        <div class="panel-title">CATEGORIES</div>
-      </header>
-      <div>
-        <ul class="p-terms">
-          
-          <li><a href="https://jeidee.github.io/categories/elixir/">elixir</a></li>
-          
-        </ul>
-      </div>
-    </section>
-    
-    
-    
-    <section class="bordered">
-      <header>
-        <div class="panel-title">TAGS</div>
-      </header>
-      <div>
-        <ul class="p-terms">
-          
-          <li><a href="https://jeidee.github.io/tags/tutorial/">tutorial</a></li>
-          
-        </ul>
-      </div>
-    </section>
-    
-    
-  </footer>
-
-</article>
-
-
-    <div id="disqus_thread"></div>
-<script>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/tutorial" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">tutorial</a>
+   </li>
+  
+</ul>
+<div class="mt6">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
@@ -464,124 +408,60 @@ iex&gt; length([1,[2],3]) = 3
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-  </div>
-
-  <div class="col-md-4">
-    
-<aside class="l-sidebar">
-
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">LATESTS</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
-      
-      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
-      
-      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
-      
-      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
-      
-      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
-      
-      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
-      
-      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
-      
-    </div>
-  </section>
-
-  
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">CATEGORY</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
-      
-      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
-      
-      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
-      
-      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
-      
-      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
-      
-      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
-      
-      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
-      
-      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
-      
-      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
-      
-      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
-      
-    </div>
-  </section>
-  
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">TAG</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
-      
-      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
-      
-      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
-      
-      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
-      
-      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
-      
-      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
-      
-      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
-      
-      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
-      
-      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
-      
-      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
-      
-    </div>
-  </section>
-  
-
-</aside>
-
-
-  </div>
-</div>
-
       </div>
     </main>
 
-    <footer class="l-footer">
-      <div class="container">
-        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
-        <aside>
-          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
-          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
-        </aside>
-      </div>
-    </footer>
+    <aside class="w-30-l mt6-l">
 
-    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/2015/06/11/elixir-case-cond-and-if-521/">Elixir case, cond and if (#5/21)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/2015/06/11/elixir-basic-operators/">Elixir Basic operators (#3/21)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/2015/06/10/elixir-basic-types/">Elixir Basic types (#2/21)</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jeidee.github.io/" >
+    &copy; 2018 Erlang &amp; Go
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
   </body>
 </html>
-

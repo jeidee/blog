@@ -1,246 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko-kr">
   <head>
     <meta charset="utf-8">
-<meta name="pinterest" content="nopin">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.31.1" />
-
-<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/posts/index.xml">
-
-<link rel="canonical" href="https://jeidee.github.io/posts/">
-
-
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <title>Posts - Erlang &amp; Go</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    <title>Erlang &amp; Go </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.51" />
     
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.e08a958ae3e530145318b6373195c765.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+      <link href="https://jeidee.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
+      <link href="https://jeidee.github.io/posts/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go" />
+    
+
+    <meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jeidee.github.io/posts/" />
+<meta property="og:updated_time" content="2015-08-26T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="Posts">
+<meta itemprop="description" content="">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content=""/>
 
   </head>
 
-  <body>
-    
-    
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-110408557-1', 'auto');
-ga('send', 'pageview');
-</script>
+  <body class="ma0 avenir bg-near-white">
 
     
 
-    <header class="l-header">
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
-          </div>
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jeidee.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Erlang &amp; Go
+    </a>
+    <div class="flex-l items-center">
+      
+      
 
-          
 
-        </div>
-      </nav>
-    </header>
 
-    <main>
-      <div class="container">
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          Posts
+        </h1>
         
-<div class="row">
-  <div class="col-md-8">
-
-    
-    <header class="page-header">
-      <h1>Posts</h1>
-    </header>
-    
-
-    <ul class="p-articles">
-      
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-08-26T00:00:00JST">Aug 26, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/08/26/go-containterlisteba5bc-ec82acec9aa9ed959c-concurrent-queue/">go containter/list를 사용한 Concurrent Queue</a></h2>
+      </div>
+    </div>
   </header>
 
-  
-  <div class="summary">참고자료  Stack and Queue in golang   container/list와 sync.Mutex를 사용한 쓰레드(고루틴)에 안전한 Queue는 다음과 같이 만들 수 있다.
- package queue import ( &quot;container/list&quot; &quot;sync&quot; ) type Queue struct { l *list.List lock sync.Mutex } func NewQueue() *Queue { return &amp;Queue{list.New(), sync.Mutex{}} } func (q *Queue) Push(i interface{}) { q.lock.Lock() defer q.lock.Unlock() q.l.PushBack(i) } func (q *Queue) Pop() (interface{}, bool) { q.lock.Lock() defer q.lock.Unlock() if q.l.Len() == 0 { return nil, false } v := q.</div>
 
-  <footer>
-    <a href="https://jeidee.github.io/2015/08/26/go-containterlisteba5bc-ec82acec9aa9ed959c-concurrent-queue/" title="go containter/list를 사용한 Concurrent Queue">Read More…</a>
-  </footer>
-</article>
-</li>
+    <main class="pb7" role="main">
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-08-25T00:00:00JST">Aug 25, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
+  <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></main>
+    <section class="flex-ns flex-wrap justify-around mt5">
       
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/08/25/erlang-ec8998ec9790ec849c-observereba5bc-ec82acec9aa9ed95b4-ec9b90eab2a9-eb85b8eb939c-eca091ec868d/">erlang 쉘에서 observer를 사용해 원격 노드 접속</a></h2>
-  </header>
-
-  
-  <div class="summary">먼저 A와 B, 두 노드가 있고, A에서 B노드에 연결한다고 가정한다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/26/go-containterlisteba5bc-ec82acec9aa9ed959c-concurrent-queue" class="link black dim">
+        go containter/list를 사용한 Concurrent Queue
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      참고자료  Stack and Queue in golang   container/list와 sync.Mutex를 사용한 쓰레드(고루틴)에 안전한 Queue는 다음과 같이 만들 수 있다.
+ package queue import ( &quot;container/list&quot; &quot;sync&quot; ) type Queue struct { l *list.List lock sync.Mutex } func NewQueue() *Queue { return &amp;Queue{list.New(), sync.Mutex{}} } func (q *Queue) Push(i interface{}) { q.lock.Lock() defer q.lock.Unlock() q.l.PushBack(i) } func (q *Queue) Pop() (interface{}, bool) { q.lock.Lock() defer q.lock.Unlock() if q.l.Len() == 0 { return nil, false } v := q.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/25/erlang-ec8998ec9790ec849c-observereba5bc-ec82acec9aa9ed95b4-ec9b90eab2a9-eb85b8eb939c-eca091ec868d" class="link black dim">
+        erlang 쉘에서 observer를 사용해 원격 노드 접속
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      먼저 A와 B, 두 노드가 있고, A에서 B노드에 연결한다고 가정한다.
 두 노드를 연결하기 위해서는 다음 조건을 우선 만족시켜야 한다.
 1) short name을 사용하는 경우
  A와 B노드는 동일한 네트워크에 있고, 방화벽을 통하지 않는다.
  방화벽을 통해 접속할 경우 B노드의 다음 TCP포트(아래 예에서는 47242)가 Inbound 오픈되어 있어야 한다.
-   B&gt; net_adm:names(); {ok, [{&quot;ejabberd&quot;, 47242}, &amp;#8230;]}   A와 B노드의 erlang secretkey(cookie)는 동일해야 한다.   $ erl -sname A@node1 -setcookie secret $ erl -sname B@node2 -setcookie secret A&gt; erlang:get_cookie().</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/08/25/erlang-ec8998ec9790ec849c-observereba5bc-ec82acec9aa9ed95b4-ec9b90eab2a9-eb85b8eb939c-eca091ec868d/" title="erlang 쉘에서 observer를 사용해 원격 노드 접속">Read More…</a>
-  </footer>
-</article>
-</li>
+   B&gt; net_adm:names(); {ok, [{&quot;ejabberd&quot;, 47242}, &amp;#8230;]}   A와 B노드의 erlang secretkey(cookie)는 동일해야 한다.   $ erl -sname A@node1 -setcookie secret $ erl -sname B@node2 -setcookie secret A&gt; erlang:get_cookie().
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-08-25T00:00:00JST">Aug 25, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/08/25/go-json-eb9494ecbd94eb8d94eba5bc-ec82acec9aa9ed95b4ec849c-tcp-ec8aa4ed8ab8eba6bcec9cbceba19c-ec8898ec8ba0ed959c-json-object-ecb298eba6aced9598/">go json 디코더를 사용해서 TCP 스트림으로 수신한 json object 처리하기</a></h2>
-  </header>
-
-  
-  <div class="summary">우선 net.Conn 인스턴스(c.conn은 net.Conn 인스턴스)를 사용해서 json 디코더를 생성한다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/25/go-json-eb9494ecbd94eb8d94eba5bc-ec82acec9aa9ed95b4ec849c-tcp-ec8aa4ed8ab8eba6bcec9cbceba19c-ec8898ec8ba0ed959c-json-object-ecb298eba6aced9598" class="link black dim">
+        go json 디코더를 사용해서 TCP 스트림으로 수신한 json object 처리하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      우선 net.Conn 인스턴스(c.conn은 net.Conn 인스턴스)를 사용해서 json 디코더를 생성한다.
  d := json.NewDecoder(c.conn)  수신받은 데이터를 json 오브젝트로 디코딩한다.
  var packet map[string]interface{} err := d.Decode(&amp;packet)  json 오브젝트를 특정 구조체 데이터로 캐스팅한다.
 그 전에 송수신 하는 json 오브젝트에 id필드가 있다고 가정하며,
 id필드 값에 따라 다른 구조체로 캐스팅하도록 한다.
- type ReqLoginPacket struct { Id int \`json:&quot;id&quot;\` UserId string \`json:&quot;user_id&quot;\` } pid := int(p[&quot;id&quot;].(float64)) switch pid { case 1: reqPacket := new(ReqLoginPacket) MapToObject(packet, reqPacket) &amp;#8230; }  MapToObject/2 함수는 다음과 같다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/08/25/go-json-eb9494ecbd94eb8d94eba5bc-ec82acec9aa9ed95b4ec849c-tcp-ec8aa4ed8ab8eba6bcec9cbceba19c-ec8898ec8ba0ed959c-json-object-ecb298eba6aced9598/" title="go json 디코더를 사용해서 TCP 스트림으로 수신한 json object 처리하기">Read More…</a>
-  </footer>
-</article>
-</li>
+ type ReqLoginPacket struct { Id int \`json:&quot;id&quot;\` UserId string \`json:&quot;user_id&quot;\` } pid := int(p[&quot;id&quot;].(float64)) switch pid { case 1: reqPacket := new(ReqLoginPacket) MapToObject(packet, reqPacket) &amp;#8230; }  MapToObject/2 함수는 다음과 같다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-08-19T00:00:00JST">Aug 19, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/19/go-tcp-json-decoder-ec82acec9aa9ed9598eab8b0" class="link black dim">
+        go tcp &#43; json decoder 사용하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음 코드는 클라이언트에서 보낸 json 패킷을 디코딩하는 간단한 tcp 서버 예제코드이다.
+ package main import ( &quot;encoding/json&quot; &quot;log&quot; &quot;net&quot; ) func main() { ln, err := net.Listen(&quot;tcp&quot;, &quot;:9080&quot;) if err != nil { log.Fatal(err) return } defer ln.Close() for { c, err := ln.Accept() if err != nil { log.Fatalln(&quot;Can't accept new client!&quot;, err) return } defer c.Close() go requestHandler(c) } } type Packet struct { Id int16 \`json:&quot;id&quot;\` Data interface{} \`json:&quot;data&quot;\` } func requestHandler(c net.
+    </div>
+  </div>
+</div>
+</div>
       
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/08/19/go-tcp-json-decoder-ec82acec9aa9ed9598eab8b0/">go tcp &#43; json decoder 사용하기</a></h2>
-  </header>
-
-  
-  <div class="summary">다음 코드는 클라이언트에서 보낸 json 패킷을 디코딩하는 간단한 tcp 서버 예제코드이다.
- package main import ( &quot;encoding/json&quot; &quot;log&quot; &quot;net&quot; ) func main() { ln, err := net.Listen(&quot;tcp&quot;, &quot;:9080&quot;) if err != nil { log.Fatal(err) return } defer ln.Close() for { c, err := ln.Accept() if err != nil { log.Fatalln(&quot;Can't accept new client!&quot;, err) return } defer c.Close() go requestHandler(c) } } type Packet struct { Id int16 \`json:&quot;id&quot;\` Data interface{} \`json:&quot;data&quot;\` } func requestHandler(c net.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/08/19/go-tcp-json-decoder-ec82acec9aa9ed9598eab8b0/" title="go tcp &#43; json decoder 사용하기">Read More…</a>
-  </footer>
-</article>
-</li>
-      
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-08-19T00:00:00JST">Aug 19, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/08/19/go-gtk-ec84a4ecb998/">go-gtk 설치</a></h2>
-  </header>
-
-  
-  <div class="summary">golang을 사용해서 gui 프로그래밍을 하려면 go-gtk를 설치하면 된다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/08/19/go-gtk-ec84a4ecb998" class="link black dim">
+        go-gtk 설치
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      golang을 사용해서 gui 프로그래밍을 하려면 go-gtk를 설치하면 된다.
 go-gtk는 libgtk+ 2.0을 필요로 하는데,
 ubuntu에서 libgtk+ 2.0은 다음과 같이 설치할 수 있다.
- $ sudo apt-get install libgtk2.0-dev $ go get github.com/mattn/go-gtk/gtk  </div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/08/19/go-gtk-ec84a4ecb998/" title="go-gtk 설치">Read More…</a>
-  </footer>
-</article>
-</li>
+ $ sudo apt-get install libgtk2.0-dev $ go get github.com/mattn/go-gtk/gtk  
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-07-24T00:00:00JST">Jul 24, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/07/24/erlang-mumble-server-maunder/">erlang mumble server &amp;#8211; maunder</a></h2>
-  </header>
-
-  
-  <div class="summary">erlang으로 구현된 mumble서버 중에 maunder라고 있다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/07/24/erlang-mumble-server-maunder" class="link black dim">
+        erlang mumble server &amp;#8211; maunder
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang으로 구현된 mumble서버 중에 maunder라고 있다.
 2년전 커밋이 마지막이다.
 erlang 17버전에서 빌드하고 실행하면 application:start()할 때 오류가 발생한다.
 원인은 erlang 17버전에서 public_key application이 asn1을 의존하기 때문인데,
 maunder.erl 소스를 다음과 같이 수정하고 다시 빌드하면 문제가 해결된다.
  %% @spec start() -&gt; ok %% @doc Start the maunder server. start() -&gt; ensure_started(sasl), ensure_started(crypto), ensure_started(asn1), ensure\_started(public\_key), ensure_started(ssl), application:start(maunder).  기동시 eaddrinuse 관련 에러가 발생하는 경우,
 maunder_app.erl의 DEF_PORT값(기본값은 8080)을 변경한 후 다시 빌드하면 된다.
-매번 포트를 변경할 때마다 재빌드하는게 번거로울 경우 빌드후 생성되는 ebin/maunder.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/07/24/erlang-mumble-server-maunder/" title="erlang mumble server &amp;#8211; maunder">Read More…</a>
-  </footer>
-</article>
-</li>
+매번 포트를 변경할 때마다 재빌드하는게 번거로울 경우 빌드후 생성되는 ebin/maunder.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-07-23T00:00:00JST">Jul 23, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/07/23/ejabberd-ec9ab0ebb684ed88acec9790ec849c-fqdnec9d84-ec82acec9aa9ed95b4-long-node-nameec9d84-ec84a4eca095ed95a0-eb958c-cant-set-long-node-name-ec9790/">ejabberd 우분투에서 FQDN을 사용해 long node name을 설정할 때, Can&amp;#8217;t set long node name 에러 발생하는 경우</a></h2>
-  </header>
-
-  
-  <div class="summary">제목과 같이 우분투에서 long node name을 사용해 ejabberd(erlang) 노드를 사용할 경우,
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/07/23/ejabberd-ec9ab0ebb684ed88acec9790ec849c-fqdnec9d84-ec82acec9aa9ed95b4-long-node-nameec9d84-ec84a4eca095ed95a0-eb958c-cant-set-long-node-name-ec9790" class="link black dim">
+        ejabberd 우분투에서 FQDN을 사용해 long node name을 설정할 때, Can&amp;#8217;t set long node name 에러 발생하는 경우
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      제목과 같이 우분투에서 long node name을 사용해 ejabberd(erlang) 노드를 사용할 경우,
 ejabberdctl의 status, debug등의 명령을 실행하면 다음과 같은 에러가 발생하는 경우가 있다.
  &quot;Can't set long node name!nPlease check your configurationn&quot;,[]}  예를 들어, 노드명을 ejabberd@hello.world.com 으로 사용할 경우 다음과 같이 hostname을 확인해 본다.
  $ sudo hostname  hostname이 hello.world.com으로 설정되어 있어야 한다.
 만약, 제대로 설정되어 있지 않은 경우 다음과 같이 설정한다.
- $ sudo hostname hello.world.com  영구적으로 사용하고자 한다면 /etc/hostname의 값도 수정해야 한다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/07/23/ejabberd-ec9ab0ebb684ed88acec9790ec849c-fqdnec9d84-ec82acec9aa9ed95b4-long-node-nameec9d84-ec84a4eca095ed95a0-eb958c-cant-set-long-node-name-ec9790/" title="ejabberd 우분투에서 FQDN을 사용해 long node name을 설정할 때, Can&amp;#8217;t set long node name 에러 발생하는 경우">Read More…</a>
-  </footer>
-</article>
-</li>
+ $ sudo hostname hello.world.com  영구적으로 사용하고자 한다면 /etc/hostname의 값도 수정해야 한다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-25T00:00:00JST">Jun 25, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/06/25/ejabberdec9980-riak-ec97b0eb8f99/">ejabberd와 riak 연동</a></h2>
-  </header>
-
-  
-  <div class="summary">ejabberd 설치 ejabberd에 riak를 활성화해서 설치하는 방법은 이전 포스트를 참고해서 설치한 후, 공식 문서를 참고해서 설정한다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/25/ejabberdec9980-riak-ec97b0eb8f99" class="link black dim">
+        ejabberd와 riak 연동
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd 설치 ejabberd에 riak를 활성화해서 설치하는 방법은 이전 포스트를 참고해서 설치한 후, 공식 문서를 참고해서 설정한다.
 riak 설치 riak 설치방법은 여러 방법이 있지만 ubuntu에서 간단히 다음 방법을 사용해 설치한다.
  wget http://s3.amazonaws.com/downloads.basho.com/riak/2.1/2.1.1/ubuntu/precise/riak\_2.1.1-1\_amd64.deb sudo dpkg -i riak\_2.1.1-1\_amd64.deb  riak 주요 파일 위치 위와 같이 설치되면 다음의 디렉토리에 주요 파일들이 위치하게 된다.
 1) 실행파일
@@ -255,196 +245,295 @@ riak 설치 riak 설치방법은 여러 방법이 있지만 ubuntu에서 간단�
 /var/log/riak/error.log
 /var/log/riak/erlang.log
 /var/log/riak/run_erl.log
-riak 실행 확인 설치가 완료되면 다음과 같이 riak를 시작한다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/06/25/ejabberdec9980-riak-ec97b0eb8f99/" title="ejabberd와 riak 연동">Read More…</a>
-  </footer>
-</article>
-</li>
+riak 실행 확인 설치가 완료되면 다음과 같이 riak를 시작한다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-21T00:00:00JST">Jun 21, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/06/21/elixir-where-to-go-next-2121/">Elixir Where to go next (#21/21)</a></h2>
-  </header>
-
-  
-  <div class="summary">본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/21/elixir-where-to-go-next-2121" class="link black dim">
+        Elixir Where to go next (#21/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
 자세한 내용은 원문을 참조해 주세요.
  더 배우고 싶은가? 그럼 계속 읽어보자.
 Build your first Elixir project 우리의 첫 프로젝트를 시작하기 위해, elixir는 Mix라는 빌드 툴을 제공한다. 우리는 다음과 같이 간단하게 첫 프로젝트를 만들 수 있다.
- mix new path/to/new/project  위의 과정을 통해 우리는 슈퍼비전 트리, 설정, 테스트등을 갖는 elixir 응용프로그램을 만들 수 있다. 다음 가이드를 통해 우리는 분산된 노드에 분산된 key-value 저장소를 갖는 응용프로그램을 만드는 방법을 배울 수 있다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/06/21/elixir-where-to-go-next-2121/" title="Elixir Where to go next (#21/21)">Read More…</a>
-  </footer>
-</article>
-</li>
+ mix new path/to/new/project  위의 과정을 통해 우리는 슈퍼비전 트리, 설정, 테스트등을 갖는 elixir 응용프로그램을 만들 수 있다. 다음 가이드를 통해 우리는 분산된 노드에 분산된 key-value 저장소를 갖는 응용프로그램을 만드는 방법을 배울 수 있다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-06-19T00:00:00JST">Jun 19, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/06/19/elixir-sigils-1821/">Elixir Sigils (#18/21)</a></h2>
-  </header>
-
-  
-  <div class="summary">본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/06/19/elixir-sigils-1821" class="link black dim">
+        Elixir Sigils (#18/21)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      본 문서는 elixir-lang.org의 Getting Started문서의 한글 번역본입니다.
 자세한 내용은 원문을 참조해 주세요.
  우리는 이미 elixir의 문자열과 문자 리스트를 배웠다. 하지만, 언어에 있어 텍스트의 표현을 위한 구조의 겉면만 다루었을 뿐이다. atom을 예로 들면, 대부분 :atom 형식으로 표현되는 식이다.
 elixir의 목표 중 하나는 확장성이다: elixir를 사용하면 개발자가 어떤 도메인에도 꼭 맞도록 언어를 확장할 수 있다. 개발자나, 회사, 또는 커뮤티니들이 그들과 관련된 도메인안에서 언어를 확장할 수 있도록 만들어졌다는 말이다.
-이번 챕터에서 우리는, 텍스트 처리에 사용하는 매커니즘 중 하나인 sigil &#8211; $foo에서 $와 같은 기호에 대해서 알아볼 것이다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/06/19/elixir-sigils-1821/" title="Elixir Sigils (#18/21)">Read More…</a>
-  </footer>
-</article>
-</li>
-      
-    </ul>
-
-    
-<nav>
-  <ul class="pager">
-
-    
-    <li><a href="/posts/page/5/">Previous</a></li>
-    
-
-    
-    <li><a href="/posts/page/7/">Next</a></li>
-    
-
-  </ul>
-</nav>
-
-
-
-  </div>
-  <div class="col-md-4">
-    
-<aside class="l-sidebar">
-
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">LATESTS</div>
+이번 챕터에서 우리는, 텍스트 처리에 사용하는 매커니즘 중 하나인 sigil &#8211; $foo에서 $와 같은 기호에 대해서 알아볼 것이다.
     </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
-      
-      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
-      
-      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
-      
-      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
-      
-      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
-      
-      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
-      
-      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
-      
-    </div>
-  </section>
-
-  
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">CATEGORY</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
-      
-      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
-      
-      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
-      
-      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
-      
-      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
-      
-      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
-      
-      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
-      
-      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
-      
-      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
-      
-      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
-      
-    </div>
-  </section>
-  
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">TAG</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
-      
-      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
-      
-      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
-      
-      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
-      
-      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
-      
-      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
-      
-      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
-      
-      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
-      
-      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
-      
-      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
-      
-    </div>
-  </section>
-  
-
-</aside>
-
-
   </div>
 </div>
+</div>
+      
+    </section>
 
-      </div>
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="/posts/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+    <a href="/posts/page/5/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/5/">5</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="/posts/page/6/">6</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/7/">7</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/20/">20</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/posts/page/7/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="/posts/page/20/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+</article>
+
     </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jeidee.github.io/" >
+    &copy; 2018 Erlang &amp; Go
+  </a>
+    <div>
 
-    <footer class="l-footer">
-      <div class="container">
-        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
-        <aside>
-          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
-          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
-        </aside>
-      </div>
-    </footer>
 
-    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
   </body>
 </html>
-

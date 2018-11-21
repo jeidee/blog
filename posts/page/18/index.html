@@ -1,432 +1,519 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko-kr">
   <head>
     <meta charset="utf-8">
-<meta name="pinterest" content="nopin">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.31.1" />
-
-<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/posts/index.xml">
-
-<link rel="canonical" href="https://jeidee.github.io/posts/">
-
-
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <title>Posts - Erlang &amp; Go</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    <title>Erlang &amp; Go </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.51" />
     
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.e08a958ae3e530145318b6373195c765.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+      <link href="https://jeidee.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
+      <link href="https://jeidee.github.io/posts/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go" />
+    
+
+    <meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jeidee.github.io/posts/" />
+<meta property="og:updated_time" content="2015-01-21T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="Posts">
+<meta itemprop="description" content="">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content=""/>
 
   </head>
 
-  <body>
-    
-    
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-110408557-1', 'auto');
-ga('send', 'pageview');
-</script>
+  <body class="ma0 avenir bg-near-white">
 
     
 
-    <header class="l-header">
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
-          </div>
-
-          
-
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <div class="container">
-        
-<div class="row">
-  <div class="col-md-8">
-
-    
-    <header class="page-header">
-      <h1>Posts</h1>
-    </header>
-    
-
-    <ul class="p-articles">
-      
-      <li><article class="li">
   <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jeidee.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Erlang &amp; Go
+    </a>
+    <div class="flex-l items-center">
       
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-node-jsec9bb9ec9790ec849c-ejabberd-http-api-ed98b8ecb69ced9598eab8b0/">ejabberd node.js웹에서 ejabberd http api 호출하기</a></h2>
+      
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          Posts
+        </h1>
+        
+      </div>
+    </div>
   </header>
 
-  
-  <div class="summary">ejabberd rest api를 위한 http 커스텀 모듈 ejabberd 의 http 커스텀 모듈을 mod_http_api.erl로 만들었다고 가정한다.
+
+    <main class="pb7" role="main">
+      
+  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
+  <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></main>
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-node-jsec9bb9ec9790ec849c-ejabberd-http-api-ed98b8ecb69ced9598eab8b0" class="link black dim">
+        ejabberd node.js웹에서 ejabberd http api 호출하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd rest api를 위한 http 커스텀 모듈 ejabberd 의 http 커스텀 모듈을 mod_http_api.erl로 만들었다고 가정한다.
 (mod_http_api.erl 관련 내용은 이전의 Post에서 참조)
 http://localhost:5280/api/session/list URI를 호출했을 때 동작하는 API를 만들기 위해 mod_http_api.erl에 다음과 같이 추가한다.
 process([&lt;&lt;&quot;session&quot;&gt;&gt;, &lt;&lt;&quot;list&quot;&gt;&gt;], _Request) -&gt; session\_list(\_Request);  session_list/1 함수는 내부 함수이며 다음과 같다.
-session\_list(\_Request) -&gt; ?DEBUG(&quot;session\_list() \_Request is ~p~n&quot;, [_Request]), List = mod\_admin\_extra:connected\_users\_info(), Y = [X || {[X,\_,\_,\_,\_], \_, \_, \_, \_, \_, \_} &lt;- List], Y1 = {[{list, Y}]}, Result1 = jiffy:encode(Y1), Result2 = to_bin(&quot;~s&quot;, [Result1]), {200, ?</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/21/ejabberd-node-jsec9bb9ec9790ec849c-ejabberd-http-api-ed98b8ecb69ced9598eab8b0/" title="ejabberd node.js웹에서 ejabberd http api 호출하기">Read More…</a>
-  </footer>
-</article>
-</li>
+session\_list(\_Request) -&gt; ?DEBUG(&quot;session\_list() \_Request is ~p~n&quot;, [_Request]), List = mod\_admin\_extra:connected\_users\_info(), Y = [X || {[X,\_,\_,\_,\_], \_, \_, \_, \_, \_, \_} &lt;- List], Y1 = {[{list, Y}]}, Result1 = jiffy:encode(Y1), Result2 = to_bin(&quot;~s&quot;, [Result1]), {200, ?
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-roster-eca1b0ed9a8c-api-eba78ceb93a4eab8b0/">ejabberd roster 조회 api 만들기</a></h2>
-  </header>
-
-  
-  <div class="summary">process handler 추가 mod_http_api.erl을 작성했다고 가정한다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-roster-eca1b0ed9a8c-api-eba78ceb93a4eab8b0" class="link black dim">
+        ejabberd roster 조회 api 만들기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      process handler 추가 mod_http_api.erl을 작성했다고 가정한다.
 request handler에 다음과 같은 코드를 추가한다.
 process([&lt;&lt;&quot;friend&quot;&gt;&gt;, &lt;&lt;&quot;list&quot;&gt;&gt;], _Request) -&gt; try get\_friend\_list(_Request) catch throw: {Message, Result} -&gt; {200, ?OPTIONS\_HEADER, list\_to_json(Message, Result)}; \_:\_ -&gt; {200, ?OPTIONS\_HEADER, list\_to_json(&lt;&lt;&quot;An error occured during the requested work.&quot;&gt;&gt;, &lt;&lt;&quot;500&quot;&gt;&gt;)} end;  mod_http_api 모듈이 /api에 바인딩되어 있다면 위의 request 핸들러는 다음과 같은 url을 처리하게 된다.
- /api/friend/list  try&#8230;catch 블럭은 get_friend_list/1에서 예외가 발생할 경우 catch해 올바른 포맷의 결과를 클라이언트에 전달할 수 있도록 해준다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/21/ejabberd-roster-eca1b0ed9a8c-api-eba78ceb93a4eab8b0/" title="ejabberd roster 조회 api 만들기">Read More…</a>
-  </footer>
-</article>
-</li>
+ /api/friend/list  try&#8230;catch 블럭은 get_friend_list/1에서 예외가 발생할 경우 catch해 올바른 포맷의 결과를 클라이언트에 전달할 수 있도록 해준다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-eab095eca09ceba19c-ed8ab9eca095-ec9ca0eca080-presence-ec9785eb8db0ec9db4ed8ab8ed9598eab8b0/">ejabberd 강제로 특정 유저 presence 업데이트하기</a></h2>
-  </header>
-
-  
-  <div class="summary">ejabberdctl debug로 쉘을 시작한 후 ejabbrd_sm 모듈의 force_update_presence/1 함수를 사용해 특정 유저의 presence를 업데이트할 수 있다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-eab095eca09ceba19c-ed8ab9eca095-ec9ca0eca080-presence-ec9785eb8db0ec9db4ed8ab8ed9598eab8b0" class="link black dim">
+        ejabberd 강제로 특정 유저 presence 업데이트하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberdctl debug로 쉘을 시작한 후 ejabbrd_sm 모듈의 force_update_presence/1 함수를 사용해 특정 유저의 presence를 업데이트할 수 있다.
 (ejabberd@localhost)7&gt; US = {&lt;&lt;&quot;romeo&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;}. {&lt;&lt;&quot;romeo&quot;&gt;&gt;,&lt;&lt;&quot;localhost&quot;&gt;&gt;} (ejabberd@localhost)9&gt; ejabberd\_sm:force\_update_presence(US). ok  XMPP 클라이언트에서는 다음과 같이 presence stanza가 갱신되어 수신된다.
 (swift client의 Debug Console에서 확인)
- &lt;!&amp;#8211; IN &amp;#8211;&gt; &lt;presence from='romeo@localhost/2239860841418983868905790' to='romeo@localhost/2239860841418983868905790'&gt;&lt;status/&gt;&lt;c xmlns='http://jabber.org/protocol/caps' hash='sha-1' node='http://swift.im' ver='rs/tl9NCfXBpKoOYUy+JdBbPGDg='/&gt;&lt;/presence&gt;&lt;r xmlns='urn:xmpp:sm:2'/&gt;  </div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/21/ejabberd-eab095eca09ceba19c-ed8ab9eca095-ec9ca0eca080-presence-ec9785eb8db0ec9db4ed8ab8ed9598eab8b0/" title="ejabberd 강제로 특정 유저 presence 업데이트하기">Read More…</a>
-  </footer>
-</article>
-</li>
+ &lt;!&amp;#8211; IN &amp;#8211;&gt; &lt;presence from='romeo@localhost/2239860841418983868905790' to='romeo@localhost/2239860841418983868905790'&gt;&lt;status/&gt;&lt;c xmlns='http://jabber.org/protocol/caps' hash='sha-1' node='http://swift.im' ver='rs/tl9NCfXBpKoOYUy+JdBbPGDg='/&gt;&lt;/presence&gt;&lt;r xmlns='urn:xmpp:sm:2'/&gt;  
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-eb9494ebb284eab7b8-ebaaa8eb939ceba19c-ejabberd-core-ebaaa8eb9388-ed858cec8aa4ed8ab8ed95b4-ebb3b4eab8b0/">ejabberd 디버그 모드로 ejabberd  core 모듈 테스트해 보기</a></h2>
-  </header>
-
-  
-  <div class="summary">ejabberd를 실행한 상태에서 ejabberdctl의 debug 쉘을 사용해 실행 중인 ejabberd 노드에 접속해 core 모듈을 테스트해 볼 수 있다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-eb9494ebb284eab7b8-ebaaa8eb939ceba19c-ejabberd-core-ebaaa8eb9388-ed858cec8aa4ed8ab8ed95b4-ebb3b4eab8b0" class="link black dim">
+        ejabberd 디버그 모드로 ejabberd  core 모듈 테스트해 보기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd를 실행한 상태에서 ejabberdctl의 debug 쉘을 사용해 실행 중인 ejabberd 노드에 접속해 core 모듈을 테스트해 볼 수 있다.
 먼저 debug 쉘을 실행한다.
  ejabberdctl debug  ejabberd 모듈과 api를 확인하려면 ejabberd의 문서를 확인하거나 src 폴더의 .erl 소스파일을 열어 직접 확인해 볼 수 있다.
 여러 모듈 중에서 인증 모듈을 사용해 유저가 존재하는지 여부를 체크해 보자.
-(ejabberd@localhost)2&gt; ejabberd\_auth:is\_user_exists(&lt;&lt;&quot;test1&quot;&gt;&gt;, &lt;&lt;&quot;admin&quot;&gt;&gt;). false (ejabberd@localhost)3&gt; ejabberd\_auth:is\_user_exists(&lt;&lt;&quot;test&quot;&gt;&gt;, &lt;&lt;&quot;admin&quot;&gt;&gt;). true  위와 같이 테스트해 볼 수 있고, 실행 중인 ejabberd 노드의 상태를 모니터링하거나 dets/mnesia 테이블의 내용을 확인해 보기 위해 observer를 실행할 수 있다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/21/ejabberd-eb9494ebb284eab7b8-ebaaa8eb939ceba19c-ejabberd-core-ebaaa8eb9388-ed858cec8aa4ed8ab8ed95b4-ebb3b4eab8b0/" title="ejabberd 디버그 모드로 ejabberd  core 모듈 테스트해 보기">Read More…</a>
-  </footer>
-</article>
-</li>
+(ejabberd@localhost)2&gt; ejabberd\_auth:is\_user_exists(&lt;&lt;&quot;test1&quot;&gt;&gt;, &lt;&lt;&quot;admin&quot;&gt;&gt;). false (ejabberd@localhost)3&gt; ejabberd\_auth:is\_user_exists(&lt;&lt;&quot;test&quot;&gt;&gt;, &lt;&lt;&quot;admin&quot;&gt;&gt;). true  위와 같이 테스트해 볼 수 있고, 실행 중인 ejabberd 노드의 상태를 모니터링하거나 dets/mnesia 테이블의 내용을 확인해 보기 위해 observer를 실행할 수 있다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-ebaaa8eb9388-eab09cebb09c/">ejabberd 모듈 개발</a></h2>
-  </header>
-
-  
-  <div class="summary">ejabberd 모듈 개발 공식 문서 번역  원문  소개 ejabberd의 내부 모듈은 플러그인처럼 작동합니다. 각 모듈들은 &#8220;mod_&#8221;로 시작하는 erlang 모듈입니다. 만약 erlang을 모른다면 erlang 입문서를 먼저 보고 오세요.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-ebaaa8eb9388-eab09cebb09c" class="link black dim">
+        ejabberd 모듈 개발
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd 모듈 개발 공식 문서 번역  원문  소개 ejabberd의 내부 모듈은 플러그인처럼 작동합니다. 각 모듈들은 &#8220;mod_&#8221;로 시작하는 erlang 모듈입니다. 만약 erlang을 모른다면 erlang 입문서를 먼저 보고 오세요.
 모듈 API 모든 모듈은 &#8220;gen_mod&#8221; behavior를 사용해야 합니다.
 해당 behavior는 다음 API를 제공합니다:
-start(Host, Opts) -&gt; ok stop(Host) -&gt; ok * Host = string() * Opts = [{Name, Value}] * Name = Value = string()  Host는 모듈이 동작하는 가상호스트의 이름입니다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/21/ejabberd-ebaaa8eb9388-eab09cebb09c/" title="ejabberd 모듈 개발">Read More…</a>
-  </footer>
-</article>
-</li>
+start(Host, Opts) -&gt; ok stop(Host) -&gt; ok * Host = string() * Opts = [{Name, Value}] * Name = Value = string()  Host는 모듈이 동작하는 가상호스트의 이름입니다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-ebb0b1ec9785eab3bc-ebb3b5ec9b90/">ejabberd 백업과 복원</a></h2>
-  </header>
-
-  
-  <div class="summary">ejabberdctl의 admin 명령어를 사용해 백업과 복원을 수행할 수 있다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-ebb0b1ec9785eab3bc-ebb3b5ec9b90" class="link black dim">
+        ejabberd 백업과 복원
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberdctl의 admin 명령어를 사용해 백업과 복원을 수행할 수 있다.
 백업
  $ ejabberdctl backup 백업파일명  복원
- $ ejabberdctl restore 백업파일명  </div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/21/ejabberd-ebb0b1ec9785eab3bc-ebb3b5ec9b90/" title="ejabberd 백업과 복원">Read More…</a>
-  </footer>
-</article>
-</li>
+ $ ejabberdctl restore 백업파일명  
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-ec84a4ecb998ec9980-eab8b0ebb3b8-ec84a4eca095/">ejabberd 설치와 기본 설정</a></h2>
-  </header>
-
-  
-  <div class="summary">사전에 설치해야 하는 것 들  GNU Make GCC Libexpat 1.95 or higher Erlang/OTP R15B or higher. Libyaml 0.1.4 or higher OpenSSL 0.9.8 or higher, for STARTTLS, SASL and SSL encryption. Zlib 1.2.3 or higher, for Stream Compression support (XEP-01383
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-ec84a4ecb998ec9980-eab8b0ebb3b8-ec84a4eca095" class="link black dim">
+        ejabberd 설치와 기본 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      사전에 설치해야 하는 것 들  GNU Make GCC Libexpat 1.95 or higher Erlang/OTP R15B or higher. Libyaml 0.1.4 or higher OpenSSL 0.9.8 or higher, for STARTTLS, SASL and SSL encryption. Zlib 1.2.3 or higher, for Stream Compression support (XEP-01383
 ). Optional.
  PAM library. Optional. For Pluggable Authentication Modules (PAM). See section 3.1.5.
- GNU Iconv 1.8 or higher, for the IRC Transport (mod irc). Optional. Not needed on</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/21/ejabberd-ec84a4ecb998ec9980-eab8b0ebb3b8-ec84a4eca095/" title="ejabberd 설치와 기본 설정">Read More…</a>
-  </footer>
-</article>
-</li>
+ GNU Iconv 1.8 or higher, for the IRC Transport (mod irc). Optional. Not needed on
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-ec99b8ebb680-ec9db8eca69d-ebaaa8eb9388/">ejabberd 외부 인증 모듈</a></h2>
-  </header>
-
-  
-  <div class="summary">ejabberd 외부 인증 모듈  참고문서  개요 외부 인증 스크립트는 erlang port driver API를 따릅니다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-ec99b8ebb680-ec9db8eca69d-ebaaa8eb9388" class="link black dim">
+        ejabberd 외부 인증 모듈
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd 외부 인증 모듈  참고문서  개요 외부 인증 스크립트는 erlang port driver API를 따릅니다.
 스크립트는 다음과 같은 일을 수행하는 무한 루프로 구성해야 합니다:
- stdin에서 AABBBBBB&#8230;.형식의 byte stream을 읽는다.  A: 데이터의 길이를 의미하는 2bytes 정수(네트워크 바이트 오더 사용) B: 다음과 같은 plain 텍스트 오퍼레이션을 포함  auth:User:Server:Password(username/password 검사) isuser:User:Server(유효한 user인지 검사) setpass:User:Server:Password(user의 암호 설정) tryregister:User:Server:Password(계정 등록 시도) removeuser:User:Server(계정 삭제) removeuser3:User:Server:Password(암호가 유효하면 계정 삭제)   stdout에 결과 출력: AABB  A: 다음 결과값에 대한 길이.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/21/ejabberd-ec99b8ebb680-ec9db8eca69d-ebaaa8eb9388/" title="ejabberd 외부 인증 모듈">Read More…</a>
-  </footer>
-</article>
-</li>
+ stdin에서 AABBBBBB&#8230;.형식의 byte stream을 읽는다.  A: 데이터의 길이를 의미하는 2bytes 정수(네트워크 바이트 오더 사용) B: 다음과 같은 plain 텍스트 오퍼레이션을 포함  auth:User:Server:Password(username/password 검사) isuser:User:Server(유효한 user인지 검사) setpass:User:Server:Password(user의 암호 설정) tryregister:User:Server:Password(계정 등록 시도) removeuser:User:Server(계정 삭제) removeuser3:User:Server:Password(암호가 유효하면 계정 삭제)   stdout에 결과 출력: AABB  A: 다음 결과값에 대한 길이.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberd-ec99b8ebb680-ec9db8eca69d-ebaaa8eb9388eab3bc-http-ecbba4ec8aa4ed8580-ebaaa8eb9388-ec97b0eb8f99/">ejabberd 외부 인증 모듈과 http 커스텀 모듈 연동</a></h2>
-  </header>
-
-  
-  <div class="summary">ejabberd의 외부 인증 모듈을 사용해서 인증 처리를 할 경우, 기존 멤버쉽과 연동하는 방법을 찾아 보도록 한다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberd-ec99b8ebb680-ec9db8eca69d-ebaaa8eb9388eab3bc-http-ecbba4ec8aa4ed8580-ebaaa8eb9388-ec97b0eb8f99" class="link black dim">
+        ejabberd 외부 인증 모듈과 http 커스텀 모듈 연동
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd의 외부 인증 모듈을 사용해서 인증 처리를 할 경우, 기존 멤버쉽과 연동하는 방법을 찾아 보도록 한다.
 우선 들어가기에 앞서 작업 개요를 살펴보면 다음과 같다.
  python으로 외부 인증 모듈 작성 ejabberd를 외부에서 제어할 수 있도록 mod_http_api.erl 을 작성해 커스텀 모듈 등록 mod_http_api에서 기존 멤버쉽의 회원 정보 조회(편의상 internal rest api가 존재한다고 가정한다.)  다음과 같은 로그인 처리 시나리오를 가정해 보자.
- 로그인 할 경우 외부 인증 모듈에서 http://localhost:5280/api/auth?user=romeo&amp;server=localhost&amp;password=1234와 같은 형식으로 호출한다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/21/ejabberd-ec99b8ebb680-ec9db8eca69d-ebaaa8eb9388eab3bc-http-ecbba4ec8aa4ed8580-ebaaa8eb9388-ec97b0eb8f99/" title="ejabberd 외부 인증 모듈과 http 커스텀 모듈 연동">Read More…</a>
-  </footer>
-</article>
-</li>
+ 로그인 할 경우 외부 인증 모듈에서 http://localhost:5280/api/auth?user=romeo&amp;server=localhost&amp;password=1234와 같은 형식으로 호출한다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-21T00:00:00JST">Jan 21, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/21/ejabberdec9790-json-eb9dbcec9db4ebb88ceb9faceba6acjiffy-ecb694eab080/">ejabberd에 json 라이브러리(jiffy) 추가</a></h2>
-  </header>
-
-  
-  <div class="summary">ejabberd에서 json 라이브러리를 사용하려면 jiffy를 사용하면 된다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/21/ejabberdec9790-json-eb9dbcec9db4ebb88ceb9faceba6acjiffy-ecb694eab080" class="link black dim">
+        ejabberd에 json 라이브러리(jiffy) 추가
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ejabberd에서 json 라이브러리를 사용하려면 jiffy를 사용하면 된다.
 ejabberd가 설치될 때 의존성을 걸어 함께 설치되도록 하려면 다음과 같이 configure에서 &#8211;enable-json을 추가해 주면 된다.
  ./configure &amp;#8211;prefix={&amp;#8230;} &amp;#8211;enable-json  위와 같이 설치하려면 configure를 해 준 후에 rebar를 사용해 의존 라이브러리를 다운로드 받아야 하는데, 다음과 같이 처리한다.
  rebar get-deps rebar compile  그런 후 make &amp; make install을 실행하자.
-만약 jiffy.so 파일의 경로를 찾지 못하는 에러가 발생할 경우 다음과 같이 Makeifle.in 파일을 수정하면 된다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/21/ejabberdec9790-json-eb9dbcec9db4ebb88ceb9faceba6acjiffy-ecb694eab080/" title="ejabberd에 json 라이브러리(jiffy) 추가">Read More…</a>
-  </footer>
-</article>
-</li>
-      
-    </ul>
-
-    
-<nav>
-  <ul class="pager">
-
-    
-    <li><a href="/posts/page/17/">Previous</a></li>
-    
-
-    
-    <li><a href="/posts/page/19/">Next</a></li>
-    
-
-  </ul>
-</nav>
-
-
-
-  </div>
-  <div class="col-md-4">
-    
-<aside class="l-sidebar">
-
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">LATESTS</div>
+만약 jiffy.so 파일의 경로를 찾지 못하는 에러가 발생할 경우 다음과 같이 Makeifle.in 파일을 수정하면 된다.
     </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
-      
-      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
-      
-      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
-      
-      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
-      
-      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
-      
-      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
-      
-      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
-      
-    </div>
-  </section>
-
-  
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">CATEGORY</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
-      
-      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
-      
-      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
-      
-      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
-      
-      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
-      
-      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
-      
-      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
-      
-      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
-      
-      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
-      
-      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
-      
-    </div>
-  </section>
-  
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">TAG</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
-      
-      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
-      
-      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
-      
-      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
-      
-      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
-      
-      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
-      
-      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
-      
-      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
-      
-      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
-      
-      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
-      
-    </div>
-  </section>
-  
-
-</aside>
-
-
   </div>
 </div>
+</div>
+      
+    </section>
 
-      </div>
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="/posts/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+    <a href="/posts/page/17/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/17/">17</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="/posts/page/18/">18</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/19/">19</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/20/">20</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/posts/page/19/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="/posts/page/20/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+</article>
+
     </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jeidee.github.io/" >
+    &copy; 2018 Erlang &amp; Go
+  </a>
+    <div>
 
-    <footer class="l-footer">
-      <div class="container">
-        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
-        <aside>
-          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
-          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
-        </aside>
-      </div>
-    </footer>
 
-    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
   </body>
 </html>
-

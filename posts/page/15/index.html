@@ -1,428 +1,517 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko-kr">
   <head>
     <meta charset="utf-8">
-<meta name="pinterest" content="nopin">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.31.1" />
-
-<link rel="alternate" type="application/rss+xml" title="RSS" href="https://jeidee.github.io/posts/index.xml">
-
-<link rel="canonical" href="https://jeidee.github.io/posts/">
-
-
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <title>Posts - Erlang &amp; Go</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <link href="https://jeidee.github.io/css/styles.css" rel="stylesheet">
+    <title>Erlang &amp; Go </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.51" />
     
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.e08a958ae3e530145318b6373195c765.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+      <link href="https://jeidee.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Erlang &amp; Go" />
+      <link href="https://jeidee.github.io/posts/index.xml" rel="feed" type="application/rss+xml" title="Erlang &amp; Go" />
+    
+
+    <meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jeidee.github.io/posts/" />
+<meta property="og:updated_time" content="2015-02-06T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="Posts">
+<meta itemprop="description" content="">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content=""/>
 
   </head>
 
-  <body>
-    
-    
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-110408557-1', 'auto');
-ga('send', 'pageview');
-</script>
+  <body class="ma0 avenir bg-near-white">
 
     
 
-    <header class="l-header">
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://jeidee.github.io/">Erlang &amp; Go</a>
-          </div>
-
-          
-
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <div class="container">
-        
-<div class="row">
-  <div class="col-md-8">
-
-    
-    <header class="page-header">
-      <h1>Posts</h1>
-    </header>
-    
-
-    <ul class="p-articles">
-      
-      <li><article class="li">
   <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-06T00:00:00JST">Feb 6, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jeidee.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Erlang &amp; Go
+    </a>
+    <div class="flex-l items-center">
       
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/02/06/erlang-debug/">erlang debug</a></h2>
+      
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          Posts
+        </h1>
+        
+      </div>
+    </div>
   </header>
 
-  
-  <div class="summary">erlang에서 디버깅하는 방법은 다음과 같다.
+
+    <main class="pb7" role="main">
+      
+  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
+  <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></main>
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/06/erlang-debug" class="link black dim">
+        erlang debug
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang에서 디버깅하는 방법은 다음과 같다.
  주의할 것은 erlang 설치 전에 wxWiget 라이브러리를 먼저 설치한 후 erlang을 설치해야 한다는 것이다. 관련 설치방법은 erlang/otp 설치 문서를 참고!  erl 노드를 실행시킨 후 debugger monitor를 실행시킨다.
  &gt; debugger:start().  Monitor윈도가 실행되면 Module &gt; Interpret 메뉴를 선택한다.
 파일 선택기에서 디버깅하고자 하는 .erl 파일을 선택한다.
 반드시 erl 노드가 import한 모듈의 소스여야 한다.
-예를 들어 ejabberd의 디버그 쉘을 실행시킨 후 디버깅할 수 있는 모듈은 ejabberd 모듈에 한정된다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/02/06/erlang-debug/" title="erlang debug">Read More…</a>
-  </footer>
-</article>
-</li>
+예를 들어 ejabberd의 디버그 쉘을 실행시킨 후 디버깅할 수 있는 모듈은 ejabberd 모듈에 한정된다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-04T00:00:00JST">Feb 4, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/02/04/ha-proxy-ec84a4eca095/">HA Proxy 설정</a></h2>
-  </header>
-
-  
-  <div class="summary">우분투에서 HA Proxy 설정하는 방법을 알아보자.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/04/ha-proxy-ec84a4eca095" class="link black dim">
+        HA Proxy 설정
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      우분투에서 HA Proxy 설정하는 방법을 알아보자.
 HA Proxy 설치 다음과 같이 1.5.x 버전을 설치한다.
  $ sudo add-apt-repository ppa:vbernat/haproxy-1.5 $ sudo apt-get update $ sudo apt-get install haproxy  HA Proxy 설정 HA Proxy를 위와 같이 설치하면 설정파일은 다음 위치에서 찾을 수 있다.
  /etc/haproxy/haproxy.cfg  기본 설정은 다음과 같이 두 영역으로 구분된다.
- global: process 전역 매개변수 proxies: defaults, listen, frontend, backend 섹션으로 구성  이 중에서 listen 영역은 TCP 프록시에서만 사용하며 frontend와 backend를 모두 설정할 수 있다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/02/04/ha-proxy-ec84a4eca095/" title="HA Proxy 설정">Read More…</a>
-  </footer>
-</article>
-</li>
+ global: process 전역 매개변수 proxies: defaults, listen, frontend, backend 섹션으로 구성  이 중에서 listen 영역은 TCP 프록시에서만 사용하며 frontend와 backend를 모두 설정할 수 있다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-04T00:00:00JST">Feb 4, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/02/04/erlang-list-sort/">erlang list sort</a></h2>
-  </header>
-
-  
-  <div class="summary">다음과 같은 리스트가 있다고 가정하자.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/04/erlang-list-sort" class="link black dim">
+        erlang list sort
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      다음과 같은 리스트가 있다고 가정하자.
 &gt; List = [{a, 10}, {b, 5}, {c, 3}, {d, 6}].  두번째 요소인 정수값을 기준으로 오름차순으로 정렬하고자 한다면 다음과 같이 한다.
-&gt; lists:sort(fun(A, B) -&gt; {Name1, Order1} = A, {Name2, Order2} = B, Order1 &lt; Order2 end, List).  </div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/02/04/erlang-list-sort/" title="erlang list sort">Read More…</a>
-  </footer>
-</article>
-</li>
+&gt; lists:sort(fun(A, B) -&gt; {Name1, Order1} = A, {Name2, Order2} = B, Order1 &lt; Order2 end, List).  
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-04T00:00:00JST">Feb 4, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/04/node-js-get-local-ip" class="link black dim">
+        node.js get local ip
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      node.js에서 지정된 도메인의 IP주소를 찾는 방법은 다음과 같다.
+var getLocalIp = function(callback) { require('dns').lookup(require('os').hostname(), function (err, add, fam) { console.log('addr: '+add); callback(add); }); };  위 코드에서 require(&#8216;os&#8217;).hostname()은 로컬호스트명이며, 해당 값에 다른 도메인을 입력해서 IP주소를 구할 수 있다.
+    </div>
+  </div>
+</div>
+</div>
       
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/02/04/node-js-get-local-ip/">node.js get local ip</a></h2>
-  </header>
-
-  
-  <div class="summary">node.js에서 지정된 도메인의 IP주소를 찾는 방법은 다음과 같다.
-var getLocalIp = function(callback) { require('dns').lookup(require('os').hostname(), function (err, add, fam) { console.log('addr: '+add); callback(add); }); };  위 코드에서 require(&#8216;os&#8217;).hostname()은 로컬호스트명이며, 해당 값에 다른 도메인을 입력해서 IP주소를 구할 수 있다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/02/04/node-js-get-local-ip/" title="node.js get local ip">Read More…</a>
-  </footer>
-</article>
-</li>
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/03/javascript-base64-encoding-aes-encryption" class="link black dim">
+        javascript base64 encoding  &amp;#038; aes encryption
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      BASE64 Encoding  참고 url  // Create Base64 Object var Base64={\_keyStr:&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=&quot;,encode:function(e){var t=&quot;&quot;;var n,r,i,s,o,u,a;var f=0;e=Base64.\_utf8\_encode(e);while(f&lt;e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n&gt;&gt;2;o=(n&amp;3)&lt;&lt;4|r&gt;&gt;4;u=(r&amp;15)&lt;&lt;2|i&gt;&gt;6;a=i&amp;63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this.\_keyStr.charAt(s)+this.\_keyStr.charAt(o)+this.\_keyStr.charAt(u)+this.\_keyStr.charAt(a)}return t},decode:function(e){var t=&quot;&quot;;var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,&quot;&quot;);while(f&lt;e.length){s=this.\_keyStr.indexOf(e.charAt(f++));o=this.\_keyStr.indexOf(e.charAt(f++));u=this.\_keyStr.indexOf(e.charAt(f++));a=this.\_keyStr.indexOf(e.charAt(f++));n=s&lt;&lt;2|o&gt;&gt;4;r=(o&amp;15)&lt;&lt;4|u&gt;&gt;2;i=(u&amp;3)&lt;&lt;6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64.\_utf8\_decode(t);return t},\_utf8\_encode:function(e){e=e.replace(/rn/g,&quot;n&quot;);var t=&quot;&quot;;for(var n=0;n&lt;e.length;n++){var r=e.charCodeAt(n);if(r&lt;128){t+=String.fromCharCode(r)}else if(r&gt;127&amp;&amp;r&lt;2048){t+=String.fromCharCode(r&gt;&gt;6|192);t+=String.fromCharCode(r&amp;63|128)}else{t+=String.fromCharCode(r&gt;&gt;12|224);t+=String.fromCharCode(r&gt;&gt;6&amp;63|128);t+=String.fromCharCode(r&amp;63|128)}}return t},\_utf8_decode:function(e){var t=&quot;&quot;;var n=0;var r=c1=c2=0;while(n&lt;e.length){r=e.charCodeAt(n);if(r&lt;128){t+=String.fromCharCode(r);n++}else if(r&gt;191&amp;&amp;r&lt;224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&amp;31)&lt;&lt;6|c2&amp;63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&amp;15)&lt;&lt;12|(c2&amp;63)&lt;&lt;6|c3&amp;63);n+=3}}return t}} // Define the string var string = 'Hello World!'; // Encode the String var encodedString = Base64.encode(string); console.log(encodedString); // Outputs: &quot;SGVsbG8gV29ybGQh&quot; // Decode the String var decodedString = Base64.decode(encodedString); console.log(decodedString); // Outputs: &quot;Hello World!&quot;  AES Encription  참고 URL aes.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-03T00:00:00JST">Feb 3, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/02/03/javascript-base64-encoding-aes-encryption/">javascript base64 encoding  &amp;#038; aes encryption</a></h2>
-  </header>
-
-  
-  <div class="summary">BASE64 Encoding  참고 url  // Create Base64 Object var Base64={\_keyStr:&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=&quot;,encode:function(e){var t=&quot;&quot;;var n,r,i,s,o,u,a;var f=0;e=Base64.\_utf8\_encode(e);while(f&lt;e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n&gt;&gt;2;o=(n&amp;3)&lt;&lt;4|r&gt;&gt;4;u=(r&amp;15)&lt;&lt;2|i&gt;&gt;6;a=i&amp;63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this.\_keyStr.charAt(s)+this.\_keyStr.charAt(o)+this.\_keyStr.charAt(u)+this.\_keyStr.charAt(a)}return t},decode:function(e){var t=&quot;&quot;;var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,&quot;&quot;);while(f&lt;e.length){s=this.\_keyStr.indexOf(e.charAt(f++));o=this.\_keyStr.indexOf(e.charAt(f++));u=this.\_keyStr.indexOf(e.charAt(f++));a=this.\_keyStr.indexOf(e.charAt(f++));n=s&lt;&lt;2|o&gt;&gt;4;r=(o&amp;15)&lt;&lt;4|u&gt;&gt;2;i=(u&amp;3)&lt;&lt;6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64.\_utf8\_decode(t);return t},\_utf8\_encode:function(e){e=e.replace(/rn/g,&quot;n&quot;);var t=&quot;&quot;;for(var n=0;n&lt;e.length;n++){var r=e.charCodeAt(n);if(r&lt;128){t+=String.fromCharCode(r)}else if(r&gt;127&amp;&amp;r&lt;2048){t+=String.fromCharCode(r&gt;&gt;6|192);t+=String.fromCharCode(r&amp;63|128)}else{t+=String.fromCharCode(r&gt;&gt;12|224);t+=String.fromCharCode(r&gt;&gt;6&amp;63|128);t+=String.fromCharCode(r&amp;63|128)}}return t},\_utf8_decode:function(e){var t=&quot;&quot;;var n=0;var r=c1=c2=0;while(n&lt;e.length){r=e.charCodeAt(n);if(r&lt;128){t+=String.fromCharCode(r);n++}else if(r&gt;191&amp;&amp;r&lt;224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&amp;31)&lt;&lt;6|c2&amp;63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&amp;15)&lt;&lt;12|(c2&amp;63)&lt;&lt;6|c3&amp;63);n+=3}}return t}} // Define the string var string = 'Hello World!'; // Encode the String var encodedString = Base64.encode(string); console.log(encodedString); // Outputs: &quot;SGVsbG8gV29ybGQh&quot; // Decode the String var decodedString = Base64.decode(encodedString); console.log(decodedString); // Outputs: &quot;Hello World!&quot;  AES Encription  참고 URL aes.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/02/03/javascript-base64-encoding-aes-encryption/" title="javascript base64 encoding  &amp;#038; aes encryption">Read More…</a>
-  </footer>
-</article>
-</li>
-      
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-02-01T00:00:00JST">Feb 1, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/02/01/erlang-intellijec9790ec849c-eab09cebb09ced9598eab8b0/">erlang intellij에서 개발하기</a></h2>
-  </header>
-
-  
-  <div class="summary">현재까지 찾아본 바로는 쓸만한 erlang ide는 eclipse + erlide와 intellij + erlang plugin 정도가 될 것 같다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/02/01/erlang-intellijec9790ec849c-eab09cebb09ced9598eab8b0" class="link black dim">
+        erlang intellij에서 개발하기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      현재까지 찾아본 바로는 쓸만한 erlang ide는 eclipse + erlide와 intellij + erlang plugin 정도가 될 것 같다.
 webstorm의 경우 erlang plugin을 설치하고 소스코드를 편집할 수 있지만, 프로젝트를 생성하거나 컴파일하고 실행하는 등의 작업은 할 수 없기 때문에 제외한다.
 eclipse에 비해 intellij가 상대적으로 많은 기능을 제외하고 편집기 자체도 뛰어나며 community edition을 사용할 경우 무료로 사용할 수 있기 때문에 intellij를 사용하기로 한다.
-intellij에 elang plugin 설치 우선 intellij community edition을 설치한다.(JetBrains 홈페이지에서 다운로드할 수 있다.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/02/01/erlang-intellijec9790ec849c-eab09cebb09ced9598eab8b0/" title="erlang intellij에서 개발하기">Read More…</a>
-  </footer>
-</article>
-</li>
+intellij에 elang plugin 설치 우선 intellij community edition을 설치한다.(JetBrains 홈페이지에서 다운로드할 수 있다.
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-31T00:00:00JST">Jan 31, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/31/ejabberd-riak-ed999cec84b1ed9994-ec84a4ecb998/">ejabberd riak 활성화 설치</a></h2>
-  </header>
-
-  
-  <div class="summary">riak를 활성화하려면 다음과 같이 설치한다.
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/31/ejabberd-riak-ed999cec84b1ed9994-ec84a4ecb998" class="link black dim">
+        ejabberd riak 활성화 설치
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      riak를 활성화하려면 다음과 같이 설치한다.
  $ ./configure &amp;#8211;enable-riak $ make &amp;&amp; make install  ejabberd 15.03 이후 릴리즈에서는 erlc 버전이 r17 이상 버전에서 정상 컴파일되는 것을 확인했다.
 ejabberd 14.07 이전 릴리즈에서는 meck.erl 관련 compile에러가 날 경우 erlc 버전이 r16b3인지 확인해야 한다.
 riak 모듈을 제외한 모든 플러그인 모듈을 설치하기 위해서는 다음과 같이 설치하면 된다.
- $ ./configure &amp;#8211;enable-all &amp;#8211;disable-riak  </div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/31/ejabberd-riak-ed999cec84b1ed9994-ec84a4ecb998/" title="ejabberd riak 활성화 설치">Read More…</a>
-  </footer>
-</article>
-</li>
+ $ ./configure &amp;#8211;enable-all &amp;#8211;disable-riak  
+    </div>
+  </div>
+</div>
+</div>
       
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-31T00:00:00JST">Jan 31, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/31/ejabberd-ec84a4ecb998eca084-ed9584ec8898-eb9dbcec9db4ebb88ceb9faceba6ac/">ejabberd 설치전 필수 라이브러리</a></h2>
-  </header>
-
-  
-  <div class="summary">PAM 라이브러리 설치
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/31/ejabberd-ec84a4ecb998eca084-ed9584ec8898-eb9dbcec9db4ebb88ceb9faceba6ac" class="link black dim">
+        ejabberd 설치전 필수 라이브러리
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      PAM 라이브러리 설치
  $ sudo apt-get install libpam0g-dev  expat 라이브러리 설치
  $ sudo apt-get install libexpat1-dev  rebar 설치
  $ sudo apt-get install rebar  ssl 라이브러리 설치
  $ sudo apt-get install libssl-dev  yaml 라이브러리 설치
- $ sudo apt-get install libyaml-dev  </div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/31/ejabberd-ec84a4ecb998eca084-ed9584ec8898-eb9dbcec9db4ebb88ceb9faceba6ac/" title="ejabberd 설치전 필수 라이브러리">Read More…</a>
-  </footer>
-</article>
-</li>
-      
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-28T00:00:00JST">Jan 28, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/28/erlang-base64-encoding/">erlang base64 encoding</a></h2>
-  </header>
-
-  
-  <div class="summary">base64 인코딩을 위해서는 base64 모듈의 encode/1 함수를 다음과 같이 사용한다.
-10&gt; Enc = base64:encode(&lt;&gt;). &lt;&gt; 12&gt; io:format(&quot;~s~n&quot;, [base64:decode(Enc)]). encode ok  </div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/28/erlang-base64-encoding/" title="erlang base64 encoding">Read More…</a>
-  </footer>
-</article>
-</li>
-      
-      <li><article class="li">
-  <header>
-    <ul class="p-facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-01-28T00:00:00JST">Jan 28, 2015</time></li>
-      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://jeidee.github.io/posts/">posts</a></li>
-      
-    </ul>
-    <h2 class="title"><a href="https://jeidee.github.io/2015/01/28/erlang-ideeba5bc-ec9c84ed959c-webstorm-ec8690ebb3b4eab8b0/">erlang ide를 위한 webstorm 손보기</a></h2>
-  </header>
-
-  
-  <div class="summary">erlang plugin 설치 먼저 jetbrain plugin 페이지에서 erlang plugin을 다운로드 받는다.
-적당한 폴더에 압축을 풀어놓고 Erlang폴더 전체를 webstorm이 설치된 경로의 plugin폴더 하위에 복사한다.
-마지막으로 webstorm을 재시작하면 적용된다.
-consolas 폰트 설치 이 페이지에 자세히 설명되어 있으므로 따라 설치하자.</div>
-
-  <footer>
-    <a href="https://jeidee.github.io/2015/01/28/erlang-ideeba5bc-ec9c84ed959c-webstorm-ec8690ebb3b4eab8b0/" title="erlang ide를 위한 webstorm 손보기">Read More…</a>
-  </footer>
-</article>
-</li>
-      
-    </ul>
-
-    
-<nav>
-  <ul class="pager">
-
-    
-    <li><a href="/posts/page/14/">Previous</a></li>
-    
-
-    
-    <li><a href="/posts/page/16/">Next</a></li>
-    
-
-  </ul>
-</nav>
-
-
-
-  </div>
-  <div class="col-md-4">
-    
-<aside class="l-sidebar">
-
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">LATESTS</div>
+ $ sudo apt-get install libyaml-dev  
     </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/2017/08/31/upstart-ec84a4eca095/" class="list-group-item">upstart 설정</a>
-      
-      <a href="https://jeidee.github.io/2017/06/08/centosec9790ec849c-mongodb-ec84a4ecb998ec9980-service-eb93b1eba19d/" class="list-group-item">CentOS에서 MongoDB 설치와 Service 등록</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9790-lcb_cntl-ed95a8ec8898-ecb694eab080/" class="list-group-item">couchbase cberl에 lcb_cntl 함수 추가</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/couchbase-cberlec9d98io-pluginec9d84-libeventeba19c-ebb380eab2bd/" class="list-group-item">couchbase cberl의IO Plugin을 libevent로 변경</a>
-      
-      <a href="https://jeidee.github.io/2017/01/25/ejabberdec9d98-deps-eb9dbcec9db4ebb88ceb9faceba6ac-ec8898eca095-ed9b84-ecbbb4ed8c8cec9dbcec9790ec849c-eb8884eb9dbdeb90a0-eb958c/" class="list-group-item">ejabberd의 deps 라이브러리 수정 후 컴파일에서 누락될 때</a>
-      
-      <a href="https://jeidee.github.io/2017/01/03/aws-dynamodb-for-go/" class="list-group-item">AWS DynamoDB for Go</a>
-      
-      <a href="https://jeidee.github.io/2016/12/21/aws-credentialseab080-upstart-eb93b1ec9790ec849c-eca09ceb8c80eba19c-eb8f99ec9e91ed9598eca780-ec958aec9d84-eab2bdec9ab0/" class="list-group-item">AWS Credentials가 upstart 등에서 제대로 동작하지 않을 경우</a>
-      
-      <a href="https://jeidee.github.io/2016/09/02/c-rest-sdk/" class="list-group-item">c&#43;&#43; REST SDK</a>
-      
-      <a href="https://jeidee.github.io/2016/09/01/c-openssl-aes-ecb/" class="list-group-item">c&#43;&#43; openssl AES ECB</a>
-      
-      <a href="https://jeidee.github.io/2016/09/01/cc-hex-string-to-byte-array/" class="list-group-item">c/c&#43;&#43; hex string to byte array</a>
-      
-    </div>
-  </section>
-
-  
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">CATEGORY</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/categories/erlang" class="list-group-item">erlang</a>
-      
-      <a href="https://jeidee.github.io/categories/ejabberd" class="list-group-item">ejabberd</a>
-      
-      <a href="https://jeidee.github.io/categories/elixir" class="list-group-item">elixir</a>
-      
-      <a href="https://jeidee.github.io/categories/ios" class="list-group-item">ios</a>
-      
-      <a href="https://jeidee.github.io/categories/c&#43;&#43;" class="list-group-item">c&#43;&#43;</a>
-      
-      <a href="https://jeidee.github.io/categories/node.js" class="list-group-item">node.js</a>
-      
-      <a href="https://jeidee.github.io/categories/utility" class="list-group-item">utility</a>
-      
-      <a href="https://jeidee.github.io/categories/android" class="list-group-item">android</a>
-      
-      <a href="https://jeidee.github.io/categories/go" class="list-group-item">go</a>
-      
-      <a href="https://jeidee.github.io/categories/couchbase" class="list-group-item">couchbase</a>
-      
-    </div>
-  </section>
-  
-  <section class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">TAG</div>
-    </div>
-    <div class="list-group">
-      
-      <a href="https://jeidee.github.io/tags/tutorial" class="list-group-item">tutorial</a>
-      
-      <a href="https://jeidee.github.io/tags/ndk" class="list-group-item">ndk</a>
-      
-      <a href="https://jeidee.github.io/tags/express" class="list-group-item">express</a>
-      
-      <a href="https://jeidee.github.io/tags/mnesia" class="list-group-item">mnesia</a>
-      
-      <a href="https://jeidee.github.io/tags/mysql" class="list-group-item">mysql</a>
-      
-      <a href="https://jeidee.github.io/tags/cberl" class="list-group-item">cberl</a>
-      
-      <a href="https://jeidee.github.io/tags/clustering" class="list-group-item">clustering</a>
-      
-      <a href="https://jeidee.github.io/tags/custom-module" class="list-group-item">custom-module</a>
-      
-      <a href="https://jeidee.github.io/tags/debug" class="list-group-item">debug</a>
-      
-      <a href="https://jeidee.github.io/tags/http" class="list-group-item">http</a>
-      
-    </div>
-  </section>
-  
-
-</aside>
-
-
   </div>
 </div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/28/erlang-base64-encoding" class="link black dim">
+        erlang base64 encoding
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      base64 인코딩을 위해서는 base64 모듈의 encode/1 함수를 다음과 같이 사용한다.
+10&gt; Enc = base64:encode(&lt;&gt;). &lt;&gt; 12&gt; io:format(&quot;~s~n&quot;, [base64:decode(Enc)]). encode ok  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/2015/01/28/erlang-ideeba5bc-ec9c84ed959c-webstorm-ec8690ebb3b4eab8b0" class="link black dim">
+        erlang ide를 위한 webstorm 손보기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      erlang plugin 설치 먼저 jetbrain plugin 페이지에서 erlang plugin을 다운로드 받는다.
+적당한 폴더에 압축을 풀어놓고 Erlang폴더 전체를 webstorm이 설치된 경로의 plugin폴더 하위에 복사한다.
+마지막으로 webstorm을 재시작하면 적용된다.
+consolas 폰트 설치 이 페이지에 자세히 설명되어 있으므로 따라 설치하자.
+    </div>
+  </div>
+</div>
+</div>
+      
+    </section>
 
-      </div>
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="/posts/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+    <a href="/posts/page/14/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/14/">14</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="/posts/page/15/">15</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/16/">16</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/20/">20</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/posts/page/16/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="/posts/page/20/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+</article>
+
     </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jeidee.github.io/" >
+    &copy; 2018 Erlang &amp; Go
+  </a>
+    <div>
 
-    <footer class="l-footer">
-      <div class="container">
-        <p><span class="h-logo">&copy; Erlang &amp; Go</span></p>
-        <aside>
-          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
-          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
-        </aside>
-      </div>
-    </footer>
 
-    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
   </body>
 </html>
-
