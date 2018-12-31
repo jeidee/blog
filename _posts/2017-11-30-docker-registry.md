@@ -1,7 +1,11 @@
 ---
 title: "Docker Registry"
 date: 2017-11-30T10:07:39+09:00
-draft: true
+author: jeidee
+categories:
+- docker
+tags:
+- docker
 ---
 
 도커 레지스트리를 만들 때 아래 링크의 문서를 참고합니다:
