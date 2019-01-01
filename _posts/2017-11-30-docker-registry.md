@@ -2,6 +2,7 @@
 title: "Docker Registry"
 date: 2017-11-30T10:07:39+09:00
 author: jeidee
+permalink: /2017/11/30/docker-registry
 categories:
 - docker
 tags:

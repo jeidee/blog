@@ -2,6 +2,7 @@
 title: "Golang, Docker 사용해서 MySQL 통합 테스트"
 date: 2018-04-20T10:07:39+09:00
 author: jeidee
+permalink: /2018/04/20/docker-사용해서-mysql-통합-테스트
 categories:
 - go
 tags:

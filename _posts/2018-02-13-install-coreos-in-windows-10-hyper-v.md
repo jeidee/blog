@@ -2,6 +2,7 @@
 title: "Windows 10에서 HYPER-V 사용해서 CoreOS 설치"
 date: 2018-02-13T10:07:39+09:00
 author: jeidee
+permalink: /2018/02/13/windows-10에서-hyper-v-사용해서-coreos-설치
 categories:
 - docker
 tags:

@@ -2,6 +2,7 @@
 title: "postgresql, 배열 컬럼에 번호 붙이는 쿼리 작성"
 date: 2018-06-22T10:07:39+09:00
 author: jeidee
+permalink: /2018/06/22/postgresql-배열-컬럼에-번호-붙이는-쿼리-작성
 categories:
 - database
 tags:

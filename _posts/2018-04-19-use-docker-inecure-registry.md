@@ -2,6 +2,7 @@
 title: "Docker Insecure Registry 사용"
 date: 2018-04-19T10:07:39+09:00
 author: jeidee
+permalink: /2018/04/19/docker-insecure-registry-사용
 categories:
 - docker
 tags:
