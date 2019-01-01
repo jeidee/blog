@@ -1,6 +1,4 @@
 main:
-  - title: "Recent"
-    url: /recent/
   - title: "Archive"
     url: /year-archive/
   - title: "Tags"
