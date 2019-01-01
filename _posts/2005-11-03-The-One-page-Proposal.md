@@ -2,6 +2,7 @@
 title: "The One page Proposal- 패트릭 G. 라일리"
 date: 2005-11-03T10:07:39+09:00
 author: jeidee
+permalink: /2005/11/03/the-one-page-proposal
 categories:
 - book
 tags:

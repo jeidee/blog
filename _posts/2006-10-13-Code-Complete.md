@@ -2,6 +2,7 @@
 title: "Code Complete 2nd Edition"
 date: 2006-10-13T10:07:39+09:00
 author: jeidee
+permalink: /2006/10/13/code-complete
 categories:
 - book
 tags:
