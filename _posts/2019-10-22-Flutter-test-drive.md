@@ -1,5 +1,5 @@
 ---
-title: "(3) Flutter - Test Drive"
+title: "(3) Flutter - 맛보기(Test Drive)"
 date: 2019-10-22T20:08:00+09:00
 author: jeidee
 permalink: /2019/10/22/flutter-test-drive
