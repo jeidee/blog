@@ -259,7 +259,7 @@ App이 기대한대로 실행되지 않는다면, 오타를 확인해 보세요.
 > **Reloading…**  
 > **Some program elements were changed during reload but did not run when the view was reassembled; you might need to restart the app (by pressing “R”) for the changes to have an effect.**
 >
-> 이 경우는 오팀지일 수 있는데, 재시작하므로써 App의 UI에 변경사항이 정확히 반영되도록 할 수 있습니다.
+> 이 경우는 오탐지일 수 있는데, 재시작하므로써 App의 UI에 변경사항이 정확히 반영되도록 할 수 있습니다.
 
 ### 문제가 있나요?
 
