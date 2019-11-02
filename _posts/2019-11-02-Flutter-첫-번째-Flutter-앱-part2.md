@@ -1,6 +1,6 @@
 ---
 title: "(5) Flutter - 첫 번째 Flutter App 만들기, part2"
-date: 2019-11-02T22:10:15+09:00
+date: 2019-11-02T20:10:15+09:00
 author: jeidee
 permalink: /2019/11/02/flutter-첫-번째-Flutter-앱-part2
 categories:
