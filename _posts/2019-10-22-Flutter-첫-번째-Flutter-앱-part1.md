@@ -59,7 +59,7 @@ tags:
 
 ## Step 1: Starter Flutter App 만들기
 
-[첫 번째 Flutter App 만들기](https://flutter.dev/docs/get-started/test-drive#create-app) 순서에 따라 간단한 템플릿화된 Flutter App을 만듭니다. 프로젝트 이름은 myapp 대신 **startup_namer**로 입력합니다.
+[첫 번째 Flutter App 만들기](https://jeidee.github.io/2019/10/19/flutter-%EC%84%A4%EC%B9%98#%EA%B0%84%EB%8B%A8%ED%95%9C-flutter-app%EC%9D%84-%EB%A7%8C%EB%93%A4%EA%B3%A0-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0) 순서에 따라 간단한 템플릿화된 Flutter App을 만듭니다. 프로젝트 이름은 myapp 대신 **startup_namer**로 입력합니다.
 
 > **TIP** IDE에서 "New Flutter Project" 메뉴가 보이지 않는 다면, [Flutter와 Dart를 위한 플러그인 설치](https://flutter.dev/docs/get-started/editor)문서를 참고하세요.
 
