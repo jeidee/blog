@@ -19,7 +19,7 @@ tags:
 
 ## Flutter 기본
 
-- [위젯 입문](https://flutter.dev/docs/development/ui/widgets-intro)
+- [위젯 소개](https://flutter.dev/docs/development/ui/widgets-intro)
 - [레이아웃 만들기 강좌](https://flutter.dev/docs/development/ui/layout/tutorial)
 - [상호작용 추가하기 강좌](https://flutter.dev/docs/development/ui/interactive)
 
